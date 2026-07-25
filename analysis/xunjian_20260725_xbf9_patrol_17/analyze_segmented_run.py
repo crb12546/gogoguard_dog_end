@@ -317,8 +317,12 @@ def performance_metrics(rows: list[dict[str, Any]], start: float, end: float) ->
     return {
         "count": len(selected),
         "system_cpu_pct": percentile(values(("system_cpu_pct",))),
+        "context_switches_per_s": percentile(values(("context_switches_per_s",))),
+        "procs_running": percentile(values(("procs_running",))),
         "temperature_c": percentile(values(("max_temperature_c",))),
         "monitor_wake_late_ms": percentile(values(("monitor_wake_late_ms",))),
+        "nvme_busy_pct": percentile(values(("disk_io", "nvme0n1", "busy_pct"))),
+        "nvme_write_kib_s": percentile(values(("disk_io", "nvme0n1", "write_kib_s"))),
         "process_cpu_pct": {
             name: percentile(
                 [
@@ -374,6 +378,77 @@ def performance_tracking_correlation(
         "high_cpu_burst_count": len(high_intervals),
         "high_cpu_burst_duration_s": percentile(
             [end_value - begin for begin, end_value in high_intervals]
+        ),
+    }
+
+
+def video_upload_phase_correlation(
+    performance_rows: list[dict[str, Any]],
+    start: float,
+    end: float,
+) -> dict[str, Any]:
+    """Characterize the periodic saturation without claiming an unobserved PID.
+
+    The performance monitor labels the capture process (GStreamer/ffmpeg) as
+    ``video`` but did not label the short-lived ``upload-once`` subprocess.
+    Therefore the phase transition and USB traffic can be proven, while the
+    exact user/kernel CPU split of the upload path cannot be reconstructed.
+    """
+    selected = [row for row in performance_rows if start <= row["epoch"] <= end]
+    epochs = np.asarray([float(row["epoch"]) for row in selected], dtype=float)
+    cpu = np.asarray([float(row["system_cpu_pct"]) for row in selected], dtype=float)
+    high = cpu >= 90.0
+    normal = ~high
+    video_present = np.asarray(
+        [bool(row.get("process_pids", {}).get("video")) for row in selected],
+        dtype=bool,
+    )
+    usb0_tx = np.asarray(
+        [
+            float(row.get("network", {}).get("usb0", {}).get("tx_kib_s", 0.0))
+            for row in selected
+        ],
+        dtype=float,
+    )
+    context_switches = np.asarray(
+        [float(row.get("context_switches_per_s", 0.0)) for row in selected],
+        dtype=float,
+    )
+    runnable = np.asarray(
+        [float(row.get("procs_running", 0.0)) for row in selected],
+        dtype=float,
+    )
+    bursts = true_intervals(epochs, high, max_gap=2.0)
+    burst_starts = np.asarray([begin for begin, _ in bursts], dtype=float)
+
+    def fraction(mask: np.ndarray) -> float | None:
+        return float(np.mean(mask)) if len(mask) else None
+
+    upload_signature = (~video_present) & (usb0_tx >= 1024.0)
+    return {
+        "scope": "pure_auto_before_first_obstacle",
+        "high_cpu_threshold_pct": 90.0,
+        "high_cpu_sample_count": int(np.sum(high)),
+        "normal_cpu_sample_count": int(np.sum(normal)),
+        "capture_process_absent_fraction_during_high_cpu": fraction(~video_present[high]),
+        "capture_absent_and_usb0_tx_ge_1mib_s_fraction_during_high_cpu": fraction(
+            upload_signature[high]
+        ),
+        "capture_absent_and_usb0_tx_ge_1mib_s_fraction_during_normal_cpu": fraction(
+            upload_signature[normal]
+        ),
+        "usb0_tx_during_high_cpu_kib_s": percentile(usb0_tx[high]),
+        "usb0_tx_during_normal_cpu_kib_s": percentile(usb0_tx[normal]),
+        "context_switches_during_high_cpu_per_s": percentile(context_switches[high]),
+        "context_switches_during_normal_cpu_per_s": percentile(context_switches[normal]),
+        "runnable_processes_during_high_cpu": percentile(runnable[high]),
+        "runnable_processes_during_normal_cpu": percentile(runnable[normal]),
+        "high_cpu_burst_start_spacing_s": percentile(np.diff(burst_starts), (50, 95, 100)),
+        "evidence_boundary": (
+            "The capture-to-upload phase transition and its correlation with USB traffic "
+            "and CPU saturation are directly observed. The monitor did not label the "
+            "short-lived upload-once process, so this run alone cannot separate its "
+            "userspace CPU from USB/network kernel overhead."
         ),
     }
 
@@ -716,6 +791,9 @@ def main() -> None:
             motion_start,
             first_override,
         ),
+        "video_upload_phase_correlation": video_upload_phase_correlation(
+            performance_rows, motion_start, first_override
+        ),
         "at_first_obstacle_window": performance_metrics(
             performance_rows, first_override - 3.0, first_override + 5.0
         ),
@@ -878,8 +956,52 @@ def main() -> None:
     fig.savefig(ROOT / "trajectory_segmented.png", dpi=180)
     plt.close(fig)
 
+    route_cumulative = np.r_[0.0, np.cumsum(np.linalg.norm(np.diff(aligned_route, axis=0), axis=1))]
+    route_zoom = (route_cumulative >= 315.0) & (route_cumulative <= 336.0)
+    pose_zoom = (projection["progress"] >= 315.0) & (projection["progress"] <= 336.0)
+    fig, axis = plt.subplots(figsize=(10, 8))
+    axis.plot(
+        aligned_route[route_zoom, 0],
+        aligned_route[route_zoom, 1],
+        color="#9ca3af",
+        linewidth=2.0,
+        label="CSV horizontal route",
+    )
+    before_remote = pose_zoom & (times < float(first_axis["wall_time"]))
+    intervention = pose_zoom & (times >= float(first_axis["wall_time"])) & (times < recovery_one)
+    recovered = pose_zoom & (times >= recovery_one)
+    axis.plot(poses[before_remote, 0], poses[before_remote, 1], color="#15803d", label="automatic / stopped")
+    axis.plot(poses[intervention, 0], poses[intervention, 1], color="#dc2626", label="remote intervention")
+    axis.plot(poses[recovered, 0], poses[recovered, 1], color="#2563eb", label="recovered automatic")
+    marker_events = [
+        ("safety zero", first_override, "x", "black"),
+        ("first stick", float(first_axis["wall_time"]), "^", "#f97316"),
+        ("1.085 m peak", float(times[intervention_peak_index]), "s", "#dc2626"),
+        ("stable recovery", recovery_one, "o", "#2563eb"),
+    ]
+    for label, epoch, marker, color in marker_events:
+        index = int(np.argmin(np.abs(times - epoch)))
+        axis.scatter(
+            poses[index, 0],
+            poses[index, 1],
+            marker=marker,
+            color=color,
+            s=70,
+            label=label,
+            zorder=5,
+        )
+    axis.set_aspect("equal", adjustable="datalim")
+    axis.set_xlabel("Horizontal-frame X (m)")
+    axis.set_ylabel("Horizontal-frame Y (m)")
+    axis.set_title("Patrol 17 intervention zoom: obstacle stop, remote deviation, recovery")
+    axis.grid(alpha=0.2)
+    axis.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(ROOT / "trajectory_intervention_zoom.png", dpi=180)
+    plt.close(fig)
+
     elapsed_min = (times - motion_start) / 60.0
-    fig, axes = plt.subplots(2, 1, figsize=(13, 8), sharex=True)
+    fig, axes = plt.subplots(3, 1, figsize=(13, 10), sharex=True)
     axes[0].plot(elapsed_min, projection["distance"], color="#0f4c81", linewidth=0.8)
     axes[0].axhline(0.10, color="#dc2626", linestyle="--", linewidth=0.9, label="10 cm")
     axes[0].set_ylabel("Cross-track error (m)")
@@ -888,8 +1010,28 @@ def main() -> None:
     axes[0].legend(loc="upper left")
     axes[1].plot(elapsed_min, odom_age_ms, color="#6b21a8", linewidth=0.7)
     axes[1].set_ylabel("Consumed odom stamp age (ms)")
-    axes[1].set_xlabel("Elapsed patrol time (min)")
     axes[1].grid(alpha=0.2)
+    performance_epoch = np.asarray(
+        [row["epoch"] for row in performance_rows if motion_start <= row["epoch"] <= motion_end]
+    )
+    performance_cpu = np.asarray(
+        [
+            row["system_cpu_pct"]
+            for row in performance_rows
+            if motion_start <= row["epoch"] <= motion_end
+        ]
+    )
+    axes[2].plot(
+        (performance_epoch - motion_start) / 60.0,
+        performance_cpu,
+        color="#047857",
+        linewidth=0.8,
+    )
+    axes[2].axhline(90.0, color="#dc2626", linestyle="--", linewidth=0.9)
+    axes[2].set_ylabel("System CPU (%)")
+    axes[2].set_xlabel("Elapsed patrol time (min)")
+    axes[2].set_ylim(0, 105)
+    axes[2].grid(alpha=0.2)
     for begin, end in override_intervals:
         for axis in axes:
             axis.axvspan(
