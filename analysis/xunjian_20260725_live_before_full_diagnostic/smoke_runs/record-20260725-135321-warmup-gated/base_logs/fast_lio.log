@@ -1,0 +1,14 @@
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=162.407 stamp_offset_ms_max=174.278 local_gap_ms_avg=101.901 local_gap_ms_max=105.943 samples=10 lidar_buffer=0 imu_buffer=52
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=168.48 stamp_offset_ms_max=179.624 local_gap_ms_avg=101.779 local_gap_ms_max=105.816 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=190.798 stamp_offset_ms_max=204.011 local_gap_ms_avg=102.333 local_gap_ms_max=103.876 samples=10 lidar_buffer=0 imu_buffer=58
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=196.838 stamp_offset_ms_max=212.555 local_gap_ms_avg=102.65 local_gap_ms_max=104.854 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=210.808 stamp_offset_ms_max=327.552 local_gap_ms_avg=139.643 local_gap_ms_max=223.11 samples=8 lidar_buffer=0 imu_buffer=103
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=218.267 stamp_offset_ms_max=339.826 local_gap_ms_avg=140.113 local_gap_ms_max=226.262 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=288.222 stamp_offset_ms_max=330.046 local_gap_ms_avg=219.091 local_gap_ms_max=221.313 samples=5 lidar_buffer=0 imu_buffer=102
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=299.432 stamp_offset_ms_max=360.541 local_gap_ms_avg=222.733 local_gap_ms_max=243.063 samples=5
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=198.908 stamp_offset_ms_max=272.582 local_gap_ms_avg=150.192 local_gap_ms_max=240.616 samples=7 lidar_buffer=0 imu_buffer=55
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=207.019 stamp_offset_ms_max=278.582 local_gap_ms_avg=147.016 local_gap_ms_max=216.132 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=274.838 stamp_offset_ms_max=315.313 local_gap_ms_avg=208.158 local_gap_ms_max=224.729 samples=5 lidar_buffer=0 imu_buffer=104
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=285.251 stamp_offset_ms_max=326.679 local_gap_ms_avg=208.358 local_gap_ms_max=232.276 samples=5
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING stamp_offset_ms_avg=292.643 stamp_offset_ms_max=325.225 local_gap_ms_avg=246.999 local_gap_ms_max=268.196 samples=5 lidar_buffer=0 imu_buffer=113
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING stamp_offset_ms_avg=301.556 stamp_offset_ms_max=332.765 local_gap_ms_avg=247.444 local_gap_ms_max=272.863 samples=5

@@ -1,0 +1,128 @@
+{
+  "created_at": "2026-07-25T13:39:14.632+08:00",
+  "min_distance_m": 0.4,
+  "recorder_reproduction": {
+    "available": true,
+    "csv_waypoint_count": 1,
+    "exact_within_2mm_0_002rad": true,
+    "interpretation": "exact recorder reproduction from sampled telemetry",
+    "paired_waypoint_count": 1,
+    "position_error_m": {
+      "count": 1,
+      "max": 3.5033595401540323e-07,
+      "median": 3.5033595401540323e-07,
+      "min": 3.5033595401540323e-07,
+      "p95": 3.5033595401540323e-07
+    },
+    "reconstructed_waypoint_count": 1,
+    "route_start_to_nearest_telemetry_m": 3.5033595401540323e-07,
+    "telemetry_start_index": 16,
+    "yaw_error_deg": {
+      "count": 1,
+      "max": 2.29077656301946e-05,
+      "median": 2.29077656301946e-05,
+      "min": 2.29077656301946e-05,
+      "p95": 2.29077656301946e-05
+    }
+  },
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_smoke_recovery_do_not_use.csv",
+  "route_geometry": {
+    "body_yaw_vs_track_error_deg": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p95": null
+    },
+    "bounding_box": {
+      "max_x": -0.026346,
+      "max_y": 0.005701,
+      "min_x": -0.026346,
+      "min_y": 0.005701
+    },
+    "end": {
+      "index": 0,
+      "v": 0.2,
+      "x": -0.026346,
+      "y": 0.005701,
+      "yaw": -0.007599
+    },
+    "path_length_m": 0,
+    "spacing_above_0_60m": 0,
+    "spacing_above_1_00m": 0,
+    "spacing_m": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p95": null
+    },
+    "start": {
+      "index": 0,
+      "v": 0.2,
+      "x": -0.026346,
+      "y": 0.005701,
+      "yaw": -0.007599
+    },
+    "strongest_turns": [],
+    "waypoint_count": 1
+  },
+  "route_sha256": "f6e1d98bc981ac6402319076a5afa29f2b0ed08dd3862c6cb3a3278e0d567e38",
+  "schema": "go2.route_recording_audit.v1",
+  "telemetry": {
+    "health_records": 11,
+    "odom_samples": 41,
+    "pitch_deg": {
+      "count": 41,
+      "max": 0.5896515235589,
+      "median": 0.44076924733537093,
+      "min": 0.24728942464518847,
+      "p95": 0.5823324014882092
+    },
+    "planar_motion_m": 0.1376356524490994,
+    "received_at_end": {
+      "cmd_vel": 0,
+      "livox_imu": 1866,
+      "low": 215,
+      "odom": 41,
+      "patrol_cmd": 0,
+      "sport": 215,
+      "sport_request": 0,
+      "wireless": 0,
+      "wireless_raw": 215
+    },
+    "roll_deg": {
+      "count": 41,
+      "max": 0.19892476018153393,
+      "median": 0.012263560396030222,
+      "min": -0.18580426037909623,
+      "p95": 0.1637012844966899
+    },
+    "source_stamp_gap_s": {
+      "count": 40,
+      "max": 0.5963876247406006,
+      "median": 0.2494664192199707,
+      "min": 0.09935498237609863,
+      "p95": 0.5017401337623593
+    },
+    "spatial_motion_m": 0.177243231832363,
+    "written_at_end": {
+      "cmd_vel": 0,
+      "livox_imu": 200,
+      "low": 11,
+      "odom": 41,
+      "patrol_cmd": 0,
+      "sport": 136,
+      "sport_request": 0,
+      "wireless": 0,
+      "wireless_raw": 137
+    },
+    "z_m": {
+      "count": 41,
+      "max": -0.046731075864923706,
+      "median": -0.052778481191450066,
+      "min": -0.05927123863857604,
+      "p95": -0.047822503132287655
+    }
+  }
+}

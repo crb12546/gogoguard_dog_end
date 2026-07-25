@@ -1,0 +1,101 @@
+{
+  "schema": "go2.route_recording_validation.v1",
+  "created_at": "2026-07-25T19:22:03+08:00",
+  "verdict": "accepted_for_controlled_patrol",
+  "source_route": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf9.csv",
+  "source_route_sha256": "7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b",
+  "recording_run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-185929-xbf9-blackbox-529362",
+  "automatic_status": "complete_with_warnings",
+  "accepted_warnings": [
+    "odom_record_gap_during_recording:0.399279s"
+  ],
+  "acceptance_basis": {
+    "recording_integrity": {
+      "route_points": 1277,
+      "source_xy_length_m": 576.993831,
+      "same_fastlio_session_at_start_and_stop": true,
+      "fastlio_health_failed_events": 0,
+      "fastlio_recovery_events": 0,
+      "fastlio_permanent_lock_events": 0,
+      "exact_route_telemetry_pairing": true,
+      "maximum_pairing_position_error_m": 0.000000697258,
+      "maximum_pairing_yaw_error_deg": 0.0000286314
+    },
+    "gap_localization": {
+      "rosbag_record_gap_s": 0.399279,
+      "fastlio_source_stamp_gap_s": 0.497082,
+      "wall_time_epoch_range": [
+        1784977665.795167,
+        1784977666.194214
+      ],
+      "nearest_route_waypoint": 821,
+      "source_route_progress_m": 370.34,
+      "raw_odom_xy_displacement_during_gap_m": 0.4180,
+      "horizontal_route_segment_index_range": [
+        820,
+        821
+      ],
+      "horizontal_route_segment_length_m": 0.6626,
+      "horizontal_route_turn_at_segment_deg": 0.019,
+      "fastlio_yaw_change_during_gap_deg": 0.835,
+      "interpretation": "The only over-threshold odometry interval lies on an effectively straight segment. Both bounding route points are present and no turn geometry is omitted."
+    },
+    "gap_root_cause_evidence": {
+      "same_second_udp_receive_buffer_errors": 6,
+      "same_second_physical_interface_rx_errors": 0,
+      "same_second_physical_interface_rx_drops": 0,
+      "fastlio_input_local_gap_max_ms": 403.773,
+      "fastlio_imu_buffer_at_event": 120,
+      "same_second_system_cpu_pct": 36.8,
+      "same_second_nvme_busy_pct": 2.4,
+      "same_second_max_temperature_c": 61.3,
+      "interpretation": "The event coincides with kernel UDP receive-buffer loss and FAST-LIO input starvation, while CPU, disk, temperature, and physical-link counters were not saturated. This is the most specific recorded mechanism for the isolated gap."
+    },
+    "horizontal_frame": {
+      "route_sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2",
+      "metadata_sha256": "f7c485e7ffffcc5d950478f08767910e69efe698795fd88998b8b86f7d0ad71b",
+      "route_points": 1277,
+      "route_length_m": 602.420639,
+      "recording_plane_tilt_deg": 24.366902,
+      "recording_plane_r_squared": 0.999752399,
+      "recording_plane_residual_p95_m": 1.423166,
+      "recording_plane_residual_max_m": 1.945350,
+      "quiet_calibration_samples": 88,
+      "maximum_calibration_pairing_gap_s": 0.047823,
+      "measured_body_lidar_gravity_angle_deg": 31.977328,
+      "raw_yaw_to_track_error_median_deg": 11.1360808,
+      "raw_yaw_to_track_error_p95_deg": 16.6677584,
+      "horizontal_yaw_to_track_error_median_deg": 0.8916074,
+      "horizontal_yaw_to_track_error_p95_deg": 3.5596884,
+      "interpretation": "Applying the full recorded 3D pose chain reduces the route yaw/track inconsistency by more than an order of magnitude without changing waypoint order."
+    },
+    "controller_feasibility": {
+      "maximum_horizontal_waypoint_spacing_m": 0.687542,
+      "waypoint_spacing_above_1m": 0,
+      "maximum_adjacent_turn_deg": 21.742388,
+      "maximum_required_yaw_rate_at_0_5_mps_rad_s": 0.383949,
+      "controller_yaw_rate_limit_rad_s": 0.45,
+      "required_yaw_rate_within_limit": true
+    },
+    "recording_performance": {
+      "online_cpus": 8,
+      "system_cpu_median_pct": 37.45,
+      "system_cpu_p95_pct": 43.6,
+      "system_cpu_max_pct": 57.3,
+      "maximum_temperature_c": 62.0,
+      "nvme_busy_p95_pct": 2.8,
+      "nvme_busy_max_pct": 4.8
+    }
+  },
+  "limitations": [
+    "The 577 m recording is not externally surveyed ground truth.",
+    "The long route has up to 1.95 m residual height after one global plane fit; runtime remains self-consistent because route and live pose use the same frozen 3D rotation and control ignores leveled Z.",
+    "Acceptance proves recording continuity and controller feasibility; physical tracking accuracy must still be measured by a controlled once-mode patrol."
+  ],
+  "recommended_first_execution": {
+    "loop_mode": "once",
+    "speed_m_s": 0.25,
+    "require_open_start_area": true,
+    "retain_full_patrol_blackbox": true
+  }
+}

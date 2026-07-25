@@ -1,0 +1,4 @@
+/home/unitree/go2_fastlio_ws/patrol_logs/livox.log|2132452|2508761|false
+/home/unitree/go2_fastlio_ws/patrol_logs/fast_lio.log|2080363|2446545|false
+/home/unitree/go2_fastlio_ws/patrol_logs/service/go2-base-health-watchdog.log|4373|4373|false
+/tmp/go2_saas_base.log|2948|2948|false

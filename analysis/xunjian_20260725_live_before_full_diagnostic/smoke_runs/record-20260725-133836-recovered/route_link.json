@@ -1,0 +1,26 @@
+{
+  "audit": "route_recording_audit.json",
+  "completed_at": "2026-07-25T13:39:15.148+08:00",
+  "created_at": "2026-07-25T13:38:36.661+08:00",
+  "errors": [],
+  "localization_session_end": {
+    "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 60754,
+    "start_ticks": 170308
+  },
+  "localization_session_start": {
+    "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 60754,
+    "start_ticks": 170308
+  },
+  "min_distance_m": 0.4,
+  "recording_run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-133836-_diagnostic_smoke_recovery_do_not_use-blackbox-61855",
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_smoke_recovery_do_not_use.csv",
+  "route_line_count": 2,
+  "route_sha256": "f6e1d98bc981ac6402319076a5afa29f2b0ed08dd3862c6cb3a3278e0d567e38",
+  "same_fastlio_session_at_start_and_stop": true,
+  "schema": "go2.route_recording_link.v1",
+  "status": "complete"
+}

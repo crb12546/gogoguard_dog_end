@@ -69,10 +69,14 @@ STATIC_DIR = Path(__file__).parent / "static"
 
 # ---------------------------------------------------------------- 共享状态
 LOCK = threading.Lock()
+STATUS_READY_EVENT = threading.Event()
 STATE = {
     "host": None,              # 当前使用的 SSH 别名
     "ssh_ok": False,
+    "status_ready": False,     # 至少完成过一次远端进程/系统状态扫描
+    "host_probe_complete": False,
     "telemetry": {},           # 最新一帧遥测
+    "telemetry_received_at": None,
     "telemetry_age": None,     # 距最新遥测的秒数
     "processes": {},           # 远端关键进程运行状态
     "recorder_file": None,     # 正在录制的文件(由本端记录)
@@ -128,7 +132,25 @@ def require_host() -> Optional[str]:
     with LOCK:
         STATE["host"] = h
         STATE["ssh_ok"] = h is not None
+        STATE["host_probe_complete"] = True
+        # A completed negative probe is authoritative.  A positive probe still
+        # waits for status_worker to scan the actual remote process state.
+        STATE["status_ready"] = h is None
+    if h is None:
+        STATUS_READY_EVENT.set()
+    else:
+        STATUS_READY_EVENT.clear()
     return h
+
+
+def _refresh_telemetry_age_locked():
+    """Update stream age from local receipt time, not cross-host wall clocks."""
+    received_at = STATE["telemetry_received_at"]
+    if received_at is not None:
+        STATE["telemetry_age"] = round(
+            max(0.0, time.monotonic() - received_at),
+            1,
+        )
 
 
 # ---------------------------------------------------------------- 遥测流(远端脚本经 stdin 注入, 不落盘)
@@ -259,6 +281,7 @@ def telemetry_worker():
                     continue
                 with LOCK:
                     STATE["telemetry"] = data
+                    STATE["telemetry_received_at"] = time.monotonic()
                     STATE["telemetry_age"] = 0.0
                     STATE["ssh_ok"] = True
         except Exception:  # noqa: BLE001
@@ -272,11 +295,11 @@ def telemetry_worker():
         with LOCK:
             STATE["ssh_ok"] = False
             STATE["host"] = None   # 触发重新探测(热点/网线切换)
+            STATE["host_probe_complete"] = False
+            STATE["status_ready"] = False
             if STATE["telemetry"]:
-                STATE["telemetry_age"] = round(
-                    time.time() - STATE["telemetry"].get("ts", 0),
-                    1,
-                )
+                _refresh_telemetry_age_locked()
+            STATUS_READY_EVENT.clear()
         time.sleep(2)
 
 
@@ -359,11 +382,7 @@ def status_worker():
                     for key in PROC_KEYS
                 }
                 if STATE["telemetry"]:
-                    STATE["telemetry_age"] = round(
-                        time.time()
-                        - STATE["telemetry"].get("ts", 0),
-                        1,
-                    )
+                    _refresh_telemetry_age_locked()
             time.sleep(2)
             continue
         cmd = PROC_STATUS + "; echo __WC__; "
@@ -444,6 +463,8 @@ def status_worker():
                     cellular = candidate
                     break
             with LOCK:
+                STATE["ssh_ok"] = True
+                STATE["status_ready"] = True
                 STATE["processes"] = procs
                 STATE["recorder_lines"] = lines
                 STATE["recorder_progress"] = (
@@ -455,7 +476,8 @@ def status_worker():
                 STATE["sys"] = sys_info
                 STATE["cellular"] = cellular
                 if STATE["telemetry"]:
-                    STATE["telemetry_age"] = round(time.time() - STATE["telemetry"].get("ts", 0), 1)
+                    _refresh_telemetry_age_locked()
+            STATUS_READY_EVENT.set()
         time.sleep(3)
 
 
@@ -686,7 +708,7 @@ def act_tail_log(p):
 
 # -------- 在线点云累积(内存注入脚本, 输出 PCD 数据文件到狗的 maps/console/) --------
 # 注意: Foxy 没有 sensor_msgs_py, 必须手动解析 PointCloud2 二进制
-PCD_SCRIPT = r'''
+LEGACY_PCD_SCRIPT = r'''
 import os, signal, sys, time
 import numpy as np
 import rclpy
@@ -780,17 +802,53 @@ else:
 '''
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PCD_SCRIPT = (
+    PROJECT_ROOT
+    / "orin_go2_fastlio_ws"
+    / "scripts"
+    / "go2_pcd_capture.py"
+).read_text()
+HORIZONTAL_FRAME_SCRIPT = (
+    PROJECT_ROOT
+    / "orin_go2_fastlio_ws"
+    / "scripts"
+    / "horizontal_frame.py"
+).read_text()
+HORIZONTAL_FRAME_CALIBRATION = (
+    PROJECT_ROOT
+    / "orin_go2_fastlio_ws"
+    / "config"
+    / "horizontal_frame_calibration.json"
+).read_text()
+
+
 def act_start_pcd(p):
     name = str(p.get("name", ""))
     if not NAME_RE.match(name):
         raise ValueError("地图名只允许字母/数字/下划线/短横线")
     out = f"{PCD_DIR}/{name}.pcd"
+    raw_out = f"{PCD_DIR}/raw/{name}.pcd"
+    metadata_out = f"{PCD_DIR}/{name}.leveling.json"
     mode_guard = _mode_conflict_guard(
         "pcd",
         r"[r]oute_recorder|[w]aypoint_follower|[u]nitree_safe_cmd_node|[c]md_vel_udp_sender|[g]o2_sdk2_udp_receiver|\/tmp\/[z]1pro_video_loop\.sh",
     )
+    capture_command = " ".join(
+        [
+            "python3 -u /tmp/go2map_capture.py",
+            shlex.quote(out),
+            "--raw-output",
+            shlex.quote(raw_out),
+            "--metadata-output",
+            shlex.quote(metadata_out),
+            "--calibration /tmp/go2_horizontal_frame_calibration.json",
+            "--session-metadata",
+            shlex.quote(CONSOLE_PCD_SESSION),
+        ]
+    )
     pcd_inner = (
-        f'python3 -u /tmp/go2map_capture.py "{out}"; rc=$?; '
+        f"{capture_command}; rc=$?; "
         f"rm -f {shlex.quote(CONSOLE_PCD_ACTIVE)}; exit $rc"
     )
     guard_inner = _session_guard(
@@ -810,6 +868,12 @@ def act_start_pcd(p):
         + f"mkdir -p {PCD_DIR}; cat > /tmp/go2map_capture.py <<'PYEOF'\n"
         + PCD_SCRIPT
         + "\nPYEOF\n"
+        + "cat > /tmp/horizontal_frame.py <<'HORIZONTALPYEOF'\n"
+        + HORIZONTAL_FRAME_SCRIPT
+        + "\nHORIZONTALPYEOF\n"
+        + "cat > /tmp/go2_horizontal_frame_calibration.json <<'CALIBRATIONEOF'\n"
+        + HORIZONTAL_FRAME_CALIBRATION
+        + "\nCALIBRATIONEOF\n"
         + f"touch {shlex.quote(CONSOLE_PCD_ACTIVE)}; "
         + _detached(
             guard_inner,
@@ -1033,10 +1097,16 @@ def index():
 
 @app.get("/api/status")
 def api_status():
+    # Do not render the empty startup snapshot as a real robot disconnect.
+    # If discovery is slow or the robot is unavailable, the UI still gets a
+    # neutral "probing" state after this bounded wait.
+    if not STATUS_READY_EVENT.is_set():
+        STATUS_READY_EVENT.wait(timeout=4.0)
     with LOCK:
         snap = {
             "host": STATE["host"],
             "ssh_ok": STATE["ssh_ok"],
+            "status_ready": STATE["status_ready"],
             "telemetry": STATE["telemetry"],
             "telemetry_age": STATE["telemetry_age"],
             "processes": STATE["processes"],
@@ -1336,7 +1406,22 @@ def api_action(req: ActionReq):
         cmd = fn(req.params)
     except ValueError as e:
         return JSONResponse({"error": str(e)}, status_code=400)
-    timeout = 390 if req.name == "start_follower" else 180 if req.name == "stop_follower" else 160 if req.name == "saas_video_segment" else 90 if req.name in {"start_recorder", "stop_recorder", "camera_record", "camera_start_loop", "camera_snapshot", "saas_heartbeat", "saas_manifest", "saas_command_result"} else 25
+    action_timeouts = {
+        # Both starts contain freshness/stability gates.  A slow but healthy
+        # gate must not be mistaken by the management page for command failure.
+        "start_follower": 390,
+        "start_recorder": 320,
+        "stop_follower": 180,
+        "stop_recorder": 180,
+        "saas_video_segment": 160,
+        "camera_record": 90,
+        "camera_start_loop": 90,
+        "camera_snapshot": 90,
+        "saas_heartbeat": 90,
+        "saas_manifest": 90,
+        "saas_command_result": 90,
+    }
+    timeout = action_timeouts.get(req.name, 25)
     rc, out, err = ssh_run(host, cmd, timeout=timeout)
     result = out or err or f"rc={rc}"
     log_action(f"{req.name}: {result[:200]}")

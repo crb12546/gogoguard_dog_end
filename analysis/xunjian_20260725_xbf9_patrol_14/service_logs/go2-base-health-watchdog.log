@@ -1,0 +1,26 @@
+1784186993.525378 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784186994.026996200] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry max_abs_xy=100.00 max_abs_z=5.00 max_jump=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0
+1784913502.013103 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784913503.095375143] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry max_abs_xy=100.00 max_abs_z=5.00 max_jump=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0
+[ERROR] [1784914849.357865313] [go2_base_health_watchdog]: base health bad 1/2: odom_abs_out_of_range:x=9.794 y=1.831 z=5.008
+[ERROR] [1784914849.483163805] [go2_base_health_watchdog]: base health bad 2/2: odom_abs_out_of_range:x=9.839 y=1.835 z=5.029
+[ERROR] [1784914850.922623385] [go2_base_health_watchdog]: stopped patrol processes rc=0 out= err=
+[ERROR] [1784914850.961436393] [go2_base_health_watchdog]: restarted base rc=-15 out= err=
+1784915995.051954 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784915995.712910681] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+1784916583.120757 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784916583.653263252] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+1784919248.316347 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784919248.853408196] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+1784961363.425549 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784961364.245300907] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+1784968722.470335 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784968724.350612446] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+1784980031.963864 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784980032.621153765] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false
+[ERROR] [1784982894.010592301] [go2_base_health_watchdog]: base health bad 1/2: odom_xy_abs_out_of_range:x=100.038 y=-91.798 z=61.278
+[ERROR] [1784982894.117313522] [go2_base_health_watchdog]: base health bad 2/2: odom_xy_abs_out_of_range:x=100.070 y=-91.790 z=61.307
+[ERROR] [1784982895.513945378] [go2_base_health_watchdog]: stopped patrol processes rc=0 out= err=
+[ERROR] [1784982895.514695911] [go2_base_health_watchdog]: base was not restarted; coordinate continuity is preserved
+1784984269.710597 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784984270.397799208] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=5000.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false

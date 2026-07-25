@@ -1,0 +1,483 @@
+{
+  "base_logs": [
+    {
+      "copy": "base_logs/livox.log",
+      "end_offset_bytes": 436616,
+      "sha256": "c7af965d59419ee6570551962f7928d59c2ac13ac946fad4cc75ce60791a689a",
+      "size_bytes": 1810,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/livox.log",
+      "source_size_at_copy_bytes": 441681,
+      "source_size_at_stop_bytes": 436616,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 434806
+    },
+    {
+      "copy": "base_logs/fast_lio.log",
+      "end_offset_bytes": 423424,
+      "sha256": "390d5bd281ebc3b558ddbe3b314478520a654efcd62a9c443aeff14d849f2e18",
+      "size_bytes": 1731,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/fast_lio.log",
+      "source_size_at_copy_bytes": 428272,
+      "source_size_at_stop_bytes": 423424,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 421693
+    },
+    {
+      "copy": "base_logs/go2-base-health-watchdog.log",
+      "end_offset_bytes": 2323,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/service/go2-base-health-watchdog.log",
+      "source_size_at_copy_bytes": 2323,
+      "source_size_at_stop_bytes": 2323,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 2323
+    },
+    {
+      "copy": "base_logs/go2_saas_base.log",
+      "end_offset_bytes": 3533,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "/tmp/go2_saas_base.log",
+      "source_size_at_copy_bytes": 3533,
+      "source_size_at_stop_bytes": 3533,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 3533
+    }
+  ],
+  "completed_at": "2026-07-25T14:06:44.272+08:00",
+  "created_at": "2026-07-25T14:05:43.511+08:00",
+  "errors": [
+    "route_has_fewer_than_5_waypoints",
+    "route_length_below_1m"
+  ],
+  "evidence": {
+    "formal_base_logs": "base_logs",
+    "formal_recording_gate": "formal_recording_gate.log",
+    "observer_warmup_gate": "observer_warmup_gate.log",
+    "performance": "performance_monitor.log",
+    "rosbag": "rosbag",
+    "route_recorder": "route_recorder.log",
+    "route_writer_gate": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/.route_recording_enabled",
+    "session_guard": "localization_session_guard.log",
+    "startup_base_logs": "base_logs_startup",
+    "system_start": "system_start.json",
+    "telemetry": "experiment_telemetry.jsonl"
+  },
+  "fastlio_health": {
+    "available": true,
+    "health_failed_events": 0,
+    "health_failed_examples": [],
+    "permanent_lock_events": 0,
+    "permanent_lock_examples": [],
+    "recovery_events": 0,
+    "recovery_examples": []
+  },
+  "filesystem_available_bytes_at_stop": 445568004096,
+  "formal_recording_gate": {
+    "available": true,
+    "log": "formal_recording_gate.log",
+    "ready": true,
+    "returncode": 0
+  },
+  "formal_recording_started_epoch": 1784959582.984485,
+  "formal_recording_stopped_epoch": 1784959588.2476163,
+  "localization_session_end": {
+    "created_at": "2026-07-25T14:06:31+0800",
+    "current_anchor": {
+      "qw": 0.9999516711059735,
+      "qx": 0.0010691315868542864,
+      "qy": 0.006163717039223993,
+      "qz": -0.007584260164019191,
+      "snapshot_mtime_ns": 1784959591213085087,
+      "stamp": 1784959591.0136106,
+      "x": -0.042603463704411364,
+      "y": -0.022284704123223704,
+      "yaw": -0.015156342408754138,
+      "z": -0.07356919549798033
+    },
+    "localization_session": {
+      "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 77512,
+      "start_ticks": 214086
+    },
+    "mode": "session_only",
+    "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+    "schema": "go2.manual_anchor.v1",
+    "stability": {
+      "duration_seconds": 0.8700296699998944,
+      "max_local_gap_seconds": 0.10851149099971735,
+      "samples": 10,
+      "translation_span_m": 0.015245483963198225,
+      "yaw_span_rad": 0.00585782474733213
+    }
+  },
+  "localization_session_pre_observer": {
+    "created_at": "2026-07-25T14:05:44+0800",
+    "current_anchor": {
+      "qw": 0.9999622387147489,
+      "qx": -0.0011468709399771355,
+      "qy": 0.00736111490095446,
+      "qz": -0.004474351238571396,
+      "snapshot_mtime_ns": 1784959544479129445,
+      "stamp": 1784959544.3144157,
+      "x": -0.031222423013898735,
+      "y": -0.019605157016875353,
+      "yaw": -0.008966339513776869,
+      "z": -0.07094548506360086
+    },
+    "localization_session": {
+      "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 77512,
+      "start_ticks": 214086
+    },
+    "mode": "session_only",
+    "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+    "schema": "go2.manual_anchor.v1",
+    "stability": {
+      "duration_seconds": 0.8611490109997249,
+      "max_local_gap_seconds": 0.11443022200000996,
+      "samples": 10,
+      "translation_span_m": 0.006046838970560154,
+      "yaw_span_rad": 0.005958758985096416
+    }
+  },
+  "localization_session_start": {
+    "created_at": "2026-07-25T14:06:08+0800",
+    "current_anchor": {
+      "qw": 0.9999710201599734,
+      "qx": -0.0010152626737277765,
+      "qy": 0.005532630076419684,
+      "qz": -0.0051301156249243,
+      "snapshot_mtime_ns": 1784959568592137836,
+      "stamp": 1784959568.3595307,
+      "x": -0.03219121361904209,
+      "y": -0.019242742511899707,
+      "yaw": -0.01027197633191913,
+      "z": -0.07243436600120648
+    },
+    "localization_session": {
+      "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 77512,
+      "start_ticks": 214086
+    },
+    "mode": "session_only",
+    "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+    "schema": "go2.manual_anchor.v1",
+    "stability": {
+      "duration_seconds": 0.8956060229998002,
+      "max_local_gap_seconds": 0.11060398900008295,
+      "samples": 10,
+      "translation_span_m": 0.021597006176783493,
+      "yaw_span_rad": 0.0069234734293453755
+    }
+  },
+  "min_distance_m": 0.4,
+  "observer_policy": {
+    "formal_recording_after_warmup_gate": true,
+    "observer_nice": 10,
+    "pointcloud_evidence": "Livox and FAST-LIO in-process timing logs",
+    "raw_pointcloud_subscriber": false,
+    "rosbag_topics": [
+      "/Odometry",
+      "/livox/imu",
+      "/lf/lowstate",
+      "/lf/sportmodestate",
+      "/lf/wirelesscontroller",
+      "/wirelesscontroller",
+      "/wirelesscontroller_unprocessed",
+      "/tf",
+      "/tf_static"
+    ],
+    "route_writer_enabled_only_after_formal_gate": true,
+    "startup_and_formal_base_logs_separated": true
+  },
+  "observer_warmup_gate": {
+    "available": true,
+    "log": "observer_warmup_gate.log",
+    "ready": true,
+    "returncode": 0
+  },
+  "processes": {
+    "performance": {
+      "argv": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "-u",
+        "/home/unitree/go2_fastlio_ws/scripts/patrol_performance_monitor.py",
+        "--interval",
+        "1.0",
+        "--filesystem-path",
+        "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868"
+      ],
+      "log": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/performance_monitor.log",
+      "pgid": 125601,
+      "pid": 125601,
+      "started_at": "2026-07-25T14:05:55.939+08:00"
+    },
+    "rosbag": {
+      "argv": [
+        "nice",
+        "-n",
+        "10",
+        "ros2",
+        "bag",
+        "record",
+        "-o",
+        "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/rosbag",
+        "/Odometry",
+        "/livox/imu",
+        "/lf/lowstate",
+        "/lf/sportmodestate",
+        "/lf/wirelesscontroller",
+        "/wirelesscontroller",
+        "/wirelesscontroller_unprocessed",
+        "/tf",
+        "/tf_static"
+      ],
+      "log": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/rosbag_record.log",
+      "pgid": 125602,
+      "pid": 125602,
+      "started_at": "2026-07-25T14:05:55.946+08:00"
+    },
+    "route_recorder": {
+      "argv": [
+        "ros2",
+        "run",
+        "go2_fastlio_patrol",
+        "route_recorder",
+        "--ros-args",
+        "-p",
+        "route_file:=/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_writer_gate_smoke_do_not_use.csv",
+        "-p",
+        "min_distance:=0.400000",
+        "-p",
+        "startup_enable_file:=/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/.route_recording_enabled"
+      ],
+      "log": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/route_recorder.log",
+      "pgid": 126182,
+      "pid": 126182,
+      "started_at": "2026-07-25T14:06:08.785+08:00"
+    },
+    "session_guard": {
+      "argv": [
+        "python3",
+        "-u",
+        "/home/unitree/go2_fastlio_ws/scripts/localization_session_guard.py",
+        "--metadata",
+        "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/localization_session_start.json",
+        "--active-file",
+        "/tmp/go2_console_recorder.active",
+        "--mode",
+        "recorder",
+        "--event-log",
+        "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/localization_session_guard.log",
+        "--invalidate-output",
+        "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_writer_gate_smoke_do_not_use.csv"
+      ],
+      "log": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/localization_session_guard.log",
+      "pgid": 126181,
+      "pid": 126181,
+      "started_at": "2026-07-25T14:06:08.678+08:00"
+    },
+    "telemetry": {
+      "argv": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "-u",
+        "/home/unitree/go2_fastlio_ws/scripts/go2_experiment_telemetry.py",
+        "--profile",
+        "recording",
+        "--output",
+        "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/experiment_telemetry.jsonl"
+      ],
+      "log": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/experiment_telemetry.log",
+      "pgid": 125600,
+      "pid": 125600,
+      "started_at": "2026-07-25T14:05:55.932+08:00"
+    }
+  },
+  "ready_at": "2026-07-25T14:06:23.085+08:00",
+  "rosbag": {
+    "available": true,
+    "files": [
+      {
+        "name": "metadata.yaml",
+        "sha256": "9b127dd3e3da1ed9ec7db6f1557ad1ae4b723d47069e54e21ec05d0d2218a8f4",
+        "size_bytes": 4210
+      },
+      {
+        "name": "rosbag_0.db3",
+        "sha256": "31b6688bbbb8f3727fa789f53a5017c5e7c3d7e97057ec1f5d029a56ed1503f5",
+        "size_bytes": 3932160
+      },
+      {
+        "name": "rosbag_0.db3-shm",
+        "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+        "size_bytes": 32768
+      },
+      {
+        "name": "rosbag_0.db3-wal",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      }
+    ],
+    "returncode": 0,
+    "topic_timing": {
+      "errors": [],
+      "topics": {
+        "/Odometry": {
+          "count": 51,
+          "record_time_gap_s": {
+            "count": 50,
+            "max": 0.11507422900000001,
+            "median": 0.10208853200000001,
+            "min": 0.09287493000000001,
+            "p95": 0.10927318830000002
+          }
+        },
+        "/lf/lowstate": {
+          "count": 106,
+          "record_time_gap_s": {
+            "count": 105,
+            "max": 0.054677235000000005,
+            "median": 0.050011695,
+            "min": 0.04527844,
+            "p95": 0.050907227400000005
+          }
+        },
+        "/lf/sportmodestate": {
+          "count": 106,
+          "record_time_gap_s": {
+            "count": 105,
+            "max": 0.057567819000000006,
+            "median": 0.050001295,
+            "min": 0.043666085,
+            "p95": 0.0504338696
+          }
+        },
+        "/lf/wirelesscontroller": {
+          "count": 0,
+          "record_time_gap_s": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p95": null
+          }
+        },
+        "/livox/imu": {
+          "count": 1052,
+          "record_time_gap_s": {
+            "count": 1051,
+            "max": 0.020175469,
+            "median": 0.004826378,
+            "min": 6.0066000000000004e-05,
+            "p95": 0.006040349
+          }
+        },
+        "/tf": {
+          "count": 51,
+          "record_time_gap_s": {
+            "count": 50,
+            "max": 0.11474647,
+            "median": 0.10226362750000001,
+            "min": 0.092744429,
+            "p95": 0.1098769287
+          }
+        },
+        "/wirelesscontroller": {
+          "count": 0,
+          "record_time_gap_s": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p95": null
+          }
+        },
+        "/wirelesscontroller_unprocessed": {
+          "count": 0,
+          "record_time_gap_s": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p95": null
+          }
+        }
+      },
+      "window_end_epoch": 1784959588.2476163,
+      "window_start_epoch": 1784959582.984485
+    }
+  },
+  "route_audit": "route_recording_audit.json",
+  "route_copy": "route_recorded.csv",
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_writer_gate_smoke_do_not_use.csv",
+  "route_line_count": 2,
+  "route_sha256": "877ab067c3ae0262a98be24813f6381126d79a210fe2324bd4230bafa69f0618",
+  "run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868",
+  "same_fastlio_session_at_start_and_stop": true,
+  "schema": "go2.route_recording_run.v1",
+  "startup_base_logs": [
+    {
+      "copy": "base_logs_startup/livox.log",
+      "end_offset_bytes": 434806,
+      "sha256": "dd413d440a134de4d1840d83a0392f84946031a6cea103885958c8558f39d38e",
+      "size_bytes": 13019,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/livox.log",
+      "source_size_at_copy_bytes": 434806,
+      "source_size_at_stop_bytes": 434806,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 421787
+    },
+    {
+      "copy": "base_logs_startup/fast_lio.log",
+      "end_offset_bytes": 421693,
+      "sha256": "7f8682edae6988b40719427be786b985cc7b344f38de17b1a9b1008c414ada85",
+      "size_bytes": 12474,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/fast_lio.log",
+      "source_size_at_copy_bytes": 421693,
+      "source_size_at_stop_bytes": 421693,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 409219
+    },
+    {
+      "copy": "base_logs_startup/go2-base-health-watchdog.log",
+      "end_offset_bytes": 2323,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "/home/unitree/go2_fastlio_ws/patrol_logs/service/go2-base-health-watchdog.log",
+      "source_size_at_copy_bytes": 2323,
+      "source_size_at_stop_bytes": 2323,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 2323
+    },
+    {
+      "copy": "base_logs_startup/go2_saas_base.log",
+      "end_offset_bytes": 3533,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "/tmp/go2_saas_base.log",
+      "source_size_at_copy_bytes": 3533,
+      "source_size_at_stop_bytes": 3533,
+      "source_truncated_since_start": false,
+      "start_offset_bytes": 3533
+    }
+  ],
+  "status": "complete_with_warnings",
+  "stop_results": {
+    "performance": "graceful",
+    "rosbag": "graceful",
+    "route_recorder": "graceful",
+    "session_guard": "not_running",
+    "telemetry": "graceful"
+  }
+}

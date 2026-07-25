@@ -1,0 +1,30 @@
+{
+  "audit": "route_recording_audit.json",
+  "completed_at": "2026-07-25T19:12:18.324+08:00",
+  "created_at": "2026-07-25T18:59:29.691+08:00",
+  "errors": [
+    "odom_record_gap_during_recording:0.399279s"
+  ],
+  "formal_recording_started_epoch": 1784977210.2813625,
+  "formal_recording_stopped_epoch": 1784977918.37189,
+  "localization_session_end": {
+    "boot_id": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 17369,
+    "start_ticks": 62692
+  },
+  "localization_session_start": {
+    "boot_id": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 17369,
+    "start_ticks": 62692
+  },
+  "min_distance_m": 0.4,
+  "recording_run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-185929-xbf9-blackbox-529362",
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf9.csv",
+  "route_line_count": 1278,
+  "route_sha256": "7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b",
+  "same_fastlio_session_at_start_and_stop": true,
+  "schema": "go2.route_recording_link.v1",
+  "status": "complete_with_warnings"
+}

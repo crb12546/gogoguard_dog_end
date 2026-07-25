@@ -1,0 +1,2 @@
+SESSION_GUARD_STARTED mode=recorder session=77512:214086 active=/tmp/go2_console_recorder.active
+SESSION_GUARD_STOPPED mode=recorder active_file_removed

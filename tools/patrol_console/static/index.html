@@ -173,6 +173,7 @@
 
     <div class="seg"></div>
     <div class="status-line idle" id="pcdStatus">点云采集: 空闲</div>
+    <div class="muted" style="margin-bottom:6px">主文件自动转换为重力水平坐标；开始后先保持狗静止，看到“水平校准完成”再移动。原始倾斜点云和校准证据会同时保留。</div>
     <div class="row">
       <label>点云地图</label>
       <input type="text" id="pcdName" placeholder="例: map_0704_01" style="width:140px">
@@ -408,7 +409,7 @@ const RESULT_MAP = [
   [/ROUTE_RECORDING_SESSION_CHANGED/, ['❌ 录制期间定位会话发生变化，拒绝执行该路线', 'bad']],
   [/CONTROL_RUNNING_STOP_CONTROL_FIRST/, ['⚠️ 先停止巡线/安全节点，再停止底座', 'warn']],
   [/ROUTE_TOO_SHORT/,     ['⚠️ 路线点太少, 至少要 2 个点才能巡线', 'warn']],
-  [/PCD_CAPTURE_STARTED/, ['✅ 点云采集已开始, 开着狗走一圈吧', 'ok']],
+  [/PCD_CAPTURE_STARTED/, ['⏳ 点云采集器已启动，先保持狗静止直到水平校准完成', 'info']],
   [/PCD_SAVING/,          ['⏳ 正在保存点云(点多要几秒), 保存完会自动通知', 'info']],
   [/SNAPSHOT /,           ['✅ 摄像头快照已保存', 'ok']],
   [/VIDEO /,              ['✅ 摄像头视频已保存', 'ok']],
@@ -458,7 +459,7 @@ function appendLog(t) {
 function baseReady() {
   const P = lastStatus.processes || {};
   const od = (lastStatus.telemetry||{}).odom;
-  return P.fastlio && od && od.age < 3;
+  return !!lastStatus.status_ready && P.fastlio && od && od.age < 3;
 }
 
 function requireBase(what) {
@@ -474,8 +475,9 @@ async function poll() {
   try {
     const s = await api('/api/status');
     lastStatus = s;
-    $('connPill').className = 'pill ' + (s.ssh_ok ? 'on' : 'bad');
-    $('connPill').textContent = s.ssh_ok ? 'SSH 已连接' : 'SSH 断开';
+    const statusProbing = !s.status_ready;
+    $('connPill').className = 'pill ' + (statusProbing ? 'off' : s.ssh_ok ? 'on' : 'bad');
+    $('connPill').textContent = statusProbing ? '正在检测机器狗…' : s.ssh_ok ? 'SSH 已连接' : 'SSH 断开';
     $('hostLabel').textContent = s.host ? ('经 ' + s.host + ({go2:' (热点)',go2wired:' (网线)',go2home:' (家WiFi)'}[s.host]||'')) : '';
 
     const cell = s.cellular || {};
@@ -566,7 +568,7 @@ async function poll() {
     update3DOverlays();
     const P = s.processes || {};
     $('procs').innerHTML = [['livox','雷达'],['fastlio','FAST-LIO'],['recorder','录制'],['safe','安全节点'],['follower','巡线'],['pcd','建图采集'],['camera_loop','视频分段'],['saas_loop','SaaS循环']]
-      .map(([k,label]) => `<span class="pill ${P[k]?'on':'off'}">${label}</span>`).join('');
+      .map(([k,label]) => `<span class="pill ${statusProbing?'off':P[k]?'on':'off'}">${label}${statusProbing?' 检测中…':''}</span>`).join('');
 
     $('camStatus').className = 'status-line ' + (P.camera_loop ? 'run' : 'idle');
     $('camStatus').textContent = P.camera_loop ? '摄像头: ● 连续分段录制中' : '摄像头: 空闲';
@@ -592,11 +594,12 @@ async function poll() {
     const baseRun = P.livox && P.fastlio;
     const odFresh = od && od.age < 3;
     const bs = $('baseStatus');
-    if (baseRun && odFresh) { bs.className='status-line ok'; bs.textContent='底座: ✅ 运行中, 定位正常'; }
+    if (statusProbing) { bs.className='status-line idle'; bs.textContent='底座: 正在读取机器狗真实状态…'; }
+    else if (baseRun && odFresh) { bs.className='status-line ok'; bs.textContent='底座: ✅ 运行中, 定位正常'; }
     else if (baseRun) { bs.className='status-line run'; bs.textContent='底座: ⏳ 已启动, 等待定位数据…(狗保持静止)'; }
     else { bs.className='status-line idle'; bs.textContent='底座: 未运行'; }
-    $('btnBase').disabled = baseRun;
-    $('btnBase').textContent = baseRun ? (odFresh ? '✓ 底座运行中' : '⏳ 底座启动中…') : '启动 雷达 + FAST-LIO';
+    $('btnBase').disabled = statusProbing || baseRun;
+    $('btnBase').textContent = statusProbing ? '正在检测底座…' : baseRun ? (odFresh ? '✓ 底座运行中' : '⏳ 底座启动中…') : '启动 雷达 + FAST-LIO';
     if (waitingBase && baseRun && odFresh) {
       waitingBase=false;
       if (activeTask && activeTask.key === 'start_base') finishTask('底座已就绪', '雷达 + FAST-LIO 已运行，/Odometry 数据正常。\n现在可以开始录路线、采 PCD 或巡线。', true);
@@ -640,23 +643,32 @@ async function poll() {
     if (P.pcd) {
       const m = prog.match(/POINTS (\d+) FRAMES (\d+)/);
       ps.className='status-line run';
-      ps.textContent = '点云采集: ● 采集中 ' + (m ? `已累积 ${(+m[1]).toLocaleString()} 点 (${m[2]} 帧)` : '启动中…');
+      if (/CALIBRATING/.test(prog)) {
+        const c = prog.match(/samples=(\d+)\/(\d+)/);
+        ps.textContent = '点云采集: ⏳ 正在锁定重力水平面，请保持狗静止' + (c ? ` (${c[1]}/${c[2]})` : '');
+      } else {
+        ps.textContent = '点云采集: ● 水平校准完成，采集中 ' + (m ? `已累积 ${(+m[1]).toLocaleString()} 点 (${m[2]} 帧)` : '等待第一帧…');
+      }
     } else if (/SAVED/.test(prog)) {
       const m = prog.match(/SAVED (\S+) (\d+)/);
       ps.className='status-line ok';
-      ps.textContent = `点云采集: ✅ 上次已保存 ${m ? m[1].split('/').pop() + ' (' + (+m[2]).toLocaleString() + ' 点)' : ''}`;
+      ps.textContent = `点云采集: ✅ 水平 PCD 已保存 ${m ? m[1].split('/').pop() + ' (' + (+m[2]).toLocaleString() + ' 点)' : ''}`;
       if (waitingPcdSave) {
         waitingPcdSave=false;
-        const msg = m ? `${m[1].split('/').pop()}\n${(+m[2]).toLocaleString()} 点` : '点云文件已保存';
-        if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云已保存', msg, true);
-        toast('✅ 点云已保存: ' + (m?m[1].split('/').pop()+', '+(+m[2]).toLocaleString()+' 点':''), 'ok', 7000);
+        const msg = m ? `${m[1].split('/').pop()}\n${(+m[2]).toLocaleString()} 点\n主文件已转为重力水平坐标；原始点云和变换证据也已保留。` : '水平点云文件已保存';
+        if (activeTask && activeTask.key === 'stop_pcd') finishTask('水平点云已保存', msg, true);
+        toast('✅ 水平点云已保存: ' + (m?m[1].split('/').pop()+', '+(+m[2]).toLocaleString()+' 点':''), 'ok', 7000);
         loadPcdList();
       }
+    } else if (/LEVEL_FRAME_NOT_READY/.test(prog)) {
+      ps.className='status-line idle';
+      ps.textContent = '点云采集: ❌ 未锁定重力水平面，本次未生成 PCD';
+      if (waitingPcdSave) { waitingPcdSave=false; if (activeTask && activeTask.key === 'stop_pcd') finishTask('水平校准未完成', '开始采集后狗没有保持足够长的静止状态，或两套 IMU 数据不一致；本次没有输出错误角度的 PCD。', false); }
     } else if (/NO_POINTS/.test(prog)) {
       ps.className='status-line idle';
       ps.textContent = '点云采集: ⚠️ 上次没采到点(是不是底座没开?)';
       if (waitingPcdSave) { waitingPcdSave=false; if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云保存失败', '没有采集到点云。检查底座是否运行、/cloud_registered 是否有数据。', false); toast('⚠️ 没采集到任何点云, 检查底座是否在运行', 'warn', 7000); }
-    } else if (/Error|Traceback|LOCALIZATION_SESSION_ABORTED/.test(prog)) {
+    } else if (/Error|Traceback|PCD_CALIBRATION|LOCALIZATION_SESSION_ABORTED/.test(prog)) {
       ps.className='status-line idle';
       ps.textContent = '点云采集: ❌ 上次出错了, 查看远端日志(pcd)';
       if (waitingPcdSave) { waitingPcdSave=false; if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云采集出错', '查看右下角远端日志，选择 pcd。', false); toast('❌ 点云采集出错, 点右下「查看远端日志」选 pcd', 'bad', 7000); }
@@ -837,7 +849,7 @@ async function startRecorder() {
   if (!name) { toast('⚠️ 先给新路线起个名字', 'warn'); return; }
   if (!requireBase('录制路线')) return;
   if (!confirm(`开始完整诊断录制前，请确认：\n1. 雷达支架已锁紧，录制和执行之间不再调整；\n2. 地面已标出狗中心起点和至少 1 米长的机头朝向线；\n3. 固定机位手机已开始录像，画面能看到起点、第一段和地面参照物；\n4. 狗先静止 5 秒。\n\n纯车载日志无法独立证明真实地面位置，固定机位视频是区分“定位认为走对了”和“狗实际走偏了”的必要证据。确认现在开始?`)) return;
-  showTask('开始录路线', `正在启动录制黑匣子: ${name}.csv\n先锁定 FAST-LIO 会话并保存系统/代码快照，再确认轻量遥测、性能监控、里程计 rosbag 和会话保护全部就绪，最后才会启动原版 0.40m 定距录制。\n这个步骤可能需要 10～30 秒；中途不要移动狗。`, 'start_recorder');
+  showTask('开始录路线', `正在启动录制黑匣子: ${name}.csv\n先锁定 FAST-LIO 会话并保存系统/代码快照，再确认轻量遥测、性能监控、里程计 rosbag、会话保护和 CSV 写入门禁全部就绪，最后才允许写入第 0 个路线点。\n通常需要 20～60 秒；负载异常时门禁会继续等待或明确失败。页面确认“路线录制已开始”之前不要移动狗。`, 'start_recorder');
   $('btnRecStart').disabled = true;   // 防双击, 轮询会根据真实状态恢复
   trail = [];
   routePts = [];
@@ -918,7 +930,7 @@ async function startPcd() {
   const name = $('pcdName').value.trim();
   if (!name) { toast('⚠️ 先给点云地图起个名字', 'warn'); return; }
   if (!requireBase('点云采集')) return;
-  showTask('开始点云采集', `正在确认狗静止并锁定本次 FAST-LIO 定位会话，然后启动: ${name}.pcd\n采集中若定位进程重启，本次 PCD 会自动判为无效。`, 'start_pcd');
+  showTask('开始水平点云采集', `正在锁定本次 FAST-LIO 会话和重力水平面: ${name}.pcd\n先让狗保持静止；中栏显示“水平校准完成”后再开始移动。`, 'start_pcd');
   $('btnPcdStart').disabled = true;   // 防双击
   const res = await doAction('start_pcd', {name}, false, true);
   if (/PCD_SESSION_CAPTURE_FAILED/.test(res.out || '')) {
@@ -938,16 +950,18 @@ async function startPcd() {
     finishTask('点云采集未启动', res.error || res.err || res.out || `rc=${res.rc}`, false);
     return;
   }
-  toast('⏳ 点云采集启动中, 状态行会显示实时点数(约 5 秒)…', 'info');
+  toast('⏳ 正在校准重力水平面，请先保持狗静止…', 'info');
   setTimeout(() => {
-    if ((lastStatus.processes||{}).pcd) finishTask('点云采集已开始', `${name}.pcd 正在采集。\n中栏状态行会显示累计点数。`, true);
+    const progress = lastStatus.pcd_progress || '';
+    if ((lastStatus.processes||{}).pcd && /POINTS/.test(progress)) finishTask('水平点云采集已开始', `${name}.pcd 正在采集。\n水平校准已完成，现在可以带狗移动。`, true);
+    else if ((lastStatus.processes||{}).pcd) finishTask('采集器已启动，仍在校准', '请继续保持狗静止，直到中栏显示“水平校准完成，采集中”再移动。', true);
     else finishTask('点云采集状态未确认', '5 秒内没有检测到 go2map_capture。\n可稍等状态刷新，或查看远端日志 pcd。', false);
   }, 5500);
 }
 
 async function stopPcd() {
   waitingPcdSave = true;
-  showTask('保存点云', '正在停止采集并保存 PCD…\n点数多时需要几秒到几十秒。', 'stop_pcd');
+  showTask('生成水平点云', '正在停止采集、执行冻结的三维刚体旋转，并保存水平版、原始版和证据 JSON…\n点数多时需要几秒到几十秒。', 'stop_pcd');
   const res = await doAction('stop_pcd', {}, false, true);
   if (/PCD_SAVING/.test(res.out||'')) toast('⏳ 正在保存点云文件, 完成后自动通知…', 'info', 6000);
   else if (/NOT_RUNNING/.test(res.out||'')) { waitingPcdSave=false; finishTask('没有正在采集的点云', 'go2map_capture 当前未运行。', false); toast('⚠️ 没有正在运行的采集', 'warn'); }

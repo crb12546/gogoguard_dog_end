@@ -1,0 +1,183 @@
+{
+  "adapter_configuration": {
+    "body_max_age_s": 0.25,
+    "k_yaw": 0.9,
+    "max_spread_deg": 2.0,
+    "max_yaw_rate_rps": 0.45,
+    "minimum_samples": 10
+  },
+  "decision": {
+    "interpretation": "After the major turn, the old input told the controller it was almost aligned, while body yaw reveals a large steering correction toward the lookahead point.",
+    "offline_gate_passed": true
+  },
+  "method": "Counterfactual input replay on captured poses. It proves the adapter changes the controller's mistaken near-zero heading error into a corrective error; it does not predict the final closed-loop trajectory.",
+  "sections": [
+    {
+      "absolute_heading_source_delta_deg": {
+        "count": 1554,
+        "max": 23.49481859749364,
+        "p05": 0.26843579231308423,
+        "p50": 2.129613622441022,
+        "p95": 18.185007063700024
+      },
+      "body_aligned_alpha_deg": {
+        "count": 1554,
+        "max": 179.81068622502147,
+        "p05": -2.286065422664861,
+        "p50": 1.4862139234467115,
+        "p95": 97.00536038319524
+      },
+      "body_aligned_yaw_rate_rps": {
+        "count": 1554,
+        "max": 0.45,
+        "p05": -0.035909431687347865,
+        "p50": 0.023345393717815258,
+        "p95": 0.45000000000000007
+      },
+      "body_sample_age_ms": {
+        "count": 1554,
+        "max": 128.4036636352539,
+        "p05": 23.356175422668457,
+        "p50": 35.00866889953613,
+        "p95": 85.08257865905762
+      },
+      "direction": 1,
+      "name": "first_forward_before_major_turn",
+      "progress_m": [
+        0.0,
+        55.0
+      ],
+      "raw_lio_alpha_deg": {
+        "count": 1554,
+        "max": 171.08045240666405,
+        "p05": -4.311085747847446,
+        "p50": -0.5068493617523735,
+        "p95": 87.917759667254
+      },
+      "raw_yaw_rate_rps": {
+        "count": 1554,
+        "max": 0.45,
+        "p05": -0.06771837657216599,
+        "p50": -0.00796157115678966,
+        "p95": 0.45000000000000007
+      },
+      "sample_count": 1554
+    },
+    {
+      "absolute_heading_source_delta_deg": {
+        "count": 1617,
+        "max": 23.077656329969276,
+        "p05": 15.644551081403062,
+        "p50": 18.713033514751924,
+        "p95": 21.686219863934067
+      },
+      "body_aligned_alpha_deg": {
+        "count": 1617,
+        "max": 27.420102424916756,
+        "p05": 12.795958071832018,
+        "p50": 17.822860501643596,
+        "p95": 22.95223406745784
+      },
+      "body_aligned_yaw_rate_rps": {
+        "count": 1617,
+        "max": 0.43071396169399073,
+        "p05": 0.20099843937055242,
+        "p50": 0.2799608380895961,
+        "p95": 0.3605328496489947
+      },
+      "body_sample_age_ms": {
+        "count": 1617,
+        "max": 133.6064338684082,
+        "p05": 25.92906951904297,
+        "p50": 34.24787521362305,
+        "p95": 84.27891731262207
+      },
+      "direction": 1,
+      "name": "first_forward_after_major_turn",
+      "progress_m": [
+        60.0,
+        140.0
+      ],
+      "raw_lio_alpha_deg": {
+        "count": 1617,
+        "max": 7.182362815729569,
+        "p05": -4.7931120532575635,
+        "p50": -0.8496777164404051,
+        "p95": 3.444043548938822
+      },
+      "raw_yaw_rate_rps": {
+        "count": 1617,
+        "max": 0.11282029128656257,
+        "p05": -0.07529002807173325,
+        "p50": -0.013346706359440642,
+        "p95": 0.05409890955994762
+      },
+      "sample_count": 1617
+    },
+    {
+      "absolute_heading_source_delta_deg": {
+        "count": 1579,
+        "max": 11.000610251453123,
+        "p05": 5.021935013536945,
+        "p50": 7.274449264958603,
+        "p95": 8.97302715259899
+      },
+      "body_aligned_alpha_deg": {
+        "count": 1579,
+        "max": 5.10379352360403,
+        "p05": -12.998858564026778,
+        "p50": -7.76751396955081,
+        "p95": -3.08601249789415
+      },
+      "body_aligned_yaw_rate_rps": {
+        "count": 1579,
+        "max": 0.08017020119596793,
+        "p05": -0.20418559284899646,
+        "p50": -0.1220118241169846,
+        "p95": -0.04847497096135274
+      },
+      "body_sample_age_ms": {
+        "count": 1579,
+        "max": 125.13351440429688,
+        "p05": 22.70328998565674,
+        "p50": 32.34553337097168,
+        "p95": 82.22048282623291
+      },
+      "direction": -1,
+      "name": "reverse_after_major_turn",
+      "progress_m": [
+        60.0,
+        140.0
+      ],
+      "raw_lio_alpha_deg": {
+        "count": 1579,
+        "max": 11.62401003294227,
+        "p05": -5.868066156968194,
+        "p50": -0.5923120004823588,
+        "p95": 4.28868113370864
+      },
+      "raw_yaw_rate_rps": {
+        "count": 1579,
+        "max": 0.18258952262372743,
+        "p05": -0.09217536764755084,
+        "p50": -0.009304015146742261,
+        "p95": 0.06736644571624104
+      },
+      "sample_count": 1579
+    }
+  ],
+  "startup_lock": {
+    "lock_wall_time": 1784961371.0535629,
+    "locked": true,
+    "offset_deg": 0.6822210679172253,
+    "pair_age_ms": {
+      "count": 10,
+      "max": 77.484130859375,
+      "p05": 9.20720100402832,
+      "p50": 39.766669273376465,
+      "p95": 77.11741924285889
+    },
+    "sample_count": 10,
+    "spread_deg": 0.07206648045081808
+  }
+}

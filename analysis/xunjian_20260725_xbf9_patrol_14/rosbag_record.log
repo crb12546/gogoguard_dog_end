@@ -1,0 +1,10 @@
+[INFO] [1784982454.078815245] [rosbag2_storage]: Opened database '/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-14/rosbag/rosbag_0.db3' for READ_WRITE.
+1784982454.079391 [0]       ros2: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784982454.094853428] [rosbag2_transport]: Listening for topics...
+[INFO] [1784982454.201059796] [rosbag2_transport]: Subscribed to topic '/Odometry'
+[INFO] [1784982454.206124580] [rosbag2_transport]: Subscribed to topic '/api/sport/request'
+[INFO] [1784982454.208855641] [rosbag2_transport]: Subscribed to topic '/cmd_vel'
+[INFO] [1784982454.212087215] [rosbag2_transport]: Subscribed to topic '/lf/sportmodestate'
+[INFO] [1784982454.215006161] [rosbag2_transport]: Subscribed to topic '/livox/imu'
+[INFO] [1784982454.217213731] [rosbag2_transport]: Subscribed to topic '/patrol_cmd'
+[INFO] [1784982454.220798513] [rosbag2_transport]: Subscribed to topic '/tf'

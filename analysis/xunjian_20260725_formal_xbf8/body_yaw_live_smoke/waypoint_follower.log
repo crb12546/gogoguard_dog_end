@@ -1,0 +1,14 @@
+1784965996.168346 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784965996.397878024] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [1784965996.402814838] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf8.csv
+[INFO] [1784965996.403682415] [waypoint_follower]: route points: 358
+[INFO] [1784965996.404325090] [waypoint_follower]: loop_mode: once
+[INFO] [1784965996.404970260] [waypoint_follower]: lookahead_distance: 0.8
+[INFO] [1784965996.405627303] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1784965996.415321470] [waypoint_follower]: FOLLOWER_EXACT_TRACE_READY file=/tmp/go2_body_yaw_smoke_trace_20260725_155151.jsonl base_sha256=d205a596fc6118ad7fa191871c646173cb545ab4b136e46de360598e38261120
+[INFO] [1784965996.416145109] [waypoint_follower]: FOLLOWER_MOTION_INTERLOCK_ACTIVE file=/tmp/go2_body_yaw_smoke_motion_20260725_155151
+[INFO] [1784965996.416781000] [waypoint_follower]: FOLLOWER_BODY_YAW_ALIGNMENT_ACTIVE topic=/lf/sportmodestate samples=10 max_spread_deg=2.000 max_age_s=0.250
+[INFO] [1784965996.420982432] [waypoint_follower]: init nearest_index=0, distance_to_start=9.322
+[INFO] [1784965998.597639892] [waypoint_follower]: FOLLOWER_BODY_YAW_READY offset_deg=5.531982 spread_deg=0.517271 samples=10
+[INFO] [1784966004.039322260] [waypoint_follower]: FOLLOWER_ODOM_READY callbacks=35 age_ms=330.457 source_gap_ms=99.350
+[INFO] [1784966005.576189774] [waypoint_follower]: traced waypoint_follower stopped by Ctrl+C

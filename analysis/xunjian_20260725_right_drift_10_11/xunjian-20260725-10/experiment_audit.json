@@ -1,0 +1,2043 @@
+{
+  "command_chain": {
+    "absolute_difference": {
+      "vx": {
+        "count": 4503,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "p95": 0.0
+      },
+      "vy": {
+        "count": 4503,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "p95": 0.0
+      },
+      "yaw_rate": {
+        "count": 4503,
+        "max": 0.12475226661990399,
+        "mean": 0.0023774555750504804,
+        "median": 0.0,
+        "min": 0.0,
+        "p95": 0.010891553379179457
+      }
+    },
+    "cmd_vel_records": 4605,
+    "nonzero_to_zero_override_records": 0,
+    "override_fraction_of_pairs": 0.0,
+    "paired_records": 4503,
+    "patrol_cmd_records": 4524,
+    "raw_to_safe_receive_age_s": {
+      "count": 4503,
+      "max": 0.12981271743774414,
+      "mean": 0.05837635027152444,
+      "median": 0.04515790939331055,
+      "min": 0.00022602081298828125,
+      "p95": 0.0951773166656494
+    }
+  },
+  "coordinate_transform": {
+    "available": true,
+    "count_match": true,
+    "delta_yaw_deg": 2.01145142736745,
+    "delta_yaw_rad": 0.03510645015150158,
+    "exact_within_csv_precision": true,
+    "position_error_m": {
+      "count": 358,
+      "max": 6.927481106468677e-07,
+      "mean": 3.7903677309678556e-07,
+      "median": 4.030609516290586e-07,
+      "min": 2.1442153723941117e-08,
+      "p95": 5.946627467673292e-07
+    },
+    "runtime_waypoints": 358,
+    "source_waypoints": 358,
+    "yaw_error_deg": {
+      "count": 358,
+      "max": 2.5791781191222042e-05,
+      "mean": 2.5791781179979025e-05,
+      "median": 2.579178118168038e-05,
+      "min": 2.5791781172138715e-05,
+      "p95": 2.579178118486093e-05
+    }
+  },
+  "created_at": "2026-07-25T16:45:34.731+08:00",
+  "evidence_health": {
+    "complete_for_full_audit": false,
+    "complete_for_onboard_chain": true,
+    "last_receive_age_s": {
+      "cmd_vel": 0.040094,
+      "livox_imu": 0.007747,
+      "low": 0.016006,
+      "odom": 0.067791,
+      "patrol_cmd": 0.033527,
+      "sport": 0.050909,
+      "sport_request": 0.038802,
+      "wireless": 14.507028,
+      "wireless_raw": null
+    },
+    "malformed_jsonl_lines": 0,
+    "missing_required_artifacts": [
+      "localization_session_end.json"
+    ],
+    "missing_required_streams": [],
+    "raw_pointcloud_deliberately_not_subscribed": true,
+    "record_counts": {
+      "cmd_vel": 4605,
+      "livox_imu": 7076,
+      "low": 376,
+      "odom": 3692,
+      "patrol_cmd": 4524,
+      "recorder_health": 389,
+      "recorder_ready": 1,
+      "recorder_start": 1,
+      "recorder_stop": 1,
+      "sport": 4784,
+      "sport_request": 4506,
+      "wireless": 8
+    }
+  },
+  "external_ground_truth": {
+    "available": false,
+    "reason": "All onboard position channels can share localization or inertial biases.",
+    "required_artifact": "fixed-camera video with visible floor reference marks"
+  },
+  "findings": [
+    {
+      "conclusion": "full experiment artifacts are incomplete",
+      "detail": "localization_session_end.json",
+      "severity": "error",
+      "stage": "evidence_artifacts"
+    },
+    {
+      "conclusion": "the canonical bag contains an elevated odometry gap",
+      "max_record_gap_s": 0.385879138,
+      "severity": "warning",
+      "stage": "odometry_continuity"
+    },
+    {
+      "conclusion": "FAST-LIO logged neither a recovery event nor a permanent odometry lock during the patrol",
+      "health_failed_events": 0,
+      "permanent_lock_events": 0,
+      "recovery_events": 0,
+      "severity": "ok",
+      "stage": "fastlio_liveness"
+    },
+    {
+      "conclusion": "original-to-runtime CSV conversion is exactly reproducible within CSV precision",
+      "severity": "ok",
+      "stage": "coordinate_transform"
+    },
+    {
+      "conclusion": "FAST-LIO trajectory stayed close to the runtime CSV",
+      "max_cross_track_m": 0.200569158815407,
+      "p95_cross_track_m": 0.11746620999143899,
+      "severity": "ok",
+      "stage": "route_tracking"
+    },
+    {
+      "conclusion": "the follower had elevated odometry age or prolonged reuse of one odometry update",
+      "max_control_cycles_per_odom": 8.0,
+      "odom_stamp_age_p95_ms": 285.15254259109497,
+      "severity": "warning",
+      "stage": "follower_frame_usage",
+      "trace_to_command_yaw_error_max": 0.10590298907391271
+    },
+    {
+      "conclusion": "this patrol cannot be cryptographically linked to a route-recording blackbox",
+      "severity": "warning",
+      "stage": "recording_link"
+    },
+    {
+      "conclusion": "captured source/executable identities stayed unchanged during the run",
+      "severity": "ok",
+      "stage": "code_identity"
+    },
+    {
+      "conclusion": "Unitree state reported a motor-lost count or a nonzero sport error code",
+      "motor_lost_nonzero_records": 0,
+      "severity": "error",
+      "sport_nonzero_error_code_records": 4784,
+      "stage": "robot_low_level_state"
+    },
+    {
+      "conclusion": "FAST-LIO and body IMU relative orientation changed materially during the run",
+      "largest_max_absolute_change_deg": 36.78352615750349,
+      "largest_p95_absolute_change_deg": 33.768058020761714,
+      "paired_samples": 3687,
+      "severity": "error",
+      "stage": "sensor_body_alignment"
+    },
+    {
+      "conclusion": "onboard logs cannot prove whether FAST-LIO's reported XY equals the dog's true floor position; use the fixed camera/floor-marker record for that final distinction",
+      "severity": "needs_external_measurement",
+      "stage": "physical_ground_truth"
+    }
+  ],
+  "follower_control_trace": {
+    "active_control_records": 7102,
+    "available": true,
+    "clean_stop": true,
+    "consecutive_control_cycles_per_odom": {
+      "count": 3417,
+      "max": 8.0,
+      "mean": 2.0784313725490198,
+      "median": 2.0,
+      "min": 1.0,
+      "p95": 3.0
+    },
+    "consumed_odom_source_stamp_gap_s": {
+      "count": 3416,
+      "max": 0.39775681495666504,
+      "mean": 0.10392660279463828,
+      "median": 0.09935998916625977,
+      "min": 0.0956883430480957,
+      "p95": 0.10027551651000977
+    },
+    "control_compute_to_trace_ms": {
+      "count": 7102,
+      "max": 16.23266000001422,
+      "mean": 0.7243711330613355,
+      "median": 0.5654850001519662,
+      "min": 0.33917299992936023,
+      "p95": 1.7170168998859476
+    },
+    "control_records": 7102,
+    "control_records_reusing_an_odom_callback": 3685,
+    "control_source_counts": {
+      "deployed_go2_2_body_yaw_aligned": 7102
+    },
+    "internal_cross_track_m": {
+      "count": 7102,
+      "max": 0.200569158815407,
+      "mean": 0.0703427322769384,
+      "median": 0.0675591600594935,
+      "min": 1.7639021629268457e-05,
+      "p95": 0.11687165410987573
+    },
+    "interpretation": "Reusing one odometry sample for two 20 Hz control cycles is normal when FAST-LIO publishes at 10 Hz. Risk is indicated by large odom age or long consecutive reuse, not by dropping intermediate sensor frames by itself.",
+    "malformed_lines": 0,
+    "odom_callback_sequence_step": {
+      "count": 3416,
+      "max": 1.0,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "p95": 1.0
+    },
+    "odom_receive_to_control_ms": {
+      "count": 7102,
+      "max": 380.32960900000035,
+      "mean": 52.30538255392698,
+      "median": 51.49021550005273,
+      "min": 0.5803940000532748,
+      "p95": 98.23104084994156
+    },
+    "odom_source_stamp_age_ms": {
+      "count": 7102,
+      "max": 544.1939830780029,
+      "mean": 210.20459366730992,
+      "median": 209.69128608703613,
+      "min": 82.36193656921387,
+      "p95": 285.15254259109497
+    },
+    "selected_alpha_rad": {
+      "count": 7102,
+      "max": 0.22692864547464786,
+      "mean": -0.1312779506384439,
+      "median": -0.010868678231495732,
+      "min": -2.9084303616083327,
+      "p95": 0.05665023768798615
+    },
+    "startup_interlock_control_records": 203,
+    "total_control_records_including_startup": 7305,
+    "trace_to_patrol_cmd_absolute_error": {
+      "vx": {
+        "count": 7102,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "p95": 0.0
+      },
+      "yaw_rate": {
+        "count": 7102,
+        "max": 0.10590298907391271,
+        "mean": 0.0019423355596117926,
+        "median": 0.0,
+        "min": 0.0,
+        "p95": 0.009315776286663243
+      }
+    },
+    "trace_to_patrol_cmd_matched_records": 7102,
+    "unique_odom_callback_sequences_used": 3417
+  },
+  "localization_sessions": {
+    "patrol_end": {},
+    "patrol_start": {
+      "boot_id": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 17369,
+      "start_ticks": 62692
+    },
+    "patrol_start_to_end_same": null,
+    "recording_end": {},
+    "recording_end_to_patrol_start_same": null,
+    "recording_start": {},
+    "recording_start_to_end_same": null,
+    "session_guard_abort_detected": false,
+    "session_guard_started": true
+  },
+  "measured_response": {
+    "available": true,
+    "best_response_lag_s": 0.05,
+    "combined_mae_score": 0.137338363336272,
+    "command_records": 4605,
+    "note": "SportModeState is an onboard feedback source, not external metric ground truth.",
+    "sport_records": 4784,
+    "vx_command_vs_sport_error_mps": {
+      "count": 4602,
+      "max": 0.7362101972103119,
+      "mean": 0.06957359713382932,
+      "median": 0.06587567925453186,
+      "min": 2.2590160369873047e-05,
+      "p95": 0.15071625262498853
+    },
+    "yaw_command_vs_sport_error_radps": {
+      "count": 4602,
+      "max": 1.0912891149520874,
+      "mean": 0.06776476620244268,
+      "median": 0.04301229183055408,
+      "min": 0.0,
+      "p95": 0.18871120736493732
+    }
+  },
+  "motion_window_epoch": [
+    1784968744.0242708,
+    1784969099.8145025
+  ],
+  "performance": {
+    "cpu_pressure_some_avg10": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "p95": null
+    },
+    "hwmon": {},
+    "max_temperature_c": {
+      "count": 382,
+      "max": 64.1,
+      "mean": 61.713089005235645,
+      "median": 62.0,
+      "min": 58.7,
+      "p95": 63.6
+    },
+    "monitor_wake_late_ms": {
+      "count": 382,
+      "max": 2327.197,
+      "mean": 22.101243455497414,
+      "median": 1.8025,
+      "min": 0.065,
+      "p95": 5.315799999999991
+    },
+    "network_error_drop_totals": {
+      "docker0": 0,
+      "dummy0": 0,
+      "eth0": 0,
+      "lo": 0,
+      "usb0": 0
+    },
+    "per_cpu_pct": {
+      "cpu0": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 58.14214659685866,
+        "median": 47.95,
+        "min": 26.6,
+        "p95": 99.2
+      },
+      "cpu1": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 62.64450261780114,
+        "median": 42.6,
+        "min": 20.4,
+        "p95": 100.0
+      },
+      "cpu2": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 50.54921465968587,
+        "median": 36.4,
+        "min": 20.7,
+        "p95": 100.0
+      },
+      "cpu3": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 58.51963350785344,
+        "median": 39.8,
+        "min": 18.4,
+        "p95": 100.0
+      },
+      "cpu4": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 60.3646596858639,
+        "median": 39.8,
+        "min": 20.6,
+        "p95": 100.0
+      },
+      "cpu5": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 52.25130890052359,
+        "median": 37.4,
+        "min": 16.9,
+        "p95": 100.0
+      },
+      "cpu6": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 60.241361256544515,
+        "median": 39.9,
+        "min": 16.3,
+        "p95": 100.0
+      },
+      "cpu7": {
+        "count": 382,
+        "max": 100.0,
+        "mean": 57.338743455497436,
+        "median": 38.2,
+        "min": 16.1,
+        "p95": 100.0
+      }
+    },
+    "process_cpu_pct": {
+      "experiment_telemetry": {
+        "count": 382,
+        "max": 627.2,
+        "mean": 48.68167539267015,
+        "median": 44.9,
+        "min": 3.9,
+        "p95": 48.95499999999999
+      },
+      "fastlio": {
+        "count": 382,
+        "max": 116.0,
+        "mean": 37.00994764397906,
+        "median": 38.0,
+        "min": 6.6,
+        "p95": 44.0
+      },
+      "follower": {
+        "count": 366,
+        "max": 1765.8,
+        "mean": 23.27978142076503,
+        "median": 11.0,
+        "min": 5.0,
+        "p95": 13.0
+      },
+      "livox": {
+        "count": 382,
+        "max": 343.6,
+        "mean": 117.33350785340315,
+        "median": 117.15,
+        "min": 15.5,
+        "p95": 129.95
+      },
+      "performance_monitor": {
+        "count": 382,
+        "max": 23.2,
+        "mean": 12.763089005235603,
+        "median": 13.0,
+        "min": 4.7,
+        "p95": 15.0
+      },
+      "rosbag": {
+        "count": 372,
+        "max": 41.5,
+        "mean": 10.734677419354838,
+        "median": 11.0,
+        "min": 1.3,
+        "p95": 13.0
+      },
+      "safe": {
+        "count": 375,
+        "max": 1236.0,
+        "mean": 23.075733333333332,
+        "median": 14.0,
+        "min": 1.1,
+        "p95": 17.0
+      },
+      "sdk_receiver": {
+        "count": 377,
+        "max": 5.8,
+        "mean": 2.083819628647215,
+        "median": 2.0,
+        "min": 0.4,
+        "p95": 3.0
+      },
+      "sender": {
+        "count": 372,
+        "max": 34.2,
+        "mean": 2.2405913978494625,
+        "median": 2.0,
+        "min": 0.8,
+        "p95": 4.0
+      },
+      "video": {
+        "count": 235,
+        "max": 26.1,
+        "mean": 7.862978723404255,
+        "median": 7.0,
+        "min": 1.3,
+        "p95": 13.0
+      }
+    },
+    "process_scheduling": {
+      "experiment_telemetry": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 23,
+        "max_threads_observed_per_cpu": {
+          "0": 8,
+          "1": 9,
+          "2": 6,
+          "3": 9,
+          "4": 7,
+          "5": 10,
+          "6": 10,
+          "7": 6
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "fastlio": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 11,
+        "max_threads_observed_per_cpu": {
+          "0": 7,
+          "1": 7,
+          "2": 8,
+          "3": 7,
+          "4": 7,
+          "5": 7,
+          "6": 6,
+          "7": 6
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "follower": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 23,
+        "max_threads_observed_per_cpu": {
+          "0": 8,
+          "1": 5,
+          "2": 10,
+          "3": 7,
+          "4": 11,
+          "5": 5,
+          "6": 7,
+          "7": 10
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "livox": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 19,
+        "max_threads_observed_per_cpu": {
+          "0": 11,
+          "1": 7,
+          "2": 9,
+          "3": 6,
+          "4": 7,
+          "5": 10,
+          "6": 8,
+          "7": 8
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "performance_monitor": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 1,
+        "max_threads_observed_per_cpu": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "rosbag": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 11,
+        "max_threads_observed_per_cpu": {
+          "0": 9,
+          "1": 6,
+          "2": 6,
+          "3": 6,
+          "4": 6,
+          "5": 6,
+          "6": 8,
+          "7": 6
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "safe": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 24,
+        "max_threads_observed_per_cpu": {
+          "0": 8,
+          "1": 8,
+          "2": 9,
+          "3": 7,
+          "4": 5,
+          "5": 8,
+          "6": 11,
+          "7": 7
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "sdk_receiver": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 9,
+        "max_threads_observed_per_cpu": {
+          "0": 9,
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 6,
+          "5": 5,
+          "6": 5,
+          "7": 5
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "sender": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 11,
+        "max_threads_observed_per_cpu": {
+          "0": 7,
+          "1": 6,
+          "2": 6,
+          "3": 6,
+          "4": 7,
+          "5": 7,
+          "6": 8,
+          "7": 5
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "video": {
+        "cpu_allowed_lists": [
+          "0-7"
+        ],
+        "max_threads": 13,
+        "max_threads_observed_per_cpu": {
+          "0": 6,
+          "1": 7,
+          "2": 7,
+          "3": 7,
+          "4": 7,
+          "5": 6,
+          "6": 9,
+          "7": 7
+        },
+        "observed_last_cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "samples": 382,
+    "udp_counter_deltas_total": {
+      "IgnoredMulti": 0,
+      "InCsumErrors": 0,
+      "InDatagrams": 3790854,
+      "InErrors": 59,
+      "NoPorts": 97,
+      "OutDatagrams": 412678,
+      "RcvbufErrors": 59,
+      "SndbufErrors": 0
+    }
+  },
+  "robot_state": {
+    "absolute_motor_torque_estimate": {
+      "count": 4512,
+      "max": 17.9105167388916,
+      "mean": 3.7600804217314967,
+      "median": 2.082138776779175,
+      "min": 0.0,
+      "p95": 12.659815788269043
+    },
+    "battery_current_a": {
+      "count": 376,
+      "max": 7.007260799407959,
+      "mean": 3.150449149310589,
+      "median": 2.7345407009124756,
+      "min": 0.7519987225532532,
+      "p95": 6.212534666061401
+    },
+    "battery_electrical_power_w": {
+      "count": 376,
+      "max": 221.3531548629935,
+      "mean": 100.05294547591257,
+      "median": 86.95065467844756,
+      "min": 24.04791621072434,
+      "p95": 197.15294779428814
+    },
+    "battery_soc_percent": {
+      "count": 376,
+      "max": 95.0,
+      "mean": 93.65691489361703,
+      "median": 94.0,
+      "min": 92.0,
+      "p95": 95.0
+    },
+    "battery_voltage_v": {
+      "count": 376,
+      "max": 31.996374130249023,
+      "mean": 31.79333215064191,
+      "median": 31.783889770507812,
+      "min": 31.544845581054688,
+      "p95": 31.987518310546875
+    },
+    "foot_force_max_minus_min": {
+      "count": 376,
+      "max": 118.0,
+      "mean": 55.055851063829785,
+      "median": 56.0,
+      "min": 21.0,
+      "p95": 79.0
+    },
+    "livox_acceleration_norm_mps2": {
+      "count": 7076,
+      "max": 5.6927039910040325,
+      "mean": 1.0489030280857794,
+      "median": 0.9892610224667269,
+      "min": 0.18026019117521278,
+      "p95": 1.6452758480464214
+    },
+    "livox_angular_velocity_norm_radps": {
+      "count": 7076,
+      "max": 2.0153273487942602,
+      "mean": 0.25566578189087885,
+      "median": 0.1992194113942955,
+      "min": 0.00047403676566762034,
+      "p95": 0.7175477286018969
+    },
+    "livox_imu_records": 7076,
+    "low_imu_temperature_c": {
+      "count": 376,
+      "max": 79.0,
+      "mean": 79.0,
+      "median": 79.0,
+      "min": 79.0,
+      "p95": 79.0
+    },
+    "low_state_records": 376,
+    "motor_lost_nonzero_records": 0,
+    "motor_temperature_c": {
+      "count": 4512,
+      "max": 44.0,
+      "mean": 38.97783687943262,
+      "median": 39.0,
+      "min": 35.0,
+      "p95": 42.0
+    },
+    "sport_gaits_seen": [
+      0
+    ],
+    "sport_imu_temperature_c": {
+      "count": 4784,
+      "max": 79.0,
+      "mean": 79.0,
+      "median": 79.0,
+      "min": 79.0,
+      "p95": 79.0
+    },
+    "sport_modes_seen": [
+      0
+    ],
+    "sport_nonzero_error_code_records": 4784,
+    "sport_state_records": 4784
+  },
+  "rosbag": {
+    "available": true,
+    "critical_topics_complete": true,
+    "critical_topics_missing_or_empty": [],
+    "database_files": [
+      {
+        "name": "rosbag_0.db3",
+        "size_bytes": 38711296
+      }
+    ],
+    "info_available": true,
+    "record_timing": {
+      "errors": [],
+      "topics": {
+        "/Odometry": {
+          "count": 3597,
+          "record_time_gap_s": {
+            "count": 3596,
+            "max": 0.385879138,
+            "mean": 0.10403958121579517,
+            "median": 0.10262662250000001,
+            "min": 0.037367082,
+            "p95": 0.11861709950000002
+          }
+        },
+        "/api/sport/request": {
+          "count": 7394,
+          "record_time_gap_s": {
+            "count": 7393,
+            "max": 3.8414196360000004,
+            "mean": 0.05058117473434329,
+            "median": 0.049991838000000004,
+            "min": 0.000295138,
+            "p95": 0.05662705159999999
+          }
+        },
+        "/cmd_vel": {
+          "count": 7391,
+          "record_time_gap_s": {
+            "count": 7390,
+            "max": 0.13481236300000002,
+            "mean": 0.04999991916129879,
+            "median": 0.04999413800000001,
+            "min": 0.000262722,
+            "p95": 0.05542027909999998
+          }
+        },
+        "/lf/sportmodestate": {
+          "count": 7484,
+          "record_time_gap_s": {
+            "count": 7483,
+            "max": 0.13318311900000002,
+            "mean": 0.049994814614860356,
+            "median": 0.049995409000000005,
+            "min": 0.000193551,
+            "p95": 0.058103988499999995
+          }
+        },
+        "/livox/imu": {
+          "count": 74658,
+          "record_time_gap_s": {
+            "count": 74657,
+            "max": 0.107602629,
+            "mean": 0.00501222250312768,
+            "median": 0.004673612000000001,
+            "min": 5.5995e-05,
+            "p95": 0.006828421999999997
+          }
+        },
+        "/patrol_cmd": {
+          "count": 7306,
+          "record_time_gap_s": {
+            "count": 7305,
+            "max": 0.157996309,
+            "mean": 0.04999268272279261,
+            "median": 0.049997963000000006,
+            "min": 0.00016907400000000001,
+            "p95": 0.0544838972
+          }
+        },
+        "/tf": {
+          "count": 3597,
+          "record_time_gap_s": {
+            "count": 3596,
+            "max": 0.383255718,
+            "mean": 0.10403962638431564,
+            "median": 0.10260166750000001,
+            "min": 0.015074865000000002,
+            "p95": 0.11885252225000001
+          }
+        }
+      }
+    },
+    "topic_message_counts": {
+      "/Odometry": 3597,
+      "/api/sport/request": 7394,
+      "/cmd_vel": 7391,
+      "/lf/sportmodestate": 7484,
+      "/livox/imu": 74658,
+      "/patrol_cmd": 7306,
+      "/tf": 3597
+    }
+  },
+  "route_recording_link": {
+    "available": false,
+    "reason": "route_recording.json not present"
+  },
+  "route_tracking": {
+    "available": true,
+    "cross_track_error_m": {
+      "count": 3420,
+      "max": 0.200569158815407,
+      "mean": 0.07053334370741657,
+      "median": 0.0677655432418385,
+      "min": 1.7639021629268457e-05,
+      "p95": 0.11746620999143899
+    },
+    "estimated_motion_path_length_m": 167.59666638654264,
+    "final_progress_m": 158.55942943226617,
+    "first_5m_cross_track_error_m": {
+      "count": 111,
+      "max": 0.09070803417022695,
+      "mean": 0.06471808094106575,
+      "median": 0.07197670170913871,
+      "min": 0.0005351703581831643,
+      "p95": 0.08695756425585902
+    },
+    "initial_position_error_m": 0.00428821887226836,
+    "initial_yaw_error_deg": 0.03774706672419139,
+    "initial_yaw_error_rad": 0.0006588105973071301,
+    "max_progress_m": 158.64873550017163,
+    "motion_odom_samples": 3420,
+    "odom_source_stamp_gap_s": {
+      "count": 3419,
+      "max": 0.39775681495666504,
+      "mean": 0.10392259728598226,
+      "median": 0.09935998916625977,
+      "min": 0.0956883430480957,
+      "p95": 0.10027551651000977
+    },
+    "odom_wall_gap_s": {
+      "count": 3419,
+      "max": 0.3787267208099365,
+      "mean": 0.10391249967688321,
+      "median": 0.10259485244750977,
+      "min": 0.055339813232421875,
+      "p95": 0.11880402565002442
+    },
+    "pitch_deg": {
+      "count": 3420,
+      "max": 32.24390481258764,
+      "mean": 17.382576318573754,
+      "median": 18.250009941093168,
+      "min": 3.336476016341271,
+      "p95": 28.044226793161947
+    },
+    "progress_regression_m": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "p95": null
+    },
+    "progress_regression_over_0_20m_count": 0,
+    "roll_deg": {
+      "count": 3420,
+      "max": 29.863981399362377,
+      "mean": 10.616275772357582,
+      "median": 20.948503423598574,
+      "min": -12.910476454971288,
+      "p95": 27.40280547815538
+    },
+    "route_length_m": 158.8718399434087,
+    "signed_cross_track_error_m": {
+      "count": 3420,
+      "max": 0.200569158815407,
+      "mean": 0.06923562320542548,
+      "median": 0.06735741530395951,
+      "min": -0.10846164089855777,
+      "p95": 0.117466209991439
+    },
+    "z_m": {
+      "count": 3420,
+      "max": 39.59016747181589,
+      "mean": 25.650520761928114,
+      "median": 29.433620890754263,
+      "min": 2.607308270497327,
+      "p95": 39.03462939714071
+    }
+  },
+  "run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10",
+  "schema": "go2.patrol_experiment_audit.v1",
+  "sensor_body_alignment": {
+    "absolute_relative_rotation_change_from_first_deg": {
+      "pitch": {
+        "count": 3687,
+        "max": 21.942518974894167,
+        "mean": 7.377217583008429,
+        "median": 1.9007095183051763,
+        "min": 0.0,
+        "p95": 17.782152848129385
+      },
+      "roll": {
+        "count": 3687,
+        "max": 36.78352615750349,
+        "mean": 16.381690068935956,
+        "median": 11.083680908663501,
+        "min": 0.0,
+        "p95": 33.768058020761714
+      },
+      "yaw": {
+        "count": 3687,
+        "max": 19.483907374770567,
+        "mean": 7.75101676086837,
+        "median": 4.173501287872054,
+        "min": 0.0,
+        "p95": 16.733868845242284
+      }
+    },
+    "available": true,
+    "interpretation": "A stable relative rotation supports a rigid mount and consistent onboard attitude sources. Its absolute value is not external floor truth and may include differing yaw origins.",
+    "pair_time_difference_ms": {
+      "count": 3687,
+      "max": 98.9067554473877,
+      "mean": 19.901726218074327,
+      "median": 17.582178115844727,
+      "min": 0.6165504455566406,
+      "p95": 44.484257698059075
+    },
+    "paired_samples": 3687,
+    "relative_pitch_deg": {
+      "count": 3687,
+      "max": 32.09808109995501,
+      "mean": 17.07494307834452,
+      "median": 11.655488506661587,
+      "min": 5.1410622885060295,
+      "p95": 27.937714973190232
+    },
+    "relative_roll_deg": {
+      "count": 3687,
+      "max": 31.26497972460496,
+      "mean": 10.744982864140367,
+      "median": 5.5651344757649746,
+      "min": -8.48513866455127,
+      "p95": 28.24951158786319
+    },
+    "relative_rotation_change_from_first_deg": {
+      "pitch": {
+        "count": 3687,
+        "max": 21.942518974894167,
+        "mean": 6.919380953283641,
+        "median": 1.4999263816007424,
+        "min": -5.0144998365548155,
+        "p95": 17.782152848129385
+      },
+      "roll": {
+        "count": 3687,
+        "max": 36.78352615750349,
+        "mean": 16.26352929703889,
+        "median": 11.083680908663501,
+        "min": -2.9665922316527444,
+        "p95": 33.768058020761714
+      },
+      "yaw": {
+        "count": 3687,
+        "max": 19.483907374770567,
+        "mean": 7.290201241882349,
+        "median": 4.020990374937654,
+        "min": -6.272848776000446,
+        "p95": 16.733868845242284
+      }
+    },
+    "relative_yaw_deg": {
+      "count": 3687,
+      "max": -5.871074605992983,
+      "mean": -18.064780738881147,
+      "median": -21.333991605825894,
+      "min": -31.62783075676399,
+      "p95": -8.621113135521263
+    }
+  },
+  "system_configuration": {
+    "boot_id_end": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+    "boot_id_start": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+    "cpu_count_with_details": 8,
+    "end_snapshot_available": true,
+    "localization_configuration": {
+      "extrinsic_estimation_enabled": null,
+      "fastlio_config_path": "install/fast_lio/share/fast_lio/config/go2_mid360s.yaml",
+      "fastlio_parameter_source": "runtime_ros_parameter_dump",
+      "imu_qos_depth": null,
+      "lidar_qos_depth": null,
+      "lidar_to_imu_rotation_identity_max_error": null,
+      "lidar_to_imu_rotation_matrix": [],
+      "lidar_to_imu_time_offset_s": null,
+      "lidar_to_imu_translation_m": [],
+      "livox_config_path": "install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json",
+      "livox_configured_extrinsic": {
+        "pitch": 0.0,
+        "roll": 0.0,
+        "x": 0,
+        "y": 0,
+        "yaw": 0.0,
+        "z": 0
+      },
+      "livox_parameter_dump_available": true,
+      "mounting_note": "These values describe the LiDAR-to-LiDAR-IMU/configured transform. They do not independently measure the physical LiDAR-to-dog-body mounting angle.",
+      "scan_rate_hz": null,
+      "time_sync_enabled": null
+    },
+    "nvpmodel": "NVPM VERB: Config file: /etc/nvpmodel.conf\nNVPM VERB: parsing done for /etc/nvpmodel.conf\nNVPM VERB: Current mode: NV Power Mode: 25W\n3\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_0: PATH /sys/devices/system/cpu/cpu0/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_1: PATH /sys/devices/system/cpu/cpu1/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_2: PATH /sys/devices/system/cpu/cpu2/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_3: PATH /sys/devices/system/cpu/cpu3/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_4: PATH /sys/devices/system/cpu/cpu4/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_5: PATH /sys/devices/system/cpu/cpu5/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_6: PATH /sys/devices/system/cpu/cpu6/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_7: PATH /sys/devices/system/cpu/cpu7/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM FBP_POWER_GATING: ARG FBP_PG_MASK: PATH /sys/devices/gpu.0/fbp_pg_mask: REAL_VAL: 2 CONF_VAL: 2\nNVPM VERB: PARAM TPC_POWER_GATING: ARG TPC_PG_MASK: PATH /sys/devices/gpu.0/tpc_pg_mask: REAL_VAL: 240 CONF_VAL: 240\nNVPM VERB: PARAM GPU_POWER_CONTROL_ENABLE: ARG GPU_PWR_CNTL_EN: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: on\nNVPM VERB: PARAM CPU_A78_0: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600\nNVPM VERB: PARAM CPU_A78_0: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600\nNVPM VERB: PARAM CPU_A78_1: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600\nNVPM VERB: PARAM CPU_A78_1: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600\nNVPM VERB: PARAM GPU: ARG MIN_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/min_freq: REAL_VAL: 306000000 CONF_VAL: 0\nNVPM VERB: PARAM GPU: ARG MAX_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/max_freq: REAL_VAL: 408000000 CONF_VAL: 408000000\nNVPM VERB: PARAM GPU_POWER_CONTROL_DISABLE: ARG GPU_PWR_CNTL_DIS: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: auto\nNVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13\nNVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap\nNVPM VERB: PARAM DLA0_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_core: REAL_VAL: 614400000 CONF_VAL: 614400000\nNVPM VERB: PARAM DLA1_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_core: REAL_VAL: 614400000 CONF_VAL: 614400000\nNVPM VERB: PARAM DLA0_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000\nNVPM VERB: PARAM DLA1_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000\nNVPM VERB: PARAM PVA0_VPS: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_vps: REAL_VAL: 512000000 CONF_VAL: 512000000\nNVPM VERB: PARAM PVA0_AXI: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_cpu_axi: REAL_VAL: 358400000 CONF_VAL: 358400000",
+    "online_cpu_range": "0-7",
+    "process_affinity_at_start": {
+      "fastlio": [
+        {
+          "cpu_allowed_list": "0-7",
+          "nice": 0,
+          "pid": 17369,
+          "scheduler": 0,
+          "threads": 11
+        }
+      ],
+      "follower": [
+        {
+          "cpu_allowed_list": "0-7",
+          "nice": 0,
+          "pid": 23454,
+          "scheduler": 0,
+          "threads": 1
+        }
+      ],
+      "livox": [
+        {
+          "cpu_allowed_list": "0-7",
+          "nice": 0,
+          "pid": 16716,
+          "scheduler": 0,
+          "threads": 17
+        }
+      ]
+    },
+    "same_boot": true,
+    "source_file_count_end": 36,
+    "source_file_count_start": 36,
+    "source_or_executable_files_changed_during_run": [],
+    "start_snapshot_available": true
+  },
+  "timing_logs": {
+    "fastlio_health": {
+      "alert_count": 0,
+      "available": true,
+      "count": 0,
+      "fields": {},
+      "marker": "FAST_LIO_HEALTH",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/fast_lio.log"
+    },
+    "fastlio_health_failed": {
+      "matching_lines": 0
+    },
+    "fastlio_input": {
+      "alert_count": 0,
+      "available": true,
+      "count": 417,
+      "fields": {
+        "imu_buffer": {
+          "count": 417,
+          "max": 110.0,
+          "mean": 52.13669064748201,
+          "median": 52.0,
+          "min": 41.0,
+          "p95": 61.0
+        },
+        "lidar_buffer": {
+          "count": 417,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "local_gap_ms_avg": {
+          "count": 417,
+          "max": 156.787,
+          "mean": 104.31319904076742,
+          "median": 102.328,
+          "min": 101.235,
+          "p95": 113.2388
+        },
+        "local_gap_ms_max": {
+          "count": 417,
+          "max": 377.446,
+          "mean": 114.17161151079137,
+          "median": 106.427,
+          "min": 102.483,
+          "p95": 133.2302
+        },
+        "samples": {
+          "count": 417,
+          "max": 10.0,
+          "mean": 9.916067146282973,
+          "median": 10.0,
+          "min": 7.0,
+          "p95": 10.0
+        },
+        "stamp_offset_ms_avg": {
+          "count": 417,
+          "max": 182.339,
+          "mean": 134.93672541966436,
+          "median": 136.094,
+          "min": 79.1808,
+          "p95": 168.79059999999998
+        },
+        "stamp_offset_ms_max": {
+          "count": 417,
+          "max": 219.039,
+          "mean": 162.4583388489208,
+          "median": 167.109,
+          "min": 93.2815,
+          "p95": 196.0706
+        }
+      },
+      "marker": "FAST_LIO_INPUT_TIMING",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/fast_lio.log"
+    },
+    "fastlio_output": {
+      "alert_count": 0,
+      "available": true,
+      "count": 418,
+      "fields": {
+        "local_gap_ms_avg": {
+          "count": 418,
+          "max": 155.843,
+          "mean": 104.33300956937788,
+          "median": 102.443,
+          "min": 100.442,
+          "p95": 114.22559999999999
+        },
+        "local_gap_ms_max": {
+          "count": 418,
+          "max": 387.299,
+          "mean": 118.63019377990429,
+          "median": 110.47200000000001,
+          "min": 103.83,
+          "p95": 139.59619999999998
+        },
+        "samples": {
+          "count": 418,
+          "max": 10.0,
+          "mean": 9.909090909090908,
+          "median": 10.0,
+          "min": 7.0,
+          "p95": 10.0
+        },
+        "stamp_offset_ms_avg": {
+          "count": 418,
+          "max": 210.143,
+          "mean": 160.33047870813394,
+          "median": 161.83,
+          "min": 95.2777,
+          "p95": 196.19179999999997
+        },
+        "stamp_offset_ms_max": {
+          "count": 418,
+          "max": 250.695,
+          "mean": 187.4967296650717,
+          "median": 189.867,
+          "min": 107.876,
+          "p95": 228.68515
+        }
+      },
+      "marker": "FAST_LIO_OUTPUT_TIMING",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/fast_lio.log"
+    },
+    "fastlio_permanent_lock": {
+      "matching_lines": 0
+    },
+    "fastlio_recovery": {
+      "alert_count": 0,
+      "available": true,
+      "count": 0,
+      "fields": {},
+      "marker": "FAST_LIO_RECOVERY",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/fast_lio.log"
+    },
+    "follower": {
+      "alert_count": 0,
+      "available": true,
+      "count": 0,
+      "fields": {},
+      "marker": "TIMING_FOLLOWER",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/waypoint_follower.log"
+    },
+    "follower_stale_or_stop": {
+      "matching_lines": 0
+    },
+    "livox_publish": {
+      "alert_count": 0,
+      "available": true,
+      "count": 418,
+      "fields": {
+        "frame_age_ms_avg": {
+          "count": 418,
+          "max": 172.731,
+          "mean": 127.75778468899523,
+          "median": 129.4125,
+          "min": 69.016,
+          "p95": 163.10514999999998
+        },
+        "frame_age_ms_max": {
+          "count": 418,
+          "max": 212.808,
+          "mean": 154.22733971291862,
+          "median": 158.9755,
+          "min": 81.403,
+          "p95": 187.76854999999998
+        },
+        "publish_path_ms_avg": {
+          "count": 418,
+          "max": 125.174,
+          "mean": 103.6326626794258,
+          "median": 102.2835,
+          "min": 101.913,
+          "p95": 109.54390000000001
+        },
+        "publish_path_ms_max": {
+          "count": 418,
+          "max": 151.112,
+          "mean": 106.63653110047838,
+          "median": 102.6125,
+          "min": 102.042,
+          "p95": 125.90809999999999
+        },
+        "queue_used_after_max": {
+          "count": 418,
+          "max": 2.0,
+          "mean": 1.394736842105263,
+          "median": 1.0,
+          "min": 1.0,
+          "p95": 2.0
+        },
+        "samples": {
+          "count": 418,
+          "max": 10.0,
+          "mean": 9.95933014354067,
+          "median": 10.0,
+          "min": 8.0,
+          "p95": 10.0
+        },
+        "skipped": {
+          "count": 418,
+          "max": 2.0,
+          "mean": 0.423444976076555,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 1.0
+        },
+        "skipped_total": {
+          "count": 418,
+          "max": 318.0,
+          "mean": 230.48564593301435,
+          "median": 230.5,
+          "min": 141.0,
+          "p95": 309.0
+        }
+      },
+      "marker": "LIVOX_PUBLISH_TIMING",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/livox.log"
+    },
+    "livox_stream": {
+      "alert_count": 0,
+      "available": true,
+      "count": 395,
+      "fields": {
+        "frame_hz": {
+          "count": 395,
+          "max": 10.149,
+          "mean": 10.065136708860765,
+          "median": 10.066,
+          "min": 9.979,
+          "p95": 10.071299999999999
+        },
+        "imu_hz": {
+          "count": 395,
+          "max": 200.819,
+          "mean": 200.0145291139242,
+          "median": 200.286,
+          "min": 199.307,
+          "p95": 200.4975
+        },
+        "lidar_imu_offset_ms": {
+          "count": 395,
+          "max": 8.815,
+          "mean": 1.8275569620253147,
+          "median": 1.56,
+          "min": 0.001,
+          "p95": 4.282299999999999
+        },
+        "points": {
+          "count": 395,
+          "max": 19872.0,
+          "mean": 19872.0,
+          "median": 19872.0,
+          "min": 19872.0,
+          "p95": 19872.0
+        },
+        "queue_depth": {
+          "count": 395,
+          "max": 16.0,
+          "mean": 0.23544303797468355,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 1.0
+        },
+        "span_ms": {
+          "count": 395,
+          "max": 99.35,
+          "mean": 99.34999999999927,
+          "median": 99.35,
+          "min": 99.35,
+          "p95": 99.35
+        }
+      },
+      "marker": "LIVOX_STREAM_HEALTH",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/base_logs/livox.log"
+    },
+    "safety": {
+      "alert_count": 0,
+      "available": true,
+      "count": 366,
+      "fields": {
+        "cloud_age_ms_avg": {
+          "count": 366,
+          "max": 109.214,
+          "mean": 52.52946721311477,
+          "median": 52.7175,
+          "min": 32.967,
+          "p95": 64.24025
+        },
+        "cloud_age_ms_max": {
+          "count": 366,
+          "max": 367.602,
+          "mean": 104.67310655737705,
+          "median": 101.8185,
+          "min": 67.262,
+          "p95": 126.05924999999999
+        },
+        "cloud_age_ms_p95": {
+          "count": 366,
+          "max": 317.472,
+          "mean": 95.9717923497268,
+          "median": 95.70949999999999,
+          "min": 64.101,
+          "p95": 113.50675
+        },
+        "cloud_callback_ms_avg": {
+          "count": 366,
+          "max": 12.038,
+          "mean": 5.627795081967213,
+          "median": 5.3355,
+          "min": 3.437,
+          "p95": 8.29375
+        },
+        "cloud_callback_ms_max": {
+          "count": 366,
+          "max": 40.744,
+          "mean": 8.334756830601094,
+          "median": 6.9055,
+          "min": 3.778,
+          "p95": 17.78625
+        },
+        "cloud_callback_ms_p95": {
+          "count": 366,
+          "max": 40.744,
+          "mean": 8.334756830601094,
+          "median": 6.9055,
+          "min": 3.778,
+          "p95": 17.78625
+        },
+        "cloud_gap_ms_avg": {
+          "count": 366,
+          "max": 158.308,
+          "mean": 104.30545901639346,
+          "median": 102.37950000000001,
+          "min": 92.672,
+          "p95": 112.58575
+        },
+        "cloud_gap_ms_max": {
+          "count": 366,
+          "max": 382.802,
+          "mean": 119.11904098360647,
+          "median": 110.43799999999999,
+          "min": 103.257,
+          "p95": 139.29274999999998
+        },
+        "cloud_gap_ms_p95": {
+          "count": 366,
+          "max": 382.802,
+          "mean": 119.11904098360647,
+          "median": 110.43799999999999,
+          "min": 103.257,
+          "p95": 139.29274999999998
+        },
+        "cmd_age_ms_avg": {
+          "count": 366,
+          "max": 44.301,
+          "mean": 40.72910109289623,
+          "median": 42.266000000000005,
+          "min": 0.0,
+          "p95": 42.9505
+        },
+        "cmd_age_ms_max": {
+          "count": 366,
+          "max": 90.636,
+          "mean": 45.23901092896175,
+          "median": 45.533,
+          "min": 0.0,
+          "p95": 54.112500000000004
+        },
+        "cmd_age_ms_p95": {
+          "count": 366,
+          "max": 59.441,
+          "mean": 43.086166666666685,
+          "median": 43.188500000000005,
+          "min": 0.0,
+          "p95": 48.84475
+        },
+        "cmd_callback_ms_avg": {
+          "count": 366,
+          "max": 0.389,
+          "mean": 0.03269398907103824,
+          "median": 0.031,
+          "min": 0.0,
+          "p95": 0.042
+        },
+        "cmd_callback_ms_max": {
+          "count": 366,
+          "max": 7.58,
+          "mean": 0.10648907103825136,
+          "median": 0.055,
+          "min": 0.0,
+          "p95": 0.2275
+        },
+        "cmd_callback_ms_p95": {
+          "count": 366,
+          "max": 0.738,
+          "mean": 0.045571038251366165,
+          "median": 0.036,
+          "min": 0.0,
+          "p95": 0.07675
+        },
+        "cmd_count": {
+          "count": 366,
+          "max": 21.0,
+          "mean": 19.907103825136613,
+          "median": 21.0,
+          "min": 0.0,
+          "p95": 21.0
+        },
+        "cmd_gap_ms_avg": {
+          "count": 366,
+          "max": 51.269,
+          "mean": 48.34492896174862,
+          "median": 49.999,
+          "min": 0.0,
+          "p95": 50.21675
+        },
+        "cmd_gap_ms_max": {
+          "count": 366,
+          "max": 95.025,
+          "mean": 54.93488524590164,
+          "median": 55.3805,
+          "min": 0.0,
+          "p95": 66.4155
+        },
+        "cmd_gap_ms_p95": {
+          "count": 366,
+          "max": 81.486,
+          "mean": 51.99153278688524,
+          "median": 52.576,
+          "min": 0.0,
+          "p95": 59.72825
+        },
+        "compute_ms_avg": {
+          "count": 366,
+          "max": 1.895,
+          "mean": 0.6803087431693983,
+          "median": 0.5985,
+          "min": 0.463,
+          "p95": 1.1222500000000002
+        },
+        "compute_ms_max": {
+          "count": 366,
+          "max": 21.015,
+          "mean": 2.7557759562841535,
+          "median": 2.017,
+          "min": 1.442,
+          "p95": 6.60275
+        },
+        "compute_ms_p95": {
+          "count": 366,
+          "max": 16.104,
+          "mean": 1.798232240437158,
+          "median": 1.6059999999999999,
+          "min": 0.515,
+          "p95": 2.68425
+        },
+        "deadline_miss": {
+          "count": 366,
+          "max": 1.0,
+          "mean": 0.00546448087431694,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "output_count": {
+          "count": 366,
+          "max": 21.0,
+          "mean": 20.603825136612024,
+          "median": 21.0,
+          "min": 18.0,
+          "p95": 21.0
+        },
+        "override_count": {
+          "count": 366,
+          "max": 21.0,
+          "mean": 0.6967213114754098,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "period_ms": {
+          "count": 366,
+          "max": 50.0,
+          "mean": 50.0,
+          "median": 50.0,
+          "min": 50.0,
+          "p95": 50.0
+        },
+        "ros_publish_ms_avg": {
+          "count": 366,
+          "max": 1.581,
+          "mean": 0.4891967213114754,
+          "median": 0.421,
+          "min": 0.31,
+          "p95": 0.85175
+        },
+        "ros_publish_ms_max": {
+          "count": 366,
+          "max": 20.958,
+          "mean": 1.4721830601092902,
+          "median": 0.821,
+          "min": 0.43,
+          "p95": 4.55575
+        },
+        "ros_publish_ms_p95": {
+          "count": 366,
+          "max": 6.547,
+          "mean": 0.8235737704918042,
+          "median": 0.5905,
+          "min": 0.409,
+          "p95": 1.8705
+        },
+        "timer_gap_ms_avg": {
+          "count": 366,
+          "max": 51.119,
+          "mean": 50.00026775956289,
+          "median": 50.0,
+          "min": 48.938,
+          "p95": 50.2275
+        },
+        "timer_gap_ms_max": {
+          "count": 366,
+          "max": 92.158,
+          "mean": 54.421002732240495,
+          "median": 53.725,
+          "min": 50.081,
+          "p95": 61.961749999999995
+        },
+        "timer_gap_ms_p95": {
+          "count": 366,
+          "max": 69.893,
+          "mean": 52.18046174863387,
+          "median": 51.102000000000004,
+          "min": 50.048,
+          "p95": 57.357
+        }
+      },
+      "marker": "TIMING_SAFE",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/unitree_safe_cmd_node.log"
+    },
+    "safety_overrides": {
+      "matching_lines": 24
+    },
+    "udp_alerts": {
+      "matching_lines": 1118
+    },
+    "udp_receiver": {
+      "alert_count": 0,
+      "available": true,
+      "count": 370,
+      "fields": {
+        "cmd_age_ms": {
+          "count": 370,
+          "max": 0.0,
+          "mean": -0.008108108108108109,
+          "median": 0.0,
+          "min": -1.0,
+          "p95": 0.0
+        },
+        "count": {
+          "count": 370,
+          "max": 21.0,
+          "mean": 20.39189189189189,
+          "median": 21.0,
+          "min": 0.0,
+          "p95": 21.0
+        },
+        "invalid": {
+          "count": 370,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "last_seq": {
+          "count": 370,
+          "max": 7545.0,
+          "mean": 3748.7054054054056,
+          "median": 3748.5,
+          "min": 0.0,
+          "p95": 7166.55
+        },
+        "move_call_ms_avg": {
+          "count": 370,
+          "max": 0.967,
+          "mean": 0.39049459459459473,
+          "median": 0.375,
+          "min": 0.0,
+          "p95": 0.5215000000000001
+        },
+        "move_call_ms_max": {
+          "count": 370,
+          "max": 7.011,
+          "mean": 0.8245378378378385,
+          "median": 0.5814999999999999,
+          "min": 0.0,
+          "p95": 2.1617000000000006
+        },
+        "move_call_ms_p95": {
+          "count": 370,
+          "max": 3.162,
+          "mean": 0.5444459459459462,
+          "median": 0.4885,
+          "min": 0.0,
+          "p95": 0.8363000000000003
+        },
+        "sender_to_move_done_ms_avg": {
+          "count": 370,
+          "max": 2.309,
+          "mean": 0.598072972972972,
+          "median": 0.4985,
+          "min": 0.0,
+          "p95": 1.1421000000000001
+        },
+        "sender_to_move_done_ms_max": {
+          "count": 370,
+          "max": 28.083,
+          "mean": 2.4204837837837814,
+          "median": 1.1099999999999999,
+          "min": 0.0,
+          "p95": 8.815650000000003
+        },
+        "sender_to_move_done_ms_p95": {
+          "count": 370,
+          "max": 13.388,
+          "mean": 1.1462432432432428,
+          "median": 0.6585000000000001,
+          "min": 0.0,
+          "p95": 3.657850000000006
+        },
+        "seq_gaps": {
+          "count": 370,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "udp_gap_ms_avg": {
+          "count": 370,
+          "max": 50.839,
+          "mean": 49.594910810810816,
+          "median": 50.002,
+          "min": 0.0,
+          "p95": 50.25205
+        },
+        "udp_gap_ms_max": {
+          "count": 370,
+          "max": 89.401,
+          "mean": 56.082959459459495,
+          "median": 55.311499999999995,
+          "min": 0.0,
+          "p95": 68.61885
+        },
+        "udp_gap_ms_p95": {
+          "count": 370,
+          "max": 69.911,
+          "mean": 53.071135135135194,
+          "median": 52.638999999999996,
+          "min": 0.0,
+          "p95": 59.58865
+        },
+        "udp_transit_ms_avg": {
+          "count": 370,
+          "max": 1.775,
+          "mean": 0.20619999999999972,
+          "median": 0.1085,
+          "min": 0.0,
+          "p95": 0.6951000000000003
+        },
+        "udp_transit_ms_max": {
+          "count": 370,
+          "max": 27.757,
+          "mean": 1.8819621621621647,
+          "median": 0.5555000000000001,
+          "min": 0.0,
+          "p95": 8.485850000000003
+        },
+        "udp_transit_ms_p95": {
+          "count": 370,
+          "max": 13.086,
+          "mean": 0.5881054054054056,
+          "median": 0.14,
+          "min": 0.0,
+          "p95": 2.9489
+        }
+      },
+      "marker": "TIMING_RECEIVER",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/go2_sdk2_udp_receiver.log"
+    },
+    "udp_sender": {
+      "alert_count": 0,
+      "available": true,
+      "count": 380,
+      "fields": {
+        "callback_ms_avg": {
+          "count": 380,
+          "max": 0.139,
+          "mean": 0.05415263157894733,
+          "median": 0.052,
+          "min": 0.0,
+          "p95": 0.07
+        },
+        "callback_ms_max": {
+          "count": 380,
+          "max": 1.942,
+          "mean": 0.1250026315789476,
+          "median": 0.0785,
+          "min": 0.0,
+          "p95": 0.37960000000000016
+        },
+        "callback_ms_p95": {
+          "count": 380,
+          "max": 0.507,
+          "mean": 0.07540789473684213,
+          "median": 0.0665,
+          "min": 0.0,
+          "p95": 0.12205000000000002
+        },
+        "cmd_age_ms": {
+          "count": 380,
+          "max": 59.317,
+          "mean": 20.67916052631581,
+          "median": 21.743000000000002,
+          "min": -1.0,
+          "p95": 30.637450000000005
+        },
+        "count": {
+          "count": 380,
+          "max": 21.0,
+          "mean": 19.892105263157895,
+          "median": 20.0,
+          "min": 0.0,
+          "p95": 20.0
+        },
+        "errno": {
+          "count": 380,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "errors": {
+          "count": 380,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p95": 0.0
+        },
+        "ros_gap_ms_avg": {
+          "count": 380,
+          "max": 51.047,
+          "mean": 49.73619210526316,
+          "median": 49.999,
+          "min": 0.0,
+          "p95": 50.17415
+        },
+        "ros_gap_ms_max": {
+          "count": 380,
+          "max": 91.786,
+          "mean": 55.61068947368423,
+          "median": 54.8245,
+          "min": 0.0,
+          "p95": 66.73230000000001
+        },
+        "ros_gap_ms_p95": {
+          "count": 380,
+          "max": 69.862,
+          "mean": 52.861613157894716,
+          "median": 52.304,
+          "min": 0.0,
+          "p95": 59.071099999999994
+        },
+        "sendto_ms_avg": {
+          "count": 380,
+          "max": 0.137,
+          "mean": 0.052673684210526275,
+          "median": 0.051,
+          "min": 0.0,
+          "p95": 0.069
+        },
+        "sendto_ms_max": {
+          "count": 380,
+          "max": 1.94,
+          "mean": 0.12184210526315786,
+          "median": 0.0765,
+          "min": 0.0,
+          "p95": 0.37610000000000005
+        },
+        "sendto_ms_p95": {
+          "count": 380,
+          "max": 0.506,
+          "mean": 0.07370789473684213,
+          "median": 0.065,
+          "min": 0.0,
+          "p95": 0.12010000000000001
+        },
+        "seq": {
+          "count": 380,
+          "max": 7559.0,
+          "mean": 3769.0526315789475,
+          "median": 3769.0,
+          "min": 0.0,
+          "p95": 7180.0
+        }
+      },
+      "marker": "TIMING_SENDER",
+      "path": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-10/cmd_vel_udp_sender.log"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+1784957428.763579 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784957429.201791415] [go2_experiment_telemetry]: experiment telemetry started: /home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-133015-_diagnostic_smoke_do_not_use-blackbox-43196/experiment_telemetry.jsonl

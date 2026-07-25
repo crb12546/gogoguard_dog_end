@@ -1,0 +1,4 @@
+1784980009.659980 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784980010.235988283] [go2_experiment_telemetry]: experiment telemetry started: /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/experiment_telemetry.jsonl
+[INFO] [1784980011.134322002] [go2_experiment_telemetry]: EXPERIMENT_TELEMETRY_READY profile=patrol streams=odom,livox_imu,sport,low
+bash: line 1: 16259 Killed                  nice -n 10 python3 -u /home/unitree/go2_fastlio_ws/scripts/go2_experiment_telemetry.py --profile patrol --output /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/experiment_telemetry.jsonl

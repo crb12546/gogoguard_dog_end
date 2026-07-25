@@ -1,0 +1,2 @@
+1784961363.425549 [0]    python3: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784961364.245300907] [go2_base_health_watchdog]: base health watchdog started: odom=/Odometry mode=planar_xy max_abs_xy=100.00 max_abs_z=5.00 max_jump_xy=0.80 max_jump_z=0.50 bad_count=2 cooldown=90.0 auto_restart=false

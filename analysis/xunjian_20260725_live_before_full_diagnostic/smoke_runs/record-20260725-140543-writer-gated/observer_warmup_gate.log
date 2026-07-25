@@ -1,0 +1,41 @@
+FASTLIO_FRESH_SAMPLE stamp=1784959557.827356 age_ms=329.450 frame_dt_ms=first fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784959557.924197 age_ms=253.435 frame_dt_ms=96.841 fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.024849 age_ms=254.610 frame_dt_ms=100.652 fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.125451 age_ms=255.462 frame_dt_ms=100.602 fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.224811 age_ms=257.590 frame_dt_ms=99.360 fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.423536 age_ms=180.810 frame_dt_ms=198.725 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.522717 age_ms=183.437 frame_dt_ms=99.182 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.622206 age_ms=187.921 frame_dt_ms=99.489 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.721586 age_ms=190.407 frame_dt_ms=99.380 fresh=1 sequential=1 consecutive=4/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.820961 age_ms=192.989 frame_dt_ms=99.375 fresh=1 sequential=1 consecutive=5/10
+FASTLIO_FRESH_SAMPLE stamp=1784959558.920331 age_ms=195.455 frame_dt_ms=99.370 fresh=1 sequential=1 consecutive=6/10
+FASTLIO_FRESH_SAMPLE stamp=1784959559.019701 age_ms=199.562 frame_dt_ms=99.370 fresh=1 sequential=1 consecutive=7/10
+FASTLIO_FRESH_SAMPLE stamp=1784959559.119061 age_ms=202.201 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=8/10
+FASTLIO_FRESH_SAMPLE stamp=1784959559.218416 age_ms=204.426 frame_dt_ms=99.355 fresh=1 sequential=1 consecutive=9/10
+FASTLIO_FRESH_SAMPLE stamp=1784959559.317781 age_ms=227.080 frame_dt_ms=99.365 fresh=1 sequential=1 consecutive=10/10
+FASTLIO_FRESH_READY frames=10 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+FASTLIO_FRESH_SAMPLE stamp=1784959560.510081 age_ms=183.188 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=1 cpu_pct=97.8 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784959561.503651 age_ms=313.365 frame_dt_ms=first fresh=0 sequential=1 consecutive=0/1
+FASTLIO_FRESH_SAMPLE stamp=1784959561.603046 age_ms=234.502 frame_dt_ms=99.395 fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=2 cpu_pct=98.5 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784959562.696016 age_ms=291.639 frame_dt_ms=first fresh=0 sequential=1 consecutive=0/1
+FASTLIO_FRESH_SAMPLE stamp=1784959562.795356 age_ms=212.733 frame_dt_ms=99.340 fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=3 cpu_pct=95.2 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784959563.986503 age_ms=193.449 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=4 cpu_pct=98.1 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784959565.180021 age_ms=169.619 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=5 cpu_pct=80.2 cpu_limit=85.0 fastlio_fresh=1 stable=1/3
+FASTLIO_FRESH_SAMPLE stamp=1784959566.272976 age_ms=196.818 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=6 cpu_pct=42.8 cpu_limit=85.0 fastlio_fresh=1 stable=2/3
+FASTLIO_FRESH_SAMPLE stamp=1784959567.266581 age_ms=305.144 frame_dt_ms=first fresh=0 sequential=1 consecutive=0/1
+FASTLIO_FRESH_SAMPLE stamp=1784959567.365931 age_ms=226.119 frame_dt_ms=99.350 fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=7 cpu_pct=29.1 cpu_limit=85.0 fastlio_fresh=1 stable=3/3
+PATROL_START_GATE_READY cpu_pct=29.1 fastlio_fresh=1

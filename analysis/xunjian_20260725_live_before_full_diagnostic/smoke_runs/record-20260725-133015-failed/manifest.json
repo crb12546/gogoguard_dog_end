@@ -1,0 +1,63 @@
+{
+  "cleanup": {
+    "performance": "killed",
+    "rosbag": "killed",
+    "route_recorder": "not_running",
+    "session_guard": "not_running",
+    "telemetry": "killed"
+  },
+  "created_at": "2026-07-25T13:30:15.978+08:00",
+  "failed_at": "2026-07-25T13:30:55.929+08:00",
+  "failure": "RuntimeError('experiment telemetry did not become ready')",
+  "localization_session_start": {
+    "created_at": "2026-07-25T13:30:17+0800",
+    "current_anchor": {
+      "qw": 0.9999747442655352,
+      "qx": -0.0012293326456182874,
+      "qy": 0.003032622007706433,
+      "qz": -0.0063089441307338555,
+      "snapshot_mtime_ns": 1784957416980085850,
+      "stamp": 1784957416.843398,
+      "x": -0.03523647922775423,
+      "y": -0.000833094914699092,
+      "yaw": -0.012625592246830466,
+      "z": -0.05735943025124588
+    },
+    "localization_session": {
+      "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 32705,
+      "start_ticks": 93126
+    },
+    "mode": "session_only",
+    "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+    "schema": "go2.manual_anchor.v1",
+    "stability": {
+      "duration_seconds": 0.9114000179999948,
+      "max_local_gap_seconds": 0.10729775200002223,
+      "samples": 10,
+      "translation_span_m": 0.006007696278691545,
+      "yaw_span_rad": 0.00347374641224915
+    }
+  },
+  "min_distance_m": 0.4,
+  "observer_policy": {
+    "pointcloud_evidence": "Livox and FAST-LIO in-process timing logs",
+    "raw_pointcloud_subscriber": false,
+    "rosbag_topics": [
+      "/Odometry",
+      "/livox/imu",
+      "/lf/lowstate",
+      "/lf/sportmodestate",
+      "/lf/wirelesscontroller",
+      "/wirelesscontroller",
+      "/wirelesscontroller_unprocessed",
+      "/tf",
+      "/tf_static"
+    ]
+  },
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_smoke_do_not_use.csv",
+  "run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-133015-_diagnostic_smoke_do_not_use-blackbox-43196",
+  "schema": "go2.route_recording_run.v1",
+  "status": "failed_start"
+}

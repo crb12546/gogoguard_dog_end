@@ -1,0 +1,1736 @@
+{
+  "analysis_version": 1,
+  "evidence_scope": {
+    "recording_motion_window_epoch": [
+      1784960697.1997514,
+      1784960901.3050992
+    ],
+    "patrol_motion_window_epoch": [
+      1784961385.2035027,
+      1784962123.7530708
+    ],
+    "patrol_phase_count": 3
+  },
+  "route_identity": {
+    "sha256": {
+      "routes/xbf8.csv": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59",
+      "routes/xbf2.csv": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59",
+      "patrol/route_original.csv": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59",
+      "recording/route_recorded.csv": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59"
+    },
+    "all_content_identical": true
+  },
+  "recording_integrity": {
+    "waypoint_count": 358,
+    "path_length_lio_xy_m": 158.87183882914894,
+    "csv_velocity_values_mps": [
+      0.2
+    ],
+    "recorder_reproduction": {
+      "available": true,
+      "csv_waypoint_count": 358,
+      "exact_within_2mm_0_002rad": true,
+      "interpretation": "exact recorder reproduction from sampled telemetry",
+      "paired_waypoint_count": 358,
+      "position_error_m": {
+        "count": 358,
+        "max": 6.863251187189498e-07,
+        "median": 3.8748859725004373e-07,
+        "min": 2.2684332545811626e-08,
+        "p95": 5.876496126777255e-07
+      },
+      "reconstructed_waypoint_count": 358,
+      "route_start_to_nearest_telemetry_m": 4.806994161253594e-07,
+      "telemetry_start_index": 394,
+      "yaw_error_deg": {
+        "count": 358,
+        "max": 2.8464193256335228e-05,
+        "median": 1.5163043192779701e-05,
+        "min": 1.7437798152122957e-08,
+        "p95": 2.7808945888140554e-05
+      }
+    },
+    "spacing_m": {
+      "count": 357,
+      "max": 0.5552614903736813,
+      "median": 0.44584169895266434,
+      "min": 0.40027994726815863,
+      "p95": 0.4831188779657779
+    },
+    "manual_move_requests": {
+      "api_id": 1008,
+      "count": 3097,
+      "forward_x": {
+        "count": 3097,
+        "p5": 0.557450807094574,
+        "p50": 0.8514701724052429,
+        "p95": 0.9378749966621399,
+        "p100": 0.9524151086807251
+      },
+      "lateral_y": {
+        "count": 3097,
+        "p5": -1.401298464324817e-45,
+        "p50": -1.401298464324817e-45,
+        "p95": -1.401298464324817e-45,
+        "p100": -1.401298464324817e-45
+      },
+      "yaw_z": {
+        "count": 3097,
+        "p5": -0.08659345507621764,
+        "p50": -1.401298464324817e-45,
+        "p95": 0.0004326790978666329,
+        "p100": 0.9411875009536743
+      },
+      "lateral_nonzero_over_1e_4_count": 0
+    },
+    "recorded_lio_yaw_vs_xy_track_heading": {
+      "definition": "wrapped(track heading - recorded LIO Euler yaw)",
+      "overall_signed_deg": {
+        "count": 357,
+        "p5": -16.587431465376543,
+        "p50": -11.165265406006046,
+        "p95": 4.9692395938894345
+      },
+      "overall_absolute_deg": {
+        "count": 357,
+        "p50": 11.165265406006046,
+        "p95": 16.587431465376543,
+        "p100": 65.44622227480174
+      },
+      "route_sections": [
+        {
+          "progress_start_m": 0.0,
+          "progress_end_m": 55.0,
+          "count": 126,
+          "signed_error_deg": {
+            "count": 126,
+            "p5": -0.9680945632850237,
+            "p50": 2.340173277647581,
+            "p95": 5.139782071024727
+          },
+          "absolute_error_deg": {
+            "count": 126,
+            "p50": 2.3943579205085337,
+            "p95": 5.139782071024727,
+            "p100": 6.9031193238809925
+          }
+        },
+        {
+          "progress_start_m": 60.0,
+          "progress_end_m": 140.0,
+          "count": 178,
+          "signed_error_deg": {
+            "count": 178,
+            "p5": -17.669827147077385,
+            "p50": -14.007915620227877,
+            "p95": -10.773359961881553
+          },
+          "absolute_error_deg": {
+            "count": 178,
+            "p50": 14.007915620227877,
+            "p95": 17.669827147077385,
+            "p100": 21.58035778591241
+          }
+        },
+        {
+          "progress_start_m": 145.0,
+          "progress_end_m": 159.0,
+          "count": 31,
+          "signed_error_deg": {
+            "count": 31,
+            "p5": -11.258013505924362,
+            "p50": 0.6133366161795684,
+            "p95": 9.191203395833744
+          },
+          "absolute_error_deg": {
+            "count": 31,
+            "p50": 4.620323784638308,
+            "p95": 11.258013505924362,
+            "p100": 11.855251105238931
+          }
+        }
+      ]
+    },
+    "body_imu_vs_lio_yaw_direction_test": {
+      "method": "Match each recorded waypoint to body IMU yaw by local receive time, then remove one constant yaw-origin offset using the 0-55 m straight.",
+      "waypoint_count": 358,
+      "odom_to_body_receive_pair_gap_s": {
+        "count": 358,
+        "p50": 0.01871955394744873,
+        "p95": 0.04554085731506347,
+        "p100": 0.049997806549072266
+      },
+      "body_yaw_origin_alignment_deg": 2.1995780949702954,
+      "lio_yaw_origin_alignment_deg": 2.340173277647581,
+      "route_sections": [
+        {
+          "progress_start_m": 0.0,
+          "progress_end_m": 55.0,
+          "body_imu_aligned_track_error_deg": {
+            "signed": {
+              "count": 126,
+              "p5": -3.09708520660572,
+              "p50": 0.0,
+              "p95": 2.6094578705205893
+            },
+            "absolute": {
+              "count": 126,
+              "p50": 1.223311839069027,
+              "p95": 3.4242200192485175,
+              "p100": 7.772855044916167
+            }
+          },
+          "lio_yaw_aligned_track_error_deg": {
+            "signed": {
+              "count": 126,
+              "p5": -3.308267840932592,
+              "p50": 0.0,
+              "p95": 2.7996087933771325
+            },
+            "absolute": {
+              "count": 126,
+              "p50": 1.1909214559031815,
+              "p95": 3.9429227235529196,
+              "p100": 7.010678904041784
+            }
+          }
+        },
+        {
+          "progress_start_m": 60.0,
+          "progress_end_m": 140.0,
+          "body_imu_aligned_track_error_deg": {
+            "signed": {
+              "count": 178,
+              "p5": -3.228435169730606,
+              "p50": 0.1651916248904426,
+              "p95": 3.6394502325015976
+            },
+            "absolute": {
+              "count": 178,
+              "p50": 1.220479326935563,
+              "p95": 4.125273084768611,
+              "p100": 5.692344630676548
+            }
+          },
+          "lio_yaw_aligned_track_error_deg": {
+            "signed": {
+              "count": 178,
+              "p5": -20.01000042472497,
+              "p50": -16.348088897875442,
+              "p95": -13.11353323952912
+            },
+            "absolute": {
+              "count": 178,
+              "p50": 16.348088897875442,
+              "p95": 20.01000042472497,
+              "p100": 23.920531063559977
+            }
+          }
+        },
+        {
+          "progress_start_m": 145.0,
+          "progress_end_m": 159.0,
+          "body_imu_aligned_track_error_deg": {
+            "signed": {
+              "count": 31,
+              "p5": -3.238931272634602,
+              "p50": 1.8968790872292658,
+              "p95": 10.522821795362471
+            },
+            "absolute": {
+              "count": 31,
+              "p50": 2.4166836037617596,
+              "p95": 10.522821795362471,
+              "p100": 16.880170497803324
+            }
+          },
+          "lio_yaw_aligned_track_error_deg": {
+            "signed": {
+              "count": 31,
+              "p5": -13.598186783571931,
+              "p50": -1.726836661468,
+              "p95": 6.851030118186163
+            },
+            "absolute": {
+              "count": 31,
+              "p50": 5.581122550005554,
+              "p95": 13.598186783571931,
+              "p100": 14.195424382886525
+            }
+          }
+        }
+      ]
+    }
+  },
+  "manual_anchor_and_initial_alignment": {
+    "manual_anchor_delta_yaw_deg": 0.6854175551476379,
+    "manual_anchor_translation_m": 0.020372213907373503,
+    "anchor_stability": {
+      "duration_seconds": 0.869163829000172,
+      "max_local_gap_seconds": 0.11572328300007939,
+      "samples": 10,
+      "translation_span_m": 0.013261583583824534,
+      "yaw_span_rad": 0.0012453683636508839
+    },
+    "motion_release_position_error_to_runtime_start_m": 0.014921378661346175,
+    "motion_release_yaw_error_to_runtime_start_deg": 0.08584297062161823
+  },
+  "execution": {
+    "requested_speed_mps": 0.5,
+    "loop_mode": "pingpong",
+    "runtime_route_length_lio_xy_m": 158.87183948339893,
+    "runtime_route_length_floor_plane_m": 165.04073548448054,
+    "phase_metrics": [
+      {
+        "phase": 0,
+        "direction": 1,
+        "control_cycle_count": 6873,
+        "unique_odom_count": 3327,
+        "start_epoch": 1784961385.2035027,
+        "end_epoch": 1784961728.8032901,
+        "duration_s": 343.5997874736786,
+        "route_progress_m": {
+          "start": 0.01431547934927105,
+          "end": 158.5994569962861,
+          "min": 0.005116929832313463,
+          "max": 158.5994569962861
+        },
+        "lio_xy_cross_track_m": {
+          "absolute": {
+            "count": 3327,
+            "p50": 0.15807758654836782,
+            "p95": 0.21489153477786693,
+            "p100": 0.2501504402835154
+          },
+          "signed": {
+            "count": 3327,
+            "p5": -0.21489153477786696,
+            "p50": -0.15807758654836782,
+            "p95": 0.0728285099827216
+          }
+        },
+        "floor_plane_cross_track_m": {
+          "absolute": {
+            "count": 3327,
+            "p50": 0.16502273109282276,
+            "p95": 0.2490368326393096,
+            "p100": 0.3037548349377544
+          },
+          "signed": {
+            "count": 3327,
+            "p5": -0.24903683263930962,
+            "p50": -0.16502273109282276,
+            "p95": 0.07411911908754629
+          },
+          "interpretation": "Distance after rotating the fitted flat-route plane level; still LIO-relative, not an external ground-truth measurement."
+        },
+        "odom_source_stamp_age_ms": {
+          "count": 3327,
+          "p50": 285.8929634094238,
+          "p95": 339.3720865249634,
+          "p100": 380.6149959564209
+        },
+        "odom_receive_to_control_ms": {
+          "count": 3327,
+          "p50": 24.07713299999159,
+          "p95": 46.542485899954045,
+          "p100": 51.4699279992783
+        },
+        "command_vx_mps": {
+          "count": 3327,
+          "p5": 0.5,
+          "p50": 0.5,
+          "p95": 0.5,
+          "p100": 0.5
+        },
+        "command_abs_yaw_rate_rps": {
+          "count": 3327,
+          "p50": 0.026234840771255832,
+          "p95": 0.09159294850968082,
+          "p100": 0.45
+        },
+        "plane_fit": {
+          "z_equals_a_x_plus_b_y_plus_c": [
+            0.42336331056221466,
+            0.036299561392474644,
+            -0.14552371953312165
+          ],
+          "tilt_deg": 23.021446419421018,
+          "rms_residual_m": 0.06232917632427822,
+          "abs_residual_m": {
+            "count": 3327,
+            "p50": 0.04807487994328241,
+            "p95": 0.10939790561838407,
+            "p100": 0.23611494223617768
+          }
+        },
+        "progress_bins_5m": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 5.0,
+            "count": 110,
+            "signed_median_m": 0.053059773310414185,
+            "abs_median_m": 0.0530597733104142,
+            "abs_p95_m": 0.08266367946994783,
+            "abs_max_m": 0.08583496654251813
+          },
+          {
+            "progress_start_m": 5.0,
+            "progress_end_m": 10.0,
+            "count": 110,
+            "signed_median_m": 0.05254284750274272,
+            "abs_median_m": 0.052542847502742726,
+            "abs_p95_m": 0.06881860329453536,
+            "abs_max_m": 0.07497247065275436
+          },
+          {
+            "progress_start_m": 10.0,
+            "progress_end_m": 15.0,
+            "count": 111,
+            "signed_median_m": 0.04634189105883011,
+            "abs_median_m": 0.04634189105883011,
+            "abs_p95_m": 0.08187892269239014,
+            "abs_max_m": 0.0956811424983789
+          },
+          {
+            "progress_start_m": 15.0,
+            "progress_end_m": 20.0,
+            "count": 107,
+            "signed_median_m": 0.0587722736888611,
+            "abs_median_m": 0.05877227368886109,
+            "abs_p95_m": 0.08331423974046365,
+            "abs_max_m": 0.08812225211171776
+          },
+          {
+            "progress_start_m": 20.0,
+            "progress_end_m": 25.0,
+            "count": 107,
+            "signed_median_m": 0.058716725778112926,
+            "abs_median_m": 0.05871672577811292,
+            "abs_p95_m": 0.07949820666529382,
+            "abs_max_m": 0.09204894030582794
+          },
+          {
+            "progress_start_m": 25.0,
+            "progress_end_m": 30.0,
+            "count": 109,
+            "signed_median_m": 0.04583978237086055,
+            "abs_median_m": 0.045839782370860546,
+            "abs_p95_m": 0.07786441263807616,
+            "abs_max_m": 0.09031190043115052
+          },
+          {
+            "progress_start_m": 30.0,
+            "progress_end_m": 35.0,
+            "count": 106,
+            "signed_median_m": 0.039209262287446936,
+            "abs_median_m": 0.039209262287446936,
+            "abs_p95_m": 0.05606756272142205,
+            "abs_max_m": 0.06875367752054073
+          },
+          {
+            "progress_start_m": 35.0,
+            "progress_end_m": 40.0,
+            "count": 109,
+            "signed_median_m": 0.04691317182692307,
+            "abs_median_m": 0.04691317182692307,
+            "abs_p95_m": 0.07307924790850291,
+            "abs_max_m": 0.08038465781211805
+          },
+          {
+            "progress_start_m": 40.0,
+            "progress_end_m": 45.0,
+            "count": 110,
+            "signed_median_m": 0.05900456268312168,
+            "abs_median_m": 0.05900456268312168,
+            "abs_p95_m": 0.08138922166113162,
+            "abs_max_m": 0.09269944851933246
+          },
+          {
+            "progress_start_m": 45.0,
+            "progress_end_m": 50.0,
+            "count": 106,
+            "signed_median_m": 0.07444109799149254,
+            "abs_median_m": 0.07444109799149254,
+            "abs_p95_m": 0.09648780579274024,
+            "abs_max_m": 0.10224875425310377
+          },
+          {
+            "progress_start_m": 50.0,
+            "progress_end_m": 55.0,
+            "count": 110,
+            "signed_median_m": 0.05356826921560842,
+            "abs_median_m": 0.05356826921560843,
+            "abs_p95_m": 0.07060154121889413,
+            "abs_max_m": 0.07726281899098
+          },
+          {
+            "progress_start_m": 55.0,
+            "progress_end_m": 60.0,
+            "count": 118,
+            "signed_median_m": 0.038656712729807,
+            "abs_median_m": 0.044896852754857476,
+            "abs_p95_m": 0.13473552152983626,
+            "abs_max_m": 0.15807758654836782
+          },
+          {
+            "progress_start_m": 60.0,
+            "progress_end_m": 65.0,
+            "count": 102,
+            "signed_median_m": -0.17018519567428403,
+            "abs_median_m": 0.17018519567428403,
+            "abs_p95_m": 0.19265318515785548,
+            "abs_max_m": 0.204673923682381
+          },
+          {
+            "progress_start_m": 65.0,
+            "progress_end_m": 70.0,
+            "count": 100,
+            "signed_median_m": -0.1604465238779838,
+            "abs_median_m": 0.1604465238779838,
+            "abs_p95_m": 0.1811096441207138,
+            "abs_max_m": 0.18818744405683174
+          },
+          {
+            "progress_start_m": 70.0,
+            "progress_end_m": 75.0,
+            "count": 102,
+            "signed_median_m": -0.19049633028062676,
+            "abs_median_m": 0.1904963302806268,
+            "abs_p95_m": 0.21526996644398805,
+            "abs_max_m": 0.2251301351422342
+          },
+          {
+            "progress_start_m": 75.0,
+            "progress_end_m": 80.0,
+            "count": 102,
+            "signed_median_m": -0.18886180757599097,
+            "abs_median_m": 0.18886180757599097,
+            "abs_p95_m": 0.20469894538735497,
+            "abs_max_m": 0.2122369610900229
+          },
+          {
+            "progress_start_m": 80.0,
+            "progress_end_m": 85.0,
+            "count": 101,
+            "signed_median_m": -0.20233383965131632,
+            "abs_median_m": 0.2023338396513163,
+            "abs_p95_m": 0.21421111731219586,
+            "abs_max_m": 0.21790452597315957
+          },
+          {
+            "progress_start_m": 85.0,
+            "progress_end_m": 90.0,
+            "count": 100,
+            "signed_median_m": -0.18735397456406977,
+            "abs_median_m": 0.18735397456406974,
+            "abs_p95_m": 0.21117815941696233,
+            "abs_max_m": 0.22338692126232154
+          },
+          {
+            "progress_start_m": 90.0,
+            "progress_end_m": 95.0,
+            "count": 99,
+            "signed_median_m": -0.19184171841057424,
+            "abs_median_m": 0.19184171841057426,
+            "abs_p95_m": 0.20844559215103098,
+            "abs_max_m": 0.21605092426134379
+          },
+          {
+            "progress_start_m": 95.0,
+            "progress_end_m": 100.0,
+            "count": 102,
+            "signed_median_m": -0.19874448129841443,
+            "abs_median_m": 0.19874448129841443,
+            "abs_p95_m": 0.20897026445729044,
+            "abs_max_m": 0.21200607219793435
+          },
+          {
+            "progress_start_m": 100.0,
+            "progress_end_m": 105.0,
+            "count": 99,
+            "signed_median_m": -0.1920662840499805,
+            "abs_median_m": 0.1920662840499805,
+            "abs_p95_m": 0.2090818027087988,
+            "abs_max_m": 0.2132810719857489
+          },
+          {
+            "progress_start_m": 105.0,
+            "progress_end_m": 110.0,
+            "count": 103,
+            "signed_median_m": -0.19244426997923403,
+            "abs_median_m": 0.19244426997923406,
+            "abs_p95_m": 0.21030330791142293,
+            "abs_max_m": 0.21334893285855863
+          },
+          {
+            "progress_start_m": 110.0,
+            "progress_end_m": 115.0,
+            "count": 100,
+            "signed_median_m": -0.18919074400024832,
+            "abs_median_m": 0.18919074400024832,
+            "abs_p95_m": 0.20696204399983137,
+            "abs_max_m": 0.21405970771637667
+          },
+          {
+            "progress_start_m": 115.0,
+            "progress_end_m": 120.0,
+            "count": 100,
+            "signed_median_m": -0.19497061174209676,
+            "abs_median_m": 0.1949706117420968,
+            "abs_p95_m": 0.2215240111492633,
+            "abs_max_m": 0.23066089116702387
+          },
+          {
+            "progress_start_m": 120.0,
+            "progress_end_m": 125.0,
+            "count": 103,
+            "signed_median_m": -0.21570228566756028,
+            "abs_median_m": 0.21570228566756028,
+            "abs_p95_m": 0.23634865543680997,
+            "abs_max_m": 0.2501254632567784
+          },
+          {
+            "progress_start_m": 125.0,
+            "progress_end_m": 130.0,
+            "count": 103,
+            "signed_median_m": -0.20011923235720802,
+            "abs_median_m": 0.200119232357208,
+            "abs_p95_m": 0.2239153784020961,
+            "abs_max_m": 0.23350325887354853
+          },
+          {
+            "progress_start_m": 130.0,
+            "progress_end_m": 135.0,
+            "count": 101,
+            "signed_median_m": -0.1957991018490594,
+            "abs_median_m": 0.19579910184905938,
+            "abs_p95_m": 0.22888671450997364,
+            "abs_max_m": 0.23459878249050897
+          },
+          {
+            "progress_start_m": 135.0,
+            "progress_end_m": 140.0,
+            "count": 100,
+            "signed_median_m": -0.2026204664983154,
+            "abs_median_m": 0.2026204664983154,
+            "abs_p95_m": 0.24022795140635725,
+            "abs_max_m": 0.2501504402835154
+          },
+          {
+            "progress_start_m": 140.0,
+            "progress_end_m": 145.0,
+            "count": 102,
+            "signed_median_m": -0.20290817478020562,
+            "abs_median_m": 0.20290817478020562,
+            "abs_p95_m": 0.22588244194685494,
+            "abs_max_m": 0.23211249508668325
+          },
+          {
+            "progress_start_m": 145.0,
+            "progress_end_m": 150.0,
+            "count": 108,
+            "signed_median_m": -0.12920451449283707,
+            "abs_median_m": 0.12920451449283704,
+            "abs_p95_m": 0.19045309505088745,
+            "abs_max_m": 0.2020409225201707
+          },
+          {
+            "progress_start_m": 150.0,
+            "progress_end_m": 155.0,
+            "count": 108,
+            "signed_median_m": -0.009650169680021217,
+            "abs_median_m": 0.024544507724883688,
+            "abs_p95_m": 0.06331337049749224,
+            "abs_max_m": 0.07686801966870517
+          },
+          {
+            "progress_start_m": 155.0,
+            "progress_end_m": 160.0,
+            "count": 79,
+            "signed_median_m": 0.047526762719260776,
+            "abs_median_m": 0.047526762719260776,
+            "abs_p95_m": 0.06674360350193805,
+            "abs_max_m": 0.07399514385564455
+          }
+        ],
+        "route_sections": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 55.0,
+            "count": 1195,
+            "signed_m": {
+              "count": 1195,
+              "p5": 0.02348108906342285,
+              "p50": 0.0537475688305275,
+              "p95": 0.08178383775161176
+            },
+            "absolute_m": {
+              "count": 1195,
+              "p50": 0.05374756883052751,
+              "p95": 0.08178383775161176,
+              "p100": 0.10224875425310377
+            },
+            "target_distance_m": {
+              "count": 1195,
+              "p50": 0.878659584869528,
+              "p95": 1.0842788154985106,
+              "p100": 1.2404379394561593
+            },
+            "selected_alpha_rad": {
+              "count": 1195,
+              "p5": -0.07033782393260718,
+              "p50": -0.011983229170929088,
+              "p95": 0.03326966354485364
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 1195,
+              "p50": 3.5398712367308565,
+              "p95": 5.752117266090885,
+              "p100": 8.574620805041965
+            }
+          },
+          {
+            "progress_start_m": 60.0,
+            "progress_end_m": 140.0,
+            "count": 1617,
+            "signed_m": {
+              "count": 1617,
+              "p5": -0.22149213330326697,
+              "p50": -0.19291807557302237,
+              "p95": -0.15587462391613546
+            },
+            "absolute_m": {
+              "count": 1617,
+              "p50": 0.19291807557302237,
+              "p95": 0.22149213330326697,
+              "p100": 0.2501504402835154
+            },
+            "target_distance_m": {
+              "count": 1617,
+              "p50": 0.9226432304426244,
+              "p95": 1.1375924353002291,
+              "p100": 1.266769816106111
+            },
+            "selected_alpha_rad": {
+              "count": 1617,
+              "p5": -0.08365558674637028,
+              "p50": -0.014829673732711823,
+              "p95": 0.06010989951105289
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 1617,
+              "p50": 11.98164235581286,
+              "p95": 16.011185951580313,
+              "p100": 18.950438111302915
+            }
+          },
+          {
+            "progress_start_m": 145.0,
+            "progress_end_m": 159.0,
+            "count": 295,
+            "signed_m": {
+              "count": 295,
+              "p5": -0.17524324721622472,
+              "p50": -0.026846140393664782,
+              "p95": 0.057193277818856976
+            },
+            "absolute_m": {
+              "count": 295,
+              "p50": 0.049369115782245315,
+              "p95": 0.17524324721622478,
+              "p100": 0.2020409225201707
+            },
+            "target_distance_m": {
+              "count": 295,
+              "p50": 0.8694949373742118,
+              "p95": 1.0906352461672628,
+              "p100": 1.1863105070435744
+            },
+            "selected_alpha_rad": {
+              "count": 295,
+              "p5": -0.035046292105791715,
+              "p50": 0.036624339517437376,
+              "p95": 0.1542596957198716
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 295,
+              "p50": 3.4009987175821115,
+              "p95": 12.142407650093858,
+              "p100": 15.985248201323001
+            }
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "direction": -1,
+        "control_cycle_count": 7147,
+        "unique_odom_count": 3392,
+        "start_epoch": 1784961728.853357,
+        "end_epoch": 1784962086.1533403,
+        "duration_s": 357.29998326301575,
+        "route_progress_m": {
+          "start": 158.64957391535222,
+          "end": 0.24935120842661737,
+          "min": 0.24935120842661737,
+          "max": 158.81364705184657
+        },
+        "lio_xy_cross_track_m": {
+          "absolute": {
+            "count": 3392,
+            "p50": 0.22702206231014818,
+            "p95": 0.28501219456499555,
+            "p100": 0.32839774871851435
+          },
+          "signed": {
+            "count": 3392,
+            "p5": -0.2850121945649955,
+            "p50": -0.2270220623101482,
+            "p95": 0.05141368488781626
+          }
+        },
+        "floor_plane_cross_track_m": {
+          "absolute": {
+            "count": 3392,
+            "p50": 0.2322937704843583,
+            "p95": 0.3294993486785153,
+            "p100": 0.38667699486780965
+          },
+          "signed": {
+            "count": 3392,
+            "p5": -0.3294993486785154,
+            "p50": -0.23211049105188708,
+            "p95": 0.05244639325135015
+          },
+          "interpretation": "Distance after rotating the fitted flat-route plane level; still LIO-relative, not an external ground-truth measurement."
+        },
+        "odom_source_stamp_age_ms": {
+          "count": 3392,
+          "p50": 295.78542709350586,
+          "p95": 350.8175015449524,
+          "p100": 406.28790855407715
+        },
+        "odom_receive_to_control_ms": {
+          "count": 3392,
+          "p50": 23.954582999976992,
+          "p95": 46.600671499936645,
+          "p100": 54.64875200050301
+        },
+        "command_vx_mps": {
+          "count": 3392,
+          "p5": 0.5,
+          "p50": 0.5,
+          "p95": 0.5,
+          "p100": 0.5
+        },
+        "command_abs_yaw_rate_rps": {
+          "count": 3392,
+          "p50": 0.0300408387698929,
+          "p95": 0.20330891241921412,
+          "p100": 0.45
+        },
+        "plane_fit": {
+          "z_equals_a_x_plus_b_y_plus_c": [
+            0.42356193678212384,
+            0.035891073416741213,
+            -0.16248120006710912
+          ],
+          "tilt_deg": 23.02936728150737,
+          "rms_residual_m": 0.07515871432815593,
+          "abs_residual_m": {
+            "count": 3392,
+            "p50": 0.045674570972831674,
+            "p95": 0.1526920229216845,
+            "p100": 0.23250932396526736
+          }
+        },
+        "progress_bins_5m": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 5.0,
+            "count": 100,
+            "signed_median_m": 0.04278397012986712,
+            "abs_median_m": 0.04278397012986712,
+            "abs_p95_m": 0.07404650560432365,
+            "abs_max_m": 0.07875868293503556
+          },
+          {
+            "progress_start_m": 5.0,
+            "progress_end_m": 10.0,
+            "count": 111,
+            "signed_median_m": 0.022304709033444312,
+            "abs_median_m": 0.02230470903344432,
+            "abs_p95_m": 0.04686687445578209,
+            "abs_max_m": 0.062150946691262754
+          },
+          {
+            "progress_start_m": 10.0,
+            "progress_end_m": 15.0,
+            "count": 110,
+            "signed_median_m": 0.00838985949191862,
+            "abs_median_m": 0.009729360389864456,
+            "abs_p95_m": 0.034646691205755226,
+            "abs_max_m": 0.048739236495556615
+          },
+          {
+            "progress_start_m": 15.0,
+            "progress_end_m": 20.0,
+            "count": 111,
+            "signed_median_m": 0.03142696543291549,
+            "abs_median_m": 0.03142696543291549,
+            "abs_p95_m": 0.06520654169467754,
+            "abs_max_m": 0.07652878094787471
+          },
+          {
+            "progress_start_m": 20.0,
+            "progress_end_m": 25.0,
+            "count": 108,
+            "signed_median_m": 0.03645238902746037,
+            "abs_median_m": 0.03645238902746037,
+            "abs_p95_m": 0.06398489913645485,
+            "abs_max_m": 0.08133233378706253
+          },
+          {
+            "progress_start_m": 25.0,
+            "progress_end_m": 30.0,
+            "count": 107,
+            "signed_median_m": -0.010331951814005263,
+            "abs_median_m": 0.019707648055006178,
+            "abs_p95_m": 0.03415617233249327,
+            "abs_max_m": 0.06413610274197205
+          },
+          {
+            "progress_start_m": 30.0,
+            "progress_end_m": 35.0,
+            "count": 111,
+            "signed_median_m": 0.0010250704812923383,
+            "abs_median_m": 0.008730788142146903,
+            "abs_p95_m": 0.02667208284883845,
+            "abs_max_m": 0.040559739033955974
+          },
+          {
+            "progress_start_m": 35.0,
+            "progress_end_m": 40.0,
+            "count": 110,
+            "signed_median_m": 0.02475332220722934,
+            "abs_median_m": 0.024753322207229336,
+            "abs_p95_m": 0.06337199675972671,
+            "abs_max_m": 0.07258458417170802
+          },
+          {
+            "progress_start_m": 40.0,
+            "progress_end_m": 45.0,
+            "count": 108,
+            "signed_median_m": 0.04076819578919175,
+            "abs_median_m": 0.04076819578919175,
+            "abs_p95_m": 0.08435275365993022,
+            "abs_max_m": 0.10223790461803005
+          },
+          {
+            "progress_start_m": 45.0,
+            "progress_end_m": 50.0,
+            "count": 101,
+            "signed_median_m": 0.04104668496157621,
+            "abs_median_m": 0.04104668496157621,
+            "abs_p95_m": 0.07771866467274896,
+            "abs_max_m": 0.10085824432938598
+          },
+          {
+            "progress_start_m": 50.0,
+            "progress_end_m": 55.0,
+            "count": 100,
+            "signed_median_m": 0.014307289498794434,
+            "abs_median_m": 0.023503804827451253,
+            "abs_p95_m": 0.04105447298117761,
+            "abs_max_m": 0.053427735583011365
+          },
+          {
+            "progress_start_m": 55.0,
+            "progress_end_m": 60.0,
+            "count": 114,
+            "signed_median_m": -0.07491035940633281,
+            "abs_median_m": 0.07491035940633282,
+            "abs_p95_m": 0.3052366259491824,
+            "abs_max_m": 0.32839774871851435
+          },
+          {
+            "progress_start_m": 60.0,
+            "progress_end_m": 65.0,
+            "count": 96,
+            "signed_median_m": -0.24369727702392313,
+            "abs_median_m": 0.24369727702392308,
+            "abs_p95_m": 0.26538035508623253,
+            "abs_max_m": 0.26719402785150004
+          },
+          {
+            "progress_start_m": 65.0,
+            "progress_end_m": 70.0,
+            "count": 100,
+            "signed_median_m": -0.23736253435801813,
+            "abs_median_m": 0.23736253435801813,
+            "abs_p95_m": 0.26197521223695036,
+            "abs_max_m": 0.2711626124469113
+          },
+          {
+            "progress_start_m": 70.0,
+            "progress_end_m": 75.0,
+            "count": 104,
+            "signed_median_m": -0.26929333840382585,
+            "abs_median_m": 0.26929333840382585,
+            "abs_p95_m": 0.28148876603110434,
+            "abs_max_m": 0.2885149188593946
+          },
+          {
+            "progress_start_m": 75.0,
+            "progress_end_m": 80.0,
+            "count": 101,
+            "signed_median_m": -0.26361969299925664,
+            "abs_median_m": 0.26361969299925664,
+            "abs_p95_m": 0.28675473433122917,
+            "abs_max_m": 0.2920465891925288
+          },
+          {
+            "progress_start_m": 80.0,
+            "progress_end_m": 85.0,
+            "count": 100,
+            "signed_median_m": -0.2691653675908179,
+            "abs_median_m": 0.2691653675908179,
+            "abs_p95_m": 0.288092441172514,
+            "abs_max_m": 0.2915140645825836
+          },
+          {
+            "progress_start_m": 85.0,
+            "progress_end_m": 90.0,
+            "count": 92,
+            "signed_median_m": -0.25566427639277706,
+            "abs_median_m": 0.255664276392777,
+            "abs_p95_m": 0.27229646053066775,
+            "abs_max_m": 0.28013887671953586
+          },
+          {
+            "progress_start_m": 90.0,
+            "progress_end_m": 95.0,
+            "count": 92,
+            "signed_median_m": -0.2483814845348259,
+            "abs_median_m": 0.2483814845348259,
+            "abs_p95_m": 0.2669913978914711,
+            "abs_max_m": 0.275798464099539
+          },
+          {
+            "progress_start_m": 95.0,
+            "progress_end_m": 100.0,
+            "count": 93,
+            "signed_median_m": -0.26617750551185165,
+            "abs_median_m": 0.26617750551185165,
+            "abs_p95_m": 0.286110306398282,
+            "abs_max_m": 0.2952611816972759
+          },
+          {
+            "progress_start_m": 100.0,
+            "progress_end_m": 105.0,
+            "count": 95,
+            "signed_median_m": -0.2613559841562123,
+            "abs_median_m": 0.26135598415621236,
+            "abs_p95_m": 0.27514273863982325,
+            "abs_max_m": 0.28501184208765035
+          },
+          {
+            "progress_start_m": 105.0,
+            "progress_end_m": 110.0,
+            "count": 98,
+            "signed_median_m": -0.25517046539913857,
+            "abs_median_m": 0.25517046539913857,
+            "abs_p95_m": 0.26855763257417126,
+            "abs_max_m": 0.27726348533291784
+          },
+          {
+            "progress_start_m": 110.0,
+            "progress_end_m": 115.0,
+            "count": 103,
+            "signed_median_m": -0.25552315326281855,
+            "abs_median_m": 0.25552315326281855,
+            "abs_p95_m": 0.28019806175184625,
+            "abs_max_m": 0.2919691906031395
+          },
+          {
+            "progress_start_m": 115.0,
+            "progress_end_m": 120.0,
+            "count": 101,
+            "signed_median_m": -0.24116908219772204,
+            "abs_median_m": 0.24116908219772207,
+            "abs_p95_m": 0.26908022358935435,
+            "abs_max_m": 0.2737165009696222
+          },
+          {
+            "progress_start_m": 120.0,
+            "progress_end_m": 125.0,
+            "count": 100,
+            "signed_median_m": -0.2634571721664095,
+            "abs_median_m": 0.2634571721664095,
+            "abs_p95_m": 0.28048915498520316,
+            "abs_max_m": 0.29128805319074985
+          },
+          {
+            "progress_start_m": 125.0,
+            "progress_end_m": 130.0,
+            "count": 101,
+            "signed_median_m": -0.2579595162794499,
+            "abs_median_m": 0.2579595162794499,
+            "abs_p95_m": 0.28044652074902143,
+            "abs_max_m": 0.29590498400759707
+          },
+          {
+            "progress_start_m": 130.0,
+            "progress_end_m": 135.0,
+            "count": 102,
+            "signed_median_m": -0.26840584457612604,
+            "abs_median_m": 0.26840584457612604,
+            "abs_p95_m": 0.2841911251337446,
+            "abs_max_m": 0.2896828730085966
+          },
+          {
+            "progress_start_m": 135.0,
+            "progress_end_m": 140.0,
+            "count": 101,
+            "signed_median_m": -0.2798314215826745,
+            "abs_median_m": 0.27983142158267443,
+            "abs_p95_m": 0.3012432114147097,
+            "abs_max_m": 0.3095664829827489
+          },
+          {
+            "progress_start_m": 140.0,
+            "progress_end_m": 145.0,
+            "count": 101,
+            "signed_median_m": -0.29301992887775885,
+            "abs_median_m": 0.29301992887775885,
+            "abs_p95_m": 0.31761947049875655,
+            "abs_max_m": 0.32457715229050726
+          },
+          {
+            "progress_start_m": 145.0,
+            "progress_end_m": 150.0,
+            "count": 109,
+            "signed_median_m": -0.1808455536097337,
+            "abs_median_m": 0.18084555360973367,
+            "abs_p95_m": 0.2595324422151135,
+            "abs_max_m": 0.2635596811509834
+          },
+          {
+            "progress_start_m": 150.0,
+            "progress_end_m": 155.0,
+            "count": 110,
+            "signed_median_m": -0.018772765823389582,
+            "abs_median_m": 0.022510147183379983,
+            "abs_p95_m": 0.10057445983296333,
+            "abs_max_m": 0.11221712436235382
+          },
+          {
+            "progress_start_m": 155.0,
+            "progress_end_m": 160.0,
+            "count": 202,
+            "signed_median_m": -0.055644607823378565,
+            "abs_median_m": 0.057994824608188555,
+            "abs_p95_m": 0.10876098814482156,
+            "abs_max_m": 0.11965758123239717
+          }
+        ],
+        "route_sections": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 55.0,
+            "count": 1177,
+            "signed_m": {
+              "count": 1177,
+              "p5": -0.01911068524036761,
+              "p50": 0.0216460520701135,
+              "p95": 0.06722345749038051
+            },
+            "absolute_m": {
+              "count": 1177,
+              "p50": 0.023612327659969942,
+              "p95": 0.0672234574903805,
+              "p100": 0.10223790461803005
+            },
+            "target_distance_m": {
+              "count": 1177,
+              "p50": 0.8725668809549707,
+              "p95": 1.0774949921958863,
+              "p100": 1.2484064600589992
+            },
+            "selected_alpha_rad": {
+              "count": 1177,
+              "p5": -0.06722941542149474,
+              "p50": -0.011340694938524187,
+              "p95": 0.04490172283657179
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 1177,
+              "p50": 1.5273400102712844,
+              "p95": 4.809503559617371,
+              "p100": 9.090464043084602
+            }
+          },
+          {
+            "progress_start_m": 60.0,
+            "progress_end_m": 140.0,
+            "count": 1579,
+            "signed_m": {
+              "count": 1579,
+              "p5": -0.285348013363414,
+              "p50": -0.2583436126216381,
+              "p95": -0.2314768110799879
+            },
+            "absolute_m": {
+              "count": 1579,
+              "p50": 0.258343612621638,
+              "p95": 0.2853480133634139,
+              "p100": 0.3095664829827489
+            },
+            "target_distance_m": {
+              "count": 1579,
+              "p50": 0.9348471148931697,
+              "p95": 1.1556184231639086,
+              "p100": 1.2589516470062032
+            },
+            "selected_alpha_rad": {
+              "count": 1579,
+              "p5": -0.10241707516394538,
+              "p50": -0.010337794607491402,
+              "p95": 0.07485160635137893
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 1579,
+              "p50": 15.900621317570256,
+              "p95": 20.871624485251168,
+              "p100": 24.326002041097006
+            }
+          },
+          {
+            "progress_start_m": 145.0,
+            "progress_end_m": 159.0,
+            "count": 421,
+            "signed_m": {
+              "count": 421,
+              "p5": -0.24632755344462096,
+              "p50": -0.07255368677443347,
+              "p95": 0.029048972110161202
+            },
+            "absolute_m": {
+              "count": 421,
+              "p50": 0.07255368677443347,
+              "p95": 0.2463275534446209,
+              "p100": 0.2635596811509834
+            },
+            "target_distance_m": {
+              "count": 421,
+              "p50": 0.8456857277442011,
+              "p95": 1.0905947380977705,
+              "p100": 1.190851105514515
+            },
+            "selected_alpha_rad": {
+              "count": 421,
+              "p5": -2.818062050661649,
+              "p50": -0.10883087713547379,
+              "p95": 0.01046326928332375
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 421,
+              "p50": 4.747393802307412,
+              "p95": 15.933714503189712,
+              "p100": 22.195915766594084
+            }
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "direction": 1,
+        "control_cycle_count": 752,
+        "unique_odom_count": 359,
+        "start_epoch": 1784962086.2045207,
+        "end_epoch": 1784962123.7530708,
+        "duration_s": 37.54855012893677,
+        "route_progress_m": {
+          "start": 0.2075615513060709,
+          "end": 12.081432818627253,
+          "min": 0.08884284032140825,
+          "max": 12.081432818627253
+        },
+        "lio_xy_cross_track_m": {
+          "absolute": {
+            "count": 359,
+            "p50": 0.05999676367567392,
+            "p95": 0.2726824211857146,
+            "p100": 0.2840143346099662
+          },
+          "signed": {
+            "count": 359,
+            "p5": -0.2726824211857146,
+            "p50": 0.03921229686618603,
+            "p95": 0.08774449169127907
+          }
+        },
+        "floor_plane_cross_track_m": {
+          "absolute": {
+            "count": 359,
+            "p50": 0.05921177925676073,
+            "p95": 0.2739628367596829,
+            "p100": 0.28568504233180636
+          },
+          "signed": {
+            "count": 359,
+            "p5": -0.27396283675968286,
+            "p50": 0.03888141769940696,
+            "p95": 0.08701793355063536
+          },
+          "interpretation": "Distance after rotating the fitted flat-route plane level; still LIO-relative, not an external ground-truth measurement."
+        },
+        "odom_source_stamp_age_ms": {
+          "count": 359,
+          "p50": 300.37879943847656,
+          "p95": 355.72493076324463,
+          "p100": 395.0788974761963
+        },
+        "odom_receive_to_control_ms": {
+          "count": 359,
+          "p50": 23.079681000126584,
+          "p95": 46.482513299633865,
+          "p100": 49.058112999773584
+        },
+        "command_vx_mps": {
+          "count": 359,
+          "p5": 0.0,
+          "p50": 0.5,
+          "p95": 0.5,
+          "p100": 0.5
+        },
+        "command_abs_yaw_rate_rps": {
+          "count": 359,
+          "p50": 0.05353247384235059,
+          "p95": 0.45,
+          "p100": 0.45
+        },
+        "plane_fit": {
+          "z_equals_a_x_plus_b_y_plus_c": [
+            0.42676959540086995,
+            0.02933471088927897,
+            -0.20249274333761913
+          ],
+          "tilt_deg": 23.16010534488167,
+          "rms_residual_m": 0.008522522302563987,
+          "abs_residual_m": {
+            "count": 359,
+            "p50": 0.005158733649499148,
+            "p95": 0.017013511805776496,
+            "p100": 0.03578354046223087
+          }
+        },
+        "progress_bins_5m": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 5.0,
+            "count": 211,
+            "signed_median_m": -0.09891079856385629,
+            "abs_median_m": 0.10671886673495085,
+            "abs_p95_m": 0.27919312140982977,
+            "abs_max_m": 0.2840143346099662
+          },
+          {
+            "progress_start_m": 5.0,
+            "progress_end_m": 10.0,
+            "count": 102,
+            "signed_median_m": 0.0527325603987467,
+            "abs_median_m": 0.05273256039874669,
+            "abs_p95_m": 0.07428344425320318,
+            "abs_max_m": 0.08771223733850009
+          },
+          {
+            "progress_start_m": 10.0,
+            "progress_end_m": 15.0,
+            "count": 46,
+            "signed_median_m": 0.04931619152961364,
+            "abs_median_m": 0.04931619152961363,
+            "abs_p95_m": 0.06456408754756246,
+            "abs_max_m": 0.0665924029141088
+          }
+        ],
+        "route_sections": [
+          {
+            "progress_start_m": 0.0,
+            "progress_end_m": 55.0,
+            "count": 359,
+            "signed_m": {
+              "count": 359,
+              "p5": -0.2726824211857146,
+              "p50": 0.03921229686618603,
+              "p95": 0.08774449169127907
+            },
+            "absolute_m": {
+              "count": 359,
+              "p50": 0.05999676367567392,
+              "p95": 0.2726824211857146,
+              "p100": 0.2840143346099662
+            },
+            "target_distance_m": {
+              "count": 359,
+              "p50": 0.8577857937437475,
+              "p95": 1.0725108660176088,
+              "p100": 1.1304073048656664
+            },
+            "selected_alpha_rad": {
+              "count": 359,
+              "p5": -0.09911990452130796,
+              "p50": 0.005499131568560689,
+              "p95": 2.674502664766056
+            },
+            "cross_track_over_target_as_angle_deg": {
+              "count": 359,
+              "p50": 4.1475684390705,
+              "p95": 16.211874745553022,
+              "p100": 21.18356992546249
+            }
+          }
+        ]
+      }
+    ],
+    "controller_reported_all_cycles": {
+      "cycle_count": 14772,
+      "absolute_cross_track_m": {
+        "count": 14772,
+        "p50": 0.1604465238779838,
+        "p95": 0.27579320336655705,
+        "p100": 0.32839774871851435
+      },
+      "signed_cross_track_m": {
+        "count": 14772,
+        "p5": -0.27579320336655705,
+        "p50": -0.1604465238779838,
+        "p95": 0.06790629945591994
+      },
+      "odom_source_stamp_age_ms": {
+        "count": 14772,
+        "p50": 318.3872699737549,
+        "p95": 392.4312472343445,
+        "p100": 633.6407661437988
+      },
+      "odom_receive_to_control_ms": {
+        "count": 14772,
+        "p50": 51.53357749986753,
+        "p95": 98.79130730000719,
+        "p100": 311.4362890000848
+      }
+    },
+    "latency_error_correlations": {
+      "abs_cross_track_vs_source_stamp_age": 0.0013391045222609216,
+      "abs_cross_track_vs_receive_to_control": 0.004883697204609543
+    },
+    "top_cross_track_events": [
+      {
+        "epoch": 1784961950.5533206,
+        "phase_direction": -1,
+        "route_progress_m": 59.47646073886641,
+        "cross_track_m": 0.32839774871851435,
+        "signed_cross_track_m": -0.3283977487185144,
+        "cmd_vx_mps": 0.25,
+        "cmd_yaw_rate_rps": 0.45,
+        "selected_alpha_rad": 0.7258604357173877,
+        "odom_source_stamp_age_ms": 336.2705707550049,
+        "odom_receive_to_control_ms": 23.15920500041102
+      },
+      {
+        "epoch": 1784961776.5533192,
+        "phase_direction": -1,
+        "route_progress_m": 142.91363072758077,
+        "cross_track_m": 0.32457715229050726,
+        "signed_cross_track_m": -0.3245771522905072,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.044930343133800156,
+        "selected_alpha_rad": -0.04992260348200017,
+        "odom_source_stamp_age_ms": 315.2284622192383,
+        "odom_receive_to_control_ms": 26.91706299992802
+      },
+      {
+        "epoch": 1784961774.6033604,
+        "phase_direction": -1,
+        "route_progress_m": 143.78511651208385,
+        "cross_track_m": 0.31761947049875655,
+        "signed_cross_track_m": -0.3176194704987565,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.11026410258719928,
+        "selected_alpha_rad": -0.12251566954133253,
+        "odom_source_stamp_age_ms": 253.10969352722168,
+        "odom_receive_to_control_ms": 20.216326000081608
+      },
+      {
+        "epoch": 1784961952.20338,
+        "phase_direction": -1,
+        "route_progress_m": 58.91567783244693,
+        "cross_track_m": 0.30999221487458495,
+        "signed_cross_track_m": -0.30999221487458495,
+        "cmd_vx_mps": 0.25,
+        "cmd_yaw_rate_rps": 0.45,
+        "selected_alpha_rad": 0.9583886151556795,
+        "odom_source_stamp_age_ms": 297.76930809020996,
+        "odom_receive_to_control_ms": 48.058004999802506
+      },
+      {
+        "epoch": 1784961785.40332,
+        "phase_direction": -1,
+        "route_progress_m": 138.64879540283493,
+        "cross_track_m": 0.3095664829827489,
+        "signed_cross_track_m": -0.30956648298274886,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.04986354677743526,
+        "selected_alpha_rad": -0.05540394086381695,
+        "odom_source_stamp_age_ms": 322.1893310546875,
+        "odom_receive_to_control_ms": 85.23154100021202
+      },
+      {
+        "epoch": 1784961778.8033376,
+        "phase_direction": -1,
+        "route_progress_m": 141.78175961206776,
+        "cross_track_m": 0.30288144134358586,
+        "signed_cross_track_m": -0.3028814413435859,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": 0.010505114199299892,
+        "selected_alpha_rad": 0.011672349110333213,
+        "odom_source_stamp_age_ms": 279.9668312072754,
+        "odom_receive_to_control_ms": 27.042187999541056
+      },
+      {
+        "epoch": 1784961777.703378,
+        "phase_direction": -1,
+        "route_progress_m": 142.32233157361205,
+        "cross_track_m": 0.3023248270994048,
+        "signed_cross_track_m": -0.3023248270994048,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.08563735892558832,
+        "selected_alpha_rad": -0.09515262102843147,
+        "odom_source_stamp_age_ms": 273.61059188842773,
+        "odom_receive_to_control_ms": 43.765243999587256
+      },
+      {
+        "epoch": 1784961780.7533576,
+        "phase_direction": -1,
+        "route_progress_m": 140.91293135034311,
+        "cross_track_m": 0.30102587964434896,
+        "signed_cross_track_m": -0.30102587964434885,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.10570011816102858,
+        "selected_alpha_rad": -0.1174445757344762,
+        "odom_source_stamp_age_ms": 342.2505855560303,
+        "odom_receive_to_control_ms": 39.539686999887635
+      },
+      {
+        "epoch": 1784961788.2033823,
+        "phase_direction": -1,
+        "route_progress_m": 137.2634354152232,
+        "cross_track_m": 0.2986329335443362,
+        "signed_cross_track_m": -0.2986329335443362,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.06710567236409437,
+        "selected_alpha_rad": -0.07456185818232708,
+        "odom_source_stamp_age_ms": 240.81158638000488,
+        "odom_receive_to_control_ms": 28.877787000055832
+      },
+      {
+        "epoch": 1784961782.603396,
+        "phase_direction": -1,
+        "route_progress_m": 140.00022489204525,
+        "cross_track_m": 0.29790982970941415,
+        "signed_cross_track_m": -0.29790982970941415,
+        "cmd_vx_mps": 0.5,
+        "cmd_yaw_rate_rps": -0.12551862702603586,
+        "selected_alpha_rad": -0.13946514114003983,
+        "odom_source_stamp_age_ms": 304.49366569519043,
+        "odom_receive_to_control_ms": 45.102645000042685
+      }
+    ],
+    "strongest_route_turns": [
+      {
+        "waypoint_index": 135,
+        "route_progress_m": 59.228788531247815,
+        "turn_deg": -69.38938870847808
+      },
+      {
+        "waypoint_index": 136,
+        "route_progress_m": 59.648516855650634,
+        "turn_deg": -26.717727089581913
+      },
+      {
+        "waypoint_index": 326,
+        "route_progress_m": 145.32546820802867,
+        "turn_deg": 23.740792428926298
+      },
+      {
+        "waypoint_index": 341,
+        "route_progress_m": 151.80882212908858,
+        "turn_deg": 15.071804786127917
+      },
+      {
+        "waypoint_index": 332,
+        "route_progress_m": 147.90399583950915,
+        "turn_deg": 14.302383608275951
+      },
+      {
+        "waypoint_index": 336,
+        "route_progress_m": 149.71964989830877,
+        "turn_deg": 13.974597558250174
+      },
+      {
+        "waypoint_index": 322,
+        "route_progress_m": 143.47286769965964,
+        "turn_deg": 9.808386843658495
+      },
+      {
+        "waypoint_index": 349,
+        "route_progress_m": 155.350491360743,
+        "turn_deg": 9.782789774095573
+      },
+      {
+        "waypoint_index": 9,
+        "route_progress_m": 3.84873224450135,
+        "turn_deg": -9.676719994257436
+      },
+      {
+        "waypoint_index": 347,
+        "route_progress_m": 154.47365616747604,
+        "turn_deg": 9.130714286155234
+      }
+    ],
+    "post_corner_geometric_consistency_check": {
+      "section_progress_m": [
+        60.0,
+        140.0
+      ],
+      "recorded_track_heading_minus_lio_yaw_median_abs_deg": 14.007915620227877,
+      "controller_target_distance_median_m": 0.9226432304426244,
+      "cross_track_predicted_by_target_distance_times_sin_bias_m": 0.2233312773564597,
+      "cross_track_observed_forward_median_m": 0.19291807557302237,
+      "absolute_prediction_difference_m": 0.030413201783437316,
+      "interpretation": "The simple lookahead controller settles where its target bearing agrees with the biased LIO Euler yaw.  Its measured lateral offset is therefore expected to be approximately target_distance*sin(heading_bias)."
+    }
+  },
+  "tilted_lio_plane": {
+    "recording_fit": {
+      "point_count": 1997,
+      "z_equals_a_x_plus_b_y_plus_c": [
+        0.4232017180158394,
+        0.03644694622765081,
+        -0.13936776099533948
+      ],
+      "tilt_deg": 23.014244679736137,
+      "rms_residual_m": 0.06420756660873475,
+      "abs_residual_m": {
+        "count": 1997,
+        "p50": 0.04571199663955383,
+        "p95": 0.12634987601964978,
+        "p100": 0.22108829744838232
+      }
+    },
+    "plane_normal_lio_coordinates": [
+      -0.3895181126254445,
+      -0.03354604932162458,
+      0.9204076827752051
+    ],
+    "interpretation": "On the user's physically flat route, recording and every patrol pass lie on the same ~23-degree plane in the LIO world with centimetre-scale residuals. This proves a fixed tilted LIO/world plane; it does not by itself prove drift or a loose sensor."
+  },
+  "rigid_attitude_consistency": {
+    "paired_sample_count": 7076,
+    "pair_receive_time_gap_s": {
+      "count": 7076,
+      "p50": 0.017894387245178223,
+      "p95": 0.04321199655532837,
+      "p100": 0.07972431182861328
+    },
+    "method": "Compare relative rotation magnitudes over fixed intervals. This is invariant to constant world-frame and rigid mount rotations.",
+    "intervals": {
+      "1s": {
+        "pair_count": 7050,
+        "lidar_rotation_deg": {
+          "count": 7050,
+          "p50": 1.9124032602040644,
+          "p95": 7.673191922093786,
+          "p100": 25.3718918123363
+        },
+        "body_rotation_deg": {
+          "count": 7050,
+          "p50": 1.8059644665668557,
+          "p95": 7.907867748913584,
+          "p100": 25.607777600571534
+        },
+        "absolute_rotation_difference_deg": {
+          "count": 7050,
+          "p50": 0.6661436531326637,
+          "p95": 1.8836459208568817,
+          "p100": 5.6182141045940455
+        }
+      },
+      "5s": {
+        "pair_count": 7009,
+        "lidar_rotation_deg": {
+          "count": 7009,
+          "p50": 2.753507992649773,
+          "p95": 37.93370980932363,
+          "p100": 91.3160247313418
+        },
+        "body_rotation_deg": {
+          "count": 7009,
+          "p50": 2.6637934422198652,
+          "p95": 37.62486791052396,
+          "p100": 91.78596264451281
+        },
+        "absolute_rotation_difference_deg": {
+          "count": 7009,
+          "p50": 0.6048325203886424,
+          "p95": 2.1721966780252306,
+          "p100": 7.142004134499075
+        }
+      },
+      "10s": {
+        "pair_count": 6965,
+        "lidar_rotation_deg": {
+          "count": 6965,
+          "p50": 4.131151123404364,
+          "p95": 77.51994907062877,
+          "p100": 155.45136523915895
+        },
+        "body_rotation_deg": {
+          "count": 6965,
+          "p50": 4.019639345184847,
+          "p95": 77.7043766097878,
+          "p100": 155.79678584772546
+        },
+        "absolute_rotation_difference_deg": {
+          "count": 6965,
+          "p50": 0.6601907392846558,
+          "p95": 2.4992159246111236,
+          "p100": 6.222590980422943
+        }
+      }
+    }
+  },
+  "health_context": {
+    "battery_soc_percent": {
+      "start": 43,
+      "end": 36,
+      "min": 36
+    },
+    "motor_temperature_c": {
+      "count": 8628,
+      "p50": 47.0,
+      "p95": 54.0,
+      "p100": 56.0
+    },
+    "fastlio_recording_health_events": {
+      "available": true,
+      "health_failed_events": 0,
+      "health_failed_examples": [],
+      "permanent_lock_events": 0,
+      "permanent_lock_examples": [],
+      "recovery_events": 0,
+      "recovery_examples": []
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-07-25T16:48:51+0800",
+  "current_anchor": {
+    "qw": 0.9868415575576862,
+    "qx": -0.06826516614239625,
+    "qy": 0.07963254291187824,
+    "qz": 0.12305391289136175,
+    "snapshot_mtime_ns": 1784969331206533008,
+    "stamp": 1784969331.0092928,
+    "x": 6.7088913153646335,
+    "y": -6.4365893008359425,
+    "yaw": 0.2378252932569665,
+    "z": 2.614264451225633
+  },
+  "localization_session": {
+    "boot_id": "b39f497b-87e9-47e9-bceb-35aba4d5f612",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 17369,
+    "start_ticks": 62692
+  },
+  "mode": "manual_route",
+  "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+  "runtime_route": "/home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-11/route_runtime.csv",
+  "schema": "go2.manual_anchor.v1",
+  "source_route": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf2.csv",
+  "stability": {
+    "duration_seconds": 0.8507895190000454,
+    "max_local_gap_seconds": 0.12201399500008847,
+    "samples": 9,
+    "translation_span_m": 0.016219982827536224,
+    "yaw_span_rad": 0.00111222889915194
+  },
+  "transform": {
+    "current_start": {
+      "x": 6.7088913153646335,
+      "y": -6.4365893008359425,
+      "yaw": 0.2378252932569665
+    },
+    "delta_yaw": 0.02405629325696651,
+    "source_start": {
+      "x": 6.381321,
+      "y": -6.546055,
+      "yaw": 0.213769
+    }
+  },
+  "waypoint_count": 358
+}

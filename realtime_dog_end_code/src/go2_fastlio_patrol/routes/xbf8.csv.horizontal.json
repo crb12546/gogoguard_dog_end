@@ -1,0 +1,86 @@
+{
+  "schema": "go2.horizontal_route.v1",
+  "method": "exact_3d_waypoint_reconstruction_plus_flat_floor_rigid_rotation",
+  "source_route": "/Users/constantine/Project/Go2/analysis/xunjian_20260725_formal_xbf8/routes/xbf8.csv",
+  "source_route_sha256": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59",
+  "source_telemetry": "/Users/constantine/Project/Go2/analysis/xunjian_20260725_formal_xbf8/recording/experiment_telemetry.jsonl",
+  "horizontal_route": "/Users/constantine/Project/Go2/analysis/xunjian_20260725_formal_xbf8/routes/xbf8.csv.horizontal.csv",
+  "horizontal_route_sha256": "6778d8c4086677f47de0db6d4e6ecf448e21e9f76d01980565b56789fbd04d2f",
+  "route_points": 358,
+  "pairing_proof": {
+    "count": 358,
+    "maximum_position_error_m": 6.863251187189498e-07,
+    "maximum_yaw_error_deg": 2.8464189795891735e-05
+  },
+  "recording_plane": {
+    "model": "z=a*x+b*y+c",
+    "a": 0.42327345737054245,
+    "b": 0.035053255294880646,
+    "c": -0.1503979511573872,
+    "normal_xyz": [
+      -0.3895905653383992,
+      -0.032263817419878216,
+      0.9204228579760517
+    ],
+    "tilt_deg": 23.01202062929511,
+    "r_squared": 0.999952844371929,
+    "residual_p95_m": 0.1909887488663718,
+    "residual_max_m": 0.2447365110576989,
+    "samples": 2700,
+    "q_ground_from_recording_map_xyzw": [
+      -0.016462747616023368,
+      0.1987902134233605,
+      0.0,
+      0.9799037855769442
+    ]
+  },
+  "mount_and_gravity_calibration": {
+    "sample_count": 85,
+    "static_window_epoch": [
+      1784960659.242379,
+      1784960668.242379
+    ],
+    "maximum_pairing_gap_s": 0.04572439193725586,
+    "lidar_gravity_measured_unit_xyz": [
+      -0.5446963933183084,
+      -0.014413470100674392,
+      0.8385094459728428
+    ],
+    "body_gravity_measured_unit_xyz": [
+      -0.01973256989231476,
+      -0.015592643255056332,
+      0.9996836975572652
+    ],
+    "plane_derived_sensor_up_unit_xyz": [
+      -0.5306645931479721,
+      -0.022852766247525056,
+      0.8472737696010265
+    ],
+    "q_lidar_gravity_correction_xyzw": [
+      0.0034752024493738165,
+      0.008270202812693684,
+      0.002399654018038707,
+      0.9999568832574566
+    ],
+    "q_sensor_from_body_xyzw": [
+      0.004998063678613782,
+      -0.26653668327509594,
+      -0.004058670543237106,
+      0.9638032698749248
+    ],
+    "post_correction_lidar_error_deg": 0.0,
+    "post_calibration_body_error_deg": 0.0,
+    "measured_body_lidar_gravity_angle_deg": 31.873367502139015
+  },
+  "horizontal_route_z_check_m": {
+    "minimum": -0.23133322265223022,
+    "maximum": 0.07315785268609565,
+    "range": 0.30449107533832587,
+    "p95_absolute": 0.20836183155696822
+  },
+  "runtime_contract": {
+    "position": "p_ground=q_ground_from_map*p_fastlio_map",
+    "orientation": "q_ground_from_body=q_ground_from_map*q_fastlio_map_from_sensor*q_sensor_from_body",
+    "map_leveling": "freeze one startup rotation after paired lidar/body gravity agreement; never substitute a scalar body yaw"
+  }
+}

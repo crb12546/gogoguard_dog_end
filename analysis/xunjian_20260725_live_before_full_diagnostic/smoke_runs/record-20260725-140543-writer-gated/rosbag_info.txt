@@ -1,0 +1,17 @@
+
+Files:             rosbag_0.db3
+Bag size:          3.8 MiB
+Storage id:        sqlite3
+Duration:          31.156s
+Start:             Jul 25 2026 14:05:57.490 (1784959557.490)
+End:               Jul 25 2026 14:06:28.647 (1784959588.647)
+Messages:          8001
+Topic information: Topic: /wirelesscontroller | Type: unitree_go/msg/WirelessController | Count: 0 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 260 | Serialization Format: cdr
+                   Topic: /lf/wirelesscontroller | Type: unitree_go/msg/WirelessController | Count: 0 | Serialization Format: cdr
+                   Topic: /wirelesscontroller_unprocessed | Type: unitree_go/msg/WirelessController | Count: 0 | Serialization Format: cdr
+                   Topic: /lf/sportmodestate | Type: unitree_go/msg/SportModeState | Count: 624 | Serialization Format: cdr
+                   Topic: /livox/imu | Type: sensor_msgs/msg/Imu | Count: 6233 | Serialization Format: cdr
+                   Topic: /lf/lowstate | Type: unitree_go/msg/LowState | Count: 624 | Serialization Format: cdr
+                   Topic: /Odometry | Type: nav_msgs/msg/Odometry | Count: 260 | Serialization Format: cdr
+

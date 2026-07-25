@@ -1,0 +1,58 @@
+map_server:
+  ros__parameters:
+    use_sim_time: false
+    yaml_filename: "/home/unitree/go2_fastlio_ws/maps/map_5/map_5.yaml"
+
+amcl:
+  ros__parameters:
+    use_sim_time: false
+
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    global_frame_id: "map"
+    scan_topic: "/scan_level"
+
+    min_particles: 500
+    max_particles: 2000
+    kld_err: 0.05
+    kld_z: 0.99
+
+    update_min_d: 0.05
+    update_min_a: 0.05
+    resample_interval: 1
+
+    transform_tolerance: 0.5
+    tf_broadcast: true
+
+    alpha1: 0.2
+    alpha2: 0.2
+    alpha3: 0.2
+    alpha4: 0.2
+    alpha5: 0.2
+
+    laser_min_range: 0.3
+    laser_max_range: 20.0
+    max_beams: 120
+
+    laser_model_type: "likelihood_field"
+    z_hit: 0.8
+    z_short: 0.05
+    z_max: 0.05
+    z_rand: 0.1
+    sigma_hit: 0.2
+    lambda_short: 0.1
+    laser_likelihood_max_dist: 2.0
+
+    do_beamskip: true
+    beam_skip_distance: 0.5
+    beam_skip_threshold: 0.3
+    beam_skip_error_threshold: 0.9
+
+    set_initial_pose: false
+    always_reset_initial_pose: false
+
+lifecycle_manager:
+  ros__parameters:
+    use_sim_time: false
+    autostart: true
+    node_names: ["map_server", "amcl"]

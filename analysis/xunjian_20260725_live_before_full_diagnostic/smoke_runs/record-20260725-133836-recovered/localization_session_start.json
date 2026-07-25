@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-07-25T13:38:37+0800",
+  "current_anchor": {
+    "qw": 0.9999842062430758,
+    "qx": 4.204472795309392e-05,
+    "qy": 0.004258147920642332,
+    "qz": -0.0036679248808236657,
+    "snapshot_mtime_ns": 1784957917731798556,
+    "stamp": 1784957917.6072457,
+    "x": -0.021828779085097862,
+    "y": 0.010033978290328417,
+    "yaw": -0.007335707660579526,
+    "z": -0.04907210745228279
+  },
+  "localization_session": {
+    "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 60754,
+    "start_ticks": 170308
+  },
+  "mode": "session_only",
+  "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+  "schema": "go2.manual_anchor.v1",
+  "stability": {
+    "duration_seconds": 0.9528011970000989,
+    "max_local_gap_seconds": 0.10699457700002313,
+    "samples": 10,
+    "translation_span_m": 0.004121804089971589,
+    "yaw_span_rad": 0.003757881094040775
+  }
+}

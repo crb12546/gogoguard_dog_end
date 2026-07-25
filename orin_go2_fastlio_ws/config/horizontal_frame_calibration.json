@@ -1,0 +1,53 @@
+{
+  "schema": "go2.horizontal_frame_calibration.v1",
+  "description": "Fixed MID-360-to-Go2 mount and gravity calibration used to derive a fresh gravity-level frame in each FAST-LIO session.",
+  "hardware_contract": {
+    "external_lidar": "Livox MID-360",
+    "mount": "fixed angled mount; recalibration is required if the lidar mounting pose changes",
+    "runtime_policy": "pair FAST-LIO orientation, external lidar IMU gravity, and Unitree body IMU gravity while stationary; reject disagreement; then freeze one rigid map-to-ground rotation"
+  },
+  "source_evidence": {
+    "recording": "xunjian_20260725_xbf9_recording",
+    "route_sha256": "7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b",
+    "telemetry_sha256": "38335d84f1250058dc3e97688d6e6704beaa28825c319b981e867b98e5d4eab2",
+    "horizontal_metadata_sha256": "f7c485e7ffffcc5d950478f08767910e69efe698795fd88998b8b86f7d0ad71b",
+    "quiet_calibration_samples": 88,
+    "maximum_sensor_pairing_gap_s": 0.04782271385192871,
+    "post_correction_lidar_error_deg": 0.0,
+    "post_calibration_body_error_deg": 0.0
+  },
+  "mount_and_gravity_calibration": {
+    "q_lidar_gravity_correction_xyzw": [
+      0.01929394126454905,
+      -0.008884712727401827,
+      0.012413009264798033,
+      0.9996973156467029
+    ],
+    "q_sensor_from_body_xyzw": [
+      0.02283990738329047,
+      -0.283910418462471,
+      0.004291148086900455,
+      0.9585691414641322
+    ]
+  },
+  "independent_runtime_validation": [
+    {
+      "run": "xunjian_20260725_horizontal_first_12",
+      "accepted_samples": 15,
+      "map_up_spread_deg": 0.8281231102992541,
+      "lidar_body_source_disagreement_deg": 1.0021434246352874
+    },
+    {
+      "run": "xunjian_20260725_xbf9_patrol_13",
+      "accepted_samples": 15,
+      "map_up_spread_deg": 0.7479037373541156,
+      "lidar_body_source_disagreement_deg": 0.5158191846141815
+    },
+    {
+      "run": "xunjian_20260725_xbf9_patrol_14",
+      "accepted_samples": 15,
+      "map_up_spread_deg": 0.595225568780981,
+      "lidar_body_source_disagreement_deg": 0.7027418133280571
+    }
+  ]
+}

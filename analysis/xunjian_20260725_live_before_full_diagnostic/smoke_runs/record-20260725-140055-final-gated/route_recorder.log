@@ -1,0 +1,7 @@
+1784959285.753503 [0] route_reco: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784959286.393693070] [route_recorder]: route_recorder started
+[INFO] [1784959286.394920096] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784959286.396050767] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_final_gate_smoke_do_not_use.csv
+[INFO] [1784959286.396741419] [route_recorder]: min_distance: 0.4
+[INFO] [1784959288.088870948] [route_recorder]: saved point 0: x=-0.016, y=0.001, yaw=-0.005
+[INFO] [1784959304.069995066] [route_recorder]: route_recorder stopped by Ctrl+C

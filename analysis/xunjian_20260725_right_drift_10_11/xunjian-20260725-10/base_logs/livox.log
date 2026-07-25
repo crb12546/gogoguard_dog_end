@@ -1,0 +1,813 @@
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.455 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.860 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.799 frame_age_ms_max=129.418 publish_path_ms_avg=101.913 publish_path_ms_max=102.042 queue_used_after_max=1 skipped=0 skipped_total=141 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=199.313 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.658 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=144.426 frame_age_ms_max=156.373 publish_path_ms_avg=102.050 publish_path_ms_max=102.409 queue_used_after_max=1 skipped=0 skipped_total=141 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.470 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.990 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.296 frame_age_ms_max=186.619 publish_path_ms_avg=104.464 publish_path_ms_max=113.822 queue_used_after_max=2 skipped=1 skipped_total=142 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.831 frame_age_ms_max=134.585 publish_path_ms_avg=102.003 publish_path_ms_max=102.098 queue_used_after_max=1 skipped=0 skipped_total=142 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.277 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.367 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=153.896 frame_age_ms_max=179.658 publish_path_ms_avg=103.862 publish_path_ms_max=112.839 queue_used_after_max=1 skipped=0 skipped_total=142 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.528 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.657 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=111.133 frame_age_ms_max=184.199 publish_path_ms_avg=102.769 publish_path_ms_max=103.929 queue_used_after_max=2 skipped=1 skipped_total=143 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.259 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.142 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=128.953 frame_age_ms_max=140.568 publish_path_ms_avg=101.966 publish_path_ms_max=102.065 queue_used_after_max=1 skipped=0 skipped_total=143 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.549 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.813 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.423 frame_age_ms_max=185.671 publish_path_ms_avg=104.569 publish_path_ms_max=114.490 queue_used_after_max=2 skipped=1 skipped_total=144 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.255 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.522 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=108.976 frame_age_ms_max=121.349 publish_path_ms_avg=102.154 publish_path_ms_max=102.413 queue_used_after_max=1 skipped=0 skipped_total=144 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.532 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.190 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.212 frame_age_ms_max=173.292 publish_path_ms_avg=104.548 publish_path_ms_max=115.349 queue_used_after_max=1 skipped=0 skipped_total=144 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.394 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.650 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=123.397 frame_age_ms_max=189.231 publish_path_ms_avg=104.735 publish_path_ms_max=115.253 queue_used_after_max=2 skipped=1 skipped_total=145 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.336 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.356 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.697 frame_age_ms_max=155.071 publish_path_ms_avg=102.088 publish_path_ms_max=102.321 queue_used_after_max=1 skipped=0 skipped_total=145 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=199.308 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.490 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.235 frame_age_ms_max=194.821 publish_path_ms_avg=105.513 publish_path_ms_max=114.504 queue_used_after_max=2 skipped=1 skipped_total=146 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.501 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.540 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.466 frame_age_ms_max=143.346 publish_path_ms_avg=101.958 publish_path_ms_max=102.125 queue_used_after_max=1 skipped=0 skipped_total=146 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.405 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.693 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=158.454 frame_age_ms_max=170.528 publish_path_ms_avg=102.073 publish_path_ms_max=102.455 queue_used_after_max=1 skipped=0 skipped_total=146 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.381 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.297 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.809 frame_age_ms_max=186.088 publish_path_ms_avg=104.324 publish_path_ms_max=114.893 queue_used_after_max=2 skipped=1 skipped_total=147 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.413 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.596 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.037 frame_age_ms_max=148.974 publish_path_ms_avg=102.164 publish_path_ms_max=102.395 queue_used_after_max=1 skipped=0 skipped_total=147 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.381 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.403 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=166.766 frame_age_ms_max=195.538 publish_path_ms_avg=104.011 publish_path_ms_max=114.505 queue_used_after_max=2 skipped=0 skipped_total=147 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.428 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.062 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.042 frame_age_ms_max=154.195 publish_path_ms_avg=105.155 publish_path_ms_max=114.732 queue_used_after_max=1 skipped=1 skipped_total=148 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.379 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.985 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=168.389 frame_age_ms_max=180.205 publish_path_ms_avg=101.955 publish_path_ms_max=102.103 queue_used_after_max=1 skipped=0 skipped_total=148 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.433 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.221 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.944 frame_age_ms_max=186.028 publish_path_ms_avg=104.173 publish_path_ms_max=111.916 queue_used_after_max=2 skipped=1 skipped_total=149 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.069 frame_age_ms_max=163.183 publish_path_ms_avg=102.767 publish_path_ms_max=106.539 queue_used_after_max=1 skipped=0 skipped_total=149 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.317 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.146 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=158.931 frame_age_ms_max=185.725 publish_path_ms_avg=102.295 publish_path_ms_max=103.508 queue_used_after_max=2 skipped=1 skipped_total=150 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.481 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.810 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.633 frame_age_ms_max=153.571 publish_path_ms_avg=105.387 publish_path_ms_max=114.605 queue_used_after_max=1 skipped=0 skipped_total=150 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.317 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.087 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=168.745 frame_age_ms_max=180.920 publish_path_ms_avg=102.089 publish_path_ms_max=102.293 queue_used_after_max=1 skipped=0 skipped_total=150 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.565 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.017 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.001 frame_age_ms_max=186.620 publish_path_ms_avg=105.663 publish_path_ms_max=114.737 queue_used_after_max=2 skipped=1 skipped_total=151 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=200.231 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.856 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=166.817 frame_age_ms_max=179.220 publish_path_ms_avg=102.811 publish_path_ms_max=105.681 queue_used_after_max=1 skipped=0 skipped_total=151 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.538 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.843 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=115.175 frame_age_ms_max=184.535 publish_path_ms_avg=102.332 publish_path_ms_max=103.743 queue_used_after_max=2 skipped=1 skipped_total=152 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.304 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.900 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.772 frame_age_ms_max=160.502 publish_path_ms_avg=104.440 publish_path_ms_max=107.281 queue_used_after_max=1 skipped=0 skipped_total=152 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.453 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.559 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.286 frame_age_ms_max=189.341 publish_path_ms_avg=104.150 publish_path_ms_max=104.381 queue_used_after_max=2 skipped=1 skipped_total=153 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=199.480 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.345 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.675 frame_age_ms_max=157.988 publish_path_ms_avg=104.241 publish_path_ms_max=104.859 queue_used_after_max=1 skipped=0 skipped_total=153 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.312 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.769 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.668 frame_age_ms_max=187.583 publish_path_ms_avg=106.996 publish_path_ms_max=117.348 queue_used_after_max=2 skipped=1 skipped_total=154 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.264 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.370 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=152.849 frame_age_ms_max=169.761 publish_path_ms_avg=102.824 publish_path_ms_max=103.975 queue_used_after_max=1 skipped=0 skipped_total=154 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.569 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.385 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.169 frame_age_ms_max=187.559 publish_path_ms_avg=102.739 publish_path_ms_max=104.015 queue_used_after_max=2 skipped=1 skipped_total=155 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.252 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.265 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.351 frame_age_ms_max=134.603 publish_path_ms_avg=102.388 publish_path_ms_max=102.742 queue_used_after_max=1 skipped=0 skipped_total=155 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.569 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.587 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=155.866 frame_age_ms_max=177.354 publish_path_ms_avg=103.628 publish_path_ms_max=107.120 queue_used_after_max=1 skipped=0 skipped_total=155 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.423 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.466 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.510 frame_age_ms_max=192.613 publish_path_ms_avg=104.247 publish_path_ms_max=114.581 queue_used_after_max=2 skipped=1 skipped_total=156 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=199.307 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.827 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.205 frame_age_ms_max=156.268 publish_path_ms_avg=102.289 publish_path_ms_max=102.581 queue_used_after_max=1 skipped=0 skipped_total=156 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.506 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.584 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=156.412 frame_age_ms_max=186.455 publish_path_ms_avg=102.957 publish_path_ms_max=103.891 queue_used_after_max=2 skipped=1 skipped_total=157 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.328 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.024 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.256 frame_age_ms_max=121.252 publish_path_ms_avg=102.186 publish_path_ms_max=103.515 queue_used_after_max=1 skipped=0 skipped_total=157 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.335 frame_age_ms_max=159.948 publish_path_ms_avg=103.225 publish_path_ms_max=112.357 queue_used_after_max=1 skipped=0 skipped_total=157 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.486 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.090 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.085 frame_age_ms_max=186.987 publish_path_ms_avg=107.692 publish_path_ms_max=126.076 queue_used_after_max=2 skipped=1 skipped_total=158 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.298 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.417 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.975 frame_age_ms_max=186.203 publish_path_ms_avg=104.393 publish_path_ms_max=108.438 queue_used_after_max=2 skipped=1 skipped_total=159 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.513 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.269 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.354 frame_age_ms_max=143.278 publish_path_ms_avg=104.181 publish_path_ms_max=106.925 queue_used_after_max=1 skipped=0 skipped_total=159 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.305 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.116 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=161.736 frame_age_ms_max=187.501 publish_path_ms_avg=104.242 publish_path_ms_max=106.627 queue_used_after_max=2 skipped=1 skipped_total=160 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.414 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.824 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=116.630 frame_age_ms_max=138.481 publish_path_ms_avg=103.921 publish_path_ms_max=106.362 queue_used_after_max=1 skipped=0 skipped_total=160 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.386 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.615 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=162.759 frame_age_ms_max=182.983 publish_path_ms_avg=103.804 publish_path_ms_max=103.928 queue_used_after_max=1 skipped=0 skipped_total=160 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.494 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.919 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=118.567 frame_age_ms_max=187.590 publish_path_ms_avg=103.856 publish_path_ms_max=104.094 queue_used_after_max=2 skipped=1 skipped_total=161 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=199.322 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.870 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.734 frame_age_ms_max=186.271 publish_path_ms_avg=105.958 publish_path_ms_max=122.704 queue_used_after_max=2 skipped=1 skipped_total=162 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.496 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.076 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=111.639 frame_age_ms_max=124.509 publish_path_ms_avg=102.270 publish_path_ms_max=102.501 queue_used_after_max=1 skipped=0 skipped_total=162 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.286 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.351 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=141.506 frame_age_ms_max=154.364 publish_path_ms_avg=102.339 publish_path_ms_max=103.000 queue_used_after_max=1 skipped=0 skipped_total=162 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.536 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.853 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.522 frame_age_ms_max=192.656 publish_path_ms_avg=105.960 publish_path_ms_max=114.621 queue_used_after_max=2 skipped=1 skipped_total=163 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.319 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.141 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=146.308 frame_age_ms_max=169.773 publish_path_ms_avg=104.224 publish_path_ms_max=106.319 queue_used_after_max=1 skipped=0 skipped_total=163 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.529 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.815 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.987 frame_age_ms_max=185.389 publish_path_ms_avg=106.952 publish_path_ms_max=109.455 queue_used_after_max=2 skipped=1 skipped_total=164 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.265 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.514 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.633 frame_age_ms_max=187.181 publish_path_ms_avg=106.065 publish_path_ms_max=110.184 queue_used_after_max=2 skipped=1 skipped_total=165 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.480 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.532 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=153.293 frame_age_ms_max=182.089 publish_path_ms_avg=106.147 publish_path_ms_max=110.750 queue_used_after_max=1 skipped=0 skipped_total=165 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.324 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.642 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.991 frame_age_ms_max=188.038 publish_path_ms_avg=106.039 publish_path_ms_max=110.264 queue_used_after_max=2 skipped=1 skipped_total=166 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.486 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.422 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=141.385 frame_age_ms_max=186.562 publish_path_ms_avg=106.679 publish_path_ms_max=110.120 queue_used_after_max=2 skipped=1 skipped_total=167 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=199.322 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.310 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.787 frame_age_ms_max=191.818 publish_path_ms_avg=110.503 publish_path_ms_max=114.527 queue_used_after_max=2 skipped=1 skipped_total=168 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=9.979 imu_hz=200.568 span_ms=99.350 points=19872 lidar_imu_offset_ms=8.815 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.809 frame_age_ms_max=185.536 publish_path_ms_avg=105.240 publish_path_ms_max=114.797 queue_used_after_max=2 skipped=1 skipped_total=169 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.149 imu_hz=200.208 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.242 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=112.162 frame_age_ms_max=126.315 publish_path_ms_avg=102.473 publish_path_ms_max=102.712 queue_used_after_max=1 skipped=0 skipped_total=169 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.536 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.949 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.751 frame_age_ms_max=156.438 publish_path_ms_avg=102.366 publish_path_ms_max=102.624 queue_used_after_max=1 skipped=0 skipped_total=169 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.301 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.045 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=164.500 frame_age_ms_max=185.327 publish_path_ms_avg=103.520 publish_path_ms_max=112.131 queue_used_after_max=2 skipped=1 skipped_total=170 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.482 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.361 frame_age_ms_max=192.755 publish_path_ms_avg=115.027 publish_path_ms_max=131.070 queue_used_after_max=2 skipped=1 skipped_total=171 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.362 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.589 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.380 frame_age_ms_max=186.507 publish_path_ms_avg=109.168 publish_path_ms_max=116.007 queue_used_after_max=2 skipped=1 skipped_total=172 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.523 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.729 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.335 frame_age_ms_max=187.721 publish_path_ms_avg=106.457 publish_path_ms_max=111.919 queue_used_after_max=2 skipped=1 skipped_total=173 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.288 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.866 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=146.569 frame_age_ms_max=174.877 publish_path_ms_avg=105.751 publish_path_ms_max=112.774 queue_used_after_max=1 skipped=0 skipped_total=173 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.478 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.627 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.916 frame_age_ms_max=189.428 publish_path_ms_avg=109.313 publish_path_ms_max=136.766 queue_used_after_max=2 skipped=1 skipped_total=174 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.507 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.301 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=156.820 frame_age_ms_max=203.069 publish_path_ms_avg=118.052 publish_path_ms_max=122.660 queue_used_after_max=2 skipped=2 skipped_total=176 samples=9
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=156.076 frame_age_ms_max=195.433 publish_path_ms_avg=113.213 publish_path_ms_max=120.876 queue_used_after_max=2 skipped=1 skipped_total=177 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.350 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.706 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.381 frame_age_ms_max=201.758 publish_path_ms_avg=107.603 publish_path_ms_max=120.567 queue_used_after_max=2 skipped=1 skipped_total=178 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=200.217 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.003 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=168.752 frame_age_ms_max=181.610 publish_path_ms_avg=102.187 publish_path_ms_max=102.426 queue_used_after_max=1 skipped=0 skipped_total=178 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.585 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.549 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.714 frame_age_ms_max=187.360 publish_path_ms_avg=102.152 publish_path_ms_max=102.336 queue_used_after_max=2 skipped=1 skipped_total=179 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.402 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.408 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.544 frame_age_ms_max=137.772 publish_path_ms_avg=102.109 publish_path_ms_max=102.332 queue_used_after_max=1 skipped=0 skipped_total=179 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.443 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.547 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=153.998 frame_age_ms_max=167.156 publish_path_ms_avg=102.292 publish_path_ms_max=102.571 queue_used_after_max=1 skipped=0 skipped_total=179 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.430 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.356 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.015 frame_age_ms_max=184.303 publish_path_ms_avg=102.188 publish_path_ms_max=102.330 queue_used_after_max=2 skipped=1 skipped_total=180 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.367 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.279 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=112.003 frame_age_ms_max=124.653 publish_path_ms_avg=102.206 publish_path_ms_max=102.482 queue_used_after_max=1 skipped=0 skipped_total=180 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.480 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.521 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.220 frame_age_ms_max=153.214 publish_path_ms_avg=102.211 publish_path_ms_max=102.484 queue_used_after_max=1 skipped=0 skipped_total=180 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.289 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.174 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=168.845 frame_age_ms_max=181.173 publish_path_ms_avg=102.150 publish_path_ms_max=102.563 queue_used_after_max=1 skipped=0 skipped_total=180 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.524 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.119 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=118.522 frame_age_ms_max=187.695 publish_path_ms_avg=102.397 publish_path_ms_max=102.618 queue_used_after_max=2 skipped=1 skipped_total=181 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.314 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.268 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.327 frame_age_ms_max=162.692 publish_path_ms_avg=104.398 publish_path_ms_max=114.863 queue_used_after_max=1 skipped=0 skipped_total=181 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.555 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.227 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=162.842 frame_age_ms_max=212.808 publish_path_ms_avg=113.575 publish_path_ms_max=136.500 queue_used_after_max=2 skipped=2 skipped_total=183 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.258 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.102 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.434 frame_age_ms_max=155.139 publish_path_ms_avg=105.668 publish_path_ms_max=120.323 queue_used_after_max=1 skipped=0 skipped_total=183 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.467 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.707 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=152.378 frame_age_ms_max=189.497 publish_path_ms_avg=104.476 publish_path_ms_max=109.813 queue_used_after_max=2 skipped=1 skipped_total=184 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.410 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.066 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.873 frame_age_ms_max=161.311 publish_path_ms_avg=104.784 publish_path_ms_max=108.204 queue_used_after_max=1 skipped=0 skipped_total=184 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.450 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.906 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.735 frame_age_ms_max=185.595 publish_path_ms_avg=103.900 publish_path_ms_max=104.854 queue_used_after_max=2 skipped=1 skipped_total=185 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.354 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.636 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.553 frame_age_ms_max=153.019 publish_path_ms_avg=103.915 publish_path_ms_max=104.541 queue_used_after_max=1 skipped=0 skipped_total=185 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.503 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.958 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.737 frame_age_ms_max=184.943 publish_path_ms_avg=103.596 publish_path_ms_max=104.512 queue_used_after_max=2 skipped=1 skipped_total=186 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.953 frame_age_ms_max=139.757 publish_path_ms_avg=103.722 publish_path_ms_max=104.185 queue_used_after_max=1 skipped=0 skipped_total=186 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.261 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.389 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=156.219 frame_age_ms_max=169.311 publish_path_ms_avg=102.309 publish_path_ms_max=102.609 queue_used_after_max=1 skipped=0 skipped_total=186 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.571 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.664 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.026 frame_age_ms_max=185.925 publish_path_ms_avg=102.190 publish_path_ms_max=102.467 queue_used_after_max=2 skipped=1 skipped_total=187 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.393 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.178 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.673 frame_age_ms_max=127.185 publish_path_ms_avg=102.242 publish_path_ms_max=103.134 queue_used_after_max=1 skipped=0 skipped_total=187 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.945 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.720 frame_age_ms_max=156.683 publish_path_ms_avg=102.304 publish_path_ms_max=102.645 queue_used_after_max=1 skipped=0 skipped_total=187 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.248 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.527 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=172.731 frame_age_ms_max=185.437 publish_path_ms_avg=102.230 publish_path_ms_max=102.603 queue_used_after_max=2 skipped=0 skipped_total=187 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.562 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.523 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=101.875 frame_age_ms_max=114.280 publish_path_ms_avg=102.175 publish_path_ms_max=102.459 queue_used_after_max=1 skipped=1 skipped_total=188 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.432 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.639 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.062 frame_age_ms_max=141.297 publish_path_ms_avg=102.056 publish_path_ms_max=102.117 queue_used_after_max=1 skipped=0 skipped_total=188 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.338 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.466 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=156.778 frame_age_ms_max=169.430 publish_path_ms_avg=102.168 publish_path_ms_max=102.312 queue_used_after_max=1 skipped=0 skipped_total=188 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.535 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.392 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.238 frame_age_ms_max=184.331 publish_path_ms_avg=102.277 publish_path_ms_max=103.190 queue_used_after_max=2 skipped=1 skipped_total=189 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.275 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.680 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.249 frame_age_ms_max=127.253 publish_path_ms_avg=102.150 publish_path_ms_max=102.642 queue_used_after_max=1 skipped=0 skipped_total=189 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.880 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.283 frame_age_ms_max=155.206 publish_path_ms_avg=102.150 publish_path_ms_max=102.500 queue_used_after_max=1 skipped=0 skipped_total=189 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.421 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.209 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=171.343 frame_age_ms_max=184.442 publish_path_ms_avg=102.278 publish_path_ms_max=102.525 queue_used_after_max=2 skipped=0 skipped_total=189 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.462 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.571 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=99.432 frame_age_ms_max=111.400 publish_path_ms_avg=101.987 publish_path_ms_max=102.284 queue_used_after_max=1 skipped=1 skipped_total=190 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.386 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.321 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.767 frame_age_ms_max=139.190 publish_path_ms_avg=102.133 publish_path_ms_max=102.495 queue_used_after_max=1 skipped=0 skipped_total=190 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=154.509 frame_age_ms_max=167.825 publish_path_ms_avg=102.218 publish_path_ms_max=103.266 queue_used_after_max=1 skipped=0 skipped_total=190 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.184 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.217 frame_age_ms_max=184.279 publish_path_ms_avg=102.098 publish_path_ms_max=102.242 queue_used_after_max=2 skipped=1 skipped_total=191 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.355 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.071 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=111.596 frame_age_ms_max=124.112 publish_path_ms_avg=102.175 publish_path_ms_max=102.428 queue_used_after_max=1 skipped=0 skipped_total=191 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.435 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.185 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.522 frame_age_ms_max=152.617 publish_path_ms_avg=102.206 publish_path_ms_max=102.466 queue_used_after_max=1 skipped=0 skipped_total=191 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.355 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.333 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=169.130 frame_age_ms_max=182.247 publish_path_ms_avg=102.318 publish_path_ms_max=102.558 queue_used_after_max=1 skipped=0 skipped_total=191 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.547 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.016 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=107.922 frame_age_ms_max=185.033 publish_path_ms_avg=102.100 publish_path_ms_max=102.214 queue_used_after_max=2 skipped=1 skipped_total=192 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.275 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.048 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.700 frame_age_ms_max=138.287 publish_path_ms_avg=102.149 publish_path_ms_max=102.318 queue_used_after_max=1 skipped=0 skipped_total=192 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.570 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.219 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=154.559 frame_age_ms_max=166.658 publish_path_ms_avg=102.192 publish_path_ms_max=103.098 queue_used_after_max=1 skipped=0 skipped_total=192 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.289 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.952 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.951 frame_age_ms_max=184.330 publish_path_ms_avg=102.328 publish_path_ms_max=102.632 queue_used_after_max=2 skipped=1 skipped_total=193 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.525 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.679 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=113.801 frame_age_ms_max=127.082 publish_path_ms_avg=102.359 publish_path_ms_max=102.570 queue_used_after_max=1 skipped=0 skipped_total=193 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.306 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.010 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.039 frame_age_ms_max=155.972 publish_path_ms_avg=102.243 publish_path_ms_max=102.638 queue_used_after_max=1 skipped=0 skipped_total=193 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.483 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.606 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=163.081 frame_age_ms_max=183.471 publish_path_ms_avg=102.368 publish_path_ms_max=102.693 queue_used_after_max=2 skipped=1 skipped_total=194 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=199.320 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.471 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.202 frame_age_ms_max=116.181 publish_path_ms_avg=102.298 publish_path_ms_max=102.483 queue_used_after_max=1 skipped=0 skipped_total=194 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.516 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.865 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.544 frame_age_ms_max=145.656 publish_path_ms_avg=102.302 publish_path_ms_max=103.181 queue_used_after_max=1 skipped=0 skipped_total=194 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.269 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.420 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=161.538 frame_age_ms_max=174.493 publish_path_ms_avg=102.238 publish_path_ms_max=102.377 queue_used_after_max=1 skipped=0 skipped_total=194 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.589 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.448 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.089 frame_age_ms_max=182.855 publish_path_ms_avg=102.322 publish_path_ms_max=102.622 queue_used_after_max=2 skipped=1 skipped_total=195 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.100 frame_age_ms_max=132.222 publish_path_ms_avg=102.096 publish_path_ms_max=102.394 queue_used_after_max=1 skipped=0 skipped_total=195 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.384 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.405 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.530 frame_age_ms_max=159.896 publish_path_ms_avg=102.122 publish_path_ms_max=102.521 queue_used_after_max=1 skipped=0 skipped_total=195 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.639 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=165.483 frame_age_ms_max=185.377 publish_path_ms_avg=102.201 publish_path_ms_max=102.542 queue_used_after_max=2 skipped=1 skipped_total=196 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.358 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=111.842 frame_age_ms_max=163.780 publish_path_ms_avg=106.832 publish_path_ms_max=134.579 queue_used_after_max=1 skipped=0 skipped_total=196 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.387 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.265 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.121 frame_age_ms_max=187.379 publish_path_ms_avg=106.086 publish_path_ms_max=110.513 queue_used_after_max=2 skipped=1 skipped_total=197 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.388 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.413 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=160.942 frame_age_ms_max=181.901 publish_path_ms_avg=104.255 publish_path_ms_max=107.823 queue_used_after_max=1 skipped=0 skipped_total=197 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.397 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.045 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.471 frame_age_ms_max=186.456 publish_path_ms_avg=104.570 publish_path_ms_max=109.401 queue_used_after_max=2 skipped=1 skipped_total=198 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.539 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.214 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=160.779 frame_age_ms_max=182.061 publish_path_ms_avg=104.089 publish_path_ms_max=104.951 queue_used_after_max=1 skipped=0 skipped_total=198 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.300 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.267 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.161 frame_age_ms_max=185.416 publish_path_ms_avg=103.410 publish_path_ms_max=104.424 queue_used_after_max=2 skipped=1 skipped_total=199 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.548 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.270 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=157.969 frame_age_ms_max=178.503 publish_path_ms_avg=104.877 publish_path_ms_max=109.702 queue_used_after_max=1 skipped=0 skipped_total=199 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.312 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.740 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.950 frame_age_ms_max=182.824 publish_path_ms_avg=104.355 publish_path_ms_max=107.079 queue_used_after_max=2 skipped=1 skipped_total=200 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.392 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.884 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=163.294 frame_age_ms_max=184.074 publish_path_ms_avg=104.843 publish_path_ms_max=107.354 queue_used_after_max=2 skipped=0 skipped_total=200 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.435 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.093 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=100.765 frame_age_ms_max=114.239 publish_path_ms_avg=102.306 publish_path_ms_max=102.491 queue_used_after_max=1 skipped=1 skipped_total=201 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.423 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.663 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.840 frame_age_ms_max=143.681 publish_path_ms_avg=102.299 publish_path_ms_max=102.625 queue_used_after_max=1 skipped=0 skipped_total=201 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.415 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.832 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=159.064 frame_age_ms_max=172.457 publish_path_ms_avg=102.232 publish_path_ms_max=102.485 queue_used_after_max=1 skipped=0 skipped_total=201 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.518 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.956 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=128.219 frame_age_ms_max=183.927 publish_path_ms_avg=102.144 publish_path_ms_max=102.325 queue_used_after_max=2 skipped=1 skipped_total=202 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.253 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.274 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.077 frame_age_ms_max=129.743 publish_path_ms_avg=102.229 publish_path_ms_max=102.540 queue_used_after_max=1 skipped=0 skipped_total=202 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.574 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.802 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.057 frame_age_ms_max=157.286 publish_path_ms_avg=102.109 publish_path_ms_max=102.392 queue_used_after_max=1 skipped=0 skipped_total=202 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.280 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.178 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=163.242 frame_age_ms_max=183.633 publish_path_ms_avg=102.292 publish_path_ms_max=102.528 queue_used_after_max=2 skipped=1 skipped_total=203 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.687 frame_age_ms_max=116.384 publish_path_ms_avg=102.263 publish_path_ms_max=102.552 queue_used_after_max=1 skipped=0 skipped_total=203 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.579 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.775 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.843 frame_age_ms_max=145.813 publish_path_ms_avg=102.298 publish_path_ms_max=102.604 queue_used_after_max=1 skipped=0 skipped_total=203 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.423 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.378 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=161.019 frame_age_ms_max=173.534 publish_path_ms_avg=102.127 publish_path_ms_max=102.225 queue_used_after_max=1 skipped=0 skipped_total=203 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.394 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.372 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.134 frame_age_ms_max=184.461 publish_path_ms_avg=102.169 publish_path_ms_max=102.437 queue_used_after_max=2 skipped=1 skipped_total=204 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.302 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.640 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.234 frame_age_ms_max=133.438 publish_path_ms_avg=102.467 publish_path_ms_max=102.706 queue_used_after_max=1 skipped=0 skipped_total=204 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.501 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.240 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.426 frame_age_ms_max=163.936 publish_path_ms_avg=102.404 publish_path_ms_max=102.652 queue_used_after_max=1 skipped=0 skipped_total=204 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.492 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.219 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.263 frame_age_ms_max=181.449 publish_path_ms_avg=102.278 publish_path_ms_max=102.599 queue_used_after_max=2 skipped=1 skipped_total=205 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.394 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.468 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.088 frame_age_ms_max=121.439 publish_path_ms_avg=102.117 publish_path_ms_max=102.211 queue_used_after_max=1 skipped=0 skipped_total=205 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.386 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.860 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.296 frame_age_ms_max=148.664 publish_path_ms_avg=102.077 publish_path_ms_max=102.329 queue_used_after_max=1 skipped=0 skipped_total=205 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.414 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.311 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=164.000 frame_age_ms_max=177.555 publish_path_ms_avg=102.244 publish_path_ms_max=102.543 queue_used_after_max=1 skipped=0 skipped_total=205 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.416 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.632 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=113.870 frame_age_ms_max=183.671 publish_path_ms_avg=102.187 publish_path_ms_max=102.441 queue_used_after_max=2 skipped=1 skipped_total=206 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.418 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.321 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.998 frame_age_ms_max=135.332 publish_path_ms_avg=102.236 publish_path_ms_max=102.626 queue_used_after_max=1 skipped=0 skipped_total=206 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.482 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.220 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.934 frame_age_ms_max=163.455 publish_path_ms_avg=102.167 publish_path_ms_max=102.287 queue_used_after_max=1 skipped=0 skipped_total=206 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.373 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.893 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=149.451 frame_age_ms_max=183.714 publish_path_ms_avg=102.296 publish_path_ms_max=102.642 queue_used_after_max=2 skipped=1 skipped_total=207 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.452 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.186 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.627 frame_age_ms_max=122.324 publish_path_ms_avg=102.236 publish_path_ms_max=102.468 queue_used_after_max=1 skipped=0 skipped_total=207 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.065 frame_age_ms_max=149.109 publish_path_ms_avg=102.033 publish_path_ms_max=102.162 queue_used_after_max=1 skipped=0 skipped_total=207 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.330 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.178 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=164.963 frame_age_ms_max=177.734 publish_path_ms_avg=102.217 publish_path_ms_max=102.617 queue_used_after_max=1 skipped=0 skipped_total=207 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.575 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.760 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=104.088 frame_age_ms_max=180.662 publish_path_ms_avg=102.176 publish_path_ms_max=102.531 queue_used_after_max=2 skipped=1 skipped_total=208 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.270 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.527 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.385 frame_age_ms_max=134.645 publish_path_ms_avg=102.161 publish_path_ms_max=102.561 queue_used_after_max=1 skipped=0 skipped_total=208 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.545 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.075 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.178 frame_age_ms_max=163.734 publish_path_ms_avg=102.263 publish_path_ms_max=102.489 queue_used_after_max=1 skipped=0 skipped_total=208 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.304 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.895 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.672 frame_age_ms_max=182.006 publish_path_ms_avg=102.415 publish_path_ms_max=102.685 queue_used_after_max=2 skipped=1 skipped_total=209 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.557 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.489 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=110.961 frame_age_ms_max=124.272 publish_path_ms_avg=102.284 publish_path_ms_max=102.490 queue_used_after_max=1 skipped=0 skipped_total=209 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.426 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.841 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.967 frame_age_ms_max=154.128 publish_path_ms_avg=102.340 publish_path_ms_max=103.227 queue_used_after_max=1 skipped=0 skipped_total=209 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.361 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.643 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=169.646 frame_age_ms_max=182.058 publish_path_ms_avg=102.147 publish_path_ms_max=102.283 queue_used_after_max=2 skipped=0 skipped_total=209 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.509 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.426 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=98.700 frame_age_ms_max=115.508 publish_path_ms_avg=102.636 publish_path_ms_max=104.668 queue_used_after_max=1 skipped=1 skipped_total=210 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.334 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.769 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.141 frame_age_ms_max=191.424 publish_path_ms_avg=108.143 publish_path_ms_max=116.761 queue_used_after_max=2 skipped=1 skipped_total=211 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.437 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.627 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.243 frame_age_ms_max=188.469 publish_path_ms_avg=116.017 publish_path_ms_max=140.874 queue_used_after_max=2 skipped=1 skipped_total=212 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.452 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.123 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=151.527 frame_age_ms_max=182.653 publish_path_ms_avg=109.714 publish_path_ms_max=118.397 queue_used_after_max=2 skipped=1 skipped_total=213 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.399 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.407 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.347 frame_age_ms_max=180.545 publish_path_ms_avg=104.207 publish_path_ms_max=113.485 queue_used_after_max=2 skipped=1 skipped_total=214 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.434 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.551 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.652 frame_age_ms_max=153.010 publish_path_ms_avg=103.736 publish_path_ms_max=106.908 queue_used_after_max=1 skipped=0 skipped_total=214 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.421 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.201 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=152.286 frame_age_ms_max=183.697 publish_path_ms_avg=106.387 publish_path_ms_max=123.039 queue_used_after_max=2 skipped=1 skipped_total=215 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.414 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.205 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.372 frame_age_ms_max=179.964 publish_path_ms_avg=106.270 publish_path_ms_max=122.800 queue_used_after_max=2 skipped=1 skipped_total=216 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.450 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.412 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.728 frame_age_ms_max=140.971 publish_path_ms_avg=104.070 publish_path_ms_max=110.281 queue_used_after_max=1 skipped=0 skipped_total=216 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.353 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.001 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=158.266 frame_age_ms_max=172.099 publish_path_ms_avg=102.466 publish_path_ms_max=102.910 queue_used_after_max=1 skipped=0 skipped_total=216 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.520 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.965 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.633 frame_age_ms_max=181.828 publish_path_ms_avg=102.425 publish_path_ms_max=103.219 queue_used_after_max=2 skipped=1 skipped_total=217 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=9.985 imu_hz=199.705 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.322 queue_depth=16
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.216 frame_age_ms_max=134.068 publish_path_ms_avg=102.417 publish_path_ms_max=102.740 queue_used_after_max=1 skipped=0 skipped_total=217 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=149.559 frame_age_ms_max=161.749 publish_path_ms_avg=102.123 publish_path_ms_max=102.373 queue_used_after_max=1 skipped=0 skipped_total=217 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.133 imu_hz=200.819 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.030 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.943 frame_age_ms_max=179.172 publish_path_ms_avg=102.173 publish_path_ms_max=102.621 queue_used_after_max=2 skipped=1 skipped_total=218 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.584 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.601 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.909 frame_age_ms_max=119.007 publish_path_ms_avg=102.198 publish_path_ms_max=102.510 queue_used_after_max=1 skipped=0 skipped_total=218 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.409 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.219 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.725 frame_age_ms_max=148.348 publish_path_ms_avg=102.288 publish_path_ms_max=102.594 queue_used_after_max=1 skipped=0 skipped_total=218 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.440 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.803 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=164.572 frame_age_ms_max=177.307 publish_path_ms_avg=102.251 publish_path_ms_max=103.269 queue_used_after_max=1 skipped=0 skipped_total=218 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.432 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.081 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=102.551 frame_age_ms_max=179.974 publish_path_ms_avg=102.055 publish_path_ms_max=102.368 queue_used_after_max=2 skipped=1 skipped_total=219 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.424 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.248 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.094 frame_age_ms_max=132.965 publish_path_ms_avg=102.156 publish_path_ms_max=102.518 queue_used_after_max=1 skipped=0 skipped_total=219 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.283 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.676 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=149.362 frame_age_ms_max=163.010 publish_path_ms_avg=102.359 publish_path_ms_max=102.513 queue_used_after_max=1 skipped=0 skipped_total=219 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.484 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.482 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.886 frame_age_ms_max=179.975 publish_path_ms_avg=102.211 publish_path_ms_max=102.441 queue_used_after_max=2 skipped=1 skipped_total=220 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.557 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.394 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=108.363 frame_age_ms_max=121.812 publish_path_ms_avg=102.314 publish_path_ms_max=102.543 queue_used_after_max=1 skipped=0 skipped_total=220 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.303 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.943 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.279 frame_age_ms_max=150.127 publish_path_ms_avg=102.186 publish_path_ms_max=103.216 queue_used_after_max=1 skipped=0 skipped_total=220 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.426 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.873 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=165.971 frame_age_ms_max=178.221 publish_path_ms_avg=102.164 publish_path_ms_max=102.536 queue_used_after_max=2 skipped=0 skipped_total=220 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.445 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.024 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=93.980 frame_age_ms_max=106.561 publish_path_ms_avg=102.125 publish_path_ms_max=102.481 queue_used_after_max=1 skipped=1 skipped_total=221 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.429 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.672 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.241 frame_age_ms_max=135.645 publish_path_ms_avg=102.263 publish_path_ms_max=102.528 queue_used_after_max=1 skipped=0 skipped_total=221 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.417 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.282 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=152.467 frame_age_ms_max=165.436 publish_path_ms_avg=102.333 publish_path_ms_max=102.519 queue_used_after_max=1 skipped=0 skipped_total=221 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.416 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.589 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.179 frame_age_ms_max=179.473 publish_path_ms_avg=102.169 publish_path_ms_max=102.490 queue_used_after_max=2 skipped=1 skipped_total=222 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.799 frame_age_ms_max=123.716 publish_path_ms_avg=102.305 publish_path_ms_max=103.061 queue_used_after_max=1 skipped=0 skipped_total=222 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.401 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.008 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.112 frame_age_ms_max=151.518 publish_path_ms_avg=102.134 publish_path_ms_max=102.353 queue_used_after_max=1 skipped=0 skipped_total=222 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.073 imu_hz=200.543 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.145 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=167.055 frame_age_ms_max=179.485 publish_path_ms_avg=102.151 publish_path_ms_max=102.307 queue_used_after_max=2 skipped=0 skipped_total=222 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.291 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.284 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=96.947 frame_age_ms_max=110.769 publish_path_ms_avg=102.419 publish_path_ms_max=102.592 queue_used_after_max=1 skipped=1 skipped_total=223 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.566 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.823 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.653 frame_age_ms_max=139.587 publish_path_ms_avg=102.236 publish_path_ms_max=102.480 queue_used_after_max=1 skipped=0 skipped_total=223 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.277 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.009 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=155.366 frame_age_ms_max=167.645 publish_path_ms_avg=102.160 publish_path_ms_max=102.550 queue_used_after_max=1 skipped=0 skipped_total=223 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.563 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.062 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.593 frame_age_ms_max=178.233 publish_path_ms_avg=102.007 publish_path_ms_max=102.094 queue_used_after_max=2 skipped=1 skipped_total=224 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.286 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.826 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=111.771 frame_age_ms_max=125.198 publish_path_ms_avg=102.393 publish_path_ms_max=103.196 queue_used_after_max=1 skipped=0 skipped_total=224 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.566 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.442 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=141.850 frame_age_ms_max=155.604 publish_path_ms_avg=102.395 publish_path_ms_max=103.146 queue_used_after_max=1 skipped=0 skipped_total=224 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.297 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.828 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.573 frame_age_ms_max=176.810 publish_path_ms_avg=102.391 publish_path_ms_max=102.758 queue_used_after_max=2 skipped=1 skipped_total=225 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.485 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.543 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=102.020 frame_age_ms_max=114.798 publish_path_ms_avg=102.173 publish_path_ms_max=102.419 queue_used_after_max=1 skipped=0 skipped_total=225 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.523 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.185 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.866 frame_age_ms_max=143.549 publish_path_ms_avg=102.229 publish_path_ms_max=102.674 queue_used_after_max=1 skipped=0 skipped_total=225 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.329 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.761 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=146.253 frame_age_ms_max=178.245 publish_path_ms_avg=105.218 publish_path_ms_max=118.247 queue_used_after_max=2 skipped=1 skipped_total=226 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.442 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.748 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.423 frame_age_ms_max=172.029 publish_path_ms_avg=106.274 publish_path_ms_max=116.576 queue_used_after_max=1 skipped=0 skipped_total=226 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.448 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.224 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.221 frame_age_ms_max=177.201 publish_path_ms_avg=106.196 publish_path_ms_max=112.928 queue_used_after_max=2 skipped=1 skipped_total=227 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.376 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.469 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.335 frame_age_ms_max=178.498 publish_path_ms_avg=105.227 publish_path_ms_max=113.718 queue_used_after_max=2 skipped=1 skipped_total=228 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.484 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.509 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=124.194 frame_age_ms_max=142.711 publish_path_ms_avg=103.577 publish_path_ms_max=104.147 queue_used_after_max=1 skipped=0 skipped_total=228 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.359 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.899 frame_age_ms_max=178.181 publish_path_ms_avg=105.376 publish_path_ms_max=111.066 queue_used_after_max=2 skipped=1 skipped_total=229 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.370 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.095 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.775 frame_age_ms_max=196.227 publish_path_ms_avg=110.141 publish_path_ms_max=151.112 queue_used_after_max=2 skipped=1 skipped_total=230 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.552 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=128.839 frame_age_ms_max=177.422 publish_path_ms_avg=107.266 publish_path_ms_max=121.577 queue_used_after_max=2 skipped=1 skipped_total=231 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.217 frame_age_ms_max=137.143 publish_path_ms_avg=103.883 publish_path_ms_max=108.881 queue_used_after_max=1 skipped=0 skipped_total=231 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.378 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.124 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=152.578 frame_age_ms_max=165.582 publish_path_ms_avg=102.198 publish_path_ms_max=102.568 queue_used_after_max=1 skipped=0 skipped_total=231 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.565 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.151 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.658 frame_age_ms_max=176.976 publish_path_ms_avg=102.202 publish_path_ms_max=102.381 queue_used_after_max=2 skipped=1 skipped_total=232 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.292 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.237 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=110.145 frame_age_ms_max=122.868 publish_path_ms_avg=102.171 publish_path_ms_max=102.302 queue_used_after_max=1 skipped=0 skipped_total=232 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.573 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.194 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.847 frame_age_ms_max=150.008 publish_path_ms_avg=102.068 publish_path_ms_max=102.207 queue_used_after_max=1 skipped=0 skipped_total=232 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.280 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.897 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=164.998 frame_age_ms_max=178.057 publish_path_ms_avg=102.159 publish_path_ms_max=102.612 queue_used_after_max=2 skipped=0 skipped_total=232 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.566 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.735 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=94.176 frame_age_ms_max=106.358 publish_path_ms_avg=102.121 publish_path_ms_max=102.350 queue_used_after_max=1 skipped=1 skipped_total=233 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.299 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.056 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.802 frame_age_ms_max=134.715 publish_path_ms_avg=102.190 publish_path_ms_max=102.462 queue_used_after_max=1 skipped=0 skipped_total=233 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.490 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.782 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.047 frame_age_ms_max=162.573 publish_path_ms_avg=102.141 publish_path_ms_max=102.485 queue_used_after_max=1 skipped=0 skipped_total=233 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.374 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.529 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.786 frame_age_ms_max=175.954 publish_path_ms_avg=102.087 publish_path_ms_max=102.259 queue_used_after_max=2 skipped=1 skipped_total=234 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.388 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.896 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.809 frame_age_ms_max=118.168 publish_path_ms_avg=102.118 publish_path_ms_max=102.365 queue_used_after_max=1 skipped=0 skipped_total=234 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.376 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.263 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.696 frame_age_ms_max=146.468 publish_path_ms_avg=102.184 publish_path_ms_max=102.666 queue_used_after_max=1 skipped=0 skipped_total=234 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.595 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.557 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=163.434 frame_age_ms_max=177.348 publish_path_ms_avg=102.443 publish_path_ms_max=102.728 queue_used_after_max=2 skipped=0 skipped_total=234 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.274 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.217 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=93.541 frame_age_ms_max=105.767 publish_path_ms_avg=102.132 publish_path_ms_max=102.465 queue_used_after_max=1 skipped=1 skipped_total=235 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.589 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.738 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.174 frame_age_ms_max=133.963 publish_path_ms_avg=102.174 publish_path_ms_max=102.544 queue_used_after_max=1 skipped=0 skipped_total=235 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=149.848 frame_age_ms_max=162.531 publish_path_ms_avg=102.211 publish_path_ms_max=102.412 queue_used_after_max=1 skipped=0 skipped_total=235 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.422 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.292 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.930 frame_age_ms_max=176.229 publish_path_ms_avg=102.094 publish_path_ms_max=102.184 queue_used_after_max=2 skipped=1 skipped_total=236 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.406 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.384 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=106.981 frame_age_ms_max=119.830 publish_path_ms_avg=102.280 publish_path_ms_max=102.617 queue_used_after_max=1 skipped=0 skipped_total=236 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.468 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.601 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.261 frame_age_ms_max=148.163 publish_path_ms_avg=102.188 publish_path_ms_max=102.646 queue_used_after_max=1 skipped=0 skipped_total=236 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.324 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.324 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=154.292 frame_age_ms_max=174.509 publish_path_ms_avg=102.261 publish_path_ms_max=102.467 queue_used_after_max=2 skipped=1 skipped_total=237 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.553 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.411 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=93.061 frame_age_ms_max=105.844 publish_path_ms_avg=102.153 publish_path_ms_max=102.442 queue_used_after_max=1 skipped=0 skipped_total=237 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.323 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.465 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.813 frame_age_ms_max=137.381 publish_path_ms_avg=102.508 publish_path_ms_max=104.001 queue_used_after_max=1 skipped=0 skipped_total=237 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.497 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.418 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=144.117 frame_age_ms_max=185.612 publish_path_ms_avg=116.312 publish_path_ms_max=131.261 queue_used_after_max=2 skipped=2 skipped_total=239 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.356 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.243 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.041 frame_age_ms_max=165.538 publish_path_ms_avg=106.667 publish_path_ms_max=116.043 queue_used_after_max=1 skipped=0 skipped_total=239 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.556 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.879 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.858 frame_age_ms_max=177.609 publish_path_ms_avg=107.106 publish_path_ms_max=134.849 queue_used_after_max=2 skipped=1 skipped_total=240 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.355 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.260 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.533 frame_age_ms_max=178.987 publish_path_ms_avg=125.174 publish_path_ms_max=135.635 queue_used_after_max=2 skipped=2 skipped_total=242 samples=8
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.396 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.951 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.991 frame_age_ms_max=177.967 publish_path_ms_avg=111.175 publish_path_ms_max=117.496 queue_used_after_max=2 skipped=1 skipped_total=243 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.395 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.046 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.283 frame_age_ms_max=193.783 publish_path_ms_avg=115.555 publish_path_ms_max=130.589 queue_used_after_max=2 skipped=2 skipped_total=245 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.461 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.148 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=135.414 frame_age_ms_max=176.272 publish_path_ms_avg=109.549 publish_path_ms_max=121.168 queue_used_after_max=2 skipped=1 skipped_total=246 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.347 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.263 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.263 frame_age_ms_max=144.622 publish_path_ms_avg=102.987 publish_path_ms_max=106.492 queue_used_after_max=1 skipped=0 skipped_total=246 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.517 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.584 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=159.895 frame_age_ms_max=172.573 publish_path_ms_avg=102.149 publish_path_ms_max=102.506 queue_used_after_max=1 skipped=0 skipped_total=246 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.352 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.010 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=98.274 frame_age_ms_max=175.236 publish_path_ms_avg=102.165 publish_path_ms_max=102.469 queue_used_after_max=2 skipped=1 skipped_total=247 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.583 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.965 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.023 frame_age_ms_max=129.823 publish_path_ms_avg=102.204 publish_path_ms_max=102.384 queue_used_after_max=1 skipped=0 skipped_total=247 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.893 frame_age_ms_max=158.605 publish_path_ms_avg=102.233 publish_path_ms_max=102.438 queue_used_after_max=1 skipped=0 skipped_total=247 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.299 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.488 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.138 frame_age_ms_max=173.590 publish_path_ms_avg=102.213 publish_path_ms_max=102.518 queue_used_after_max=2 skipped=1 skipped_total=248 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.423 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.124 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.168 frame_age_ms_max=116.526 publish_path_ms_avg=102.224 publish_path_ms_max=102.535 queue_used_after_max=1 skipped=0 skipped_total=248 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.428 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.830 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.706 frame_age_ms_max=143.958 publish_path_ms_avg=102.098 publish_path_ms_max=102.458 queue_used_after_max=1 skipped=0 skipped_total=248 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.476 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.517 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=159.616 frame_age_ms_max=172.541 publish_path_ms_avg=102.213 publish_path_ms_max=102.407 queue_used_after_max=2 skipped=0 skipped_total=248 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.523 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.455 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=88.762 frame_age_ms_max=102.544 publish_path_ms_avg=102.291 publish_path_ms_max=102.564 queue_used_after_max=1 skipped=1 skipped_total=249 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.376 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.694 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.711 frame_age_ms_max=129.771 publish_path_ms_avg=102.077 publish_path_ms_max=102.501 queue_used_after_max=1 skipped=0 skipped_total=249 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.249 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.593 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.587 frame_age_ms_max=159.570 publish_path_ms_avg=102.335 publish_path_ms_max=102.587 queue_used_after_max=1 skipped=0 skipped_total=249 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.580 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.266 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.670 frame_age_ms_max=174.079 publish_path_ms_avg=102.170 publish_path_ms_max=102.538 queue_used_after_max=2 skipped=1 skipped_total=250 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.449 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.313 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.795 frame_age_ms_max=116.349 publish_path_ms_avg=102.154 publish_path_ms_max=102.562 queue_used_after_max=1 skipped=0 skipped_total=250 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.421 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.507 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.652 frame_age_ms_max=144.927 publish_path_ms_avg=102.213 publish_path_ms_max=102.564 queue_used_after_max=1 skipped=0 skipped_total=250 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.290 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=160.595 frame_age_ms_max=173.049 publish_path_ms_avg=102.167 publish_path_ms_max=102.481 queue_used_after_max=2 skipped=0 skipped_total=250 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.406 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.272 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=89.166 frame_age_ms_max=102.045 publish_path_ms_avg=102.190 publish_path_ms_max=102.396 queue_used_after_max=1 skipped=1 skipped_total=251 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.459 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.374 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.460 frame_age_ms_max=129.822 publish_path_ms_avg=102.133 publish_path_ms_max=102.240 queue_used_after_max=1 skipped=0 skipped_total=251 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.346 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.003 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=146.996 frame_age_ms_max=160.448 publish_path_ms_avg=102.417 publish_path_ms_max=102.983 queue_used_after_max=1 skipped=0 skipped_total=251 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.525 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.921 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.071 frame_age_ms_max=172.128 publish_path_ms_avg=102.291 publish_path_ms_max=102.617 queue_used_after_max=2 skipped=1 skipped_total=252 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.458 frame_age_ms_max=118.000 publish_path_ms_avg=102.109 publish_path_ms_max=102.395 queue_used_after_max=1 skipped=0 skipped_total=252 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.334 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.516 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.224 frame_age_ms_max=146.646 publish_path_ms_avg=102.219 publish_path_ms_max=102.486 queue_used_after_max=1 skipped=0 skipped_total=252 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.423 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.043 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=151.878 frame_age_ms_max=171.885 publish_path_ms_avg=102.169 publish_path_ms_max=102.494 queue_used_after_max=2 skipped=1 skipped_total=253 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.437 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.901 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=90.573 frame_age_ms_max=102.795 publish_path_ms_avg=102.092 publish_path_ms_max=102.206 queue_used_after_max=1 skipped=0 skipped_total=253 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.425 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.422 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=118.785 frame_age_ms_max=132.059 publish_path_ms_avg=102.280 publish_path_ms_max=102.623 queue_used_after_max=1 skipped=0 skipped_total=253 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=199.461 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.199 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.290 frame_age_ms_max=161.002 publish_path_ms_avg=102.249 publish_path_ms_max=102.523 queue_used_after_max=1 skipped=0 skipped_total=253 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.494 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.567 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=107.930 frame_age_ms_max=170.479 publish_path_ms_avg=102.286 publish_path_ms_max=102.713 queue_used_after_max=2 skipped=1 skipped_total=254 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.051 imu_hz=200.099 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.099 queue_depth=2
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=108.111 frame_age_ms_max=125.951 publish_path_ms_avg=102.855 publish_path_ms_max=105.229 queue_used_after_max=1 skipped=0 skipped_total=254 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.079 imu_hz=199.755 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.921 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.037 frame_age_ms_max=170.026 publish_path_ms_avg=106.062 publish_path_ms_max=113.976 queue_used_after_max=2 skipped=1 skipped_total=255 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.289 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.366 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=123.643 frame_age_ms_max=146.739 publish_path_ms_avg=104.658 publish_path_ms_max=108.798 queue_used_after_max=1 skipped=0 skipped_total=255 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.563 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.707 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.415 frame_age_ms_max=170.166 publish_path_ms_avg=106.578 publish_path_ms_max=122.101 queue_used_after_max=2 skipped=1 skipped_total=256 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.297 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.216 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.107 frame_age_ms_max=162.226 publish_path_ms_avg=103.613 publish_path_ms_max=105.481 queue_used_after_max=1 skipped=0 skipped_total=256 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.490 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.215 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.427 frame_age_ms_max=170.353 publish_path_ms_avg=107.512 publish_path_ms_max=133.635 queue_used_after_max=2 skipped=1 skipped_total=257 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.353 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.571 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.716 frame_age_ms_max=170.809 publish_path_ms_avg=106.378 publish_path_ms_max=114.507 queue_used_after_max=2 skipped=1 skipped_total=258 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.571 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.290 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.976 frame_age_ms_max=153.881 publish_path_ms_avg=103.210 publish_path_ms_max=108.194 queue_used_after_max=1 skipped=0 skipped_total=258 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.474 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.602 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.391 frame_age_ms_max=170.727 publish_path_ms_avg=102.128 publish_path_ms_max=102.268 queue_used_after_max=2 skipped=1 skipped_total=259 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.337 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.386 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=97.790 frame_age_ms_max=111.250 publish_path_ms_avg=102.255 publish_path_ms_max=102.586 queue_used_after_max=1 skipped=0 skipped_total=259 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.521 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.412 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.684 frame_age_ms_max=141.362 publish_path_ms_avg=102.365 publish_path_ms_max=102.576 queue_used_after_max=1 skipped=0 skipped_total=259 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.367 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.465 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.042 frame_age_ms_max=168.380 publish_path_ms_avg=102.328 publish_path_ms_max=102.540 queue_used_after_max=2 skipped=1 skipped_total=260 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=88.531 frame_age_ms_max=101.185 publish_path_ms_avg=102.300 publish_path_ms_max=103.186 queue_used_after_max=1 skipped=0 skipped_total=260 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.494 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.420 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=116.418 frame_age_ms_max=129.184 publish_path_ms_avg=102.154 publish_path_ms_max=102.441 queue_used_after_max=1 skipped=0 skipped_total=260 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.379 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.645 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.158 frame_age_ms_max=157.906 publish_path_ms_avg=102.227 publish_path_ms_max=102.633 queue_used_after_max=1 skipped=0 skipped_total=260 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=200.378 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.696 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.464 frame_age_ms_max=169.538 publish_path_ms_avg=102.308 publish_path_ms_max=102.550 queue_used_after_max=2 skipped=1 skipped_total=261 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.400 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.905 frame_age_ms_max=117.586 publish_path_ms_avg=102.304 publish_path_ms_max=102.590 queue_used_after_max=1 skipped=0 skipped_total=261 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.441 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.862 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.361 frame_age_ms_max=147.801 publish_path_ms_avg=102.376 publish_path_ms_max=102.540 queue_used_after_max=1 skipped=0 skipped_total=261 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.394 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.023 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.934 frame_age_ms_max=168.485 publish_path_ms_avg=102.256 publish_path_ms_max=102.577 queue_used_after_max=2 skipped=1 skipped_total=262 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.508 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.193 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=93.640 frame_age_ms_max=106.739 publish_path_ms_avg=102.283 publish_path_ms_max=102.457 queue_used_after_max=1 skipped=0 skipped_total=262 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.322 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.269 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=122.546 frame_age_ms_max=134.977 publish_path_ms_avg=102.179 publish_path_ms_max=102.483 queue_used_after_max=1 skipped=0 skipped_total=262 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.556 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.904 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=150.652 frame_age_ms_max=163.098 publish_path_ms_avg=102.167 publish_path_ms_max=102.343 queue_used_after_max=1 skipped=0 skipped_total=262 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.278 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.063 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=99.851 frame_age_ms_max=169.398 publish_path_ms_avg=102.285 publish_path_ms_max=102.501 queue_used_after_max=2 skipped=1 skipped_total=263 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=199.603 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.965 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.668 frame_age_ms_max=123.529 publish_path_ms_avg=102.403 publish_path_ms_max=102.680 queue_used_after_max=1 skipped=0 skipped_total=263 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.289 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.798 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.533 frame_age_ms_max=152.077 publish_path_ms_avg=102.209 publish_path_ms_max=102.645 queue_used_after_max=1 skipped=0 skipped_total=263 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.546 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.709 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=128.620 frame_age_ms_max=169.727 publish_path_ms_avg=102.383 publish_path_ms_max=102.605 queue_used_after_max=2 skipped=1 skipped_total=264 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.312 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.873 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=99.001 frame_age_ms_max=112.042 publish_path_ms_avg=102.258 publish_path_ms_max=102.521 queue_used_after_max=1 skipped=0 skipped_total=264 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.933 frame_age_ms_max=140.699 publish_path_ms_avg=102.220 publish_path_ms_max=102.495 queue_used_after_max=1 skipped=0 skipped_total=264 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.492 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.576 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=147.932 frame_age_ms_max=168.409 publish_path_ms_avg=103.286 publish_path_ms_max=110.967 queue_used_after_max=2 skipped=1 skipped_total=265 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.052 imu_hz=200.124 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.262 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.590 frame_age_ms_max=167.607 publish_path_ms_avg=112.521 publish_path_ms_max=115.439 queue_used_after_max=2 skipped=1 skipped_total=266 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.081 imu_hz=199.784 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.662 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.917 frame_age_ms_max=148.701 publish_path_ms_avg=104.130 publish_path_ms_max=106.843 queue_used_after_max=1 skipped=0 skipped_total=266 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.065 imu_hz=199.476 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.647 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=112.610 frame_age_ms_max=167.121 publish_path_ms_avg=103.446 publish_path_ms_max=104.608 queue_used_after_max=2 skipped=1 skipped_total=267 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.371 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.210 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=113.958 frame_age_ms_max=133.769 publish_path_ms_avg=103.703 publish_path_ms_max=104.712 queue_used_after_max=1 skipped=0 skipped_total=267 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.265 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.445 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.236 frame_age_ms_max=167.096 publish_path_ms_avg=103.980 publish_path_ms_max=108.992 queue_used_after_max=2 skipped=1 skipped_total=268 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.558 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.085 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.197 frame_age_ms_max=159.788 publish_path_ms_avg=107.264 publish_path_ms_max=124.274 queue_used_after_max=1 skipped=0 skipped_total=268 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.474 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.126 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=96.514 frame_age_ms_max=165.928 publish_path_ms_avg=102.232 publish_path_ms_max=102.612 queue_used_after_max=2 skipped=1 skipped_total=269 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.401 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.003 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.360 frame_age_ms_max=117.931 publish_path_ms_avg=102.227 publish_path_ms_max=102.565 queue_used_after_max=1 skipped=0 skipped_total=269 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.476 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.513 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.491 frame_age_ms_max=146.065 publish_path_ms_avg=102.168 publish_path_ms_max=102.276 queue_used_after_max=1 skipped=0 skipped_total=269 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=9.988 imu_hz=199.756 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.170 queue_depth=16
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.852 frame_age_ms_max=165.873 publish_path_ms_avg=102.246 publish_path_ms_max=102.631 queue_used_after_max=2 skipped=1 skipped_total=270 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.130 imu_hz=199.845 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.781 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=90.869 frame_age_ms_max=103.158 publish_path_ms_avg=102.108 publish_path_ms_max=102.225 queue_used_after_max=1 skipped=0 skipped_total=270 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.509 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.913 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=118.879 frame_age_ms_max=131.881 publish_path_ms_avg=102.227 publish_path_ms_max=102.385 queue_used_after_max=1 skipped=0 skipped_total=270 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.291 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.272 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.278 frame_age_ms_max=161.096 publish_path_ms_avg=102.276 publish_path_ms_max=102.493 queue_used_after_max=1 skipped=0 skipped_total=270 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.588 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.660 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=97.195 frame_age_ms_max=167.201 publish_path_ms_avg=102.144 publish_path_ms_max=102.431 queue_used_after_max=2 skipped=1 skipped_total=271 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.284 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.260 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.484 frame_age_ms_max=118.191 publish_path_ms_avg=102.211 publish_path_ms_max=102.501 queue_used_after_max=1 skipped=0 skipped_total=271 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=199.609 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.673 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.213 frame_age_ms_max=146.725 publish_path_ms_avg=102.207 publish_path_ms_max=102.483 queue_used_after_max=1 skipped=0 skipped_total=271 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.261 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.491 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.046 frame_age_ms_max=167.546 publish_path_ms_avg=102.283 publish_path_ms_max=102.613 queue_used_after_max=2 skipped=1 skipped_total=272 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=92.104 frame_age_ms_max=104.334 publish_path_ms_avg=102.123 publish_path_ms_max=102.445 queue_used_after_max=1 skipped=0 skipped_total=272 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.574 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.322 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.962 frame_age_ms_max=132.978 publish_path_ms_avg=102.219 publish_path_ms_max=102.445 queue_used_after_max=1 skipped=0 skipped_total=272 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.425 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.560 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.511 frame_age_ms_max=161.775 publish_path_ms_avg=102.234 publish_path_ms_max=102.641 queue_used_after_max=1 skipped=0 skipped_total=272 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.368 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.384 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=87.638 frame_age_ms_max=164.824 publish_path_ms_avg=102.096 publish_path_ms_max=102.372 queue_used_after_max=2 skipped=1 skipped_total=273 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.531 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.025 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=105.186 frame_age_ms_max=118.384 publish_path_ms_avg=102.210 publish_path_ms_max=102.584 queue_used_after_max=1 skipped=0 skipped_total=273 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.332 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.510 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.567 frame_age_ms_max=146.094 publish_path_ms_avg=102.125 publish_path_ms_max=102.258 queue_used_after_max=1 skipped=0 skipped_total=273 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.460 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.815 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.253 frame_age_ms_max=165.152 publish_path_ms_avg=102.087 publish_path_ms_max=102.193 queue_used_after_max=2 skipped=1 skipped_total=274 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.413 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.085 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=89.644 frame_age_ms_max=102.930 publish_path_ms_avg=102.241 publish_path_ms_max=102.579 queue_used_after_max=1 skipped=0 skipped_total=274 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.461 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.711 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.736 frame_age_ms_max=132.921 publish_path_ms_avg=102.354 publish_path_ms_max=102.622 queue_used_after_max=1 skipped=0 skipped_total=274 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.413 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.242 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.278 frame_age_ms_max=160.679 publish_path_ms_avg=102.130 publish_path_ms_max=102.253 queue_used_after_max=1 skipped=0 skipped_total=274 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.482 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.954 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=95.663 frame_age_ms_max=163.539 publish_path_ms_avg=104.116 publish_path_ms_max=111.214 queue_used_after_max=2 skipped=1 skipped_total=275 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.345 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.959 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.573 frame_age_ms_max=167.391 publish_path_ms_avg=105.199 publish_path_ms_max=109.806 queue_used_after_max=2 skipped=0 skipped_total=275 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.509 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.102 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=97.219 frame_age_ms_max=121.649 publish_path_ms_avg=104.715 publish_path_ms_max=109.214 queue_used_after_max=1 skipped=1 skipped_total=276 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.334 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.540 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.978 frame_age_ms_max=167.289 publish_path_ms_avg=104.374 publish_path_ms_max=106.416 queue_used_after_max=2 skipped=1 skipped_total=277 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.565 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.681 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=103.070 frame_age_ms_max=126.670 publish_path_ms_avg=104.770 publish_path_ms_max=109.796 queue_used_after_max=1 skipped=0 skipped_total=277 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.291 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.030 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.549 frame_age_ms_max=157.014 publish_path_ms_avg=102.389 publish_path_ms_max=103.395 queue_used_after_max=1 skipped=0 skipped_total=277 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.577 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.923 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=94.340 frame_age_ms_max=164.109 publish_path_ms_avg=102.258 publish_path_ms_max=103.400 queue_used_after_max=2 skipped=1 skipped_total=278 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=102.029 frame_age_ms_max=115.393 publish_path_ms_avg=102.225 publish_path_ms_max=102.615 queue_used_after_max=1 skipped=0 skipped_total=278 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.293 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.640 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.698 frame_age_ms_max=144.442 publish_path_ms_avg=102.259 publish_path_ms_max=102.493 queue_used_after_max=1 skipped=0 skipped_total=278 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.555 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.732 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.867 frame_age_ms_max=163.007 publish_path_ms_avg=102.417 publish_path_ms_max=103.038 queue_used_after_max=2 skipped=1 skipped_total=279 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.311 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.787 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=91.544 frame_age_ms_max=104.790 publish_path_ms_avg=102.263 publish_path_ms_max=102.584 queue_used_after_max=1 skipped=0 skipped_total=279 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.493 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.473 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.752 frame_age_ms_max=133.849 publish_path_ms_avg=102.260 publish_path_ms_max=102.577 queue_used_after_max=1 skipped=0 skipped_total=279 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.343 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.442 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=149.532 frame_age_ms_max=162.795 publish_path_ms_avg=102.249 publish_path_ms_max=102.647 queue_used_after_max=2 skipped=0 skipped_total=279 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.532 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.651 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=78.830 frame_age_ms_max=91.669 publish_path_ms_avg=102.178 publish_path_ms_max=102.458 queue_used_after_max=1 skipped=1 skipped_total=280 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.447 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.566 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=106.989 frame_age_ms_max=119.549 publish_path_ms_avg=102.143 publish_path_ms_max=102.289 queue_used_after_max=1 skipped=0 skipped_total=280 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.414 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.469 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.946 frame_age_ms_max=147.051 publish_path_ms_avg=102.105 publish_path_ms_max=102.491 queue_used_after_max=1 skipped=0 skipped_total=280 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.461 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.415 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.133 frame_age_ms_max=162.234 publish_path_ms_avg=102.389 publish_path_ms_max=102.734 queue_used_after_max=2 skipped=1 skipped_total=281 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.409 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.468 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=94.662 frame_age_ms_max=107.827 publish_path_ms_avg=102.333 publish_path_ms_max=102.655 queue_used_after_max=1 skipped=0 skipped_total=281 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.419 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.795 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=124.427 frame_age_ms_max=137.297 publish_path_ms_avg=102.302 publish_path_ms_max=102.562 queue_used_after_max=1 skipped=0 skipped_total=281 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.387 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.236 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=143.007 frame_age_ms_max=162.642 publish_path_ms_avg=102.157 publish_path_ms_max=102.299 queue_used_after_max=2 skipped=1 skipped_total=282 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.525 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.388 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=81.570 frame_age_ms_max=94.726 publish_path_ms_avg=102.231 publish_path_ms_max=102.530 queue_used_after_max=1 skipped=0 skipped_total=282 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.331 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.002 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=110.665 frame_age_ms_max=123.952 publish_path_ms_avg=102.277 publish_path_ms_max=102.554 queue_used_after_max=1 skipped=0 skipped_total=282 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=140.007 frame_age_ms_max=152.787 publish_path_ms_avg=102.238 publish_path_ms_max=102.552 queue_used_after_max=1 skipped=0 skipped_total=282 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.511 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.987 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=99.323 frame_age_ms_max=161.515 publish_path_ms_avg=102.256 publish_path_ms_max=102.560 queue_used_after_max=2 skipped=1 skipped_total=283 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.344 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.265 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=98.769 frame_age_ms_max=111.336 publish_path_ms_avg=102.244 publish_path_ms_max=103.204 queue_used_after_max=1 skipped=0 skipped_total=283 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.591 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.143 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.849 frame_age_ms_max=140.247 publish_path_ms_avg=102.246 publish_path_ms_max=102.927 queue_used_after_max=1 skipped=0 skipped_total=283 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.285 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.868 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.379 frame_age_ms_max=175.216 publish_path_ms_avg=112.787 publish_path_ms_max=133.139 queue_used_after_max=2 skipped=1 skipped_total=284 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.445 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.940 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=113.308 frame_age_ms_max=134.500 publish_path_ms_avg=105.218 publish_path_ms_max=110.746 queue_used_after_max=1 skipped=1 skipped_total=285 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.383 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.532 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=121.105 frame_age_ms_max=162.387 publish_path_ms_avg=104.245 publish_path_ms_max=105.282 queue_used_after_max=2 skipped=1 skipped_total=286 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.073 imu_hz=200.535 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.961 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=112.103 frame_age_ms_max=135.788 publish_path_ms_avg=104.527 publish_path_ms_max=108.351 queue_used_after_max=1 skipped=0 skipped_total=286 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.347 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.577 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=142.520 frame_age_ms_max=193.281 publish_path_ms_avg=118.898 publish_path_ms_max=140.124 queue_used_after_max=2 skipped=2 skipped_total=288 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.522 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.948 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=125.130 frame_age_ms_max=166.385 publish_path_ms_avg=120.386 publish_path_ms_max=137.444 queue_used_after_max=2 skipped=2 skipped_total=290 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.286 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.310 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=134.653 frame_age_ms_max=169.036 publish_path_ms_avg=117.668 publish_path_ms_max=135.419 queue_used_after_max=2 skipped=1 skipped_total=291 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.368 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.175 queue_depth=2
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=145.638 frame_age_ms_max=160.703 publish_path_ms_avg=108.444 publish_path_ms_max=148.399 queue_used_after_max=2 skipped=1 skipped_total=292 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.077 imu_hz=200.624 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.282 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=77.208 frame_age_ms_max=89.828 publish_path_ms_avg=102.203 publish_path_ms_max=102.467 queue_used_after_max=1 skipped=1 skipped_total=293 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.459 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.744 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=104.299 frame_age_ms_max=115.959 publish_path_ms_avg=101.967 publish_path_ms_max=102.096 queue_used_after_max=1 skipped=0 skipped_total=293 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.439 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.230 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=130.663 frame_age_ms_max=142.801 publish_path_ms_avg=102.038 publish_path_ms_max=102.109 queue_used_after_max=1 skipped=0 skipped_total=293 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.449 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.141 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.901 frame_age_ms_max=159.042 publish_path_ms_avg=102.039 publish_path_ms_max=102.143 queue_used_after_max=2 skipped=1 skipped_total=294 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.438 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.557 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=87.503 frame_age_ms_max=101.364 publish_path_ms_avg=102.458 publish_path_ms_max=102.862 queue_used_after_max=1 skipped=0 skipped_total=294 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.342 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.255 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.519 frame_age_ms_max=130.703 publish_path_ms_avg=102.289 publish_path_ms_max=102.500 queue_used_after_max=1 skipped=0 skipped_total=294 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.532 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.410 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=138.118 frame_age_ms_max=158.909 publish_path_ms_avg=102.450 publish_path_ms_max=102.701 queue_used_after_max=2 skipped=1 skipped_total=295 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.341 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.424 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=78.660 frame_age_ms_max=92.189 publish_path_ms_avg=102.344 publish_path_ms_max=102.524 queue_used_after_max=1 skipped=0 skipped_total=295 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.439 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.879 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=108.100 frame_age_ms_max=121.231 publish_path_ms_avg=102.259 publish_path_ms_max=102.589 queue_used_after_max=1 skipped=0 skipped_total=295 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.098 frame_age_ms_max=149.525 publish_path_ms_avg=102.184 publish_path_ms_max=102.606 queue_used_after_max=1 skipped=0 skipped_total=295 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.410 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.196 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=96.971 frame_age_ms_max=158.774 publish_path_ms_avg=102.450 publish_path_ms_max=102.801 queue_used_after_max=2 skipped=1 skipped_total=296 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.475 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.720 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=95.968 frame_age_ms_max=108.199 publish_path_ms_avg=102.062 publish_path_ms_max=102.162 queue_used_after_max=1 skipped=0 skipped_total=296 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=199.432 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.242 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=124.495 frame_age_ms_max=137.683 publish_path_ms_avg=102.302 publish_path_ms_max=102.535 queue_used_after_max=1 skipped=0 skipped_total=296 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.480 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.906 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=133.256 frame_age_ms_max=160.015 publish_path_ms_avg=102.163 publish_path_ms_max=102.237 queue_used_after_max=2 skipped=1 skipped_total=297 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.358 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.836 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=82.008 frame_age_ms_max=94.979 publish_path_ms_avg=102.212 publish_path_ms_max=102.358 queue_used_after_max=1 skipped=0 skipped_total=297 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.443 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.082 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=110.775 frame_age_ms_max=123.323 publish_path_ms_avg=102.189 publish_path_ms_max=102.557 queue_used_after_max=1 skipped=0 skipped_total=297 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.063 imu_hz=200.338 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.080 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.203 frame_age_ms_max=151.720 publish_path_ms_avg=102.194 publish_path_ms_max=102.591 queue_used_after_max=1 skipped=0 skipped_total=297 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.589 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.660 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=87.848 frame_age_ms_max=157.152 publish_path_ms_avg=102.251 publish_path_ms_max=102.585 queue_used_after_max=2 skipped=1 skipped_total=298 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=200.295 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.031 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=97.092 frame_age_ms_max=112.478 publish_path_ms_avg=102.469 publish_path_ms_max=103.916 queue_used_after_max=1 skipped=0 skipped_total=298 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.582 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.924 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.466 frame_age_ms_max=188.652 publish_path_ms_avg=118.386 publish_path_ms_max=138.654 queue_used_after_max=2 skipped=2 skipped_total=300 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.296 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.641 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.149 frame_age_ms_max=184.625 publish_path_ms_avg=123.842 publish_path_ms_max=129.198 queue_used_after_max=2 skipped=2 skipped_total=302 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.542 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.613 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=137.908 frame_age_ms_max=154.080 publish_path_ms_avg=104.088 publish_path_ms_max=114.114 queue_used_after_max=1 skipped=0 skipped_total=302 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.053 imu_hz=200.147 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.788 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=87.014 frame_age_ms_max=157.791 publish_path_ms_avg=104.632 publish_path_ms_max=111.396 queue_used_after_max=2 skipped=1 skipped_total=303 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.080 imu_hz=200.682 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.391 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.941 frame_age_ms_max=157.305 publish_path_ms_avg=104.793 publish_path_ms_max=110.739 queue_used_after_max=2 skipped=1 skipped_total=304 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=199.505 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.341 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=108.149 frame_age_ms_max=133.051 publish_path_ms_avg=106.405 publish_path_ms_max=126.039 queue_used_after_max=1 skipped=0 skipped_total=304 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.366 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.651 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.136 frame_age_ms_max=156.037 publish_path_ms_avg=102.277 publish_path_ms_max=102.581 queue_used_after_max=2 skipped=1 skipped_total=305 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.447 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.559 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=78.656 frame_age_ms_max=91.415 publish_path_ms_avg=102.204 publish_path_ms_max=102.492 queue_used_after_max=1 skipped=0 skipped_total=305 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.406 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.402 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=106.525 frame_age_ms_max=119.005 publish_path_ms_avg=102.114 publish_path_ms_max=102.285 queue_used_after_max=1 skipped=0 skipped_total=305 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=136.008 frame_age_ms_max=149.009 publish_path_ms_avg=102.355 publish_path_ms_max=102.778 queue_used_after_max=1 skipped=0 skipped_total=305 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.437 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.485 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=95.377 frame_age_ms_max=157.639 publish_path_ms_avg=102.238 publish_path_ms_max=102.518 queue_used_after_max=2 skipped=1 skipped_total=306 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=199.481 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.444 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=93.712 frame_age_ms_max=105.871 publish_path_ms_avg=102.092 publish_path_ms_max=102.358 queue_used_after_max=1 skipped=0 skipped_total=306 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.398 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.414 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=120.623 frame_age_ms_max=132.572 publish_path_ms_avg=102.024 publish_path_ms_max=102.207 queue_used_after_max=1 skipped=0 skipped_total=306 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=199.397 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.335 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=128.757 frame_age_ms_max=155.629 publish_path_ms_avg=102.204 publish_path_ms_max=102.420 queue_used_after_max=2 skipped=1 skipped_total=307 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.465 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.333 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=76.683 frame_age_ms_max=89.269 publish_path_ms_avg=102.110 publish_path_ms_max=102.261 queue_used_after_max=1 skipped=0 skipped_total=307 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=200.358 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.007 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=104.073 frame_age_ms_max=116.291 publish_path_ms_avg=102.057 publish_path_ms_max=102.129 queue_used_after_max=1 skipped=0 skipped_total=307 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.577 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.001 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=132.396 frame_age_ms_max=145.483 publish_path_ms_avg=102.273 publish_path_ms_max=102.550 queue_used_after_max=1 skipped=0 skipped_total=307 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.304 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.192 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=91.656 frame_age_ms_max=154.494 publish_path_ms_avg=102.148 publish_path_ms_max=102.507 queue_used_after_max=2 skipped=1 skipped_total=308 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.547 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.151 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=89.553 frame_age_ms_max=102.435 publish_path_ms_avg=102.193 publish_path_ms_max=102.494 queue_used_after_max=1 skipped=0 skipped_total=308 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.061 imu_hz=200.307 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.939 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.679 frame_age_ms_max=129.826 publish_path_ms_avg=102.094 publish_path_ms_max=102.370 queue_used_after_max=1 skipped=0 skipped_total=308 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.459 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.940 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=144.924 frame_age_ms_max=156.944 publish_path_ms_avg=102.065 publish_path_ms_max=102.211 queue_used_after_max=2 skipped=0 skipped_total=308 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.418 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.097 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=73.410 frame_age_ms_max=85.878 publish_path_ms_avg=102.183 publish_path_ms_max=102.477 queue_used_after_max=1 skipped=1 skipped_total=309 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=200.490 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.834 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=102.035 frame_age_ms_max=114.642 publish_path_ms_avg=102.231 publish_path_ms_max=102.448 queue_used_after_max=1 skipped=0 skipped_total=309 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.060 imu_hz=199.369 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.643 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=129.853 frame_age_ms_max=142.164 publish_path_ms_avg=102.107 publish_path_ms_max=102.267 queue_used_after_max=1 skipped=0 skipped_total=309 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.501 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.956 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=107.747 frame_age_ms_max=156.092 publish_path_ms_avg=102.121 publish_path_ms_max=102.248 queue_used_after_max=2 skipped=1 skipped_total=310 samples=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=85.775 frame_age_ms_max=98.523 publish_path_ms_avg=102.160 publish_path_ms_max=102.555 queue_used_after_max=1 skipped=0 skipped_total=310 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.426 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.695 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=114.546 frame_age_ms_max=127.064 publish_path_ms_avg=102.209 publish_path_ms_max=102.719 queue_used_after_max=1 skipped=0 skipped_total=310 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.064 imu_hz=199.457 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.543 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.214 frame_age_ms_max=176.419 publish_path_ms_avg=109.543 publish_path_ms_max=125.885 queue_used_after_max=2 skipped=1 skipped_total=311 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.056 imu_hz=200.205 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.701 queue_depth=2
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=117.227 frame_age_ms_max=158.069 publish_path_ms_avg=108.013 publish_path_ms_max=125.011 queue_used_after_max=2 skipped=1 skipped_total=312 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.075 imu_hz=199.671 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.696 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=131.497 frame_age_ms_max=176.114 publish_path_ms_avg=116.854 publish_path_ms_max=147.129 queue_used_after_max=2 skipped=1 skipped_total=313 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=200.443 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.351 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=98.623 frame_age_ms_max=119.558 publish_path_ms_avg=103.630 publish_path_ms_max=107.220 queue_used_after_max=1 skipped=1 skipped_total=314 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.012 imu_hz=200.238 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.804 queue_depth=10
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=127.951 frame_age_ms_max=163.001 publish_path_ms_avg=104.996 publish_path_ms_max=110.310 queue_used_after_max=2 skipped=1 skipped_total=315 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.120 imu_hz=199.637 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.555 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=91.441 frame_age_ms_max=103.696 publish_path_ms_avg=102.062 publish_path_ms_max=102.199 queue_used_after_max=1 skipped=0 skipped_total=315 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.328 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.310 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=119.300 frame_age_ms_max=131.738 publish_path_ms_avg=102.159 publish_path_ms_max=102.386 queue_used_after_max=1 skipped=0 skipped_total=315 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=199.554 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.396 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=118.958 frame_age_ms_max=153.488 publish_path_ms_avg=102.446 publish_path_ms_max=102.634 queue_used_after_max=2 skipped=1 skipped_total=316 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.325 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.422 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=79.741 frame_age_ms_max=93.257 publish_path_ms_avg=102.352 publish_path_ms_max=102.731 queue_used_after_max=1 skipped=0 skipped_total=316 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.069 imu_hz=200.464 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.718 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=109.601 frame_age_ms_max=122.607 publish_path_ms_avg=102.289 publish_path_ms_max=102.807 queue_used_after_max=1 skipped=0 skipped_total=316 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=9.999 imu_hz=199.981 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.574 queue_depth=15
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=139.722 frame_age_ms_max=152.763 publish_path_ms_avg=102.370 publish_path_ms_max=102.689 queue_used_after_max=2 skipped=0 skipped_total=316 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.132 imu_hz=199.882 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.714 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=69.016 frame_age_ms_max=81.403 publish_path_ms_avg=102.154 publish_path_ms_max=102.559 queue_used_after_max=1 skipped=1 skipped_total=317 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.417 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.241 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=97.334 frame_age_ms_max=110.007 publish_path_ms_avg=102.214 publish_path_ms_max=102.533 queue_used_after_max=1 skipped=0 skipped_total=317 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.066 imu_hz=200.415 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.783 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.141 frame_age_ms_max=138.635 publish_path_ms_avg=102.217 publish_path_ms_max=102.554 queue_used_after_max=1 skipped=0 skipped_total=317 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=199.401 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.868 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=104.223 frame_age_ms_max=152.261 publish_path_ms_avg=102.217 publish_path_ms_max=102.574 queue_used_after_max=2 skipped=1 skipped_total=318 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.072 imu_hz=200.532 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.216 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=85.003 frame_age_ms_max=98.438 publish_path_ms_avg=102.408 publish_path_ms_max=102.684 queue_used_after_max=1 skipped=0 skipped_total=318 samples=10

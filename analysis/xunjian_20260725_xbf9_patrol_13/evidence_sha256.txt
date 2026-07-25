@@ -1,0 +1,5 @@
+7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b  /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/route_original.csv
+a316e56f90f73397c2e6b59d900f8c3d1558e567d9aaa02fc357b8624f703b78  /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/route_runtime.csv
+0cc90d5ee142b54b939338b3ef821f8e04b15d2aef14b311b9fe58068fca1c89  /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/manual_anchor.json
+3935c6021ec02c208cdca905c7c6a93bb70709d6517dd5011b882f932d6a6206  /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/experiment_telemetry.jsonl
+a7c83ea6e37a1efd60ca828ffe247c955c867f4633bd9fca9f2b3a357dcfdea0  /home/unitree/go2_fastlio_ws/patrol_logs/runs/20260725/xunjian-20260725-13/follower_control_trace.jsonl

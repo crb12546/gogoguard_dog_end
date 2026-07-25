@@ -1,0 +1,28 @@
+{
+  "audit": "route_recording_audit.json",
+  "completed_at": "2026-07-25T14:29:21.699+08:00",
+  "created_at": "2026-07-25T14:23:27.108+08:00",
+  "errors": [],
+  "formal_recording_started_epoch": 1784960669.242379,
+  "formal_recording_stopped_epoch": 1784960945.7207854,
+  "localization_session_end": {
+    "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 77512,
+    "start_ticks": 214086
+  },
+  "localization_session_start": {
+    "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 77512,
+    "start_ticks": 214086
+  },
+  "min_distance_m": 0.4,
+  "recording_run_dir": "/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-142327-xbf8-blackbox-165735",
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf8.csv",
+  "route_line_count": 359,
+  "route_sha256": "cb0c3ea9fd00ef1be0855ce263c3aad2691a827f6176400fed6004d7b9b3bd59",
+  "same_fastlio_session_at_start_and_stop": true,
+  "schema": "go2.route_recording_link.v1",
+  "status": "complete"
+}

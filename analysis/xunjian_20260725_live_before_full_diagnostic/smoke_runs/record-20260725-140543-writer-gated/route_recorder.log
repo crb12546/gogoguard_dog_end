@@ -1,0 +1,9 @@
+1784959569.730704 [0] route_reco: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[INFO] [1784959570.205090106] [route_recorder]: route_recorder started
+[INFO] [1784959570.205949630] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784959570.206591769] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/_diagnostic_writer_gate_smoke_do_not_use.csv
+[INFO] [1784959570.207233844] [route_recorder]: min_distance: 0.4
+[INFO] [1784959570.207871343] [route_recorder]: ROUTE_RECORDER_GATE_ACTIVE file=/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/.route_recording_enabled
+[INFO] [1784959583.033684742] [route_recorder]: ROUTE_RECORDER_GATE_RELEASED file=/home/unitree/go2_fastlio_ws/patrol_logs/recordings/20260725/record-20260725-140543-_diagnostic_writer_gate_smoke_do_not_use-blackbox-124868/.route_recording_enabled
+[INFO] [1784959583.034592236] [route_recorder]: saved point 0: x=-0.030, y=-0.017, yaw=-0.009
+[INFO] [1784959588.249338673] [route_recorder]: route_recorder stopped by Ctrl+C

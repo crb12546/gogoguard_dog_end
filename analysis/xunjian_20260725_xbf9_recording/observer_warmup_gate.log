@@ -1,0 +1,39 @@
+FASTLIO_FRESH_SAMPLE stamp=1784977184.523275 age_ms=425.745 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784977184.622635 age_ms=428.189 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784977184.721995 age_ms=477.493 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784977184.920715 age_ms=401.425 frame_dt_ms=198.720 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.020075 age_ms=424.140 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.119435 age_ms=426.248 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.318155 age_ms=352.147 frame_dt_ms=198.720 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.417515 age_ms=339.833 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.516875 age_ms=342.276 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.616235 age_ms=344.479 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=4/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.715595 age_ms=355.090 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=5/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.814926 age_ms=362.448 frame_dt_ms=99.330 fresh=1 sequential=1 consecutive=6/10
+FASTLIO_FRESH_SAMPLE stamp=1784977185.913821 age_ms=363.302 frame_dt_ms=98.895 fresh=1 sequential=1 consecutive=7/10
+FASTLIO_FRESH_SAMPLE stamp=1784977186.013275 age_ms=368.986 frame_dt_ms=99.454 fresh=1 sequential=1 consecutive=8/10
+FASTLIO_FRESH_SAMPLE stamp=1784977186.112679 age_ms=372.018 frame_dt_ms=99.405 fresh=1 sequential=1 consecutive=9/10
+FASTLIO_FRESH_SAMPLE stamp=1784977186.212143 age_ms=377.808 frame_dt_ms=99.464 fresh=1 sequential=1 consecutive=10/10
+FASTLIO_FRESH_READY frames=10 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+FASTLIO_FRESH_SAMPLE stamp=1784977187.305355 age_ms=414.767 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=1 cpu_pct=97.5 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784977188.497215 age_ms=362.318 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=2 cpu_pct=97.9 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784977189.589379 age_ms=413.297 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=3 cpu_pct=96.8 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784977190.782792 age_ms=344.833 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=4 cpu_pct=97.5 cpu_limit=85.0 fastlio_fresh=1 stable=0/3
+FASTLIO_FRESH_SAMPLE stamp=1784977191.776555 age_ms=457.511 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=5 cpu_pct=42.4 cpu_limit=85.0 fastlio_fresh=1 stable=1/3
+FASTLIO_FRESH_SAMPLE stamp=1784977192.968875 age_ms=369.476 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=6 cpu_pct=33.5 cpu_limit=85.0 fastlio_fresh=1 stable=2/3
+FASTLIO_FRESH_SAMPLE stamp=1784977194.061835 age_ms=384.308 frame_dt_ms=first fresh=1 sequential=1 consecutive=1/1
+FASTLIO_FRESH_READY frames=1 max_age_ms=500.000 frame_dt_ms_range=50.000..150.000
+PATROL_START_GATE sample=7 cpu_pct=33.5 cpu_limit=85.0 fastlio_fresh=1 stable=3/3
+PATROL_START_GATE_READY cpu_pct=33.5 fastlio_fresh=1

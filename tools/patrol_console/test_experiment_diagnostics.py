@@ -3,6 +3,7 @@ import csv
 import importlib.util
 import json
 import math
+import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
@@ -127,6 +128,22 @@ class ExperimentDiagnosticsTest(unittest.TestCase):
                 3,
             )
 
+    def test_always_on_saas_video_loop_does_not_block_recording(self):
+        service_video = (
+            "python3 -u /home/unitree/go2_fastlio_ws/scripts/"
+            "go2_saas_agent.py video-loop --seconds 20 --upload"
+        )
+        active_patrol = (
+            "python3 -u waypoint_follower_go2_2_trace.py"
+        )
+
+        self.assertIsNone(
+            self.recording.CONFLICT_PATTERN.search(service_video)
+        )
+        self.assertIsNotNone(
+            self.recording.CONFLICT_PATTERN.search(active_patrol)
+        )
+
     def test_base_evidence_contains_only_current_experiment_bytes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -158,6 +175,113 @@ class ExperimentDiagnosticsTest(unittest.TestCase):
             )
             self.assertFalse(
                 copied[0]["source_truncated_since_start"]
+            )
+
+    def test_base_evidence_respects_formal_stop_offset(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            workspace = root / "workspace"
+            run_dir = root / "run"
+            source = workspace / "patrol_logs" / "fast_lio.log"
+            source.parent.mkdir(parents=True)
+            source.write_bytes(b"before\nformal\npost-stop\n")
+
+            copied = self.recording.copy_base_evidence(
+                workspace,
+                run_dir,
+                offsets={str(source): len(b"before\n")},
+                end_offsets={
+                    str(source): len(b"before\nformal\n")
+                },
+            )
+
+            self.assertEqual(len(copied), 1)
+            self.assertEqual(
+                (run_dir / copied[0]["copy"]).read_bytes(),
+                b"formal\n",
+            )
+
+    def test_fastlio_recovery_and_lock_are_counted_explicitly(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run_dir = Path(tmp)
+            base_logs = run_dir / "base_logs"
+            base_logs.mkdir()
+            fastlio = base_logs / "fast_lio.log"
+            fastlio.write_text(
+                "[FAST_LIO_RECOVERY] accepted current frame\n"
+                "[FAST_LIO_HEALTH] FAILED: invalid frame\n"
+                "odometry output is now locked until base restart\n"
+            )
+
+            health = self.recording.summarize_fastlio_health(
+                fastlio
+            )
+            timing = self.audit.log_timing_audit(
+                run_dir,
+                None,
+                None,
+            )
+
+            self.assertEqual(health["recovery_events"], 1)
+            self.assertEqual(health["health_failed_events"], 1)
+            self.assertEqual(health["permanent_lock_events"], 1)
+            self.assertEqual(
+                timing["fastlio_recovery"]["count"],
+                1,
+            )
+            self.assertEqual(
+                timing["fastlio_health_failed"]["matching_lines"],
+                1,
+            )
+            self.assertEqual(
+                timing["fastlio_permanent_lock"]["matching_lines"],
+                1,
+            )
+
+    def test_rosbag_record_timing_reads_canonical_database(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run_dir = Path(tmp)
+            bag_dir = run_dir / "rosbag"
+            bag_dir.mkdir()
+            database = bag_dir / "rosbag_0.db3"
+            connection = sqlite3.connect(str(database))
+            try:
+                connection.execute(
+                    "CREATE TABLE topics("
+                    "id INTEGER PRIMARY KEY, name TEXT)"
+                )
+                connection.execute(
+                    "CREATE TABLE messages("
+                    "id INTEGER PRIMARY KEY, topic_id INTEGER, "
+                    "timestamp INTEGER)"
+                )
+                connection.execute(
+                    "INSERT INTO topics(id, name) VALUES(1, '/Odometry')"
+                )
+                connection.executemany(
+                    "INSERT INTO messages(topic_id, timestamp) "
+                    "VALUES(1, ?)",
+                    [
+                        (1000000000,),
+                        (1100000000,),
+                        (1800000000,),
+                    ],
+                )
+                connection.commit()
+            finally:
+                connection.close()
+
+            result = self.audit.rosbag_record_timing(run_dir)
+
+            self.assertEqual(
+                result["topics"]["/Odometry"]["count"],
+                3,
+            )
+            self.assertAlmostEqual(
+                result["topics"]["/Odometry"][
+                    "record_time_gap_s"
+                ]["max"],
+                0.7,
             )
 
     def test_localization_configuration_records_runtime_extrinsics(self):

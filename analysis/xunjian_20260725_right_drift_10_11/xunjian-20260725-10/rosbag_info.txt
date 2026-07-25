@@ -1,0 +1,16 @@
+
+Files:             rosbag_0.db3
+Bag size:          36.9 MiB
+Storage id:        sqlite3
+Duration:          374.197s
+Start:             Jul 25 2026 16:38:49.848 (1784968729.848)
+End:               Jul 25 2026 16:45:04.45 (1784969104.45)
+Messages:          111427
+Topic information: Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 3597 | Serialization Format: cdr
+                   Topic: /patrol_cmd | Type: geometry_msgs/msg/Twist | Count: 7306 | Serialization Format: cdr
+                   Topic: /livox/imu | Type: sensor_msgs/msg/Imu | Count: 74658 | Serialization Format: cdr
+                   Topic: /lf/sportmodestate | Type: unitree_go/msg/SportModeState | Count: 7484 | Serialization Format: cdr
+                   Topic: /cmd_vel | Type: geometry_msgs/msg/Twist | Count: 7391 | Serialization Format: cdr
+                   Topic: /api/sport/request | Type: unitree_api/msg/Request | Count: 7394 | Serialization Format: cdr
+                   Topic: /Odometry | Type: nav_msgs/msg/Odometry | Count: 3597 | Serialization Format: cdr
+

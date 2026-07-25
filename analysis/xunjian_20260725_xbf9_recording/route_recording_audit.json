@@ -1,0 +1,325 @@
+{
+  "created_at": "2026-07-25T19:12:15.991+08:00",
+  "fastlio_health": {
+    "available": true,
+    "health_failed_events": 0,
+    "health_failed_examples": [],
+    "permanent_lock_events": 0,
+    "permanent_lock_examples": [],
+    "recovery_events": 0,
+    "recovery_examples": []
+  },
+  "min_distance_m": 0.4,
+  "recorder_reproduction": {
+    "available": true,
+    "csv_waypoint_count": 1277,
+    "exact_within_2mm_0_002rad": true,
+    "interpretation": "exact recorder reproduction from sampled telemetry",
+    "paired_waypoint_count": 1277,
+    "position_error_m": {
+      "count": 1277,
+      "max": 6.972580106929745e-07,
+      "median": 3.9563714860776524e-07,
+      "min": 1.0682370983974936e-08,
+      "p95": 5.908140507476918e-07
+    },
+    "reconstructed_waypoint_count": 1277,
+    "route_start_to_nearest_telemetry_m": 5.130392584194735e-07,
+    "telemetry_start_index": 199,
+    "yaw_error_deg": {
+      "count": 1277,
+      "max": 2.8631438303288985e-05,
+      "median": 1.4096818429859168e-05,
+      "min": 5.729053633853196e-10,
+      "p95": 2.6973810163827935e-05
+    }
+  },
+  "rosbag_topic_timing": {
+    "errors": [],
+    "topics": {
+      "/Odometry": {
+        "count": 6907,
+        "record_time_gap_s": {
+          "count": 6906,
+          "max": 0.39927919500000003,
+          "median": 0.10207198550000002,
+          "min": 0.07746607,
+          "p95": 0.11083878925
+        }
+      },
+      "/lf/lowstate": {
+        "count": 14163,
+        "record_time_gap_s": {
+          "count": 14162,
+          "max": 0.073572882,
+          "median": 0.049996634500000005,
+          "min": 0.026549568000000003,
+          "p95": 0.05048615035
+        }
+      },
+      "/lf/sportmodestate": {
+        "count": 14162,
+        "record_time_gap_s": {
+          "count": 14161,
+          "max": 0.07641534600000001,
+          "median": 0.049996582000000005,
+          "min": 0.023621772000000003,
+          "p95": 0.051586394
+        }
+      },
+      "/lf/wirelesscontroller": {
+        "count": 0,
+        "record_time_gap_s": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p95": null
+        }
+      },
+      "/livox/imu": {
+        "count": 141622,
+        "record_time_gap_s": {
+          "count": 141621,
+          "max": 0.036381687,
+          "median": 0.0047329450000000006,
+          "min": 5.6961000000000006e-05,
+          "p95": 0.006035857
+        }
+      },
+      "/tf": {
+        "count": 6906,
+        "record_time_gap_s": {
+          "count": 6905,
+          "max": 0.39948162600000003,
+          "median": 0.102120547,
+          "min": 0.076108302,
+          "p95": 0.111307402
+        }
+      },
+      "/wirelesscontroller": {
+        "count": 13271,
+        "record_time_gap_s": {
+          "count": 13270,
+          "max": 0.800018027,
+          "median": 0.049996213000000005,
+          "min": 0.023863757000000003,
+          "p95": 0.051463376199999994
+        }
+      },
+      "/wirelesscontroller_unprocessed": {
+        "count": 0,
+        "record_time_gap_s": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p95": null
+        }
+      }
+    },
+    "window_end_epoch": 1784977918.37189,
+    "window_start_epoch": 1784977210.2813625
+  },
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf9.csv",
+  "route_geometry": {
+    "body_yaw_vs_track_error_deg": {
+      "count": 1276,
+      "max": 24.495059851724957,
+      "median": 10.673940891429716,
+      "min": 0.03218077769117008,
+      "p95": 17.976637026353206
+    },
+    "bounding_box": {
+      "max_x": 372.441828,
+      "max_y": 8.597327,
+      "min_x": 6.736304,
+      "min_y": -243.971285
+    },
+    "end": {
+      "index": 1276,
+      "v": 0.2,
+      "x": 372.441828,
+      "y": -243.971285,
+      "yaw": -0.86752
+    },
+    "path_length_m": 576.9938307534397,
+    "spacing_above_0_60m": 2,
+    "spacing_above_1_00m": 0,
+    "spacing_m": {
+      "count": 1276,
+      "max": 0.6305707678389414,
+      "median": 0.4509223893729212,
+      "min": 0.40014513703156035,
+      "p95": 0.49509321701960385
+    },
+    "start": {
+      "index": 0,
+      "v": 0.2,
+      "x": 6.736304,
+      "y": -6.468605,
+      "yaw": 0.229249
+    },
+    "strongest_turns": [
+      {
+        "turn_deg": 22.528403812073346,
+        "turn_rad": 0.39319482173952175,
+        "waypoint_index": 778
+      },
+      {
+        "turn_deg": -19.38514607718745,
+        "turn_rad": -0.33833462502698386,
+        "waypoint_index": 993
+      },
+      {
+        "turn_deg": -18.376032789252644,
+        "turn_rad": -0.32072227562689587,
+        "waypoint_index": 132
+      },
+      {
+        "turn_deg": 17.79747012978077,
+        "turn_rad": 0.31062445229001695,
+        "waypoint_index": 324
+      },
+      {
+        "turn_deg": 16.987631273715245,
+        "turn_rad": 0.2964900978410891,
+        "waypoint_index": 204
+      },
+      {
+        "turn_deg": -16.944482906694024,
+        "turn_rad": -0.2957370167697098,
+        "waypoint_index": 122
+      },
+      {
+        "turn_deg": 16.564343761733856,
+        "turn_rad": 0.2891023370744389,
+        "waypoint_index": 336
+      },
+      {
+        "turn_deg": 16.352562713883508,
+        "turn_rad": 0.28540606049612666,
+        "waypoint_index": 101
+      },
+      {
+        "turn_deg": -15.700719133550537,
+        "turn_rad": -0.27402924381132815,
+        "waypoint_index": 983
+      },
+      {
+        "turn_deg": 15.574292285322896,
+        "turn_rad": 0.27182267904683666,
+        "waypoint_index": 86
+      },
+      {
+        "turn_deg": -15.143958485804093,
+        "turn_rad": -0.2643119373626164,
+        "waypoint_index": 1017
+      },
+      {
+        "turn_deg": -14.98823684069101,
+        "turn_rad": -0.26159408193877093,
+        "waypoint_index": 469
+      },
+      {
+        "turn_deg": -14.987996081152911,
+        "turn_rad": -0.2615898798921255,
+        "waypoint_index": 129
+      },
+      {
+        "turn_deg": 14.70572267256581,
+        "turn_rad": 0.2566632795214534,
+        "waypoint_index": 332
+      },
+      {
+        "turn_deg": -14.30399658274885,
+        "turn_rad": -0.24965183656298495,
+        "waypoint_index": 198
+      },
+      {
+        "turn_deg": -14.191632423813273,
+        "turn_rad": -0.24769071202832493,
+        "waypoint_index": 203
+      },
+      {
+        "turn_deg": 14.182527421789336,
+        "turn_rad": 0.24753179976460649,
+        "waypoint_index": 1085
+      },
+      {
+        "turn_deg": -13.980330001810156,
+        "turn_rad": -0.24400278904693204,
+        "waypoint_index": 974
+      },
+      {
+        "turn_deg": 13.556903433094142,
+        "turn_rad": 0.23661260128241557,
+        "waypoint_index": 770
+      },
+      {
+        "turn_deg": 13.494832988321182,
+        "turn_rad": 0.23552926765295013,
+        "waypoint_index": 319
+      }
+    ],
+    "waypoint_count": 1277
+  },
+  "route_sha256": "7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b",
+  "schema": "go2.route_recording_audit.v1",
+  "telemetry": {
+    "health_records": 736,
+    "odom_samples": 7113,
+    "pitch_deg": {
+      "count": 7113,
+      "max": 33.807989738034024,
+      "median": 14.830125591093061,
+      "min": 6.197494545766623,
+      "p95": 28.40325974781163
+    },
+    "planar_motion_m": 581.6307248428922,
+    "received_at_end": {
+      "cmd_vel": 0,
+      "livox_imu": 143460,
+      "low": 14619,
+      "odom": 7115,
+      "patrol_cmd": 0,
+      "sport": 14629,
+      "sport_request": 33242,
+      "wireless": 13271,
+      "wireless_raw": 14619
+    },
+    "roll_deg": {
+      "count": 7113,
+      "max": 31.54918788216834,
+      "median": 15.904065972142924,
+      "min": -8.416390788602536,
+      "p95": 28.682549417475578
+    },
+    "source_stamp_gap_s": {
+      "count": 7112,
+      "max": 0.4970817565917969,
+      "median": 0.09935998916625977,
+      "min": 0.09604954719543457,
+      "p95": 0.09972119331359863
+    },
+    "spatial_motion_m": 610.4518291232125,
+    "written_at_end": {
+      "cmd_vel": 0,
+      "livox_imu": 13806,
+      "low": 713,
+      "odom": 7113,
+      "patrol_cmd": 0,
+      "sport": 9117,
+      "sport_request": 11007,
+      "wireless": 8103,
+      "wireless_raw": 9087
+    },
+    "z_m": {
+      "count": 7113,
+      "max": 150.49535137892144,
+      "median": 82.17319114456389,
+      "min": 2.621673125889076,
+      "p95": 149.0071185048647
+    }
+  }
+}

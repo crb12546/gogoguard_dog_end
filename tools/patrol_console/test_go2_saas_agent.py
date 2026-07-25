@@ -240,6 +240,20 @@ class Go2SaasAgentTest(unittest.TestCase):
             self.assertIn("experiment_telemetry.pgid", command)
             self.assertIn("go2_experiment_snapshot.py", command)
             self.assertIn("go2_experiment_telemetry.py", command)
+            self.assertGreaterEqual(
+                command.count("nice -n 10"),
+                3,
+            )
+            self.assertIn(
+                "runtime_fastlio="
+                "recover_positive_gap_without_permanent_latch",
+                command,
+            )
+            self.assertIn(
+                "observer_warmup_gate="
+                "cpu_and_consecutive_fastlio_frames",
+                command,
+            )
             self.assertIn("follower_control_trace.jsonl", command)
             self.assertIn("trace_file:=", command)
             self.assertIn(
@@ -249,6 +263,56 @@ class Go2SaasAgentTest(unittest.TestCase):
             self.assertIn(
                 "FOLLOWER_EXACT_TRACE_READY",
                 command,
+            )
+            self.assertIn("FOLLOWER_ODOM_READY", command)
+            self.assertIn("FOLLOWER_BODY_YAW_READY", command)
+            self.assertIn(
+                "motion_enable_file:=",
+                command,
+            )
+            self.assertIn(
+                "use_body_yaw_alignment:=true",
+                command,
+            )
+            self.assertIn(
+                "body_yaw_topic:=/lf/sportmodestate",
+                command,
+            )
+            self.assertIn(
+                "body_yaw_alignment_samples:=10",
+                command,
+            )
+            self.assertIn(
+                "body_yaw_alignment_enabled=true",
+                command,
+            )
+            self.assertIn(
+                "controller_heading_feedback="
+                "unitree_body_yaw_plus_startup_lio_yaw_offset",
+                command,
+            )
+            self.assertIn(
+                "body_yaw_stale_policy="
+                "zero_velocity_hold_until_fresh",
+                command,
+            )
+            self.assertIn(
+                "FOLLOWER_MOTION_INTERLOCK_RELEASED",
+                command,
+            )
+            self.assertLess(
+                command.index("FOLLOWER_ODOM_READY"),
+                command.index("--patrol-start-gate"),
+            )
+            self.assertLess(
+                command.index("FOLLOWER_BODY_YAW_READY"),
+                command.index("--patrol-start-gate"),
+            )
+            self.assertLess(
+                command.index("--patrol-start-gate"),
+                command.index(
+                    "FOLLOWER_MOTION_INTERLOCK_RELEASED"
+                ),
             )
             self.assertNotIn("course_feedback_enabled", command)
             self.assertIn('"kind":"recorder_ready"', command)
@@ -293,6 +357,119 @@ class Go2SaasAgentTest(unittest.TestCase):
             self.assertIn("system_end.json", stop_command)
             self.assertIn("localization_session_end.json", stop_command)
             self.assertIn("experiment_audit.log", stop_command)
+
+    def test_body_yaw_alignment_has_explicit_rollback_switch(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            route = root / "route.csv"
+            route.write_text(
+                "id,x,y,yaw,v\n0,0,0,0,0.2\n1,1,0,0,0.2\n",
+                encoding="utf-8",
+            )
+            self.agent.PATROL_RUNS_DIR = root / "runs"
+
+            command = self.agent.start_patrol_command(
+                route,
+                {
+                    "useBodyYawAlignment": False,
+                    "loopMode": "once",
+                },
+                route_info={},
+            )
+
+            self.assertIn(
+                "use_body_yaw_alignment:=false",
+                command,
+            )
+            self.assertIn(
+                "body_yaw_alignment_enabled=false",
+                command,
+            )
+            self.assertIn(
+                "controller_heading_feedback="
+                "raw_fast_lio_euler_yaw",
+                command,
+            )
+            self.assertNotIn("FOLLOWER_BODY_YAW_READY", command)
+
+    def test_hash_locked_horizontal_route_replaces_body_yaw_adapter(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            route = root / "route.csv"
+            route.write_text(
+                "id,x,y,yaw,v\n0,4,7,0.1,0.2\n1,5,7,0.1,0.2\n",
+                encoding="utf-8",
+            )
+            horizontal = Path(str(route) + ".horizontal.csv")
+            horizontal.write_text(
+                "id,x,y,yaw,v\n0,0,0,0.2,0.2\n1,1,0,0.2,0.2\n",
+                encoding="utf-8",
+            )
+            metadata = Path(str(route) + ".horizontal.json")
+            metadata.write_text(
+                json.dumps(
+                    {
+                        "schema": "go2.horizontal_route.v1",
+                        "source_route_sha256": (
+                            self.agent.sha256_file(route)
+                        ),
+                        "horizontal_route_sha256": (
+                            self.agent.sha256_file(horizontal)
+                        ),
+                        "route_points": 2,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            evidence = self.agent.horizontal_route_evidence(route)
+            self.assertTrue(evidence["available"])
+            alias = root / "platform-alias.csv"
+            alias.write_bytes(route.read_bytes())
+            stale_horizontal = Path(
+                str(alias) + ".horizontal.csv"
+            )
+            stale_horizontal.write_text(
+                "id,x,y,yaw,v\n0,0,0,0,0.2\n1,2,0,0,0.2\n",
+                encoding="utf-8",
+            )
+            Path(str(alias) + ".horizontal.json").write_text(
+                json.dumps(
+                    {
+                        "schema": "go2.horizontal_route.v1",
+                        "source_route_sha256": "old-route-hash",
+                        "horizontal_route_sha256": (
+                            self.agent.sha256_file(stale_horizontal)
+                        ),
+                        "route_points": 2,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            alias_evidence = self.agent.horizontal_route_evidence(alias)
+            self.assertTrue(alias_evidence["available"])
+            self.assertTrue(alias_evidence["contentAlias"])
+            self.assertEqual(
+                alias_evidence["horizontalRoutePath"],
+                str(horizontal),
+            )
+            self.agent.PATROL_RUNS_DIR = root / "runs"
+
+            command = self.agent.start_patrol_command(
+                route,
+                {"loopMode": "once"},
+                route_info={"horizontalRouteEvidence": evidence},
+            )
+
+            self.assertIn("use_horizontal_frame:=true", command)
+            self.assertIn("use_body_yaw_alignment:=false", command)
+            self.assertIn("FOLLOWER_HORIZONTAL_FRAME_READY", command)
+            self.assertNotIn("FOLLOWER_BODY_YAW_READY", command)
+            self.assertIn(
+                "controller_heading_feedback="
+                "full_fast_lio_quaternion_in_frozen_gravity_level_frame",
+                command,
+            )
+            self.assertIn("horizontal_runtime_body_yaw_replacement=false", command)
 
     def test_start_failure_finalizes_only_its_own_evidence_directory(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -399,6 +576,54 @@ class Go2SaasAgentTest(unittest.TestCase):
                 "ROUTE_RECORDING_LINK_MISMATCH",
             ):
                 self.agent.route_recording_evidence(route)
+
+    def test_recording_sidecar_follows_byte_identical_platform_alias(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            recorded = root / "xbf9.csv"
+            recorded.write_text(
+                "id,x,y,yaw,v\n0,0,0,0,0.2\n1,1,0,0,0.2\n"
+            )
+            recorded_sha = self.agent.sha256_file(recorded)
+            recorded_sidecar = Path(
+                str(recorded) + ".recording.json"
+            )
+            recorded_sidecar.write_text(
+                json.dumps(
+                    {
+                        "schema": "go2.route_recording_link.v1",
+                        "route_sha256": recorded_sha,
+                        "recording_run_dir": "/recordings/xbf9",
+                        "status": "complete",
+                        "same_fastlio_session_at_start_and_stop": True,
+                    }
+                )
+            )
+
+            alias = root / "xbf2.csv"
+            alias.write_bytes(recorded.read_bytes())
+            Path(str(alias) + ".recording.json").write_text(
+                json.dumps(
+                    {
+                        "schema": "go2.route_recording_link.v1",
+                        "route_sha256": "old-route-hash",
+                        "recording_run_dir": "/recordings/old",
+                        "status": "complete",
+                    }
+                )
+            )
+
+            evidence = self.agent.route_recording_evidence(alias)
+            self.assertTrue(evidence["available"])
+            self.assertTrue(evidence["contentAlias"])
+            self.assertEqual(
+                evidence["sidecarPath"],
+                str(recorded_sidecar),
+            )
+            self.assertEqual(
+                evidence["recordingRunDir"],
+                "/recordings/xbf9",
+            )
 
     def test_recording_sidecar_with_warnings_is_not_executable(self):
         with tempfile.TemporaryDirectory() as tmp:

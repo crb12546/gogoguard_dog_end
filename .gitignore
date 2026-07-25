@@ -31,6 +31,8 @@ compile_commands.json
 *.posegraph
 *.bag
 *.db3
+*.db3-shm
+*.db3-wal
 *.mcap
 
 # Bulk diagnostic and repeated full-workspace snapshots retained locally.

@@ -1,0 +1,13 @@
+[Unit]
+Description=GO2 FAST-LIO base bringup: Livox then FAST-LIO
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/home/unitree/go2_fastlio_ws/scripts/base_bringup.sh
+ExecStop=/home/unitree/go2_fastlio_ws/scripts/base_stop.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

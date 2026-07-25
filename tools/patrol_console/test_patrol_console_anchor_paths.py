@@ -1,5 +1,6 @@
 import importlib.util
 import subprocess
+import time
 import unittest
 from pathlib import Path
 
@@ -36,6 +37,13 @@ class PatrolConsoleAnchorPathsTest(unittest.TestCase):
         self.assertIn("localization_session_guard.py", command)
         self.assertIn("--mode pcd", command)
         self.assertIn("--invalidate-output", command)
+        self.assertIn("go2_horizontal_frame_calibration.json", command)
+        self.assertIn("--raw-output", command)
+        self.assertIn("/maps/console/raw/anchor_test.pcd", command)
+        self.assertIn(
+            "/maps/console/anchor_test.leveling.json", command
+        )
+        self.assertIn("HorizontalFrameEstimator", command)
         self.assertIn("SESSION_GUARD_NOT_READY", command)
         self.assertLess(
             command.index("SESSION_GUARD_STARTED"),
@@ -75,6 +83,26 @@ class PatrolConsoleAnchorPathsTest(unittest.TestCase):
             "ROUTE_RECORDING_EVIDENCE_INCOMPLETE",
             html,
         )
+
+    def test_console_startup_status_is_neutral_and_recording_timeout_covers_gates(self):
+        html = INDEX_PATH.read_text()
+        source = MODULE_PATH.read_text()
+        self.assertIn("const statusProbing = !s.status_ready", html)
+        self.assertIn("正在检测机器狗", html)
+        self.assertIn('"start_recorder": 320', source)
+
+    def test_telemetry_stream_age_uses_local_monotonic_receipt_time(self):
+        with SERVER.LOCK:
+            old_received_at = SERVER.STATE["telemetry_received_at"]
+            old_age = SERVER.STATE["telemetry_age"]
+            try:
+                SERVER.STATE["telemetry_received_at"] = time.monotonic() - 0.5
+                SERVER._refresh_telemetry_age_locked()
+                self.assertGreaterEqual(SERVER.STATE["telemetry_age"], 0.4)
+                self.assertLessEqual(SERVER.STATE["telemetry_age"], 0.7)
+            finally:
+                SERVER.STATE["telemetry_received_at"] = old_received_at
+                SERVER.STATE["telemetry_age"] = old_age
 
     def test_base_restart_is_blocked_by_active_operations(self):
         for command in (SERVER.act_start_base({}), SERVER.act_stop_base({})):

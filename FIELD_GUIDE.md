@@ -77,13 +77,23 @@ xiaoqu1.pcd: 约 490,313 点，约 11.4 MB
 重启 Livox/FAST-LIO，任务进行中则不能重启；一旦定位会话变化，当前巡检或采集会
 立即停止并判为无效。
 
-### 2. 建图（可与录路线同时进行）
+### 2. 建图（与录路线、自动巡检分开进行）
 
 ```text
-点云地图起名 → 「开始采集」→ 状态行显示实时点数
+点云地图起名 → 「开始采集」→ 保持狗静止
+→ 等状态行显示「水平校准完成，采集中」
 → 遥控带狗把区域走一遍 → 「结束保存」
-→ 等右上角"✅ 点云已保存"通知 → 「载入点云」看俯视图 → 可「下载PCD」
+→ 等右上角"✅ 水平点云已保存"通知 → 「载入点云」看俯视图 → 可「下载PCD」
 ```
+
+下载列表中的 `名称.pcd` 已通过本次 FAST-LIO 完整姿态、外接雷达 IMU 和狗本体
+IMU 共同测得的冻结刚体旋转转换为重力水平坐标。程序不缩放、不拉伸、不把 Z 压成
+0，也不会猜一个固定倾角。原始倾斜点云保存在 `maps/console/raw/名称.pcd`，本次
+变换矩阵、传感器一致性、点数和哈希保存在 `maps/console/名称.leveling.json`。
+
+“水平”只代表 Z 轴与重力方向一致，不代表地图 X 轴自动朝正北；系统没有使用指南针
+强行修改 yaw。如果外接雷达的固定安装角发生变化，必须重新标定，不能继续沿用现有
+安装外参。
 
 ### 3. 录路线
 
@@ -155,7 +165,9 @@ goal_distance: 短路线可降到 0.10，长路线可先保持 0.25
 
 ```text
 狗上: 路线 /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/*.csv
-      点云 /home/unitree/go2_fastlio_ws/maps/console/*.pcd
+      水平点云 /home/unitree/go2_fastlio_ws/maps/console/*.pcd
+      原始点云 /home/unitree/go2_fastlio_ws/maps/console/raw/*.pcd
+      整平证据 /home/unitree/go2_fastlio_ws/maps/console/*.leveling.json
       视频 /home/unitree/go2_fastlio_ws/patrol_logs/videos/*.mp4
 Mac:  代码副本 orin_go2_fastlio_ws/   平台 tools/patrol_console/
       平台日志 /tmp/patrol_console.log

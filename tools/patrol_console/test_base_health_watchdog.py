@@ -93,6 +93,21 @@ class BaseHealthWatchdogPolicyTests(unittest.TestCase):
         reason = self.validate(position=(0.05, 0.02, math.nan))
         self.assertTrue(reason.startswith("non_finite_odom:"))
 
+    def test_five_kilometre_default_accepts_long_route_coordinates(self):
+        args = policy_args()
+        args.max_abs_xy = WATCHDOG.DEFAULT_MAX_ABS_XY_M
+        reason = WATCHDOG.validate_odom_sample(
+            args,
+            (339.0, -300.0, 150.0),
+            10.0,
+            10.1,
+            339.05,
+            -300.02,
+            150.1,
+        )
+        self.assertEqual(WATCHDOG.DEFAULT_MAX_ABS_XY_M, 5000.0)
+        self.assertEqual(reason, "")
+
     def test_3d_mode_rejects_z_absolute_value(self):
         reason = self.validate(monitor_z=True)
         self.assertTrue(reason.startswith("odom_z_abs_out_of_range:"))

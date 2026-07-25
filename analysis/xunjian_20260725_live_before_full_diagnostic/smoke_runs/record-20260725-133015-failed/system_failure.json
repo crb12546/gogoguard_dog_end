@@ -1,0 +1,685 @@
+{
+  "boot_id": "451e9e53-d96e-416c-a053-4ee3b91070e4",
+  "commands": {
+    "ip_link": {
+      "argv": [
+        "ip",
+        "-s",
+        "-details",
+        "link"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 \n    RX: bytes  packets  errors  dropped overrun mcast   \n    1260860308 178601   0       0       0       0       \n    TX: bytes  packets  errors  dropped carrier collsns \n    1260860308 178601   0       0       0       0       \n2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000\n    link/ether 36:9f:21:fa:82:6e brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 0 maxmtu 0 \n    dummy addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 \n    RX: bytes  packets  errors  dropped overrun mcast   \n    0          0        0       0       0       0       \n    TX: bytes  packets  errors  dropped carrier collsns \n    0          0        0       0       0       0       \n3: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\n    link/ether 4c:bb:47:ab:e4:c2 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9194 addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 64000 gso_max_segs 64 \n    RX: bytes  packets  errors  dropped overrun mcast   \n    3855532306 3131098  0       0       0       45831   \n    TX: bytes  packets  errors  dropped carrier collsns \n    178067141  214009   0       0       0       0       \n    altname enP8p1s0\n4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default \n    link/ether 02:42:64:a7:4c:a5 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 65535 \n    bridge forward_delay 1500 hello_time 200 max_age 2000 ageing_time 30000 stp_state 0 priority 32768 vlan_filtering 0 vlan_protocol 802.1Q bridge_id 8000.2:42:64:a7:4c:a5 designated_root 8000.2:42:64:a7:4c:a5 root_port 0 root_path_cost 0 topology_change 0 topology_change_detected 0 hello_timer    0.00 tcn_timer    0.00 topology_change_timer    0.00 gc_timer  297.25 vlan_default_pvid 1 vlan_stats_enabled 0 vlan_stats_per_port 0 group_fwd_mask 0 group_address 01:80:c2:00:00:00 mcast_snooping 1 mcast_router 1 mcast_query_use_ifaddr 0 mcast_querier 0 mcast_hash_elasticity 16 mcast_hash_max 4096 mcast_last_member_count 2 mcast_startup_query_count 2 mcast_last_member_interval 100 mcast_membership_interval 26000 mcast_querier_interval 25500 mcast_query_interval 12500 mcast_query_response_interval 1000 mcast_startup_query_interval 3124 mcast_stats_enabled 0 mcast_igmp_version 2 mcast_mld_version 1 nf_call_iptables 0 nf_call_ip6tables 0 nf_call_arptables 0 addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 \n    RX: bytes  packets  errors  dropped overrun mcast   \n    0          0        0       0       0       0       \n    TX: bytes  packets  errors  dropped carrier collsns \n    0          0        0       0       0       0       \n5: usb0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\n    link/ether 02:0c:29:a3:9b:6d brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 0 maxmtu 65535 addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 \n    RX: bytes  packets  errors  dropped overrun mcast   \n    898009     2920     0       0       0       0       \n    TX: bytes  packets  errors  dropped carrier collsns \n    1134814    3362     0       0       0       0       \n",
+      "truncated": false
+    },
+    "ip_route": {
+      "argv": [
+        "ip",
+        "route",
+        "show"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "default via 192.168.0.1 dev usb0 proto dhcp metric 101 \n169.254.0.0/16 dev eth0 scope link metric 1000 \n172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown \n192.168.0.0/24 dev usb0 proto kernel scope link src 192.168.0.100 metric 101 \n192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.5 \n192.168.123.0/24 dev eth0 proto kernel scope link src 192.168.123.18 \n192.168.144.0/24 dev eth0 proto kernel scope link src 192.168.144.100 \n",
+      "truncated": false
+    },
+    "jetson_clocks": {
+      "argv": [
+        "jetson_clocks",
+        "--show"
+      ],
+      "returncode": 1,
+      "stderr": "",
+      "stdout": "SOC family:tegra234  Machine:NVIDIA Orin NX Developer Kit\nError: Run this script(/usr/bin/jetson_clocks) as a root user\n",
+      "truncated": false
+    },
+    "lscpu": {
+      "argv": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Architecture:                    aarch64\nCPU op-mode(s):                  32-bit, 64-bit\nByte Order:                      Little Endian\nCPU(s):                          8\nOn-line CPU(s) list:             0-7\nThread(s) per core:              1\nCore(s) per socket:              8\nSocket(s):                       1\nVendor ID:                       ARM\nModel:                           1\nModel name:                      ARMv8 Processor rev 1 (v8l)\nStepping:                        r0p1\nCPU max MHz:                     1984.0000\nCPU min MHz:                     115.2000\nBogoMIPS:                        62.50\nL1d cache:                       512 KiB\nL1i cache:                       512 KiB\nL2 cache:                        2 MiB\nL3 cache:                        4 MiB\nVulnerability Itlb multihit:     Not affected\nVulnerability L1tf:              Not affected\nVulnerability Mds:               Not affected\nVulnerability Meltdown:          Not affected\nVulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:        Mitigation; __user pointer sanitization\nVulnerability Spectre v2:        Not affected\nVulnerability Srbds:             Not affected\nVulnerability Tsx async abort:   Not affected\nFlags:                           fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp uscat ilrcpc flagm\n",
+      "truncated": false
+    },
+    "nvpmodel": {
+      "argv": [
+        "nvpmodel",
+        "-q",
+        "--verbose"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NVPM VERB: Config file: /etc/nvpmodel.conf\nNVPM VERB: parsing done for /etc/nvpmodel.conf\nNVPM VERB: Current mode: NV Power Mode: 25W\n3\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_0: PATH /sys/devices/system/cpu/cpu0/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_1: PATH /sys/devices/system/cpu/cpu1/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_2: PATH /sys/devices/system/cpu/cpu2/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_3: PATH /sys/devices/system/cpu/cpu3/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_4: PATH /sys/devices/system/cpu/cpu4/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_5: PATH /sys/devices/system/cpu/cpu5/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_6: PATH /sys/devices/system/cpu/cpu6/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM CPU_ONLINE: ARG CORE_7: PATH /sys/devices/system/cpu/cpu7/online: REAL_VAL: 1 CONF_VAL: 1\nNVPM VERB: PARAM FBP_POWER_GATING: ARG FBP_PG_MASK: PATH /sys/devices/gpu.0/fbp_pg_mask: REAL_VAL: 2 CONF_VAL: 2\nNVPM VERB: PARAM TPC_POWER_GATING: ARG TPC_PG_MASK: PATH /sys/devices/gpu.0/tpc_pg_mask: REAL_VAL: 240 CONF_VAL: 240\nNVPM VERB: PARAM GPU_POWER_CONTROL_ENABLE: ARG GPU_PWR_CNTL_EN: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: on\nNVPM VERB: PARAM CPU_A78_0: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600\nNVPM VERB: PARAM CPU_A78_0: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600\nNVPM VERB: PARAM CPU_A78_1: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600\nNVPM VERB: PARAM CPU_A78_1: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600\nNVPM VERB: PARAM GPU: ARG MIN_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/min_freq: REAL_VAL: 306000000 CONF_VAL: 0\nNVPM VERB: PARAM GPU: ARG MAX_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/max_freq: REAL_VAL: 408000000 CONF_VAL: 408000000\nNVPM VERB: PARAM GPU_POWER_CONTROL_DISABLE: ARG GPU_PWR_CNTL_DIS: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: auto\nNVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13\nNVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap\nNVPM VERB: PARAM DLA0_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_core: REAL_VAL: 614400000 CONF_VAL: 614400000\nNVPM VERB: PARAM DLA1_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_core: REAL_VAL: 614400000 CONF_VAL: 614400000\nNVPM VERB: PARAM DLA0_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000\nNVPM VERB: PARAM DLA1_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000\nNVPM VERB: PARAM PVA0_VPS: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_vps: REAL_VAL: 512000000 CONF_VAL: 512000000\nNVPM VERB: PARAM PVA0_AXI: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_cpu_axi: REAL_VAL: 358400000 CONF_VAL: 358400000\n",
+      "truncated": false
+    },
+    "ros_nodes": {
+      "argv": [
+        "ros2",
+        "node",
+        "list"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/laser_mapping\n/livox_lidar_publisher\n/patrol_console_telemetry\n",
+      "truncated": false
+    },
+    "ros_params_fastlio": {
+      "argv": [
+        "ros2",
+        "param",
+        "dump",
+        "/laser_mapping"
+      ],
+      "returncode": 0,
+      "stderr": "1784957464.174526 [0]       ros2: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)\n",
+      "stdout": "Saving to:  ./laser_mapping.yaml\n",
+      "truncated": false
+    },
+    "ros_params_livox": {
+      "argv": [
+        "ros2",
+        "param",
+        "dump",
+        "/livox_lidar_publisher"
+      ],
+      "returncode": 0,
+      "stderr": "1784957464.567507 [0]       ros2: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)\n",
+      "stdout": "Saving to:  ./livox_lidar_publisher.yaml\n",
+      "truncated": false
+    },
+    "ros_qos_cloud_body": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/cloud_registered_body"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: sensor_msgs/msg/PointCloud2\n\nPublisher count: 1\n\nNode name: laser_mapping\nNode namespace: /\nTopic type: sensor_msgs/msg/PointCloud2\nEndpoint type: PUBLISHER\nGID: 01.10.f0.7f.70.3e.3b.47.82.27.80.1d.00.00.18.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 0\n\n",
+      "truncated": false
+    },
+    "ros_qos_imu": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/livox/imu"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: sensor_msgs/msg/Imu\n\nPublisher count: 1\n\nNode name: livox_lidar_publisher\nNode namespace: /\nTopic type: sensor_msgs/msg/Imu\nEndpoint type: PUBLISHER\nGID: 01.10.57.4d.6c.ef.93.e4.7a.95.fe.97.00.00.16.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 1\n\nNode name: laser_mapping\nNode namespace: /\nTopic type: sensor_msgs/msg/Imu\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f0.7f.70.3e.3b.47.82.27.80.1d.00.00.16.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_qos_lidar": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/livox/lidar"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: livox_ros_driver2/msg/CustomMsg\n\nPublisher count: 1\n\nNode name: livox_lidar_publisher\nNode namespace: /\nTopic type: livox_ros_driver2/msg/CustomMsg\nEndpoint type: PUBLISHER\nGID: 01.10.57.4d.6c.ef.93.e4.7a.95.fe.97.00.00.15.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 1\n\nNode name: laser_mapping\nNode namespace: /\nTopic type: livox_ros_driver2/msg/CustomMsg\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f0.7f.70.3e.3b.47.82.27.80.1d.00.00.15.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_qos_low_state": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/lf/lowstate"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: unitree_go/msg/LowState\n\nPublisher count: 1\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: PUBLISHER\nGID: 01.10.b9.23.c9.52.e9.d2.82.a4.ab.d8.00.00.04.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 7\n\nNode name: go2_saas_agent\nNode namespace: /\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.28.65.04.f0.60.0f.f5.1d.04.15.00.00.15.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.28.99.13.87.29.f2.f1.82.ce.9b.00.00.0a.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.46.10.6b.28.6c.07.84.3b.de.24.00.00.08.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.97.4c.a7.26.1a.40.de.05.34.e4.00.00.02.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.d0.b0.3e.48.23.01.d4.d0.ea.8f.00.00.0a.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f1.c5.36.9a.27.28.ff.22.e7.ea.00.00.54.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: patrol_console_telemetry\nNode namespace: /\nTopic type: unitree_go/msg/LowState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.fb.7f.18.ec.8e.85.9f.74.08.f3.00.00.14.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_qos_odom": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/Odometry"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: nav_msgs/msg/Odometry\n\nPublisher count: 1\n\nNode name: laser_mapping\nNode namespace: /\nTopic type: nav_msgs/msg/Odometry\nEndpoint type: PUBLISHER\nGID: 01.10.f0.7f.70.3e.3b.47.82.27.80.1d.00.00.1b.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 1\n\nNode name: patrol_console_telemetry\nNode namespace: /\nTopic type: nav_msgs/msg/Odometry\nEndpoint type: SUBSCRIPTION\nGID: 01.10.fb.7f.18.ec.8e.85.9f.74.08.f3.00.00.16.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_qos_sport_state": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/lf/sportmodestate"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: unitree_go/msg/SportModeState\n\nPublisher count: 1\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: PUBLISHER\nGID: 01.10.d5.03.db.17.cf.50.be.c9.09.5a.00.00.0c.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 8\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.10.74.7d.2b.99.cb.a4.4a.0f.a5.00.00.04.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.46.10.6b.28.6c.07.84.3b.de.24.00.00.06.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.59.3c.dc.05.3f.20.ec.ff.55.52.00.00.0a.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.6d.75.fb.62.bb.b8.d7.63.94.cb.00.00.14.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.72.ff.a3.2f.42.e0.a4.19.2a.05.00.00.16.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f1.c5.36.9a.27.28.ff.22.e7.ea.00.00.56.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f7.6d.3f.71.59.fe.d8.4b.17.d5.00.00.16.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: patrol_console_telemetry\nNode namespace: /\nTopic type: unitree_go/msg/SportModeState\nEndpoint type: SUBSCRIPTION\nGID: 01.10.fb.7f.18.ec.8e.85.9f.74.08.f3.00.00.15.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_qos_wireless": {
+      "argv": [
+        "ros2",
+        "topic",
+        "info",
+        "-v",
+        "/wirelesscontroller"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Type: unitree_go/msg/WirelessController\n\nPublisher count: 1\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/WirelessController\nEndpoint type: PUBLISHER\nGID: 01.10.f1.c5.36.9a.27.28.ff.22.e7.ea.00.00.12.03.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nSubscription count: 3\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/WirelessController\nEndpoint type: SUBSCRIPTION\nGID: 01.10.28.99.13.87.29.f2.f1.82.ce.9b.00.00.0c.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/WirelessController\nEndpoint type: SUBSCRIPTION\nGID: 01.10.46.10.6b.28.6c.07.84.3b.de.24.00.00.0c.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\nNode name: _CREATED_BY_BARE_DDS_APP_\nNode namespace: _CREATED_BY_BARE_DDS_APP_\nTopic type: unitree_go/msg/WirelessController\nEndpoint type: SUBSCRIPTION\nGID: 01.10.f7.6d.3f.71.59.fe.d8.4b.17.d5.00.00.1e.04.00.00.00.00.00.00.00.00\nQoS profile:\n  Reliability: RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT\n  Durability: RMW_QOS_POLICY_DURABILITY_VOLATILE\n  Lifespan: 9223372036854775807 nanoseconds\n  Deadline: 9223372036854775807 nanoseconds\n  Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC\n  Liveliness lease duration: 9223372036854775807 nanoseconds\n\n",
+      "truncated": false
+    },
+    "ros_topics": {
+      "argv": [
+        "ros2",
+        "topic",
+        "list",
+        "-t"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/Laser_map [sensor_msgs/msg/PointCloud2]\n/Odometry [nav_msgs/msg/Odometry]\n/api/arm/request [unitree_api/msg/Request]\n/api/assistant_recorder/request [unitree_api/msg/Request]\n/api/assistant_recorder/response [unitree_api/msg/Response]\n/api/audiohub/request [unitree_api/msg/Request]\n/api/audiohub/response [unitree_api/msg/Response]\n/api/bashrunner/request [unitree_api/msg/Request]\n/api/bashrunner/response [unitree_api/msg/Response]\n/api/config/request [unitree_api/msg/Request]\n/api/config/response [unitree_api/msg/Response]\n/api/fourg_agent/request [unitree_api/msg/Request]\n/api/fourg_agent/response [unitree_api/msg/Response]\n/api/gas_sensor/request [unitree_api/msg/Request]\n/api/gas_sensor/response [unitree_api/msg/Response]\n/api/gesture/request [unitree_api/msg/Request]\n/api/gpt/request [unitree_api/msg/Request]\n/api/gpt/response [unitree_api/msg/Response]\n/api/motion_switcher/request [unitree_api/msg/Request]\n/api/motion_switcher/response [unitree_api/msg/Response]\n/api/obstacles_avoid/request [unitree_api/msg/Request]\n/api/obstacles_avoid/response [unitree_api/msg/Response]\n/api/pet/request [unitree_api/msg/Request]\n/api/pet/response [unitree_api/msg/Response]\n/api/programming_actuator/request [unitree_api/msg/Request]\n/api/programming_actuator/response [unitree_api/msg/Response]\n/api/rm_con/request [unitree_api/msg/Request]\n/api/robot_state/request [unitree_api/msg/Request]\n/api/robot_state/response [unitree_api/msg/Response]\n/api/slam_operate/request [unitree_api/msg/Request]\n/api/slam_operate/response [unitree_api/msg/Response]\n/api/sport/request [unitree_api/msg/Request]\n/api/sport/response [unitree_api/msg/Response]\n/api/sport_lease/request [unitree_api/msg/Request]\n/api/sport_lease/response [unitree_api/msg/Response]\n/api/uwbswitch/request [unitree_api/msg/Request]\n/api/uwbswitch/response [unitree_api/msg/Response]\n/api/videohub/request [unitree_api/msg/Request]\n/api/videohub/response [unitree_api/msg/Response]\n/api/voice/request [unitree_api/msg/Request]\n/api/voice/response [unitree_api/msg/Response]\n/api/vui/request [unitree_api/msg/Request]\n/api/vui/response [unitree_api/msg/Response]\n/arm/action/state [std_msgs/msg/String]\n/arm_Command [unitree_arm/msg/ArmString]\n/arm_Feedback [unitree_arm/msg/ArmString]\n/audio_msg [std_msgs/msg/String]\n/audiohub/player/state [std_msgs/msg/String]\n/audioreceiver [unitree_go/msg/AudioData]\n/audiosender [unitree_go/msg/AudioData]\n/cloud_effected [sensor_msgs/msg/PointCloud2]\n/cloud_registered [sensor_msgs/msg/PointCloud2]\n/cloud_registered_body [sensor_msgs/msg/PointCloud2]\n/config_change_status [unitree_go/msg/ConfigChangeStatus]\n/frontvideostream [unitree_go/msg/Go2FrontVideoData]\n/gas_sensor [std_msgs/msg/String]\n/gesture/result [std_msgs/msg/String]\n/gnss [std_msgs/msg/String]\n/gpt_cmd [std_msgs/msg/String]\n/gpt_state [std_msgs/msg/String]\n/gptflowfeedback [std_msgs/msg/String]\n/lf/battery_alarm [std_msgs/msg/String]\n/lf/lowstate [unitree_go/msg/LowState]\n/lf/sportmodestate [unitree_go/msg/SportModeState]\n/lio_sam_ros2/mapping/odometry [nav_msgs/msg/Odometry]\n/livox/imu [sensor_msgs/msg/Imu]\n/livox/lidar [livox_ros_driver2/msg/CustomMsg]\n/lowcmd [unitree_go/msg/LowCmd]\n/lowstate [unitree_go/msg/LowState]\n/multiplestate [std_msgs/msg/String]\n/parameter_events [rcl_interfaces/msg/ParameterEvent]\n/path [nav_msgs/msg/Path]\n/pctoimage_local [unitree_interfaces/msg/PcToImage]\n/pet/flowfeedback [std_msgs/msg/String]\n/programming_actuator/command [std_msgs/msg/String]\n/programming_actuator/feedback [std_msgs/msg/String]\n/public_network_status [std_msgs/msg/String]\n/qt_add_edge [unitree_interfaces/msg/QtEdge]\n/qt_add_node [unitree_interfaces/msg/QtNode]\n/qt_command [unitree_interfaces/msg/QtCommand]\n/qt_notice [std_msgs/msg/String]\n/query_result_edge [unitree_interfaces/msg/QtEdge]\n/query_result_node [unitree_interfaces/msg/QtNode]\n/rosout [rcl_interfaces/msg/Log]\n/rtc/state [std_msgs/msg/String]\n/rtc_status [std_msgs/msg/String]\n/selftest [std_msgs/msg/String]\n/servicestate [std_msgs/msg/String]\n/servicestateactivate [std_msgs/msg/String]\n/slam_info [std_msgs/msg/String]\n/slam_key_info [std_msgs/msg/String]\n/sportmodestate [unitree_go/msg/SportModeState]\n/tf [tf2_msgs/msg/TFMessage]\n/uslam/client_command [std_msgs/msg/String]\n/uslam/cloud_map [sensor_msgs/msg/PointCloud2]\n/uslam/frontend/cloud_world_ds [sensor_msgs/msg/PointCloud2]\n/uslam/frontend/odom [nav_msgs/msg/Odometry]\n/uslam/localization/cloud_world [sensor_msgs/msg/PointCloud2]\n/uslam/localization/odom [nav_msgs/msg/Odometry]\n/uslam/map_file_pub [sensor_msgs/msg/PointCloud2]\n/uslam/map_file_sub [sensor_msgs/msg/PointCloud2]\n/uslam/navigation/global_path [sensor_msgs/msg/PointCloud2]\n/uslam/server_log [std_msgs/msg/String]\n/utlidar/client_command [std_msgs/msg/String]\n/utlidar/cloud [sensor_msgs/msg/PointCloud2]\n/utlidar/cloud_base [sensor_msgs/msg/PointCloud2]\n/utlidar/cloud_deskewed [sensor_msgs/msg/PointCloud2]\n/utlidar/grid_map [sensor_msgs/msg/PointCloud2]\n/utlidar/height_map [sensor_msgs/msg/PointCloud2]\n/utlidar/height_map_array [unitree_go/msg/HeightMap]\n/utlidar/imu [sensor_msgs/msg/Imu]\n/utlidar/lidar_state [unitree_go/msg/LidarState]\n/utlidar/mapping_cmd [std_msgs/msg/String]\n/utlidar/range_info [geometry_msgs/msg/PointStamped]\n/utlidar/range_map [sensor_msgs/msg/PointCloud2]\n/utlidar/robot_odom [nav_msgs/msg/Odometry]\n/utlidar/robot_pose [geometry_msgs/msg/PoseStamped]\n/utlidar/server_log [std_msgs/msg/String]\n/utlidar/switch [std_msgs/msg/String]\n/utlidar/voxel_map [sensor_msgs/msg/PointCloud2]\n/utlidar/voxel_map_compressed [unitree_go/msg/VoxelMapCompressed]\n/uwbstate [unitree_go/msg/UwbState]\n/uwbswitch [unitree_go/msg/UwbSwitch]\n/videohub/inner [std_msgs/msg/String]\n/webrtcreq [std_msgs/msg/String]\n/webrtcres [std_msgs/msg/String]\n/wirelesscontroller [unitree_go/msg/WirelessController]\n/wirelesscontroller_unprocessed [unitree_go/msg/WirelessController]\n/xfk_webrtcreq [std_msgs/msg/String]\n/xfk_webrtcres [std_msgs/msg/String]\n",
+      "truncated": false
+    },
+    "timedatectl": {
+      "argv": [
+        "timedatectl",
+        "show",
+        "--property=NTPSynchronized",
+        "--property=TimeUSec",
+        "--property=Timezone"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Timezone=Asia/Shanghai\nNTPSynchronized=yes\nTimeUSec=Sat 2026-07-25 13:30:56 CST\n",
+      "truncated": false
+    }
+  },
+  "configuration_files": {
+    "install/fast_lio/share/fast_lio/config/go2_mid360s.yaml": {
+      "sha256": "6b4eed4745b8d7cb266b4b2e9215301cd4bdbefb800af9f778973cde13b24ec2",
+      "text": "/**:\n    ros__parameters:\n        feature_extract_enable: false\n        point_filter_num: 3\n        max_iteration: 3\n        filter_size_surf: 0.5\n        filter_size_map: 0.5\n        cube_side_length: 1000.0\n        runtime_pos_log_enable: false\n        map_file_path: \"./test.pcd\"\n\n        common:\n            lid_topic:  \"/livox/lidar\"\n            imu_topic:  \"/livox/imu\"\n            # Patrol needs the freshest scan rather than replaying a deep FIFO.\n            # Keep enough IMU history to propagate the state across skipped scans.\n            lidar_qos_depth: 2\n            imu_qos_depth: 400\n            time_sync_en: false         # ONLY turn on when external time synchronization is really not possible\n            time_offset_lidar_to_imu: 0.0 # Time offset between lidar and IMU calibrated by other algorithms, e.g. LI-Init (can be found in README).\n                                        # This param will take effect no matter what time_sync_en is. So if the time offset is not known exactly, please set as 0.0\n\n        preprocess:\n            lidar_type: 1                # 1 for Livox serials LiDAR, 2 for Velodyne LiDAR, 3 for ouster LiDAR, 4 for any other pointcloud input\n            scan_line:  4\n            blind: 0.5\n            timestamp_unit: 3\n            scan_rate: 10\n\n        mapping:\n            acc_cov: 0.1\n            gyr_cov: 0.1\n            b_acc_cov: 0.0001\n            b_gyr_cov: 0.0001\n            fov_degree:    360.0\n            det_range:     100.0\n            extrinsic_est_en:  false      # true: enable the online estimation of IMU-LiDAR extrinsic\n            extrinsic_T: [ -0.011, -0.02329, 0.04412 ]\n            extrinsic_R: [ 1., 0., 0.,\n                            0., 1., 0.,\n                            0., 0., 1.]\n\n        publish:\n            path_en: false               # Patrol does not consume /path; avoid growing message serialization.\n            effect_map_en: false         # true: publish Effects\n            map_en: false                # Patrol does not consume the accumulated /Laser_map cloud.\n            scan_publish_en:  true       # false: close all the point cloud output\n            dense_publish_en: false      # false: low down the points number in a global-frame point clouds scan.\n            scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame\n\n        pcd_save:\n            pcd_save_en: false\n            interval: -1                 # how many LiDAR frames saved in each pcd file; \n                                        # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames."
+    },
+    "install/fast_lio/share/fast_lio/launch/mapping.launch.py": {
+      "sha256": "0c935fca54575bb384e886c0d54dfa80543b1af11f5aa2cac588740dd942ed16",
+      "text": "import os.path\n\nfrom ament_index_python.packages import get_package_share_directory\n\nfrom launch import LaunchDescription\nfrom launch.actions import DeclareLaunchArgument\nfrom launch.substitutions import LaunchConfiguration, PathJoinSubstitution\nfrom launch.conditions import IfCondition\n\nfrom launch_ros.actions import Node\n\n\ndef generate_launch_description():\n    package_path = get_package_share_directory('fast_lio')\n    default_config_path = os.path.join(package_path, 'config')\n    default_rviz_config_path = os.path.join(\n        package_path, 'rviz', 'fastlio.rviz')\n\n    use_sim_time = LaunchConfiguration('use_sim_time')\n    config_path = LaunchConfiguration('config_path')\n    config_file = LaunchConfiguration('config_file')\n    rviz_use = LaunchConfiguration('rviz')\n    rviz_cfg = LaunchConfiguration('rviz_cfg')\n\n    declare_use_sim_time_cmd = DeclareLaunchArgument(\n        'use_sim_time', default_value='false',\n        description='Use simulation (Gazebo) clock if true'\n    )\n    declare_config_path_cmd = DeclareLaunchArgument(\n        'config_path', default_value=default_config_path,\n        description='Yaml config file path'\n    )\n    decalre_config_file_cmd = DeclareLaunchArgument(\n        'config_file', default_value='mid360.yaml',\n        description='Config file'\n    )\n    declare_rviz_cmd = DeclareLaunchArgument(\n        'rviz', default_value='true',\n        description='Use RViz to monitor results'\n    )\n    declare_rviz_config_path_cmd = DeclareLaunchArgument(\n        'rviz_cfg', default_value=default_rviz_config_path,\n        description='RViz config file path'\n    )\n\n    fast_lio_node = Node(\n        package='fast_lio',\n        executable='fastlio_mapping',\n        parameters=[PathJoinSubstitution([config_path, config_file]),\n                    {'use_sim_time': use_sim_time}],\n        output='screen'\n    )\n    rviz_node = Node(\n        package='rviz2',\n        executable='rviz2',\n        arguments=['-d', rviz_cfg],\n        condition=IfCondition(rviz_use)\n    )\n\n    ld = LaunchDescription()\n    ld.add_action(declare_use_sim_time_cmd)\n    ld.add_action(declare_config_path_cmd)\n    ld.add_action(decalre_config_file_cmd)\n    ld.add_action(declare_rviz_cmd)\n    ld.add_action(declare_rviz_config_path_cmd)\n\n    ld.add_action(fast_lio_node)\n    ld.add_action(rviz_node)\n\n    return ld"
+    },
+    "install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json": {
+      "sha256": "80cc9eaa8b4fc7df6bb4987c65228696232fe4e1ffad4e15e975ebc5a0159b2f",
+      "text": "{\n  \"lidar_summary_info\" : {\n    \"lidar_type\": 8\n  },\n  \"Mid360s\": {\n    \"lidar_net_info\" : {\n      \"cmd_data_port\"  : 56100,\n      \"push_msg_port\"  : 56200,\n      \"point_data_port\": 56300,\n      \"imu_data_port\"  : 56400,\n      \"log_data_port\"  : 56500\n    },\n    \"host_net_info\" : [\n      {\n        \"host_ip\"        : \"192.168.1.5\",\n        \"cmd_data_port\"  : 56101,\n        \"push_msg_port\"  : 56201,\n        \"point_data_port\": 56301,\n        \"imu_data_port\"  : 56401,\n        \"log_data_port\"  : 56501\n      }\n    ]\n  },\n  \"lidar_configs\" : [\n    {\n      \"ip\" : \"192.168.1.161\",\n      \"pcl_data_type\" : 1,\n      \"pattern_mode\" : 0,\n      \"extrinsic_parameter\" : {\n        \"roll\": 0.0,\n        \"pitch\": 0.0,\n        \"yaw\": 0.0,\n        \"x\": 0,\n        \"y\": 0,\n        \"z\": 0\n      }\n    }\n  ]\n}"
+    },
+    "src/FAST_LIO/config/go2_mid360s.yaml": {
+      "sha256": "6b4eed4745b8d7cb266b4b2e9215301cd4bdbefb800af9f778973cde13b24ec2",
+      "text": "/**:\n    ros__parameters:\n        feature_extract_enable: false\n        point_filter_num: 3\n        max_iteration: 3\n        filter_size_surf: 0.5\n        filter_size_map: 0.5\n        cube_side_length: 1000.0\n        runtime_pos_log_enable: false\n        map_file_path: \"./test.pcd\"\n\n        common:\n            lid_topic:  \"/livox/lidar\"\n            imu_topic:  \"/livox/imu\"\n            # Patrol needs the freshest scan rather than replaying a deep FIFO.\n            # Keep enough IMU history to propagate the state across skipped scans.\n            lidar_qos_depth: 2\n            imu_qos_depth: 400\n            time_sync_en: false         # ONLY turn on when external time synchronization is really not possible\n            time_offset_lidar_to_imu: 0.0 # Time offset between lidar and IMU calibrated by other algorithms, e.g. LI-Init (can be found in README).\n                                        # This param will take effect no matter what time_sync_en is. So if the time offset is not known exactly, please set as 0.0\n\n        preprocess:\n            lidar_type: 1                # 1 for Livox serials LiDAR, 2 for Velodyne LiDAR, 3 for ouster LiDAR, 4 for any other pointcloud input\n            scan_line:  4\n            blind: 0.5\n            timestamp_unit: 3\n            scan_rate: 10\n\n        mapping:\n            acc_cov: 0.1\n            gyr_cov: 0.1\n            b_acc_cov: 0.0001\n            b_gyr_cov: 0.0001\n            fov_degree:    360.0\n            det_range:     100.0\n            extrinsic_est_en:  false      # true: enable the online estimation of IMU-LiDAR extrinsic\n            extrinsic_T: [ -0.011, -0.02329, 0.04412 ]\n            extrinsic_R: [ 1., 0., 0.,\n                            0., 1., 0.,\n                            0., 0., 1.]\n\n        publish:\n            path_en: false               # Patrol does not consume /path; avoid growing message serialization.\n            effect_map_en: false         # true: publish Effects\n            map_en: false                # Patrol does not consume the accumulated /Laser_map cloud.\n            scan_publish_en:  true       # false: close all the point cloud output\n            dense_publish_en: false      # false: low down the points number in a global-frame point clouds scan.\n            scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame\n\n        pcd_save:\n            pcd_save_en: false\n            interval: -1                 # how many LiDAR frames saved in each pcd file; \n                                        # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames."
+    },
+    "src/FAST_LIO/launch/mapping.launch.py": {
+      "sha256": "0c935fca54575bb384e886c0d54dfa80543b1af11f5aa2cac588740dd942ed16",
+      "text": "import os.path\n\nfrom ament_index_python.packages import get_package_share_directory\n\nfrom launch import LaunchDescription\nfrom launch.actions import DeclareLaunchArgument\nfrom launch.substitutions import LaunchConfiguration, PathJoinSubstitution\nfrom launch.conditions import IfCondition\n\nfrom launch_ros.actions import Node\n\n\ndef generate_launch_description():\n    package_path = get_package_share_directory('fast_lio')\n    default_config_path = os.path.join(package_path, 'config')\n    default_rviz_config_path = os.path.join(\n        package_path, 'rviz', 'fastlio.rviz')\n\n    use_sim_time = LaunchConfiguration('use_sim_time')\n    config_path = LaunchConfiguration('config_path')\n    config_file = LaunchConfiguration('config_file')\n    rviz_use = LaunchConfiguration('rviz')\n    rviz_cfg = LaunchConfiguration('rviz_cfg')\n\n    declare_use_sim_time_cmd = DeclareLaunchArgument(\n        'use_sim_time', default_value='false',\n        description='Use simulation (Gazebo) clock if true'\n    )\n    declare_config_path_cmd = DeclareLaunchArgument(\n        'config_path', default_value=default_config_path,\n        description='Yaml config file path'\n    )\n    decalre_config_file_cmd = DeclareLaunchArgument(\n        'config_file', default_value='mid360.yaml',\n        description='Config file'\n    )\n    declare_rviz_cmd = DeclareLaunchArgument(\n        'rviz', default_value='true',\n        description='Use RViz to monitor results'\n    )\n    declare_rviz_config_path_cmd = DeclareLaunchArgument(\n        'rviz_cfg', default_value=default_rviz_config_path,\n        description='RViz config file path'\n    )\n\n    fast_lio_node = Node(\n        package='fast_lio',\n        executable='fastlio_mapping',\n        parameters=[PathJoinSubstitution([config_path, config_file]),\n                    {'use_sim_time': use_sim_time}],\n        output='screen'\n    )\n    rviz_node = Node(\n        package='rviz2',\n        executable='rviz2',\n        arguments=['-d', rviz_cfg],\n        condition=IfCondition(rviz_use)\n    )\n\n    ld = LaunchDescription()\n    ld.add_action(declare_use_sim_time_cmd)\n    ld.add_action(declare_config_path_cmd)\n    ld.add_action(decalre_config_file_cmd)\n    ld.add_action(declare_rviz_cmd)\n    ld.add_action(declare_rviz_config_path_cmd)\n\n    ld.add_action(fast_lio_node)\n    ld.add_action(rviz_node)\n\n    return ld"
+    },
+    "src/livox_ros_driver2/config/MID360s_config.json": {
+      "sha256": "80cc9eaa8b4fc7df6bb4987c65228696232fe4e1ffad4e15e975ebc5a0159b2f",
+      "text": "{\n  \"lidar_summary_info\" : {\n    \"lidar_type\": 8\n  },\n  \"Mid360s\": {\n    \"lidar_net_info\" : {\n      \"cmd_data_port\"  : 56100,\n      \"push_msg_port\"  : 56200,\n      \"point_data_port\": 56300,\n      \"imu_data_port\"  : 56400,\n      \"log_data_port\"  : 56500\n    },\n    \"host_net_info\" : [\n      {\n        \"host_ip\"        : \"192.168.1.5\",\n        \"cmd_data_port\"  : 56101,\n        \"push_msg_port\"  : 56201,\n        \"point_data_port\": 56301,\n        \"imu_data_port\"  : 56401,\n        \"log_data_port\"  : 56501\n      }\n    ]\n  },\n  \"lidar_configs\" : [\n    {\n      \"ip\" : \"192.168.1.161\",\n      \"pcl_data_type\" : 1,\n      \"pattern_mode\" : 0,\n      \"extrinsic_parameter\" : {\n        \"roll\": 0.0,\n        \"pitch\": 0.0,\n        \"yaw\": 0.0,\n        \"x\": 0,\n        \"y\": 0,\n        \"z\": 0\n      }\n    }\n  ]\n}"
+    },
+    "src/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py": {
+      "sha256": "29d48e9e2dd2b21352e4ecff9c0a7db2a18994fe688dc68f361b3b70b33ee05a",
+      "text": "import os\nfrom ament_index_python.packages import get_package_share_directory\nfrom launch import LaunchDescription\nfrom launch_ros.actions import Node\nimport launch\n\n################### user configure parameters for ros2 start ###################\nxfer_format   = 1    # 0-Pointcloud2(PointXYZRTL), 1-customized pointcloud format\nmulti_topic   = 0    # 0-All LiDARs share the same topic, 1-One LiDAR one topic\ndata_src      = 0    # 0-lidar, others-Invalid data src\npublish_freq  = 10.0 # freqency of publish, 5.0, 10.0, 20.0, 50.0, etc.\noutput_type   = 0\nframe_id      = 'livox_frame'\nlvx_file_path = '/home/livox/livox_test.lvx'\ncmdline_bd_code = 'livox0000000001'\n\ncur_path = os.path.split(os.path.realpath(__file__))[0] + '/'\ncur_config_path = cur_path + '../config'\nuser_config_path = os.path.join(cur_config_path, 'MID360s_config.json')\n################### user configure parameters for ros2 end #####################\n\nlivox_ros2_params = [\n    {\"xfer_format\": xfer_format},\n    {\"multi_topic\": multi_topic},\n    {\"data_src\": data_src},\n    {\"publish_freq\": publish_freq},\n    {\"output_data_type\": output_type},\n    {\"frame_id\": frame_id},\n    {\"lvx_file_path\": lvx_file_path},\n    {\"user_config_path\": user_config_path},\n    {\"cmdline_input_bd_code\": cmdline_bd_code}\n]\n\n\ndef generate_launch_description():\n    livox_driver = Node(\n        package='livox_ros_driver2',\n        executable='livox_ros_driver2_node',\n        name='livox_lidar_publisher',\n        output='screen',\n        parameters=livox_ros2_params\n        )\n\n    return LaunchDescription([\n        livox_driver,\n        # launch.actions.RegisterEventHandler(\n        #     event_handler=launch.event_handlers.OnProcessExit(\n        #         target_action=livox_rviz,\n        #         on_exit=[\n        #             launch.actions.EmitEvent(event=launch.events.Shutdown()),\n        #         ]\n        #     )\n        # )\n    ])"
+    }
+  },
+  "cpu": {
+    "by_cpu": {
+      "cpu0": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "960000",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu1": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "960000",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu2": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1036800",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu3": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1036800",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu4": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1497600",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu5": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1497600",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu6": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1497600",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      },
+      "cpu7": {
+        "cpufreq_cpuinfo_max_freq": "1984000",
+        "cpufreq_cpuinfo_min_freq": "115200",
+        "cpufreq_scaling_cur_freq": "1497600",
+        "cpufreq_scaling_governor": "schedutil",
+        "cpufreq_scaling_max_freq": "1497600",
+        "cpufreq_scaling_min_freq": "729600",
+        "online": "1"
+      }
+    },
+    "online": "0-7",
+    "possible": "0-7"
+  },
+  "created_at": "2026-07-25T13:31:08.606+08:00",
+  "files": [
+    {
+      "mtime_ns": 1784909171947689855,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/base_bringup.sh",
+      "relative_path": "scripts/base_bringup.sh",
+      "sha256": "367d56b0dd2a289fbb91f263abe738ed075af7312ac8ec02fe53792624458a08",
+      "size_bytes": 7052
+    },
+    {
+      "mtime_ns": 1784029751789840881,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/base_stop.sh",
+      "relative_path": "scripts/base_stop.sh",
+      "sha256": "9ea06cf176baa2e9277c5949ebb9375406c13bec806b7e29fd1ae14ce081220b",
+      "size_bytes": 718
+    },
+    {
+      "mtime_ns": 1784123468592546292,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/env_common.sh",
+      "relative_path": "scripts/env_common.sh",
+      "sha256": "934124c41d4a3c6e674fb232e9e653e6a89eaa09b62d52ee9bb061a81b5dcb95",
+      "size_bytes": 1497
+    },
+    {
+      "mtime_ns": 1784909171943689530,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/ensure_base_ready.sh",
+      "relative_path": "scripts/ensure_base_ready.sh",
+      "sha256": "10499c65e3f336407e695df9c24b6c7355dc39f7782feb45ee26fb8250a4cff8",
+      "size_bytes": 6084
+    },
+    {
+      "mtime_ns": 1784956852000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py",
+      "relative_path": "scripts/go2_saas_agent.py",
+      "sha256": "79158fb3fa5228a9a081a284647fb737ac895c992c317d85d2787370b7a483ca",
+      "size_bytes": 118593
+    },
+    {
+      "mtime_ns": 1784915963218894980,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/go2_base_health_watchdog.py",
+      "relative_path": "scripts/go2_base_health_watchdog.py",
+      "sha256": "cbfc19419a014100ff85a9487bab340e2f8073e5932ba3a88a38f2ba10998d9f",
+      "size_bytes": 8156
+    },
+    {
+      "mtime_ns": 1784909171943689530,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/check_fastlio_freshness.py",
+      "relative_path": "scripts/check_fastlio_freshness.py",
+      "sha256": "d4988937c915db8b6edb044ad0eee7cca69a281ff822fd1761a26a630cf397b2",
+      "size_bytes": 4716
+    },
+    {
+      "mtime_ns": 1784956511000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/go2_experiment_audit.py",
+      "relative_path": "scripts/go2_experiment_audit.py",
+      "sha256": "6b3d9336b0e8e0e13b649badcde84851c8138da14342e721fcdad76f218d5646",
+      "size_bytes": 82737
+    },
+    {
+      "mtime_ns": 1784956632000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/go2_experiment_snapshot.py",
+      "relative_path": "scripts/go2_experiment_snapshot.py",
+      "sha256": "977c8dc8afee36d421f4edf2ae98bb28b589e561a7d23aff9b0c58f9703dc944",
+      "size_bytes": 17166
+    },
+    {
+      "mtime_ns": 1784955919000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/go2_experiment_telemetry.py",
+      "relative_path": "scripts/go2_experiment_telemetry.py",
+      "sha256": "5433c70ba6e2a867bcd2cac58f1411c7b05aed5597d46c2577311867ff66e13a",
+      "size_bytes": 20848
+    },
+    {
+      "mtime_ns": 1784955368000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/localization_session_guard.py",
+      "relative_path": "scripts/localization_session_guard.py",
+      "sha256": "79c4e0001a862b42c336ec60746fe3c8ec6473973c714770531097f71fdb93fe",
+      "size_bytes": 8471
+    },
+    {
+      "mtime_ns": 1784906296946355531,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/manual_route_anchor.py",
+      "relative_path": "scripts/manual_route_anchor.py",
+      "sha256": "c851aeb66c1d3597428fff3272afc4262631c7a5328863fc8b5fe27b4f150ec4",
+      "size_bytes": 15908
+    },
+    {
+      "mtime_ns": 1784955830000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/patrol_performance_monitor.py",
+      "relative_path": "scripts/patrol_performance_monitor.py",
+      "sha256": "8975d041dcfa1efa7b5bd301b05090156da828dda9c6bcefeed356df1b4495dd",
+      "size_bytes": 24074
+    },
+    {
+      "mtime_ns": 1784957369000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/route_recording_blackbox.py",
+      "relative_path": "scripts/route_recording_blackbox.py",
+      "sha256": "551ddf7daf6b2ac1ccd1161b7e48b934b853381eb88a48bbc2f5d6c583e40324",
+      "size_bytes": 42958
+    },
+    {
+      "mtime_ns": 1784956617000000000,
+      "path": "/home/unitree/go2_fastlio_ws/scripts/waypoint_follower_go2_2_trace.py",
+      "relative_path": "scripts/waypoint_follower_go2_2_trace.py",
+      "sha256": "86745b40cea3512f4825c38eeb2b7423254d2bd3d891fdb4c4b0f42d4828c8f0",
+      "size_bytes": 14649
+    },
+    {
+      "mtime_ns": 1784901976809248546,
+      "path": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/go2_fastlio_patrol/route_recorder.py",
+      "relative_path": "src/go2_fastlio_patrol/go2_fastlio_patrol/route_recorder.py",
+      "sha256": "e7354b66f18cab944511e6fdb4c3cf1415bef227c3f553ecae03f55718db0a82",
+      "size_bytes": 3090
+    },
+    {
+      "mtime_ns": 1784894180308466476,
+      "path": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/go2_fastlio_patrol/unitree_safe_cmd_node.py",
+      "relative_path": "src/go2_fastlio_patrol/go2_fastlio_patrol/unitree_safe_cmd_node.py",
+      "sha256": "c80902bbebd52fbe90e1d655dd04e5d5f0625a5de305e754295004d9c7be9e1b",
+      "size_bytes": 21684
+    },
+    {
+      "mtime_ns": 1784894180312466593,
+      "path": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/go2_fastlio_patrol/waypoint_follower_go2_2.py",
+      "relative_path": "src/go2_fastlio_patrol/go2_fastlio_patrol/waypoint_follower_go2_2.py",
+      "sha256": "d205a596fc6118ad7fa191871c646173cb545ab4b136e46de360598e38261120",
+      "size_bytes": 11008
+    },
+    {
+      "mtime_ns": 1784817597554731027,
+      "path": "/home/unitree/go2_fastlio_ws/src/go2_cmd_vel_bridge/src/cmd_vel_udp_sender.cpp",
+      "relative_path": "src/go2_cmd_vel_bridge/src/cmd_vel_udp_sender.cpp",
+      "sha256": "d87c2121624c8896df4823efeee87071b6c88877915492a7c6ae36bfb8d83bdb",
+      "size_bytes": 7451
+    },
+    {
+      "mtime_ns": 1784823602000000000,
+      "path": "/home/unitree/go2_fastlio_ws/src/go2_cmd_vel_bridge/src/go2_sdk2_udp_receiver.cpp",
+      "relative_path": "src/go2_cmd_vel_bridge/src/go2_sdk2_udp_receiver.cpp",
+      "sha256": "94aa743fc0dfe7b4d040c067e97c2e7a5e676d6871d05e2cf859f60d87b02a12",
+      "size_bytes": 7699
+    },
+    {
+      "mtime_ns": 1784822675000000000,
+      "path": "/home/unitree/go2_fastlio_ws/src/FAST_LIO/config/go2_mid360s.yaml",
+      "relative_path": "src/FAST_LIO/config/go2_mid360s.yaml",
+      "sha256": "6b4eed4745b8d7cb266b4b2e9215301cd4bdbefb800af9f778973cde13b24ec2",
+      "size_bytes": 2639
+    },
+    {
+      "mtime_ns": 1778994257000000000,
+      "path": "/home/unitree/go2_fastlio_ws/src/FAST_LIO/launch/mapping.launch.py",
+      "relative_path": "src/FAST_LIO/launch/mapping.launch.py",
+      "sha256": "0c935fca54575bb384e886c0d54dfa80543b1af11f5aa2cac588740dd942ed16",
+      "size_bytes": 2334
+    },
+    {
+      "mtime_ns": 1784910141788993455,
+      "path": "/home/unitree/go2_fastlio_ws/src/livox_ros_driver2/src/lddc.cpp",
+      "relative_path": "src/livox_ros_driver2/src/lddc.cpp",
+      "sha256": "b5811eaf1426d49b691b333ca71ed8f32eaa9c4d1957451b9b945a23ed63401a",
+      "size_bytes": 25880
+    },
+    {
+      "mtime_ns": 1784909601372978694,
+      "path": "/home/unitree/go2_fastlio_ws/src/livox_ros_driver2/src/livox_ros_driver2.cpp",
+      "relative_path": "src/livox_ros_driver2/src/livox_ros_driver2.cpp",
+      "sha256": "3de380f70ae73eb40c2bb04091e861ed3a04d10c7b5bdf702c945ca831bc2b74",
+      "size_bytes": 8144
+    },
+    {
+      "mtime_ns": 1778994255000000000,
+      "path": "/home/unitree/go2_fastlio_ws/src/livox_ros_driver2/config/MID360s_config.json",
+      "relative_path": "src/livox_ros_driver2/config/MID360s_config.json",
+      "sha256": "80cc9eaa8b4fc7df6bb4987c65228696232fe4e1ffad4e15e975ebc5a0159b2f",
+      "size_bytes": 795
+    },
+    {
+      "mtime_ns": 1782470939558754938,
+      "path": "/home/unitree/go2_fastlio_ws/src/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py",
+      "relative_path": "src/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py",
+      "sha256": "29d48e9e2dd2b21352e4ecff9c0a7db2a18994fe688dc68f361b3b70b33ee05a",
+      "size_bytes": 1903
+    },
+    {
+      "mtime_ns": 1784894180300466243,
+      "path": "/home/unitree/go2_fastlio_ws/src/FAST_LIO/src/laserMapping.cpp",
+      "relative_path": "src/FAST_LIO/src/laserMapping.cpp",
+      "sha256": "e4cd05cb7d1836902f1dbbb1e7dc804a39c131a54b1b4925c4457486d5aa5fc1",
+      "size_bytes": 60358
+    },
+    {
+      "mtime_ns": 1784822675000000000,
+      "path": "/home/unitree/go2_fastlio_ws/install/fast_lio/share/fast_lio/config/go2_mid360s.yaml",
+      "relative_path": "install/fast_lio/share/fast_lio/config/go2_mid360s.yaml",
+      "sha256": "6b4eed4745b8d7cb266b4b2e9215301cd4bdbefb800af9f778973cde13b24ec2",
+      "size_bytes": 2639
+    },
+    {
+      "mtime_ns": 1778994257000000000,
+      "path": "/home/unitree/go2_fastlio_ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py",
+      "relative_path": "install/fast_lio/share/fast_lio/launch/mapping.launch.py",
+      "sha256": "0c935fca54575bb384e886c0d54dfa80543b1af11f5aa2cac588740dd942ed16",
+      "size_bytes": 2334
+    },
+    {
+      "mtime_ns": 1778994255000000000,
+      "path": "/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json",
+      "relative_path": "install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json",
+      "sha256": "80cc9eaa8b4fc7df6bb4987c65228696232fe4e1ffad4e15e975ebc5a0159b2f",
+      "size_bytes": 795
+    },
+    {
+      "mtime_ns": 1784901986878253753,
+      "path": "/home/unitree/go2_fastlio_ws/install/go2_fastlio_patrol/lib/go2_fastlio_patrol/route_recorder",
+      "relative_path": "install/go2_fastlio_patrol/lib/go2_fastlio_patrol/route_recorder",
+      "sha256": "472d196c0b7bc9d73d0ccaab6714fd0817124cde5ab4781489333449d4ca178e",
+      "size_bytes": 408
+    },
+    {
+      "mtime_ns": 1784901986878253753,
+      "path": "/home/unitree/go2_fastlio_ws/install/go2_fastlio_patrol/lib/go2_fastlio_patrol/unitree_safe_cmd_node",
+      "relative_path": "install/go2_fastlio_patrol/lib/go2_fastlio_patrol/unitree_safe_cmd_node",
+      "sha256": "a95ab88adcf7dc34a50dc669234d7d7c29f30916761db5b1bea1f5f1ff526ae1",
+      "size_bytes": 422
+    },
+    {
+      "mtime_ns": 1784901986878253753,
+      "path": "/home/unitree/go2_fastlio_ws/install/go2_fastlio_patrol/lib/go2_fastlio_patrol/waypoint_follower_go2_2",
+      "relative_path": "install/go2_fastlio_patrol/lib/go2_fastlio_patrol/waypoint_follower_go2_2",
+      "sha256": "2da01e596d0ab3dd8901f0ca9f033821a6d9e9fd1a02e352f7a495c49a3b038f",
+      "size_bytes": 426
+    },
+    {
+      "mtime_ns": 1784817629823416430,
+      "path": "/home/unitree/go2_fastlio_ws/build/go2_cmd_vel_bridge/cmd_vel_udp_sender",
+      "relative_path": "build/go2_cmd_vel_bridge/cmd_vel_udp_sender",
+      "sha256": "e95089949cac29c3b1d3adb3a108113b737e9de96e2dfc55dde10dc65cccbb3d",
+      "size_bytes": 6570080
+    },
+    {
+      "mtime_ns": 1784823630939719533,
+      "path": "/home/unitree/go2_fastlio_ws/build/go2_cmd_vel_bridge/go2_sdk2_udp_receiver",
+      "relative_path": "build/go2_cmd_vel_bridge/go2_sdk2_udp_receiver",
+      "sha256": "fb64702e141fde3addd9d9e74d99ac2666e330636a1713ec5ebd27eb05eb1fa8",
+      "size_bytes": 4481496
+    },
+    {
+      "mtime_ns": 1784632779594026331,
+      "path": "/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node",
+      "relative_path": "install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node",
+      "sha256": "cc31e33470b1b9dc429ff06afdf83c818c00c5110f95fe1b99b7705fc30ca039",
+      "size_bytes": 60320
+    }
+  ],
+  "filesystem": {
+    "available_bytes": 445596209152,
+    "path": "/home/unitree/go2_fastlio_ws",
+    "total_bytes": 502985183232,
+    "used_percent": 11.41
+  },
+  "hostname": "ubuntu",
+  "interrupts": "CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       \n  9:          0          0          0          0          0          0          0          0     GICv3  25 Level     vgic\n 11:          0          0          0          0          0          0          0          0     GICv3  30 Level     kvm guest ptimer\n 12:          0          0          0          0          0          0          0          0     GICv3  27 Level     kvm guest vtimer\n 13:     479293     437100     496672     591089     264170     495787     404244     411296     GICv3  26 Level     arch_timer\n 18:          0          0          0          0          0          0          0          0     GICv3 255 Level     mc_status\n 20:          0          0          0          0          0          0          0          0     GICv3 202 Level     arm-smmu global fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault\n 21:          0          0          0          0          0          0          0          0     GICv3 264 Level     arm-smmu global fault, arm-smmu-context-fault\n 22:          0          0          0          0          0          0          0          0     GICv3 272 Level     arm-smmu global fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault\n 23:          0          0          0          0          0          0          0          0     GICv3 270 Level     arm-smmu global fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault, arm-smmu-context-fault\n 24:          0          0          0          0          0          0          0          0     GICv3 274 Level     arm-smmu global fault, arm-smmu-context-fault\n 25:          0          0          0          0          0          0          0          0     GICv3 263 Level     13a00000.cbb-fabric\n 26:          0          0          0          0          0          0          0          0     GICv3 204 Level     c600000.aon-fabric\n 27:          0          0          0          0          0          0          0          0     GICv3 206 Level     d600000.bpmp-fabric\n 28:          0          0          0          0          0          0          0          0     GICv3 413 Level     de00000.dce-fabric\n 29:          0          0          0          0          0          0          0          0     GICv3 207 Level     be00000.rce-fabric\n 30:          0          0          0          0          0          0          0          0     GICv3 205 Level     b600000.sce-fabric\n 31:          0          0          0          0          0          0          0          0     GICv3 368 Level     tegra-p2u-intr\n 32:          0          0          0          0          0          0          0          0     GICv3 369 Level     tegra-p2u-intr\n 33:          0          0          0          0          0          0          0          0     GICv3 370 Level     tegra-p2u-intr\n 34:          0          0          0          0          0          0          0          0     GICv3 371 Level     tegra-p2u-intr\n 35:          0          0          0          0          0          0          0          0     GICv3 372 Level     tegra-p2u-intr\n 36:          0          0          0          0          0          0          0          0     GICv3 373 Level     tegra-p2u-intr\n 37:          0          0          0          0          0          0          0          0     GICv3 374 Level     tegra-p2u-intr\n 38:          0          0          0          0          0          0          0          0     GICv3 375 Level     tegra-p2u-intr\n 39:          0          0          0          0          0          0          0          0     GICv3 376 Level     tegra-p2u-intr\n 40:          0          0          0          0          0          0          0          0     GICv3 377 Level     tegra-p2u-intr\n 41:          0          0          0          0          0          0          0          0     GICv3 378 Level     tegra-p2u-intr\n 42:          0          0          0          0          0          0          0          0     GICv3 379 Level     tegra-p2u-intr\n 43:          0          0          0          0          0          0          0          0     GICv3 380 Level     tegra-p2u-intr\n 44:          0          0          0          0          0          0          0          0     GICv3 381 Level     tegra-p2u-intr\n 45:          0          0          0          0          0          0          0          0     GICv3 382 Level     tegra-p2u-intr\n 46:          0          0          0          0          0          0          0          0     GICv3 383 Level     tegra-p2u-intr\n 47:          0          0          0          0          0          0          0          0     GICv3 235 Level     tegra-p2u-intr\n 48:          0          0          0          0          0          0          0          0     GICv3 252 Level     tegra-p2u-intr\n 49:          0          0          0          0          0          0          0          0     GICv3 253 Level     tegra-p2u-intr\n 50:          0          0          0          0          0          0          0          0     GICv3 254 Level     tegra-p2u-intr\n 51:          0          0          0          0          0          0          0          0     GICv3 140 Level     tegra-p2u-intr\n 52:          0          0          0          0          0          0          0          0     GICv3 141 Level     tegra-p2u-intr\n 53:          0          0          0          0          0          0          0          0     GICv3 142 Level     tegra-p2u-intr\n 54:          0          0          0          0          0          0          0          0     GICv3 143 Level     tegra-p2u-intr\n 55:          0          0          0          0          0          0          0          0     GICv3  77 Level     tegra-pcie-intr\n 57:          0          0          0          0          0          0          0          0     GICv3  83 Level     tegra-pcie-intr, PCIe PME, aerdrv\n 59:          0          0          0          0          0          0          0          0     GICv3 386 Level     tegra-pcie-intr\n 61:          0          0          0          0          0          0          0          0     GICv3 388 Level     tegra-pcie-intr, PCIe PME, aerdrv\n 65:        728          0          0          0          0          0          0          0     GICv3 317 Level     uart-pl011\n 66:          0          0          0          0          0          0          0          0     GICv3 152 Level     3c00000.tegra-hsp\n 67:         24          0          0          0          0          0          0          0     GICv3  94 Level     mmc1\n 68:          0          0          0          0          0          0          0          0     GICv3  68 Level     3210000.spi\n 69:          0          0          0          0          0          0          0          0     GICv3  70 Level     3230000.spi\n 70:         51          0          0          0          0          0          0          0     GICv3  57 Level     3160000.i2c\n 71:        106          0          0          0          0          0          0          0     GICv3  58 Level     c240000.i2c\n 72:          2          0          0          0          0          0          0          0     GICv3  59 Level     3180000.i2c\n 73:          0          0          0          0          0          0          0          0     GICv3  60 Level     3190000.i2c\n 74:          0          0          0          0          0          0          0          0     GICv3  62 Level     31b0000.i2c\n 75:          0          0          0          0          0          0          0          0     GICv3  63 Level     31c0000.i2c\n 76:          0          0          0          0          0          0          0          0     GICv3  64 Level     c250000.i2c\n 77:          0          0          0          0          0          0          0          0     GICv3  65 Level     31e0000.i2c\n 79:          0          0          0          0          0          0          0          0     GICv3 108 Level     gpcdma.0\n 80:          0          0          0          0          0          0          0          0     GICv3 109 Level     gpcdma.1\n 81:          0          0          0          0          0          0          0          0     GICv3 110 Level     gpcdma.2\n 82:          0          0          0          0          0          0          0          0     GICv3 111 Level     gpcdma.3\n 83:          0          0          0          0          0          0          0          0     GICv3 112 Level     gpcdma.4\n 84:          0          0          0          0          0          0          0          0     GICv3 113 Level     gpcdma.5\n 85:          0          0          0          0          0          0          0          0     GICv3 114 Level     gpcdma.6\n 86:          0          0          0          0          0          0          0          0     GICv3 115 Level     gpcdma.7\n 87:          0          0          0          0          0          0          0          0     GICv3 116 Level     gpcdma.8\n 88:          0          0          0          0          0          0          0          0     GICv3 117 Level     gpcdma.9\n 89:          0          0          0          0          0          0          0          0     GICv3 118 Level     gpcdma.10\n 90:          0          0          0          0          0          0          0          0     GICv3 119 Level     gpcdma.11\n 91:          0          0          0          0          0          0          0          0     GICv3 120 Level     gpcdma.12\n 92:          0          0          0          0          0          0          0          0     GICv3 121 Level     gpcdma.13\n 93:          0          0          0          0          0          0          0          0     GICv3 122 Level     gpcdma.14\n 94:          0          0          0          0          0          0          0          0     GICv3 123 Level     gpcdma.15\n 95:          0          0          0          0          0          0          0          0     GICv3 124 Level     gpcdma.16\n 96:          0          0          0          0          0          0          0          0     GICv3 125 Level     gpcdma.17\n 97:          0          0          0          0          0          0          0          0     GICv3 126 Level     gpcdma.18\n 98:          0          0          0          0          0          0          0          0     GICv3 127 Level     gpcdma.19\n112:      17197          0          0          0          0          0          0          0     GICv3  92 Level     snd_hda_tegra\n113:          0          0          0          0          0          0          0          0     GICv3  51 Level     bc00000.rtcpu\n114:        150          0          0          0          0          0          0          0     GICv3 242 Level     d230000.actmon\n115:          0          0          0          0          0          0          0          0     GICv3  23 Level     arm-pmu\n116:          0          0          0          0          0          0          0          0     GICv3 579 Level     arm_dsu_0\n117:          0          0          0          0          0          0          0          0     GICv3 580 Level     arm_dsu_1\n118:          0          0          0          0          0          0          0          0     GICv3 581 Level     arm_dsu_2\n119:          0          0          0          0          0          0          0          0     GICv3 583 Level     scf-pmu\n120:          0          0          0          0          0          0          0          0     GICv3 398 Level     e860000.psc\n121:          0          0          0          0          0          0          0          0     GICv3 399 Level     e860000.psc\n122:          0          0          0          0          0          0          0          0     GICv3 400 Level     e860000.psc\n123:          0          0          0          0          0          0          0          0     GICv3 401 Level     e860000.psc\n124:          0          0          0          0          0          0          0          0     GICv3 402 Level     e860000.psc\n125:          0          0          0          0          0          0          0          0     GICv3 403 Level     e860000.psc\n126:          0          0          0          0          0          0          0          0     GICv3 404 Level     e860000.psc\n127:          0          0          0          0          0          0          0          0     GICv3 405 Level     e860000.psc\n128:         37          0          0          0          0          0          0          0     GICv3 480 Level     host_syncpt\n129:          0          0          0          0          0          0          0          0     GICv3 481 Level     host_syncpt\n130:          0          0          0          0          0          0          0          0     GICv3 482 Level     host_syncpt\n131:          0          0          0          0          0          0          0          0     GICv3 483 Level     host_syncpt\n132:          0          0          0          0          0          0          0          0     GICv3 484 Level     host_syncpt\n133:          0          0          0          0          0          0          0          0     GICv3 485 Level     host_syncpt\n134:          0          0          0          0          0          0          0          0     GICv3 486 Level     host_syncpt\n135:          0          0          0          0          0          0          0          0     GICv3 487 Level     host_syncpt\n136:          0          0          0          0          0          0          0          0     GICv3 295 Level     host_status\n137:          0          0          0          0          0          0          0          0     GICv3 238 Level     vic\n138:          0          0          0          0          0          0          0          0     GICv3 260 Level     tsec_riscv_irq\n139:          0          0          0          0          0          0          0          0     GICv3 266 Level     pva-isr\n140:          0          0          0          0          0          0          0          0     GICv3 464 Level     pva-isr\n141:          0          0          0          0          0          0          0          0     GICv3 465 Level     pva-isr\n142:          0          0          0          0          0          0          0          0     GICv3 466 Level     pva-isr\n143:          0          0          0          0          0          0          0          0     GICv3 467 Level     pva-isr\n144:          0          0          0          0          0          0          0          0     GICv3 468 Level     pva-isr\n145:          0          0          0          0          0          0          0          0     GICv3 469 Level     pva-isr\n146:          0          0          0          0          0          0          0          0     GICv3 470 Level     pva-isr\n147:          0          0          0          0          0          0          0          0     GICv3 471 Level     pva-isr\n148:          0          0          0          0          0          0          0          0     GICv3 268 Level     nvdla0\n149:          0          0          0          0          0          0          0          0     GICv3 269 Level     nvdla1\n150:       5080          0          0          0          0          0          0          0     GICv3 165 Level     c150000.tegra-hsp\n154:      46379          0          0          0          0          0          0          0     GICv3 208 Level     3c00000.tegra-hsp\n162:          1          0          0          0          0          0          0          0     GICv3 160 Level     3d00000.tegra-hsp\n167:        114          0          0          0          0          0          0          0     GICv3 214 Level     b950000.tegra-hsp\n171:          0          0          0          0          0          0          0          0     GICv3 316 Level     tegra-se-nvrng\n224:         42          0          0          0          0          0          0          0     GICv3  39 Level     2190000.watchdog\n228:          2          0          0          0          0          0          0          0     GICv3 199 Level     3610000.xhci\n230:       7749          0          0          0          0          0          0          0     GICv3 195 Level     xhci-hcd:usb1\n231:          0          0          0          0          0          0          0          0     GICv3 196 Level     3610000.xhci\n232:          0          0          0          0          0          0          0          0     GICv3 100 Level     gk20a_stall\n233:         66          0          0          0          0          0          0          0     GICv3 102 Level     gk20a_stall\n234:          6          0          0          0          0          0          0          0     GICv3 103 Level     gk20a_stall\n235:          0          0          0          0          0          0          0          0     GICv3  99 Level     gk20a_nonstall\n236:          0          0          0          0          0          0          0          0     GICv3 408 Level     tegra_dce_isr\n237:        137          0          0          0          0          0          0          0     GICv3 409 Level     tegra_dce_isr\n245:          0          0          0          0          0          0          0          0  c360000.pmc  73 Level     tegra_rtc\n246:          1          0          0          0          0          0          0          0  c360000.pmc  24 Level     nvvrs-pseq-irq\n247:          1          0          0          0          0          0          0          0  nvvrs-pseq-irq   3 Edge      rtc-alarm\n249:        189          0          0          0          0          0          0          0  agic-controller  73 Edge    \n250:         95          0          0          0          0          0          0          0  agic-controller  64 Edge    \n252:         94          0          0          0          0          0          0          0  agic-controller  94 Edge    \n262:        111          0          0          0          0          0          0          0  agic-controller  32 Level   \n263:        108          0          0          0          0          0          0          0  agic-controller  33 Level   \n294:          0          0          0          0          0          0          0          0      gpio  42 Edge      3400000.sdhci cd\n295:         20          0          0          0          0          0          0          0       MSI 537395200 Edge      nvme0q0\n296:       2350          0          0          0          0          0          0          0       MSI 537395201 Edge      nvme0q1\n297:          0       2116          0          0          0          0          0          0       MSI 537395202 Edge      nvme0q2\n298:          0          0       5348          0          0          0          0          0       MSI 537395203 Edge      nvme0q3\n299:          0          0          0       2300          0          0          0          0       MSI 537395204 Edge      nvme0q4\n300:          0          0          0          0       3769          0          0          0       MSI 537395205 Edge      nvme0q5\n301:          0          0          0          0          0       3216          0          0       MSI 537395206 Edge      nvme0q6\n302:          0          0          0          0          0          0       2213          0       MSI 537395207 Edge      nvme0q7\n303:          0          0          0          0          0          0          0       2702       MSI 537395208 Edge      nvme0q8\n305:          0          0          0          0          0          0          0          0  c360000.pmc  83 Edge      sw-wake\n306:          0          0          0          0          0          0          0          0      gpio  35 Edge      force-recovery\n307:          0          0          0          0          0          0          0          0      gpio  27 Edge      power-key\n308:    3164353          0          0          0          0          0          0          0       MSI 1074266112 Edge      eth0\nIPI0:    213638     542456     408489     391376     238255     411304     432723     379902       Rescheduling interrupts\nIPI1:     63898      44065      30311      10777       7066      20453      20073      19589       Function call interrupts\nIPI2:         0          0          0          0          0          0          0          0       CPU stop interrupts\nIPI3:         0          0          0          0          0          0          0          0       CPU stop (for crash dump) interrupts\nIPI4:         0          0          0          0          0          0          0          0       Timer broadcast interrupts\nIPI5:      6949       3572       3585       3176       2791       2918       2785       2672       IRQ work interrupts\nIPI6:         0          0          0          0          0          0          0          0       CPU wake-up interrupts\nErr:          0",
+  "kernel_cmdline": "root=PARTUUID=19274313-2e65-42a1-b5e1-6a2ec7a1744b rw rootwait rootfstype=ext4 mminit_loglevel=4 console=ttyTCU0,115200 console=ttyAMA0,115200 firmware_class.path=/etc/firmware fbcon=map:0 net.ifnames=0 nv-auto-config",
+  "label": "record-20260725-133015-_diagnostic_smoke_do_not_use-blackbox-43196",
+  "loadavg": "8.77 4.10 1.99 2/567 45145",
+  "memory": "MemTotal:       15758116 kB\nMemFree:        13471344 kB\nMemAvailable:   14378480 kB\nBuffers:           87260 kB\nCached:          1021084 kB\nSwapCached:            0 kB\nActive:           304872 kB\nInactive:        1520380 kB\nActive(anon):       4800 kB\nInactive(anon):   761392 kB\nActive(file):     300072 kB\nInactive(file):   758988 kB\nUnevictable:       20204 kB\nMlocked:               0 kB\nSwapTotal:       7879040 kB\nSwapFree:        7879040 kB\nDirty:               224 kB\nWriteback:             0 kB\nAnonPages:        731736 kB\nMapped:           256448 kB\nShmem:             29080 kB\nKReclaimable:      79472 kB\nSlab:             180744 kB\nSReclaimable:      79472 kB\nSUnreclaim:       101272 kB\nKernelStack:        9408 kB\nPageTables:        13100 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    15758096 kB\nCommitted_AS:    4444964 kB\nVmallocTotal:   135290159040 kB\nVmallocUsed:       58904 kB\nVmallocChunk:          0 kB\nPercpu:             5376 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    299008 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:         262144 kB\nCmaFree:          190004 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB",
+  "monotonic_s": 1281.941491207,
+  "nvpmodel_status_file": "pmode:0003",
+  "observer_policy": {
+    "raw_pointcloud_subscriber": false,
+    "reason": "Avoid cloud deserialization/serialization observer load; use Livox and FAST-LIO in-process timing logs."
+  },
+  "phase": "failure",
+  "platform": "Linux-5.10.104-tegra-aarch64-with-glibc2.29",
+  "pressure": {
+    "cpu": "",
+    "io": "",
+    "memory": ""
+  },
+  "processes": [
+    {
+      "command": "python3 -u /home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py video-loop --seconds 20 --upload --run-file /home/unitree/go2_fastlio_ws/patrol_logs/run/video.run",
+      "cpu_allowed_list": "0-7",
+      "executable": "/usr/bin/python3.8",
+      "executable_sha256": "85fb06d0992a5a6da591a035963def6346dd58db7bc11814cb6211d5c87eeb21",
+      "nice": 0,
+      "pid": 29370,
+      "scheduler": 0,
+      "start_ticks": 85782,
+      "threads": 1
+    },
+    {
+      "command": "python3 -u /home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py outbox-loop --interval 10 --max-jobs 2 --run-file /home/unitree/go2_fastlio_ws/patrol_logs/run/outbox.run",
+      "cpu_allowed_list": "0-7",
+      "executable": "/usr/bin/python3.8",
+      "executable_sha256": "85fb06d0992a5a6da591a035963def6346dd58db7bc11814cb6211d5c87eeb21",
+      "nice": 0,
+      "pid": 29372,
+      "scheduler": 0,
+      "start_ticks": 85782,
+      "threads": 1
+    },
+    {
+      "command": "python3 -u /home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py command-loop --interval 5 --run-file /home/unitree/go2_fastlio_ws/patrol_logs/run/command.run --seen-file /home/unitree/go2_fastlio_ws/patrol_logs/go2_saas_seen_commands.json --ros-timeout 1.5 --post-timeout 5 --execute-safe",
+      "cpu_allowed_list": "0-7",
+      "executable": "/usr/bin/python3.8",
+      "executable_sha256": "85fb06d0992a5a6da591a035963def6346dd58db7bc11814cb6211d5c87eeb21",
+      "nice": 0,
+      "pid": 29373,
+      "scheduler": 0,
+      "start_ticks": 85783,
+      "threads": 1
+    },
+    {
+      "command": "/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_wn_zpfu9 --params-file /tmp/launch_params_t0aky3a8 --params-file /tmp/launch_params_wm8lycri --params-file /tmp/launch_params_k716mwxa --params-file /tmp/launch_params_l9rlsn55 --params-file /tmp/launch_params_0y_8g_05 --params-file /tmp/launch_params_nllx85a9 --params-file /tmp/launch_params_2y18hpim --params-file /tmp/launch_params_8f5eh4tc",
+      "cpu_allowed_list": "0-7",
+      "executable": "/home/unitree/go2_fastlio_ws/build/livox_ros_driver2/livox_ros_driver2_node",
+      "executable_sha256": "cc31e33470b1b9dc429ff06afdf83c818c00c5110f95fe1b99b7705fc30ca039",
+      "nice": 0,
+      "pid": 32126,
+      "scheduler": 0,
+      "start_ticks": 92051,
+      "threads": 17
+    },
+    {
+      "command": "/home/unitree/go2_fastlio_ws/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/unitree/go2_fastlio_ws/install/fast_lio/share/fast_lio/config/go2_mid360s.yaml --params-file /tmp/launch_params_oovris4u",
+      "cpu_allowed_list": "0-7",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "executable_sha256": "081ac984430c15cd2c461e5a7443dad978fed3608ac0b525b38b192d58b0b537",
+      "nice": 0,
+      "pid": 32705,
+      "scheduler": 0,
+      "start_ticks": 93126,
+      "threads": 11
+    }
+  ],
+  "route": null,
+  "safe_environment": {
+    "CYCLONEDDS_URI": "file:///tmp/go2_cyclonedds_eth0.xml",
+    "FASTRTPS_DEFAULT_PROFILES_FILE": "",
+    "GO2_SDK_IF": "eth0",
+    "GO2_WS": "",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+    "ROS_DOMAIN_ID": ""
+  },
+  "schema": "go2.experiment_snapshot.v1",
+  "thermal_c": {
+    "thermal_zone0:CPU-therm": 54.41,
+    "thermal_zone1:GPU-therm": 50.69,
+    "thermal_zone2:CV0-therm": 51.34,
+    "thermal_zone3:CV1-therm": 52.62,
+    "thermal_zone4:CV2-therm": 50.69,
+    "thermal_zone5:SOC0-therm": 51.53,
+    "thermal_zone6:SOC1-therm": 53.72,
+    "thermal_zone7:SOC2-therm": 50.88,
+    "thermal_zone8:tj-therm": 54.59
+  },
+  "uname": [
+    "Linux",
+    "ubuntu",
+    "5.10.104-tegra",
+    "#1 SMP PREEMPT Sun Mar 19 07:55:28 PDT 2023",
+    "aarch64",
+    "aarch64"
+  ],
+  "uptime": "1281.97 8614.66",
+  "wall_time_epoch": 1784957468.6069477
+}

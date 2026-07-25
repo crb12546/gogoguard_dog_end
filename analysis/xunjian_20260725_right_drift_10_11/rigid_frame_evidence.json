@@ -1,0 +1,348 @@
+{
+  "schema": "go2.rigid_frame_evidence.v1",
+  "data_only_claims": {
+    "flat_floor_lio_plane": {
+      "recording": {
+        "samples": 2700,
+        "model": "z = a*x + b*y + c",
+        "a": 0.42327345737054245,
+        "b": 0.035053255294880646,
+        "c": -0.1503979511573872,
+        "normal_xyz": [
+          -0.3895905653383992,
+          -0.032263817419878216,
+          0.9204228579760517
+        ],
+        "tilt_deg": 23.01202062929511,
+        "r_squared": 0.999952844371929,
+        "z_range_m": 35.05026064850057,
+        "absolute_residual_cm": {
+          "p50": 3.7373914134553488,
+          "p95": 19.09887488663718,
+          "p99": 22.814455016321208,
+          "p100": 24.47365110576989
+        }
+      },
+      "08_raw_lio_yaw": {
+        "samples": 3328,
+        "model": "z = a*x + b*y + c",
+        "a": 0.423362286942879,
+        "b": 0.03629973072391461,
+        "c": -0.14542874062349004,
+        "normal_xyz": [
+          -0.389645234831061,
+          -0.03340877904916536,
+          0.9203588672120737
+        ],
+        "tilt_deg": 23.021397623802002,
+        "r_squared": 0.9999534167034665,
+        "z_range_m": 35.29017444487036,
+        "absolute_residual_cm": {
+          "p50": 4.802814005494405,
+          "p95": 10.93942065019437,
+          "p99": 18.285098309958926,
+          "p100": 23.613061926261025
+        }
+      },
+      "10_body_yaw_first": {
+        "samples": 3279,
+        "model": "z = a*x + b*y + c",
+        "a": 0.4192468757001721,
+        "b": 0.01763496519855883,
+        "c": -0.11449521388503331,
+        "normal_xyz": [
+          -0.3865908753681598,
+          -0.016261341534894336,
+          0.9221079458792042
+        ],
+        "tilt_deg": 22.76377891468316,
+        "r_squared": 0.9999598431968032,
+        "z_range_m": 36.97631467579565,
+        "absolute_residual_cm": {
+          "p50": 3.664725465074259,
+          "p95": 10.973230853974338,
+          "p99": 21.558173281670207,
+          "p100": 25.689211519337363
+        }
+      },
+      "11_body_yaw_second": {
+        "samples": 3295,
+        "model": "z = a*x + b*y + c",
+        "a": 0.41933069652894184,
+        "b": 0.01805537309772447,
+        "c": -0.11393118184996323,
+        "normal_xyz": [
+          -0.3866541464873876,
+          -0.016648399300121734,
+          0.9220745098986597
+        ],
+        "tilt_deg": 22.7687294996709,
+        "r_squared": 0.9999403034787563,
+        "z_range_m": 36.73267652201507,
+        "absolute_residual_cm": {
+          "p50": 4.116341079889452,
+          "p95": 13.162578089720892,
+          "p99": 30.436897599532905,
+          "p100": 36.85177070411214
+        }
+      }
+    },
+    "simultaneous_static_gravity": {
+      "recording": {
+        "static_window_epoch": [
+          1784960659.242379,
+          1784960668.242379
+        ],
+        "body_quiet_samples": 106,
+        "lidar_quiet_samples": 169,
+        "body_gravity_unit_xyz": [
+          -0.019672405173720185,
+          -0.016182139943524333,
+          0.9996755147654309
+        ],
+        "lidar_gravity_unit_xyz": [
+          -0.545143692754933,
+          -0.014578691025738465,
+          0.8382158528788938
+        ],
+        "body_tilt_from_positive_z_deg": 1.459643656279849,
+        "lidar_tilt_from_positive_z_deg": 33.0478051144301,
+        "minimum_relative_tilt_deg": 31.90733107777094
+      },
+      "08_raw_lio_yaw": {
+        "static_window_epoch": [
+          1784961374.956508,
+          1784961383.956508
+        ],
+        "body_quiet_samples": 104,
+        "lidar_quiet_samples": 145,
+        "body_gravity_unit_xyz": [
+          -0.020253130465477744,
+          -0.012050928194147065,
+          0.9997222543466798
+        ],
+        "lidar_gravity_unit_xyz": [
+          -0.5466443906245567,
+          -0.009688696358206624,
+          0.8373088076460115
+        ],
+        "body_tilt_from_positive_z_deg": 1.3504276396236583,
+        "lidar_tilt_from_positive_z_deg": 33.14298199301168,
+        "minimum_relative_tilt_deg": 31.97661963429167
+      },
+      "10_body_yaw_first": {
+        "static_window_epoch": [
+          1784968734.0242708,
+          1784968743.0242708
+        ],
+        "body_quiet_samples": 78,
+        "lidar_quiet_samples": 99,
+        "body_gravity_unit_xyz": [
+          -0.019903900176236063,
+          -0.014579290269704809,
+          0.9996955931947515
+        ],
+        "lidar_gravity_unit_xyz": [
+          -0.5437495824643487,
+          -0.011864992793596443,
+          0.839163639295611
+        ],
+        "body_tilt_from_positive_z_deg": 1.4137604441783969,
+        "lidar_tilt_from_positive_z_deg": 32.94809290420538,
+        "minimum_relative_tilt_deg": 31.79878005605457
+      },
+      "11_body_yaw_second": {
+        "static_window_epoch": [
+          1784969359.6975238,
+          1784969368.6975238
+        ],
+        "body_quiet_samples": 115,
+        "lidar_quiet_samples": 166,
+        "body_gravity_unit_xyz": [
+          -0.02273650701052275,
+          -0.013641903577386117,
+          0.9996484130511816
+        ],
+        "lidar_gravity_unit_xyz": [
+          -0.5493210765546933,
+          -0.011639274242851442,
+          0.8355302999579922
+        ],
+        "body_tilt_from_positive_z_deg": 1.5193811290371033,
+        "lidar_tilt_from_positive_z_deg": 33.32890290995255,
+        "minimum_relative_tilt_deg": 32.01763391862999
+      }
+    },
+    "common_rigid_rotation_model": {
+      "model": "R_body_world(t) = R_world_alignment(run) * R_lio_world_sensor(t) * R_sensor_from_body",
+      "common_sensor_from_body_euler_xyz_deg": [
+        11.170349669526122,
+        -30.679462559359276,
+        -21.801882963395503
+      ],
+      "common_sensor_from_body_rotation_magnitude_deg": 37.351460019946316,
+      "jacobian_condition_number": 113.98098234727892,
+      "fit_using_per_run_world_alignment": {
+        "recording": {
+          "samples": 2430,
+          "pairing_gap_ms": {
+            "p50": 15.318036079406738,
+            "p95": 36.30126714706421,
+            "p100": 39.9775505065918
+          },
+          "rotation_error_deg": {
+            "p50": 1.8154923696726573,
+            "p90": 2.542750010855875,
+            "p95": 2.8933666676975873,
+            "p99": 3.9394054947398547,
+            "p100": 12.667700220166646
+          }
+        },
+        "08_raw_lio_yaw": {
+          "samples": 3036,
+          "pairing_gap_ms": {
+            "p50": 16.370296478271484,
+            "p95": 35.98058223724365,
+            "p100": 39.98708724975586
+          },
+          "rotation_error_deg": {
+            "p50": 1.7844611161380084,
+            "p90": 2.8723606641062407,
+            "p95": 3.2523816198776583,
+            "p99": 3.9294265387944085,
+            "p100": 4.574522879211768
+          }
+        },
+        "10_body_yaw_first": {
+          "samples": 2931,
+          "pairing_gap_ms": {
+            "p50": 15.84172248840332,
+            "p95": 36.81588172912598,
+            "p100": 39.983272552490234
+          },
+          "rotation_error_deg": {
+            "p50": 1.1681123318139974,
+            "p90": 2.191034896286366,
+            "p95": 2.649805826465095,
+            "p99": 4.236032192179537,
+            "p100": 7.032629709135863
+          }
+        },
+        "11_body_yaw_second": {
+          "samples": 2984,
+          "pairing_gap_ms": {
+            "p50": 15.935540199279785,
+            "p95": 36.65581941604614,
+            "p100": 39.975643157958984
+          },
+          "rotation_error_deg": {
+            "p50": 1.9314542189905488,
+            "p90": 3.169301330387487,
+            "p95": 3.574871567652092,
+            "p99": 4.355368023345123,
+            "p100": 6.529670924386243
+          }
+        }
+      },
+      "startup_only_world_alignment": {
+        "recording": {
+          "startup_samples": 20,
+          "rotation_error_deg": {
+            "p50": 2.371492970496077,
+            "p90": 3.4102171506865226,
+            "p95": 3.795976472836591,
+            "p99": 5.099766407872592,
+            "p100": 14.178094708699144
+          },
+          "yaw_error_deg": {
+            "p50": 1.3997009096076245,
+            "p90": 3.16459078171349,
+            "p95": 3.3392094337571976,
+            "p99": 4.881206577421209,
+            "p100": 13.384774776371884
+          }
+        },
+        "08_raw_lio_yaw": {
+          "startup_samples": 17,
+          "rotation_error_deg": {
+            "p50": 3.1236783124779155,
+            "p90": 5.107977243970581,
+            "p95": 5.55750678397347,
+            "p99": 6.306342947974173,
+            "p100": 7.329957112216183
+          },
+          "yaw_error_deg": {
+            "p50": 2.796212790414449,
+            "p90": 4.838998276078188,
+            "p95": 5.12852946230315,
+            "p99": 5.734986830194746,
+            "p100": 7.111823194307294
+          }
+        },
+        "10_body_yaw_first": {
+          "startup_samples": 18,
+          "rotation_error_deg": {
+            "p50": 1.1905417178168591,
+            "p90": 2.3095983065456633,
+            "p95": 2.8456482935969367,
+            "p99": 4.390322751784918,
+            "p100": 7.188426329653873
+          },
+          "yaw_error_deg": {
+            "p50": 0.3837744360860061,
+            "p90": 0.882394349659479,
+            "p95": 1.119122435530485,
+            "p99": 2.822881782316606,
+            "p100": 5.279833686468434
+          }
+        },
+        "11_body_yaw_second": {
+          "startup_samples": 20,
+          "rotation_error_deg": {
+            "p50": 3.3198750492369067,
+            "p90": 5.735624362966579,
+            "p95": 6.140237440034934,
+            "p99": 7.025080005000632,
+            "p100": 8.662344864560938
+          },
+          "yaw_error_deg": {
+            "p50": 3.039062300483875,
+            "p90": 5.3270508147469835,
+            "p95": 5.670126693962502,
+            "p99": 6.259770959548356,
+            "p100": 7.701797476536547
+          }
+        }
+      },
+      "interpretation": "The pitch component is strongly observable and agrees with the independent gravity measurement. Roll/yaw and translation must not be treated as metrology-grade mount parameters without a dedicated calibration manoeuvre."
+    },
+    "current_shortcut_control_closure": {
+      "10_body_yaw_first": {
+        "used_minus_raw_lio_yaw_median_deg": -15.23001028375897,
+        "route_tangent_minus_raw_lio_yaw_median_deg": -12.40599973141768,
+        "route_tangent_minus_used_yaw_median_deg": 2.7639732692247594,
+        "predicted_signed_cross_track_median_cm": 4.262121345680059,
+        "observed_signed_cross_track_median_cm": 5.278938033750215
+      },
+      "11_body_yaw_second": {
+        "used_minus_raw_lio_yaw_median_deg": -19.413401132727905,
+        "route_tangent_minus_raw_lio_yaw_median_deg": -13.046680137097166,
+        "route_tangent_minus_used_yaw_median_deg": 6.1259349810661785,
+        "predicted_signed_cross_track_median_cm": 9.644000076102731,
+        "observed_signed_cross_track_median_cm": 10.96474080962063
+      }
+    },
+    "saved_configuration": {
+      "fastlio_extrinsic_estimation_disabled": true,
+      "fastlio_lidar_to_its_imu_rotation_is_identity": true,
+      "livox_driver_external_extrinsic_all_zero": true,
+      "explicit_lidar_to_dog_body_transform_present": false,
+      "note": "The saved parameters describe Mid360 lidar-to-integrated-IMU calibration. They do not contain the external Mid360-to-Go2-body mount transform."
+    }
+  },
+  "limits": {
+    "photograph": "A single oblique photograph has no metric scale, ground-normal reference, or orthogonal views; it is not used to estimate an angle or translation.",
+    "translation_observability": "The exact Mid360-to-body-center translation is not uniquely observable from the route logs because the two position sources have independent origins/drift and the route lacks a dedicated fixed-center rotation manoeuvre.",
+    "external_ground_truth": "Onboard data proves internal frame inconsistency and its control effect. It cannot alone certify centimetre-level physical floor truth; that requires an external reference during validation."
+  }
+}

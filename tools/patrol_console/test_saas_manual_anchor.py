@@ -128,8 +128,12 @@ class SaasManualAnchorTest(unittest.TestCase):
             command.index("FOLLOWER_EXACT_TRACE_READY"),
         )
         self.assertLess(
+            command.index("FOLLOWER_ODOM_READY"),
             command.index("--patrol-start-gate"),
-            command.index("FOLLOWER_EXACT_TRACE_READY"),
+        )
+        self.assertLess(
+            command.index("--patrol-start-gate"),
+            command.index("FOLLOWER_MOTION_INTERLOCK_RELEASED"),
         )
         syntax = subprocess.run(
             ["bash", "-n", "-c", command],
