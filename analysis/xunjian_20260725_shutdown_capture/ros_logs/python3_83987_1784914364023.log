@@ -1,0 +1,6 @@
+[INFO] [1784914364.035720538] [rosbag2_storage]: Opened database '/tmp/go2_rosbag_ready_verify_20260725_0132/bag/bag_0.db3' for READ_WRITE.
+[INFO] [1784914364.069567793] [rosbag2_transport]: Listening for topics...
+[INFO] [1784914364.075327319] [rosbag2_transport]: Subscribed to topic '/tf'
+[INFO] [1784914364.078100280] [rosbag2_transport]: Subscribed to topic '/Odometry'
+[INFO] [1784914364.079217490] [rosbag2_transport]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1784914364.731264925] [rclcpp]: signal_handler(signal_value=2)

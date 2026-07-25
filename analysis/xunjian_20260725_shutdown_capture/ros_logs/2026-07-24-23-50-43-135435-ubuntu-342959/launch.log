@@ -1,0 +1,4 @@
+1784908243.1438773 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-24-23-50-43-135435-ubuntu-342959
+1784908243.1445076 [INFO] [launch]: Default logging verbosity is set to INFO
+1784908243.2535710 [INFO] [livox_ros_driver2_node-1]: process started with pid [343056]
+1784909195.0981913 [ERROR] [livox_ros_driver2_node-1]: process has died [pid 343056, exit code -11, cmd '/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_zowfejph --params-file /tmp/launch_params_tswhhi2t --params-file /tmp/launch_params_k7ivno2o --params-file /tmp/launch_params_f4a2lsbz --params-file /tmp/launch_params_1q4evflu --params-file /tmp/launch_params_vylkcvco --params-file /tmp/launch_params_bi_zzqv3 --params-file /tmp/launch_params_mbbh__3h --params-file /tmp/launch_params_gh2dvgbb'].

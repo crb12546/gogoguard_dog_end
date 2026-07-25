@@ -1,0 +1,813 @@
+#!/usr/bin/env python3
+import csv
+import json
+import math
+import time
+
+import rclpy
+from rclpy.node import Node
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist
+
+
+def normalize_angle(a):
+    while a > math.pi:
+        a -= 2.0 * math.pi
+    while a < -math.pi:
+        a += 2.0 * math.pi
+    return a
+
+
+def yaw_from_quaternion(q):
+    siny_cosp = 2.0 * (q.w * q.z + q.x * q.y)
+    cosy_cosp = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
+    return math.atan2(siny_cosp, cosy_cosp)
+
+
+class WaypointFollower(Node):
+    def __init__(self):
+        super().__init__('waypoint_follower')
+
+        self.declare_parameter('odom_topic', '/Odometry')
+        self.declare_parameter('cmd_topic', '/patrol_cmd')
+        self.declare_parameter('route_file', '/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/route_demo.csv')
+        self.declare_parameter('route_transform_json', '')
+
+        self.declare_parameter('v_base', 0.25)
+        self.declare_parameter('max_vx', 0.25)
+        self.declare_parameter('use_route_speed', True)
+        self.declare_parameter('k_yaw', 0.6)
+        self.declare_parameter('max_yaw_rate', 0.30)
+        self.declare_parameter('lateral_correction_gain', 0.45)
+        self.declare_parameter('max_lateral_correction', 0.35)
+        self.declare_parameter('lateral_deadband', 0.03)
+
+        self.declare_parameter('lookahead_distance', 0.8)
+        self.declare_parameter('reach_distance', 0.4)
+        self.declare_parameter('goal_distance', 0.5)
+
+        self.declare_parameter('loop_mode', 'once')   # once / pingpong
+        self.declare_parameter('search_window', 6)
+
+        self.declare_parameter('turn_in_place_angle', 1.0)
+        self.declare_parameter('slow_down_angle', 0.5)
+
+        self.declare_parameter('stuck_time', 3.0)
+        self.declare_parameter('soft_unstick_yaw_rate', 0.20)
+        self.declare_parameter('soft_unstick_min_moved', 0.12)
+        self.declare_parameter('progress_s_epsilon', 0.08)
+        self.declare_parameter('progress_backtrack_tolerance', 0.12)
+        self.declare_parameter('progress_forward_tolerance', 0.75)
+        self.declare_parameter('relocalize_distance', 1.0)
+        self.declare_parameter('start_policy', 'route_start')  # route_start / nearest
+        self.declare_parameter('start_max_distance', 0.8)
+        self.declare_parameter('start_max_yaw_error', 0.9)
+        self.declare_parameter('allow_global_relocalize', False)
+        self.declare_parameter('stuck_relocalize', False)
+        self.declare_parameter('stop_on_route_deviation', True)
+        self.declare_parameter('recovery_distance', 1.0)
+        self.declare_parameter('recovery_vx', 0.20)
+        self.declare_parameter('max_route_deviation', 5.0)
+        self.declare_parameter('max_valid_odom_abs', 10000.0)
+        self.declare_parameter('yaw_deadband', 0.06)
+        self.declare_parameter('max_vx_accel', 0.35)
+        self.declare_parameter('max_yaw_accel', 0.90)
+        self.declare_parameter('yaw_wrap_hysteresis', 0.35)
+
+        self.odom_topic = self.get_parameter('odom_topic').value
+        self.cmd_topic = self.get_parameter('cmd_topic').value
+        self.route_file = self.get_parameter('route_file').value
+        self.route_transform_json = str(self.get_parameter('route_transform_json').value).strip()
+
+        self.v_base = float(self.get_parameter('v_base').value)
+        self.max_vx = float(self.get_parameter('max_vx').value)
+        self.use_route_speed = bool(self.get_parameter('use_route_speed').value)
+        self.k_yaw = float(self.get_parameter('k_yaw').value)
+        self.max_yaw_rate = float(self.get_parameter('max_yaw_rate').value)
+        self.lateral_correction_gain = max(0.0, float(self.get_parameter('lateral_correction_gain').value))
+        self.max_lateral_correction = max(0.0, float(self.get_parameter('max_lateral_correction').value))
+        self.lateral_deadband = max(0.0, float(self.get_parameter('lateral_deadband').value))
+
+        self.lookahead_distance = float(self.get_parameter('lookahead_distance').value)
+        self.reach_distance = float(self.get_parameter('reach_distance').value)
+        self.goal_distance = float(self.get_parameter('goal_distance').value)
+
+        self.loop_mode = self.get_parameter('loop_mode').value
+        self.search_window = int(self.get_parameter('search_window').value)
+
+        self.turn_in_place_angle = float(self.get_parameter('turn_in_place_angle').value)
+        self.slow_down_angle = float(self.get_parameter('slow_down_angle').value)
+
+        self.stuck_time = float(self.get_parameter('stuck_time').value)
+        self.soft_unstick_yaw_rate = max(0.0, float(self.get_parameter('soft_unstick_yaw_rate').value))
+        self.soft_unstick_min_moved = max(0.0, float(self.get_parameter('soft_unstick_min_moved').value))
+        self.progress_s_epsilon = max(0.0, float(self.get_parameter('progress_s_epsilon').value))
+        self.progress_backtrack_tolerance = max(
+            0.0,
+            float(self.get_parameter('progress_backtrack_tolerance').value)
+        )
+        self.progress_forward_tolerance = max(
+            self.progress_s_epsilon,
+            float(self.get_parameter('progress_forward_tolerance').value)
+        )
+        self.relocalize_distance = float(self.get_parameter('relocalize_distance').value)
+        self.start_policy = str(self.get_parameter('start_policy').value)
+        self.start_max_distance = float(self.get_parameter('start_max_distance').value)
+        self.start_max_yaw_error = float(self.get_parameter('start_max_yaw_error').value)
+        self.allow_global_relocalize = bool(self.get_parameter('allow_global_relocalize').value)
+        self.stuck_relocalize = bool(self.get_parameter('stuck_relocalize').value)
+        self.stop_on_route_deviation = bool(self.get_parameter('stop_on_route_deviation').value)
+        self.recovery_distance = float(self.get_parameter('recovery_distance').value)
+        self.recovery_vx = float(self.get_parameter('recovery_vx').value)
+        self.max_route_deviation = float(self.get_parameter('max_route_deviation').value)
+        self.max_valid_odom_abs = float(self.get_parameter('max_valid_odom_abs').value)
+        self.yaw_deadband = float(self.get_parameter('yaw_deadband').value)
+        self.max_vx_accel = float(self.get_parameter('max_vx_accel').value)
+        self.max_yaw_accel = float(self.get_parameter('max_yaw_accel').value)
+        self.yaw_wrap_hysteresis = float(self.get_parameter('yaw_wrap_hysteresis').value)
+        if self.start_policy not in ('route_start', 'nearest'):
+            self.start_policy = 'route_start'
+
+        self.route = self.load_route(self.route_file)
+        self.route_transform, self.route_transform_active = self.load_route_transform(self.route_transform_json)
+        self.route_transform_yaw = self.yaw_from_transform(self.route_transform)
+        self.arc_s, self.segment_lengths, self.total_length = self.build_route_geometry(self.route)
+
+        self.current_x = None
+        self.current_y = None
+        self.current_yaw = None
+        self.current_s = 0.0
+        self.projected_x = None
+        self.projected_y = None
+        self.route_yaw = 0.0
+        self.lateral_error = 0.0
+        self.lateral_alpha = 0.0
+
+        self.direction = 1
+        self.nearest_index = 0
+        self.target_index = 0
+        self.target_x = None
+        self.target_y = None
+        self.finished = False
+        self.initialized = False
+        self.start_alignment_failed = False
+        self.tracking_fault = False
+
+        self.last_progress_index = 0
+        self.last_progress_s = 0.0
+        self.last_progress_x = None
+        self.last_progress_y = None
+        self.last_progress_time = time.time()
+        self.last_log_time = 0.0
+        self.last_start_fault_log_time = 0.0
+        self.last_route_fault_log_time = 0.0
+        self.last_stuck_log_time = 0.0
+        self.last_odom_fault_log_time = 0.0
+        self.turn_alpha_sign = 0.0
+        self.last_local_route_distance = 0.0
+        self.last_cmd_vx = 0.0
+        self.last_cmd_yaw_rate = 0.0
+        self.last_cmd_time = time.time()
+        self.soft_unstick_sign = 0.0
+
+        self.sub = self.create_subscription(
+            Odometry,
+            self.odom_topic,
+            self.odom_callback,
+            10
+        )
+
+        self.pub = self.create_publisher(Twist, self.cmd_topic, 10)
+        self.timer = self.create_timer(0.05, self.control_loop)
+
+        self.get_logger().info('enhanced waypoint_follower started')
+        self.get_logger().info(f'route_file: {self.route_file}')
+        self.get_logger().info(f"route_transform_json: {self.route_transform_json or 'identity'}")
+        self.get_logger().info(f"route_frame_mode: {self.route_transform_active}, yaw_old_from_current={self.route_transform_yaw:.4f}")
+        self.get_logger().info(f'route points: {len(self.route)}')
+        self.get_logger().info(f'v_base: {self.v_base}, max_vx: {self.max_vx}, use_route_speed: {self.use_route_speed}')
+        self.get_logger().info(
+            f'lateral_correction_gain: {self.lateral_correction_gain}, '
+            f'max_lateral_correction: {self.max_lateral_correction}, '
+            f'lateral_deadband: {self.lateral_deadband}'
+        )
+        self.get_logger().info(f'loop_mode: {self.loop_mode}')
+        self.get_logger().info(f'lookahead_distance: {self.lookahead_distance}')
+        self.get_logger().info(f'reach_distance: {self.reach_distance}')
+        self.get_logger().info(
+            f'start_policy: {self.start_policy}, start_max_distance: {self.start_max_distance}, '
+            f'start_max_yaw_error: {self.start_max_yaw_error}'
+        )
+        self.get_logger().info(
+            f'allow_global_relocalize: {self.allow_global_relocalize}, '
+            f'stuck_relocalize: {self.stuck_relocalize}, '
+            f'recovery_distance: {self.recovery_distance}, recovery_vx: {self.recovery_vx}, '
+            f'max_route_deviation: {self.max_route_deviation}'
+        )
+        self.get_logger().info(
+            f'soft_unstick_yaw_rate: {self.soft_unstick_yaw_rate}, '
+            f'soft_unstick_min_moved: {self.soft_unstick_min_moved}, '
+            f'progress_s_epsilon: {self.progress_s_epsilon}'
+        )
+
+    def reset_progress_watchdog(self, now=None):
+        self.last_progress_index = self.nearest_index
+        self.last_progress_s = self.current_s
+        self.last_progress_x = self.current_x
+        self.last_progress_y = self.current_y
+        self.last_progress_time = time.time() if now is None else now
+        self.soft_unstick_sign = 0.0
+
+    def has_route_progress(self):
+        directed_s_delta = self.direction * (self.current_s - self.last_progress_s)
+        directed_index_delta = self.direction * (self.nearest_index - self.last_progress_index)
+        return directed_s_delta > self.progress_s_epsilon or directed_index_delta > 0
+
+    def load_route_transform(self, path):
+        identity = [
+            1.0, 0.0, 0.0, 0.0,
+            0.0, 1.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0,
+            0.0, 0.0, 0.0, 1.0,
+        ]
+        if not path:
+            return identity, False
+        with open(path, 'r') as f:
+            data = json.load(f)
+        values = data.get('transformOldFromCurrent')
+        if not isinstance(values, list) or len(values) != 16:
+            raise RuntimeError('route_transform_json must contain transformOldFromCurrent[16]')
+        return [float(v) for v in values], True
+
+    def yaw_from_transform(self, m):
+        return math.atan2(m[4], m[0])
+
+    def transform_pose_to_route_frame(self, x, y, z, yaw):
+        m = self.route_transform
+        route_x = m[0] * x + m[1] * y + m[2] * z + m[3]
+        route_y = m[4] * x + m[5] * y + m[6] * z + m[7]
+        route_yaw = normalize_angle(yaw + self.route_transform_yaw)
+        return route_x, route_y, route_yaw
+
+    def load_route(self, path):
+        route = []
+        with open(path, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                route.append({
+                    'x': float(row['x']),
+                    'y': float(row['y']),
+                    'yaw': float(row['yaw']),
+                    'v': float(row['v'])
+                })
+
+        if len(route) < 2:
+            raise RuntimeError('route file must contain at least 2 points')
+
+        return route
+
+    def build_route_geometry(self, route):
+        arc_s = [0.0]
+        segment_lengths = []
+        total = 0.0
+        for i in range(len(route) - 1):
+            p0 = route[i]
+            p1 = route[i + 1]
+            seg = math.hypot(p1['x'] - p0['x'], p1['y'] - p0['y'])
+            segment_lengths.append(seg)
+            total += seg
+            arc_s.append(total)
+        return arc_s, segment_lengths, total
+
+    def point_at_s(self, s):
+        if s <= 0.0:
+            p = self.route[0]
+            return p['x'], p['y'], 0
+        if s >= self.total_length:
+            p = self.route[-1]
+            return p['x'], p['y'], len(self.route) - 1
+
+        for i, seg in enumerate(self.segment_lengths):
+            s0 = self.arc_s[i]
+            s1 = self.arc_s[i + 1]
+            if s <= s1:
+                if seg <= 1e-6:
+                    p = self.route[i]
+                    return p['x'], p['y'], i
+                t = (s - s0) / seg
+                p0 = self.route[i]
+                p1 = self.route[i + 1]
+                x = p0['x'] + (p1['x'] - p0['x']) * t
+                y = p0['y'] + (p1['y'] - p0['y']) * t
+                return x, y, i + (1 if t >= 0.5 else 0)
+
+        p = self.route[-1]
+        return p['x'], p['y'], len(self.route) - 1
+
+    def route_yaw_at_s(self, s, direction=None):
+        if direction is None:
+            direction = self.direction
+        if self.total_length <= 1e-6:
+            i = 0
+        elif s <= 0.0:
+            i = 0
+        elif s >= self.total_length:
+            i = max(0, len(self.route) - 2)
+        else:
+            i = 0
+            for seg_i in range(len(self.segment_lengths)):
+                if s <= self.arc_s[seg_i + 1]:
+                    i = seg_i
+                    break
+
+        p0 = self.route[i]
+        p1 = self.route[min(i + 1, len(self.route) - 1)]
+        yaw = math.atan2(p1['y'] - p0['y'], p1['x'] - p0['x'])
+        if direction < 0:
+            yaw = normalize_angle(yaw + math.pi)
+        return yaw
+
+    def update_lateral_error(self):
+        if self.projected_x is None or self.projected_y is None:
+            self.lateral_error = 0.0
+            self.route_yaw = self.current_yaw if self.current_yaw is not None else 0.0
+            return
+        self.route_yaw = self.route_yaw_at_s(self.current_s, self.direction)
+        ux = math.cos(self.route_yaw)
+        uy = math.sin(self.route_yaw)
+        dx = self.current_x - self.projected_x
+        dy = self.current_y - self.projected_y
+        self.lateral_error = ux * dy - uy * dx
+
+    def compute_lateral_alpha(self):
+        if self.lateral_correction_gain <= 0.0:
+            return 0.0
+        error = self.lateral_error
+        if abs(error) <= self.lateral_deadband:
+            return 0.0
+        correction = -self.lateral_correction_gain * error
+        if self.max_lateral_correction > 0.0:
+            correction = max(-self.max_lateral_correction, min(self.max_lateral_correction, correction))
+        return correction
+
+    def project_to_route_window(self):
+        nseg = len(self.route) - 1
+        if nseg <= 0:
+            p = self.route[0]
+            return 0, 0.0, p['x'], p['y'], 0.0, 0.0
+
+        center = max(0, min(nseg - 1, self.nearest_index))
+        start = max(0, center - self.search_window)
+        end = min(nseg - 1, center + self.search_window)
+
+        best = None
+        for i in range(start, end + 1):
+            p0 = self.route[i]
+            p1 = self.route[i + 1]
+            vx = p1['x'] - p0['x']
+            vy = p1['y'] - p0['y']
+            seg2 = vx * vx + vy * vy
+            if seg2 <= 1e-12:
+                t = 0.0
+                px = p0['x']
+                py = p0['y']
+            else:
+                t = ((self.current_x - p0['x']) * vx + (self.current_y - p0['y']) * vy) / seg2
+                t = max(0.0, min(1.0, t))
+                px = p0['x'] + vx * t
+                py = p0['y'] + vy * t
+            d = math.hypot(self.current_x - px, self.current_y - py)
+            s = self.arc_s[i] + self.segment_lengths[i] * t
+            if best is None or d < best[5]:
+                nearest_i = i + (1 if t >= 0.5 else 0)
+                best = (nearest_i, s, px, py, t, d)
+
+        return best
+
+    def odom_callback(self, msg):
+        x = float(msg.pose.pose.position.x)
+        y = float(msg.pose.pose.position.y)
+        z = float(msg.pose.pose.position.z)
+        yaw = yaw_from_quaternion(msg.pose.pose.orientation)
+        if not self.odom_is_valid(x, y, z, yaw):
+            self.tracking_fault = True
+            self.publish_stop()
+            now = time.time()
+            if now - self.last_odom_fault_log_time > 1.0:
+                self.last_odom_fault_log_time = now
+                self.get_logger().error(
+                    f'invalid odometry: x={x:.3f}, y={y:.3f}, z={z:.3f}, yaw={yaw:.3f}; hold stop'
+                )
+            return
+
+        route_x, route_y, route_yaw = self.transform_pose_to_route_frame(x, y, z, yaw)
+        if not self.odom_is_valid(route_x, route_y, 0.0, route_yaw):
+            self.tracking_fault = True
+            self.publish_stop()
+            now = time.time()
+            if now - self.last_odom_fault_log_time > 1.0:
+                self.last_odom_fault_log_time = now
+                self.get_logger().error(
+                    f'invalid transformed odometry: x={route_x:.3f}, y={route_y:.3f}, yaw={route_yaw:.3f}; hold stop'
+                )
+            return
+
+        self.current_x = route_x
+        self.current_y = route_y
+        self.current_yaw = route_yaw
+
+        if not self.initialized:
+            if self.start_policy == 'route_start':
+                if not self.check_start_alignment():
+                    return
+                self.nearest_index = 0
+            else:
+                self.nearest_index = self.find_nearest_global()
+            projected = self.project_to_route_window()
+            self.nearest_index = projected[0]
+            self.current_s = projected[1]
+            self.projected_x = projected[2]
+            self.projected_y = projected[3]
+            target_s = self.current_s
+            self.target_index = self.nearest_index
+            self.target_x = self.projected_x
+            self.target_y = self.projected_y
+            self.reset_progress_watchdog()
+            self.initialized = True
+            self.start_alignment_failed = False
+
+            d0 = self.distance_to_index(0)
+            self.get_logger().info(f'init nearest_index={self.nearest_index}, distance_to_start={d0:.3f}')
+
+    def odom_is_valid(self, x, y, z, yaw):
+        values = (x, y, z, yaw)
+        if not all(math.isfinite(v) for v in values):
+            return False
+        return all(abs(v) <= self.max_valid_odom_abs for v in (x, y, z))
+
+    def check_start_alignment(self):
+        start = self.route[0]
+        distance = self.distance_to_index(0)
+        yaw_error = normalize_angle(self.current_yaw - start['yaw'])
+        if distance <= self.start_max_distance and abs(yaw_error) <= self.start_max_yaw_error:
+            return True
+
+        self.start_alignment_failed = True
+        now = time.time()
+        if now - self.last_start_fault_log_time > 2.0:
+            self.last_start_fault_log_time = now
+            self.get_logger().error(
+                'route start mismatch: '
+                f'current=({self.current_x:.3f},{self.current_y:.3f},{self.current_yaw:.3f}), '
+                f'route_start=({start["x"]:.3f},{start["y"]:.3f},{start["yaw"]:.3f}), '
+                f'distance={distance:.3f}/{self.start_max_distance:.3f}, '
+                f'yaw_error={yaw_error:.3f}/{self.start_max_yaw_error:.3f}; hold stop'
+            )
+        return False
+
+    def distance_to_index(self, i):
+        p = self.route[i]
+        return math.hypot(p['x'] - self.current_x, p['y'] - self.current_y)
+
+    def find_nearest_global(self):
+        best_i = 0
+        best_d = 1e9
+        for i, p in enumerate(self.route):
+            d = math.hypot(p['x'] - self.current_x, p['y'] - self.current_y)
+            if d < best_d:
+                best_d = d
+                best_i = i
+        return best_i
+
+    def find_nearest_window(self):
+        n = len(self.route)
+
+        start = max(0, self.nearest_index - self.search_window)
+        end = min(n - 1, self.nearest_index + self.search_window)
+
+        best_i = self.nearest_index
+        best_d = 1e9
+
+        for i in range(start, end + 1):
+            p = self.route[i]
+            d = math.hypot(p['x'] - self.current_x, p['y'] - self.current_y)
+            if d < best_d:
+                best_d = d
+                best_i = i
+
+        return best_i, best_d
+
+    def update_nearest_index(self):
+        new_i, new_s, px, py, _, new_d = self.project_to_route_window()
+
+        if self.initialized:
+            if self.direction > 0:
+                min_s = self.last_progress_s - self.progress_backtrack_tolerance
+                max_s = self.last_progress_s + self.progress_forward_tolerance
+            else:
+                min_s = self.last_progress_s - self.progress_forward_tolerance
+                max_s = self.last_progress_s + self.progress_backtrack_tolerance
+
+            clamped_s = max(0.0, min(self.total_length, max(min_s, min(max_s, new_s))))
+            if abs(clamped_s - new_s) > 1e-6:
+                px, py, new_i = self.point_at_s(clamped_s)
+                new_s = clamped_s
+                new_d = math.hypot(self.current_x - px, self.current_y - py)
+
+        self.last_local_route_distance = new_d
+
+        if self.stop_on_route_deviation and new_d > self.max_route_deviation:
+            self.tracking_fault = True
+            now = time.time()
+            if now - self.last_route_fault_log_time > 2.0:
+                self.last_route_fault_log_time = now
+                self.get_logger().error(
+                    f'route deviation too large: local_d={new_d:.2f}/{self.max_route_deviation:.2f}, '
+                    f'nearest_index={self.nearest_index}, candidate={new_i}; hold stop for safety'
+                )
+            return False
+
+        self.nearest_index = new_i
+        self.current_s = max(0.0, min(self.total_length, new_s))
+        self.projected_x = px
+        self.projected_y = py
+        self.update_lateral_error()
+
+        # Allow optional global relocalization when far from the local route.
+        if new_d > self.relocalize_distance:
+            if self.allow_global_relocalize:
+                global_i = self.find_nearest_global()
+                self.get_logger().warn(
+                    f'far from local route: d={new_d:.2f}, relocalize nearest_index {self.nearest_index} -> {global_i}'
+                )
+                self.nearest_index = global_i
+            else:
+                now = time.time()
+                if now - self.last_route_fault_log_time > 2.0:
+                    self.last_route_fault_log_time = now
+                    self.get_logger().warn(
+                        f'far from local route: d={new_d:.2f}; global relocalize disabled'
+                    )
+
+        # Record route progress for the stuck watchdog.
+        if self.has_route_progress():
+            self.reset_progress_watchdog()
+        return True
+
+    def compute_lookahead_index(self):
+        n = len(self.route)
+        i = self.nearest_index
+        acc = 0.0
+
+        while True:
+            ni = i + self.direction
+
+            if ni < 0 or ni >= n:
+                return i
+
+            p0 = self.route[i]
+            p1 = self.route[ni]
+            seg = math.hypot(p1['x'] - p0['x'], p1['y'] - p0['y'])
+            acc += seg
+            i = ni
+
+            if acc >= self.lookahead_distance:
+                return i
+
+    def publish_stop(self):
+        cmd = Twist()
+        self.pub.publish(cmd)
+        self.last_cmd_vx = 0.0
+        self.last_cmd_yaw_rate = 0.0
+        self.last_cmd_time = time.time()
+
+    def smooth_value(self, desired, previous, max_rate, dt):
+        if max_rate <= 0.0:
+            return desired
+        max_step = max_rate * dt
+        delta = max(-max_step, min(max_step, desired - previous))
+        return previous + delta
+
+    def handle_goal(self):
+        n = len(self.route)
+
+        if self.direction > 0:
+            goal_i = n - 1
+            if self.total_length - self.current_s > self.goal_distance:
+                return False
+        else:
+            goal_i = 0
+            if self.current_s > self.goal_distance:
+                return False
+
+        dist_goal = self.distance_to_index(goal_i)
+
+        if dist_goal > self.goal_distance:
+            return False
+
+        if self.loop_mode == 'pingpong':
+            if self.direction > 0:
+                self.direction = -1
+                self.nearest_index = n - 1
+                self.current_s = self.total_length
+                self.get_logger().info('reach end, switch to backward')
+            else:
+                self.direction = 1
+                self.nearest_index = 0
+                self.current_s = 0.0
+                self.get_logger().info('reach start, switch to forward')
+
+            self.reset_progress_watchdog()
+            return False
+
+        self.get_logger().info('goal reached, stop')
+        self.finished = True
+        self.publish_stop()
+        return True
+
+    def control_loop(self):
+        if self.current_x is None:
+            self.publish_stop()
+            return
+
+        if self.start_alignment_failed and not self.initialized:
+            self.publish_stop()
+            return
+
+        if self.finished:
+            self.publish_stop()
+            return
+
+        if self.tracking_fault:
+            self.publish_stop()
+            return
+
+        if not self.update_nearest_index():
+            self.publish_stop()
+            return
+
+        if self.handle_goal():
+            return
+
+        recovery_mode = self.last_local_route_distance > self.recovery_distance
+        if recovery_mode:
+            # When off the recorded line, first drive back to the nearest route
+            # projection instead of chasing a lookahead target that can cut corners.
+            target_s = self.current_s
+            self.target_index = self.nearest_index
+            self.target_x = self.projected_x
+            self.target_y = self.projected_y
+        else:
+            target_s = self.current_s + self.direction * self.lookahead_distance
+            target_s = max(0.0, min(self.total_length, target_s))
+            self.target_x, self.target_y, self.target_index = self.point_at_s(target_s)
+
+        target = self.route[self.target_index]
+        if self.target_x is None or self.target_y is None:
+            self.target_x = target['x']
+            self.target_y = target['y']
+        dx = self.target_x - self.current_x
+        dy = self.target_y - self.current_y
+        dist_to_target = math.hypot(dx, dy)
+
+        target_angle = math.atan2(dy, dx)
+        target_alpha = normalize_angle(target_angle - self.current_yaw)
+        self.lateral_alpha = self.compute_lateral_alpha()
+        alpha = normalize_angle(target_alpha + self.lateral_alpha)
+        target_speed = self.v_base
+        if self.use_route_speed:
+            target_speed = min(self.v_base, max(0.0, float(target.get('v', self.v_base))))
+        if recovery_mode:
+            target_speed = min(target_speed, self.recovery_vx)
+
+        alpha_for_control = alpha
+        if abs(alpha) > self.turn_in_place_angle:
+            # Near +/-pi, normalize_angle can flip sign with tiny heading noise.
+            # Keep the chosen turn direction until the turn leaves that wrap zone.
+            if abs(alpha) > math.pi - self.yaw_wrap_hysteresis:
+                if self.turn_alpha_sign == 0.0:
+                    if abs(self.last_cmd_yaw_rate) > 0.05:
+                        self.turn_alpha_sign = 1.0 if self.last_cmd_yaw_rate > 0.0 else -1.0
+                    else:
+                        self.turn_alpha_sign = 1.0 if alpha >= 0.0 else -1.0
+                alpha_for_control = self.turn_alpha_sign * abs(alpha)
+            else:
+                self.turn_alpha_sign = 1.0 if alpha >= 0.0 else -1.0
+        elif abs(alpha) < self.slow_down_angle:
+            self.turn_alpha_sign = 0.0
+
+        yaw_rate = self.k_yaw * alpha_for_control
+        yaw_rate = max(-self.max_yaw_rate, min(self.max_yaw_rate, yaw_rate))
+        control_abs_alpha = abs(alpha_for_control)
+
+        if control_abs_alpha > self.turn_in_place_angle:
+            vx = 0.0
+        elif control_abs_alpha > self.slow_down_angle:
+            vx = min(target_speed * 0.5, self.max_vx)
+        else:
+            vx = min(target_speed, self.max_vx)
+
+        if abs(alpha) < self.yaw_deadband:
+            yaw_rate = 0.0
+
+        now = time.time()
+        dt = max(0.02, min(0.20, now - self.last_cmd_time))
+        vx = self.smooth_value(vx, self.last_cmd_vx, self.max_vx_accel, dt)
+        yaw_rate = self.smooth_value(yaw_rate, self.last_cmd_yaw_rate, self.max_yaw_accel, dt)
+        self.last_cmd_vx = vx
+        self.last_cmd_yaw_rate = yaw_rate
+        self.last_cmd_time = now
+
+        # Turning and lateral route recovery can make little arc-length progress.
+        expecting_route_progress = (
+            abs(vx) > 0.05
+            and not recovery_mode
+            and control_abs_alpha <= self.slow_down_angle
+        )
+        if not expecting_route_progress:
+            self.reset_progress_watchdog(now)
+
+        # Detect lack of route progress and apply recovery.
+        stuck_elapsed = now - self.last_progress_time
+        if expecting_route_progress and stuck_elapsed > self.stuck_time:
+            moved_since_progress = 0.0
+            if self.last_progress_x is not None and self.last_progress_y is not None:
+                moved_since_progress = math.hypot(
+                    self.current_x - self.last_progress_x,
+                    self.current_y - self.last_progress_y
+                )
+
+            soft_unstick_active = False
+            if self.stuck_relocalize:
+                old_i = self.nearest_index
+                self.nearest_index = self.find_nearest_global()
+                self.reset_progress_watchdog(now)
+                self.get_logger().warn(
+                    f'stuck recovery: nearest_index {old_i} -> {self.nearest_index}'
+                )
+            else:
+                if moved_since_progress <= self.soft_unstick_min_moved and self.soft_unstick_yaw_rate > 0.0:
+                    if self.soft_unstick_sign == 0.0:
+                        if abs(alpha_for_control) > self.yaw_deadband:
+                            self.soft_unstick_sign = 1.0 if alpha_for_control >= 0.0 else -1.0
+                        elif abs(self.last_cmd_yaw_rate) > 0.05:
+                            self.soft_unstick_sign = 1.0 if self.last_cmd_yaw_rate >= 0.0 else -1.0
+                        else:
+                            self.soft_unstick_sign = 1.0
+                    soft_yaw = self.soft_unstick_sign * min(self.max_yaw_rate, self.soft_unstick_yaw_rate)
+                    if abs(yaw_rate) < abs(soft_yaw):
+                        yaw_rate = soft_yaw
+                        self.last_cmd_yaw_rate = yaw_rate
+                    soft_unstick_active = True
+
+                if now - self.last_stuck_log_time > 2.0:
+                    self.last_stuck_log_time = now
+                    self.get_logger().warn(
+                        f'no waypoint progress for {stuck_elapsed:.1f}s; '
+                        f'stuck relocalize disabled; '
+                        f'pose=({self.current_x:.3f},{self.current_y:.3f},{self.current_yaw:.3f}), '
+                        f'progress_s={self.current_s:.3f}, last_progress_s={self.last_progress_s:.3f}, '
+                        f'moved_since_progress={moved_since_progress:.3f}, '
+                        f'projected=({self.projected_x:.3f},{self.projected_y:.3f}), '
+                        f'target_s={target_s:.3f}, target=({self.target_x:.3f},{self.target_y:.3f}), '
+                        f'target_alpha={target_alpha:.3f}, lateral_error={self.lateral_error:.3f}, '
+                        f'lateral_alpha={self.lateral_alpha:.3f}, alpha={alpha:.3f}, '
+                        f'cmd=({vx:.3f},{yaw_rate:.3f}), dir={self.direction}, '
+                        f'soft_unstick={soft_unstick_active}'
+                    )
+
+        cmd = Twist()
+        cmd.linear.x = float(vx)
+        cmd.linear.y = 0.0
+        cmd.angular.z = float(yaw_rate)
+        self.pub.publish(cmd)
+
+        if now - self.last_log_time > 1.0:
+            self.last_log_time = now
+            self.get_logger().info(
+                f'nearest={self.nearest_index}, target={self.target_index}, '
+                f's={self.current_s:.2f}/{self.total_length:.2f}, '
+                f'target_s={target_s:.2f}, target_xy=({self.target_x:.2f},{self.target_y:.2f}), '
+                f'dist={dist_to_target:.2f}, route_d={self.last_local_route_distance:.2f}, '
+                f'lateral_error={self.lateral_error:.2f}, lateral_alpha={self.lateral_alpha:.2f}, '
+                f'pose=({self.current_x:.2f},{self.current_y:.2f},{self.current_yaw:.2f}), '
+                f'recovery={recovery_mode}, target_alpha={target_alpha:.2f}, alpha={alpha:.2f}, '
+                f'vx={vx:.2f}, yaw_rate={yaw_rate:.2f}, dir={self.direction}'
+            )
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = WaypointFollower()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info('waypoint_follower stopped by Ctrl+C')
+        node.publish_stop()
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

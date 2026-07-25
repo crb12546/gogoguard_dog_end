@@ -1,0 +1,23 @@
+[INFO] [1784720667.681398417] [waypoint_follower]: simple csv waypoint_follower started
+[INFO] [1784720667.691602382] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf2.csv
+[INFO] [1784720667.693534750] [waypoint_follower]: route_transform_json: identity
+[INFO] [1784720667.694188974] [waypoint_follower]: route_frame_mode: False, yaw_old_from_current=0.0000
+[INFO] [1784720667.694781885] [waypoint_follower]: route points: 1687
+[INFO] [1784720667.695386348] [waypoint_follower]: v_base: 0.25, max_vx: 0.25, use_route_speed: True
+[INFO] [1784720667.702481500] [waypoint_follower]: yaw_limits: max=0.3, non_corner=0.35
+[INFO] [1784720667.703240398] [waypoint_follower]: lateral_yaw_gain: 0.06, max_lateral_yaw_rate: 0.05, lateral_deadband: 0.03
+[INFO] [1784720667.703879646] [waypoint_follower]: lateral velocity correction: gain=0.75, max_vy=0.15m/s, deadband=0.03m, heading_limit=25.0deg, steering_limit=8.0deg
+[INFO] [1784720667.704482029] [waypoint_follower]: loop_mode: once
+[INFO] [1784720667.705078556] [waypoint_follower]: lookahead_distance: 0.8
+[INFO] [1784720667.705704332] [waypoint_follower]: dynamic_lookahead: enabled=True, straight=0.8, corner=0.25, curve=0.8, corner_angle_deg=60.0, scan_distance=1.0, curve_angle_deg=20.0, curve_scan_distance=4.0, curve_heading_preview=1.2, curve_heading_blend=0.35, corner_turn_distance=0.55, corner_exit_distance=0.9, corner_wiggle_distance=1.6, corner_wiggle_min_opposite_angle_deg=30.0, corner_heading_blend=0.2, corner_heading_conflict_blend=0.65, corner_lateral_scale=0.4
+[INFO] [1784720667.713832725] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1784720667.714472293] [waypoint_follower]: turn_crawl_vx: 0.06
+[INFO] [1784720667.715101524] [waypoint_follower]: odom_jump_limits: distance=0.8, z=0.5, dt=2.0
+[INFO] [1784720667.715708868] [waypoint_follower]: start_policy: route_start, start_max_distance: 0.5, start_max_yaw_error: 0.9
+[INFO] [1784720667.716327379] [waypoint_follower]: allow_global_relocalize: False, stuck_relocalize: False, recovery_distance: 1.0, recovery_heading_distance: 0.35, recovery_yaw_error: 0.75, recovery_vx: 0.2, max_route_deviation: 5.0
+[INFO] [1784720667.716943458] [waypoint_follower]: soft_unstick_yaw_rate: 0.2, soft_unstick_min_moved: 0.12, progress_s_epsilon: 0.08
+[INFO] [1784720667.717537009] [waypoint_follower]: projection: local route window enabled; speed-step clamp disabled; configured_speed_scale=1.2, configured_max_step=0.12, progress_forward_tolerance=0.45, progress_backtrack_tolerance=0.12
+[ERROR] [1784720667.730415248] [waypoint_follower]: route start mismatch: current=(-4.701,7.925,0.365), route_start=(-0.007,0.009,0.010), distance=9.203/0.500, yaw_error=0.356/0.900; hold stop
+[ERROR] [1784720669.768337060] [waypoint_follower]: route start mismatch: current=(-4.696,7.938,0.376), route_start=(-0.007,0.009,0.010), distance=9.212/0.500, yaw_error=0.366/0.900; hold stop
+[ERROR] [1784720671.818219335] [waypoint_follower]: route start mismatch: current=(-4.703,7.931,0.362), route_start=(-0.007,0.009,0.010), distance=9.209/0.500, yaw_error=0.352/0.900; hold stop
+[INFO] [1784720672.925563973] [waypoint_follower]: waypoint_follower stopped by Ctrl+C

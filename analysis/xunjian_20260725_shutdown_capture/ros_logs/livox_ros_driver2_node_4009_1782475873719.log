@@ -1,0 +1,5 @@
+[INFO] [1782475873.739159776] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.6
+[INFO] [1782475873.741235704] [livox_lidar_publisher]: Data Source is raw lidar.
+[INFO] [1782475873.741296527] [livox_lidar_publisher]: Config file : /home/unitree/go2_fastlio_ws/src/livox_ros_driver2/launch_ROS2/../config/MID360s_config.json
+[ERROR] [1782475873.746918860] [livox_lidar_publisher]: Init lds lidar fail!
+[INFO] [1782476021.200149944] [rclcpp]: signal_handler(signal_value=2)

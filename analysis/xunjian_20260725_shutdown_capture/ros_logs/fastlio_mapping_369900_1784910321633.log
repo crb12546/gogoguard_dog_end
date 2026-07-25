@@ -1,0 +1,8 @@
+[INFO] [1784910321.656046507] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1784910321.661934742] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[INFO] [1784910321.669606899] [laser_mapping]: Node init finished.
+[WARN] [1784910321.851297230] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784910322.059046920] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1784910322.306344068] [laser_mapping]: Initialize the map kdtree

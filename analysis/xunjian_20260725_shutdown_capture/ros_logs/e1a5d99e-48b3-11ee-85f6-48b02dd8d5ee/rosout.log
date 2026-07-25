@@ -1,0 +1,9 @@
+
+
+1693564793.001526729  Node Startup
+1693564793.544087429 INFO /camera/realsense2_camera_manager [/tmp/binarydeb/ros-noetic-realsense2-camera-2.3.2/src/realsense_node_factory.cpp:37(RealSenseNodeFactory::RealSenseNodeFactory)] [topics: /rosout] RealSense ROS v2.3.2
+1693564793.544137702 INFO /camera/realsense2_camera_manager [/tmp/binarydeb/ros-noetic-realsense2-camera-2.3.2/src/realsense_node_factory.cpp:38(RealSenseNodeFactory::RealSenseNodeFactory)] [topics: /rosout] Built with LibRealSense v2.50.0
+1693564793.547200244 INFO /camera/realsense2_camera_manager [/tmp/binarydeb/ros-noetic-realsense2-camera-2.3.2/src/realsense_node_factory.cpp:39(RealSenseNodeFactory::RealSenseNodeFactory)] [topics: /rosout] Running with LibRealSense v2.50.0
+1693564793.629949259 WARN /camera/realsense2_camera_manager [/tmp/binarydeb/ros-noetic-realsense2-camera-2.3.2/src/realsense_node_factory.cpp:93(RealSenseNodeFactory::getDevice)] [topics: /rosout, /camera/realsense2_camera_manager/bond] No RealSense devices were found!
+1693564799.668086223 WARN /camera/realsense2_camera_manager [/tmp/binarydeb/ros-noetic-realsense2-camera-2.3.2/src/realsense_node_factory.cpp:93(RealSenseNodeFactory::getDevice)] [topics: /rosout, /camera/realsense2_camera_manager/bond] No RealSense devices were found!
+1693564802.047004920 INFO /camera/realsense2_camera [/tmp/binarydeb/ros-noetic-nodelet-1.10.2/src/nodelet.cpp:174(unloadNodelet)] [topics: /rosout, /camera/realsense2_camera_manager/bond] Unloading nodelet /camera/realsense2_camera from manager realsense2_camera_manager

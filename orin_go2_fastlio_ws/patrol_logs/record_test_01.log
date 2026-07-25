@@ -1,0 +1,37 @@
+
+
+===== 2026-05-17T03:49:18.548517 start route_recorder =====
+[INFO] [1778960960.431185376] [route_recorder]: route_recorder started
+[INFO] [1778960960.431825824] [route_recorder]: odom_topic: /Odometry
+[INFO] [1778960960.432319616] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/records/test_01/route.csv
+[INFO] [1778960960.432804256] [route_recorder]: min_distance: 0.4
+[INFO] [1778960960.463670528] [route_recorder]: saved point 0: x=0.026, y=0.024, yaw=-0.003
+[INFO] [1778960973.573637696] [route_recorder]: saved point 1: x=0.457, y=0.024, yaw=-0.002
+[INFO] [1778960974.473260256] [route_recorder]: saved point 2: x=0.865, y=0.052, yaw=0.021
+[INFO] [1778960975.373874112] [route_recorder]: saved point 3: x=1.303, y=0.083, yaw=0.036
+[INFO] [1778960976.374004896] [route_recorder]: saved point 4: x=1.712, y=0.069, yaw=-0.077
+[INFO] [1778960977.375570624] [route_recorder]: saved point 5: x=2.133, y=-0.036, yaw=-0.328
+[INFO] [1778960978.258545600] [route_recorder]: saved point 6: x=2.513, y=-0.168, yaw=-0.308
+[INFO] [1778960979.056064224] [route_recorder]: saved point 7: x=2.924, y=-0.259, yaw=-0.239
+[INFO] [1778960979.857270848] [route_recorder]: saved point 8: x=3.356, y=-0.335, yaw=-0.192
+[INFO] [1778960980.659266944] [route_recorder]: saved point 9: x=3.757, y=-0.411, yaw=-0.177
+[INFO] [1778960981.456720928] [route_recorder]: saved point 10: x=4.156, y=-0.472, yaw=-0.153
+[INFO] [1778960982.357922592] [route_recorder]: saved point 11: x=4.592, y=-0.524, yaw=-0.134
+[INFO] [1778960983.156578624] [route_recorder]: saved point 12: x=5.003, y=-0.565, yaw=-0.110
+[INFO] [1778960983.957411520] [route_recorder]: saved point 13: x=5.457, y=-0.576, yaw=-0.103
+[INFO] [1778960984.756855392] [route_recorder]: saved point 14: x=5.874, y=-0.634, yaw=-0.030
+[INFO] [1778960985.857540864] [route_recorder]: saved point 15: x=6.259, y=-0.430, yaw=0.262
+[INFO] [1778960986.758102336] [route_recorder]: saved point 16: x=6.579, y=-0.171, yaw=0.702
+[INFO] [1778960987.557765120] [route_recorder]: saved point 17: x=6.806, y=0.182, yaw=0.882
+[INFO] [1778960988.458032928] [route_recorder]: saved point 18: x=6.792, y=0.606, yaw=1.433
+[INFO] [1778960989.256950720] [route_recorder]: saved point 19: x=6.780, y=1.033, yaw=1.448
+[INFO] [1778960989.956244096] [route_recorder]: saved point 20: x=6.766, y=1.457, yaw=1.471
+[INFO] [1778960990.655949888] [route_recorder]: saved point 21: x=6.732, y=1.869, yaw=1.485
+[INFO] [1778960991.455755808] [route_recorder]: saved point 22: x=6.740, y=2.322, yaw=1.434
+[INFO] [1778960992.256092928] [route_recorder]: saved point 23: x=6.731, y=2.753, yaw=1.472
+[INFO] [1778960993.055682848] [route_recorder]: saved point 24: x=6.767, y=3.174, yaw=1.411
+[INFO] [1778960993.773271168] [route_recorder]: saved point 25: x=6.798, y=3.591, yaw=1.424
+[INFO] [1778960994.456043744] [route_recorder]: saved point 26: x=6.782, y=4.034, yaw=1.431
+[INFO] [1778960996.104487360] [route_recorder]: route_recorder stopped by Ctrl+C
+/opt/ros/foxy/bin/ros2:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import load_entry_point

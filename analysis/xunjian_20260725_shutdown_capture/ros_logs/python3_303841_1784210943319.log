@@ -1,0 +1,28 @@
+[INFO] [1784210943.770162265] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [1784210943.770944108] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/tju20260714test2-lx.csv
+[INFO] [1784210943.774613993] [waypoint_follower]: route_transform_json: /tmp/go2_route_runtime/tju20260714test2-lx_1784207776.csv.relocalize.json
+[INFO] [1784210943.775252474] [waypoint_follower]: route_frame_mode: True, yaw_old_from_current=-0.1100
+[INFO] [1784210943.775820552] [waypoint_follower]: route points: 21
+[INFO] [1784210943.776385814] [waypoint_follower]: v_base: 0.3, max_vx: 0.3, use_route_speed: True
+[INFO] [1784210943.776934884] [waypoint_follower]: lateral_yaw_gain: 0.18, max_lateral_yaw_rate: 0.15, lateral_deadband: 0.03
+[INFO] [1784210943.782024549] [waypoint_follower]: loop_mode: pingpong
+[INFO] [1784210943.783621358] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [1784210943.784225437] [waypoint_follower]: dynamic_lookahead: enabled=True, straight=0.9, corner=0.4, corner_angle_deg=60.0, scan_distance=1.0, corner_turn_distance=0.2
+[INFO] [1784210943.784786795] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1784210943.785352730] [waypoint_follower]: turn_crawl_vx: 0.06
+[INFO] [1784210943.785898759] [waypoint_follower]: odom_jump_limits: distance=0.8, z=0.5, dt=2.0
+[INFO] [1784210943.789363743] [waypoint_follower]: start_policy: route_start, start_max_distance: 0.8, start_max_yaw_error: 0.9
+[INFO] [1784210943.789970671] [waypoint_follower]: allow_global_relocalize: False, stuck_relocalize: False, recovery_distance: 1.0, recovery_heading_distance: 0.35, recovery_yaw_error: 0.75, recovery_vx: 0.2, max_route_deviation: 5.0
+[INFO] [1784210943.792458798] [waypoint_follower]: soft_unstick_yaw_rate: 0.2, soft_unstick_min_moved: 0.12, progress_s_epsilon: 0.08
+[INFO] [1784210943.793567818] [waypoint_follower]: projection_limits: speed_scale=1.2, step_margin=0.01, min_step=0.015, max_step=0.12, progress_forward_tolerance=0.45, progress_backtrack_tolerance=0.12
+[ERROR] [1784210943.796453363] [waypoint_follower]: route start mismatch: current=(2.619,-1.124,1.499), route_start=(0.138,0.060,0.243), distance=2.749/0.800, yaw_error=1.255/0.900; hold stop
+[ERROR] [1784210945.970637285] [waypoint_follower]: route start mismatch: current=(2.615,-1.128,1.496), route_start=(0.138,0.060,0.243), distance=2.747/0.800, yaw_error=1.253/0.900; hold stop
+[ERROR] [1784210948.185493643] [waypoint_follower]: route start mismatch: current=(2.620,-1.123,1.499), route_start=(0.138,0.060,0.243), distance=2.750/0.800, yaw_error=1.256/0.900; hold stop
+[ERROR] [1784210950.477755751] [waypoint_follower]: route start mismatch: current=(2.621,-1.125,1.498), route_start=(0.138,0.060,0.243), distance=2.752/0.800, yaw_error=1.255/0.900; hold stop
+[ERROR] [1784210952.535676965] [waypoint_follower]: route start mismatch: current=(2.619,-1.121,1.500), route_start=(0.138,0.060,0.243), distance=2.748/0.800, yaw_error=1.256/0.900; hold stop
+[ERROR] [1784210954.575956469] [waypoint_follower]: route start mismatch: current=(2.624,-1.128,1.494), route_start=(0.138,0.060,0.243), distance=2.755/0.800, yaw_error=1.251/0.900; hold stop
+[ERROR] [1784210956.596926349] [waypoint_follower]: route start mismatch: current=(2.620,-1.125,1.499), route_start=(0.138,0.060,0.243), distance=2.751/0.800, yaw_error=1.256/0.900; hold stop
+[ERROR] [1784210958.621031590] [waypoint_follower]: route start mismatch: current=(2.626,-1.120,1.495), route_start=(0.138,0.060,0.243), distance=2.754/0.800, yaw_error=1.252/0.900; hold stop
+[ERROR] [1784210960.654095827] [waypoint_follower]: route start mismatch: current=(2.620,-1.122,1.499), route_start=(0.138,0.060,0.243), distance=2.750/0.800, yaw_error=1.256/0.900; hold stop
+[ERROR] [1784210962.675625229] [waypoint_follower]: route start mismatch: current=(2.624,-1.127,1.496), route_start=(0.138,0.060,0.243), distance=2.755/0.800, yaw_error=1.252/0.900; hold stop
+[ERROR] [1784210964.715743470] [waypoint_follower]: route start mismatch: current=(2.620,-1.125,1.500), route_start=(0.138,0.060,0.243), di

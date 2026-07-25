@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+export WS=/home/unitree/go2_fastlio_ws
+export PATROL_PKG=go2_fastlio_patrol
+export ROUTE_ROOT=${WS}/src/go2_fastlio_patrol/routes
+export RECORD_ROOT=${ROUTE_ROOT}/records
+export LOG_DIR=${WS}/patrol_logs
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+source /opt/ros/foxy/setup.bash
+
+if [ -f /unitree/module/graph_pid_ws/install/setup.bash ]; then
+  source /unitree/module/graph_pid_ws/install/setup.bash
+fi
+
+source ${WS}/install/setup.bash

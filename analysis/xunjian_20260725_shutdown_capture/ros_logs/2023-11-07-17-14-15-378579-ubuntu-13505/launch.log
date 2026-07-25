@@ -1,0 +1,4 @@
+1699348455.4004276 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-17-14-15-378579-ubuntu-13505
+1699348455.4033382 [INFO] [launch]: Default logging verbosity is set to INFO
+1699348455.6089022 [INFO] [go2_pid_tracing-1]: process started with pid [13514]
+1699348661.7555115 [INFO] [go2_pid_tracing-1]: process has finished cleanly [pid 13514]

@@ -1,0 +1,132 @@
+[INFO] [1782624837.352603225] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [1782624837.354636125] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/route_test_0520.csv
+[INFO] [1782624837.356498058] [waypoint_follower]: route points: 23
+[INFO] [1782624837.357150493] [waypoint_follower]: loop_mode: noop
+[INFO] [1782624837.359025708] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [1782624837.360722724] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1782624837.368944924] [waypoint_follower]: init nearest_index=22, distance_to_start=14.241
+[WARN] [1782624837.373963196] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[INFO] [1782624837.376622671] [waypoint_follower]: nearest=22, target=22, dist=6.78, alpha=1.81, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624837.421657212] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.471621084] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.521658983] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.572168845] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.622006526] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.672173624] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.722204066] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.771946342] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.821819868] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.871816160] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.921939926] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624837.971838830] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.021958380] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.071812504] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.121690472] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.171613853] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.221611483] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.271980170] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.321923585] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.371736456] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.421734247] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[INFO] [1782624838.422668927] [waypoint_follower]: nearest=22, target=22, dist=6.79, alpha=1.81, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624838.471715684] [waypoint_follower]: far from local route: d=6.79, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.521936095] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.571784875] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.621743108] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.671800267] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.722076909] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.771743617] [waypoint_follower]: far from local route: d=6.78, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.821794759] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.871782692] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.921683383] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624838.971836809] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.021677885] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.071593322] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.121582241] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.172067544] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.221778475] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.271588714] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.321678446] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.371731853] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.421806703] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[INFO] [1782624839.422781932] [waypoint_follower]: nearest=22, target=22, dist=6.77, alpha=1.71, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624839.471575434] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.521580642] [waypoint_follower]: far from local route: d=6.77, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.571702090] [waypoint_follower]: far from local route: d=6.76, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.621749705] [waypoint_follower]: far from local route: d=6.76, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.672063689] [waypoint_follower]: far from local route: d=6.76, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.721723798] [waypoint_follower]: far from local route: d=6.76, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.771996689] [waypoint_follower]: far from local route: d=6.76, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.821913631] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.871626834] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.921577540] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624839.971915335] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.021794617] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.071598609] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.121582143] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.172035147] [waypoint_follower]: far from local route: d=6.75, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.221870471] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.271715748] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.321628970] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.372099191] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.373080470] [waypoint_follower]: stuck recovery: nearest_index 22 -> 22
+[WARN] [1782624840.421889677] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[INFO] [1782624840.426262401] [waypoint_follower]: nearest=22, target=22, dist=6.74, alpha=1.63, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624840.471989419] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.521625869] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.572054550] [waypoint_follower]: far from local route: d=6.74, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.621893330] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.672170791] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.721917943] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.772119458] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.821898199] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.872053180] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.921845970] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624840.971806974] [waypoint_follower]: far from local route: d=6.73, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.022397220] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.071762203] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.121706685] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.172045299] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.221895497] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.271732797] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.321725190] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.372079069] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.422017214] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.471681244] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[INFO] [1782624841.473129816] [waypoint_follower]: nearest=22, target=22, dist=6.72, alpha=1.50, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624841.521637536] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.572181904] [waypoint_follower]: far from local route: d=6.72, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.621853583] [waypoint_follower]: far from local route: d=6.71, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.672150239] [waypoint_follower]: far from local route: d=6.71, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.721980914] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.771823591] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.821734661] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.872098270] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.921872138] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624841.971723744] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.021736308] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.072073409] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.121839748] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.171711445] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.221670353] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.271653649] [waypoint_follower]: far from local route: d=6.70, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.321936503] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.371810440] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.421713309] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.471651894] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[INFO] [1782624842.473208513] [waypoint_follower]: nearest=22, target=22, dist=6.69, alpha=1.39, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [1782624842.521882006] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.571822832] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.621819697] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.672265644] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.722085942] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.771873468] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.821751918] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.871683014] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.922071258] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624842.971856960] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624843.021801699] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624843.071651624] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624843.122111613] [waypoint_follower]: far from local route: d=6.69, relocalize nearest_index 22 -> 22
+[WARN] [1782624843.171889370] [waypoint_follower]: far from local route: d=6.67, relocalize nearest_index 22 -> 22
+[INFO] [1782624843.180465656] [waypoint_follower]: waypoint_follower stopped by Ctrl+C

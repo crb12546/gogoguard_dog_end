@@ -1,0 +1,22 @@
+[INFO] [1784527890.149466804] [route_recorder]: route_recorder started
+[INFO] [1784527890.155317118] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784527890.156774890] [route_recorder]: route_file: /tmp/route_quality_integration3.csv
+[INFO] [1784527890.157366783] [route_recorder]: raw_file: /tmp/raw/route_quality_integration3.raw.csv
+[INFO] [1784527890.157965841] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784527890.158542891] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784527890.159118758] [route_recorder]: quality gate: warmup=0.0s, stable_samples=1, max_odom_step=0.30m, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784527890.163107502] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784527891.905054143] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784527891.905967592] [route_recorder]: saved point 0: x=0.000, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784527892.214378392] [route_recorder]: saved point 1: x=0.200, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784527892.320817387] [route_recorder]: saved point 2: x=0.400, y=-0.001, yaw=0.000, mode=straight
+[INFO] [1784527892.374055677] [route_recorder]: saved point 3: x=0.500, y=0.212, yaw=0.000, mode=straight
+[INFO] [1784527892.384748127] [route_recorder]: saved point 4: x=0.520, y=0.012, yaw=0.000, mode=straight
+[INFO] [1784527892.492427662] [route_recorder]: saved point 5: x=0.720, y=-0.012, yaw=0.000, mode=straight
+[INFO] [1784527892.598874014] [route_recorder]: saved point 6: x=0.920, y=0.012, yaw=0.000, mode=straight
+[INFO] [1784527892.662824555] [route_recorder]: saved point 7: x=1.000, y=0.002, yaw=0.000, mode=turn
+[INFO] [1784527892.897379824] [route_recorder]: saved point 8: x=1.012, y=0.120, yaw=1.571, mode=turn
+[INFO] [1784527892.950708708] [route_recorder]: saved point 9: x=1.002, y=0.220, yaw=1.571, mode=turn
+[INFO] [1784527893.057421820] [route_recorder]: saved point 10: x=0.993, y=0.420, yaw=1.571, mode=straight
+[INFO] [1784527893.164079782] [route_recorder]: saved point 11: x=1.010, y=0.620, yaw=1.571, mode=straight
+[INFO] [1784527893.270769861] [route_recorder]: saved point 12: x=0.988, y=0.820, yaw=1.571, mode=straight

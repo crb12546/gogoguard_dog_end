@@ -1,0 +1,43 @@
+{
+  "raw_samples": 3221,
+  "finite_samples": 3221,
+  "deduplicated_samples": 3221,
+  "isolated_spikes_removed": 1,
+  "simplified_vertices": 173,
+  "route_points": 1696,
+  "route_length_m": 643.3497458510075,
+  "max_raw_gap_m": 0.2001020239777806,
+  "max_route_gap_m": 0.4000029415516831,
+  "mean_route_gap_m": 0.37955737218348523,
+  "simplify_tolerance_m": 0.03,
+  "straight_spacing_m": 0.4,
+  "turn_spacing_m": 0.3,
+  "turn_angle_deg": 5.0,
+  "straightening_enabled": false,
+  "straight_yaw_tolerance_deg": 4.0,
+  "straight_min_length_m": 1.0,
+  "straight_max_lateral_correction_limit_m": 0.35,
+  "straightened_sections": 0,
+  "straightened_samples": 0,
+  "straightening_skipped_sections": 0,
+  "max_lateral_correction_m": 0.0,
+  "status": "valid",
+  "valid": true,
+  "source_file": "/Users/constantine/Project/Go2/xbf-cs.csv",
+  "route_file": "/Users/constantine/Project/Go2/xbf-cs-040.csv",
+  "processing_note": "straight spacing 0.40 m; turn spacing 0.30 m; exact legitimate turn vertices retained; isolated out-and-back spikes removed; first corner merged into one -81.20 degree turn, followed by a smooth transition to the later recorded left-side corridor line; 481 m residual hook fitted to a single -83.73 degree corner; other stable-section straightening disabled",
+  "manual_corner_repairs": 2,
+  "repaired_route_ids": [
+    139,
+    1256
+  ],
+  "first_corner_turn_deg": -81.201813783728,
+  "first_corridor_target_x": 55.814987,
+  "first_corridor_straight_start_y": -8.356114,
+  "first_corridor_straight_end_y": -83.29734,
+  "remaining_opposing_wiggle_pairs": 0,
+  "removed_spike_source_ids": [
+    1732
+  ],
+  "quality_failure_reasons": []
+}

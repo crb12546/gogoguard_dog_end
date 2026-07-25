@@ -1,0 +1,47 @@
+amcl:
+  ros__parameters:
+    use_sim_time: false
+
+    global_frame_id: "map"
+    odom_frame_id: "odom"
+    base_frame_id: "base_footprint"
+    scan_topic: "/scan_level"
+
+    tf_broadcast: true
+    transform_tolerance: 5.0
+
+    min_particles: 1000
+    max_particles: 4000
+    kld_err: 0.03
+    kld_z: 0.99
+
+    update_min_d: 0.05
+    update_min_a: 0.05
+    resample_interval: 1
+
+    alpha1: 0.05
+    alpha2: 0.05
+    alpha3: 0.05
+    alpha4: 0.05
+    alpha5: 0.05
+
+    laser_model_type: "likelihood_field"
+    laser_min_range: 0.3
+    laser_max_range: 8.0
+    max_beams: 180
+
+    z_hit: 0.90
+    z_short: 0.02
+    z_max: 0.03
+    z_rand: 0.05
+    sigma_hit: 0.15
+    lambda_short: 0.1
+    laser_likelihood_max_dist: 1.5
+
+    do_beamskip: false
+
+    recovery_alpha_slow: 0.0
+    recovery_alpha_fast: 0.0
+
+    set_initial_pose: false
+    always_reset_initial_pose: false

@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2023-11-07 17:03:48,683: init_node, name[/rqt_gui_py_node_26626], pid[26626]
+[xmlrpc][INFO] 2023-11-07 17:03:48,685: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2023-11-07 17:03:48,686: Started XML-RPC server [http://ubuntu:35573/]
+[rospy.init][INFO] 2023-11-07 17:03:48,686: ROS Slave URI: [http://ubuntu:35573/]
+[rospy.impl.masterslave][INFO] 2023-11-07 17:03:48,686: _ready: http://ubuntu:35573/
+[rospy.registration][INFO] 2023-11-07 17:03:48,687: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2023-11-07 17:03:48,688: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2023-11-07 17:03:48,787: registered with master
+[rospy.rosout][INFO] 2023-11-07 17:03:48,787: initializing /rosout core topic
+[rospy.rosout][INFO] 2023-11-07 17:03:48,791: connected to core topic /rosout
+[rospy.simtime][INFO] 2023-11-07 17:03:48,792: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2023-11-07 17:03:49,006: topic[/camera/stereo_module/parameter_descriptions] adding connection to [http://ubuntu:40903/], count 0
+[rospy.internal][INFO] 2023-11-07 17:03:49,007: topic[/camera/stereo_module/parameter_updates] adding connection to [http://ubuntu:40903/], count 0
+[rospy.internal][INFO] 2023-11-07 17:03:49,037: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2023-11-07 17:03:53,009: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_descriptions...
+[rospy.internal][INFO] 2023-11-07 17:03:53,011: topic[/camera/stereo_module/parameter_descriptions] removing connection to http://ubuntu:40903/
+[rospy.internal][INFO] 2023-11-07 17:03:53,011: topic[/camera/stereo_module/parameter_descriptions] removing connection to http://ubuntu:40903/
+[rospy.internal][INFO] 2023-11-07 17:03:53,015: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_updates...
+[rospy.internal][INFO] 2023-11-07 17:03:53,016: topic[/camera/stereo_module/parameter_updates] removing connection to http://ubuntu:40903/
+[rospy.core][INFO] 2023-11-07 17:03:53,054: signal_shutdown [atexit]
+[rospy.internal][INFO] 2023-11-07 17:03:53,058: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2023-11-07 17:03:53,059: atexit

@@ -1,0 +1,4 @@
+1784617105.6726973 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-21-14-58-25-648043-ubuntu-780956
+1784617105.6733155 [INFO] [launch]: Default logging verbosity is set to INFO
+1784617105.9359615 [INFO] [fastlio_mapping-1]: process started with pid [783916]
+1784617717.1775179 [INFO] [fastlio_mapping-1]: process has finished cleanly [pid 783916]

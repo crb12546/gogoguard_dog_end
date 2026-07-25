@@ -1,0 +1,10 @@
+[Service]
+Environment=GO2_4G_MODE=ecm
+Environment=GO2_4G_ENABLE_HOST_RESET=0
+Environment=GO2_4G_ECM_IF=eth1
+Environment=GO2_4G_ECM_MAC=28:e3:57:c3:ed:9a
+Environment=GO2_4G_ECM_GW=192.168.0.1
+Environment=GO2_4G_ECM_AT_CONFIG=1
+Environment=GO2_4G_USB_BUS_REBIND_MAX_ATTEMPTS=3
+Environment=GO2_4G_USB_BUS_REBIND_BACKOFF=300
+Environment=GO2_4G_XHCI_DEAD_LOG_MIN_INTERVAL=60

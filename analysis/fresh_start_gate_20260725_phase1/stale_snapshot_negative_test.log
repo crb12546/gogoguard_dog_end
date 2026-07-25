@@ -1,0 +1,1 @@
+FASTLIO_FRESH_TIMEOUT timeout_s=0.500 consecutive=0/1 last_age_ms=unknown snapshot=/dev/shm/go2_fastlio_latest_odom.txt

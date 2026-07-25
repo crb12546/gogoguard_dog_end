@@ -1,0 +1,11 @@
+[INFO] [1784527533.969303791] [route_recorder]: route_recorder started
+[INFO] [1784527533.970218874] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784527533.970939011] [route_recorder]: route_file: /tmp/route_quality_smoke.csv
+[INFO] [1784527533.971611499] [route_recorder]: raw_file: /tmp/raw/route_quality_smoke.raw.csv
+[INFO] [1784527533.972259123] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784527533.972945980] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784527533.973612868] [route_recorder]: quality gate: warmup=0.0s, stable_samples=1, max_odom_step=0.30m, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784527533.974256236] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784527582.012804740] [route_recorder]: route_recorder stopped
+[INFO] [1784527582.014807890] [route_recorder]: final clean route saved: raw=0, route=0, spikes_removed=0, max_gap=0.000m
+[INFO] [1784527582.015606724] [route_recorder]: quality report saved: /tmp/quality/route_quality_smoke.quality.json

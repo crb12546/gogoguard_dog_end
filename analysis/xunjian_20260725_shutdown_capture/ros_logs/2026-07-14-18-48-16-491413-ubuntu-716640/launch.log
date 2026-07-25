@@ -1,0 +1,4 @@
+1784026096.5047600 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-14-18-48-16-491413-ubuntu-716640
+1784026096.5053482 [INFO] [launch]: Default logging verbosity is set to INFO
+1784026096.6425691 [INFO] [livox_ros_driver2_node-1]: process started with pid [717687]
+1784026542.5271394 [INFO] [livox_ros_driver2_node-1]: process has finished cleanly [pid 717687]

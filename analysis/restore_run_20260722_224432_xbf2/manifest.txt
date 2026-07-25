@@ -1,0 +1,5 @@
+started_at=2026-07-22T22:44:32+0800
+route=/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf2.csv
+speed=0.500
+loop=pingpong
+sdk_if=eth0

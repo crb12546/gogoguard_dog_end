@@ -1,0 +1,188 @@
+#!/usr/bin/env bash
+set -e
+
+source /home/unitree/go2_fastlio_ws/scripts/env_common.sh
+
+mkdir -p "${LOG_DIR}"
+
+
+ensure_lidar_network() {
+  local iface="${GO2_LIDAR_IF:-${GO2_WIRED_IF:-eth1}}"
+  local ip_cidr="192.168.1.5/24"
+
+  echo "[base_bringup] checking lidar network ${iface} ${ip_cidr} ..."
+
+  if ! ip link show "${iface}" >/dev/null 2>&1; then
+    echo "[base_bringup] ERROR: network interface ${iface} not found."
+    echo "[base_bringup] Please check the Ethernet interface name."
+    return 1
+  fi
+
+  if ip -4 addr show dev "${iface}" | grep -q "192.168.1.5/24"; then
+    echo "[base_bringup] ${iface} already has ${ip_cidr}"
+    ip route replace 192.168.1.161/32 dev "${iface}" src 192.168.1.5 2>/dev/null || true
+    return 0
+  fi
+
+  echo "[base_bringup] adding ${ip_cidr} to ${iface} ..."
+
+  if command -v sudo >/dev/null 2>&1; then
+    sudo -n ip link set "${iface}" up || true
+    sudo -n ip addr add "${ip_cidr}" dev "${iface}" || true
+  else
+    ip link set "${iface}" up || true
+    ip addr add "${ip_cidr}" dev "${iface}" || true
+  fi
+
+  if ip -4 addr show dev "${iface}" | grep -q "192.168.1.5/24"; then
+    echo "[base_bringup] lidar network ready:"
+    ip route replace 192.168.1.161/32 dev "${iface}" src 192.168.1.5 2>/dev/null || true
+    ip -4 addr show dev "${iface}"
+    return 0
+  fi
+
+  echo "[base_bringup] WARNING: failed to add ${ip_cidr} to ${iface}."
+  echo "[base_bringup] If running as user service, install go2-lidar-network.service first."
+  return 1
+}
+
+
+wait_topic() {
+  local topic="$1"
+  local timeout_sec="$2"
+  local start_time
+  start_time=$(date +%s)
+
+  echo "[base_bringup] waiting for topic: ${topic}"
+
+  while true; do
+    if ros2 topic list 2>/dev/null | grep -qx "${topic}"; then
+      echo "[base_bringup] topic ready: ${topic}"
+      return 0
+    fi
+
+    now=$(date +%s)
+    if [ $((now - start_time)) -ge "${timeout_sec}" ]; then
+      echo "[base_bringup] ERROR: timeout waiting for ${topic}"
+      return 1
+    fi
+
+    sleep 1
+  done
+}
+
+topic_exists() {
+  local topic="$1"
+  ros2 topic list 2>/dev/null | grep -qx "${topic}"
+}
+
+stop_livox_driver() {
+  pkill -INT -f "ros2 launch livox_ros_driver2 msg_MID360s_launch.py" || true
+  pkill -INT -f "livox_ros_driver2_node" || true
+  sleep 2
+  pkill -KILL -f "ros2 launch livox_ros_driver2 msg_MID360s_launch.py" || true
+  pkill -KILL -f "livox_ros_driver2_node" || true
+}
+
+stop_fastlio() {
+  pkill -INT -f "ros2 launch fast_lio mapping.launch.py" || true
+  pkill -INT -f "fastlio_mapping" || true
+  sleep 2
+  pkill -KILL -f "ros2 launch fast_lio mapping.launch.py" || true
+  pkill -KILL -f "fastlio_mapping" || true
+}
+
+wait_livox_topics() {
+  local timeout_sec="$1"
+  local start_time now
+  start_time=$(date +%s)
+
+  echo "[base_bringup] waiting for Livox topics..."
+  while true; do
+    if topic_exists "/livox/lidar" && topic_exists "/livox/imu"; then
+      echo "[base_bringup] Livox topics are ready."
+      return 0
+    fi
+
+    if grep -Eq "bind failed|Init lds lidar fail|Failed to init livox lidar sdk" "${LOG_DIR}/livox.log" 2>/dev/null; then
+      echo "[base_bringup] Livox driver reported bind/init failure."
+      return 1
+    fi
+
+    now=$(date +%s)
+    if [ $((now - start_time)) -ge "${timeout_sec}" ]; then
+      echo "[base_bringup] ERROR: timeout waiting for Livox topics."
+      return 1
+    fi
+
+    sleep 1
+  done
+}
+
+start_livox_driver() {
+  local attempt
+
+  for attempt in 1 2 3 4 5; do
+    echo "[base_bringup] preparing Livox MID-360S driver attempt ${attempt}/5..."
+    stop_livox_driver
+    sleep 2
+
+    echo "[base_bringup] starting Livox MID-360S driver attempt ${attempt}/5..."
+    bash -lc "source ${WS}/scripts/env_common.sh && ros2 launch livox_ros_driver2 msg_MID360s_launch.py" \
+      > "${LOG_DIR}/livox.log" 2>&1 &
+
+    LIVOX_PID=$!
+    echo "[base_bringup] Livox PID: ${LIVOX_PID}"
+
+    if wait_livox_topics 45; then
+      echo "[base_bringup] Livox is ready."
+      return 0
+    fi
+
+    echo "[base_bringup] Livox attempt ${attempt}/5 failed; restarting driver after cooldown..."
+    stop_livox_driver
+    wait "${LIVOX_PID}" 2>/dev/null || true
+    sleep 8
+  done
+
+  echo "[base_bringup] ERROR: Livox failed after 5 attempts."
+  return 1
+}
+
+cleanup_children() {
+  echo "[base_bringup] received exit signal, stopping children..."
+  stop_fastlio
+  stop_livox_driver
+}
+
+trap cleanup_children INT TERM EXIT
+
+ensure_lidar_network || true
+
+echo "[base_bringup] cleaning old base processes..."
+stop_fastlio
+stop_livox_driver
+sleep 2
+
+cd "${WS}"
+if ! start_livox_driver; then
+  echo "[base_bringup] ERROR: cannot start Livox; aborting base bringup."
+  exit 20
+fi
+
+echo "[base_bringup] Livox is ready. Starting FAST-LIO..."
+bash -lc "source ${WS}/scripts/env_common.sh && ros2 launch fast_lio mapping.launch.py config_file:=go2_mid360s.yaml rviz:=false" \
+  > "${LOG_DIR}/fast_lio.log" 2>&1 &
+
+FASTLIO_PID=$!
+echo "[base_bringup] FAST-LIO PID: ${FASTLIO_PID}"
+
+wait_topic "/Odometry" 90
+wait_topic "/cloud_registered_body" 90
+
+echo "[base_bringup] FAST-LIO is ready."
+echo "[base_bringup] logs:"
+echo "  ${LOG_DIR}/livox.log"
+echo "  ${LOG_DIR}/fast_lio.log"
+
+wait ${LIVOX_PID} ${FASTLIO_PID}

@@ -1,0 +1,7 @@
+[INFO] [1784026096.690063168] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.6
+[INFO] [1784026096.696587103] [livox_lidar_publisher]: Data Source is raw lidar.
+[INFO] [1784026096.697808130] [livox_lidar_publisher]: Config file : /home/unitree/go2_fastlio_ws/src/livox_ros_driver2/launch_ROS2/../config/MID360s_config.json
+[INFO] [1784026096.712088708] [livox_lidar_publisher]: Init lds lidar success!
+[INFO] [1784026099.720252917] [livox_lidar_publisher]: livox/imu publish use imu format
+[INFO] [1784026099.723628888] [livox_lidar_publisher]: livox/lidar publish use livox custom format
+[INFO] [1784026541.379469332] [rclcpp]: signal_handler(signal_value=2)

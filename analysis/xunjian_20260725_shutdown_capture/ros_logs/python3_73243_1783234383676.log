@@ -1,0 +1,45 @@
+[INFO] [1783234385.072830884] [route_recorder]: route_recorder started
+[INFO] [1783234385.076521534] [route_recorder]: odom_topic: /Odometry
+[INFO] [1783234385.079642507] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/roomtest3.csv
+[INFO] [1783234385.082351982] [route_recorder]: min_distance: 0.4
+[INFO] [1783234385.091686291] [route_recorder]: saved point 0: x=0.008, y=-0.046, yaw=0.000
+[INFO] [1783234409.271391092] [route_recorder]: saved point 1: x=0.411, y=-0.045, yaw=-0.071
+[INFO] [1783234410.061444037] [route_recorder]: saved point 2: x=0.833, y=-0.074, yaw=-0.049
+[INFO] [1783234410.596620633] [route_recorder]: saved point 3: x=1.232, y=-0.100, yaw=-0.042
+[INFO] [1783234411.299739594] [route_recorder]: saved point 4: x=1.671, y=-0.091, yaw=-0.034
+[INFO] [1783234411.839342831] [route_recorder]: saved point 5: x=2.116, y=-0.158, yaw=-0.038
+[INFO] [1783234412.334431177] [route_recorder]: saved point 6: x=2.544, y=-0.169, yaw=-0.030
+[INFO] [1783234412.804319316] [route_recorder]: saved point 7: x=3.047, y=-0.189, yaw=-0.016
+[INFO] [1783234413.238277736] [route_recorder]: saved point 8: x=3.491, y=-0.212, yaw=-0.034
+[INFO] [1783234414.868551820] [route_recorder]: saved point 9: x=3.926, y=-0.168, yaw=-0.062
+[INFO] [1783234415.308168594] [route_recorder]: saved point 10: x=4.346, y=-0.218, yaw=-0.162
+[INFO] [1783234416.367671536] [route_recorder]: saved point 11: x=4.792, y=-0.312, yaw=-0.110
+[INFO] [1783234416.804452243] [route_recorder]: saved point 12: x=5.201, y=-0.364, yaw=-0.130
+[INFO] [1783234417.774890236] [route_recorder]: saved point 13: x=5.673, y=-0.410, yaw=-0.079
+[INFO] [1783234418.883567532] [route_recorder]: saved point 14: x=6.077, y=-0.452, yaw=-0.123
+[INFO] [1783234422.139405851] [route_recorder]: saved point 15: x=6.471, y=-0.524, yaw=-0.295
+[INFO] [1783234422.829007692] [route_recorder]: saved point 16: x=6.818, y=-0.758, yaw=-0.637
+[INFO] [1783234424.210710228] [route_recorder]: saved point 17: x=7.023, y=-1.160, yaw=-1.197
+[INFO] [1783234425.308774822] [route_recorder]: saved point 18: x=7.071, y=-1.592, yaw=-1.516
+[INFO] [1783234425.911637530] [route_recorder]: saved point 19: x=7.087, y=-2.086, yaw=-1.523
+[INFO] [1783234426.309432846] [route_recorder]: saved point 20: x=7.108, y=-2.511, yaw=-1.533
+[INFO] [1783234427.513757628] [route_recorder]: saved point 21: x=6.968, y=-2.937, yaw=-1.858
+[INFO] [1783234428.911546392] [route_recorder]: saved point 22: x=6.606, y=-3.118, yaw=-2.674
+[INFO] [1783234430.023113144] [route_recorder]: saved point 23: x=6.142, y=-3.255, yaw=-2.848
+[INFO] [1783234431.709312906] [route_recorder]: saved point 24: x=5.742, y=-3.312, yaw=3.042
+[INFO] [1783234432.208706503] [route_recorder]: saved point 25: x=5.304, y=-3.275, yaw=3.022
+[INFO] [1783234432.713587439] [route_recorder]: saved point 26: x=4.901, y=-3.168, yaw=3.055
+[INFO] [1783234434.014395273] [route_recorder]: saved point 27: x=4.459, y=-3.165, yaw=3.046
+[INFO] [1783234434.707912587] [route_recorder]: saved point 28: x=4.029, y=-3.177, yaw=3.042
+[INFO] [1783234437.408206430] [route_recorder]: saved point 29: x=3.720, y=-2.922, yaw=2.439
+[INFO] [1783234440.144797922] [route_recorder]: saved point 30: x=3.699, y=-2.499, yaw=1.677
+[INFO] [1783234442.330515154] [route_recorder]: saved point 31: x=3.830, y=-2.108, yaw=1.396
+[INFO] [1783234443.930205995] [route_recorder]: saved point 32: x=3.967, y=-1.704, yaw=1.446
+[INFO] [1783234444.808963549] [route_recorder]: saved point 33: x=3.885, y=-1.253, yaw=1.415
+[INFO] [1783234445.315584181] [route_recorder]: saved point 34: x=3.892, y=-0.803, yaw=1.431
+[INFO] [1783234445.819318021] [route_recorder]: saved point 35: x=3.926, y=-0.394, yaw=1.526
+[INFO] [1783234449.710382547] [route_recorder]: saved point 36: x=3.494, y=-0.212, yaw=2.813
+[INFO] [1783234450.932864997] [route_recorder]: saved point 37: x=3.096, y=-0.157, yaw=3.002
+[INFO] [1783234452.211454169] [route_recorder]: saved point 38: x=2.651, y=-0.095, yaw=3.102
+[INFO] [1783234452.827714359] [route_recorder]: saved point 39: x=2.216, y=-0.092, yaw=3.134
+[INFO] [1783234454.2095

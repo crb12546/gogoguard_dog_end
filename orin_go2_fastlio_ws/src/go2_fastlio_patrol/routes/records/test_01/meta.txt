@@ -1,0 +1,4 @@
+name=test_01
+route_file=/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/records/test_01/route.csv
+min_distance=0.4
+created_at=2026-05-17T03:49:56.467872

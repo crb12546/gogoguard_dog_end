@@ -1,0 +1,5 @@
+1782619359.6265402 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-06-28-12-02-39-615706-ubuntu-13095
+1782619359.6274993 [INFO] [launch]: Default logging verbosity is set to INFO
+1782619359.7994120 [INFO] [fastlio_mapping-1]: process started with pid [13097]
+1782621269.0019071 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1782621270.5948057 [INFO] [fastlio_mapping-1]: process has finished cleanly [pid 13097]

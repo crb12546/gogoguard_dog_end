@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Z-1Pro Focus Test</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #101114; color: #eee; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .card { background: #1d1f25; padding: 12px; border-radius: 8px; border: 1px solid #30333b; }
+  img, video { width: 100%; height: auto; display: block; background: #000; border-radius: 4px; }
+  a { color: #8ec5ff; }
+  code { color: #f1d88a; }
+</style>
+<h1>Z-1Pro Focus / Zoom Test</h1>
+<p>协议里的 <code>focus 0x26</code> 返回失败状态 <code>0x01</code>。手册描述该可见光镜头为定焦相机，所以清晰度问题更可能来自镜头污渍/目标距离/数字变倍/光照/运动，而不是可调焦失败。</p>
+<p>已执行 <code>zoom-set --zoom 1.0</code>，该命令返回成功。</p>
+<p>原始日志：<a href="status.txt">status.txt</a></p>
+<div class="grid">
+  <div class="card"><h3>01_before</h3><img src="01_before.jpg"></div>
+  <div class="card"><h3>02_after_focus_command</h3><img src="02_after_focus_command.jpg"></div>
+  <div class="card"><h3>03_after_zoom_1x</h3><img src="03_after_zoom_1x.jpg"></div>
+</div>
+<div class="card" style="margin-top:16px">
+  <h2>04_after_zoom_1x_video</h2>
+  <video src="04_after_zoom_1x_video.mp4" controls></video>
+</div>

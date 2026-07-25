@@ -1,0 +1,297 @@
+{
+  "runs": {
+    "xunjian-20260725-06": {
+      "anchor": {
+        "x": -0.019053318223686957,
+        "y": -0.0020359393168614976,
+        "z": 0.018096440876867573,
+        "quaternion_xyzw": [
+          -0.007665816494210547,
+          -0.006333824209600133,
+          -0.0014956432304428942,
+          0.9999494392116469
+        ],
+        "euler_roll_pitch_yaw_deg": [
+          -0.8774128470946251,
+          -0.7270994388359304,
+          -0.165829137148412
+        ],
+        "saved_2d_yaw_deg": -0.165829137148412,
+        "stability": {
+          "duration_seconds": 0.8931075609999937,
+          "max_local_gap_seconds": 0.1100965069999944,
+          "samples": 10,
+          "translation_span_m": 0.006010962516495293,
+          "yaw_span_rad": 0.0008067778183926998
+        }
+      },
+      "motion": {
+        "duration_s": 200.00365161895752,
+        "odom_samples": 1822,
+        "last_projected_route_segment": 190,
+        "delta_xyz_m": [
+          56.52967696086038,
+          -29.817858579610736,
+          35.07957607336989
+        ],
+        "first_leg_time_s": 135.11294651031494,
+        "first_leg_csv_distance_m": 55.59355207590645,
+        "first_leg_3d_cumulative_distance_m": 65.84263524308443
+      },
+      "route_error_all_reached_m": {
+        "mean": 0.11713583400667739,
+        "median": 0.06199327150348806,
+        "p90": 0.27650722791195725,
+        "p95": 0.2935019575269284,
+        "max": 0.3916280819063655
+      },
+      "route_error_first_leg_m": {
+        "mean": 0.043676048469498,
+        "median": 0.04214462837954755,
+        "p90": 0.07315565768751188,
+        "p95": 0.07969130087592817,
+        "max": 0.22956767922790736
+      },
+      "route_signed_error_first_leg_m": {
+        "mean": 0.02883560688886701,
+        "median": 0.035532671421901335,
+        "p90": 0.07188409725095021,
+        "p95": 0.07698649296044464,
+        "max": 0.09751077691964427
+      },
+      "plane_all": {
+        "normal": [
+          -0.5282526782307791,
+          -0.0031702358698391113,
+          0.8490813020827502
+        ],
+        "tilt_deg": 31.88811310226515,
+        "rms_cm": 1.0406263066465538,
+        "max_cm": 3.8255905295043746,
+        "z_equals_ax_by_c": [
+          0.6221458486723664,
+          0.003733370895150783,
+          0.04215316591886349
+        ]
+      },
+      "plane_first_leg": {
+        "normal": [
+          -0.5282686922311403,
+          -0.003236782138461347,
+          0.8490710877481279
+        ],
+        "tilt_deg": 31.88922094072208,
+        "rms_cm": 0.9930124172461116,
+        "max_cm": 2.9275515850441636,
+        "z_equals_ax_by_c": [
+          0.6221721958319449,
+          0.0038145816380540515,
+          0.04154594474976005
+        ]
+      },
+      "odom_timing": {
+        "samples": 1902,
+        "mean_hz": 9.054637488144634,
+        "median_period_ms": 99.35998916625977,
+        "p95_period_ms": 198.71997833251953,
+        "max_period_ms": 695.5199241638184,
+        "gaps_over_150ms": 184,
+        "gaps_over_250ms": 21,
+        "estimated_missing_100ms_periods": 212,
+        "receive_minus_header_ms_mean": 191.83411457811872,
+        "receive_minus_header_ms_p95": 268.798565864563,
+        "receive_minus_header_ms_max": 495.6393241882324
+      },
+      "patrol_commands": {
+        "samples": 4008,
+        "active_samples": 4007,
+        "max_abs_vx": 0.5,
+        "max_abs_vy": 0.0,
+        "max_abs_yaw_rate": 0.45
+      },
+      "udp_sdk_delivery": {
+        "reports": 218,
+        "max_seq_gaps": 0,
+        "max_invalid": 0,
+        "last_seq": 4404,
+        "max_udp_gap_ms": 72.842,
+        "max_udp_transit_ms": 13.521,
+        "max_move_call_ms": 1.792,
+        "max_sender_to_move_done_ms": 13.841
+      },
+      "follower_log": {
+        "samples": 195,
+        "last_nearest": 190,
+        "max_abs_alpha_rad": 0.79,
+        "max_abs_yaw_rate": 0.45
+      }
+    },
+    "xunjian-20260725-07": {
+      "anchor": {
+        "x": -0.0037405711776680698,
+        "y": -0.02603469061826464,
+        "z": 0.009887938866446816,
+        "quaternion_xyzw": [
+          0.00020399740992262894,
+          -0.0004205679170563444,
+          -0.0017389197016709939,
+          0.9999983788316568
+        ],
+        "euler_roll_pitch_yaw_deg": [
+          0.02346015696847629,
+          -0.048152811180653454,
+          -0.1992755000826138
+        ],
+        "saved_2d_yaw_deg": -0.1992755000826138,
+        "stability": {
+          "duration_seconds": 0.9350506730000063,
+          "max_local_gap_seconds": 0.34517018299999336,
+          "samples": 8,
+          "translation_span_m": 0.008646694752844193,
+          "yaw_span_rad": 0.0010725415392766032
+        }
+      },
+      "motion": {
+        "duration_s": 323.4363842010498,
+        "odom_samples": 3000,
+        "last_projected_route_segment": 316,
+        "delta_xyz_m": [
+          59.04780990381582,
+          -87.85518090602932,
+          34.76881772483208
+        ],
+        "first_leg_time_s": 134.6056969165802,
+        "first_leg_csv_distance_m": 55.59355207590645,
+        "first_leg_3d_cumulative_distance_m": 65.98539791108055
+      },
+      "route_error_all_reached_m": {
+        "mean": 0.1858312728557436,
+        "median": 0.27226046617823474,
+        "p90": 0.31898057988248013,
+        "p95": 0.32615844156846535,
+        "max": 0.36771359755690164
+      },
+      "route_error_first_leg_m": {
+        "mean": 0.03308036182977216,
+        "median": 0.030357992972572776,
+        "p90": 0.06258366533486795,
+        "p95": 0.06888557047692845,
+        "max": 0.2503358946500391
+      },
+      "route_signed_error_first_leg_m": {
+        "mean": 0.013471253224730214,
+        "median": 0.02064061866657984,
+        "p90": 0.055602800248090924,
+        "p95": 0.06311564619283468,
+        "max": 0.08011317102619654
+      },
+      "plane_all": {
+        "normal": [
+          -0.5320765174122635,
+          -0.022860119727672823,
+          0.846387614834051
+        ],
+        "tilt_deg": 32.17908647705105,
+        "rms_cm": 4.52443216414031,
+        "max_cm": 11.687823959020616,
+        "z_equals_ax_by_c": [
+          0.6286365480056529,
+          0.02700642223464335,
+          -0.023186006821054976
+        ]
+      },
+      "plane_first_leg": {
+        "normal": [
+          -0.530761367833174,
+          -0.020623733931554148,
+          0.8472703417531967
+        ],
+        "tilt_deg": 32.08399364377999,
+        "rms_cm": 1.062333475861224,
+        "max_cm": 3.7548360841389794,
+        "z_equals_ax_by_c": [
+          0.626436609747899,
+          0.024339448887986906,
+          0.02639437619642649
+        ]
+      },
+      "odom_timing": {
+        "samples": 3074,
+        "mean_hz": 9.215720926446442,
+        "median_period_ms": 99.35998916625977,
+        "p95_period_ms": 198.71997833251953,
+        "max_period_ms": 397.9051113128662,
+        "gaps_over_150ms": 250,
+        "gaps_over_250ms": 30,
+        "estimated_missing_100ms_periods": 283,
+        "receive_minus_header_ms_mean": 196.69365696730208,
+        "receive_minus_header_ms_p95": 248.7998008728027,
+        "receive_minus_header_ms_max": 478.2137870788574
+      },
+      "patrol_commands": {
+        "samples": 6476,
+        "active_samples": 6475,
+        "max_abs_vx": 0.5,
+        "max_abs_vy": 0.0,
+        "max_abs_yaw_rate": 0.45
+      },
+      "udp_sdk_delivery": {
+        "reports": 333,
+        "max_seq_gaps": 0,
+        "max_invalid": 0,
+        "last_seq": 6784,
+        "max_udp_gap_ms": 86.083,
+        "max_udp_transit_ms": 16.539,
+        "max_move_call_ms": 2.605,
+        "max_sender_to_move_done_ms": 17.04
+      },
+      "follower_log": {
+        "samples": 316,
+        "last_nearest": 317,
+        "max_abs_alpha_rad": 0.87,
+        "max_abs_yaw_rate": 0.45
+      }
+    }
+  },
+  "comparison": {
+    "route_original_sha256": {
+      "xunjian-20260725-06": "811040c6d25444a934da5115f041169873899826933d3e30f39fd922b0b6fa62",
+      "xunjian-20260725-07": "811040c6d25444a934da5115f041169873899826933d3e30f39fd922b0b6fa62"
+    },
+    "same_original_csv_sha256": true,
+    "runtime_follower_sha256": "d205a596fc6118ad7fa191871c646173cb545ab4b136e46de360598e38261120",
+    "desktop_original_follower_sha256": "d205a596fc6118ad7fa191871c646173cb545ab4b136e46de360598e38261120",
+    "runtime_follower_matches_desktop_original": true,
+    "anchor_saved_2d_yaw_difference_deg": 0.033446362934201807,
+    "anchor_euler_difference_roll_pitch_yaw_deg": [
+      0.9008730040631013,
+      0.6789466276552769,
+      -0.033446362934201807
+    ],
+    "anchor_full_quaternion_relative_angle_deg": 1.128380311353011,
+    "first_leg_plane_normal_angle_deg": 1.0116726520044157,
+    "first_leg_plane_tilt_difference_deg": 0.19477270305791095,
+    "cross_run_progress_comparison_first_leg": {
+      "through_waypoint": 124,
+      "route_distance_m": 55.59355207590645,
+      "xy_difference_m": {
+        "mean": 0.018332673698874098,
+        "median": 0.01761028930672484,
+        "p90": 0.03486306369760646,
+        "p95": 0.03818678026282523,
+        "max": 0.09870071539919092
+      }
+    },
+    "cross_run_progress_comparison_shared_run06_extent": {
+      "through_waypoint": 190,
+      "route_distance_m": 85.98931750668561,
+      "xy_difference_m": {
+        "mean": 0.019555843738653017,
+        "median": 0.01779586351233882,
+        "p90": 0.03647207067140943,
+        "p95": 0.041515665447206744,
+        "max": 0.11784795400748702
+      }
+    }
+  }
+}

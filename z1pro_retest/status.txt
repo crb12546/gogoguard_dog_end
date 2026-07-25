@@ -1,0 +1,62 @@
+send[1] zoom-set: len=73 version=2 mode=16 command=37 status=0 rel_xyz_deg=(-10.71, -1.89, 0.32) abs_pitch_yaw_deg=(0.0, 538.63) rate_xyz_dps=(0.3, 0.0, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 d1 fb 43 ff 20 00 00 00 00 00 67 d2 03 00 00 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 25 00 22 7f
+send[1] zoom-stop: len=73 version=2 mode=16 command=36 status=0 rel_xyz_deg=(-10.7, -1.88, 0.31) abs_pitch_yaw_deg=(0.0, 538.63) rate_xyz_dps=(0.0, 0.0, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 d2 fb 44 ff 1f 00 00 00 00 00 67 d2 00 00 00 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 24 00 10 66
+== current_no_command ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=73 rel_xyz_deg=(-10.71, -1.9, 0.34) abs_pitch_yaw_deg=(0.0, 538.66) rate_xyz_dps=(0.0, 0.1, 0.0) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 d1 fb 42 ff 22 00 00 00 00 00 6a d2 00 00 01 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 49 f6
+-rw-rw-r-- 1 unitree unitree 151K Jul  5 13:27 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/current_no_command.jpg
+-rw-rw-r-- 1 unitree unitree 1.7M Jul  5 13:27 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/current_no_command.mp4
+== move front ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-10.69, -1.95, 0.32) abs_pitch_yaw_deg=(0.0, 539.11) rate_xyz_dps=(-0.1, -0.1, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 d3 fb 3d ff 20 00 ff ff 00 00 97 d2 ff ff ff ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 f2 68
+== front ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=177 rel_xyz_deg=(-10.69, -1.99, 0.36) abs_pitch_yaw_deg=(0.0, 539.17) rate_xyz_dps=(0.2, 0.0, 0.1) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 d3 fb 39 ff 24 00 00 00 00 00 9d d2 02 00 00 00 01 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 b1 14
+-rw-rw-r-- 1 unitree unitree 146K Jul  5 13:27 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/front.jpg
+-rw-rw-r-- 1 unitree unitree 1.4M Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/front.mp4
+== move pitch_down_10 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-10.71, -2.09, 0.36) abs_pitch_yaw_deg=(0.0, 539.59) rate_xyz_dps=(0.0, 0.0, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 d1 fb 2f ff 24 00 00 00 00 00 c7 d2 00 00 00 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 5e ec
+== pitch_down_10 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=3 rel_xyz_deg=(-2.42, -1.99, 0.43) abs_pitch_yaw_deg=(-9.92, 539.58) rate_xyz_dps=(0.2, 0.1, -0.1) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 0e ff 39 ff 2b 00 f6 ff 20 fc c6 d2 02 00 01 00 ff ff 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 03 25
+-rw-rw-r-- 1 unitree unitree 143K Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/pitch_down_10.jpg
+-rw-rw-r-- 1 unitree unitree 1.5M Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/pitch_down_10.mp4
+== move pitch_up_10 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-2.4, -1.74, 0.36) abs_pitch_yaw_deg=(-10.01, 540.08) rate_xyz_dps=(0.0, -0.1, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 10 ff 52 ff 24 00 00 00 17 fc f8 d2 00 00 ff ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 a6 1b
+== pitch_up_10 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=205 rel_xyz_deg=(-18.94, -1.82, 0.23) abs_pitch_yaw_deg=(9.9, 540.25) rate_xyz_dps=(-0.2, 0.0, 0.0) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 9a f8 4a ff 17 00 00 00 de 03 09 d3 fe ff 00 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 cd b2
+-rw-rw-r-- 1 unitree unitree 163K Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/pitch_up_10.jpg
+-rw-rw-r-- 1 unitree unitree 1.7M Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/pitch_up_10.mp4
+== move yaw_right_30 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-19.1, -2.04, 0.3) abs_pitch_yaw_deg=(9.98, 540.71) rate_xyz_dps=(-0.1, -0.3, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 8a f8 34 ff 1e 00 ff ff e6 03 37 d3 ff ff fd ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 c6 f3
+== yaw_right_30 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=226 rel_xyz_deg=(-10.93, 3.0, 29.41) abs_pitch_yaw_deg=(0.07, 570.0) rate_xyz_dps=(0.0, 0.1, 0.4) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 bb fb 2c 01 7d 0b 01 00 07 00 a8 de 00 00 01 00 04 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 e2 5f
+-rw-rw-r-- 1 unitree unitree 168K Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/yaw_right_30.jpg
+-rw-rw-r-- 1 unitree unitree 1.4M Jul  5 13:28 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/yaw_right_30.mp4
+== move yaw_left_30 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-10.61, 2.74, 30.01) abs_pitch_yaw_deg=(0.0, 570.98) rate_xyz_dps=(0.0, -0.3, 0.1) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 db fb 12 01 b9 0b 00 00 00 00 0a df 00 00 fd ff 01 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 87 39
+== yaw_left_30 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=199 rel_xyz_deg=(-8.54, -6.49, -28.42) abs_pitch_yaw_deg=(-0.24, 509.82) rate_xyz_dps=(0.0, -0.1, -1.0) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 aa fc 77 fd e6 f4 fc ff e8 ff 26 c7 00 00 ff ff f6 ff 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 c7 b6
+-rw-rw-r-- 1 unitree unitree 124K Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/yaw_left_30.jpg
+-rw-rw-r-- 1 unitree unitree 1.6M Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/yaw_left_30.mp4
+== move rear_like_right_120 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-9.16, -6.21, -29.45) abs_pitch_yaw_deg=(-0.02, 508.9) rate_xyz_dps=(0.0, -0.3, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 6c fc 93 fd 7f f4 00 00 fe ff ca c6 00 00 fd ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 a1 08
+== rear_like_right_120 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=150 rel_xyz_deg=(-3.7, 10.9, 119.02) abs_pitch_yaw_deg=(0.0, 653.21) rate_xyz_dps=(-0.8, 0.1, 1.2) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 8e fe 42 04 7e 2e 0a 00 00 00 29 ff f8 ff 01 00 0c 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 96 d8
+-rw-rw-r-- 1 unitree unitree 207K Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/rear_like_right_120.jpg
+-rw-rw-r-- 1 unitree unitree 1.8M Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/rear_like_right_120.mp4
+== move rear_like_left_120 ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-4.42, 8.86, 120.0) abs_pitch_yaw_deg=(0.0, 654.56) rate_xyz_dps=(0.0, 0.3, -0.3) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 46 fe 76 03 e0 2e 06 00 00 00 b0 ff 00 00 03 00 fd ff 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 e9 5c
+== rear_like_left_120 ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=4 rel_xyz_deg=(-1.81, -5.17, -105.0) abs_pitch_yaw_deg=(0.55, 137.14) rate_xyz_dps=(0.3, 1.1, -150.1) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 4b ff fb fd fc d6 27 00 37 00 92 35 03 00 0b 00 23 fa 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 04 b0
+-rw-rw-r-- 1 unitree unitree 104K Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/rear_like_left_120.jpg
+-rw-rw-r-- 1 unitree unitree 1.5M Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/rear_like_left_120.mp4
+== move front_restore ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-1.22, -6.07, -120.11) abs_pitch_yaw_deg=(-0.08, 123.5) rate_xyz_dps=(0.0, 0.0, 0.1) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 86 ff a1 fd 15 d1 01 00 f8 ff 3e 30 00 00 00 00 01 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 da aa
+== front_restore ==
+send[1] probe: len=72 version=2 mode=16 command=0 status=218 rel_xyz_deg=(-10.13, -0.04, -0.89) abs_pitch_yaw_deg=(0.07, 539.85) rate_xyz_dps=(-0.6, 0.2, 1.0) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 0b fc fc ff a7 ff 0b 00 07 00 e1 d2 fa ff 02 00 0a 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 da 08
+-rw-rw-r-- 1 unitree unitree 147K Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/front_restore.jpg
+-rw-rw-r-- 1 unitree unitree 1.6M Jul  5 13:29 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/front_restore.mp4
+== motion_yaw_pitch_sequence ==
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-10.71, -2.12, 0.37) abs_pitch_yaw_deg=(0.0, 541.24) rate_xyz_dps=(0.1, -0.3, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 d1 fb 2c ff 25 00 03 00 00 00 6c d3 01 00 fd ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 25 00
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-9.82, 7.08, 59.79) abs_pitch_yaw_deg=(0.22, 598.23) rate_xyz_dps=(0.2, -0.3, 0.1) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 2a fc c4 02 5b 17 16 00 16 00 af e9 02 00 fd ff 01 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 c0 cd
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(-4.9, -9.29, -59.59) abs_pitch_yaw_deg=(-0.3, 175.9) rate_xyz_dps=(-0.2, -0.1, 0.0) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 16 fe 5f fc b9 e8 ec ff e2 ff b6 44 fe ff ff ff 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 d5 82
+send[1] angle: len=73 version=2 mode=16 command=16 status=0 rel_xyz_deg=(2.03, -1.72, 0.28) abs_pitch_yaw_deg=(-15.04, 542.28) rate_xyz_dps=(0.2, 0.2, 0.1) raw=8a 5e 49 00 02 10 00 10 00 00 00 00 cb 00 54 ff 1c 00 ff ff 20 fa d4 d3 02 00 02 00 01 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 10 00 91 b7
+-rw-rw-r-- 1 unitree unitree 5.5M Jul  5 13:30 /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730/motion_yaw_pitch_sequence.mp4
+send[1] probe: len=72 version=2 mode=16 command=0 status=247 rel_xyz_deg=(-10.78, -2.12, 0.35) abs_pitch_yaw_deg=(0.01, 542.73) rate_xyz_dps=(0.1, 0.1, 0.0) raw=8a 5e 48 00 02 10 00 10 00 00 00 00 ca fb 2c ff 23 00 01 00 01 00 01 d4 01 00 01 00 00 00 00 00 00 00 00 00 00 01 01 43 31 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 0a 00 00 00 60 08 00 00 00 f7 2e
+DONE /home/unitree/go2_fastlio_ws/patrol_logs/z1pro_tests/retest_20260705_132730

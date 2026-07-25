@@ -1,0 +1,13 @@
+[INFO] [1782625602.702964801] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [1782625602.703778007] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/route_test_0517.csv
+[INFO] [1782625602.704421877] [waypoint_follower]: route points: 10
+[INFO] [1782625602.705011126] [waypoint_follower]: loop_mode: pingpong
+[INFO] [1782625602.705606903] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [1782625602.706187833] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1782625602.789379523] [waypoint_follower]: init nearest_index=0, distance_to_start=0.061
+[INFO] [1782625602.815587595] [waypoint_follower]: nearest=0, target=2, dist=0.90, alpha=0.09, vx=0.50, yaw_rate=0.08, dir=1
+[INFO] [1782625603.865257708] [waypoint_follower]: nearest=0, target=2, dist=0.90, alpha=0.09, vx=0.50, yaw_rate=0.08, dir=1
+[INFO] [1782625604.865801142] [waypoint_follower]: nearest=0, target=2, dist=0.85, alpha=0.07, vx=0.50, yaw_rate=0.06, dir=1
+[WARN] [1782625605.818021459] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1782625605.866243204] [waypoint_follower]: nearest=1, target=3, dist=1.02, alpha=0.05, vx=0.50, yaw_rate=0.04, dir=1
+[INFO] [1782625606.788659663] [waypoint_follower]: waypoint_follower stopped by Ctrl+C

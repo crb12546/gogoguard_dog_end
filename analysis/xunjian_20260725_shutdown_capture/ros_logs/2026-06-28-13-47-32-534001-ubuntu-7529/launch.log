@@ -1,0 +1,5 @@
+1782625652.5454977 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-06-28-13-47-32-534001-ubuntu-7529
+1782625652.5460446 [INFO] [launch]: Default logging verbosity is set to INFO
+1782625652.6958809 [INFO] [livox_ros_driver2_node-1]: process started with pid [7531]
+1782625836.5890408 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1782625837.6866772 [ERROR] [livox_ros_driver2_node-1]: process has died [pid 7531, exit code -11, cmd '/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_vsfsr88o --params-file /tmp/launch_params_2c3vnl8a --params-file /tmp/launch_params_o9cf75_p --params-file /tmp/launch_params_0nr608vw --params-file /tmp/launch_params_lyip6ke1 --params-file /tmp/launch_params_q90jl3wv --params-file /tmp/launch_params_jjjvczm_ --params-file /tmp/launch_params_cyefonl_ --params-file /tmp/launch_params_f2n_fdup'].

@@ -1,0 +1,18 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-25-00-23-31-273843-ubuntu-367962
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [368020]
+[fastlio_mapping-1] 1784910211.480318 [0] fastlio_ma: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[fastlio_mapping-1] [INFO] [1784910211.538664439] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/unitree/go2_fastlio_ws/src/FAST_LIO/ file opened
+[fastlio_mapping-1] [INFO] [1784910211.554489942] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[fastlio_mapping-1] [INFO] [1784910211.568148528] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784910211.999258718] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784910212.111950508] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=212.001 age_ms_max=352.731 samples=9 lidar_buffer=0 imu_buffer=71
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=218.444 age_ms_max=309.972 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=175.28 age_ms_max=304.699 samples=8 lidar_buffer=0 imu_buffer=43
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=144.158 age_ms_max=210.588 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=140.206 age_ms_max=151.283 samples=10 lidar_buffer=0 imu_buffer=49

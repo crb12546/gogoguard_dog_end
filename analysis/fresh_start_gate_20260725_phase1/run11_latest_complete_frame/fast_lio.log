@@ -1,0 +1,22 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-25-00-28-20-224854-ubuntu-373543
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [373644]
+[fastlio_mapping-1] 1784910500.430234 [0] fastlio_ma: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[fastlio_mapping-1] [INFO] [1784910500.457489708] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/unitree/go2_fastlio_ws/src/FAST_LIO/ file opened
+[fastlio_mapping-1] [INFO] [1784910500.462169339] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[fastlio_mapping-1] [INFO] [1784910500.470052599] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784910500.726462388] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784910500.951288094] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=163.44 age_ms_max=232.56 samples=8 lidar_buffer=0 imu_buffer=44
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=194.913 age_ms_max=318.004 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=174.998 age_ms_max=307.296 samples=8 lidar_buffer=0 imu_buffer=43
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=136.187 age_ms_max=155.05 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=143.962 age_ms_max=159.129 samples=10 lidar_buffer=0 imu_buffer=50
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=172.052 age_ms_max=185.594 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=174.783 age_ms_max=187.75 samples=10 lidar_buffer=0 imu_buffer=55
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=199.914 age_ms_max=210.344 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=175.44 age_ms_max=204.998 samples=8 lidar_buffer=0 imu_buffer=41

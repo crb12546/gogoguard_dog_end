@@ -1,0 +1,36 @@
+[Unit]
+Description=Go2 A7600C 4G connectivity watchdog
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+Environment=GO2_WS=/home/unitree/go2_fastlio_ws
+Environment=GO2_4G_MODE=ecm
+Environment=GO2_4G_ENABLE_USB_RESET=0
+Environment=GO2_4G_ENABLE_USB_POWER_CONTROL=1
+Environment=GO2_4G_ENABLE_USB_BUS_REBIND=1
+Environment=GO2_4G_ENABLE_HOST_RESET=0
+Environment=GO2_4G_USB_STABLE_SECONDS=30
+Environment=GO2_4G_USB_ABSENT_REBIND_AFTER=60
+Environment=GO2_4G_USB_BUS_REBIND_MIN_INTERVAL=60
+Environment=GO2_4G_USB_BUS_REBIND_MAX_ATTEMPTS=3
+Environment=GO2_4G_USB_BUS_REBIND_BACKOFF=300
+Environment=GO2_4G_XHCI_DEAD_LOG_MIN_INTERVAL=60
+Environment=GO2_4G_ECM_IF=go2_4g
+Environment=GO2_4G_ECM_MAC=28:e3:57:c3:ed:9a
+Environment=GO2_4G_ECM_GW=192.168.0.1
+Environment=GO2_4G_ECM_AT_CONFIG=1
+Environment="GO2_4G_NETDEV_STUCK_IF=go2_4g eth1"
+Environment=GO2_4G_PPP_PRE_DIAL_DELAY=15
+Environment="GO2_4G_PPP_TTY_CANDIDATES=/dev/ttyUSB2 /dev/ttyUSB1 /dev/ttyUSB3 /dev/ttyUSB0"
+Environment=GO2_4G_PPP_AT_PROBE_TIMEOUT=6
+Environment=GO2_4G_ENABLE_TIME_BOOTSTRAP=1
+ExecStart=/home/unitree/go2_fastlio_ws/scripts/go2_connectivity_watchdog.sh
+Restart=always
+RestartSec=5
+StandardOutput=append:/tmp/go2_connectivity_watchdog.log
+StandardError=append:/tmp/go2_connectivity_watchdog.log
+
+[Install]
+WantedBy=multi-user.target

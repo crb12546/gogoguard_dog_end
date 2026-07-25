@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Go2 巡检管理台</title>
+<style>
+  :root { --bg:#12141a; --card:#1c1f28; --line:#2b303d; --txt:#e6e9f0; --dim:#8b93a5;
+          --ok:#3fb96b; --warn:#e0a63c; --bad:#e05555; --acc:#4f8cff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--txt); font:14px/1.5 -apple-system,"PingFang SC",sans-serif; padding:14px; }
+  h1 { font-size:17px; margin-bottom:10px; display:flex; align-items:center; gap:12px; }
+  .grid { display:grid; grid-template-columns: 330px 1fr 320px; gap:12px; align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; margin-bottom:12px; }
+  .card h2 { font-size:13px; color:var(--dim); margin-bottom:8px; letter-spacing:1px; }
+  .kv { display:flex; justify-content:space-between; padding:2px 0; }
+  .kv b { font-variant-numeric:tabular-nums; }
+  .pill { display:inline-block; padding:1px 9px; border-radius:99px; font-size:12px; background:#333; }
+  .pill.on  { background:rgba(63,185,107,.18); color:var(--ok); }
+  .pill.off { background:rgba(139,147,165,.15); color:var(--dim); }
+  .pill.bad { background:rgba(224,85,85,.2); color:var(--bad); }
+  .pill.warn { background:rgba(210,153,34,.2); color:var(--warn); }
+  button { background:#2a3040; color:var(--txt); border:1px solid var(--line); border-radius:8px;
+           padding:7px 12px; cursor:pointer; font-size:13px; transition:all .15s; }
+  button:hover:not(:disabled) { border-color:var(--acc); }
+  button:disabled { opacity:.35; cursor:not-allowed; }
+  button.primary { background:var(--acc); border-color:var(--acc); color:#fff; }
+  button.danger  { background:var(--bad); border-color:var(--bad); color:#fff; font-weight:700; }
+  button.active-rec { background:var(--bad); border-color:var(--bad); color:#fff; animation:blink 1.2s infinite; }
+  button.ghost { background:transparent; color:var(--dim); font-size:12px; padding:4px 8px; }
+  button.big { width:100%; padding:13px; font-size:16px; }
+  @keyframes blink { 50% { opacity:.55; } }
+  input[type=text], input[type=number], select { background:#141721; color:var(--txt);
+    border:1px solid var(--line); border-radius:7px; padding:6px 8px; width:100%; font-size:13px; }
+  .row { display:flex; gap:8px; margin:6px 0; align-items:center; }
+  .row label { color:var(--dim); font-size:12px; white-space:nowrap; }
+  canvas { width:100%; background:#0d0f14; border:1px solid var(--line); border-radius:8px; }
+  #alignBox { text-align:center; font-size:15px; padding:8px; border-radius:8px; margin-top:8px; background:#141721; }
+  #log { font:11px/1.5 ui-monospace,Menlo,monospace; color:var(--dim); max-height:150px; overflow-y:auto; white-space:pre-wrap; }
+  .temps { display:grid; grid-template-columns:repeat(6,1fr); gap:4px; margin-top:5px; }
+  .temps span { text-align:center; background:#141721; border-radius:5px; padding:3px 0; font-size:12px; font-variant-numeric:tabular-nums; }
+  .muted { color:var(--dim); font-size:12px; }
+  .switch { display:flex; align-items:center; gap:8px; padding:8px; background:#141721; border-radius:8px; margin-bottom:8px; }
+  .seg { border-top:1px solid var(--line); margin:10px 0 8px; padding-top:8px; }
+  .layers { display:flex; gap:14px; margin:6px 0; font-size:12px; color:var(--dim); align-items:center; }
+  .status-line { padding:6px 10px; border-radius:7px; background:#141721; font-size:13px; margin:6px 0;
+                 border-left:3px solid var(--dim); }
+  .status-line.run  { border-left-color:var(--bad); color:var(--txt); }
+  .status-line.ok   { border-left-color:var(--ok); }
+  .status-line.bad  { border-left-color:var(--bad); color:var(--bad); }
+  .status-line.idle { color:var(--dim); }
+  .mediaBox { background:#0d0f14; border:1px solid var(--line); border-radius:8px; min-height:120px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin-top:8px; }
+  .mediaBox img, .mediaBox video { width:100%; display:block; }
+  #map3d { height:520px; background:#0d0f14; border:1px solid var(--line); border-radius:8px; overflow:hidden; position:relative; }
+  #map3d canvas { border:0; border-radius:0; }
+  #map { display:none; }
+  #taskModal { position:fixed; inset:0; z-index:120; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.48); }
+  #taskModal.show { display:flex; }
+  .modalCard { width:min(460px, calc(100vw - 36px)); background:#1c1f28; border:1px solid #3a4050; border-radius:12px; padding:18px; box-shadow:0 18px 60px rgba(0,0,0,.55); }
+  .modalCard h3 { font-size:16px; margin-bottom:8px; }
+  .modalMsg { color:#c8ceda; white-space:pre-wrap; min-height:44px; }
+  .modalBar { height:4px; background:#2b303d; border-radius:99px; overflow:hidden; margin:14px 0; }
+  .modalBar span { display:block; height:100%; width:38%; background:var(--acc); border-radius:99px; animation:indet 1.15s infinite ease-in-out; }
+  #taskModal.done .modalBar span { animation:none; width:100%; background:var(--ok); }
+  #taskModal.fail .modalBar span { animation:none; width:100%; background:var(--bad); }
+  .modalActions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+  @keyframes indet { 0% { transform:translateX(-100%); } 55% { transform:translateX(90%); } 100% { transform:translateX(260%); } }
+  /* toast 通知 */
+  #toasts { position:fixed; top:16px; right:16px; z-index:99; display:flex; flex-direction:column; gap:8px; width:340px; }
+  .toast { padding:11px 14px; border-radius:9px; font-size:13px; color:#fff; box-shadow:0 4px 20px rgba(0,0,0,.5);
+           animation:slideIn .2s; border-left:4px solid rgba(255,255,255,.5); }
+  .toast.ok   { background:#1e5b35; }
+  .toast.bad  { background:#7a2626; }
+  .toast.warn { background:#7a5c1e; }
+  .toast.info { background:#274067; }
+  @keyframes slideIn { from { transform:translateX(30px); opacity:0; } }
+</style>
+</head>
+<body>
+<div id="toasts"></div>
+<div id="taskModal">
+  <div class="modalCard">
+    <h3 id="taskTitle">任务进行中</h3>
+    <div class="modalMsg" id="taskMsg">请稍候…</div>
+    <div class="modalBar"><span></span></div>
+    <div class="modalActions"><button id="taskOk" onclick="hideTaskModal()" style="display:none">确认</button></div>
+  </div>
+</div>
+<h1>Go2 巡检管理台
+  <span id="connPill" class="pill off">连接中…</span>
+  <span id="fourgPill" class="pill off">4G 检测中…</span>
+  <span class="muted" id="hostLabel"></span>
+</h1>
+
+<div class="grid">
+<!-- ============ 左栏: 遥测 ============ -->
+<div>
+  <div class="card">
+    <h2>电池</h2>
+    <div class="kv"><span>电量 SOC</span><b id="soc">--</b></div>
+    <div class="kv"><span>电压</span><b id="pv">--</b></div>
+    <div class="kv"><span>电流</span><b id="pa">--</b></div>
+    <div class="kv"><span>电池温度</span><b id="bqntc">--</b></div>
+  </div>
+  <div class="card">
+    <h2>温度</h2>
+    <div class="kv"><span>机身 NTC1 / NTC2</span><b id="ntc">--</b></div>
+    <div class="kv"><span>关节最高温</span><b id="mmax">--</b></div>
+    <div class="temps" id="mtemps"></div>
+  </div>
+  <div class="card">
+    <h2>运动服务状态</h2>
+    <div class="kv"><span>状态码</span><b id="ecode">--</b></div>
+    <div class="muted">1001 常见于趴下/待机, 数值突变时要留意。</div>
+    <div class="kv" style="margin-top:4px"><span>模式 mode</span><b id="smode">--</b></div>
+    <div class="kv"><span>遥测延迟</span><b id="tage">--</b></div>
+  </div>
+  <div class="card">
+    <h2>定位 /Odometry</h2>
+    <div class="kv"><span>x / y</span><b id="oxy">--</b></div>
+    <div class="kv"><span>yaw</span><b id="oyaw">--</b></div>
+    <div class="kv"><span>数据鲜度</span><b id="oage">--</b></div>
+    <div class="kv"><span>实时速度</span><b id="svel">--</b></div>
+    <div class="kv"><span>足底力(触地)</span><b id="ffoot">--</b></div>
+  </div>
+  <div class="card">
+    <h2>机上电脑 Orin</h2>
+    <div class="kv"><span>CPU 温度</span><b id="cputemp">--</b></div>
+    <div class="kv"><span>WiFi 信号</span><b id="wifisig">--</b></div>
+  </div>
+  <div class="card">
+    <h2>4G / USB 链路</h2>
+    <div class="kv"><span>4G 状态</span><b id="fourgstate">--</b></div>
+    <div class="kv"><span>蜂窝信号 CSQ</span><b id="fourgsig">--</b></div>
+    <div class="kv"><span>USB 协商速度</span><b id="fourgusb">--</b></div>
+    <div class="muted" id="fourgreason">等待 go2-4g-manager 状态…</div>
+  </div>
+  <div class="card">
+    <h2>感知设备</h2>
+    <div class="kv"><span>MID-360</span><b id="mid360">--</b></div>
+    <div class="kv"><span>摄像头来源</span><b id="z1net">--</b></div>
+    <div class="kv"><span>采集后端</span><b id="z1rtsp">--</b></div>
+    <div class="kv"><span>方向控制</span><b id="z1gcu">--</b></div>
+    <div class="muted">当前来源可在狗端 config/camera.env 中切换，录像和上传流程不变。</div>
+  </div>
+  <div class="card">
+    <h2>远端进程</h2>
+    <div id="procs" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+  </div>
+</div>
+
+<!-- ============ 中栏: 地图与路线工作区 ============ -->
+<div>
+  <div class="card">
+    <h2>地图工作区</h2>
+
+    <div class="row">
+      <label>已有路线</label>
+      <select id="routeSel" style="flex:1"></select>
+      <button onclick="loadRoutes(true)" class="ghost">刷新</button>
+      <button onclick="loadRoutePoints()" class="primary">载入查看</button>
+      <button onclick="dl($('routeSel').value)" class="ghost">下载CSV</button>
+    </div>
+
+    <div class="seg"></div>
+    <div class="status-line idle" id="recStatus">录制: 空闲</div>
+    <div class="muted" id="recPreviewStatus" style="margin-bottom:6px">录制时路线会自动显示在地图中。</div>
+    <div class="row">
+      <label>新路线名</label>
+      <input type="text" id="recName" placeholder="例: route_0704_01" style="flex:1">
+      <button onclick="startRecorder()" class="primary" id="btnRecStart">开始录制</button>
+      <button onclick="stopRecorder()" id="btnRecStop" disabled>停止录制</button>
+    </div>
+
+    <div class="seg"></div>
+    <div class="status-line idle" id="pcdStatus">点云采集: 空闲</div>
+    <div class="row">
+      <label>点云地图</label>
+      <input type="text" id="pcdName" placeholder="例: map_0704_01" style="width:140px">
+      <button onclick="startPcd()" class="primary" id="btnPcdStart">开始采集</button>
+      <button onclick="stopPcd()" id="btnPcdStop" disabled>结束保存</button>
+      <select id="pcdSel" style="flex:1"></select>
+      <button onclick="loadPcd()">载入点云</button>
+      <button onclick="dl($('pcdSel').value)" class="ghost">下载PCD</button>
+    </div>
+
+    <div class="layers">
+      <label><input type="checkbox" id="lyPcd" checked onchange="update3DLayers()"> 点云</label>
+      <label><input type="checkbox" id="lyRoute" checked onchange="update3DOverlays(); draw()"> 路线</label>
+      <label><input type="checkbox" id="lyTrail" checked onchange="update3DOverlays(); draw()"> 实时轨迹</label>
+      <label><input type="checkbox" id="mirrorX" onchange="remount3D()"> 左右翻转</label>
+      <label><input type="checkbox" id="mirrorZ" checked onchange="remount3D()"> 上下翻转</label>
+      <label>旋转
+        <select id="mapRot" onchange="remount3D()" style="width:72px">
+          <option value="0">0°</option>
+          <option value="90">90°</option>
+          <option value="180">180°</option>
+          <option value="270">270°</option>
+        </select>
+      </label>
+      <label>点大小 <input type="range" id="ptSize" min="0.05" max="1.2" step="0.05" value="0.18" oninput="updatePointSize()" style="width:90px"></label>
+      <button class="ghost" onclick="trail=[]; update3DOverlays(); draw()">清除轨迹</button>
+      <button class="ghost" onclick="pcdPts=[]; draw()">清除2D点云缓存</button>
+      <button class="ghost" onclick="topView3D()">俯视</button>
+      <button class="ghost" onclick="resetView3D()">重置视角</button>
+    </div>
+    <div id="map3d"><div class="muted" style="padding:16px">载入点云后显示 3D 地图；未载入点云时仍可录路线/采集。</div></div>
+    <canvas id="map" width="860" height="520"></canvas>
+    <div id="alignBox">未载入路线</div>
+  </div>
+
+  <div class="card">
+    <h2>动作日志</h2>
+    <div id="log"></div>
+  </div>
+</div>
+
+<!-- ============ 右栏: 操作 ============ -->
+<div>
+  <div class="card">
+    <h2>① 感知底座(不会动狗)</h2>
+    <div class="status-line idle" id="baseStatus">底座: 未运行</div>
+    <button onclick="startBase()" class="primary big" id="btnBase">启动 雷达 + FAST-LIO</button>
+    <div class="muted" style="margin-top:6px">录路线、建图、巡线之前都要先启动它。
+      <button class="ghost" onclick="if(confirm('停止雷达和FAST-LIO?\n用途: 换起点重新定位 / 定位漂了重启 / 收工省电。\n正在录制/巡线时不要停!')) doAction('stop_base')">停止底座(换起点/收工时用)</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>巡检摄像头</h2>
+    <div class="status-line idle" id="camStatus">摄像头: 未探测</div>
+    <div class="row">
+      <button onclick="cameraProbe()" style="flex:1">探测</button>
+      <button onclick="cameraPreset('front')" style="flex:1">前向</button>
+      <button onclick="cameraPreset('home')" style="flex:1">回中</button>
+    </div>
+    <div class="row">
+      <button onclick="cameraPreset('left')" style="flex:1">左</button>
+      <button onclick="cameraPreset('right')" style="flex:1">右</button>
+      <button onclick="cameraPreset('up')" style="flex:1">上</button>
+      <button onclick="cameraPreset('down')" style="flex:1">下</button>
+    </div>
+    <div class="row">
+      <button onclick="cameraSnapshot()" class="primary" style="flex:1">拍照</button>
+      <button onclick="cameraRecord()" style="flex:1">录20秒</button>
+    </div>
+    <div class="row">
+      <button onclick="cameraStartLoop()" class="primary" style="flex:1" id="btnCamLoop">连续20秒分段</button>
+      <button onclick="cameraStopLoop()" style="flex:1">停止分段</button>
+    </div>
+    <div class="switch">
+      <input type="checkbox" id="livePreviewSwitch" checked onchange="onLivePreviewSwitch()">
+      <label for="livePreviewSwitch">录制时自动追播最新视频(约 20 秒延迟)</label>
+    </div>
+    <div class="row">
+      <button onclick="testLivePreview()" class="primary" style="flex:1" id="btnLivePreview">测试实时播放</button>
+      <button onclick="stopLivePreview()" style="flex:1" id="btnStopLivePreview" disabled>停止实时预览</button>
+    </div>
+    <div class="row">
+      <select id="camFileSel" style="flex:1"></select>
+      <button onclick="loadCameraFiles(true)" class="ghost">刷新</button>
+      <button onclick="showCameraFile()">预览</button>
+      <button onclick="dl($('camFileSel').value)" class="ghost">下载</button>
+    </div>
+    <div class="mediaBox" id="camPreview"><span class="muted">暂无预览</span></div>
+    <div class="muted" style="margin-top:6px">摄像头来源由狗端 config/camera.env 配置；预览来自狗端录制文件。</div>
+  </div>
+
+  <div class="card">
+    <h2>SaaS 联调循环</h2>
+    <div class="status-line idle" id="saasStatus">平台循环: 未运行</div>
+    <div class="row">
+      <label>路线/PCD</label>
+      <input type="text" id="saasRoute" value="xiaoqu1" style="flex:1">
+      <input type="text" id="saasPcd" value="xiaoqu1" style="flex:1">
+    </div>
+    <div class="row">
+      <label>任务ID</label>
+      <input type="text" id="saasPatrolId" value="xiaoqu1-field" style="flex:1">
+      <label>间隔</label>
+      <input type="number" id="saasInterval" value="20" min="5" max="300" step="5" style="width:74px">
+    </div>
+    <div class="row">
+      <button onclick="saasHeartbeat(true)" style="flex:1">心跳干跑</button>
+      <button onclick="saasManifest()" style="flex:1">资产清单</button>
+    </div>
+    <div class="row">
+      <button onclick="startSaasLoop(false)" class="primary" style="flex:1" id="btnSaasDryLoop">启动干跑循环</button>
+      <button onclick="startSaasLoop(true)" style="flex:1" id="btnSaasUploadLoop">启动真实上传</button>
+    </div>
+    <div class="row">
+      <button onclick="stopSaasLoop()" style="flex:1" id="btnSaasStop" disabled>停止循环</button>
+      <button onclick="saasCommandResult(true)" style="flex:1">命令结果干跑</button>
+    </div>
+    <div class="muted" style="margin-top:6px">默认循环: 心跳 + xiaoqu1.csv + xiaoqu1.pcd + 最近有效视频段，视频会避开 0 字节文件并轮换。</div>
+  </div>
+
+  <div class="card">
+    <h2>② 巡检控制</h2>
+    <div class="status-line idle" id="patrolStatus">巡线: 未运行</div>
+    <div class="muted" id="safeStatus" style="margin-bottom:6px">安全节点: 未运行</div>
+    <div class="switch">
+      <input type="checkbox" id="armed">
+      <label for="armed" style="color:var(--warn)">解锁运动操作(狗可能真的动!)</label>
+    </div>
+    <div class="row"><label>安全限速</label><input type="number" id="maxVx" value="0.50" step="0.05" min="0.05" max="0.5"></div>
+    <div class="row">
+      <button onclick="startSafe(true)" style="flex:1">安全单节点·干跑</button>
+      <button onclick="startSafe(false)" style="flex:1">安全单节点·调试</button>
+    </div>
+    <div class="row"><label>巡线速度</label><input type="number" id="vBase" value="0.50" step="0.05" min="0.05" max="0.5">
+      <select id="loopMode" style="width:100px"><option value="once">单程</option><option value="pingpong" selected>往返</option></select>
+    </div>
+    <div class="row">
+      <button onclick="startFollower()" class="primary" style="flex:1" id="btnFollow">启动完整巡检</button>
+      <button onclick="stopFollower()" style="flex:1" id="btnStopFollow" disabled>停止巡线</button>
+    </div>
+    <div class="row">
+      <button onclick="doAction('stop_safe')" style="flex:1">停安全节点</button>
+    </div>
+    <div class="muted" style="margin-top:6px">「启动完整巡检」与 GoGoGuard 使用同一套生产链路：自动启动安全节点、UDP 控制桥、视频和全链路黑匣子，不需要先点上面的安全节点。人工起点模式会把狗当前的位置和朝向当作路线第 0 点，请用地面起点线校准机头方向。</div>
+    <button class="danger big" style="margin-top:8px" onclick="doAction('estop')">急 停</button>
+    <button style="width:100%;margin-top:6px" onclick="doAction('stop_all_control')">停止全部控制节点</button>
+  </div>
+
+  <div class="card">
+    <h2>远端日志</h2>
+    <div class="row">
+      <select id="logSel"><option>base</option><option>recorder</option><option>safe</option><option>follower</option><option>pcd</option><option>saas_loop</option></select>
+      <button onclick="doAction('tail_log',{log:$('logSel').value})" style="flex:1">查看最近 40 行</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/vendor/three.min.js"></script>
+<script src="/vendor/OrbitControls.js"></script>
+<script>
+let routePts = [], trail = [], pcdPts = [], lastOdom = null, routeStart = null;
+let lastStatus = {}, waitingBase = false, waitingPcdSave = false, lastCamRefreshAt = 0, lastRecorderFailure = '';
+let livePreviewOn = false, manualCameraLoop = false, livePreviewLastPath = '', livePreviewTimer = null, livePreviewBusy = false;
+let pcd3d = null, map3d = null, activeTask = null;
+let recordingRoutePath = '', recordingRouteLines = 0, recordingRouteBusy = false, recordingRouteLastAt = 0;
+
+const $ = id => document.getElementById(id);
+const fmt = (v, d=2) => v==null ? '--' : (+v).toFixed(d);
+
+/* ---------- toast 通知 ---------- */
+function toast(msg, kind='info', ms=4500) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + kind;
+  el.textContent = msg;
+  $('toasts').appendChild(el);
+  setTimeout(() => el.remove(), ms);
+}
+
+function showTask(title, msg, key=null) {
+  activeTask = { key, title };
+  $('taskTitle').textContent = title;
+  $('taskMsg').textContent = msg || '请稍候…';
+  $('taskOk').style.display = 'none';
+  $('taskModal').className = 'show';
+}
+
+function updateTask(msg) {
+  if ($('taskModal').classList.contains('show')) $('taskMsg').textContent = msg;
+}
+
+function finishTask(title, msg, ok=true) {
+  activeTask = null;
+  $('taskTitle').textContent = title;
+  $('taskMsg').textContent = msg;
+  $('taskOk').style.display = 'inline-block';
+  $('taskModal').className = 'show ' + (ok ? 'done' : 'fail');
+}
+
+function hideTaskModal() {
+  $('taskModal').className = '';
+}
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  const text = await r.text();
+  let data;
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch (e) {
+    data = {error: `HTTP ${r.status}: ${text || r.statusText || '后端返回了非 JSON 响应'}`};
+  }
+  if (!r.ok && !data.error) data.error = `HTTP ${r.status}: ${r.statusText || '请求失败'}`;
+  return data;
+}
+
+/* 动作结果 → 人话 toast */
+const RESULT_MAP = [
+  [/BASE_RESTART_BLOCKED_ACTIVE_MODE/, ['⚠️ 录制/巡检/控制任务运行中，底座重启已被阻止', 'warn']],
+  [/RECORDING_BLACKBOX_START_FAILED/, ['❌ 录制黑匣子未完整就绪，路线没有启动', 'bad']],
+  [/RECORDING_BLACKBOX_STOP_FAILED/, ['❌ 录制黑匣子收尾失败，请保留现场并查看日志', 'bad']],
+  [/RECORDING_SESSION_CAPTURE_FAILED/, ['❌ 定位未稳定，路线录制没有启动', 'bad']],
+  [/PCD_SESSION_CAPTURE_FAILED/, ['❌ 定位未稳定，点云采集没有启动', 'bad']],
+  [/MANUAL_ANCHOR_MOVED_BEFORE_START/, ['❌ 锚定后狗的位置或朝向发生变化，巡线没有启动', 'bad']],
+  [/MANUAL_ANCHOR_FAILED/, ['❌ 人工起点锚定失败', 'bad']],
+  [/SESSION_GUARD_NOT_READY/, ['❌ 定位会话保护启动失败，任务没有启动', 'bad']],
+  [/ALREADY_RUNNING/,     ['⚠️ 已经在运行中, 别重复启动', 'warn']],
+  [/SAFE_ALREADY_RUNNING/, ['⚠️ 安全节点已经在运行中', 'warn']],
+  [/FOLLOWER_ALREADY_RUNNING/, ['⚠️ 巡线已经在运行中', 'warn']],
+  [/PATROL_CLI_STOPPED|PATROL_STOPPED|FOLLOWER_STOPPED/, ['✅ 完整巡检已停止并收尾', 'ok']],
+  [/ROUTE_RECORDING_EVIDENCE_INCOMPLETE/, ['❌ 录制证据包不完整，拒绝执行该路线', 'bad']],
+  [/ROUTE_RECORDING_SESSION_CHANGED/, ['❌ 录制期间定位会话发生变化，拒绝执行该路线', 'bad']],
+  [/CONTROL_RUNNING_STOP_CONTROL_FIRST/, ['⚠️ 先停止巡线/安全节点，再停止底座', 'warn']],
+  [/ROUTE_TOO_SHORT/,     ['⚠️ 路线点太少, 至少要 2 个点才能巡线', 'warn']],
+  [/PCD_CAPTURE_STARTED/, ['✅ 点云采集已开始, 开着狗走一圈吧', 'ok']],
+  [/PCD_SAVING/,          ['⏳ 正在保存点云(点多要几秒), 保存完会自动通知', 'info']],
+  [/SNAPSHOT /,           ['✅ 摄像头快照已保存', 'ok']],
+  [/VIDEO /,              ['✅ 摄像头视频已保存', 'ok']],
+  [/CAMERA_LOOP_STARTED/, ['✅ 摄像头连续分段已开始', 'ok']],
+  [/CAMERA_LOOP_STOPPED/, ['✅ 摄像头连续分段已停止', 'ok']],
+  [/SAAS_LOOP_STARTED/,   ['✅ SaaS 循环已启动', 'ok']],
+  [/SAAS_LOOP_STOPPED/,   ['✅ SaaS 循环已停止', 'ok']],
+  [/SAAS_LOOP_ALREADY_RUNNING/, ['⚠️ SaaS 循环已经在运行中', 'warn']],
+  [/DRY_RUN_POST|DRY_RUN_UPLOAD/, ['✅ SaaS 干跑 payload 已生成', 'ok']],
+  [/ESTOP_SENT/,          ['🛑 急停已发送, 狗将立即停止', 'warn']],
+  [/ALL_CONTROL_STOPPED/, ['✅ 全部控制节点已停止', 'ok']],
+  [/NOT_RUNNING/,         ['⚠️ 目标本来就没在运行', 'warn']],
+  [/EXISTS/,              null],
+  [/STOPPED/,             ['✅ 已停止', 'ok']],
+  [/STARTED/,             ['✅ 命令已下发', 'ok']],
+];
+
+async function doAction(name, params={}, armed=false, quiet=false) {
+  let res;
+  try {
+    res = await api('/api/action', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name, params, armed})});
+  } catch(e) {
+    toast('❌ 平台后端不可达', 'bad');
+    return {error:'backend'};
+  }
+  const text = res.out || res.err || res.error || '';
+  appendLog(`[${name}] ${text}`);
+  if (!quiet) {
+    if (res.error || res.rc !== 0 && !text) {
+      toast(`❌ ${name} 失败: ${res.error || res.err || '未知错误'}`, 'bad');
+    } else {
+      for (const [re, t] of RESULT_MAP) {
+        if (re.test(text)) { if (t) toast(t[0], t[1]); break; }
+      }
+      if (/timed out|refused|No route/i.test(text)) toast('❌ SSH 连接失败: ' + text.slice(0,80), 'bad', 7000);
+    }
+  }
+  return res;
+}
+
+function appendLog(t) {
+  const el = $('log');
+  el.textContent = new Date().toTimeString().slice(0,8) + ' ' + t + '\n' + el.textContent;
+}
+
+function baseReady() {
+  const P = lastStatus.processes || {};
+  const od = (lastStatus.telemetry||{}).odom;
+  return P.fastlio && od && od.age < 3;
+}
+
+function requireBase(what) {
+  if (!baseReady()) {
+    toast(what + ' 需要定位数据: 先点「启动 雷达+FAST-LIO」并等底座状态变绿', 'warn', 6000);
+    return false;
+  }
+  return true;
+}
+
+/* ---------- 状态轮询(驱动一切形态变化) ---------- */
+async function poll() {
+  try {
+    const s = await api('/api/status');
+    lastStatus = s;
+    $('connPill').className = 'pill ' + (s.ssh_ok ? 'on' : 'bad');
+    $('connPill').textContent = s.ssh_ok ? 'SSH 已连接' : 'SSH 断开';
+    $('hostLabel').textContent = s.host ? ('经 ' + s.host + ({go2:' (热点)',go2wired:' (网线)',go2home:' (家WiFi)'}[s.host]||'')) : '';
+
+    const cell = s.cellular || {};
+    const usb = cell.usb_link || {};
+    const cellOnline = cell.state === 'ONLINE';
+    const cellFatal = !!cell.reboot_required || /FATAL|ERROR/.test(cell.state || '');
+    const usbDegraded = !!usb.degraded;
+    $('fourgPill').className = 'pill ' + (cellFatal ? 'bad' : cellOnline ? (usbDegraded ? 'warn' : 'on') : 'off');
+    $('fourgPill').textContent = cellFatal ? '4G USB 故障' : cellOnline ? ('4G 在线' + (usbDegraded ? ' · USB降速' : '')) : ('4G ' + (cell.state || '未知'));
+    $('fourgstate').textContent = cell.state || '--';
+    $('fourgstate').style.color = cellFatal ? 'var(--bad)' : cellOnline ? 'var(--ok)' : 'var(--warn)';
+    const csq = (cell.modem || {}).csq;
+    $('fourgsig').textContent = csq == null ? '--' : String(csq);
+    $('fourgsig').style.color = csq == null ? 'var(--dim)' : csq >= 20 ? 'var(--ok)' : csq >= 10 ? 'var(--warn)' : 'var(--bad)';
+    $('fourgusb').textContent = usb.speed_mbps == null ? '--' : (usb.speed_mbps + ' Mbps' + (usbDegraded ? '（应为480，已降速）' : ''));
+    $('fourgusb').style.color = usbDegraded ? 'var(--warn)' : (usb.speed_mbps == null ? 'var(--dim)' : 'var(--ok)');
+    $('fourgreason').textContent = cell.recovery || cell.reason || '等待 go2-4g-manager 状态…';
+
+    const t = s.telemetry || {};
+    const low = t.low, sp = t.sport, od = t.odom;
+    if (low) {
+      $('soc').textContent = low.soc + ' %';
+      $('soc').style.color = low.soc < 25 ? 'var(--bad)' : low.soc < 45 ? 'var(--warn)' : 'var(--ok)';
+      $('pv').textContent = fmt(low.power_v) + ' V';
+      $('pa').textContent = fmt(low.power_a) + ' A';
+      $('bqntc').textContent = (low.bq_ntc||[]).join(' / ') + ' ℃';
+      $('ntc').textContent = low.ntc1 + ' / ' + low.ntc2 + ' ℃';
+      $('mmax').textContent = low.motor_max + ' ℃';
+      $('mmax').style.color = low.motor_max > 80 ? 'var(--bad)' : low.motor_max > 65 ? 'var(--warn)' : 'var(--ok)';
+      $('mtemps').innerHTML = (low.motor_temps||[]).map(x =>
+        `<span style="color:${x>80?'var(--bad)':x>65?'var(--warn)':'var(--txt)'}">${x}</span>`).join('');
+    }
+    if (sp) {
+      $('ecode').textContent = sp.error_code;
+      $('ecode').style.color = sp.error_code === 1001 ? 'var(--dim)' : 'var(--warn)';
+      $('smode').textContent = sp.mode + (sp.gait!=null ? ' / 步态 ' + sp.gait : '');
+      $('svel').textContent = sp.vx!=null ? sp.vx + ' m/s, 转 ' + sp.vyaw + ' rad/s' : '--';
+    }
+    if (low && low.foot_force) {
+      $('ffoot').textContent = low.foot_force.join(' / ');
+      const grounded = low.foot_force.filter(f => f > 20).length;
+      $('ffoot').style.color = grounded >= 3 ? 'var(--ok)' : 'var(--warn)';
+    }
+    const sys = s.sys || {};
+    if (sys.cpu_temp != null) {
+      $('cputemp').textContent = sys.cpu_temp + ' ℃';
+      $('cputemp').style.color = sys.cpu_temp > 80 ? 'var(--bad)' : sys.cpu_temp > 65 ? 'var(--warn)' : 'var(--ok)';
+    }
+    if (sys.wifi_dbm != null) {
+      $('wifisig').textContent = sys.wifi_dbm + ' dBm ' + (sys.wifi_dbm > -60 ? '(强)' : sys.wifi_dbm > -75 ? '(中)' : '(弱,小心断连)');
+      $('wifisig').style.color = sys.wifi_dbm > -60 ? 'var(--ok)' : sys.wifi_dbm > -75 ? 'var(--warn)' : 'var(--bad)';
+    } else {
+      $('wifisig').textContent = '未用WiFi/无信号信息';
+      $('wifisig').style.color = 'var(--dim)';
+    }
+    const setHealth = (id, ok, good='正常', bad='异常') => {
+      const el = $(id);
+      el.textContent = ok == null ? '--' : (ok ? good : bad);
+      el.style.color = ok == null ? 'var(--dim)' : (ok ? 'var(--ok)' : 'var(--bad)');
+    };
+    setHealth('mid360', sys.livox_ping, '可达', '不可达');
+    if (sys.camera_source === 'unitree_builtin') {
+      $('z1net').textContent = '宇树内置前摄';
+      $('z1net').style.color = 'var(--ok)';
+      setHealth('z1rtsp', sys.camera_builtin, 'SDK就绪', '采集程序缺失');
+      $('z1gcu').textContent = '固定前向';
+      $('z1gcu').style.color = 'var(--dim)';
+    } else {
+      setHealth('z1net', sys.z1_ping, 'Z-1Pro可达', 'Z-1Pro不可达');
+      setHealth('z1rtsp', sys.z1_rtsp, 'RTSP 554开', 'RTSP 554关');
+      setHealth('z1gcu', sys.z1_gcu, '云台2332开', '云台2332关');
+    }
+    $('tage').textContent = s.telemetry_age==null ? '--' : s.telemetry_age + ' s';
+    if (od) {
+      $('oxy').textContent = fmt(od.x,2) + ' , ' + fmt(od.y,2);
+      $('oyaw').textContent = fmt(od.yaw,2) + ' rad';
+      $('oage').textContent = od.age + ' s';
+      $('oage').style.color = od.age > 3 ? 'var(--bad)' : 'var(--ok)';
+      if (od.age < 3) {
+        lastOdom = od;
+        const last = trail[trail.length-1];
+        if (!last || Math.hypot(od.x-last[0], od.y-last[1]) > 0.03) {
+          trail.push([od.x, od.y]);
+          if (trail.length > 5000) trail.shift();
+        }
+      }
+    }
+    update3DOverlays();
+    const P = s.processes || {};
+    $('procs').innerHTML = [['livox','雷达'],['fastlio','FAST-LIO'],['recorder','录制'],['safe','安全节点'],['follower','巡线'],['pcd','建图采集'],['camera_loop','视频分段'],['saas_loop','SaaS循环']]
+      .map(([k,label]) => `<span class="pill ${P[k]?'on':'off'}">${label}</span>`).join('');
+
+    $('camStatus').className = 'status-line ' + (P.camera_loop ? 'run' : 'idle');
+    $('camStatus').textContent = P.camera_loop ? '摄像头: ● 连续分段录制中' : '摄像头: 空闲';
+    $('btnCamLoop').disabled = !!P.camera_loop;
+    updateLivePreviewControls();
+    if (P.camera_loop && livePreviewOn && Date.now() - lastCamRefreshAt > 3000) {
+      lastCamRefreshAt = Date.now();
+      refreshLivePreview(false);
+    } else if (P.camera_loop && Date.now() - lastCamRefreshAt > 30000) {
+      lastCamRefreshAt = Date.now();
+      loadCameraFiles(false, false);
+    }
+
+    if ($('saasStatus')) {
+      $('saasStatus').className = 'status-line ' + (P.saas_loop ? 'run' : 'idle');
+      $('saasStatus').textContent = P.saas_loop ? '平台循环: ● 运行中，正在按间隔上报/上传' : '平台循环: 未运行';
+      $('btnSaasDryLoop').disabled = !!P.saas_loop;
+      $('btnSaasUploadLoop').disabled = !!P.saas_loop;
+      $('btnSaasStop').disabled = !P.saas_loop;
+    }
+
+    /* --- ① 底座状态与按钮形态 --- */
+    const baseRun = P.livox && P.fastlio;
+    const odFresh = od && od.age < 3;
+    const bs = $('baseStatus');
+    if (baseRun && odFresh) { bs.className='status-line ok'; bs.textContent='底座: ✅ 运行中, 定位正常'; }
+    else if (baseRun) { bs.className='status-line run'; bs.textContent='底座: ⏳ 已启动, 等待定位数据…(狗保持静止)'; }
+    else { bs.className='status-line idle'; bs.textContent='底座: 未运行'; }
+    $('btnBase').disabled = baseRun;
+    $('btnBase').textContent = baseRun ? (odFresh ? '✓ 底座运行中' : '⏳ 底座启动中…') : '启动 雷达 + FAST-LIO';
+    if (waitingBase && baseRun && odFresh) {
+      waitingBase=false;
+      if (activeTask && activeTask.key === 'start_base') finishTask('底座已就绪', '雷达 + FAST-LIO 已运行，/Odometry 数据正常。\n现在可以开始录路线、采 PCD 或巡线。', true);
+      toast('✅ 底座就绪, 定位正常, 可以录制/建图/巡线了', 'ok', 6000);
+    }
+
+    /* --- ② 录制状态与按钮形态 --- */
+    const rs = $('recStatus');
+    const recFile = (s.recorder_file||'').split('/').pop();
+    const recProgress = s.recorder_progress || '';
+    if (P.recorder) {
+      lastRecorderFailure = '';
+      rs.className='status-line run';
+      rs.textContent = `录制: ● 正在录制 ${recFile||''}  已录 ${s.recorder_lines==null?'…':Math.max(0,s.recorder_lines-1)} 个点`;
+      refreshRecordingRoutePreview(s.recorder_file, s.recorder_lines);
+    } else if (/RECORDING_FAILED|LOCALIZATION_SESSION_ABORTED/.test(recProgress)) {
+      rs.className='status-line bad';
+      rs.textContent = '录制: ❌ 失败 — ' + recProgress.replace(/^.*RECORDING_FAILED:\s*/, '');
+      $('recPreviewStatus').textContent = '录制器报告失败，请查看 recorder 日志确认文件状态。';
+      if (recProgress !== lastRecorderFailure) {
+        lastRecorderFailure = recProgress;
+        toast('❌ CSV录制失败，请查看录制状态或 recorder 日志', 'bad', 10000);
+      }
+    } else {
+      rs.className='status-line idle';
+      rs.textContent = '录制: 空闲';
+      if (recordingRoutePath) {
+        $('recPreviewStatus').textContent = routePts.length ? `上次录制路线仍显示在地图中: ${routePts.length} 个点` : '录制时路线会自动显示在地图中。';
+        recordingRoutePath = '';
+        recordingRouteLines = 0;
+      }
+    }
+    $('btnRecStart').disabled = P.recorder;
+    $('btnRecStop').disabled = !P.recorder;
+    $('btnRecStart').className = P.recorder ? 'active-rec' : 'primary';
+    $('btnRecStart').textContent = P.recorder ? '● 录制中…' : '开始录制';
+
+    /* --- ③ 点云状态与按钮形态 --- */
+    const ps = $('pcdStatus');
+    const prog = s.pcd_progress || '';
+    if (P.pcd) {
+      const m = prog.match(/POINTS (\d+) FRAMES (\d+)/);
+      ps.className='status-line run';
+      ps.textContent = '点云采集: ● 采集中 ' + (m ? `已累积 ${(+m[1]).toLocaleString()} 点 (${m[2]} 帧)` : '启动中…');
+    } else if (/SAVED/.test(prog)) {
+      const m = prog.match(/SAVED (\S+) (\d+)/);
+      ps.className='status-line ok';
+      ps.textContent = `点云采集: ✅ 上次已保存 ${m ? m[1].split('/').pop() + ' (' + (+m[2]).toLocaleString() + ' 点)' : ''}`;
+      if (waitingPcdSave) {
+        waitingPcdSave=false;
+        const msg = m ? `${m[1].split('/').pop()}\n${(+m[2]).toLocaleString()} 点` : '点云文件已保存';
+        if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云已保存', msg, true);
+        toast('✅ 点云已保存: ' + (m?m[1].split('/').pop()+', '+(+m[2]).toLocaleString()+' 点':''), 'ok', 7000);
+        loadPcdList();
+      }
+    } else if (/NO_POINTS/.test(prog)) {
+      ps.className='status-line idle';
+      ps.textContent = '点云采集: ⚠️ 上次没采到点(是不是底座没开?)';
+      if (waitingPcdSave) { waitingPcdSave=false; if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云保存失败', '没有采集到点云。检查底座是否运行、/cloud_registered 是否有数据。', false); toast('⚠️ 没采集到任何点云, 检查底座是否在运行', 'warn', 7000); }
+    } else if (/Error|Traceback|LOCALIZATION_SESSION_ABORTED/.test(prog)) {
+      ps.className='status-line idle';
+      ps.textContent = '点云采集: ❌ 上次出错了, 查看远端日志(pcd)';
+      if (waitingPcdSave) { waitingPcdSave=false; if (activeTask && activeTask.key === 'stop_pcd') finishTask('点云采集出错', '查看右下角远端日志，选择 pcd。', false); toast('❌ 点云采集出错, 点右下「查看远端日志」选 pcd', 'bad', 7000); }
+    } else {
+      ps.className='status-line idle';
+      ps.textContent = '点云采集: 空闲';
+    }
+    $('btnPcdStart').disabled = P.pcd;
+    $('btnPcdStop').disabled = !P.pcd;
+    $('btnPcdStart').className = P.pcd ? 'active-rec' : 'primary';
+    $('btnPcdStart').textContent = P.pcd ? '● 采集中…' : '开始采集';
+
+    /* --- ④ 巡线状态与按钮形态 --- */
+    const fs = s.follower_status || {state:'idle', text:'巡线未运行'};
+    const ss = s.safe_status || {state:'idle', text:'安全节点未运行'};
+    const patrol = $('patrolStatus');
+    let patrolClass = 'idle';
+    if (P.follower || fs.state === 'running' || fs.state === 'starting' || fs.state === 'stuck') patrolClass = 'run';
+    else if (fs.state === 'finished') patrolClass = 'ok';
+    patrol.className = 'status-line ' + patrolClass;
+    const odWarn = od && od.age > 3 ? ` / 定位已过期 ${od.age}s` : '';
+    patrol.textContent = fs.text + odWarn;
+    $('safeStatus').textContent = ss.text;
+    $('safeStatus').style.color = ss.state === 'blocked' ? 'var(--warn)' : (P.safe ? 'var(--ok)' : 'var(--dim)');
+    $('btnFollow').disabled = !!P.follower || !P.safe;
+    $('btnStopFollow').disabled = !P.follower;
+    $('btnFollow').textContent = P.follower ? '巡线运行中…' : '启动巡线';
+    $('btnFollow').className = P.follower ? 'active-rec' : 'primary';
+
+    draw();
+    updateAlign();
+  } catch(e) {
+    $('connPill').className = 'pill bad';
+    $('connPill').textContent = '后端不可达';
+  }
+  setTimeout(poll, 1500);
+}
+
+/* ---------- 下载 ---------- */
+function dl(path) {
+  if (!path) { toast('⚠️ 先选择文件', 'warn'); return; }
+  toast('⬇️ 开始下载 ' + path.split('/').pop() + ' (大文件要等几秒)', 'info');
+  window.open('/api/download?path=' + encodeURIComponent(path));
+}
+
+function clipText(text, max=1600) {
+  text = text || '';
+  return text.length > max ? text.slice(0, max) + '\n…' : text;
+}
+
+function saasParams(upload=false) {
+  return {
+    route: ($('saasRoute').value || 'xiaoqu1').trim(),
+    pcd: ($('saasPcd').value || 'xiaoqu1').trim(),
+    patrol_id: ($('saasPatrolId').value || 'xiaoqu1-field').trim(),
+    interval: Math.max(5, Math.min(300, parseInt($('saasInterval').value || '20', 10))),
+    upload,
+  };
+}
+
+async function saasHeartbeat(dryRun=true) {
+  showTask(dryRun ? 'SaaS 心跳干跑' : '发送 SaaS 心跳', dryRun ? '正在生成 /robot/heartbeat payload…' : '正在 POST /robot/heartbeat…', 'saas_heartbeat');
+  const res = await doAction('saas_heartbeat', {dry_run: dryRun}, false, true);
+  const ok = !res.error && res.rc === 0;
+  finishTask(ok ? (dryRun ? '心跳干跑完成' : '心跳已发送') : 'SaaS 心跳失败', clipText(res.out || res.err || res.error || 'OK'), ok);
+}
+
+async function saasManifest() {
+  showTask('生成 SaaS 资产清单', '正在读取狗端最新 CSV / PCD / 视频文件…', 'saas_manifest');
+  const res = await doAction('saas_manifest', {limit: 8}, false, true);
+  const ok = !res.error && res.rc === 0;
+  finishTask(ok ? '资产清单已生成' : '资产清单失败', clipText(res.out || res.err || res.error || 'OK'), ok);
+}
+
+async function saasCommandResult(dryRun=true) {
+  showTask(dryRun ? '命令结果干跑' : '发送命令结果', '正在生成 /robot/command/result…', 'saas_command_result');
+  const res = await doAction('saas_command_result', {dry_run: dryRun, command_id:'console-test', status:'success', message:'console connectivity test'}, false, true);
+  const ok = !res.error && res.rc === 0;
+  finishTask(ok ? '命令结果完成' : '命令结果失败', clipText(res.out || res.err || res.error || 'OK'), ok);
+}
+
+async function startSaasLoop(upload=false) {
+  const p = saasParams(upload);
+  if (upload && !confirm(`将循环真实上传 ${p.route}.csv / ${p.pcd}.pcd / 最近有效视频段到 SaaS，间隔 ${p.interval} 秒。继续?`)) return;
+  showTask(upload ? '启动 SaaS 真实循环' : '启动 SaaS 干跑循环', upload ? '正在启动后台循环上传进程…' : '正在启动后台 dry-run 循环，不会真实发送文件…', 'saas_loop');
+  const res = await doAction('saas_start_loop', p, false, true);
+  const ok = !res.error && /SAAS_LOOP_STARTED|SAAS_LOOP_ALREADY_RUNNING/.test(res.out || '');
+  finishTask(ok ? 'SaaS 循环已启动' : 'SaaS 循环启动失败', clipText(res.out || res.err || res.error || 'OK'), ok);
+  setTimeout(() => doAction('tail_log', {log:'saas_loop'}, false, true), 1200);
+}
+
+async function stopSaasLoop() {
+  showTask('停止 SaaS 循环', '正在停止后台 patrol-loop 进程…', 'saas_stop_loop');
+  const res = await doAction('saas_stop_loop', {}, false, true);
+  const ok = !res.error && /SAAS_LOOP_STOPPED|NOT_RUNNING/.test(res.out || '');
+  finishTask(ok ? 'SaaS 循环已停止' : 'SaaS 循环停止失败', clipText(res.out || res.err || res.error || 'OK'), ok);
+}
+
+/* ---------- 底座 ---------- */
+async function startBase() {
+  $('btnBase').disabled = true;
+  waitingBase = true;
+  showTask('启动感知底座', '正在启动 Livox + FAST-LIO…\n狗请保持静止 10 秒。\n就绪后会显示确认按钮。', 'start_base');
+  toast('⏳ 底座启动中(雷达+FAST-LIO 约 20 秒), 就绪后会通知你, 狗请保持静止', 'info', 8000);
+  const res = await doAction('start_base', {}, false, true);
+  if (/BASE_RESTART_BLOCKED_ACTIVE_MODE/.test(res.out || '')) {
+    waitingBase = false;
+    $('btnBase').disabled = false;
+    finishTask('底座重启已阻止', '当前仍有录制、点云、巡检或控制进程。请先正常停止当前任务，再重启雷达和 FAST-LIO。', false);
+    toast('⚠️ 当前任务未停止，底座不会重启', 'warn', 7000);
+  }
+}
+
+/* ---------- 路线 ---------- */
+async function loadRoutes(notify=false) {
+  const res = await api('/api/routes');
+  if (res.error) { toast('❌ 路线列表获取失败: ' + res.error, 'bad'); return; }
+  const sel = $('routeSel');
+  const cur = sel.value;
+  sel.innerHTML = res.routes.map(r => {
+    const name = r.path.replace(/^.*routes\//, '');
+    return `<option value="${r.path}" data-points="${Math.max(0, r.lines-1)}">${name}  (${r.lines-1}点)</option>`;
+  }).join('');
+  if (cur) sel.value = cur;
+  if (notify) toast(`✅ 路线列表已刷新, 共 ${res.routes.length} 条`, 'ok', 2500);
+}
+
+async function loadRoutePoints() {
+  const path = $('routeSel').value;
+  if (!path) { toast('⚠️ 先选择一条路线', 'warn'); return; }
+  showTask('载入路线', '正在从 Orin 读取路线 CSV，并叠加到 3D 地图…', 'load_route');
+  const res = await api('/api/route_points?path=' + encodeURIComponent(path));
+  if (res.error) { finishTask('载入路线失败', res.error, false); toast('❌ 载入路线失败: ' + res.error, 'bad'); return; }
+  routePts = res.points;
+  routeStart = routePts[0] || null;
+  finishTask('路线已载入', `${path.split('/').pop()}\n共 ${routePts.length} 个点。\n如果已载入 PCD，路线会显示在 3D 点云上。`, true);
+  toast(`✅ 已载入路线 ${path.split('/').pop()}: ${routePts.length} 个点`, 'ok', 3000);
+  update3DOverlays();
+  draw();
+}
+
+async function refreshRecordingRoutePreview(path, lines) {
+  if (!path || recordingRouteBusy) return;
+  const now = Date.now();
+  const lineCount = Number.isFinite(+lines) ? +lines : 0;
+  const unchanged = path === recordingRoutePath && lineCount === recordingRouteLines;
+  if (unchanged && now - recordingRouteLastAt < 3500) return;
+  if (!unchanged && now - recordingRouteLastAt < 900) return;
+
+  recordingRouteBusy = true;
+  recordingRouteLastAt = now;
+  try {
+    const res = await api('/api/route_points?path=' + encodeURIComponent(path));
+    if (res.error) {
+      $('recPreviewStatus').textContent = '正在录制，但实时路线读取失败: ' + res.error;
+      return;
+    }
+    recordingRoutePath = path;
+    recordingRouteLines = lineCount;
+    routePts = res.points || [];
+    routeStart = routePts[0] || null;
+    $('recPreviewStatus').textContent = routePts.length
+      ? `实时路线预览: ${path.split('/').pop()}，${routePts.length} 个点，灰线会随录制增长`
+      : `实时路线预览: ${path.split('/').pop()}，等待第一个路线点...`;
+    update3DOverlays();
+    draw();
+    updateAlign();
+  } catch (e) {
+    $('recPreviewStatus').textContent = '正在录制，但实时路线读取异常';
+  } finally {
+    recordingRouteBusy = false;
+  }
+}
+
+/* ---------- 录制 ---------- */
+async function startRecorder() {
+  const name = $('recName').value.trim();
+  if (!name) { toast('⚠️ 先给新路线起个名字', 'warn'); return; }
+  if (!requireBase('录制路线')) return;
+  if (!confirm(`开始完整诊断录制前，请确认：\n1. 雷达支架已锁紧，录制和执行之间不再调整；\n2. 地面已标出狗中心起点和至少 1 米长的机头朝向线；\n3. 固定机位手机已开始录像，画面能看到起点、第一段和地面参照物；\n4. 狗先静止 5 秒。\n\n纯车载日志无法独立证明真实地面位置，固定机位视频是区分“定位认为走对了”和“狗实际走偏了”的必要证据。确认现在开始?`)) return;
+  showTask('开始录路线', `正在启动录制黑匣子: ${name}.csv\n先锁定 FAST-LIO 会话并保存系统/代码快照，再确认轻量遥测、性能监控、里程计 rosbag 和会话保护全部就绪，最后才会启动原版 0.40m 定距录制。\n这个步骤可能需要 10～30 秒；中途不要移动狗。`, 'start_recorder');
+  $('btnRecStart').disabled = true;   // 防双击, 轮询会根据真实状态恢复
+  trail = [];
+  routePts = [];
+  routeStart = null;
+  recordingRoutePath = '';
+  recordingRouteLines = 0;
+  $('recPreviewStatus').textContent = '录制启动中，路线点写入后会自动显示在地图中...';
+  update3DOverlays();
+  draw();
+  let res = await doAction('start_recorder', {route_name: name}, false, true);
+  if ((res.out||'').includes('EXISTS')) {
+    if (confirm(`${name}.csv 已存在, 覆盖?`)) {
+      res = await doAction('start_recorder', {route_name: name, overwrite: true}, false, true);
+    } else { hideTaskModal(); return; }
+  }
+  const startText = [res.out, res.err, res.error].filter(Boolean).join('\n');
+  if (/RECORDING_SESSION_CAPTURE_FAILED|localization session capture failed/.test(startText)) {
+    finishTask('路线录制未启动', '没有取得连续、稳定的里程计。请让狗保持静止，确认 FAST-LIO 正常后重试。', false);
+    return;
+  }
+  if (/SESSION_GUARD_NOT_READY|session guard did not become ready/.test(startText)) {
+    finishTask('路线录制未启动', '定位会话保护没有正常启动；黑匣子已自动清理，本次没有开始录制。', false);
+    return;
+  }
+  if (/MODE_CONFLICT|mode conflict/.test(startText)) {
+    finishTask('当前任务冲突', '请先停止点云采集、巡检或手动视频录制，再开始 CSV 录制。', false);
+    toast('⚠️ 当前有其他重任务运行，CSV 未启动', 'warn', 6000);
+    return;
+  }
+  if (res.error || (typeof res.rc === 'number' && res.rc !== 0)) {
+    finishTask('路线录制未启动', res.error || res.err || res.out || `rc=${res.rc}`, false);
+    return;
+  }
+  toast('⏳ 黑匣子已就绪，正在确认路线录制器状态…', 'info');
+  setTimeout(() => {
+    if ((lastStatus.processes||{}).recorder) {
+      finishTask('路线录制已开始', `${name}.csv 正在录制。\n本次定位会话、里程计、完整姿态/遥控输入、狗底层状态、每核负载/频率/温度、磁盘/网络及 Livox/FAST-LIO 内部时序都会进入同一次证据包。\n中途不能重启雷达或 FAST-LIO。现在可以遥控狗走路线。`, true);
+      toast(`✅ 已确认录制中: ${name}.csv, 开始遥控走吧`, 'ok', 6000);
+    } else {
+      finishTask('路线录制状态未确认', '5 秒内没有检测到 route_recorder。\n可稍等状态刷新，或查看远端日志 recorder。', false);
+      toast('⚠️ 5 秒了还没检测到录制器, 再等等或查看远端日志(recorder)', 'warn', 6000);
+    }
+  }, 5500);
+}
+
+async function stopRecorder() {
+  showTask('停止录路线', '正在停止录制器并完整收尾黑匣子：关闭 rosbag、采集结束会话与系统快照、复制底座日志、复算 CSV，并生成路线哈希关联文件。请保持狗静止，可能需要 10～30 秒…', 'stop_recorder');
+  const res = await doAction('stop_recorder', {}, false, true);
+  const out = [res.out, res.err, res.error].filter(Boolean).join('\n');
+  const m = out.match(/(?:LINES|lines)=(\d+)/);
+  const failed = /RECORDING_FAILED/.test(out) || /STOPPED_FORCED/.test(out);
+  if (failed) {
+    finishTask('路线停止异常', '录制器未能通过正常的 Ctrl+C 路径退出，请检查 CSV 尾部和 recorder 日志。', false);
+    toast('❌ 路线停止异常，请检查 CSV 和 recorder 日志', 'bad', 8000);
+    setTimeout(() => loadRoutes(), 1200);
+  } else if (/RECORDING_BLACKBOX_STOPPED/.test(out)) {
+    const n = m ? Math.max(0, +m[1]-1) : '?';
+    const run = (out.match(/run_dir=([^\s]+)/)||[])[1] || '狗端 patrol_logs/recordings';
+    const warned = /complete_with_warnings|RECORDING_BLACKBOX_WARNINGS/.test(out);
+    finishTask(
+      warned ? '路线已保存，但证据包有警告' : '路线与完整证据包已保存',
+      `路线录制已停止。\n共 ${n} 个路线点。\n证据目录: ${run}` + (warned ? '\n请先不要执行，待检查警告内容。' : ''),
+      !warned
+    );
+    toast(warned ? '⚠️ 路线已保存，但黑匣子有警告' : `✅ 路线与黑匣子已保存, 共 ${n} 个路线点`, warned ? 'warn' : 'ok', 7000);
+    setTimeout(() => loadRoutes(), 1200);
+  } else if (/NOT_RUNNING/.test(out)) {
+    finishTask('没有正在录制的路线', 'route_recorder 当前未运行。', false);
+    toast('⚠️ 没有正在运行的录制器', 'warn');
+  } else {
+    finishTask('停止路线失败', out || res.error || '未知错误', false);
+    toast('❌ 停止失败: ' + (out||res.error||''), 'bad');
+  }
+}
+
+/* ---------- 点云 ---------- */
+async function startPcd() {
+  const name = $('pcdName').value.trim();
+  if (!name) { toast('⚠️ 先给点云地图起个名字', 'warn'); return; }
+  if (!requireBase('点云采集')) return;
+  showTask('开始点云采集', `正在确认狗静止并锁定本次 FAST-LIO 定位会话，然后启动: ${name}.pcd\n采集中若定位进程重启，本次 PCD 会自动判为无效。`, 'start_pcd');
+  $('btnPcdStart').disabled = true;   // 防双击
+  const res = await doAction('start_pcd', {name}, false, true);
+  if (/PCD_SESSION_CAPTURE_FAILED/.test(res.out || '')) {
+    finishTask('点云采集未启动', '没有取得连续、稳定的里程计。请让狗保持静止，确认 FAST-LIO 正常后重试。', false);
+    return;
+  }
+  if (/SESSION_GUARD_NOT_READY/.test(res.out || '')) {
+    finishTask('点云采集未启动', '定位会话保护进程没有正常启动；为了避免生成跨坐标系 PCD，本次采集已取消。', false);
+    return;
+  }
+  if ((res.out||'').includes('MODE_CONFLICT')) {
+    finishTask('当前任务冲突', '请先停止 CSV 录制、巡检或手动视频录制，再开始 PCD 采集。', false);
+    toast('⚠️ 当前有其他重任务运行，PCD 未启动', 'warn', 6000);
+    return;
+  }
+  if (res.error || (typeof res.rc === 'number' && res.rc !== 0)) {
+    finishTask('点云采集未启动', res.error || res.err || res.out || `rc=${res.rc}`, false);
+    return;
+  }
+  toast('⏳ 点云采集启动中, 状态行会显示实时点数(约 5 秒)…', 'info');
+  setTimeout(() => {
+    if ((lastStatus.processes||{}).pcd) finishTask('点云采集已开始', `${name}.pcd 正在采集。\n中栏状态行会显示累计点数。`, true);
+    else finishTask('点云采集状态未确认', '5 秒内没有检测到 go2map_capture。\n可稍等状态刷新，或查看远端日志 pcd。', false);
+  }, 5500);
+}
+
+async function stopPcd() {
+  waitingPcdSave = true;
+  showTask('保存点云', '正在停止采集并保存 PCD…\n点数多时需要几秒到几十秒。', 'stop_pcd');
+  const res = await doAction('stop_pcd', {}, false, true);
+  if (/PCD_SAVING/.test(res.out||'')) toast('⏳ 正在保存点云文件, 完成后自动通知…', 'info', 6000);
+  else if (/NOT_RUNNING/.test(res.out||'')) { waitingPcdSave=false; finishTask('没有正在采集的点云', 'go2map_capture 当前未运行。', false); toast('⚠️ 没有正在运行的采集', 'warn'); }
+}
+
+async function loadPcdList() {
+  const res = await api('/api/pcd_list');
+  if (res.error) return;
+  $('pcdSel').innerHTML = (res.files||[]).map(f => {
+    const name = f.path.split('/').pop();
+    const mb = (f.size/1048576).toFixed(1);
+    return `<option value="${f.path}">${name} (${(+f.points).toLocaleString()}点 ${mb}MB)</option>`;
+  }).join('');
+}
+
+async function loadPcd() {
+  const path = $('pcdSel').value;
+  if (!path) { toast('⚠️ 还没有保存过点云, 先采集一份', 'warn'); return; }
+  showTask('载入 3D 点云', `正在读取 ${path.split('/').pop()}\n远端抽样、打包为云端同款 {b64, meta}，大地图需要几秒…`, 'load_pcd');
+  toast('⏳ 载入 3D 点云中(大地图要几秒)…', 'info');
+  const res3 = await api('/api/pcd_pack?path=' + encodeURIComponent(path));
+  if (res3.error) { finishTask('载入 3D 点云失败', res3.error, false); toast('❌ 载入 3D 点云失败: ' + res3.error, 'bad'); return; }
+  updateTask('点云数据已返回，正在创建 Three.js 场景和叠加路线/轨迹…');
+  mount3D(res3);
+  const res = await api('/api/pcd_points?path=' + encodeURIComponent(path));
+  if (res.error) { finishTask('3D 点云已载入，2D fallback 失败', res.error, false); toast('❌ 载入点云失败: ' + res.error, 'bad'); return; }
+  pcdPts = res.points;
+  finishTask('3D 点云已载入', `${path.split('/').pop()}\n显示 ${(res3.meta.count||0).toLocaleString()} 点，原始 ${(res3.total||0).toLocaleString()} 点，抽样 1/${res3.stride}。`, true);
+  toast(`✅ 3D 点云已显示: ${(res3.meta.count||0).toLocaleString()} 点(原始 ${(+res3.total).toLocaleString()}, 抽样 1/${res3.stride})`, 'ok', 5000);
+  update3DOverlays();
+  draw();
+}
+
+/* ---------- 3D 点云/路线/轨迹 ---------- */
+function decodeB64Float32(b64) {
+  const bin = atob(b64), u8 = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+  return new Float32Array(u8.buffer);
+}
+
+function turbo(t) {
+  const stops = [[0,[30,58,138]],[0.25,[6,182,212]],[0.5,[34,197,94]],[0.7,[234,179,8]],[0.85,[249,115,22]],[1,[239,68,68]]];
+  t = Math.max(0, Math.min(1, t));
+  for (let k=0;k<stops.length-1;k++) if (t <= stops[k+1][0]) {
+    const a=stops[k], b=stops[k+1], f=(t-a[0])/(b[0]-a[0]);
+    return [(a[1][0]+(b[1][0]-a[1][0])*f)/255,(a[1][1]+(b[1][1]-a[1][1])*f)/255,(a[1][2]+(b[1][2]-a[1][2])*f)/255];
+  }
+  return [239/255,68/255,68/255];
+}
+
+function mapPlanar(dx, dz) {
+  const rot = parseInt(($('mapRot') && $('mapRot').value) || '0', 10);
+  let x = dx, z = dz;
+  if (rot === 90) { x = dz; z = -dx; }
+  else if (rot === 180) { x = -dx; z = -dz; }
+  else if (rot === 270) { x = -dz; z = dx; }
+  if ($('mirrorX') && $('mirrorX').checked) x = -x;
+  if ($('mirrorZ') && $('mirrorZ').checked) z = -z;
+  return [x, z];
+}
+
+function mount3D(data) {
+  const el = $('map3d');
+  el.innerHTML = '';
+  if (map3d && map3d.dispose) map3d.dispose();
+  const meta = data.meta;
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0d0f14);
+  scene.fog = new THREE.FogExp2(0x0d0f14, 0.0042);
+  const renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setSize(el.clientWidth, el.clientHeight);
+  el.appendChild(renderer.domElement);
+  const camera = new THREE.PerspectiveCamera(55, el.clientWidth/el.clientHeight, 0.1, 3000);
+  camera.position.set(meta.radius * 0.85, meta.zmax * 2.8, meta.radius);
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.08; controls.zoomSpeed = 1.3;
+  controls.target.set(0, meta.zmax * 0.22, 0);
+  controls.minDistance = Math.max(4, meta.radius * 0.04); controls.maxDistance = meta.radius * 6;
+  const srcPos = decodeB64Float32(data.b64);
+  const pos = new Float32Array(srcPos.length);
+  for (let i=0; i<srcPos.length; i+=3) {
+    const p = mapPlanar(srcPos[i], srcPos[i+2]);
+    pos[i] = p[0];
+    pos[i+1] = srcPos[i+1];
+    pos[i+2] = p[1];
+  }
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const col = new Float32Array(pos.length);
+  for (let i=0;i<pos.length/3;i++) {
+    const c = turbo(pos[i*3+1] / meta.zmax);
+    col[i*3]=c[0]; col[i*3+1]=c[1]; col[i*3+2]=c[2];
+  }
+  geom.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  const cloud = new THREE.Points(geom, new THREE.PointsMaterial({size:parseFloat($('ptSize').value || '0.18'), vertexColors:true, sizeAttenuation:true}));
+  scene.add(cloud);
+  scene.add(new THREE.GridHelper(meta.radius * 3, 28, 0x1e3a5f, 0x122236));
+  const overlays = new THREE.Group(); scene.add(overlays);
+  function toThree(x,y,z=0) {
+    const p = mapPlanar(x-meta.cx, y-meta.cy);
+    return new THREE.Vector3(p[0], z-meta.zmin, p[1]);
+  }
+  function dispose() { cancelAnimationFrame(raf); renderer.dispose(); window.removeEventListener('resize', onResize); }
+  function onResize(){ if(!el.clientWidth) return; renderer.setSize(el.clientWidth, el.clientHeight); camera.aspect=el.clientWidth/el.clientHeight; camera.updateProjectionMatrix(); }
+  window.addEventListener('resize', onResize);
+  let raf = 0; (function anim(){ raf=requestAnimationFrame(anim); controls.update(); renderer.render(scene,camera); })();
+  map3d = {scene, renderer, camera, controls, cloud, overlays, meta, toThree, dispose};
+  pcd3d = data;
+  update3DOverlays();
+}
+
+function clearGroup(g) {
+  while (g.children.length) {
+    const o = g.children.pop();
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) o.material.dispose();
+  }
+}
+
+function addLine(points, color) {
+  if (!map3d || points.length < 2) return;
+  const verts = [];
+  for (const p of points) {
+    const v = map3d.toThree(p[0], p[1], p[2] || 0.15);
+    verts.push(v.x, v.y + 0.2, v.z);
+  }
+  const geom = new THREE.BufferGeometry(); geom.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+  const line = new THREE.Line(geom, new THREE.LineBasicMaterial({color}));
+  map3d.overlays.add(line);
+}
+
+function addSphere(x,y,z,color,size=1.6) {
+  if (!map3d) return;
+  const v = map3d.toThree(x,y,z);
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(size, 16, 16), new THREE.MeshBasicMaterial({color}));
+  mesh.position.copy(v); map3d.overlays.add(mesh);
+}
+
+function update3DLayers() {
+  if (!map3d) return;
+  map3d.cloud.visible = $('lyPcd').checked;
+}
+
+function updatePointSize() {
+  if (!map3d || !map3d.cloud) return;
+  map3d.cloud.material.size = parseFloat($('ptSize').value || '0.18');
+  map3d.cloud.material.needsUpdate = true;
+}
+
+function remount3D() {
+  if (pcd3d) mount3D(pcd3d);
+}
+
+function topView3D() {
+  if (!map3d) return;
+  const m = map3d.meta;
+  map3d.camera.position.set(0, Math.max(m.radius * 2.2, m.zmax * 4, 20), 0.001);
+  map3d.controls.target.set(0, 0, 0);
+  map3d.controls.update();
+}
+
+function resetView3D() {
+  if (!map3d) return;
+  const m = map3d.meta;
+  map3d.camera.position.set(m.radius * 0.85, m.zmax * 2.8, m.radius);
+  map3d.controls.target.set(0, m.zmax * 0.22, 0);
+  map3d.controls.update();
+}
+
+function makeTube(points, color, radius=0.06) {
+  if (!map3d || points.length < 2) return null;
+  const vs = points.map(p => map3d.toThree(p[0], p[1], (p[2] || 0) + 0.12));
+  const curve = new THREE.CatmullRomCurve3(vs);
+  const geom = new THREE.TubeGeometry(curve, Math.max(16, points.length * 2), radius, 8, false);
+  return new THREE.Mesh(geom, new THREE.MeshBasicMaterial({color}));
+}
+
+function update3DOverlays() {
+  if (!map3d) return;
+  clearGroup(map3d.overlays);
+  if ($('lyRoute').checked && routePts.length) {
+    const tube = makeTube(routePts, 0xffd166, 0.035);
+    if (tube) map3d.overlays.add(tube); else addLine(routePts, 0xffd166);
+    addSphere(routePts[0][0], routePts[0][1], routePts[0][2]||0.2, 0x3fb96b, 0.35);
+    const end = routePts[routePts.length-1]; addSphere(end[0], end[1], end[2]||0.2, 0xe05555, 0.35);
+  }
+  if ($('lyTrail').checked && trail.length) addLine(trail.map(p => [p[0], p[1], 0.25]), 0x4f8cff);
+  if (lastOdom) {
+    addSphere(lastOdom.x, lastOdom.y, (lastOdom.z || 0) + 0.3, 0xffab40, 0.28);
+    const head = [lastOdom.x + 0.7 * Math.cos(lastOdom.yaw || 0), lastOdom.y + 0.7 * Math.sin(lastOdom.yaw || 0), (lastOdom.z || 0) + 0.3];
+    addLine([[lastOdom.x, lastOdom.y, (lastOdom.z || 0) + 0.3], head], 0xffab40);
+  }
+  update3DLayers();
+}
+
+/* ---------- Z-1Pro 摄像头 ---------- */
+function mediaUrl(path) {
+  return '/api/file?path=' + encodeURIComponent(path) + '&t=' + Date.now();
+}
+
+function latestVideoOption() {
+  return [...$('camFileSel').options].find(o => o.dataset.kind === 'video' || o.value.toLowerCase().endsWith('.mp4')) || null;
+}
+
+function updateLivePreviewControls() {
+  const start = $('btnLivePreview'), stop = $('btnStopLivePreview');
+  if (!start || !stop) return;
+  start.disabled = livePreviewOn;
+  start.textContent = livePreviewOn ? '实时预览中' : '测试实时播放';
+  stop.disabled = !livePreviewOn && !manualCameraLoop;
+}
+
+function showLivePreviewWaiting(msg) {
+  $('camPreview').innerHTML = `<span class="muted">${msg}</span>`;
+}
+
+function scheduleLivePreviewRefresh(delay=3000) {
+  clearTimeout(livePreviewTimer);
+  if (livePreviewOn) livePreviewTimer = setTimeout(() => refreshLivePreview(false), delay);
+}
+
+function setCameraPreview(path, kind) {
+  if (!path) return;
+  const box = $('camPreview');
+  if (kind === 'video' || path.toLowerCase().endsWith('.mp4')) {
+    box.innerHTML = `<video id="camVideo" src="${mediaUrl(path)}" controls autoplay muted></video>`;
+    const v = $('camVideo');
+    if (v) {
+      v.onended = () => livePreviewOn ? scheduleLivePreviewRefresh(1200) : playNextCameraVideo();
+      v.onerror = () => { if (livePreviewOn) scheduleLivePreviewRefresh(3000); };
+    }
+  } else {
+    box.innerHTML = `<img src="${mediaUrl(path)}" alt="camera snapshot">`;
+  }
+}
+
+async function playNextCameraVideo() {
+  if (livePreviewOn) { scheduleLivePreviewRefresh(1200); return; }
+  await loadCameraFiles(false, false);
+  const sel = $('camFileSel');
+  if (!sel.options.length) return;
+  let i = sel.selectedIndex;
+  for (let step=1; step<=sel.options.length; step++) {
+    const idx = (i + step) % sel.options.length;
+    const opt = sel.options[idx];
+    if (opt && opt.dataset.kind === 'video') {
+      sel.selectedIndex = idx;
+      setCameraPreview(opt.value, 'video');
+      break;
+    }
+  }
+}
+
+async function loadCameraFiles(notify=false, autoPreview=true) {
+  lastCamRefreshAt = Date.now();
+  const prev = $('camFileSel').value;
+  const res = await api('/api/camera_files');
+  if (res.error) { if (notify) toast('❌ 摄像头文件列表失败: ' + res.error, 'bad'); return; }
+  const files = res.files || [];
+  $('camFileSel').innerHTML = files.map(f => {
+    const mb = f.size > 1048576 ? (f.size/1048576).toFixed(1)+'MB' : Math.round(f.size/1024)+'KB';
+    return `<option value="${f.path}" data-kind="${f.kind}">${f.name} (${mb})</option>`;
+  }).join('');
+  if (prev && [...$('camFileSel').options].some(o => o.value === prev)) $('camFileSel').value = prev;
+  if (files.length && autoPreview && !prev) setCameraPreview(files[0].path, files[0].kind);
+  if (notify) toast(`✅ 摄像头文件已刷新, 共 ${files.length} 个`, 'ok', 2500);
+}
+
+function showCameraFile() {
+  livePreviewOn = false;
+  clearTimeout(livePreviewTimer);
+  updateLivePreviewControls();
+  const sel = $('camFileSel');
+  const opt = sel.options[sel.selectedIndex];
+  if (!sel.value) { toast('⚠️ 没有可预览的摄像头文件', 'warn'); return; }
+  setCameraPreview(sel.value, opt ? opt.dataset.kind : '');
+}
+
+async function refreshLivePreview(forcePlay=false) {
+  if (!livePreviewOn || livePreviewBusy) return;
+  livePreviewBusy = true;
+  try {
+    await loadCameraFiles(false, false);
+    const opt = latestVideoOption();
+    if (!opt) {
+      showLivePreviewWaiting('等待摄像头生成第一段视频…');
+      scheduleLivePreviewRefresh(3000);
+      return;
+    }
+    const current = $('camVideo');
+    const same = opt.value === livePreviewLastPath;
+    if (forcePlay || !same) {
+      $('camFileSel').value = opt.value;
+      livePreviewLastPath = opt.value;
+      setCameraPreview(opt.value, 'video');
+      return;
+    }
+    if (!current || current.ended) {
+      showLivePreviewWaiting('等待下一段视频生成…');
+      scheduleLivePreviewRefresh(3000);
+    }
+  } finally {
+    livePreviewBusy = false;
+    updateLivePreviewControls();
+  }
+}
+
+async function startLivePreview(manual=false) {
+  if (livePreviewOn) { scheduleLivePreviewRefresh(800); return; }
+  await loadCameraFiles(false, false);
+  const currentLatest = latestVideoOption();
+  livePreviewLastPath = currentLatest ? currentLatest.value : '';
+  livePreviewOn = true;
+  showLivePreviewWaiting('实时预览已开启，等待下一段 20 秒视频…');
+  updateLivePreviewControls();
+  const P = lastStatus.processes || {};
+  if (manual && !P.camera_loop) {
+    manualCameraLoop = true;
+    toast('⏳ 正在启动摄像头连续分段，用于测试实时播放…', 'info', 5000);
+    const res = await doAction('camera_start_loop', {seconds: 20}, false, true);
+    if ((res.out||'').includes('MODE_CONFLICT')) {
+      manualCameraLoop = false;
+      livePreviewOn = false;
+      $('livePreviewSwitch').checked = false;
+      updateLivePreviewControls();
+      toast('⚠️ CSV、PCD 或巡检运行中，不能同时启动测试视频', 'warn', 6000);
+      return;
+    }
+  }
+  scheduleLivePreviewRefresh(2500);
+}
+
+async function testLivePreview() {
+  $('livePreviewSwitch').checked = true;
+  await startLivePreview(true);
+}
+
+async function stopLivePreview(stopLoop=true) {
+  livePreviewOn = false;
+  livePreviewLastPath = '';
+  clearTimeout(livePreviewTimer);
+  updateLivePreviewControls();
+  const P = lastStatus.processes || {};
+  if (stopLoop && manualCameraLoop && P.camera_loop && !P.recorder && !P.pcd) {
+    toast('⏳ 停止测试用摄像头分段录制…', 'info', 3500);
+    await doAction('camera_stop_loop', {}, false, true);
+  }
+  manualCameraLoop = false;
+  updateLivePreviewControls();
+}
+
+function onLivePreviewSwitch() {
+  if ($('livePreviewSwitch').checked) {
+    const P = lastStatus.processes || {};
+    if (P.camera_loop) startLivePreview(false);
+    else toast('⚠️ 当前没有视频录制任务；CSV/PCD 模式不会自动录像', 'warn', 5000);
+  } else {
+    stopLivePreview(false);
+  }
+}
+
+async function cameraProbe() {
+  const res = await doAction('camera_probe', {}, false, true);
+  const text = res.out || res.err || res.error || '';
+  appendLog('[camera_probe]\n' + text);
+  if (/BUILTIN_CAMERA_PROBE_OK|RTSP\/1\.0 200 OK/.test(text)) toast('✅ 当前摄像头来源正常', 'ok', 5000);
+  else toast('⚠️ 摄像头探测结果不完整, 看动作日志', 'warn', 6000);
+}
+
+async function cameraPreset(preset) {
+  const res = await doAction('camera_preset', {preset}, false, true);
+  const text = res.out || res.err || res.error || '';
+  if (/CAMERA_PRESET_OK|status=0|len=/.test(text)) toast(`✅ 摄像头预设 ${preset} 已发送`, 'ok', 2500);
+  else toast(`⚠️ 摄像头预设 ${preset} 结果未知`, 'warn', 4000);
+}
+
+async function cameraSnapshot() {
+  const res = await doAction('camera_snapshot', {}, false, true);
+  const text = res.out || '';
+  const m = text.match(/SNAPSHOT\s+(\S+)/);
+  if (m) { toast('✅ 快照完成', 'ok'); setCameraPreview(m[1], 'image'); setTimeout(() => loadCameraFiles(), 800); }
+  else toast('❌ 快照失败: ' + (res.error || res.err || text), 'bad');
+}
+
+async function cameraRecord() {
+  toast('⏳ 开始录制 20 秒视频…', 'info', 4000);
+  const res = await doAction('camera_record', {seconds: 20}, false, true);
+  const text = res.out || '';
+  const m = text.match(/VIDEO\s+(\S+)/);
+  if (m) { toast('✅ 20 秒视频录制完成', 'ok'); setCameraPreview(m[1], 'video'); setTimeout(() => loadCameraFiles(), 800); }
+  else toast('❌ 视频录制失败: ' + (res.error || res.err || text), 'bad');
+}
+
+async function cameraStartLoop() {
+  const res = await doAction('camera_start_loop', {seconds: 20}, false, true);
+  if ((res.out||'').includes('MODE_CONFLICT')) {
+    toast('⚠️ CSV、PCD 或巡检运行中，不能同时启动视频', 'warn', 6000);
+    return;
+  }
+  if (/CAMERA_LOOP/.test(res.out || '')) {
+    toast('✅ 已开始连续 20 秒分段录制', 'ok', 5000);
+    if ($('livePreviewSwitch').checked) startLivePreview(false);
+  }
+  else toast('❌ 连续录制启动失败: ' + (res.error || res.err || res.out || ''), 'bad');
+}
+
+async function cameraStopLoop() {
+  await stopLivePreview(false);
+  manualCameraLoop = false;
+  const res = await doAction('camera_stop_loop', {}, false, true);
+  toast(/CAMERA_LOOP_STOPPED/.test(res.out || '') ? '✅ 连续分段已停止' : '⚠️ 停止结果未知', /CAMERA_LOOP_STOPPED/.test(res.out || '') ? 'ok' : 'warn');
+  setTimeout(() => loadCameraFiles(), 1200);
+}
+
+/* ---------- 人工起点锚定提示 ---------- */
+function updateAlign() {
+  const box = $('alignBox');
+  if (!routeStart) { box.textContent = '未载入路线'; box.style.color = 'var(--dim)'; return; }
+  if (!lastOdom) { box.textContent = '等待 /Odometry …(先启动底座)'; box.style.color = 'var(--dim)'; return; }
+  box.textContent = '人工起点锚定：点击“启动巡线”时，当前位置和朝向将作为路线第 0 点；请人工确认真实摆放正确';
+  box.style.color = 'var(--warn)';
+}
+
+/* ---------- 画布 ---------- */
+function draw() {
+  const cv = $('map'), ctx = cv.getContext('2d');
+  ctx.clearRect(0,0,cv.width,cv.height);
+  const showPcd = $('lyPcd').checked, showRoute = $('lyRoute').checked, showTrail = $('lyTrail').checked;
+  let all = [];
+  if (showPcd) all = all.concat(pcdPts);
+  if (showRoute) all = all.concat(routePts);
+  if (showTrail) all = all.concat(trail);
+  if (lastOdom) all.push([lastOdom.x, lastOdom.y]);
+  if (!all.length) {
+    ctx.fillStyle = '#555'; ctx.font = '14px sans-serif';
+    ctx.fillText('载入路线/点云, 或启动底座后这里会显示地图', 290, 260);
+    return;
+  }
+  let minX=1e18, maxX=-1e18, minY=1e18, maxY=-1e18;
+  for (const p of all) { if(p[0]<minX)minX=p[0]; if(p[0]>maxX)maxX=p[0]; if(p[1]<minY)minY=p[1]; if(p[1]>maxY)maxY=p[1]; }
+  const pad = 0.8;
+  minX-=pad; maxX+=pad; minY-=pad; maxY+=pad;
+  const sc = Math.min(cv.width/(maxX-minX), cv.height/(maxY-minY));
+  const X = x => (x-minX)*sc + (cv.width -(maxX-minX)*sc)/2;
+  const Y = y => cv.height - ((y-minY)*sc + (cv.height-(maxY-minY)*sc)/2);
+
+  if (showPcd && pcdPts.length) {
+    ctx.fillStyle = 'rgba(140,150,170,.45)';
+    for (const p of pcdPts) ctx.fillRect(X(p[0]), Y(p[1]), 1.4, 1.4);
+  }
+  const line = (pts, color, w) => {
+    if (pts.length < 2) return;
+    ctx.strokeStyle = color; ctx.lineWidth = w; ctx.beginPath();
+    ctx.moveTo(X(pts[0][0]), Y(pts[0][1]));
+    for (const p of pts) ctx.lineTo(X(p[0]), Y(p[1]));
+    ctx.stroke();
+  };
+  const dot = (p, c, r) => { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(X(p[0]), Y(p[1]), r, 0, 7); ctx.fill(); };
+  if (showRoute) {
+    line(routePts, '#8a93a8', 2);
+    if (routePts.length) { dot(routePts[0], '#3fb96b', 6); dot(routePts[routePts.length-1], '#e05555', 6); }
+  }
+  if (showTrail) line(trail, '#4f8cff', 2);
+  if (lastOdom) {
+    dot([lastOdom.x, lastOdom.y], '#ffab40', 7);
+    ctx.strokeStyle = '#ffab40'; ctx.lineWidth = 2.5; ctx.beginPath();
+    const hx = lastOdom.x + 0.5*Math.cos(lastOdom.yaw), hy = lastOdom.y + 0.5*Math.sin(lastOdom.yaw);
+    ctx.moveTo(X(lastOdom.x), Y(lastOdom.y)); ctx.lineTo(X(hx), Y(hy)); ctx.stroke();
+  }
+}
+
+/* ---------- 巡检控制 ---------- */
+async function startSafe(dry) {
+  const armed = $('armed').checked;
+  const max_vx = parseFloat($('maxVx').value);
+  if (!dry) {
+    if (!armed) { toast('⚠️ 先勾选"解锁运动操作"', 'warn'); return; }
+    if (!confirm(`确认启动【真实】安全节点?\n它将向 /api/sport/request 发命令(限速 ${max_vx} m/s)。\n没有巡线命令时它只发零速度。`)) return;
+  }
+  const res = await doAction('start_safe', {max_vx, dry_run: dry}, armed, true);
+  if (/STARTED/.test(res.out||'')) {
+    toast(dry ? '✅ 干跑安全节点已启动(不会动狗)' : '✅ 真实安全节点已启动, 状态栏"安全节点"变绿即生效', 'ok', 5000);
+  } else {
+    toast('❌ 启动失败: ' + (res.error||res.out||''), 'bad');
+  }
+}
+
+async function startFollower() {
+  const armed = $('armed').checked;
+  if (!armed) { toast('⚠️ 先勾选"解锁运动操作"', 'warn'); return; }
+  if (!requireBase('巡线')) return;
+  const path = $('routeSel').value;
+  if (!path) { toast('⚠️ 先选择路线', 'warn'); return; }
+  const opt = $('routeSel').options[$('routeSel').selectedIndex];
+  const routePoints = parseInt((opt && opt.dataset.points) || '0', 10);
+  if (routePoints < 2) { toast(`⚠️ 当前路线只有 ${routePoints} 个点，不能巡线；请选择至少 2 个点的路线`, 'warn', 7000); return; }
+  const v = parseFloat($('vBase').value);
+  if (!confirm(`确认启动完整巡检?\n路线: ${path.split('/').pop()}\n速度: ${v} m/s  模式: ${$('loopMode').value==='once'?'单程':'往返'}\n\n管理台会走与 GoGoGuard 完全相同的生产链路，并在运动前验证路线哈希、坐标锚定、底座状态、遥测/性能/rosbag 黑匣子、安全节点和 UDP 桥。\n\n请让狗的中心落在录制起点标记上，机头对准地面朝向线并保持静止；固定机位手机继续拍到第一段及地面参照物；人站在旁边准备急停。`)) return;
+  showTask('启动完整巡检', '正在做起点锚定和全链路启动门控。黑匣子、系统快照、路线上下文、安全节点或 UDP 桥任一未就绪，狗都不会起步。通常需要 15～40 秒…', 'start_follower');
+  const res = await doAction('start_follower', {route_path: path, v_base: v, loop_mode: $('loopMode').value}, armed, true);
+  const startOutput = [res.out, res.err, res.error].filter(Boolean).join('\n');
+  if (/PATROL_CLI_STARTED\b|PATROL_STARTED route=/.test(startOutput)) {
+    finishTask('完整巡检已启动', '运动门控和黑匣子均已就绪。状态框会显示运行、结束或失败原因；结束后请点「停止巡线」完成证据包收尾。', true);
+    toast('✅ 完整巡检已启动，GoGoGuard 与本管理台现在走同一链路', 'ok', 7000);
+    setTimeout(poll, 1200);
+  }
+  else if (/FOLLOWER_ALREADY_RUNNING|PATROL_ALREADY_RUNNING/.test(startOutput)) {
+    finishTask('巡检未重复启动', '已有巡检或单节点控制进程在运行。请先点「停止巡线」或停止单节点安全测试，再重试。', false);
+    toast('⚠️ 巡线已经在运行中；需要重来先点「停止巡线」', 'warn', 7000);
+  }
+  else if (/ROUTE_RECORDING_EVIDENCE_INCOMPLETE|ROUTE_RECORDING_SESSION_CHANGED/.test(startOutput)) {
+    finishTask('路线证据未通过门控', '这条路线的录制证据包有警告，或录制期间 FAST-LIO 会话发生过变化。为避免拿一条来源不可信的 CSV 做实验，管理台和 GoGoGuard 都会拒绝执行；请重新完整录制。', false);
+    toast('❌ 路线录制证据不完整，已拒绝执行', 'bad', 9000);
+  }
+  else if (/ROUTE_TOO_SHORT/.test(startOutput)) {
+    finishTask('路线不能执行', '路线点少于 2 个。', false);
+    toast('⚠️ 这条路线点太少，不能巡线', 'warn', 7000);
+  }
+  else if (/MANUAL_ANCHOR_MOVED_BEFORE_START/.test(startOutput)) {
+    finishTask('起点锚定后发生移动', '请重新摆到真实起点、保持静止后重试。', false);
+    toast('❌ 锚定后狗又发生了移动；请重新摆到真实起点、保持静止后重试', 'bad', 8000);
+  }
+  else if (/MANUAL_ANCHOR_FAILED|ROUTE_FRAME_PREPARATION_FAILED/.test(startOutput)) {
+    const finalized = /START_FAILURE_EVIDENCE_FINALIZATION/.test(startOutput);
+    finishTask('起点锚定失败', '请让狗保持静止并确认 FAST-LIO 正常，然后重试。' + (finalized ? '\n本次失败的黑匣子已经自动收尾并生成诊断材料。' : ''), false);
+    toast('❌ 起点锚定失败：请让狗保持静止并确认 FAST-LIO 正常，然后重试', 'bad', 8000);
+  }
+  else if (/SESSION_GUARD_NOT_READY/.test(startOutput)) {
+    finishTask('定位会话保护未就绪', '巡检已自动取消，请检查本次运行目录日志。', false);
+    toast('❌ 定位会话保护没有启动，巡线已取消', 'bad', 8000);
+  }
+  else {
+    finishTask('完整巡检启动失败', startOutput||'未知错误', false);
+    toast('❌ 巡线启动失败: ' + startOutput, 'bad');
+  }
+}
+
+async function stopFollower() {
+  showTask('停止完整巡检', '正在先发零速并停止控制，再关闭 rosbag/遥测，采集结束定位会话与系统快照，复制底座日志并生成自动体检报告。请让狗保持静止，可能需要 10～30 秒…', 'stop_follower');
+  const res = await doAction('stop_follower', {}, false, true);
+  const stopOutput = [res.out, res.err, res.error].filter(Boolean).join('\n');
+  if (/PATROL_CLI_STOPPED\b|PATROL_STOPPED\b|FOLLOWER_STOPPED\b/.test(stopOutput)) {
+    finishTask('完整巡检已停止', '控制、安全节点、UDP 桥、视频和采集器均已收尾；运行目录内已生成 experiment_audit.json 与中文 experiment_audit.md。', true);
+    toast('✅ 完整巡检已停止，自动体检报告已生成', 'ok', 6000);
+  }
+  else if (/NOT_RUNNING/.test(stopOutput)) toast('⚠️ 巡线本来就没在运行', 'warn', 4000);
+  else {
+    finishTask('停止巡检结果异常', stopOutput||'未知结果', false);
+    toast('⚠️ 停止巡线结果未知: ' + stopOutput, 'warn', 6000);
+  }
+  setTimeout(poll, 1200);
+}
+
+loadRoutes();
+loadPcdList();
+loadCameraFiles();
+poll();
+</script>
+</body>
+</html>

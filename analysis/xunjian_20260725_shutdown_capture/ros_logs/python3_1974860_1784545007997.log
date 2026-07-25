@@ -1,0 +1,20 @@
+[INFO] [1784545008.468383244] [route_recorder]: route_recorder started
+[INFO] [1784545008.469396177] [route_recorder]: odom_topic: /codex_gap_2_5_test_odom
+[INFO] [1784545008.470084345] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/codex_gap_2_5_test.csv
+[INFO] [1784545008.470724473] [route_recorder]: raw_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/codex_gap_2_5_test.raw.csv
+[INFO] [1784545008.471424187] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784545008.472014388] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784545008.472634238] [route_recorder]: quality gate: warmup=0.0s, stable_samples=1, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, max_record_step=2.50m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784545008.473271103] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, max_source_gap=2.50m
+[INFO] [1784545008.473880718] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784545012.220204475] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784545012.221117682] [route_recorder]: saved point 0: x=0.000, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.322107834] [route_recorder]: saved point 1: x=0.200, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.424226509] [route_recorder]: saved point 2: x=0.400, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.526345632] [route_recorder]: saved point 3: x=0.600, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.679561306] [route_recorder]: saved point 4: x=0.900, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.781771487] [route_recorder]: saved point 5: x=2.150, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545012.884327288] [route_recorder]: saved point 6: x=2.350, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545013.038435251] [route_recorder]: saved point 7: x=2.650, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545013.141307821] [route_recorder]: saved point 8: x=2.850, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784545013.303348776] [route_recorder]: saved point 9: x=3.150, y=0.000, yaw=0.000, mode=straight

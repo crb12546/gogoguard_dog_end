@@ -1,0 +1,139 @@
+[INFO] [1784543987.020278659] [route_recorder]: route_recorder started
+[INFO] [1784543987.021863370] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784543987.022908255] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf0720-3.csv
+[INFO] [1784543987.025665756] [route_recorder]: raw_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/xbf0720-3.raw.csv
+[INFO] [1784543987.026400940] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784543987.028529379] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784543987.031076841] [route_recorder]: quality gate: warmup=4.0s, stable_samples=5, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784543987.032874278] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, max_source_gap=0.80m
+[INFO] [1784543987.034377654] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784543990.327138866] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784543990.328218805] [route_recorder]: saved point 0: x=0.002, y=0.011, yaw=-0.003, mode=straight
+[INFO] [1784544012.255982047] [route_recorder]: saved point 1: x=0.210, y=0.060, yaw=0.002, mode=straight
+[INFO] [1784544012.925340097] [route_recorder]: saved point 2: x=0.453, y=0.019, yaw=-0.018, mode=straight
+[INFO] [1784544013.202219444] [route_recorder]: saved point 3: x=0.664, y=-0.015, yaw=-0.057, mode=straight
+[INFO] [1784544013.521857465] [route_recorder]: saved point 4: x=0.945, y=-0.028, yaw=-0.040, mode=straight
+[INFO] [1784544013.868182104] [route_recorder]: saved point 5: x=1.175, y=-0.035, yaw=-0.050, mode=straight
+[INFO] [1784544014.226660823] [route_recorder]: saved point 6: x=1.378, y=-0.003, yaw=-0.058, mode=straight
+[INFO] [1784544014.601797609] [route_recorder]: saved point 7: x=1.579, y=-0.048, yaw=-0.018, mode=straight
+[INFO] [1784544014.933009616] [route_recorder]: saved point 8: x=1.838, y=-0.072, yaw=-0.033, mode=straight
+[INFO] [1784544015.291570885] [route_recorder]: saved point 9: x=2.047, y=-0.021, yaw=-0.046, mode=straight
+[INFO] [1784544015.720823608] [route_recorder]: saved point 10: x=2.283, y=-0.060, yaw=-0.012, mode=straight
+[INFO] [1784544016.238198519] [route_recorder]: saved point 11: x=2.505, y=-0.050, yaw=0.004, mode=straight
+[INFO] [1784544016.557280306] [route_recorder]: saved point 12: x=2.705, y=-0.053, yaw=-0.021, mode=straight
+[INFO] [1784544016.875030344] [route_recorder]: saved point 13: x=2.933, y=-0.050, yaw=-0.008, mode=straight
+[INFO] [1784544017.193908681] [route_recorder]: saved point 14: x=3.152, y=-0.039, yaw=-0.008, mode=straight
+[INFO] [1784544017.510738315] [route_recorder]: saved point 15: x=3.398, y=-0.041, yaw=-0.011, mode=straight
+[INFO] [1784544017.855452016] [route_recorder]: saved point 16: x=3.634, y=-0.070, yaw=-0.021, mode=straight
+[INFO] [1784544018.281769886] [route_recorder]: saved point 17: x=3.860, y=-0.069, yaw=-0.072, mode=straight
+[INFO] [1784544018.506047675] [route_recorder]: saved point 18: x=4.071, y=-0.086, yaw=-0.058, mode=straight
+[INFO] [1784544018.940023826] [route_recorder]: saved point 19: x=4.285, y=-0.072, yaw=-0.076, mode=straight
+[INFO] [1784544019.345077582] [route_recorder]: saved point 20: x=4.486, y=-0.090, yaw=-0.065, mode=straight
+[INFO] [1784544019.723576078] [route_recorder]: saved point 21: x=4.737, y=-0.120, yaw=-0.043, mode=straight
+[INFO] [1784544020.232937974] [route_recorder]: saved point 22: x=4.968, y=-0.141, yaw=-0.067, mode=straight
+[INFO] [1784544020.406224887] [route_recorder]: saved point 23: x=5.180, y=-0.143, yaw=-0.042, mode=straight
+[INFO] [1784544021.011337252] [route_recorder]: saved point 24: x=5.426, y=-0.132, yaw=-0.063, mode=straight
+[INFO] [1784544021.319656359] [route_recorder]: saved point 25: x=5.631, y=-0.156, yaw=-0.041, mode=straight
+[INFO] [1784544021.603490595] [route_recorder]: saved point 26: x=5.838, y=-0.164, yaw=-0.050, mode=straight
+[INFO] [1784544021.980889097] [route_recorder]: saved point 27: x=6.111, y=-0.176, yaw=-0.053, mode=straight
+[INFO] [1784544022.224457204] [route_recorder]: saved point 28: x=6.337, y=-0.188, yaw=-0.039, mode=straight
+[INFO] [1784544022.598584223] [route_recorder]: saved point 29: x=6.681, y=-0.204, yaw=-0.027, mode=straight
+[INFO] [1784544022.821893696] [route_recorder]: saved point 30: x=6.909, y=-0.171, yaw=-0.038, mode=straight
+[INFO] [1784544023.070885330] [route_recorder]: saved point 31: x=7.133, y=-0.173, yaw=-0.011, mode=straight
+[INFO] [1784544023.273824002] [route_recorder]: saved point 32: x=7.410, y=-0.179, yaw=-0.016, mode=straight
+[INFO] [1784544023.498708688] [route_recorder]: saved point 33: x=7.638, y=-0.179, yaw=-0.021, mode=straight
+[INFO] [1784544023.813435118] [route_recorder]: saved point 34: x=7.852, y=-0.177, yaw=-0.009, mode=straight
+[INFO] [1784544024.165516269] [route_recorder]: saved point 35: x=8.073, y=-0.175, yaw=-0.016, mode=straight
+[INFO] [1784544024.492742334] [route_recorder]: saved point 36: x=8.281, y=-0.180, yaw=-0.005, mode=straight
+[INFO] [1784544024.984912894] [route_recorder]: saved point 37: x=8.491, y=-0.156, yaw=-0.018, mode=straight
+[INFO] [1784544025.591601334] [route_recorder]: saved point 38: x=8.722, y=-0.176, yaw=-0.013, mode=straight
+[INFO] [1784544026.002979126] [route_recorder]: saved point 39: x=8.940, y=-0.176, yaw=0.001, mode=straight
+[INFO] [1784544026.288669649] [route_recorder]: saved point 40: x=9.160, y=-0.185, yaw=-0.019, mode=straight
+[INFO] [1784544026.447770667] [route_recorder]: saved point 41: x=9.382, y=-0.160, yaw=-0.008, mode=straight
+[INFO] [1784544026.750193652] [route_recorder]: saved point 42: x=9.635, y=-0.133, yaw=0.007, mode=straight
+[INFO] [1784544027.078015227] [route_recorder]: saved point 43: x=9.895, y=-0.128, yaw=-0.015, mode=straight
+[INFO] [1784544027.519988370] [route_recorder]: saved point 44: x=10.134, y=-0.129, yaw=0.002, mode=straight
+[INFO] [1784544028.057740096] [route_recorder]: saved point 45: x=10.399, y=-0.109, yaw=0.020, mode=straight
+[INFO] [1784544028.636274492] [route_recorder]: saved point 46: x=10.613, y=-0.120, yaw=0.023, mode=straight
+[INFO] [1784544029.780818094] [route_recorder]: saved point 47: x=10.835, y=-0.092, yaw=0.020, mode=straight
+[INFO] [1784544030.800768823] [route_recorder]: saved point 48: x=11.057, y=-0.088, yaw=0.037, mode=straight
+[INFO] [1784544031.191437679] [route_recorder]: saved point 49: x=11.281, y=-0.063, yaw=0.021, mode=straight
+[INFO] [1784544031.596790389] [route_recorder]: saved point 50: x=11.508, y=-0.021, yaw=0.039, mode=straight
+[INFO] [1784544032.029850839] [route_recorder]: saved point 51: x=11.741, y=-0.023, yaw=0.052, mode=straight
+[INFO] [1784544032.462463320] [route_recorder]: saved point 52: x=12.030, y=-0.027, yaw=-0.054, mode=straight
+[INFO] [1784544033.180004690] [route_recorder]: saved point 53: x=12.291, y=-0.004, yaw=-0.060, mode=straight
+[INFO] [1784544033.431905653] [route_recorder]: saved point 54: x=12.547, y=-0.017, yaw=-0.043, mode=straight
+[INFO] [1784544033.594788842] [route_recorder]: saved point 55: x=12.800, y=-0.070, yaw=-0.071, mode=straight
+[INFO] [1784544033.689048761] [route_recorder]: saved point 56: x=13.033, y=-0.063, yaw=-0.057, mode=straight
+[INFO] [1784544034.006536466] [route_recorder]: saved point 57: x=13.269, y=-0.063, yaw=-0.044, mode=straight
+[INFO] [1784544034.340191251] [route_recorder]: saved point 58: x=13.529, y=-0.083, yaw=-0.059, mode=straight
+[INFO] [1784544034.444286569] [route_recorder]: saved point 59: x=13.764, y=-0.094, yaw=-0.035, mode=straight
+[INFO] [1784544034.825312889] [route_recorder]: saved point 60: x=14.038, y=-0.094, yaw=-0.031, mode=straight
+[INFO] [1784544035.200471935] [route_recorder]: saved point 61: x=14.298, y=-0.091, yaw=-0.048, mode=straight
+[INFO] [1784544035.592727581] [route_recorder]: saved point 62: x=14.635, y=-0.116, yaw=-0.047, mode=straight
+[INFO] [1784544036.043349102] [route_recorder]: saved point 63: x=14.870, y=-0.146, yaw=-0.024, mode=straight
+[INFO] [1784544036.419875241] [route_recorder]: saved point 64: x=15.096, y=-0.137, yaw=-0.042, mode=straight
+[INFO] [1784544036.722803221] [route_recorder]: saved point 65: x=15.305, y=-0.153, yaw=-0.020, mode=straight
+[INFO] [1784544037.022279168] [route_recorder]: saved point 66: x=15.529, y=-0.137, yaw=-0.031, mode=straight
+[INFO] [1784544037.309647732] [route_recorder]: saved point 67: x=15.748, y=-0.146, yaw=-0.026, mode=straight
+[INFO] [1784544037.499565173] [route_recorder]: saved point 68: x=16.018, y=-0.162, yaw=-0.015, mode=straight
+[INFO] [1784544037.670403040] [route_recorder]: saved point 69: x=16.222, y=-0.162, yaw=-0.021, mode=straight
+[INFO] [1784544037.873700124] [route_recorder]: saved point 70: x=16.471, y=-0.160, yaw=-0.012, mode=straight
+[INFO] [1784544038.210011788] [route_recorder]: saved point 71: x=16.725, y=-0.180, yaw=-0.013, mode=straight
+[INFO] [1784544038.562898553] [route_recorder]: saved point 72: x=16.928, y=-0.170, yaw=-0.025, mode=straight
+[INFO] [1784544039.065647852] [route_recorder]: saved point 73: x=17.165, y=-0.158, yaw=-0.011, mode=straight
+[INFO] [1784544039.445528057] [route_recorder]: saved point 74: x=17.385, y=-0.149, yaw=-0.012, mode=straight
+[INFO] [1784544039.798712209] [route_recorder]: saved point 75: x=17.596, y=-0.141, yaw=-0.004, mode=straight
+[INFO] [1784544040.216983577] [route_recorder]: saved point 76: x=17.838, y=-0.129, yaw=0.010, mode=straight
+[INFO] [1784544040.500240405] [route_recorder]: saved point 77: x=18.054, y=-0.110, yaw=-0.002, mode=straight
+[INFO] [1784544040.708990154] [route_recorder]: saved point 78: x=18.465, y=-0.124, yaw=0.005, mode=straight
+[INFO] [1784544041.009315724] [route_recorder]: saved point 79: x=18.678, y=-0.098, yaw=0.012, mode=straight
+[INFO] [1784544041.406458430] [route_recorder]: saved point 80: x=18.932, y=-0.073, yaw=0.016, mode=straight
+[INFO] [1784544041.815136868] [route_recorder]: saved point 81: x=19.165, y=-0.064, yaw=0.016, mode=straight
+[INFO] [1784544042.409717573] [route_recorder]: saved point 82: x=19.415, y=-0.052, yaw=0.022, mode=straight
+[INFO] [1784544042.690178009] [route_recorder]: saved point 83: x=19.649, y=-0.026, yaw=0.035, mode=straight
+[INFO] [1784544043.001207792] [route_recorder]: saved point 84: x=19.875, y=-0.012, yaw=0.015, mode=straight
+[INFO] [1784544043.345835616] [route_recorder]: saved point 85: x=20.084, y=-0.008, yaw=0.045, mode=straight
+[INFO] [1784544043.699747020] [route_recorder]: saved point 86: x=20.319, y=-0.028, yaw=0.017, mode=straight
+[INFO] [1784544044.016248402] [route_recorder]: saved point 87: x=20.562, y=0.047, yaw=0.039, mode=straight
+[INFO] [1784544044.365426749] [route_recorder]: saved point 88: x=20.811, y=0.053, yaw=0.027, mode=straight
+[INFO] [1784544044.653839527] [route_recorder]: saved point 89: x=21.065, y=0.063, yaw=0.019, mode=straight
+[INFO] [1784544045.014346511] [route_recorder]: saved point 90: x=21.295, y=0.059, yaw=0.041, mode=straight
+[INFO] [1784544045.452662252] [route_recorder]: saved point 91: x=21.536, y=0.056, yaw=0.025, mode=straight
+[INFO] [1784544045.829650623] [route_recorder]: saved point 92: x=21.890, y=0.131, yaw=0.022, mode=straight
+[INFO] [1784544046.102581673] [route_recorder]: saved point 93: x=22.124, y=0.147, yaw=0.048, mode=straight
+[INFO] [1784544046.344483254] [route_recorder]: saved point 94: x=22.371, y=0.140, yaw=0.031, mode=straight
+[INFO] [1784544046.707532455] [route_recorder]: saved point 95: x=22.616, y=0.150, yaw=0.045, mode=straight
+[INFO] [1784544047.013375904] [route_recorder]: saved point 96: x=22.818, y=0.179, yaw=0.036, mode=straight
+[INFO] [1784544047.337163722] [route_recorder]: saved point 97: x=23.110, y=0.196, yaw=0.033, mode=straight
+[INFO] [1784544047.536550954] [route_recorder]: saved point 98: x=23.314, y=0.209, yaw=0.053, mode=straight
+[INFO] [1784544047.831493553] [route_recorder]: saved point 99: x=23.595, y=0.211, yaw=0.043, mode=straight
+[INFO] [1784544048.156969582] [route_recorder]: saved point 100: x=23.850, y=0.286, yaw=0.058, mode=straight
+[INFO] [1784544048.345620041] [route_recorder]: saved point 101: x=24.078, y=0.322, yaw=0.064, mode=straight
+[INFO] [1784544048.881018032] [route_recorder]: saved point 102: x=24.319, y=0.308, yaw=-0.002, mode=straight
+[INFO] [1784544049.185610140] [route_recorder]: saved point 103: x=24.528, y=0.275, yaw=-0.010, mode=straight
+[INFO] [1784544049.497962814] [route_recorder]: saved point 104: x=24.778, y=0.240, yaw=-0.001, mode=straight
+[INFO] [1784544049.900110567] [route_recorder]: saved point 105: x=25.031, y=0.272, yaw=-0.013, mode=straight
+[INFO] [1784544050.302582734] [route_recorder]: saved point 106: x=25.267, y=0.297, yaw=0.014, mode=straight
+[INFO] [1784544050.582446668] [route_recorder]: saved point 107: x=25.504, y=0.276, yaw=0.001, mode=straight
+[INFO] [1784544050.926099044] [route_recorder]: saved point 108: x=25.869, y=0.295, yaw=-0.002, mode=straight
+[INFO] [1784544051.175042382] [route_recorder]: saved point 109: x=26.081, y=0.353, yaw=0.013, mode=straight
+[INFO] [1784544051.546032570] [route_recorder]: saved point 110: x=26.317, y=0.341, yaw=0.022, mode=straight
+[INFO] [1784544051.747447109] [route_recorder]: saved point 111: x=26.595, y=0.288, yaw=-0.000, mode=straight
+[INFO] [1784544052.014935186] [route_recorder]: saved point 112: x=26.784, y=0.445, yaw=0.020, mode=straight
+[INFO] [1784544052.295683765] [route_recorder]: saved point 113: x=27.032, y=0.420, yaw=0.012, mode=straight
+[INFO] [1784544052.556421811] [route_recorder]: saved point 114: x=27.301, y=0.374, yaw=0.023, mode=straight
+[INFO] [1784544053.186408580] [route_recorder]: saved point 115: x=27.655, y=0.384, yaw=0.030, mode=straight
+[INFO] [1784544053.999586876] [route_recorder]: saved point 116: x=27.845, y=0.454, yaw=0.025, mode=straight
+[INFO] [1784544054.806118864] [route_recorder]: saved point 117: x=28.062, y=0.434, yaw=0.027, mode=straight
+[INFO] [1784544055.307005223] [route_recorder]: saved point 118: x=28.310, y=0.398, yaw=-0.010, mode=straight
+[INFO] [1784544055.659991906] [route_recorder]: saved point 119: x=28.528, y=0.393, yaw=-0.027, mode=straight
+[INFO] [1784544056.080675986] [route_recorder]: saved point 120: x=28.762, y=0.394, yaw=0.018, mode=straight
+[INFO] [1784544056.318575089] [route_recorder]: saved point 121: x=29.061, y=0.403, yaw=-0.008, mode=straight
+[INFO] [1784544056.439479247] [route_recorder]: saved point 122: x=29.395, y=0.376, yaw=-0.069, mode=straight
+[INFO] [1784544056.722161355] [route_recorder]: saved point 123: x=29.977, y=0.660, yaw=-0.082, mode=straight
+[ERROR] [1784544056.882580530] [route_recorder]: RECORDING_FAILED: live route discontinuity 1.150m exceeds 0.800m; stopping recorder and retaining diagnostics
+[ERROR] [1784544056.910649464] [route_recorder]: RECORDING_FAILED: final CSV quality validation failed: live route discontinuity 1.150m exceeds 0.800m; accepted source gap 1.150m exceeds 0.800m
+[ERROR] [1784544056.913026131] [route_recorder]: invalid route retained at: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/invalid/xbf0720-3.invalid_20260720_184056.csv
+[INFO] [1784544056.917477984] [route_recorder]: quality report saved: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/quality/xbf0720-3.quality.json
+[ERROR] [1784544056.919771173] [route_recorder]: RECORDING_FAILED: live route discontinuity 1.150m exceeds 0.800m; accepted source gap 1.150m exceeds 0.800m

@@ -1,0 +1,43 @@
+[INFO] [1784781856.772540659] [unitree_safe_cmd_node]: unitree_safe_cmd_node ACTIVE: obstacle -> Move(0,0,0), resume after 5 clear frames; lateral swept ROI enabled
+[INFO] [1784781856.773338088] [unitree_safe_cmd_node]: output mode: Twist -> /cmd_vel
+[WARN] [1784781856.786598237] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0
+[WARN] [1784781857.306504843] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=3
+[WARN] [1784781857.831271060] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=5
+[WARN] [1784781858.331271802] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=7
+[WARN] [1784781858.856251289] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=8
+[WARN] [1784781859.380995095] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=11
+[WARN] [1784781859.905934971] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=13
+[WARN] [1784781860.406451731] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=14
+[WARN] [1784781860.931112268] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=16
+[WARN] [1784781861.431700401] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=18
+[WARN] [1784781861.931259245] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=20
+[WARN] [1784781862.431325144] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=21
+[WARN] [1784781862.932311997] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=23
+[WARN] [1784781863.477933538] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=25
+[WARN] [1784781863.956347574] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=27
+[WARN] [1784781864.456901107] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=28
+[INFO] [1784781864.980948676] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=30
+[WARN] [1784781865.487756232] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=-0.000, raw_y=0.000, raw_z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=32
+[WARN] [1784781866.006260562] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=-0.000, raw_y=0.000, raw_z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=37
+[WARN] [1784781866.506172437] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=-0.000, raw_y=0.000, raw_z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=41
+[WARN] [1784781867.031054446] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=-0.000, raw_y=0.000, raw_z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=44
+[INFO] [1784781867.555827592] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=45
+[INFO] [1784781868.055781397] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=48
+[INFO] [1784781868.555816628] [unitree_safe_cmd_node]: Move x=-0.000, y=0.050, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=50
+[INFO] [1784781869.055908403] [unitree_safe_cmd_node]: Move x=-0.000, y=0.050, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=52
+[INFO] [1784781869.555921754] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=54
+[INFO] [1784781870.081052410] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=56
+[INFO] [1784781870.582097550] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=59
+[INFO] [1784781871.105980803] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=61
+[INFO] [1784781871.630790978] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=64
+[INFO] [1784781872.130910397] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=66
+[INFO] [1784781872.631435810] [unitree_safe_cmd_node]: Move x=-0.000, y=-0.050, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=69
+[INFO] [1784781873.156100025] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=71
+[INFO] [1784781873.656161738] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=73
+[INFO] [1784781874.180732387] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=76
+[INFO] [1784781874.680766715] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=78
+[INFO] [1784781875.182281934] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=81
+[INFO] [1784781875.706305852] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=86
+[INFO] [1784781876.231216922] [unitree_safe_cmd_node]: Move x=-0.000, y=0.000, z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=92
+[WARN] [1784781876.733430934] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=-0.000, raw_y=0.000, raw_z=-0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=96
+[WARN] [1784781877.257107083] [

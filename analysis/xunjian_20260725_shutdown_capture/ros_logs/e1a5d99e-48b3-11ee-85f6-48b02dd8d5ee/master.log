@@ -1,0 +1,223 @@
+[rosmaster.main][INFO] 2023-09-01 18:39:52,814: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2023-09-01 18:39:52,814: Starting ROS Master Node
+[xmlrpc][INFO] 2023-09-01 18:39:52,832: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2023-09-01 18:39:52,833: Started XML-RPC server [http://ubuntu:11311/]
+[rosmaster.master][INFO] 2023-09-01 18:39:52,833: Master initialized: port[11311], uri[http://ubuntu:11311/]
+[xmlrpc][INFO] 2023-09-01 18:39:52,835: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2023-09-01 18:39:52,856: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,857: +PARAM [/roslaunch/uris/host_ubuntu__38647] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,964: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,964: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,964: +PARAM [/camera/realsense2_camera/serial_no] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,977: +PARAM [/camera/realsense2_camera/usb_port_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/device_type] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/json_file_path] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/rosbag_filename] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/enable_pointcloud] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/pointcloud_texture_stream] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/pointcloud_texture_index] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/allow_no_texture_points] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/ordered_pc] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/enable_sync] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,978: +PARAM [/camera/realsense2_camera/align_depth] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/fisheye_width] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/fisheye_height] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/enable_fisheye] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/enable_fisheye1] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/enable_fisheye2] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/depth_width] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/depth_height] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/enable_depth] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/confidence_width] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/confidence_height] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/enable_confidence] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,979: +PARAM [/camera/realsense2_camera/confidence_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/color_width] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/color_height] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/enable_color] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/infra_width] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/infra_height] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/enable_infra] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/enable_infra1] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/enable_infra2] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/infra_rgb] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/fisheye_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,980: +PARAM [/camera/realsense2_camera/depth_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,981: +PARAM [/camera/realsense2_camera/infra_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,981: +PARAM [/camera/realsense2_camera/color_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,989: +PARAM [/camera/realsense2_camera/gyro_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,992: +PARAM [/camera/realsense2_camera/accel_fps] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,993: +PARAM [/camera/realsense2_camera/enable_gyro] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/enable_accel] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/enable_pose] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/base_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/depth_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/infra1_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/infra2_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/color_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/fisheye_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/fisheye1_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,994: +PARAM [/camera/realsense2_camera/fisheye2_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/accel_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/gyro_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/pose_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/depth_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/infra1_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +PARAM [/camera/realsense2_camera/infra2_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,995: +SERVICE [/rosout/get_loggers] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:39:52,998: +PARAM [/camera/realsense2_camera/color_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:52,999: +PARAM [/camera/realsense2_camera/fisheye_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,000: +SERVICE [/rosout/set_logger_level] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,000: +PARAM [/camera/realsense2_camera/fisheye1_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,000: +PARAM [/camera/realsense2_camera/fisheye2_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PARAM [/camera/realsense2_camera/accel_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PARAM [/camera/realsense2_camera/gyro_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PARAM [/camera/realsense2_camera/imu_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PARAM [/camera/realsense2_camera/pose_optical_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PARAM [/camera/realsense2_camera/aligned_depth_to_color_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,001: +PUB [/rosout_agg] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,002: +PARAM [/camera/realsense2_camera/aligned_depth_to_infra1_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,002: +PARAM [/camera/realsense2_camera/aligned_depth_to_infra2_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,002: +PARAM [/camera/realsense2_camera/aligned_depth_to_fisheye_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,003: +PARAM [/camera/realsense2_camera/aligned_depth_to_fisheye1_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,003: +PARAM [/camera/realsense2_camera/aligned_depth_to_fisheye2_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,003: +PARAM [/camera/realsense2_camera/publish_tf] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,004: +PARAM [/camera/realsense2_camera/tf_publish_rate] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,004: +PARAM [/camera/realsense2_camera/odom_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,004: +PARAM [/camera/realsense2_camera/topic_odom_in] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,004: +PARAM [/camera/realsense2_camera/calib_odom_file] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,005: +SUB [/rosout] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,005: +PARAM [/camera/realsense2_camera/publish_odom_tf] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,005: +PARAM [/camera/realsense2_camera/stereo_module/exposure/1] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/stereo_module/gain/1] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/stereo_module/exposure/2] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/stereo_module/gain/2] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/filters] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/clip_distance] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/linear_accel_cov] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/initial_reset] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/reconnect_timeout] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,006: +PARAM [/camera/realsense2_camera/wait_for_device_timeout] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,007: +PARAM [/camera/realsense2_camera/unite_imu_method] by /roslaunch
+[rosmaster.master][INFO] 2023-09-01 18:39:53,115: +PUB [/rosout] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,117: +SERVICE [/camera/realsense2_camera/get_loggers] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,118: +SERVICE [/camera/realsense2_camera/set_logger_level] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,120: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/']
+[rosmaster.master][INFO] 2023-09-01 18:39:53,126: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2023-09-01 18:39:53,127: +CACHEDPARAM [/rosout_disable_topics_generation] by /camera/realsense2_camera
+[rosmaster.master][INFO] 2023-09-01 18:39:53,134: +PARAM [/camera/realsense2_camera] by /camera/realsense2_camera
+[rosmaster.master][INFO] 2023-09-01 18:39:53,136: +PUB [/rosout] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,138: +SERVICE [/camera/realsense2_camera_manager/get_loggers] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,139: +SERVICE [/camera/realsense2_camera_manager/set_logger_level] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,142: +CACHEDPARAM [/rosout_disable_topics_generation] by /camera/realsense2_camera_manager
+[rosmaster.master][INFO] 2023-09-01 18:39:53,143: +SERVICE [/camera/realsense2_camera_manager/load_nodelet] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,144: +SERVICE [/camera/realsense2_camera_manager/unload_nodelet] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,144: +SERVICE [/camera/realsense2_camera_manager/list] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,224: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/', 'http://ubuntu:34105/']
+[rosmaster.master][INFO] 2023-09-01 18:39:53,227: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/', 'http://ubuntu:34105/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2023-09-01 18:39:53,545: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2023-09-01 18:39:53,548: +PUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,554: +SUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,561: +SERVICE [/camera/enable] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,564: +SERVICE [/camera/realsense2_camera/reset] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,630: +PUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:39:53,631: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:34105/ ['http://ubuntu:34105/', 'http://ubuntu:43495/']
+[rosmaster.master][INFO] 2023-09-01 18:39:53,633: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:34105/ ['http://ubuntu:34105/', 'http://ubuntu:43495/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2023-09-01 18:39:53,636: +SUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,058: -PUB [/rosout] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,059: -PUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,060: -SUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera_manager http://ubuntu:34105/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,061: -SERVICE [/camera/realsense2_camera_manager/get_loggers] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,061: -SERVICE [/camera/realsense2_camera_manager/set_logger_level] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,062: -SERVICE [/camera/realsense2_camera_manager/load_nodelet] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,062: -SERVICE [/camera/realsense2_camera_manager/unload_nodelet] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,063: -SERVICE [/camera/realsense2_camera_manager/list] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,063: -SERVICE [/camera/enable] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,064: -SERVICE [/camera/realsense2_camera/reset] /camera/realsense2_camera_manager rosrpc://ubuntu:38565
+[rosmaster.master][INFO] 2023-09-01 18:40:02,065: -CACHEDPARAM [/rosout_disable_topics_generation] by /camera/realsense2_camera_manager
+[rosmaster.master][INFO] 2023-09-01 18:40:02,142: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/']
+[rosmaster.master][INFO] 2023-09-01 18:40:02,142: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:34105/ ['http://ubuntu:43495/']
+[rosmaster.master][INFO] 2023-09-01 18:40:02,144: publisherUpdate[/rosout] -> http://ubuntu:35961/ ['http://ubuntu:43495/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2023-09-01 18:40:02,144: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:43495/ ['http://ubuntu:43495/']
+[rosmaster.master][INFO] 2023-09-01 18:40:02,145: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:34105/ ['http://ubuntu:43495/']: sec=0.00, exception=[Errno 111] Connection refused
+[rosmaster.master][INFO] 2023-09-01 18:40:02,146: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:43495/ ['http://ubuntu:43495/']: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.threadpool][ERROR] 2023-09-01 18:40:02,148: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2023-09-01 18:40:02,247: -PUB [/rosout] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,248: publisherUpdate[/rosout] -> http://ubuntu:35961/ []
+[rosmaster.master][INFO] 2023-09-01 18:40:02,249: -PUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,249: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:43495/ []
+[rosmaster.master][INFO] 2023-09-01 18:40:02,249: publisherUpdate[/rosout] -> http://ubuntu:35961/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2023-09-01 18:40:02,250: -SUB [/camera/realsense2_camera_manager/bond] /camera/realsense2_camera http://ubuntu:43495/
+[rosmaster.master][INFO] 2023-09-01 18:40:02,251: -SERVICE [/camera/realsense2_camera/get_loggers] /camera/realsense2_camera rosrpc://ubuntu:36693
+[rosmaster.master][INFO] 2023-09-01 18:40:02,252: -SERVICE [/camera/realsense2_camera/set_logger_level] /camera/realsense2_camera rosrpc://ubuntu:36693
+[rosmaster.master][INFO] 2023-09-01 18:40:02,252: -CACHEDPARAM [/rosout_disable_topics_generation] by /camera/realsense2_camera
+[rosmaster.master][INFO] 2023-09-01 18:40:02,257: publisherUpdate[/camera/realsense2_camera_manager/bond] -> http://ubuntu:43495/ []: sec=0.01, exception=[Errno 111] Connection refused
+[rosmaster.threadpool][ERROR] 2023-09-01 18:40:02,258: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2023-09-01 18:40:05,954: -PUB [/rosout_agg] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:40:05,955: -SUB [/rosout] /rosout http://ubuntu:35961/
+[rosmaster.master][INFO] 2023-09-01 18:40:05,956: -SERVICE [/rosout/get_loggers] /rosout rosrpc://ubuntu:47523
+[rosmaster.master][INFO] 2023-09-01 18:40:05,957: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://ubuntu:47523
+[rosmaster.master][INFO] 2023-09-01 18:40:05,958: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2023-09-01 18:40:06,059: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2023-09-01 18:40:06,059: stopping master...
+[rospy.core][INFO] 2023-09-01 18:40:06,060: signal_shutdown [atexit]

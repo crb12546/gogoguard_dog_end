@@ -1,0 +1,582 @@
+[INFO] [0001189129.963949056] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [0001189129.965214752] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/tju202607019test5-lx.csv
+[INFO] [0001189129.966754784] [waypoint_follower]: route points: 23
+[INFO] [0001189129.967367104] [waypoint_follower]: loop_mode: pingpong
+[INFO] [0001189129.969798368] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [0001189129.970424576] [waypoint_follower]: reach_distance: 0.4
+[INFO] [0001189130.133251104] [waypoint_follower]: init nearest_index=0, distance_to_start=0.194
+[INFO] [0001189130.158029120] [waypoint_follower]: nearest=0, target=2, dist=0.65, alpha=-0.18, vx=0.25, yaw_rate=-0.16, dir=1
+[INFO] [0001189131.203239648] [waypoint_follower]: nearest=0, target=2, dist=0.65, alpha=-0.18, vx=0.25, yaw_rate=-0.16, dir=1
+[INFO] [0001189132.252765280] [waypoint_follower]: nearest=0, target=2, dist=0.66, alpha=-0.17, vx=0.25, yaw_rate=-0.16, dir=1
+[WARN] [0001189133.152684544] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [0001189133.302899552] [waypoint_follower]: nearest=0, target=2, dist=0.66, alpha=-0.18, vx=0.25, yaw_rate=-0.17, dir=1
+[INFO] [0001189134.352823968] [waypoint_follower]: nearest=1, target=3, dist=0.98, alpha=-0.07, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189135.353114176] [waypoint_follower]: nearest=1, target=3, dist=0.74, alpha=0.12, vx=0.25, yaw_rate=0.11, dir=1
+[INFO] [0001189136.402682656] [waypoint_follower]: nearest=1, target=3, dist=0.67, alpha=0.22, vx=0.25, yaw_rate=0.20, dir=1
+[INFO] [0001189137.402908960] [waypoint_follower]: nearest=2, target=4, dist=0.66, alpha=-0.20, vx=0.25, yaw_rate=-0.18, dir=1
+[INFO] [0001189138.402949696] [waypoint_follower]: nearest=4, target=6, dist=1.06, alpha=-0.68, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189139.403287968] [waypoint_follower]: nearest=4, target=6, dist=0.75, alpha=-0.93, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189140.452845792] [waypoint_follower]: nearest=5, target=7, dist=0.99, alpha=-0.80, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189141.453277952] [waypoint_follower]: nearest=5, target=7, dist=0.91, alpha=-0.45, vx=0.25, yaw_rate=-0.41, dir=1
+[INFO] [0001189142.502849536] [waypoint_follower]: nearest=5, target=7, dist=0.79, alpha=0.07, vx=0.25, yaw_rate=0.06, dir=1
+[WARN] [0001189142.902950784] [waypoint_follower]: stuck recovery: nearest_index 5 -> 5
+[INFO] [0001189143.502850656] [waypoint_follower]: nearest=5, target=7, dist=0.66, alpha=0.51, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189144.552801920] [waypoint_follower]: nearest=6, target=8, dist=0.83, alpha=0.25, vx=0.25, yaw_rate=0.23, dir=1
+[INFO] [0001189145.552991776] [waypoint_follower]: nearest=7, target=9, dist=1.03, alpha=-0.15, vx=0.25, yaw_rate=-0.13, dir=1
+[INFO] [0001189146.553096832] [waypoint_follower]: nearest=7, target=9, dist=0.81, alpha=-0.20, vx=0.25, yaw_rate=-0.18, dir=1
+[INFO] [0001189147.602828640] [waypoint_follower]: nearest=8, target=10, dist=1.06, alpha=-0.07, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189148.603323136] [waypoint_follower]: nearest=8, target=10, dist=0.88, alpha=0.08, vx=0.25, yaw_rate=0.07, dir=1
+[INFO] [0001189149.652858240] [waypoint_follower]: nearest=9, target=11, dist=0.77, alpha=0.76, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189150.702940800] [waypoint_follower]: nearest=9, target=11, dist=0.63, alpha=0.55, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189151.702977312] [waypoint_follower]: nearest=9, target=11, dist=0.49, alpha=0.13, vx=0.25, yaw_rate=0.12, dir=1
+[WARN] [0001189152.502875424] [waypoint_follower]: stuck recovery: nearest_index 9 -> 9
+[INFO] [0001189152.703133856] [waypoint_follower]: nearest=9, target=11, dist=0.33, alpha=0.09, vx=0.25, yaw_rate=0.08, dir=1
+[INFO] [0001189153.703174528] [waypoint_follower]: nearest=11, target=13, dist=0.78, alpha=1.66, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189154.752922976] [waypoint_follower]: nearest=11, target=13, dist=0.73, alpha=1.46, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189155.803030816] [waypoint_follower]: nearest=11, target=13, dist=0.71, alpha=1.35, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189156.303142752] [waypoint_follower]: stuck recovery: nearest_index 11 -> 11
+[INFO] [0001189156.803067744] [waypoint_follower]: nearest=11, target=13, dist=0.69, alpha=1.21, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189157.852807328] [waypoint_follower]: nearest=12, target=14, dist=1.00, alpha=1.08, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189158.852831392] [waypoint_follower]: nearest=12, target=14, dist=0.92, alpha=0.82, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189159.902997920] [waypoint_follower]: nearest=12, target=14, dist=0.81, alpha=0.49, vx=0.25, yaw_rate=0.44, dir=1
+[INFO] [0001189160.905289536] [waypoint_follower]: nearest=13, target=15, dist=1.07, alpha=0.27, vx=0.25, yaw_rate=0.24, dir=1
+[INFO] [0001189161.953646432] [waypoint_follower]: nearest=13, target=15, dist=0.85, alpha=0.08, vx=0.25, yaw_rate=0.08, dir=1
+[INFO] [0001189162.953759552] [waypoint_follower]: nearest=14, target=16, dist=1.17, alpha=0.10, vx=0.25, yaw_rate=0.09, dir=1
+[INFO] [0001189164.003844192] [waypoint_follower]: nearest=14, target=16, dist=0.99, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189165.052974112] [waypoint_follower]: nearest=14, target=16, dist=0.80, alpha=-0.03, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189166.053039552] [waypoint_follower]: nearest=15, target=17, dist=1.12, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189167.052834912] [waypoint_follower]: nearest=15, target=17, dist=0.97, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189168.103184096] [waypoint_follower]: nearest=15, target=17, dist=0.79, alpha=-0.04, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189169.152911936] [waypoint_follower]: nearest=16, target=18, dist=0.58, alpha=0.33, vx=0.25, yaw_rate=0.29, dir=1
+[INFO] [0001189170.153066688] [waypoint_follower]: nearest=16, target=18, dist=0.44, alpha=0.07, vx=0.25, yaw_rate=0.06, dir=1
+[INFO] [0001189171.157614592] [waypoint_follower]: nearest=18, target=20, dist=0.95, alpha=1.13, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189172.203744416] [waypoint_follower]: nearest=18, target=20, dist=0.90, alpha=0.80, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189173.252851712] [waypoint_follower]: nearest=18, target=20, dist=0.77, alpha=0.29, vx=0.25, yaw_rate=0.26, dir=1
+[INFO] [0001189174.302999776] [waypoint_follower]: nearest=19, target=21, dist=1.05, alpha=0.06, vx=0.25, yaw_rate=0.05, dir=1
+[INFO] [0001189175.303031712] [waypoint_follower]: nearest=19, target=21, dist=0.88, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189176.352882624] [waypoint_follower]: nearest=20, target=22, dist=1.20, alpha=0.07, vx=0.25, yaw_rate=0.06, dir=1
+[INFO] [0001189177.403019552] [waypoint_follower]: nearest=20, target=22, dist=1.03, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189178.421672416] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-0.00, vx=0.25, yaw_rate=-0.00, dir=1
+[INFO] [0001189179.456966912] [waypoint_follower]: nearest=21, target=22, dist=0.70, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189180.503871392] [waypoint_follower]: nearest=21, target=22, dist=0.50, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189181.552944128] [waypoint_follower]: nearest=21, target=22, dist=0.34, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[WARN] [0001189182.002966432] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189182.552930784] [waypoint_follower]: nearest=1, target=3, dist=1.08, alpha=-2.77, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189183.602609696] [waypoint_follower]: nearest=1, target=3, dist=1.06, alpha=-2.48, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189184.603515424] [waypoint_follower]: nearest=1, target=3, dist=1.05, alpha=-2.22, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189185.052850560] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189185.652872000] [waypoint_follower]: nearest=1, target=3, dist=1.02, alpha=-1.89, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189186.652960608] [waypoint_follower]: nearest=1, target=3, dist=0.98, alpha=-1.67, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189187.652826144] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-1.43, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189188.052897024] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189188.703159808] [waypoint_follower]: nearest=1, target=3, dist=0.90, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189189.703206464] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.07, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189190.752886624] [waypoint_follower]: nearest=1, target=3, dist=0.75, alpha=-0.73, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189191.052772928] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189191.803145888] [waypoint_follower]: nearest=21, target=22, dist=0.62, alpha=2.99, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189192.853121504] [waypoint_follower]: nearest=21, target=22, dist=0.60, alpha=2.89, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189193.902977856] [waypoint_follower]: nearest=21, target=22, dist=0.61, alpha=2.86, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189194.102890144] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189194.903126080] [waypoint_follower]: nearest=21, target=22, dist=0.59, alpha=2.80, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189195.903309568] [waypoint_follower]: nearest=21, target=22, dist=0.59, alpha=2.77, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189196.903669440] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=2.72, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189197.103343200] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189197.953814304] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189199.003859232] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189200.004657664] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189200.152872000] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189201.052773408] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189202.052802880] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189203.103009056] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189203.203065568] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189204.106427840] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189205.152800576] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189206.152897920] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189206.203664320] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189207.153054688] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189208.153442304] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.28, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189209.203123552] [waypoint_follower]: nearest=1, target=3, dist=0.82, alpha=-1.15, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189209.252743424] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189210.252883840] [waypoint_follower]: nearest=1, target=3, dist=0.77, alpha=-0.98, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189211.253430976] [waypoint_follower]: nearest=2, target=4, dist=0.92, alpha=-1.10, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189212.303202688] [waypoint_follower]: nearest=2, target=4, dist=0.81, alpha=-0.80, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189213.352811936] [waypoint_follower]: nearest=2, target=4, dist=0.67, alpha=-0.45, vx=0.25, yaw_rate=-0.40, dir=1
+[WARN] [0001189213.902887744] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0001189214.410851968] [waypoint_follower]: nearest=2, target=4, dist=0.51, alpha=-0.13, vx=0.25, yaw_rate=-0.12, dir=1
+[INFO] [0001189215.452818464] [waypoint_follower]: nearest=3, target=5, dist=0.68, alpha=-0.40, vx=0.25, yaw_rate=-0.36, dir=1
+[INFO] [0001189216.452871008] [waypoint_follower]: nearest=4, target=6, dist=0.96, alpha=-0.22, vx=0.25, yaw_rate=-0.20, dir=1
+[INFO] [0001189217.452974208] [waypoint_follower]: nearest=4, target=6, dist=0.78, alpha=-0.08, vx=0.25, yaw_rate=-0.07, dir=1
+[INFO] [0001189218.454422720] [waypoint_follower]: nearest=5, target=7, dist=1.00, alpha=-0.19, vx=0.25, yaw_rate=-0.17, dir=1
+[INFO] [0001189219.503133184] [waypoint_follower]: nearest=5, target=7, dist=0.81, alpha=-0.07, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189220.552803520] [waypoint_follower]: nearest=6, target=8, dist=0.97, alpha=-0.15, vx=0.25, yaw_rate=-0.14, dir=1
+[INFO] [0001189221.553361600] [waypoint_follower]: nearest=6, target=8, dist=0.81, alpha=-0.00, vx=0.25, yaw_rate=-0.00, dir=1
+[INFO] [0001189222.602984096] [waypoint_follower]: nearest=7, target=9, dist=1.04, alpha=-0.07, vx=0.25, yaw_rate=-0.07, dir=1
+[INFO] [0001189223.603219136] [waypoint_follower]: nearest=7, target=9, dist=0.84, alpha=0.00, vx=0.25, yaw_rate=0.00, dir=1
+[INFO] [0001189224.652764416] [waypoint_follower]: nearest=8, target=10, dist=1.11, alpha=-0.07, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189225.653179744] [waypoint_follower]: nearest=8, target=10, dist=0.93, alpha=0.02, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189226.703044192] [waypoint_follower]: nearest=8, target=10, dist=0.77, alpha=0.07, vx=0.25, yaw_rate=0.06, dir=1
+[INFO] [0001189227.752847264] [waypoint_follower]: nearest=9, target=11, dist=0.72, alpha=0.49, vx=0.25, yaw_rate=0.44, dir=1
+[INFO] [0001189228.753048512] [waypoint_follower]: nearest=9, target=11, dist=0.53, alpha=0.14, vx=0.25, yaw_rate=0.12, dir=1
+[INFO] [0001189229.803051616] [waypoint_follower]: nearest=9, target=11, dist=0.36, alpha=0.18, vx=0.25, yaw_rate=0.16, dir=1
+[WARN] [0001189229.953361856] [waypoint_follower]: stuck recovery: nearest_index 9 -> 9
+[INFO] [0001189230.802988064] [waypoint_follower]: nearest=11, target=13, dist=0.80, alpha=1.74, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189231.802987648] [waypoint_follower]: nearest=11, target=13, dist=0.74, alpha=1.56, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189232.803124160] [waypoint_follower]: nearest=11, target=13, dist=0.72, alpha=1.47, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189233.602914240] [waypoint_follower]: stuck recovery: nearest_index 11 -> 11
+[INFO] [0001189233.852799360] [waypoint_follower]: nearest=11, target=13, dist=0.69, alpha=1.39, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189234.852860480] [waypoint_follower]: nearest=11, target=13, dist=0.66, alpha=1.27, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189235.853101184] [waypoint_follower]: nearest=12, target=14, dist=0.98, alpha=1.17, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189236.903097728] [waypoint_follower]: nearest=12, target=14, dist=0.95, alpha=0.99, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189237.953554912] [waypoint_follower]: nearest=12, target=14, dist=0.88, alpha=0.77, vx=0.12, yaw_rate=0.45, dir=1
+[WARN] [0001189238.553279072] [waypoint_follower]: stuck recovery: nearest_index 12 -> 12
+[INFO] [0001189238.953526208] [waypoint_follower]: nearest=12, target=14, dist=0.77, alpha=0.39, vx=0.25, yaw_rate=0.35, dir=1
+[INFO] [0001189240.002934464] [waypoint_follower]: nearest=13, target=15, dist=1.04, alpha=0.18, vx=0.25, yaw_rate=0.16, dir=1
+[INFO] [0001189241.003085824] [waypoint_follower]: nearest=13, target=15, dist=0.85, alpha=0.04, vx=0.25, yaw_rate=0.03, dir=1
+[INFO] [0001189242.052814400] [waypoint_follower]: nearest=14, target=16, dist=1.20, alpha=0.10, vx=0.25, yaw_rate=0.09, dir=1
+[INFO] [0001189243.056750624] [waypoint_follower]: nearest=14, target=16, dist=1.07, alpha=0.04, vx=0.25, yaw_rate=0.04, dir=1
+[INFO] [0001189244.102944224] [waypoint_follower]: nearest=14, target=16, dist=0.88, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189245.102989376] [waypoint_follower]: nearest=15, target=17, dist=1.17, alpha=0.00, vx=0.25, yaw_rate=0.00, dir=1
+[INFO] [0001189246.152824544] [waypoint_follower]: nearest=15, target=17, dist=0.98, alpha=-0.02, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189247.152945312] [waypoint_follower]: nearest=15, target=17, dist=0.81, alpha=-0.02, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189248.203032768] [waypoint_follower]: nearest=16, target=18, dist=0.59, alpha=0.29, vx=0.25, yaw_rate=0.26, dir=1
+[INFO] [0001189249.252798272] [waypoint_follower]: nearest=16, target=18, dist=0.40, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189250.253169248] [waypoint_follower]: nearest=18, target=20, dist=0.96, alpha=1.08, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189251.302980224] [waypoint_follower]: nearest=18, target=20, dist=0.89, alpha=0.78, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189252.302982784] [waypoint_follower]: nearest=19, target=21, dist=1.23, alpha=0.41, vx=0.25, yaw_rate=0.37, dir=1
+[INFO] [0001189253.352927488] [waypoint_follower]: nearest=19, target=21, dist=1.02, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189254.403028576] [waypoint_follower]: nearest=19, target=21, dist=0.84, alpha=-0.00, vx=0.25, yaw_rate=-0.00, dir=1
+[INFO] [0001189255.452786912] [waypoint_follower]: nearest=20, target=22, dist=1.17, alpha=0.07, vx=0.25, yaw_rate=0.06, dir=1
+[INFO] [0001189256.452795104] [waypoint_follower]: nearest=20, target=22, dist=1.02, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189257.453245920] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189258.502965024] [waypoint_follower]: nearest=21, target=22, dist=0.69, alpha=0.03, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189259.502971232] [waypoint_follower]: nearest=21, target=22, dist=0.50, alpha=-0.02, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189260.503017344] [waypoint_follower]: nearest=21, target=22, dist=0.35, alpha=0.05, vx=0.25, yaw_rate=0.05, dir=1
+[INFO] [0001189261.152659264] [waypoint_follower]: reach end, switch to backward
+[INFO] [0001189261.503020000] [waypoint_follower]: nearest=22, target=20, dist=0.81, alpha=-2.90, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189262.552861120] [waypoint_follower]: nearest=22, target=20, dist=0.82, alpha=-2.55, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189263.602996896] [waypoint_follower]: nearest=22, target=20, dist=0.79, alpha=-2.33, vx=0.00, yaw_rate=-0.45, dir=-1
+[WARN] [0001189264.203763392] [waypoint_follower]: stuck recovery: nearest_index 22 -> 0
+[INFO] [0001189264.253412032] [waypoint_follower]: reach start, switch to forward
+[INFO] [0001189264.603239296] [waypoint_follower]: nearest=1, target=3, dist=1.04, alpha=-1.90, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189265.652796960] [waypoint_follower]: nearest=1, target=3, dist=1.02, alpha=-1.67, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189266.652929216] [waypoint_follower]: nearest=1, target=3, dist=0.98, alpha=-1.46, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189267.403793280] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189267.703225088] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-1.22, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189268.703047744] [waypoint_follower]: nearest=1, target=3, dist=0.90, alpha=-1.06, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189269.752884064] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-0.79, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189270.452734560] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189270.803096064] [waypoint_follower]: nearest=21, target=22, dist=0.60, alpha=2.93, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189271.802999776] [waypoint_follower]: nearest=21, target=22, dist=0.54, alpha=2.77, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189272.803224800] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.71, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189273.452827168] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189273.852904320] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.69, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189274.853139968] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.68, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189275.903123840] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.63, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189276.503097568] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189276.953541536] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-1.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189277.953580864] [waypoint_follower]: nearest=1, target=3, dist=0.77, alpha=-0.95, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189278.953612608] [waypoint_follower]: nearest=1, target=3, dist=0.68, alpha=-0.64, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189280.003064896] [waypoint_follower]: nearest=2, target=4, dist=0.80, alpha=-0.85, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189281.003733600] [waypoint_follower]: nearest=2, target=4, dist=0.68, alpha=-0.55, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189282.053111264] [waypoint_follower]: nearest=2, target=4, dist=0.52, alpha=-0.20, vx=0.25, yaw_rate=-0.18, dir=1
+[WARN] [0001189282.152861024] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189283.102990880] [waypoint_follower]: nearest=20, target=22, dist=0.95, alpha=-2.70, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189284.152929408] [waypoint_follower]: nearest=20, target=22, dist=0.91, alpha=-2.57, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189285.152840768] [waypoint_follower]: nearest=20, target=22, dist=0.91, alpha=-2.37, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189285.202915264] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189286.203177152] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=-2.16, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189287.252781568] [waypoint_follower]: nearest=20, target=22, dist=0.84, alpha=-1.92, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189288.252731392] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189288.253728320] [waypoint_follower]: nearest=2, target=22, dist=0.78, alpha=-1.62, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189289.253518528] [waypoint_follower]: nearest=2, target=4, dist=0.57, alpha=1.38, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189290.302987200] [waypoint_follower]: nearest=2, target=4, dist=0.54, alpha=1.28, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189291.302868224] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189291.352773760] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=-1.94, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189292.353181248] [waypoint_follower]: nearest=20, target=22, dist=0.82, alpha=-1.79, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189293.402960448] [waypoint_follower]: nearest=20, target=22, dist=0.80, alpha=-1.69, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189294.302895232] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189294.403117408] [waypoint_follower]: nearest=2, target=4, dist=0.58, alpha=1.46, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189295.452816000] [waypoint_follower]: nearest=2, target=4, dist=0.54, alpha=1.29, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189296.452835584] [waypoint_follower]: nearest=2, target=4, dist=0.52, alpha=1.23, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189297.303065568] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189297.452886080] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=-1.94, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189298.452876544] [waypoint_follower]: nearest=20, target=22, dist=0.82, alpha=-1.78, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189299.458346944] [waypoint_follower]: nearest=20, target=22, dist=0.80, alpha=-1.68, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189300.352833216] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189300.502963552] [waypoint_follower]: nearest=2, target=4, dist=0.58, alpha=1.47, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189301.503003200] [waypoint_follower]: nearest=2, target=4, dist=0.54, alpha=1.27, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189302.552787744] [waypoint_follower]: nearest=2, target=4, dist=0.52, alpha=1.17, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189303.352704256] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189303.552780800] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-2.01, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189304.552918176] [waypoint_follower]: nearest=20, target=22, dist=0.82, alpha=-1.80, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189305.602968864] [waypoint_follower]: nearest=20, target=22, dist=0.80, alpha=-1.71, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189306.355696672] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189306.603318208] [waypoint_follower]: nearest=2, target=4, dist=0.58, alpha=1.46, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189307.652785760] [waypoint_follower]: nearest=2, target=4, dist=0.54, alpha=1.22, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189308.703076288] [waypoint_follower]: nearest=2, target=4, dist=0.52, alpha=1.15, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189309.402903680] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189309.703399552] [waypoint_follower]: nearest=20, target=22, dist=0.88, alpha=-2.07, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189310.752843104] [waypoint_follower]: nearest=20, target=22, dist=0.83, alpha=-1.82, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189311.752998656] [waypoint_follower]: nearest=20, target=22, dist=0.80, alpha=-1.69, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189312.452708000] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189312.802943424] [waypoint_follower]: nearest=2, target=4, dist=0.61, alpha=1.56, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189313.803258720] [waypoint_follower]: nearest=2, target=4, dist=0.55, alpha=1.21, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189314.852762720] [waypoint_follower]: nearest=2, target=4, dist=0.52, alpha=1.02, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189315.502848896] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189315.852807840] [waypoint_follower]: nearest=20, target=22, dist=0.95, alpha=-2.31, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189316.852918528] [waypoint_follower]: nearest=20, target=22, dist=0.89, alpha=-2.15, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189317.902935872] [waypoint_follower]: nearest=20, target=22, dist=0.83, alpha=-1.99, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189318.552740864] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189318.953687840] [waypoint_follower]: nearest=2, target=4, dist=0.57, alpha=1.48, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189320.003087424] [waypoint_follower]: nearest=2, target=4, dist=0.51, alpha=1.29, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189321.003176832] [waypoint_follower]: nearest=2, target=4, dist=0.46, alpha=1.16, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189321.602890976] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189322.052851136] [waypoint_follower]: nearest=20, target=22, dist=0.91, alpha=-2.20, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189323.102999264] [waypoint_follower]: nearest=20, target=22, dist=0.89, alpha=-2.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189324.103093472] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-2.03, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189324.602965728] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189325.152836480] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-1.98, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189326.202993824] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=-1.92, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189327.252831104] [waypoint_follower]: nearest=20, target=22, dist=0.84, alpha=-1.77, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189327.652742176] [waypoint_follower]: stuck recovery: nearest_index 20 -> 2
+[INFO] [0001189328.252826208] [waypoint_follower]: nearest=2, target=4, dist=0.54, alpha=1.61, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189329.252811552] [waypoint_follower]: nearest=2, target=4, dist=0.50, alpha=1.29, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189330.302960800] [waypoint_follower]: nearest=2, target=4, dist=0.47, alpha=1.15, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189330.702864032] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189331.303119424] [waypoint_follower]: nearest=20, target=22, dist=0.93, alpha=-2.26, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189332.352765664] [waypoint_follower]: nearest=20, target=22, dist=0.89, alpha=-2.14, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189333.402963136] [waypoint_follower]: nearest=20, target=22, dist=0.89, alpha=-2.09, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189333.702876640] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189334.402994592] [waypoint_follower]: nearest=20, target=22, dist=0.88, alpha=-2.06, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189335.403004032] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-2.01, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189336.403199168] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-1.97, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189336.752870528] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189337.452796864] [waypoint_follower]: nearest=20, target=22, dist=0.86, alpha=-1.90, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189338.453144608] [waypoint_follower]: nearest=20, target=22, dist=0.83, alpha=-1.72, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189339.502982048] [waypoint_follower]: nearest=21, target=22, dist=0.79, alpha=-1.44, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189340.552824096] [waypoint_follower]: nearest=21, target=22, dist=0.75, alpha=-1.06, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189341.602991200] [waypoint_follower]: nearest=21, target=22, dist=0.66, alpha=-0.52, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189342.453243904] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189342.652859392] [waypoint_follower]: nearest=21, target=22, dist=0.47, alpha=-0.11, vx=0.25, yaw_rate=-0.10, dir=1
+[INFO] [0001189343.703015776] [waypoint_follower]: nearest=21, target=22, dist=0.30, alpha=-0.10, vx=0.25, yaw_rate=-0.09, dir=1
+[INFO] [0001189343.903509536] [waypoint_follower]: reach end, switch to backward
+[INFO] [0001189344.703056512] [waypoint_follower]: nearest=22, target=20, dist=0.83, alpha=-2.55, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189345.706347200] [waypoint_follower]: nearest=22, target=20, dist=0.80, alpha=-2.33, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189346.752873888] [waypoint_follower]: nearest=22, target=20, dist=0.78, alpha=-2.04, vx=0.00, yaw_rate=-0.45, dir=-1
+[WARN] [0001189346.953278368] [waypoint_follower]: stuck recovery: nearest_index 22 -> 1
+[INFO] [0001189347.003958144] [waypoint_follower]: reach start, switch to forward
+[INFO] [0001189347.752971616] [waypoint_follower]: nearest=1, target=3, dist=1.01, alpha=-1.67, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189348.752865120] [waypoint_follower]: nearest=1, target=3, dist=0.97, alpha=-1.46, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189349.803131456] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-1.24, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189350.052755904] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189350.852848544] [waypoint_follower]: nearest=1, target=3, dist=0.83, alpha=-0.87, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189351.902987232] [waypoint_follower]: nearest=1, target=3, dist=0.72, alpha=-0.60, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189352.903046176] [waypoint_follower]: nearest=2, target=4, dist=0.76, alpha=-0.79, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189353.903122432] [waypoint_follower]: nearest=2, target=4, dist=0.65, alpha=-0.44, vx=0.25, yaw_rate=-0.39, dir=1
+[INFO] [0001189354.953418272] [waypoint_follower]: nearest=2, target=4, dist=0.46, alpha=-0.11, vx=0.25, yaw_rate=-0.10, dir=1
+[WARN] [0001189355.502942272] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189355.953575552] [waypoint_follower]: nearest=20, target=22, dist=1.08, alpha=-2.93, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189357.003183392] [waypoint_follower]: nearest=20, target=22, dist=1.06, alpha=-2.83, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189358.052842560] [waypoint_follower]: nearest=20, target=22, dist=1.04, alpha=-2.73, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189358.502964960] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189359.102970624] [waypoint_follower]: nearest=20, target=22, dist=1.03, alpha=-2.62, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189360.103093600] [waypoint_follower]: nearest=20, target=22, dist=1.00, alpha=-2.41, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189361.153147200] [waypoint_follower]: nearest=20, target=22, dist=0.97, alpha=-2.24, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189361.552673248] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189362.202956800] [waypoint_follower]: nearest=20, target=22, dist=0.94, alpha=-2.00, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189363.202946496] [waypoint_follower]: nearest=20, target=22, dist=0.90, alpha=-1.74, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189364.202988832] [waypoint_follower]: nearest=20, target=22, dist=0.84, alpha=-1.37, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189364.552712320] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189365.203050816] [waypoint_follower]: nearest=20, target=22, dist=0.83, alpha=-1.10, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189366.203842368] [waypoint_follower]: nearest=21, target=22, dist=0.72, alpha=-0.60, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189367.253866112] [waypoint_follower]: nearest=21, target=22, dist=0.56, alpha=-0.09, vx=0.25, yaw_rate=-0.08, dir=1
+[INFO] [0001189368.303032352] [waypoint_follower]: nearest=21, target=22, dist=0.41, alpha=-0.04, vx=0.25, yaw_rate=-0.04, dir=1
+[WARN] [0001189368.852747456] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189369.303093760] [waypoint_follower]: nearest=1, target=3, dist=1.04, alpha=-2.56, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189370.303645600] [waypoint_follower]: nearest=1, target=3, dist=1.02, alpha=-2.29, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189371.352956960] [waypoint_follower]: nearest=1, target=3, dist=0.99, alpha=-2.08, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189371.902860320] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189372.403743552] [waypoint_follower]: nearest=1, target=3, dist=0.96, alpha=-1.79, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189373.452883264] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-1.55, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189374.502962432] [waypoint_follower]: nearest=1, target=3, dist=0.91, alpha=-1.33, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189374.902860704] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189375.503012544] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.10, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189376.503071232] [waypoint_follower]: nearest=1, target=3, dist=0.81, alpha=-0.89, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189377.553140544] [waypoint_follower]: nearest=1, target=3, dist=0.70, alpha=-0.57, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189377.953339072] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189378.603003392] [waypoint_follower]: nearest=21, target=22, dist=0.66, alpha=2.88, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189379.652770528] [waypoint_follower]: nearest=21, target=22, dist=0.63, alpha=2.81, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189380.652811584] [waypoint_follower]: nearest=21, target=22, dist=0.61, alpha=2.73, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189380.953459008] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189381.703007328] [waypoint_follower]: nearest=21, target=22, dist=0.61, alpha=2.67, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189382.703051776] [waypoint_follower]: nearest=21, target=22, dist=0.59, alpha=2.60, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189383.752845088] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.43, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189384.002937824] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189384.753243104] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-1.38, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189385.803132864] [waypoint_follower]: nearest=1, target=3, dist=0.78, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189386.852782432] [waypoint_follower]: nearest=1, target=3, dist=0.78, alpha=-1.24, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189387.002983392] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189387.853146656] [waypoint_follower]: nearest=21, target=22, dist=0.55, alpha=2.52, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189388.902995232] [waypoint_follower]: nearest=21, target=22, dist=0.52, alpha=2.35, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189389.902993024] [waypoint_follower]: nearest=21, target=22, dist=0.47, alpha=2.21, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189390.052743424] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189390.903707200] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.52, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189391.953341696] [waypoint_follower]: nearest=1, target=3, dist=0.82, alpha=-1.42, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189392.953825376] [waypoint_follower]: nearest=1, target=3, dist=0.81, alpha=-1.35, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189393.103561856] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189393.954791200] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-1.27, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189395.003289120] [waypoint_follower]: nearest=1, target=3, dist=0.78, alpha=-1.10, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189396.052834528] [waypoint_follower]: nearest=1, target=3, dist=0.71, alpha=-0.87, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189397.102988032] [waypoint_follower]: nearest=2, target=4, dist=0.88, alpha=-0.99, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189398.102988544] [waypoint_follower]: nearest=2, target=4, dist=0.75, alpha=-0.69, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189399.102992448] [waypoint_follower]: nearest=2, target=4, dist=0.64, alpha=-0.33, vx=0.25, yaw_rate=-0.29, dir=1
+[WARN] [0001189399.152714368] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0001189400.103159296] [waypoint_follower]: nearest=2, target=4, dist=0.46, alpha=-0.13, vx=0.25, yaw_rate=-0.12, dir=1
+[INFO] [0001189401.103300320] [waypoint_follower]: nearest=4, target=6, dist=1.05, alpha=-0.57, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189402.152967584] [waypoint_follower]: nearest=4, target=6, dist=0.93, alpha=-0.16, vx=0.25, yaw_rate=-0.15, dir=1
+[INFO] [0001189403.202962272] [waypoint_follower]: nearest=4, target=6, dist=0.77, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189404.202959904] [waypoint_follower]: nearest=5, target=7, dist=0.96, alpha=-0.16, vx=0.25, yaw_rate=-0.14, dir=1
+[INFO] [0001189405.203041280] [waypoint_follower]: nearest=5, target=7, dist=0.80, alpha=-0.02, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189406.252796640] [waypoint_follower]: nearest=6, target=8, dist=0.96, alpha=-0.12, vx=0.25, yaw_rate=-0.10, dir=1
+[INFO] [0001189407.303199360] [waypoint_follower]: nearest=6, target=8, dist=0.82, alpha=0.00, vx=0.25, yaw_rate=0.00, dir=1
+[INFO] [0001189408.352822048] [waypoint_follower]: nearest=6, target=8, dist=0.70, alpha=0.03, vx=0.25, yaw_rate=0.03, dir=1
+[INFO] [0001189409.353187936] [waypoint_follower]: nearest=7, target=9, dist=0.97, alpha=-0.03, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189410.403137408] [waypoint_follower]: nearest=7, target=9, dist=0.80, alpha=0.04, vx=0.25, yaw_rate=0.04, dir=1
+[INFO] [0001189411.452781856] [waypoint_follower]: nearest=8, target=10, dist=1.06, alpha=-0.08, vx=0.25, yaw_rate=-0.07, dir=1
+[INFO] [0001189412.453742528] [waypoint_follower]: nearest=8, target=10, dist=0.87, alpha=0.00, vx=0.25, yaw_rate=0.00, dir=1
+[INFO] [0001189413.502980000] [waypoint_follower]: nearest=8, target=10, dist=0.73, alpha=0.04, vx=0.25, yaw_rate=0.04, dir=1
+[INFO] [0001189414.502965184] [waypoint_follower]: nearest=9, target=11, dist=0.76, alpha=0.39, vx=0.25, yaw_rate=0.35, dir=1
+[INFO] [0001189415.552841312] [waypoint_follower]: nearest=9, target=11, dist=0.56, alpha=0.15, vx=0.25, yaw_rate=0.14, dir=1
+[WARN] [0001189416.552757280] [waypoint_follower]: stuck recovery: nearest_index 9 -> 9
+[INFO] [0001189416.554023968] [waypoint_follower]: nearest=9, target=11, dist=0.37, alpha=0.08, vx=0.25, yaw_rate=0.07, dir=1
+[INFO] [0001189417.602960608] [waypoint_follower]: nearest=11, target=13, dist=0.82, alpha=1.67, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189418.603022240] [waypoint_follower]: nearest=11, target=13, dist=0.76, alpha=1.54, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189419.603991680] [waypoint_follower]: nearest=11, target=13, dist=0.73, alpha=1.41, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189420.602876544] [waypoint_follower]: stuck recovery: nearest_index 11 -> 11
+[INFO] [0001189420.652801472] [waypoint_follower]: nearest=11, target=13, dist=0.69, alpha=1.27, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189421.702985472] [waypoint_follower]: nearest=11, target=13, dist=0.63, alpha=0.95, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189422.703006080] [waypoint_follower]: nearest=12, target=14, dist=0.96, alpha=0.84, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189423.752815584] [waypoint_follower]: nearest=12, target=14, dist=0.81, alpha=0.46, vx=0.25, yaw_rate=0.41, dir=1
+[INFO] [0001189424.752902368] [waypoint_follower]: nearest=13, target=15, dist=1.09, alpha=0.29, vx=0.25, yaw_rate=0.26, dir=1
+[INFO] [0001189425.803120512] [waypoint_follower]: nearest=13, target=15, dist=0.89, alpha=0.09, vx=0.25, yaw_rate=0.08, dir=1
+[INFO] [0001189426.803270656] [waypoint_follower]: nearest=13, target=15, dist=0.71, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189427.852856576] [waypoint_follower]: nearest=14, target=16, dist=1.06, alpha=0.05, vx=0.25, yaw_rate=0.04, dir=1
+[INFO] [0001189428.852869280] [waypoint_follower]: nearest=14, target=16, dist=0.84, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189429.903001824] [waypoint_follower]: nearest=15, target=17, dist=1.14, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189430.903042336] [waypoint_follower]: nearest=15, target=17, dist=0.96, alpha=-0.02, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189431.953782528] [waypoint_follower]: nearest=15, target=17, dist=0.77, alpha=-0.03, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189433.003060192] [waypoint_follower]: nearest=16, target=18, dist=0.58, alpha=0.30, vx=0.25, yaw_rate=0.27, dir=1
+[INFO] [0001189434.003928768] [waypoint_follower]: nearest=16, target=18, dist=0.41, alpha=-0.02, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189435.052945376] [waypoint_follower]: nearest=18, target=20, dist=0.96, alpha=1.16, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189436.052864640] [waypoint_follower]: nearest=18, target=20, dist=0.96, alpha=0.91, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189437.053079104] [waypoint_follower]: nearest=18, target=20, dist=0.84, alpha=0.59, vx=0.12, yaw_rate=0.45, dir=1
+[WARN] [0001189437.802990944] [waypoint_follower]: stuck recovery: nearest_index 18 -> 18
+[INFO] [0001189438.102994784] [waypoint_follower]: nearest=18, target=20, dist=0.81, alpha=0.30, vx=0.25, yaw_rate=0.27, dir=1
+[INFO] [0001189439.152811360] [waypoint_follower]: nearest=19, target=21, dist=1.02, alpha=0.04, vx=0.25, yaw_rate=0.03, dir=1
+[INFO] [0001189440.152882176] [waypoint_follower]: nearest=19, target=21, dist=0.83, alpha=-0.03, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189441.153187104] [waypoint_follower]: nearest=20, target=22, dist=1.16, alpha=0.00, vx=0.25, yaw_rate=0.00, dir=1
+[INFO] [0001189442.202963264] [waypoint_follower]: nearest=20, target=22, dist=0.98, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189443.203015872] [waypoint_follower]: nearest=20, target=22, dist=0.82, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189444.252843744] [waypoint_follower]: nearest=21, target=22, dist=0.65, alpha=0.03, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189445.303707232] [waypoint_follower]: nearest=21, target=22, dist=0.46, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189446.353040096] [waypoint_follower]: nearest=21, target=22, dist=0.30, alpha=-0.03, vx=0.25, yaw_rate=-0.02, dir=1
+[INFO] [0001189446.652602624] [waypoint_follower]: reach end, switch to backward
+[INFO] [0001189447.353064960] [waypoint_follower]: nearest=22, target=20, dist=0.81, alpha=-2.62, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189448.402854400] [waypoint_follower]: nearest=22, target=20, dist=0.78, alpha=-2.35, vx=0.00, yaw_rate=-0.45, dir=-1
+[INFO] [0001189449.403022848] [waypoint_follower]: nearest=22, target=20, dist=0.76, alpha=-2.09, vx=0.00, yaw_rate=-0.45, dir=-1
+[WARN] [0001189449.702667424] [waypoint_follower]: stuck recovery: nearest_index 22 -> 1
+[INFO] [0001189449.752554176] [waypoint_follower]: reach start, switch to forward
+[INFO] [0001189450.403003680] [waypoint_follower]: nearest=1, target=3, dist=0.99, alpha=-1.72, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189451.403150656] [waypoint_follower]: nearest=1, target=3, dist=0.96, alpha=-1.49, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189452.452993888] [waypoint_follower]: nearest=1, target=3, dist=0.89, alpha=-1.23, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189452.802874880] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189453.503003424] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.02, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189454.502984672] [waypoint_follower]: nearest=1, target=3, dist=0.76, alpha=-0.70, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189455.502991456] [waypoint_follower]: nearest=2, target=4, dist=0.82, alpha=-0.85, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189456.552868320] [waypoint_follower]: nearest=2, target=4, dist=0.68, alpha=-0.49, vx=0.25, yaw_rate=-0.45, dir=1
+[INFO] [0001189457.602951680] [waypoint_follower]: nearest=2, target=4, dist=0.51, alpha=-0.20, vx=0.25, yaw_rate=-0.18, dir=1
+[WARN] [0001189458.402843392] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189458.610816448] [waypoint_follower]: nearest=20, target=22, dist=1.08, alpha=-2.87, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189459.652869632] [waypoint_follower]: nearest=20, target=22, dist=1.08, alpha=-2.76, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189460.652819072] [waypoint_follower]: nearest=20, target=22, dist=1.06, alpha=-2.67, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189461.452691008] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189461.702948256] [waypoint_follower]: nearest=20, target=22, dist=1.03, alpha=-2.42, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189462.752869856] [waypoint_follower]: nearest=20, target=22, dist=1.00, alpha=-2.24, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189463.802915520] [waypoint_follower]: nearest=20, target=22, dist=0.96, alpha=-2.05, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189464.452822016] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189464.803112160] [waypoint_follower]: nearest=20, target=22, dist=0.92, alpha=-1.78, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189465.805035552] [waypoint_follower]: nearest=20, target=22, dist=0.87, alpha=-1.48, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189466.852944928] [waypoint_follower]: nearest=21, target=22, dist=0.81, alpha=-1.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189467.852905536] [waypoint_follower]: nearest=21, target=22, dist=0.71, alpha=-0.57, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189468.852813056] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=-0.09, vx=0.25, yaw_rate=-0.08, dir=1
+[WARN] [0001189469.652847104] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189469.904722784] [waypoint_follower]: nearest=1, target=3, dist=0.99, alpha=-2.46, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189470.953497984] [waypoint_follower]: nearest=1, target=3, dist=0.96, alpha=-2.25, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189472.002917120] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-2.06, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189472.702891040] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189473.003155040] [waypoint_follower]: nearest=1, target=3, dist=0.89, alpha=-1.72, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189474.052751872] [waypoint_follower]: nearest=1, target=3, dist=0.87, alpha=-1.50, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189475.052845120] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.25, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189475.752750080] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189476.052852320] [waypoint_follower]: nearest=21, target=22, dist=0.47, alpha=1.78, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189477.103000320] [waypoint_follower]: nearest=21, target=22, dist=0.42, alpha=1.46, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189478.103014752] [waypoint_follower]: nearest=21, target=22, dist=0.40, alpha=1.35, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189478.752765888] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189479.152777184] [waypoint_follower]: nearest=1, target=3, dist=0.92, alpha=-1.52, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189480.153467424] [waypoint_follower]: nearest=1, target=3, dist=0.86, alpha=-1.34, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189481.202956384] [waypoint_follower]: nearest=1, target=3, dist=0.87, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189481.752787808] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189482.202946656] [waypoint_follower]: nearest=1, target=3, dist=0.87, alpha=-1.23, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189483.203997312] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.22, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189484.252840736] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.11, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189484.802883168] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189485.252841568] [waypoint_follower]: nearest=21, target=22, dist=0.48, alpha=1.89, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189486.302969440] [waypoint_follower]: nearest=21, target=22, dist=0.43, alpha=1.63, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189487.303973888] [waypoint_follower]: nearest=21, target=22, dist=0.38, alpha=1.42, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189487.802891712] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189488.352762816] [waypoint_follower]: nearest=1, target=3, dist=0.92, alpha=-1.40, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189489.402967200] [waypoint_follower]: nearest=1, target=3, dist=0.89, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189490.403029120] [waypoint_follower]: nearest=1, target=3, dist=0.90, alpha=-1.23, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189490.802994432] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189491.452764800] [waypoint_follower]: nearest=1, target=3, dist=0.86, alpha=-1.20, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189492.453188256] [waypoint_follower]: nearest=1, target=3, dist=0.86, alpha=-1.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189493.502900960] [waypoint_follower]: nearest=1, target=3, dist=0.83, alpha=-0.94, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189493.804419872] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189494.503021184] [waypoint_follower]: nearest=21, target=22, dist=0.49, alpha=2.34, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189495.552795552] [waypoint_follower]: nearest=21, target=22, dist=0.46, alpha=2.12, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189496.552798592] [waypoint_follower]: nearest=21, target=22, dist=0.42, alpha=1.99, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189496.852878528] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189497.553458304] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.18, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189498.602999840] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-1.01, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189499.602988064] [waypoint_follower]: nearest=1, target=3, dist=0.73, alpha=-0.89, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189499.902972448] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189500.605359680] [waypoint_follower]: nearest=21, target=22, dist=0.63, alpha=2.57, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189501.652779552] [waypoint_follower]: nearest=21, target=22, dist=0.59, alpha=2.45, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189502.652769664] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=2.45, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189502.903035168] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189503.703082720] [waypoint_follower]: nearest=21, target=22, dist=0.57, alpha=2.41, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189504.703112768] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=2.35, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189505.752836832] [waypoint_follower]: nearest=21, target=22, dist=0.54, alpha=2.22, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189505.903616512] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189506.753051584] [waypoint_follower]: nearest=21, target=22, dist=0.49, alpha=2.02, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189507.753646016] [waypoint_follower]: nearest=21, target=22, dist=0.47, alpha=1.92, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189508.803011872] [waypoint_follower]: nearest=21, target=22, dist=0.43, alpha=1.77, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189508.953833568] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189509.804063264] [waypoint_follower]: nearest=1, target=3, dist=0.84, alpha=-1.65, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189510.852761504] [waypoint_follower]: nearest=1, target=3, dist=0.82, alpha=-1.51, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189511.852908032] [waypoint_follower]: nearest=1, target=3, dist=0.82, alpha=-1.38, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189511.953376736] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189512.902972448] [waypoint_follower]: nearest=1, target=3, dist=0.79, alpha=-1.27, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189513.954156672] [waypoint_follower]: nearest=1, target=3, dist=0.76, alpha=-1.08, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189514.954715552] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189514.956889152] [waypoint_follower]: nearest=21, target=3, dist=0.67, alpha=-0.77, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189516.003083008] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=2.55, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189517.003131328] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.45, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189518.003153184] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189518.004425664] [waypoint_follower]: nearest=21, target=22, dist=0.52, alpha=2.39, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189519.052812832] [waypoint_follower]: nearest=21, target=22, dist=0.52, alpha=2.35, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189520.052946496] [waypoint_follower]: nearest=21, target=22, dist=0.49, alpha=2.30, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189521.052745248] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189521.103103808] [waypoint_follower]: nearest=1, target=3, dist=0.81, alpha=-1.29, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189522.103160000] [waypoint_follower]: nearest=1, target=3, dist=0.77, alpha=-1.12, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189523.152836128] [waypoint_follower]: nearest=1, target=3, dist=0.74, alpha=-0.99, vx=0.12, yaw_rate=-0.45, dir=1
+[WARN] [0001189524.052864352] [waypoint_follower]: stuck recovery: nearest_index 1 -> 21
+[INFO] [0001189524.152880608] [waypoint_follower]: nearest=21, target=22, dist=0.64, alpha=2.73, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189525.202987232] [waypoint_follower]: nearest=21, target=22, dist=0.58, alpha=2.54, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189526.203135328] [waypoint_follower]: nearest=21, target=22, dist=0.53, alpha=2.44, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189527.102961728] [waypoint_follower]: stuck recovery: nearest_index 21 -> 21
+[INFO] [0001189527.252785696] [waypoint_follower]: nearest=21, target=22, dist=0.52, alpha=2.39, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189528.252919200] [waypoint_follower]: nearest=21, target=22, dist=0.50, alpha=2.32, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189529.253296992] [waypoint_follower]: nearest=21, target=22, dist=0.50, alpha=2.23, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189530.152705760] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189530.303781024] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-1.54, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189531.303974656] [waypoint_follower]: nearest=1, target=3, dist=0.83, alpha=-1.36, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189532.352871232] [waypoint_follower]: nearest=1, target=3, dist=0.83, alpha=-1.23, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189533.202893920] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189533.402997568] [waypoint_follower]: nearest=1, target=3, dist=0.81, alpha=-1.17, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189534.402976960] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=-1.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189535.403148736] [waypoint_follower]: nearest=1, target=3, dist=0.74, alpha=-0.90, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189536.403067488] [waypoint_follower]: nearest=2, target=4, dist=0.87, alpha=-1.07, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189537.403149568] [waypoint_follower]: nearest=2, target=4, dist=0.80, alpha=-0.83, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189538.452779776] [waypoint_follower]: nearest=2, target=4, dist=0.66, alpha=-0.47, vx=0.25, yaw_rate=-0.42, dir=1
+[WARN] [0001189538.752763552] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0001189539.452939200] [waypoint_follower]: nearest=2, target=4, dist=0.50, alpha=-0.15, vx=0.25, yaw_rate=-0.13, dir=1
+[INFO] [0001189540.503039840] [waypoint_follower]: nearest=2, target=4, dist=0.34, alpha=-0.04, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189541.552796096] [waypoint_follower]: nearest=4, target=6, dist=0.98, alpha=-0.35, vx=0.25, yaw_rate=-0.32, dir=1
+[INFO] [0001189542.552843264] [waypoint_follower]: nearest=4, target=6, dist=0.77, alpha=-0.13, vx=0.25, yaw_rate=-0.11, dir=1
+[INFO] [0001189543.552844320] [waypoint_follower]: nearest=5, target=7, dist=0.97, alpha=-0.22, vx=0.25, yaw_rate=-0.20, dir=1
+[INFO] [0001189544.552862848] [waypoint_follower]: nearest=5, target=7, dist=0.78, alpha=-0.05, vx=0.25, yaw_rate=-0.05, dir=1
+[INFO] [0001189545.602969536] [waypoint_follower]: nearest=6, target=8, dist=0.96, alpha=-0.16, vx=0.25, yaw_rate=-0.14, dir=1
+[INFO] [0001189546.603377120] [waypoint_follower]: nearest=6, target=8, dist=0.79, alpha=-0.06, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189547.652745504] [waypoint_follower]: nearest=7, target=9, dist=0.97, alpha=-0.07, vx=0.25, yaw_rate=-0.06, dir=1
+[INFO] [0001189548.652758112] [waypoint_follower]: nearest=7, target=9, dist=0.78, alpha=-0.02, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189549.652813024] [waypoint_follower]: nearest=8, target=10, dist=1.07, alpha=-0.05, vx=0.25, yaw_rate=-0.05, dir=1
+[INFO] [0001189550.702986016] [waypoint_follower]: nearest=8, target=10, dist=0.87, alpha=0.03, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189551.703123904] [waypoint_follower]: nearest=9, target=11, dist=0.78, alpha=0.71, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189552.752830688] [waypoint_follower]: nearest=9, target=11, dist=0.64, alpha=0.38, vx=0.25, yaw_rate=0.34, dir=1
+[INFO] [0001189553.752998624] [waypoint_follower]: nearest=9, target=11, dist=0.44, alpha=0.18, vx=0.25, yaw_rate=0.16, dir=1
+[WARN] [0001189554.652744256] [waypoint_follower]: stuck recovery: nearest_index 9 -> 9
+[INFO] [0001189554.802991168] [waypoint_follower]: nearest=9, target=11, dist=0.26, alpha=0.11, vx=0.25, yaw_rate=0.10, dir=1
+[INFO] [0001189555.852764544] [waypoint_follower]: nearest=11, target=13, dist=0.77, alpha=1.62, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189556.852894112] [waypoint_follower]: nearest=11, target=13, dist=0.70, alpha=1.38, vx=0.00, yaw_rate=0.45, dir=1
+[WARN] [0001189557.903021824] [waypoint_follower]: stuck recovery: nearest_index 11 -> 11
+[INFO] [0001189557.904261056] [waypoint_follower]: nearest=11, target=13, dist=0.64, alpha=1.08, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189558.953533312] [waypoint_follower]: nearest=12, target=14, dist=0.99, alpha=1.01, vx=0.00, yaw_rate=0.45, dir=1
+[INFO] [0001189560.003099968] [waypoint_follower]: nearest=12, target=14, dist=0.88, alpha=0.67, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189561.003178400] [waypoint_follower]: nearest=12, target=14, dist=0.76, alpha=0.27, vx=0.25, yaw_rate=0.24, dir=1
+[INFO] [0001189562.052847328] [waypoint_follower]: nearest=13, target=15, dist=0.96, alpha=0.16, vx=0.25, yaw_rate=0.14, dir=1
+[INFO] [0001189563.053009824] [waypoint_follower]: nearest=13, target=15, dist=0.76, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189564.053014976] [waypoint_follower]: nearest=14, target=16, dist=1.09, alpha=0.04, vx=0.25, yaw_rate=0.04, dir=1
+[INFO] [0001189565.102959840] [waypoint_follower]: nearest=14, target=16, dist=0.91, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189566.102985312] [waypoint_follower]: nearest=15, target=17, dist=1.19, alpha=0.03, vx=0.25, yaw_rate=0.03, dir=1
+[INFO] [0001189567.152826080] [waypoint_follower]: nearest=15, target=17, dist=0.99, alpha=-0.03, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189568.153253152] [waypoint_follower]: nearest=15, target=17, dist=0.80, alpha=-0.04, vx=0.25, yaw_rate=-0.04, dir=1
+[INFO] [0001189569.202999712] [waypoint_follower]: nearest=16, target=18, dist=0.56, alpha=0.34, vx=0.25, yaw_rate=0.30, dir=1
+[INFO] [0001189570.202975392] [waypoint_follower]: nearest=16, target=18, dist=0.35, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189571.203021504] [waypoint_follower]: nearest=18, target=20, dist=0.98, alpha=0.94, vx=0.12, yaw_rate=0.45, dir=1
+[INFO] [0001189572.252928672] [waypoint_follower]: nearest=18, target=20, dist=0.86, alpha=0.39, vx=0.25, yaw_rate=0.35, dir=1
+[INFO] [0001189573.303002656] [waypoint_follower]: nearest=19, target=21, dist=1.14, alpha=0.12, vx=0.25, yaw_rate=0.11, dir=1
+[INFO] [0001189574.303911520] [waypoint_follower]: nearest=19, target=21, dist=0.94, alpha=-0.05, vx=0.25, yaw_rate=-0.05, dir=1
+[INFO] [0001189575.353130848] [waypoint_follower]: nearest=19, target=21, dist=0.78, alpha=-0.04, vx=0.25, yaw_rate=-0.03, dir=1
+[INFO] [0001189576.403005856] [waypoint_follower]: nearest=20, target=22, dist=1.11, alpha=0.02, vx=0.25, yaw_rate=0.02, dir=1
+[INFO] [0001189577.452771808] [waypoint_follower]: nearest=20, target=22, dist=0.91, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189578.452824800] [waypoint_follower]: nearest=21, target=22, dist=0.74, alpha=-0.01, vx=0.25, yaw_rate=-0.01, dir=1
+[INFO] [0001189579.503565632] [waypoint_follower]: nearest=21, target=22, dist=0.54, alpha=0.01, vx=0.25, yaw_rate=0.01, dir=1
+[INFO] [0001189580.552823456] [waypoint_follower]: nearest=21, target=22, dist=0.37, alpha=-0.04, vx=0.25, yaw_rate=-0.04, dir=1
+[WARN] [0001189581.252683680] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189581.602991872] [waypoint_follower]: nearest=1, target=3, dist=1.08, alpha=-2.65, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189582.603157952] [waypoint_follower]: nearest=1, target=3, dist=1.06, alpha=-2.31, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189583.652774304] [waypoint_follower]: nearest=1, target=3, dist=1.05, alpha=-2.02, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189584.252750176] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189584.652804928] [waypoint_follower]: nearest=1, target=3, dist=1.01, alpha=-1.71, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189585.656106560] [waypoint_follower]: nearest=1, target=3, dist=0.99, alpha=-1.55, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189586.703003968] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-1.27, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189587.252885920] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189587.752846400] [waypoint_follower]: nearest=1, target=3, dist=0.90, alpha=-1.09, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189588.753003776] [waypoint_follower]: nearest=1, target=3, dist=0.85, alpha=-0.86, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189589.803025504] [waypoint_follower]: nearest=1, target=3, dist=0.71, alpha=-0.55, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189590.803003456] [waypoint_follower]: nearest=2, target=4, dist=0.79, alpha=-0.76, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189591.852784672] [waypoint_follower]: nearest=2, target=4, dist=0.66, alpha=-0.33, vx=0.25, yaw_rate=-0.29, dir=1
+[INFO] [0001189592.853046464] [waypoint_follower]: nearest=2, target=4, dist=0.48, alpha=-0.14, vx=0.25, yaw_rate=-0.12, dir=1
+[WARN] [0001189593.252726112] [waypoint_follower]: stuck recovery: nearest_index 2 -> 20
+[INFO] [0001189593.902995872] [waypoint_follower]: nearest=20, target=22, dist=1.05, alpha=-2.87, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189594.953483296] [waypoint_follower]: nearest=20, target=22, dist=1.03, alpha=-2.74, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189595.953579712] [waypoint_follower]: nearest=20, target=22, dist=1.00, alpha=-2.63, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189596.252869280] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189596.953441952] [waypoint_follower]: nearest=20, target=22, dist=0.99, alpha=-2.46, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189598.003104224] [waypoint_follower]: nearest=20, target=22, dist=0.96, alpha=-2.24, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189599.003313088] [waypoint_follower]: nearest=20, target=22, dist=0.91, alpha=-1.99, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189599.303019808] [waypoint_follower]: stuck recovery: nearest_index 20 -> 20
+[INFO] [0001189600.053984448] [waypoint_follower]: nearest=20, target=22, dist=0.88, alpha=-1.73, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189601.103005344] [waypoint_follower]: nearest=20, target=22, dist=0.81, alpha=-1.41, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189602.103112416] [waypoint_follower]: nearest=21, target=22, dist=0.74, alpha=-0.92, vx=0.12, yaw_rate=-0.45, dir=1
+[INFO] [0001189603.104054336] [waypoint_follower]: nearest=21, target=22, dist=0.59, alpha=-0.27, vx=0.25, yaw_rate=-0.24, dir=1
+[INFO] [0001189604.152839808] [waypoint_follower]: nearest=21, target=22, dist=0.42, alpha=-0.07, vx=0.25, yaw_rate=-0.07, dir=1
+[WARN] [0001189604.302902432] [waypoint_follower]: stuck recovery: nearest_index 21 -> 1
+[INFO] [0001189605.202957856] [waypoint_follower]: nearest=1, target=3, dist=0.94, alpha=-2.50, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189606.202948096] [waypoint_follower]: nearest=1, target=3, dist=0.93, alpha=-2.25, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189607.203084096] [waypoint_follower]: nearest=1, target=3, dist=0.89, alpha=-1.97, vx=0.00, yaw_rate=-0.45, dir=1
+[WARN] [0001189607.302921536] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0001189608.203188160] [waypoint_follower]: nearest=1, target=3, dist=0.86, alpha=-1.65, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189609.252742592] [waypoint_follower]: nearest=1, target=3, dist=0.83, alpha=-1.44, vx=0.00, yaw_rate=-0.45, dir=1
+[INFO] [0001189610.252888288] [waypoint

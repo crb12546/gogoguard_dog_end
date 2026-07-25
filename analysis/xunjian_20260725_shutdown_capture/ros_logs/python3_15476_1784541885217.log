@@ -1,0 +1,17 @@
+[INFO] [1784541885.670034729] [route_recorder]: route_recorder started
+[INFO] [1784541885.672726633] [route_recorder]: odom_topic: /codex_quality_test_odom
+[INFO] [1784541885.673420905] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/codex_anomaly_smoke_20260720.csv
+[INFO] [1784541885.674030217] [route_recorder]: raw_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/codex_anomaly_smoke_20260720.raw.csv
+[INFO] [1784541885.674639273] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784541885.675237865] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784541885.675853801] [route_recorder]: quality gate: warmup=0.0s, stable_samples=1, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784541885.676450057] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, max_source_gap=0.80m
+[INFO] [1784541885.682300969] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784541898.418279343] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784541898.419209647] [route_recorder]: saved point 0: x=0.000, y=0.000, yaw=0.000, mode=straight
+[WARN] [1784541898.569997776] [route_recorder]: odometry motion implausible: step=1.000m, dt=0.100s, speed=10.000m/s, allowed_step=0.500m
+[ERROR] [1784541898.871721970] [route_recorder]: RECORDING_FAILED: odometry motion implausible: step=1.000m, dt=0.100s, speed=10.000m/s, allowed_step=0.500m; consecutive_anomalies=3; stopping recorder and retaining diagnostics
+[ERROR] [1784541898.875992562] [route_recorder]: RECORDING_FAILED: final CSV quality validation failed: odometry motion implausible: step=1.000m, dt=0.100s, speed=10.000m/s, allowed_step=0.500m; consecutive_anomalies=3; route has 1 points; minimum is 5; route length 0.000m is below minimum 1.000m; odometry rejection ratio 75.0% exceeds 10.0%
+[ERROR] [1784541898.880047154] [route_recorder]: invalid route retained at: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/invalid/codex_anomaly_smoke_20260720.invalid_20260720_180458.csv
+[INFO] [1784541898.881039634] [route_recorder]: quality report saved: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/quality/codex_anomaly_smoke_20260720.quality.json
+[ERROR] [1784541898.881629106] [route_recorder]: RECORDING_FAILED: odometry motion implausible: step=1.000m, dt=0.100s, speed=10.000m/s, allowed_step=0.500m; consecutive_anomalies=3; route has 1 points; minimum is 5; route length 0.000m is below minimum 1.000m; odometry rejection ratio 75.0% exceeds 10.0%

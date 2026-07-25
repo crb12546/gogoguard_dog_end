@@ -1,0 +1,5 @@
+1699329001.9323640 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-11-50-01-925670-ubuntu-19762
+1699329001.9328709 [INFO] [launch]: Default logging verbosity is set to INFO
+1699329002.0770292 [INFO] [hesai_lidar_node-1]: process started with pid [19764]
+1699329004.3821270 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1699329004.3962011 [INFO] [hesai_lidar_node-1]: process has finished cleanly [pid 19764]

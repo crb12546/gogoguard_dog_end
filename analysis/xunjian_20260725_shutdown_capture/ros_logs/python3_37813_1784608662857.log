@@ -1,0 +1,9 @@
+[INFO] [1784608663.265902690] [route_recorder]: route_recorder started
+[INFO] [1784608663.273750863] [route_recorder]: odom_topic: /codex_no_odometry
+[INFO] [1784608663.275194846] [route_recorder]: route_file: /tmp/codex_streak5_hard3_smoke_20260721.csv
+[INFO] [1784608663.276495562] [route_recorder]: raw_file: /tmp/raw/codex_streak5_hard3_smoke_20260721.raw.csv
+[INFO] [1784608663.277799447] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784608663.280357072] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784608663.282189731] [route_recorder]: quality gate: warmup=4.0s, stable_samples=5, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, hard_source_gap=3.00m (0=disabled), large_gap_streak=1.50m x 5, global_heading_gate=0.0deg
+[INFO] [1784608663.283748466] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, soft_interpolation_gap=0.80m, gap_yaw_change=15.0deg, gap_heading_mismatch=25.0deg
+[INFO] [1784608663.285232033] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg

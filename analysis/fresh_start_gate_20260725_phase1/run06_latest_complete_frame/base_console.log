@@ -1,0 +1,47 @@
+[base_bringup] checking lidar network eth0 192.168.1.5/24 ...
+[base_bringup] eth0 already has 192.168.1.5/24
+[base_bringup] cleaning old base processes...
+[base_bringup] preparing Livox MID-360S driver attempt 1/5...
+[base_bringup] starting Livox MID-360S driver attempt 1/5...
+[base_bringup] Livox PID: 369599
+[base_bringup] waiting for Livox topics...
+[base_bringup] Livox topics are ready.
+[base_bringup] validating Livox frame timing and point counts...
+LIVOX_STREAM_OK reports=3 frame_hz=10.066 imu_hz=199.783 span_ms=99.350 min_points=19872 max_lidar_imu_offset_ms=2.713 max_queue_depth=1
+[base_bringup] Livox stream validation passed.
+[base_bringup] Livox is ready.
+[base_bringup] Livox is ready. Starting FAST-LIO...
+[base_bringup] FAST-LIO PID: 369842
+[base_bringup] waiting for topic: /Odometry
+[base_bringup] topic ready: /Odometry
+[base_bringup] waiting for topic: /cloud_registered_body
+[base_bringup] topic ready: /cloud_registered_body
+[base_bringup] requiring 10 consecutive fresh FAST-LIO frames...
+FASTLIO_FRESH_SAMPLE stamp=1784910323.297171 age_ms=318.142 frame_dt_ms=first fresh=0 sequential=1 consecutive=0/10
+FASTLIO_FRESH_SAMPLE stamp=1784910323.495936 age_ms=180.130 frame_dt_ms=198.765 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784910323.595316 age_ms=181.740 frame_dt_ms=99.380 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784910323.893376 age_ms=185.939 frame_dt_ms=298.060 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.191441 age_ms=190.645 frame_dt_ms=298.065 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.489462 age_ms=215.653 frame_dt_ms=298.021 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.588822 age_ms=217.350 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.688182 age_ms=218.889 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.787537 age_ms=220.493 frame_dt_ms=99.355 fresh=1 sequential=1 consecutive=4/10
+FASTLIO_FRESH_SAMPLE stamp=1784910324.886902 age_ms=222.084 frame_dt_ms=99.365 fresh=1 sequential=1 consecutive=5/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.085681 age_ms=144.484 frame_dt_ms=198.779 fresh=1 sequential=0 consecutive=1/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.185041 age_ms=146.174 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=2/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.284441 age_ms=147.808 frame_dt_ms=99.400 fresh=1 sequential=1 consecutive=3/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.383840 age_ms=149.422 frame_dt_ms=99.400 fresh=1 sequential=1 consecutive=4/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.483220 age_ms=151.029 frame_dt_ms=99.380 fresh=1 sequential=1 consecutive=5/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.582575 age_ms=152.664 frame_dt_ms=99.355 fresh=1 sequential=1 consecutive=6/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.681960 age_ms=154.276 frame_dt_ms=99.385 fresh=1 sequential=1 consecutive=7/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.781320 age_ms=155.829 frame_dt_ms=99.360 fresh=1 sequential=1 consecutive=8/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.880675 age_ms=157.225 frame_dt_ms=99.355 fresh=1 sequential=1 consecutive=9/10
+FASTLIO_FRESH_SAMPLE stamp=1784910325.980030 age_ms=158.648 frame_dt_ms=99.355 fresh=1 sequential=1 consecutive=10/10
+FASTLIO_FRESH_READY frames=10 max_age_ms=250.000 frame_dt_ms_range=50.000..150.000
+[base_bringup] FAST-LIO freshness gate passed.
+[base_bringup] FAST-LIO is ready.
+[base_bringup] logs:
+  /home/unitree/go2_fastlio_ws/patrol_logs/livox.log
+  /home/unitree/go2_fastlio_ws/patrol_logs/fast_lio.log
+[base_bringup] received exit signal, stopping children...
+[base_bringup] received exit signal, stopping children...

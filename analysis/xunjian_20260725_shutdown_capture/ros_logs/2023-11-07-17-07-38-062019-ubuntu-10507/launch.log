@@ -1,0 +1,7 @@
+1699348058.0691855 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-17-07-38-062019-ubuntu-10507
+1699348058.0696833 [INFO] [launch]: Default logging verbosity is set to INFO
+1699348058.2212799 [INFO] [livox_ros_driver2_node-1]: process started with pid [10509]
+1699348125.1874270 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1699348126.5342050 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1699348126.7402606 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1699348126.8632364 [ERROR] [livox_ros_driver2_node-1]: process has died [pid 10509, exit code -6, cmd '/unitree/module/graph_pid_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_z7_mfbvw --params-file /tmp/launch_params_4qf8m94q --params-file /tmp/launch_params_2cmqw1mb --params-file /tmp/launch_params_p9s6vjb0 --params-file /tmp/launch_params_769vy9eu --params-file /tmp/launch_params_2i2ma00q --params-file /tmp/launch_params_3t34btzi --params-file /tmp/launch_params_id3q_uvy --params-file /tmp/launch_params_lqxxx2tq'].

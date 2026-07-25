@@ -1,0 +1,24 @@
+[INFO] [1784541966.915199486] [route_recorder]: route_recorder started
+[INFO] [1784541966.916616798] [route_recorder]: odom_topic: /codex_quality_normal_odom
+[INFO] [1784541966.917305374] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/codex_normal_smoke_20260720.csv
+[INFO] [1784541966.917908382] [route_recorder]: raw_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/codex_normal_smoke_20260720.raw.csv
+[INFO] [1784541966.918522622] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784541966.919109246] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784541966.919735902] [route_recorder]: quality gate: warmup=0.0s, stable_samples=1, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784541966.920327902] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, max_source_gap=0.80m
+[INFO] [1784541966.920994238] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784541970.087644831] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784541970.088577311] [route_recorder]: saved point 0: x=0.000, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.190789503] [route_recorder]: saved point 1: x=0.200, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.291413023] [route_recorder]: saved point 2: x=0.400, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.394163711] [route_recorder]: saved point 3: x=0.600, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.547743711] [route_recorder]: saved point 4: x=0.900, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.650030783] [route_recorder]: saved point 5: x=1.100, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.802753471] [route_recorder]: saved point 6: x=1.400, y=0.000, yaw=0.000, mode=straight
+[INFO] [1784541970.955084607] [route_recorder]: saved point 7: x=1.500, y=0.000, yaw=0.000, mode=turn
+[INFO] [1784541970.955866239] [route_recorder]: saved point 8: x=1.500, y=0.200, yaw=1.571, mode=turn
+[INFO] [1784541971.007987039] [route_recorder]: saved point 9: x=1.500, y=0.300, yaw=1.571, mode=turn
+[INFO] [1784541971.159038399] [route_recorder]: saved point 10: x=1.500, y=0.600, yaw=1.571, mode=straight
+[INFO] [1784541971.317250079] [route_recorder]: saved point 11: x=1.500, y=0.900, yaw=1.571, mode=straight
+[INFO] [1784541971.418021151] [route_recorder]: saved point 12: x=1.500, y=1.100, yaw=1.571, mode=straight
+[INFO] [1784541971.571093919] [route_recorder]: saved point 13: x=1.500, y=1.400, yaw=1.571, mode=straight

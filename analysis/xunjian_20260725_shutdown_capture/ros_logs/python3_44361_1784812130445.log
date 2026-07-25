@@ -1,0 +1,38 @@
+[INFO] [1784812131.019994633] [unitree_safe_cmd_node]: unitree_safe_cmd_node ACTIVE: obstacle -> Move(0,0,0), resume after 5 clear frames; lateral swept ROI enabled
+[INFO] [1784812131.029127332] [unitree_safe_cmd_node]: cloud safety freshness uses local receive time; message header stamp is diagnostic only, receive_timeout=1.00s
+[INFO] [1784812131.032438954] [unitree_safe_cmd_node]: output mode: Twist -> /safe_out
+[WARN] [1784812131.034096317] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: sent one final zero command, then released automatic command stream (command_age=infs)
+[WARN] [1784812134.072844310] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[INFO] [1784812134.114759143] [unitree_safe_cmd_node]: Move x=0.400, y=0.000, z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0, cloud_receive_age=0.042s, cloud_stamp_age=60.001s
+[WARN] [1784812134.123844704] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.178775556] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.238212948] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.298098418] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.359631490] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.418948526] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.480024753] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.540068083] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.598550693] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[INFO] [1784812134.616312235] [unitree_safe_cmd_node]: Move x=0.400, y=0.000, z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0, cloud_receive_age=0.017s, cloud_stamp_age=60.001s
+[WARN] [1784812134.658535718] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.717436197] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.767788700] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.827830174] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.878031408] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.937982032] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812134.998673382] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.058336477] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.064522428] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: sent one final zero command, then released automatic command stream (command_age=0.527s)
+[WARN] [1784812135.109284294] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.160594426] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.212073556] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.263719571] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.315931267] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.367468670] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.418925271] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.470053894] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.522264278] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.573767056] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.625236201] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.676494012] [unitree_safe_cmd_node]: PointCloud2 missing float32 x/y/z fields
+[WARN] [1784812135.728263134] [uni

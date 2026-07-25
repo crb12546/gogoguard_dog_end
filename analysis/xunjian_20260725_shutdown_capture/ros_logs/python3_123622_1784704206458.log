@@ -1,0 +1,21 @@
+[INFO] [1784704206.856711471] [lateral_response_parameter_probe]: simple csv waypoint_follower started
+[INFO] [1784704206.861369924] [lateral_response_parameter_probe]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf2.csv
+[INFO] [1784704206.864264391] [lateral_response_parameter_probe]: route_transform_json: identity
+[INFO] [1784704206.866930816] [lateral_response_parameter_probe]: route_frame_mode: False, yaw_old_from_current=0.0000
+[INFO] [1784704206.867604510] [lateral_response_parameter_probe]: route points: 1687
+[INFO] [1784704206.872724805] [lateral_response_parameter_probe]: v_base: 0.25, max_vx: 0.25, use_route_speed: True
+[INFO] [1784704206.873406562] [lateral_response_parameter_probe]: yaw_limits: max=0.3, non_corner=0.35
+[INFO] [1784704206.876964868] [lateral_response_parameter_probe]: lateral_yaw_gain: 0.06, max_lateral_yaw_rate: 0.05, lateral_deadband: 0.03
+[INFO] [1784704206.877647104] [lateral_response_parameter_probe]: lateral velocity correction: gain=0.75, max_vy=0.20m/s, deadband=0.03m, heading_limit=25.0deg
+[INFO] [1784704206.881073231] [lateral_response_parameter_probe]: lateral velocity PID: enabled=True, kp=0.750, ki=0.080, kd=0.040, i_vy_limit=0.060m/s, d_vy_limit=0.020m/s, d_filter_tau=0.350s, i_reset_error=0.060m, progress_timeout=0.750s, follow_warmup=5.000s, warmup_max_vy=0.150m/s
+[INFO] [1784704206.884667949] [lateral_response_parameter_probe]: loop_mode: once
+[INFO] [1784704206.886314858] [lateral_response_parameter_probe]: lookahead_distance: 0.8
+[INFO] [1784704206.887008998] [lateral_response_parameter_probe]: dynamic_lookahead: enabled=True, straight=0.8, corner=0.25, curve=0.8, corner_angle_deg=60.0, scan_distance=1.0, curve_angle_deg=20.0, curve_scan_distance=4.0, curve_heading_preview=1.2, curve_heading_blend=0.35, corner_turn_distance=0.55, corner_exit_distance=0.9, corner_wiggle_distance=1.6, corner_wiggle_min_opposite_angle_deg=30.0, corner_heading_blend=0.2, corner_heading_conflict_blend=0.65, corner_lateral_scale=0.4
+[INFO] [1784704206.891065654] [lateral_response_parameter_probe]: reach_distance: 0.4
+[INFO] [1784704206.891734741] [lateral_response_parameter_probe]: turn_crawl_vx: 0.06
+[INFO] [1784704206.896481793] [lateral_response_parameter_probe]: odom_jump_limits: distance=0.8, z=0.5, dt=2.0
+[INFO] [1784704206.899209652] [lateral_response_parameter_probe]: start_policy: route_start, start_max_distance: 0.5, start_max_yaw_error: 0.9
+[INFO] [1784704206.899888849] [lateral_response_parameter_probe]: allow_global_relocalize: False, stuck_relocalize: False, recovery_distance: 1.0, recovery_heading_distance: 0.35, recovery_yaw_error: 0.75, recovery_vx: 0.2, max_route_deviation: 5.0
+[INFO] [1784704206.903148304] [lateral_response_parameter_probe]: soft_unstick_yaw_rate: 0.2, soft_unstick_min_moved: 0.12, progress_s_epsilon: 0.08
+[INFO] [1784704206.903805807] [lateral_response_parameter_probe]: projection: local route window enabled; speed-step clamp disabled; configured_speed_scale=1.2, configured_max_step=0.12, progress_forward_tolerance=0.45, progress_backtrack_tolerance=0.12
+[INFO] [1784704209.700549706] [lateral_response_parameter_probe]: waypoint_follower stopped by Ctrl+C

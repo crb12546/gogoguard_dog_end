@@ -1,0 +1,41 @@
+[INFO] [1784634897.255690681] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1784634897.281402905] [laser_mapping]: Node init finished.
+[WARN] [1784634897.485874597] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634897.589035805] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634897.711500523] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634897.833174615] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634897.989035192] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.084342712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.182053191] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.289612115] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.403809599] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.609081210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634898.803996017] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634899.029059389] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634899.145058949] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634899.239240584] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634899.342208986] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784634899.429381014] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1784634899.526908606] [laser_mapping]: Initialize the map kdtree
+[ERROR] [1784635181.940574770] [laser_mapping]: FAST-LIO scan has no effective points (1/5); suppressing output
+[ERROR] [1784635182.211710096] [laser_mapping]: FAST-LIO scan has no effective points (2/5); suppressing output
+[ERROR] [1784635182.598968443] [laser_mapping]: FAST-LIO scan has no effective points (3/5); suppressing output
+[ERROR] [1784635183.019458999] [laser_mapping]: FAST-LIO scan has no effective points (4/5); suppressing output
+[ERROR] [1784635183.279199085] [laser_mapping]: FAST-LIO scan has no effective points (5/5); suppressing output
+[FATAL] [1784635183.279658988] [laser_mapping]: FAST_LIO_HEALTH FAILED: five consecutive scans have no effective points; odometry output is locked until base restart

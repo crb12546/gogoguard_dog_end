@@ -1,0 +1,16 @@
+1699348523.6433990 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-17-15-23-633901-ubuntu-21773
+1699348523.6442633 [INFO] [launch]: Default logging verbosity is set to INFO
+1699348523.7978375 [INFO] [dog_control_B1_one-1]: process started with pid [21813]
+1699348525.9191868 [INFO] [lio_sam_ros2_lidar_checkout-2]: process started with pid [21823]
+1699348525.9198701 [INFO] [lio_sam_ros2_dogOdomForMapping-3]: process started with pid [21825]
+1699348525.9201276 [INFO] [lio_sam_ros2_imuPreintegration-4]: process started with pid [21827]
+1699348525.9203415 [INFO] [lio_sam_ros2_imageProjection-5]: process started with pid [21829]
+1699348525.9205158 [INFO] [lio_sam_ros2_featureExtraction-6]: process started with pid [21838]
+1699348525.9208531 [INFO] [lio_sam_ros2_mapOptmization-7]: process started with pid [21865]
+1699348564.3994317 [INFO] [lio_sam_ros2_featureExtraction-6]: process has finished cleanly [pid 21838]
+1699348564.4022696 [INFO] [lio_sam_ros2_lidar_checkout-2]: process has finished cleanly [pid 21823]
+1699348564.4085660 [INFO] [dog_control_B1_one-1]: process has finished cleanly [pid 21813]
+1699348564.4101317 [INFO] [lio_sam_ros2_dogOdomForMapping-3]: process has finished cleanly [pid 21825]
+1699348564.4106588 [INFO] [lio_sam_ros2_imageProjection-5]: process has finished cleanly [pid 21829]
+1699348564.4408007 [INFO] [lio_sam_ros2_mapOptmization-7]: process has finished cleanly [pid 21865]
+1699348564.4578857 [INFO] [lio_sam_ros2_imuPreintegration-4]: process has finished cleanly [pid 21827]

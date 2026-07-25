@@ -1,0 +1,5 @@
+1782633655.3743558 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-06-28-16-00-55-364914-ubuntu-9204
+1782633655.3748956 [INFO] [launch]: Default logging verbosity is set to INFO
+1782633655.5214334 [INFO] [livox_ros_driver2_node-1]: process started with pid [9206]
+1782635074.5561376 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1782635075.1812384 [INFO] [livox_ros_driver2_node-1]: process has finished cleanly [pid 9206]

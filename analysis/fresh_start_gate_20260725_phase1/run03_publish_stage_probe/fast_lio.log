@@ -1,0 +1,41 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-25-00-19-41-744599-ubuntu-364709
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [364801]
+[fastlio_mapping-1] 1784909981.939824 [0] fastlio_ma: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[fastlio_mapping-1] [INFO] [1784909981.962261008] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/unitree/go2_fastlio_ws/src/FAST_LIO/ file opened
+[fastlio_mapping-1] [INFO] [1784909981.967787969] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[fastlio_mapping-1] [INFO] [1784909981.976171487] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784909982.362317722] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909982.629605960] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909982.735301515] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909982.843430695] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909982.944672910] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.047387037] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1600 age_ms_max=1677.32 samples=8 lidar_buffer=0 imu_buffer=234
+[fastlio_mapping-1] [WARN] [1784909983.147473097] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.275309488] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.485301389] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.696408706] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.825291740] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784909983.926018504] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784909984.029000675] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784909984.133087315] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1907.38 age_ms_max=1969.54 samples=8 lidar_buffer=0 imu_buffer=413
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1982.21 age_ms_max=2005.21 samples=10 lidar_buffer=0 imu_buffer=419
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1989.31 age_ms_max=2014.41 samples=11

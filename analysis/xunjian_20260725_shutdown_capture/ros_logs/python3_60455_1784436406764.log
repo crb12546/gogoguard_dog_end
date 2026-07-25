@@ -1,0 +1,9 @@
+[INFO] [1784436407.297655264] [route_recorder]: route_recorder started
+[INFO] [1784436407.300337248] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784436407.301596192] [route_recorder]: route_file: /tmp/go2_route_recorder_signal_test.csv
+[INFO] [1784436407.302614720] [route_recorder]: min_distance: 0.4
+[INFO] [1784436407.305471200] [route_recorder]: quality gate: warmup=4.0s, stable_samples=5, max_odom_step=1.00m, max_record_step=1.50m, global_heading_gate=0.0deg
+[INFO] [1784436407.309312480] [route_recorder]: close sanitizer: enabled=True, turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784436410.901997408] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784436410.902826048] [route_recorder]: saved point 0: x=-0.003, y=-0.009, yaw=0.023
+[INFO] [1784436415.355192032] [route_recorder]: route_recorder stopped

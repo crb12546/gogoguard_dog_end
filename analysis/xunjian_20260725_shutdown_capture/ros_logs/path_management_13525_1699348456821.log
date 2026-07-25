@@ -1,0 +1,133 @@
+[INFO] [1699348456.906360136] [path_management]: dog_mode = 2
+[INFO] [1699348478.121622728] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348478.121781256] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348478.121813448] [path_management]: 发布第一个目标点...
+[INFO] [1699348478.121847848] [path_management]: 当前为第0条边
+[INFO] [1699348478.121869800] [path_management]: 开始点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348478.121894792] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348483.914684872] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348483.914812520] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348483.914843656] [path_management]: star_node_name_before 1
+[INFO] [1699348483.914863784] [path_management]: start_node_state_before 0
+[INFO] [1699348483.914882216] [path_management]: 导航任务执行结束...
+[INFO] [1699348483.915058600] [path_management]: point_1_success...
+[INFO] [1699348483.918078120] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348483.918162120] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348483.918188200] [path_management]: 发布第一个目标点...
+[INFO] [1699348483.918241448] [path_management]: 当前为第0条边
+[INFO] [1699348483.918263688] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348483.918287816] [path_management]: 结束点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348489.566789384] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348489.566928136] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348489.566963272] [path_management]: star_node_name_before 2
+[INFO] [1699348489.566983368] [path_management]: start_node_state_before 0
+[INFO] [1699348489.567002504] [path_management]: 导航任务执行结束...
+[INFO] [1699348489.567193416] [path_management]: point_2_success...
+[INFO] [1699348489.570195208] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348489.570291080] [path_management]: 路径接收完毕，共收到3个点,2条边.
+[INFO] [1699348489.570314664] [path_management]: 发布第一个目标点...
+[INFO] [1699348489.570341800] [path_management]: 当前为第0条边
+[INFO] [1699348489.570361800] [path_management]: 开始点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348489.570385256] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348501.464054184] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348501.464197896] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348501.464231944] [path_management]: star_node_name_before 1
+[INFO] [1699348501.464254632] [path_management]: start_node_state_before 0
+[INFO] [1699348501.464276936] [path_management]: 当前为第1条边
+[INFO] [1699348501.464299016] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348501.464326056] [path_management]: 结束点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348513.963160296] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348513.963297960] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348513.963331048] [path_management]: star_node_name_before 0
+[INFO] [1699348513.963353864] [path_management]: start_node_state_before 0
+[INFO] [1699348513.963373064] [path_management]: 导航任务执行结束...
+[INFO] [1699348513.968005352] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348513.968314824] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348513.968358920] [path_management]: 发布第一个目标点...
+[INFO] [1699348513.968394824] [path_management]: 当前为第0条边
+[INFO] [1699348513.968428328] [path_management]: 开始点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348513.968452776] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348518.416353640] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348518.416567688] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348518.416606760] [path_management]: star_node_name_before 1
+[INFO] [1699348518.416628232] [path_management]: start_node_state_before 0
+[INFO] [1699348518.416647560] [path_management]: 导航任务执行结束...
+[INFO] [1699348518.416788456] [path_management]: point_1_success...
+[INFO] [1699348518.419116648] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348518.419189928] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348518.419224328] [path_management]: 发布第一个目标点...
+[INFO] [1699348518.419252776] [path_management]: 当前为第0条边
+[INFO] [1699348518.419273544] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348518.419296072] [path_management]: 结束点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348544.314574280] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348544.314701384] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348544.314733096] [path_management]: star_node_name_before 2
+[INFO] [1699348544.314756200] [path_management]: start_node_state_before 0
+[INFO] [1699348544.314775208] [path_management]: 导航任务执行结束...
+[INFO] [1699348544.314910504] [path_management]: point_2_success...
+[INFO] [1699348544.322407816] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348544.322503624] [path_management]: 路径接收完毕，共收到3个点,2条边.
+[INFO] [1699348544.322529352] [path_management]: 发布第一个目标点...
+[INFO] [1699348544.322559880] [path_management]: 当前为第0条边
+[INFO] [1699348544.322580488] [path_management]: 开始点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348544.322605512] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348555.912886728] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348555.913027272] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348555.913062120] [path_management]: star_node_name_before 1
+[INFO] [1699348555.913084904] [path_management]: start_node_state_before 0
+[INFO] [1699348555.913106568] [path_management]: 当前为第1条边
+[INFO] [1699348555.913127784] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348555.913155528] [path_management]: 结束点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348568.813368872] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348568.813540712] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348568.813579304] [path_management]: star_node_name_before 0
+[INFO] [1699348568.813602760] [path_management]: start_node_state_before 0
+[INFO] [1699348568.813623208] [path_management]: 导航任务执行结束...
+[INFO] [1699348568.820729640] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348568.820826152] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348568.820853832] [path_management]: 发布第一个目标点...
+[INFO] [1699348568.820883016] [path_management]: 当前为第0条边
+[INFO] [1699348568.820918536] [path_management]: 开始点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348568.820964904] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348574.113410344] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348574.113539432] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348574.113569384] [path_management]: star_node_name_before 1
+[INFO] [1699348574.113588808] [path_management]: start_node_state_before 0
+[INFO] [1699348574.113607240] [path_management]: 导航任务执行结束...
+[INFO] [1699348574.113741480] [path_management]: point_1_success...
+[INFO] [1699348574.117340296] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348574.117431272] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348574.117511464] [path_management]: 发布第一个目标点...
+[INFO] [1699348574.117554536] [path_management]: 当前为第0条边
+[INFO] [1699348574.117594312] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348574.117622792] [path_management]: 结束点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348579.262710088] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348579.262838888] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348579.262871432] [path_management]: star_node_name_before 2
+[INFO] [1699348579.262893640] [path_management]: start_node_state_before 0
+[INFO] [1699348579.262912808] [path_management]: 导航任务执行结束...
+[INFO] [1699348579.263050440] [path_management]: point_2_success...
+[INFO] [1699348579.265144264] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348579.265228008] [path_management]: 路径接收完毕，共收到3个点,2条边.
+[INFO] [1699348579.265254600] [path_management]: 发布第一个目标点...
+[INFO] [1699348579.265283080] [path_management]: 当前为第0条边
+[INFO] [1699348579.265304648] [path_management]: 开始点2,x:2.600000,y:0.000000,z:0.000000
+[INFO] [1699348579.265328872] [path_management]: 结束点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348590.606371528] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348590.606547016] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348590.606579560] [path_management]: star_node_name_before 1
+[INFO] [1699348590.606603560] [path_management]: start_node_state_before 0
+[INFO] [1699348590.606625224] [path_management]: 当前为第1条边
+[INFO] [1699348590.606646728] [path_management]: 开始点1,x:1.300000,y:0.000000,z:0.000000
+[INFO] [1699348590.606674408] [path_management]: 结束点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348592.946250824] [path_management]: 收到路径数据，数据处理中...
+[INFO] [1699348592.946371848] [path_management]: 路径接收完毕，共收到2个点,1条边.
+[INFO] [1699348592.946401672] [path_management]: 发布第一个目标点...
+[INFO] [1699348592.946431592] [path_management]: 当前为第0条边
+[INFO] [1699348592.946451848] [path_management]: 开始点9443,x:0.503510,y:0.021542,z:-0.188538
+[INFO] [1699348592.946480680] [path_management]: 结束点0,x:0.000000,y:0.000000,z:0.000000
+[INFO] [1699348603.913962568] [path_management]: 收到来自控制的数据inpath.
+[INFO] [1699348603.914096200] [path_management]: goal_flag : 1 , err_flag : 1 , back_flag : 0.
+[INFO] [1699348603.914128936] [path_management]: star_node_name_before 0
+[INFO] [1699348603.914151816] [path_management]: start_node_state_before 0
+[INFO] [1699348603.914171208] [path_management]: 导航任务执行结束...

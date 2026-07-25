@@ -1,0 +1,1017 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-24-23-40-08-078389-ubuntu-335559
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [335653]
+[fastlio_mapping-1] 1784907608.277920 [0] fastlio_ma: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[fastlio_mapping-1] [INFO] [1784907608.298628520] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/unitree/go2_fastlio_ws/src/FAST_LIO/ file opened
+[fastlio_mapping-1] [INFO] [1784907608.304589910] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[fastlio_mapping-1] [INFO] [1784907608.312499730] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784907608.475526135] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907608.571783720] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907608.665515613] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907608.761956498] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907608.953742531] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.151937198] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.345632560] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1750.23 age_ms_max=1864.17 samples=9 lidar_buffer=0 imu_buffer=226
+[fastlio_mapping-1] [WARN] [1784907609.441746303] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.534875239] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.631738920] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.726316402] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.822268285] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907609.921748860] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907610.091727594] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784907610.291747077] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1882.78 age_ms_max=2074.28 samples=8 lidar_buffer=0 imu_buffer=433
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784907610.475900550] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784907610.582226249] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1977.21 age_ms_max=2077.72 samples=11 lidar_buffer=0 imu_buffer=386
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1954.82 age_ms_max=2086.17 samples=12
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1701.4 age_ms_max=1837.14 samples=11 lidar_buffer=0 imu_buffer=338
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1666.94 age_ms_max=1838.76 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1578.26 age_ms_max=1598.64 samples=11 lidar_buffer=0 imu_buffer=330
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1579.02 age_ms_max=1598.55 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1534.33 age_ms_max=1553.98 samples=9 lidar_buffer=0 imu_buffer=321
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1533.92 age_ms_max=1554.97 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1491.66 age_ms_max=1511.24 samples=11 lidar_buffer=0 imu_buffer=312
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1492.69 age_ms_max=1512.28 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1444.46 age_ms_max=1468.44 samples=11 lidar_buffer=0 imu_buffer=304
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1441.07 age_ms_max=1459.08 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1405.66 age_ms_max=1421.23 samples=11 lidar_buffer=0 imu_buffer=295
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1405.12 age_ms_max=1425.7 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1361.07 age_ms_max=1377.21 samples=11 lidar_buffer=0 imu_buffer=325
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1365.43 age_ms_max=1376.28 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1300.17 age_ms_max=1319.7 samples=5 lidar_buffer=0 imu_buffer=276
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1306.58 age_ms_max=1327.92 samples=5
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1273.12 age_ms_max=1289.57 samples=11 lidar_buffer=0 imu_buffer=269
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1281.72 age_ms_max=1298.28 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1230.01 age_ms_max=1251.59 samples=11 lidar_buffer=0 imu_buffer=261
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1239.11 age_ms_max=1260.46 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1181.41 age_ms_max=1200.57 samples=11 lidar_buffer=0 imu_buffer=251
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1186.69 age_ms_max=1207.08 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1139.01 age_ms_max=1158.21 samples=11 lidar_buffer=0 imu_buffer=243
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1144.76 age_ms_max=1163.98 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1100.64 age_ms_max=1120.78 samples=11 lidar_buffer=0 imu_buffer=233
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1109.32 age_ms_max=1129.73 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1053.12 age_ms_max=1070.16 samples=11 lidar_buffer=0 imu_buffer=226
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1059.22 age_ms_max=1078.35 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=1013.04 age_ms_max=1028.76 samples=11 lidar_buffer=0 imu_buffer=216
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=1020.59 age_ms_max=1035.33 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=972.867 age_ms_max=991.816 samples=11 lidar_buffer=0 imu_buffer=209
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=981.759 age_ms_max=1000.69 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=925.209 age_ms_max=949.506 samples=11 lidar_buffer=0 imu_buffer=199
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=931.473 age_ms_max=958.154 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=880.389 age_ms_max=899.465 samples=11 lidar_buffer=0 imu_buffer=191
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=885.977 age_ms_max=906.357 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=841.976 age_ms_max=857.966 samples=11 lidar_buffer=0 imu_buffer=183
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=849.2 age_ms_max=863.615 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=801.133 age_ms_max=820.902 samples=11 lidar_buffer=0 imu_buffer=173
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=810.042 age_ms_max=830.067 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=757.455 age_ms_max=777.401 samples=11 lidar_buffer=0 imu_buffer=165
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=767.469 age_ms_max=786.701 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=708.524 age_ms_max=733.792 samples=11 lidar_buffer=0 imu_buffer=156
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=714.165 age_ms_max=744.194 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=669.521 age_ms_max=684.107 samples=11 lidar_buffer=0 imu_buffer=148
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=677.768 age_ms_max=691.577 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=623.793 age_ms_max=647.819 samples=11 lidar_buffer=0 imu_buffer=140
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=630.057 age_ms_max=656.935 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=579.15 age_ms_max=599.636 samples=11 lidar_buffer=0 imu_buffer=130
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=584.341 age_ms_max=605.557 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=541.255 age_ms_max=556.588 samples=11 lidar_buffer=0 imu_buffer=123
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=549.239 age_ms_max=562.786 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=500.699 age_ms_max=521.049 samples=11 lidar_buffer=0 imu_buffer=114
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=509.062 age_ms_max=529.802 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=455.63 age_ms_max=472.504 samples=11 lidar_buffer=0 imu_buffer=105
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=462.673 age_ms_max=477.167 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=414.771 age_ms_max=431.256 samples=11 lidar_buffer=0 imu_buffer=97
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=423.466 age_ms_max=440.277 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=371.586 age_ms_max=391.119 samples=11 lidar_buffer=0 imu_buffer=87
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=380.301 age_ms_max=400.066 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=327.563 age_ms_max=347.296 samples=11 lidar_buffer=0 imu_buffer=80
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=335.94 age_ms_max=355.802 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=280.259 age_ms_max=298.812 samples=11 lidar_buffer=0 imu_buffer=72
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=286.5 age_ms_max=305.153 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=243.483 age_ms_max=263.299 samples=11 lidar_buffer=0 imu_buffer=63
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=252.221 age_ms_max=275.532 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=196.827 age_ms_max=215.662 samples=11 lidar_buffer=0 imu_buffer=54
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=202.222 age_ms_max=220.526 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=154.781 age_ms_max=173.774 samples=11 lidar_buffer=0 imu_buffer=46
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=160.113 age_ms_max=178.222 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=114.179 age_ms_max=132.672 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.807 age_ms_max=137.304 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=101.508 age_ms_max=102.363 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=106.276 age_ms_max=107.194 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.535 age_ms_max=109.015 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.099 age_ms_max=118.834 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.4 age_ms_max=109.777 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.682 age_ms_max=119.292 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.405 age_ms_max=108.842 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.954 age_ms_max=117.614 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.16 age_ms_max=117.321 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.792 age_ms_max=108.306 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.867 age_ms_max=118.361 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.709 age_ms_max=109.369 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.865 age_ms_max=107.267 samples=9 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.527 age_ms_max=116.422 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.571 age_ms_max=109.109 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.196 age_ms_max=121.733 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.31 age_ms_max=108.393 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.247 age_ms_max=117.608 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.063 age_ms_max=109.151 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.137 age_ms_max=118.11 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.106 age_ms_max=108.805 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.287 age_ms_max=118.069 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.76 age_ms_max=108.309 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.758 age_ms_max=118.001 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.416 age_ms_max=110.57 samples=9 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.574 age_ms_max=119.296 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.692 age_ms_max=111.444 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.577 age_ms_max=120.67 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.123 age_ms_max=111.765 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.358 age_ms_max=121.124 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.428 age_ms_max=112.076 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.141 age_ms_max=121.255 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.188 age_ms_max=112.231 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.298 age_ms_max=121.022 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.218 age_ms_max=110.499 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.161 age_ms_max=119.669 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.676 age_ms_max=109.479 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.877 age_ms_max=121.474 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.72 age_ms_max=108.837 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.717 age_ms_max=117.975 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.804 age_ms_max=108.365 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.148 age_ms_max=117.402 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.401 age_ms_max=107.856 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.875 age_ms_max=116.78 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.048 age_ms_max=109.288 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.056 age_ms_max=118.382 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.499 age_ms_max=109.236 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.104 age_ms_max=118.008 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.101 age_ms_max=109.52 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.865 age_ms_max=120.117 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.553 age_ms_max=110.223 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.084 age_ms_max=119.523 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.623 age_ms_max=109.88 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.015 age_ms_max=119.613 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.611 age_ms_max=108.484 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.2 age_ms_max=117.552 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.148 age_ms_max=109.505 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.17 age_ms_max=119.186 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.838 age_ms_max=109.385 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.19 age_ms_max=118.856 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.944 age_ms_max=108.589 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.743 age_ms_max=117.76 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.066 age_ms_max=106.093 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.311 age_ms_max=111.626 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.664 age_ms_max=120.559 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.577 age_ms_max=112.118 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.853 age_ms_max=121.444 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.434 age_ms_max=112.005 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.332 age_ms_max=118.142 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.683 age_ms_max=109.156 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.826 age_ms_max=119.824 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.929 age_ms_max=109.346 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.273 age_ms_max=119.065 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.526 age_ms_max=109.058 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.802 age_ms_max=118.482 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.739 age_ms_max=108.687 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.298 age_ms_max=118.21 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.747 age_ms_max=109.112 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.839 age_ms_max=118.968 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.656 age_ms_max=109.122 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.898 age_ms_max=118.166 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.423 age_ms_max=109.514 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.244 age_ms_max=118.32 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.497 age_ms_max=109.335 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.701 age_ms_max=118.951 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.113 age_ms_max=110.295 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.382 age_ms_max=119.222 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.611 age_ms_max=109.793 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.356 age_ms_max=117.841 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.396 age_ms_max=108.739 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.438 age_ms_max=121.948 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.217 age_ms_max=112.023 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.304 age_ms_max=120.465 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.256 age_ms_max=108.708 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.13 age_ms_max=119.212 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.849 age_ms_max=109.487 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.568 age_ms_max=118.217 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.089 age_ms_max=108.581 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.725 age_ms_max=118.609 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.38 age_ms_max=109.251 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.638 age_ms_max=117.994 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.653 age_ms_max=108.741 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.679 age_ms_max=121.42 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.909 age_ms_max=112.467 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.387 age_ms_max=118.998 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.405 age_ms_max=109.442 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.983 age_ms_max=117.625 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.229 age_ms_max=103.019 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=107.831 age_ms_max=110.608 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.028 age_ms_max=102.504 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.745 age_ms_max=121.684 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.056 age_ms_max=112.774 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.788 age_ms_max=121.343 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.554 age_ms_max=112.355 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.048 age_ms_max=119.651 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.057 age_ms_max=109.74 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.162 age_ms_max=120.296 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.469 age_ms_max=109.741 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.298 age_ms_max=118.283 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.305 age_ms_max=109.555 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.151 age_ms_max=118.047 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.218 age_ms_max=108.926 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.261 age_ms_max=117.637 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.155 age_ms_max=108.651 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.782 age_ms_max=119.052 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.258 age_ms_max=109.956 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.63 age_ms_max=118.282 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.417 age_ms_max=108.937 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.682 age_ms_max=117.539 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.278 age_ms_max=102.879 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.81 age_ms_max=120.415 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.926 age_ms_max=111.004 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.321 age_ms_max=117.989 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.4 age_ms_max=108.956 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.122 age_ms_max=122.188 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.451 age_ms_max=113.221 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.328 age_ms_max=120.723 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.375 age_ms_max=109.334 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.407 age_ms_max=121.308 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.34 age_ms_max=109.274 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.698 age_ms_max=118.414 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.936 age_ms_max=109.443 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.643 age_ms_max=118.315 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.95 age_ms_max=109.223 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.373 age_ms_max=118.379 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.405 age_ms_max=109.193 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.078 age_ms_max=118.216 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.263 age_ms_max=109.513 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.112 age_ms_max=118.171 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.017 age_ms_max=109.982 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.188 age_ms_max=120.147 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.357 age_ms_max=109.846 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.218 age_ms_max=122.004 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.181 age_ms_max=113.17 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.923 age_ms_max=122.361 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.79 age_ms_max=112.565 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.603 age_ms_max=121.307 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.714 age_ms_max=112.265 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.003 age_ms_max=121.939 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.828 age_ms_max=112.87 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.725 age_ms_max=113.744 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.196 age_ms_max=108.771 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.19 age_ms_max=118.331 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.801 age_ms_max=110.549 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.908 age_ms_max=119.144 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.898 age_ms_max=109.843 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.393 age_ms_max=118.13 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.522 age_ms_max=109.396 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.078 age_ms_max=118.538 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.674 age_ms_max=109.809 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.867 age_ms_max=119.901 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.014 age_ms_max=110.352 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.053 age_ms_max=119.712 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.946 age_ms_max=109.707 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.126 age_ms_max=119.325 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.818 age_ms_max=109.835 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.705 age_ms_max=118.383 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.649 age_ms_max=109.127 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.741 age_ms_max=118.714 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.713 age_ms_max=109.536 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.451 age_ms_max=118.122 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.094 age_ms_max=111.788 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.013 age_ms_max=124.947 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.046 age_ms_max=111.051 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.029 age_ms_max=122.541 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.555 age_ms_max=109.218 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.899 age_ms_max=111.729 samples=9 lidar_buffer=0 imu_buffer=98
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.461 age_ms_max=120.722 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.361 age_ms_max=109.879 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.395 age_ms_max=118.642 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.509 age_ms_max=109.567 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.948 age_ms_max=118.645 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.2 age_ms_max=109.947 samples=7 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.413 age_ms_max=119.104 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.388 age_ms_max=102.853 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.624 age_ms_max=109.669 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.502 age_ms_max=103.019 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=107.349 age_ms_max=108.074 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.877 age_ms_max=117.983 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.783 age_ms_max=109.312 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.939 age_ms_max=118.457 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.153 age_ms_max=108.432 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.724 age_ms_max=118.57 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.247 age_ms_max=109.604 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.85 age_ms_max=119.029 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.066 age_ms_max=110.392 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.225 age_ms_max=118.925 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.81 age_ms_max=109.954 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.906 age_ms_max=118.872 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.375 age_ms_max=109.925 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.14 age_ms_max=117.843 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.585 age_ms_max=109.846 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.006 age_ms_max=120.119 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.43 age_ms_max=111.069 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.903 age_ms_max=120.036 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.634 age_ms_max=110.283 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.731 age_ms_max=124.414 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.963 age_ms_max=112.855 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.266 age_ms_max=121.423 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.849 age_ms_max=112.41 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.2 age_ms_max=118.216 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.93 age_ms_max=108.897 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.798 age_ms_max=118.668 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.058 age_ms_max=109.704 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.149 age_ms_max=118.786 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.558 age_ms_max=110.164 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.008 age_ms_max=119.244 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.595 age_ms_max=109.257 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.918 age_ms_max=118.396 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.683 age_ms_max=109.562 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.329 age_ms_max=119.118 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.879 age_ms_max=109.823 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.315 age_ms_max=117.739 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.577 age_ms_max=109.832 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.959 age_ms_max=118.88 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.87 age_ms_max=109.725 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.035 age_ms_max=118.294 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.854 age_ms_max=109.043 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.048 age_ms_max=110.061 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.487 age_ms_max=103.238 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.615 age_ms_max=119.93 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.239 age_ms_max=110.231 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.418 age_ms_max=120.353 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.431 age_ms_max=111.042 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.633 age_ms_max=123.016 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.954 age_ms_max=112.153 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.583 age_ms_max=119.156 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.772 age_ms_max=109.857 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.843 age_ms_max=119.414 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.6 age_ms_max=110.374 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.924 age_ms_max=118.304 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.638 age_ms_max=110.265 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.517 age_ms_max=119.478 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.313 age_ms_max=110.549 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.915 age_ms_max=118.416 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.994 age_ms_max=109.402 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.536 age_ms_max=118.628 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.778 age_ms_max=110.985 samples=7 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.198 age_ms_max=120.293 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.868 age_ms_max=109.41 samples=9 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.71 age_ms_max=119.262 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.126 age_ms_max=110.131 samples=8 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.359 age_ms_max=111.524 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.93 age_ms_max=110.713 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.679 age_ms_max=119.709 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.666 age_ms_max=110.856 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.925 age_ms_max=119.954 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.186 age_ms_max=109.4 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.642 age_ms_max=118.418 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.959 age_ms_max=103.514 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.831 age_ms_max=111.414 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=102.947 age_ms_max=103.698 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.805 age_ms_max=122.239 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.284 age_ms_max=113.036 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.637 age_ms_max=122.194 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.348 age_ms_max=112.93 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.024 age_ms_max=121.547 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.606 age_ms_max=112.548 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.277 age_ms_max=112.505 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.214 age_ms_max=106.787 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.077 age_ms_max=123.703 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.916 age_ms_max=114.455 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.808 age_ms_max=123.437 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.501 age_ms_max=112.981 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.529 age_ms_max=122.329 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.409 age_ms_max=110.378 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.714 age_ms_max=120.111 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.393 age_ms_max=110.859 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.112 age_ms_max=122.773 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.247 age_ms_max=113.887 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.588 age_ms_max=114.015 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.6 age_ms_max=109.588 samples=7 lidar_buffer=0 imu_buffer=119
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.365 age_ms_max=115.904 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.836 age_ms_max=109.646 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.436 age_ms_max=114.038 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.314 age_ms_max=113.659 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.073 age_ms_max=123.548 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.385 age_ms_max=112.145 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.844 age_ms_max=120.854 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.238 age_ms_max=113.024 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.039 age_ms_max=122.408 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.656 age_ms_max=113.747 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.272 age_ms_max=122.854 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.471 age_ms_max=113.878 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.493 age_ms_max=123.777 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.953 age_ms_max=112.46 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.801 age_ms_max=124.795 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.614 age_ms_max=110.878 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.167 age_ms_max=122.229 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.717 age_ms_max=109.68 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.37 age_ms_max=118.714 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.806 age_ms_max=113.4 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.924 age_ms_max=122.131 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.277 age_ms_max=104.554 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.691 age_ms_max=111.443 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.29 age_ms_max=104.102 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.245 age_ms_max=111.647 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.819 age_ms_max=109.587 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.392 age_ms_max=119.639 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.914 age_ms_max=110.322 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.041 age_ms_max=119.305 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.762 age_ms_max=113.996 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.816 age_ms_max=123.091 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.527 age_ms_max=113.467 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.155 age_ms_max=122.695 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.626 age_ms_max=110.698 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.987 age_ms_max=119.866 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.626 age_ms_max=110.887 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.654 age_ms_max=119.753 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.524 age_ms_max=109.355 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.771 age_ms_max=120.179 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.203 age_ms_max=104.124 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.143 age_ms_max=111.592 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.445 age_ms_max=111.244 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.258 age_ms_max=120.165 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.052 age_ms_max=110.758 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.522 age_ms_max=120.923 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.326 age_ms_max=110.033 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.907 age_ms_max=118.927 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.583 age_ms_max=104.385 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.23 age_ms_max=111.001 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.301 age_ms_max=122.211 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.298 age_ms_max=111.22 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.025 age_ms_max=121.803 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.395 age_ms_max=112.165 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.971 age_ms_max=122.575 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.087 age_ms_max=111.218 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.143 age_ms_max=120.443 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.396 age_ms_max=111.176 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.639 age_ms_max=120.992 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.389 age_ms_max=109.72 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.592 age_ms_max=111.84 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.131 age_ms_max=110.53 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.955 age_ms_max=120.707 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.357 age_ms_max=111.051 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.978 age_ms_max=111.155 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.624 age_ms_max=104.516 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.314 age_ms_max=111.569 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.976 age_ms_max=110.872 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.962 age_ms_max=121.447 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.23 age_ms_max=111.871 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.397 age_ms_max=118.854 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.654 age_ms_max=112.598 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.172 age_ms_max=121.015 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.596 age_ms_max=110.462 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.268 age_ms_max=118.765 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.371 age_ms_max=109.952 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.129 age_ms_max=120.608 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.047 age_ms_max=111.487 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.67 age_ms_max=119.919 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.254 age_ms_max=111.054 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.774 age_ms_max=119.903 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.719 age_ms_max=110.519 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.536 age_ms_max=119.78 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.82 age_ms_max=110.498 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.074 age_ms_max=119.566 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.694 age_ms_max=111.006 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.998 age_ms_max=120.014 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.696 age_ms_max=110.812 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.999 age_ms_max=120.171 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.012 age_ms_max=111.535 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.652 age_ms_max=120.445 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.326 age_ms_max=111.992 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.493 age_ms_max=121.45 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.15 age_ms_max=110.97 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.036 age_ms_max=122.186 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.791 age_ms_max=112.742 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.621 age_ms_max=112.748 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.84 age_ms_max=104.308 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.666 age_ms_max=109.862 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.763 age_ms_max=111.124 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.614 age_ms_max=120.843 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.464 age_ms_max=111.486 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.951 age_ms_max=118.819 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.704 age_ms_max=109.71 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.147 age_ms_max=122.591 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.342 age_ms_max=113.102 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.666 age_ms_max=119.637 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.599 age_ms_max=111.765 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.121 age_ms_max=121.068 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.548 age_ms_max=111.053 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.181 age_ms_max=120.523 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.923 age_ms_max=110.444 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.616 age_ms_max=121.417 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.769 age_ms_max=110.781 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.295 age_ms_max=120.399 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.185 age_ms_max=110.862 samples=7 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.684 age_ms_max=114.367 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.556 age_ms_max=104.214 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=108.838 age_ms_max=110.7 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=103.775 age_ms_max=104.622 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.778 age_ms_max=119.166 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.839 age_ms_max=110.522 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.168 age_ms_max=120.481 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.158 age_ms_max=111.342 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.667 age_ms_max=120.253 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.397 age_ms_max=110.892 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.673 age_ms_max=121.092 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.018 age_ms_max=111.165 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.044 age_ms_max=121.368 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.254 age_ms_max=111.499 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.321 age_ms_max=120.26 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.721 age_ms_max=113.25 samples=10 lidar_buffer=0 imu_buffer=80
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.498 age_ms_max=124.153 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.789 age_ms_max=114.617 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.722 age_ms_max=124.149 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.181 age_ms_max=113.603 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.399 age_ms_max=122.925 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.971 age_ms_max=112.761 samples=11 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.068 age_ms_max=114.562 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.183 age_ms_max=108.48 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.011 age_ms_max=115.439 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.102 age_ms_max=113.779 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.312 age_ms_max=124.034 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.085 age_ms_max=114.893 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.123 age_ms_max=123.359 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.628 age_ms_max=114.582 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.576 age_ms_max=124.157 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.198 age_ms_max=104.706 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.805 age_ms_max=111.729 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.803 age_ms_max=111.773 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.982 age_ms_max=121.684 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.934 age_ms_max=112.488 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.926 age_ms_max=121.934 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.829 age_ms_max=113.65 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.338 age_ms_max=123.183 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.719 age_ms_max=113.382 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.691 age_ms_max=122.653 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.07 age_ms_max=104.671 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.661 age_ms_max=112.34 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.806 age_ms_max=111.135 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.26 age_ms_max=120.604 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.243 age_ms_max=110.821 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.757 age_ms_max=124.182 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.58 age_ms_max=110.528 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.02 age_ms_max=119.58 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.162 age_ms_max=110.804 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.752 age_ms_max=120.895 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.091 age_ms_max=104.609 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.879 age_ms_max=111.508 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.303 age_ms_max=111.951 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.867 age_ms_max=121.693 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.731 age_ms_max=124.161 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.322 age_ms_max=114.693 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.141 age_ms_max=120.903 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.357 age_ms_max=111.454 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.196 age_ms_max=121.877 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.847 age_ms_max=112.449 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.604 age_ms_max=119.75 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.959 age_ms_max=110.687 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.526 age_ms_max=122.308 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.337 age_ms_max=111.515 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.071 age_ms_max=124.557 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.467 age_ms_max=115.175 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.016 age_ms_max=113.731 samples=9 lidar_buffer=0 imu_buffer=100
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.596 age_ms_max=124.871 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.146 age_ms_max=111.077 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.735 age_ms_max=120.553 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.315 age_ms_max=121.844 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.054 age_ms_max=112.384 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.666 age_ms_max=120.675 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.493 age_ms_max=111.215 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.994 age_ms_max=121.567 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.614 age_ms_max=112.154 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.579 age_ms_max=120.816 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.34 age_ms_max=111.196 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.038 age_ms_max=122.587 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.496 age_ms_max=113.599 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.251 age_ms_max=123.704 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.586 age_ms_max=110.602 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.628 age_ms_max=111.692 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.133 age_ms_max=104.876 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.503 age_ms_max=120.813 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.213 age_ms_max=111.812 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.861 age_ms_max=121.702 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.898 age_ms_max=112.294 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.082 age_ms_max=120.346 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.687 age_ms_max=113.005 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.803 age_ms_max=125.285 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.106 age_ms_max=116.18 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.145 age_ms_max=125.01 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=118.617 age_ms_max=217.338 samples=11 lidar_buffer=0 imu_buffer=61
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=302.527 age_ms_max=391.306 samples=6
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=362.45 age_ms_max=383.952 samples=7 lidar_buffer=0 imu_buffer=89
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=351.855 age_ms_max=371.608 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=334.335 age_ms_max=353.976 samples=11 lidar_buffer=0 imu_buffer=81
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=315.985 age_ms_max=327.054 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=298.794 age_ms_max=313.847 samples=11 lidar_buffer=0 imu_buffer=73
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=273.016 age_ms_max=298.63 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=251.517 age_ms_max=276.415 samples=11 lidar_buffer=0 imu_buffer=65
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=229.347 age_ms_max=246.484 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=210.755 age_ms_max=226.929 samples=11 lidar_buffer=0 imu_buffer=55
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=184.291 age_ms_max=208.193 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=163.298 age_ms_max=185.999 samples=11 lidar_buffer=0 imu_buffer=46
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=143.458 age_ms_max=161.138 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=119.97 age_ms_max=141.618 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.078 age_ms_max=111.845 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.533 age_ms_max=111.499 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.619 age_ms_max=120.749 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.996 age_ms_max=111.111 samples=9 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.201 age_ms_max=120.826 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.669 age_ms_max=112.248 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.946 age_ms_max=121.668 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.219 age_ms_max=110.99 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.043 age_ms_max=120.509 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.06 age_ms_max=111.216 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.901 age_ms_max=120.608 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.198 age_ms_max=110.953 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.563 age_ms_max=123.295 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.885 age_ms_max=113.453 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.223 age_ms_max=124.643 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.158 age_ms_max=112.395 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.233 age_ms_max=124.229 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.207 age_ms_max=111.259 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.928 age_ms_max=119.877 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.147 age_ms_max=111.958 samples=10 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.718 age_ms_max=121.049 samples=7
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.358 age_ms_max=111.813 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.334 age_ms_max=121.33 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.694 age_ms_max=112.308 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.218 age_ms_max=121.454 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.913 age_ms_max=111.612 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.324 age_ms_max=119.429 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.538 age_ms_max=104.862 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.33 age_ms_max=122.602 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.289 age_ms_max=112.974 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.738 age_ms_max=119.691 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.515 age_ms_max=105.446 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.897 age_ms_max=111.893 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.404 age_ms_max=104.752 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.732 age_ms_max=121.297 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.561 age_ms_max=112.119 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.033 age_ms_max=125.886 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=114.381 age_ms_max=116.653 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.199 age_ms_max=126.391 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.583 age_ms_max=111.674 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.924 age_ms_max=121.123 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.767 age_ms_max=112.376 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.045 age_ms_max=121.696 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.045 age_ms_max=111.857 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.312 age_ms_max=121.455 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.197 age_ms_max=111.719 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.469 age_ms_max=120.716 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.709 age_ms_max=111.643 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.574 age_ms_max=121.111 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.425 age_ms_max=105.322 samples=9 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.176 age_ms_max=121.438 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.286 age_ms_max=112.511 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.924 age_ms_max=122.725 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.987 age_ms_max=111.823 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.317 age_ms_max=121.244 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.865 age_ms_max=120.525 samples=11 lidar_buffer=0 imu_buffer=41
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.588 age_ms_max=130.032 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.913 age_ms_max=116.086 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.82 age_ms_max=125.383 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.523 age_ms_max=112.65 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.977 age_ms_max=124.907 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.162 age_ms_max=110.694 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.22 age_ms_max=115.489 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.548 age_ms_max=108.697 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.498 age_ms_max=113.641 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.657 age_ms_max=112.263 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.286 age_ms_max=121.976 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.728 age_ms_max=112.1 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.883 age_ms_max=121.261 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.012 age_ms_max=111.866 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.573 age_ms_max=123.391 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.138 age_ms_max=112.241 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.164 age_ms_max=122.586 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.587 age_ms_max=121.22 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.084 age_ms_max=111.956 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.509 age_ms_max=121.933 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.771 age_ms_max=112.144 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.839 age_ms_max=121.445 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.059 age_ms_max=111.765 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.05 age_ms_max=121.053 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.76 age_ms_max=112.188 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.215 age_ms_max=121.488 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.865 age_ms_max=111.698 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.271 age_ms_max=124.67 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.463 age_ms_max=112.109 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.098 age_ms_max=121.84 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.679 age_ms_max=112.228 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.887 age_ms_max=122.352 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.95 age_ms_max=112.627 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.694 age_ms_max=121.899 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.656 age_ms_max=111.545 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=109.629 age_ms_max=110.296 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=104.793 age_ms_max=105.369 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.24 age_ms_max=123.239 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.378 age_ms_max=111.817 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.933 age_ms_max=120.064 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.602 age_ms_max=111.932 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.736 age_ms_max=122.45 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.284 age_ms_max=112.758 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.371 age_ms_max=121.489 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.148 age_ms_max=112.255 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.646 age_ms_max=121.824 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.71 age_ms_max=112.587 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.652 age_ms_max=122.664 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.05 age_ms_max=112.547 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.954 age_ms_max=124.065 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.556 age_ms_max=114.808 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.268 age_ms_max=123.859 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.452 age_ms_max=114.487 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.058 age_ms_max=122.93 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.05 age_ms_max=108.638 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.514 age_ms_max=124.397 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.792 age_ms_max=115.248 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.826 age_ms_max=123.59 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.455 age_ms_max=112.275 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.708 age_ms_max=121.182 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.865 age_ms_max=111.555 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.598 age_ms_max=122.402 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.967 age_ms_max=112.616 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=110.975 age_ms_max=113.507 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.065 age_ms_max=105.635 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.627 age_ms_max=124.149 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.733 age_ms_max=114.677 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.99 age_ms_max=123.079 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.468 age_ms_max=109.641 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.353 age_ms_max=115.909 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.024 age_ms_max=109.283 samples=9 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.945 age_ms_max=122.361 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.889 age_ms_max=112.84 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.652 age_ms_max=121.958 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.751 age_ms_max=111.889 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.535 age_ms_max=121.356 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.859 age_ms_max=111.68 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.647 age_ms_max=120.557 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.26 age_ms_max=115.115 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.072 age_ms_max=124.229 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.535 age_ms_max=114.867 samples=10 lidar_buffer=0 imu_buffer=80
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.836 age_ms_max=116.138 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.687 age_ms_max=112.038 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.297 age_ms_max=126.261 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.868 age_ms_max=115.669 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.154 age_ms_max=124.338 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.66 age_ms_max=106.196 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.071 age_ms_max=121.204 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.049 age_ms_max=111.736 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.692 age_ms_max=121.364 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.73 age_ms_max=111.881 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.031 age_ms_max=122.2 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.775 age_ms_max=112.743 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.443 age_ms_max=122.463 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.436 age_ms_max=112.872 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.006 age_ms_max=120.964 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.612 age_ms_max=112.904 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.085 age_ms_max=122.789 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.841 age_ms_max=110.925 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.623 age_ms_max=117.062 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.041 age_ms_max=115.686 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.689 age_ms_max=124.891 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.209 age_ms_max=114.628 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.185 age_ms_max=123.989 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.794 age_ms_max=108.051 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.011 age_ms_max=123.355 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.425 age_ms_max=112.184 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.792 age_ms_max=123.884 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.704 age_ms_max=112.952 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.406 age_ms_max=122.422 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.975 age_ms_max=112.641 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.696 age_ms_max=122.156 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.586 age_ms_max=112.232 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.306 age_ms_max=121.738 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.344 age_ms_max=114.774 samples=8 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.881 age_ms_max=124.648 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.606 age_ms_max=115.283 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.739 age_ms_max=123.218 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.75 age_ms_max=114.162 samples=7 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.565 age_ms_max=120.576 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.058 age_ms_max=112.031 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.745 age_ms_max=121.415 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.671 age_ms_max=111.945 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.38 age_ms_max=122.062 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.066 age_ms_max=112.593 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.972 age_ms_max=121.217 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.439 age_ms_max=106.018 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.84 age_ms_max=122.529 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.404 age_ms_max=112.871 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.242 age_ms_max=125.52 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.412 age_ms_max=113.278 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.753 age_ms_max=123.022 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.183 age_ms_max=113.081 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.432 age_ms_max=122.372 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.62 age_ms_max=112.986 samples=11 lidar_buffer=0 imu_buffer=78
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.642 age_ms_max=123.988 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.049 age_ms_max=114.617 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.014 age_ms_max=124.237 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.794 age_ms_max=115.124 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.5 age_ms_max=123.667 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.31 age_ms_max=115.523 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122 age_ms_max=124.949 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.644 age_ms_max=112.161 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.922 age_ms_max=122.167 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.765 age_ms_max=113.22 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.638 age_ms_max=121.577 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.745 age_ms_max=112.105 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.634 age_ms_max=121.696 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.423 age_ms_max=112.423 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.052 age_ms_max=123.483 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.47 age_ms_max=113.509 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.15 age_ms_max=126.208 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.892 age_ms_max=112.792 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.31 age_ms_max=122.119 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.885 age_ms_max=112.512 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.296 age_ms_max=122.197 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.929 age_ms_max=112.849 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.338 age_ms_max=121.884 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.314 age_ms_max=112.362 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.772 age_ms_max=121.765 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.317 age_ms_max=114.223 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.947 age_ms_max=123.597 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.751 age_ms_max=112.479 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.613 age_ms_max=122.671 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.315 age_ms_max=113.66 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.818 age_ms_max=122.978 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.182 age_ms_max=112.908 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.982 age_ms_max=122.418 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.787 age_ms_max=112.425 samples=11 lidar_buffer=0 imu_buffer=38
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.528 age_ms_max=122.441 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.419 age_ms_max=113.688 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.872 age_ms_max=124.532 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.958 age_ms_max=113.648 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.728 age_ms_max=126.042 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.102 age_ms_max=112.838 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.379 age_ms_max=122.856 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.227 age_ms_max=113.399 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.491 age_ms_max=121.485 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.617 age_ms_max=116.037 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=124.619 age_ms_max=125.943 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=115.557 age_ms_max=116.978 samples=9 lidar_buffer=0 imu_buffer=80
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=125.059 age_ms_max=126.156 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.569 age_ms_max=115.614 samples=11 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.439 age_ms_max=118.347 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.149 age_ms_max=110.668 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.75 age_ms_max=126.155 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.918 age_ms_max=116.002 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.419 age_ms_max=125.813 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=115.263 age_ms_max=116.235 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=124.491 age_ms_max=125.624 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.978 age_ms_max=115.531 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.903 age_ms_max=124.991 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.723 age_ms_max=113.679 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.518 age_ms_max=123.402 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.322 age_ms_max=112.876 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.672 age_ms_max=122.389 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.01 age_ms_max=113.054 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.158 age_ms_max=123.184 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.751 age_ms_max=113.286 samples=11 lidar_buffer=0 imu_buffer=79
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.679 age_ms_max=122.868 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.115 age_ms_max=115.323 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.253 age_ms_max=124.941 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.711 age_ms_max=115.532 samples=9 lidar_buffer=0 imu_buffer=78
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.187 age_ms_max=124.628 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.824 age_ms_max=113.284 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.904 age_ms_max=122.661 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.213 age_ms_max=112.57 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.961 age_ms_max=123.661 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.272 age_ms_max=113.348 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.572 age_ms_max=122.753 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.726 age_ms_max=111.961 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.574 age_ms_max=121.519 samples=11
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.152 age_ms_max=117.197 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.167 age_ms_max=115.801 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=124.23 age_ms_max=125.406 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=114.719 age_ms_max=116.199 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.15 age_ms_max=124.687 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.016 age_ms_max=112.416 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.993 age_ms_max=114.281 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.132 age_ms_max=106.53 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.598 age_ms_max=113.91 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.925 age_ms_max=106.586 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.858 age_ms_max=115.174 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.858 age_ms_max=113.219 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.922 age_ms_max=123.423 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.795 age_ms_max=113.732 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.052 age_ms_max=123.383 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.464 age_ms_max=113.936 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.333 age_ms_max=123.258 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.918 age_ms_max=107.1 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.398 age_ms_max=115.952 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=105.918 age_ms_max=106.445 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=113.736 age_ms_max=123.275 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.618 age_ms_max=113.655 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.942 age_ms_max=123.309 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.674 age_ms_max=113.818 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.268 age_ms_max=123.723 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.619 age_ms_max=113.553 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.389 age_ms_max=122.916 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.906 age_ms_max=112.857 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.799 age_ms_max=122.581 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.208 age_ms_max=112.982 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.873 age_ms_max=122.051 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.202 age_ms_max=114.539 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.966 age_ms_max=124.026 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.422 age_ms_max=113.25 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.814 age_ms_max=122.949 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.641 age_ms_max=113.688 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.98 age_ms_max=123.028 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.66 age_ms_max=113.565 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.134 age_ms_max=114.335 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.265 age_ms_max=106.623 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.397 age_ms_max=122.587 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.503 age_ms_max=114.068 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.283 age_ms_max=123.585 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.679 age_ms_max=113.138 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.095 age_ms_max=122.495 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.65 age_ms_max=109.482 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.204 age_ms_max=122.312 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.011 age_ms_max=114.052 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.745 age_ms_max=123.272 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.305 age_ms_max=113.407 samples=9 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=111.588 age_ms_max=112.269 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.717 age_ms_max=112.778 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.894 age_ms_max=123.322 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.483 age_ms_max=114.037 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.506 age_ms_max=123.955 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.094 age_ms_max=114.842 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=121.695 age_ms_max=122.259 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.989 age_ms_max=113.725 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.925 age_ms_max=123.342 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.888 age_ms_max=115.269 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.001 age_ms_max=125.145 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.836 age_ms_max=113.816 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.812 age_ms_max=123.943 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.144 age_ms_max=113.811 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.087 age_ms_max=122.716 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.683 age_ms_max=113.32 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.952 age_ms_max=122.688 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.704 age_ms_max=112.784 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.188 age_ms_max=113.653 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=106.551 age_ms_max=107.03 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.532 age_ms_max=122.7 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.307 age_ms_max=113.236 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=117.805 age_ms_max=122.813 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=108.853 age_ms_max=113.457 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.92 age_ms_max=120.094 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.003 age_ms_max=113.881 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.487 age_ms_max=125.955 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=110.887 age_ms_max=116.2 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.537 age_ms_max=115.319 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.06 age_ms_max=109.462 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.717 age_ms_max=122.559 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.783 age_ms_max=114.697 samples=10 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.136 age_ms_max=124.275 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.546 age_ms_max=114.149 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.482 age_ms_max=126.807 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=112.801 age_ms_max=114.181 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=114.46 age_ms_max=123.689 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.394 age_ms_max=114.423 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=112.799 age_ms_max=122.949 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=107.908 age_ms_max=112.991 samples=10 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.657 age_ms_max=125.801 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.491 age_ms_max=114.194 samples=9 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.14 age_ms_max=123.994 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.353 age_ms_max=114.467 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.204 age_ms_max=123.626 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.245 age_ms_max=116.92 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=120.015 age_ms_max=126.699 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.679 age_ms_max=116.798 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=116.912 age_ms_max=126.056 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.783 age_ms_max=116.758 samples=8 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=125.833 age_ms_max=126.62 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=116.298 age_ms_max=116.87 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=118.533 age_ms_max=125.649 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.666 age_ms_max=116.318 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=124.558 age_ms_max=125.96 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=115.751 age_ms_max=117.639 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=123.327 age_ms_max=127.369 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.028 age_ms_max=116.957 samples=11 lidar_buffer=0 imu_buffer=40
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=115.714 age_ms_max=123.48 samples=9
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=109.592 age_ms_max=114.863 samples=8 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=122.826 age_ms_max=124.594 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=113.256 age_ms_max=114.091 samples=11 lidar_buffer=0 imu_buffer=39
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=119.908 age_ms_max=123.425 samples=11
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=111.153 age_ms_max=114.35 samples=11 lidar_buffer=0 imu_buffer=40

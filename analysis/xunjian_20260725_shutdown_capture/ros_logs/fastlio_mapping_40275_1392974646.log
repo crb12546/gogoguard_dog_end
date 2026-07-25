@@ -1,0 +1,3098 @@
+[INFO] [0001392974.669990208] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [0001392974.688227232] [laser_mapping]: Node init finished.
+[WARN] [0001392974.820518784] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392974.911137760] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.005216512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.095254560] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.185220160] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.276604992] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.371043200] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.456883712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.549957984] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.645402336] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.738124544] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392975.905257280] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392976.065225056] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392976.198608992] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392976.328934240] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392976.456543808] [laser_mapping]: No point, skip this scan!
+
+[WARN] [0001392976.545392032] [laser_mapping]: No point, skip this scan!
+
+[INFO] [0001392976.637221824] [laser_mapping]: Initialize the map kdtree
+[WARN] [1783858632.986127965] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858632.995392317] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858633.005237149] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858633.015272413] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858633.025156221] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858633.035176765] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858633.045982781] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.355266045] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.366599773] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.375257917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.385205085] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.755281341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.765248349] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858634.775225853] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.855261501] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.865209757] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.875268381] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.885182813] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.895309373] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.905239581] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.915184573] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.925239837] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.935218717] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.945222525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.955212829] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858635.965231293] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.155299613] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.165236765] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.175207677] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.185176893] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.195174237] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.205178525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.215163325] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.225226525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.235228317] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.245236061] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858637.255226365] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858638.455311581] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858638.465255133] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858638.475230845] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858638.485231517] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858638.495226333] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.255309565] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.265218525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.275193789] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.285225981] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.295219677] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.305389597] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.315186717] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.325272125] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.335253213] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.345320509] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.355230077] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.365247581] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.375234109] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.385204605] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.395190877] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.405157917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.415147837] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.425167133] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.435205373] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858650.445208925] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.295225245] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.305220989] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.315220541] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.325220669] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.335159773] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.345174973] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.355147613] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.365249789] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.375206557] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.385205149] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.395207517] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.405221917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858652.415216797] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.285270813] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.295221341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.305207997] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.315205853] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.325208477] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.335216477] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.345224861] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.355208925] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.365205341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.375207709] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.385209437] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858658.395229661] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.235301373] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.245222077] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.255229757] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.265211165] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.275257629] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.285202365] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.295176253] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.305176381] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.315182877] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.325224637] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858664.335208733] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.165279577] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.175169961] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.185285901] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.195231484] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.205223348] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.215224193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.225242713] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.235228951] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858666.245250444] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.365274683] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.375220843] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.385241024] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.395186481] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.405206981] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.415206378] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.425193274] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.435204022] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.445206233] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858672.455161762] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.555298193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.565212264] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.575205606] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.585211259] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.595222636] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.605153527] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.615206475] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.625206564] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858674.635218964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.455271210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.465220192] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.475203873] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.485236772] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.495205774] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.505205317] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.515223345] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.525207154] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.535365446] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.545208032] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.555219184] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.565218855] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.575203623] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.585224785] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.595224712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.605187126] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.615209215] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.625209430] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.635230464] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858676.645231638] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858686.985282917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858686.995172412] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.005210815] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.015160207] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.025220029] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.035218782] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.045221598] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.055219903] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.065189512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.075207939] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.085208163] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.095268913] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.105167921] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.115223808] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.125205862] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.135162516] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.145228896] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.155228928] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.165171730] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.175250042] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.185224195] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858687.195176210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858693.205264277] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858693.215217529] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858693.225244302] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858693.235157851] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858693.245236166] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.765352020] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.775283678] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.785240996] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.795273179] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.805227713] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.815165610] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.825205023] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.835213947] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858694.845169409] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.225274657] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.235219093] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.245146603] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.255207626] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.265206901] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.275156295] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.285208872] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.295205331] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858696.305232184] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.745254132] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.755193237] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.765204460] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.775184295] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.785205117] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.795216724] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.805162996] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.815209126] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858699.825228955] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.615313623] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.625241220] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.635378519] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.645218158] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.655242351] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.665340231] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.675257013] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.685181186] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.695388524] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.705479173] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.715237703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858701.731567703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.725309505] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.735227516] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.745186578] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.755213284] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.765227958] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.775279397] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.785226108] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.795244366] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.805222339] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.815223895] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858707.825277669] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.696883845] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.705207110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.715221561] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.725232364] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.735229343] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.745227763] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.755227366] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.765218203] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.775219662] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.785222753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.795207254] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.805223240] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858711.815224444] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.005271434] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.015181526] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.025210172] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.035140487] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.045202027] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.055208466] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.065217625] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.075166403] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858716.085233928] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.085294850] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.095213414] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.105198664] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.115208680] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.125206761] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.135275687] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.145226121] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.155226602] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.165207340] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858718.175239819] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.175296448] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.185206678] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.195228648] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.205236155] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.215157489] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.225207074] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.235223957] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.245191049] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.255754439] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858720.265212014] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.245320663] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.255253529] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.265322934] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.275182137] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.285242231] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.295337171] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.305235349] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.315200118] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.325254643] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.335182804] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.345223090] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.357079350] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.365335085] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.378414858] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.385216911] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.395226318] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.405589218] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.415244844] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.425259691] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.435238667] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.445217643] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858722.455231369] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.485322862] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.495220061] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.505219115] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.515192409] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.525160871] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.535228852] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.545206914] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.555228560] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.565157502] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.575174348] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.585207065] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858738.595208999] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.435242614] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.445222657] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.455155588] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.465236290] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.475210893] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.485145104] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858740.495151680] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858741.965268983] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858741.975225196] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858741.985227018] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858741.995235016] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.005203730] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.015205471] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.025210508] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.035208601] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.045221800] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.055294913] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.065217728] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.075225838] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.085206360] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.095155900] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.105206033] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.115212063] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.125218092] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.135226523] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.145207172] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858742.155208497] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.935303351] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.945241867] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.955274862] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.965256296] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.975803169] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.986362940] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858743.995260322] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.005359235] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.015242080] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.025273845] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.035228510] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.045207659] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.055171062] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.065171014] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.075222974] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.085208492] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858744.095227616] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858745.965281723] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858745.975298658] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858745.985230299] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858745.995160532] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.005150775] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.015221344] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.025229147] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.035232341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.045199146] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.055187649] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.065228161] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.075243325] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858746.085227604] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.015244323] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.025167157] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.035186867] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.047847964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.055243218] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.065232397] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.075218311] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.085821653] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.095176505] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.105239261] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.115194195] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.125253975] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858750.135252658] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.705311253] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.715208958] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.726090252] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.735205997] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.745208229] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.755163638] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.765203987] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.775210411] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.785187711] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.795209434] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.805202960] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.815208168] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858751.825240260] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.577153596] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.585775744] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.595265265] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.605264995] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.615265365] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.625301484] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.635262681] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.645237671] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.655234937] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.665228394] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858753.675263617] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.675280078] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.685222331] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.695254194] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.705227618] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.715224342] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.725227626] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.735230622] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.745201902] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858757.755201986] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.705279360] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.715239446] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.725234511] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.735192901] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.745190559] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.755173879] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858759.765140526] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858761.355233090] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858761.365221093] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858761.375188518] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858761.385222510] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858761.395231603] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.045285380] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.055867151] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.065229187] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.075209746] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.085224870] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.095227704] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.105225641] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.115178550] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.125268945] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.135822265] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.145218800] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.155198592] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.165150029] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.175207716] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.185169298] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.195206216] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.205208249] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.215161703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.225206685] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.235204110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858763.245230147] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858764.975356012] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858764.985225753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858764.995633753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.005586119] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.015221991] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.025227274] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.035220428] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.045236912] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.055235026] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.065296954] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.075288700] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.085162930] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.095226106] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.105251039] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.115167258] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.125161500] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858765.135225924] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858766.975269247] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858766.985221958] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858766.995217169] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.005205206] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.015207788] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.025281576] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.035206327] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.045262258] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.055183809] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.065182967] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.075145193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858767.085270794] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.915268848] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.925210092] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.935211661] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.945219054] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.955209134] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.965158090] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.975206351] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.985222993] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858768.995218769] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858769.005217259] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858769.015218775] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858769.025196418] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858769.035162955] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.055288028] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.065230684] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.075218496] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.085187170] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.095196295] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.105512806] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.115229332] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.125332161] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.135212188] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.145179774] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.155215654] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.165230476] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.175324344] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858771.185317469] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.685243103] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.695288484] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.705261028] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.715220708] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.725221638] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.735254346] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.745598882] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.755331795] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.765207405] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858781.775178317] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.665294781] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.675155964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.685239048] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.695274322] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.705209141] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.715205884] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.725230181] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.735181897] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.745224787] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.755240027] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.765228162] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.775143364] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.785806900] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.795189909] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.805251136] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.815248679] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.825225709] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.835240950] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.845189946] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.855208770] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.865208489] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.875180847] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858783.885236026] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.785249397] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.795220610] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.805240625] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.815213822] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.825170121] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.835142230] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.845242186] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.855230935] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858785.865218853] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858787.975271081] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858787.985842592] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858787.995242005] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.005208297] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.015208118] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.025224738] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.035204492] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.045207160] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.055205891] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.065248497] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.075221658] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858788.085234182] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.055298512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.065178624] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.075270554] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.085200973] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.095212259] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.105207769] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.115223951] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.125180899] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.135210650] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.145208144] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.155218886] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.165225277] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858790.175192145] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.155270159] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.165218446] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.175144780] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.185212081] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.195209458] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.205236118] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.215206582] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.225193495] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.235149110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.245205883] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.255243358] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.265250753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.275219777] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.285222338] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858792.295227364] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858802.955295621] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858802.965244849] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858802.975196125] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858802.985588060] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858802.995592746] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.005248138] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.015222513] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.025248121] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.035177597] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.045243239] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.055237166] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.065209492] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.075205275] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.085185825] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.095241963] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.105264627] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858803.115185367] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.145326038] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.155271553] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.165177643] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.175229850] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.185225223] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.195213300] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.205203585] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.215205743] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.225173339] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.235230026] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.245213303] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858807.255237253] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.115712212] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.126072772] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.135321385] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.145292361] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.155195047] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.165444882] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.175306830] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.185266574] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.195261424] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.205270194] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.215271860] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.225285910] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.235194964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.245235799] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.255227800] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.265218265] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.275189978] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.285219197] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.295235423] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.305216256] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.315450026] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.325216003] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.335352106] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.345209894] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.355230056] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.365241290] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.375304302] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.385239501] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.395216270] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.405264210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.415293812] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858809.425204563] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858811.315256831] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858811.325243381] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858811.335207243] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858811.345277828] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.405306472] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.415222098] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.425197789] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.435205769] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.445207702] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.455188385] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.465227631] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.475225563] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.485209415] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.495207411] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.505220736] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.515219756] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.525243609] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858813.535219204] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.485291038] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.495219806] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.505226177] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.515205571] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.525219462] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.535181863] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.545206250] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.555186380] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.565224112] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.575188817] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.585246134] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.595204791] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.605201114] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858815.615208348] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.425273307] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.435250379] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.445226906] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.455179497] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.465220187] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.475241484] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.485228380] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.495191372] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.505161243] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858828.515222478] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858830.385300326] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858830.395183693] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858830.405186743] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858830.415243684] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858830.425245646] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.825311967] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.835192675] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.845220652] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.855225171] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.865195226] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.875191873] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.885224234] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.895226578] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.905311388] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.915159871] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.925205000] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.935198127] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.945194551] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.955205919] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.965219975] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858831.975208526] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.625273684] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.635218955] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.645182562] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.655166842] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.665205171] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.675218923] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.685196899] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.695216988] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.705244853] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.715206252] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.725232133] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858837.735170907] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.882771351] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.885215674] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.895156775] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.905224729] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.915227880] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.925229623] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.935224679] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.945224854] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858841.955223525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.355287422] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.365211874] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.375211495] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.385209293] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.395219955] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.405208409] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.415209279] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.425209701] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.435162025] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.445157999] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858846.455210518] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.044447646] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.045150448] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.055184617] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.065204161] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.075208922] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.085205682] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.095204938] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.105207330] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.115203322] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858855.125206866] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.195268738] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.205217975] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.215202796] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.225151520] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.235208247] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.245204077] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.255169505] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.265206072] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858857.275204941] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.365240793] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.375164554] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.385206366] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.395206033] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.405240965] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.415142198] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.425205803] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.435207294] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.445207377] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858859.455237701] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.795283467] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.805252633] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.815222247] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.825187285] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.835223749] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.845223731] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.855220482] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.865223249] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.875224000] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.885222959] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.895220125] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858863.905198956] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.855274214] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.865219729] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.875223486] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.885222667] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.895230232] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.905224005] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.915232146] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858865.925222686] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.105257586] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.115197304] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.125232834] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.135235926] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.145209714] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.155206631] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858870.165240530] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.646700120] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.655195795] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.665955497] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.675241945] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.685210682] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.695179867] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.705174805] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.715212069] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858878.725163242] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.775313270] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.785224368] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.795147047] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.805206044] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.815195395] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.825234077] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.835204712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.845177139] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.855150749] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858880.865146594] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.855295341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.865242918] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.875233077] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.885234337] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.895206388] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.905204097] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.915221673] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.925165571] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.935211268] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.945208113] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858882.955235799] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.035304000] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.045218729] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.055227324] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.065195033] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.075208650] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.085205312] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.095206805] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.105155734] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.115203552] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.125222033] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.135304307] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.145179205] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.155213266] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.165266842] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.175210236] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.185206514] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.198874902] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.207513031] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.215256294] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.226373560] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.235274060] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858885.249386889] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.726267434] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.736159514] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.745223461] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.755211299] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.765194370] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.775150535] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.785206552] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.795206485] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858900.805169272] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.715378556] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.725262498] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.735215740] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.745246248] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.755174086] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858902.765264198] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.575284559] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.585245274] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.595187785] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.605205802] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.615221548] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.625228943] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.635175708] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858904.645210075] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.425229534] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.435223222] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.445214861] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.455255580] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.465230551] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.475215471] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.485254271] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.495236696] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.505420847] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.515227238] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.525201472] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.535209525] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.545206028] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.555205858] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.565206712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.575233066] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.585208964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.595205915] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858906.605208624] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.407196083] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.415204932] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.425220711] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.435217998] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.445206134] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.455169059] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.465219617] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.475220295] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858908.485245225] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.625314206] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.644647102] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.645177494] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.655192759] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.665233685] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.675215387] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.685213822] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.695167079] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858923.705231586] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.835274923] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.845198269] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.855222402] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.865187246] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.875228273] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.885210875] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858925.895190662] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.048962552] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.055234919] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.065246275] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.075182888] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.085194692] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.095145703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.105227770] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.115226935] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.125148382] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.135290505] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.145232237] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.155210797] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.165272611] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.175210151] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.185229346] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.195182661] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.205173603] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.215231641] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858928.225228567] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.235404743] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.245191968] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.255220124] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.265240313] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.275216347] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.285803027] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.295225560] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.305258771] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.315350791] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.326072783] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.335831723] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.345209366] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.355382944] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.365174712] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.375224945] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.385314726] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.395754191] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.405215024] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.415488814] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858930.425218318] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.445232985] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.455204860] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.465206460] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.475205116] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.485207996] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.495204893] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.505218235] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.515219675] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.525265334] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.535222587] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.545204766] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.555204926] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.565207230] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.575230267] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.585149989] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.595208446] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.605208094] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.615206847] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.625180930] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858932.635200384] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858936.989624288] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858936.995228332] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.005205646] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.015221657] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.025173580] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.035155741] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.045158603] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.055238256] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.065957071] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.075169364] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.085187616] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.095221003] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.105227609] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.115276450] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.125923432] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.135911512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.145222418] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.155245246] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.165243917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.175218590] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.188430857] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.195304817] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858937.205241190] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.225318301] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.235236914] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.245241053] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.255242633] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.265208889] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.275206341] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.285205265] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.295218107] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.305231494] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.315233777] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.325209120] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.335225322] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.345224086] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.355203972] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.365276648] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.375216282] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.385205095] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.395225489] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.405205727] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.415228904] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.425230324] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.435230272] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.445194896] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.455156384] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858939.465234147] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.575273402] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.585223237] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.595220331] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.605158231] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.615205785] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.625206494] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.635207748] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.645163374] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858948.655206544] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.855594989] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.856612335] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.865182066] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.875214510] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.885208173] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.895171312] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.905416152] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.917741279] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.925212168] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.935264482] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.945267201] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.955436624] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.965256352] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.975196324] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.985656600] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858950.995284473] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858951.005196644] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858951.015257961] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858951.026147363] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858951.038501110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858951.045209230] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.125274110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.135869067] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.145201321] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.155203628] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.165179505] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.175162325] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.185178582] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.195183160] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.205195930] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.215227386] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.225230588] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.235242142] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.245296220] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.255238244] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.265221224] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.275205964] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.285227437] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.295208177] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.305180534] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.315206678] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.325206137] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.335236089] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858953.345250106] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.435476477] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.445171409] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.455309471] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.465658330] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.475249400] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.485202869] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.495230573] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.505231206] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.515220769] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.525239737] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.535484445] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.545154483] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.555217544] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.565239423] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.575209148] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.585208885] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.595204047] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.605235270] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.615211906] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.625153921] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.635155930] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.645176082] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.655182155] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858955.665193988] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.815303897] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.825220592] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.835208352] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.845229839] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.855233918] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.865144950] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.875231870] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.885167923] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.895396560] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.905166643] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.915428557] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.925246732] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.935201440] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858957.945382561] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.115278270] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.125223315] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.135191397] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.145194997] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.155188806] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.165181974] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.175170631] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.185247985] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.195192486] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.205183062] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.215175559] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.225212244] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858960.235183526] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.415316192] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.425221516] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.435207826] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.445228373] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.455232153] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.465267323] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.475157672] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.485823992] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.495165969] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.505250415] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.515222805] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.525229753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.535250876] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.545198277] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858962.555228455] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.445280408] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.455223715] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.465179246] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.475209268] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.485211580] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.495209603] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.505257512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.515223986] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.525206299] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.535222401] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.545207594] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858969.555212306] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.055284730] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.065237545] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.075232372] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.085207233] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.095224298] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858973.105208950] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.209396686] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.215774654] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.226573316] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.235237434] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.246257681] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.255522366] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.265460414] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.275254440] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.285224325] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.295231937] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858975.305244123] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.235241862] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.245200820] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.255260604] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.265144752] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.275210455] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.285210499] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858977.295205359] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858978.997331907] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.005276383] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.015220575] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.025294614] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.035276210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.045271982] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.055201263] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.065319907] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.075179271] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.085159748] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.095240219] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.105243638] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.115239698] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.125230062] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.135418462] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858979.145151371] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.935246858] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.945198193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.955212147] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.965207831] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.975232057] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.985229564] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858980.995208353] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858981.005206052] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858981.015221070] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858981.025726585] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858981.035209284] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.566370660] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.575965807] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.585283628] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.595223426] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.605211285] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858982.615213224] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.365261910] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.375185482] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.385222327] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.395205063] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.405221365] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.415206213] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.425184405] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.435205795] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.445170292] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.455206145] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858986.465188753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.395267845] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.405170471] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.415228097] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.425235581] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.435234202] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.445213528] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.455150104] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858988.465214449] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.715282767] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.725246484] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.735228409] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.745251771] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.755221855] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.765221347] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.775223334] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.785231752] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858994.795220556] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.065224159] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.075220661] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.085206858] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.095163106] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.105208885] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.115227849] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.125228606] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.135246322] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.145206153] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.155216574] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783858997.165218387] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.515251078] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.525227922] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.535246557] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.545234314] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.555226070] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.565217442] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.575204718] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.585265495] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.595230533] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.605236496] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859001.615203453] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.855316564] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.865207152] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.875213286] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.885205917] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.895210388] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.905212490] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.915157923] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.925208791] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859003.935207374] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.945288898] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.955256868] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.965229222] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.975224136] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.985206186] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859005.995220426] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859006.005195436] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859006.015219504] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859006.025227990] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859006.035222428] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859006.045156870] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.284875720] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.285191835] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.295223210] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.305184636] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.315161006] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.325263674] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.335221133] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.345163488] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.355183919] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.365223294] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859015.375226255] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.918241206] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.925278866] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.935221718] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.945205401] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.955173372] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.965167550] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.975207358] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.985209375] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859019.995207521] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.595241325] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.605188900] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.615219673] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.625207663] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.635205700] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.645205370] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.655212495] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.665206597] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.675209914] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859024.685178193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859026.975278140] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859026.985199900] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859026.995186937] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.005212086] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.015849087] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.025231927] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.037012819] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.045448496] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.057370567] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.065293559] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.075828291] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.085392085] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.095401685] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.105936385] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.115200830] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.125240957] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.135210943] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.145249438] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859027.155243103] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.305259473] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.315223706] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.325188771] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.335208842] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.345209714] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.355228953] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.365224673] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.375197450] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.385146323] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.395256855] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.406104543] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.415266566] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859029.425188849] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.135337355] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.145252423] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.155287134] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.165247417] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.175216690] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.185229931] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.195214180] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.205219549] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.215305074] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.225247853] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.235257862] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859034.245214112] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.075221478] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.085228046] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.095201655] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.105224127] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.115235527] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.125199761] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.135230264] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.145257631] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.155192810] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859039.165243537] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.675302849] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.685601555] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.695205437] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.705268695] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.715239124] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.725797343] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.735315243] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.745247753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.755173000] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.765237443] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.775242111] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.785648238] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859046.795227544] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.115250801] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.125225814] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.135220987] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.145220671] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.155183333] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.165197001] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.175208173] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.185208145] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.195252244] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859049.205272375] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859051.475310939] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859051.485232679] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859051.495237040] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859051.506481203] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.725296663] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.735224072] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.745161656] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.755193478] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.765181428] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.775182946] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.785223727] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.795163456] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859053.805205165] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859055.955250979] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859055.965214487] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859055.975209483] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859055.985182014] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859055.995204817] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859056.005209732] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859056.015144540] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859056.025208271] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859056.035229380] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859056.045205146] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.105587703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.115330872] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.126843142] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.135247663] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.145211946] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.155222595] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.165247868] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.175242294] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.185265136] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859058.195248106] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.165224866] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.175207617] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.185205983] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.195205374] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.205206780] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.215202554] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.225196601] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.235195447] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.245163318] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.255206643] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859060.265207282] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.245298336] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.255223717] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.265225863] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.275221578] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.285218189] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.295227407] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.305237457] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859062.315219732] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.865346717] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.877824634] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.885255449] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.895234743] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.905709511] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.915149363] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.925169999] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.935210027] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.945163785] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859076.955213061] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.255938429] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.265223249] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.275249266] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.285210965] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.295295924] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.305209753] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.315194619] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.325802669] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859079.335209246] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.645278481] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.655227864] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.665179870] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.675681174] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.685206407] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.695214316] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.705175538] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.715208982] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859081.725209467] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859083.958041998] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859083.965147806] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859083.975166150] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859083.985208941] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859083.995205621] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859084.005209597] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859084.015231942] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859084.025198512] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859084.035203482] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.355263836] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.365231145] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.375431601] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.385189923] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.395242382] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.405245275] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.415250727] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.425571660] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.435220289] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.445253965] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859086.455278873] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.385277120] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.395200670] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.405184635] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.415258485] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.425233074] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.435179664] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.445223659] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.455163016] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.465226563] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859098.475237279] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.905271658] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.915218666] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.925204969] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.935204999] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.945206598] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.955173189] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.965205763] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.975210977] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859100.985209664] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.305289381] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.315218280] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.325211178] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.335142606] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.345204878] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.355205840] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.365217746] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859103.375203668] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.739276393] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.745219110] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.755204618] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.765207662] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.775180883] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.785208439] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.795209979] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859105.805235902] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.135251288] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.145150017] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.155208743] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.165193615] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.175206517] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.185207293] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.195205348] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.205177292] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859108.215166995] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.515243892] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.525235933] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.535208167] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.545206608] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.555159739] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.566911870] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.575427399] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.585258420] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.595786098] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1783859110.605397763] [laser_mapping]: No point, skip this scan!
+
+[WA

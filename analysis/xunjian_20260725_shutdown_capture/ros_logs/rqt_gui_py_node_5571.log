@@ -1,0 +1,22 @@
+[rospy.client][INFO] 1970-01-01 13:26:39,489: init_node, name[/rqt_gui_py_node_5571], pid[5571]
+[xmlrpc][INFO] 1970-01-01 13:26:39,490: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 1970-01-01 13:26:39,491: Started XML-RPC server [http://ubuntu:45047/]
+[rospy.init][INFO] 1970-01-01 13:26:39,491: ROS Slave URI: [http://ubuntu:45047/]
+[rospy.impl.masterslave][INFO] 1970-01-01 13:26:39,491: _ready: http://ubuntu:45047/
+[rospy.registration][INFO] 1970-01-01 13:26:39,492: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 1970-01-01 13:26:39,492: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 1970-01-01 13:26:39,592: registered with master
+[rospy.rosout][INFO] 1970-01-01 13:26:39,592: initializing /rosout core topic
+[rospy.rosout][INFO] 1970-01-01 13:26:39,595: connected to core topic /rosout
+[rospy.simtime][INFO] 1970-01-01 13:26:39,597: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 1970-01-01 13:26:39,788: topic[/camera/stereo_module/parameter_descriptions] adding connection to [http://ubuntu:44025/], count 0
+[rospy.internal][INFO] 1970-01-01 13:26:39,789: topic[/camera/stereo_module/parameter_updates] adding connection to [http://ubuntu:44025/], count 0
+[rospy.internal][INFO] 1970-01-01 13:26:39,854: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 1970-01-01 13:26:43,775: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_descriptions...
+[rospy.internal][INFO] 1970-01-01 13:26:43,777: topic[/camera/stereo_module/parameter_descriptions] removing connection to http://ubuntu:44025/
+[rospy.internal][INFO] 1970-01-01 13:26:43,777: topic[/camera/stereo_module/parameter_descriptions] removing connection to http://ubuntu:44025/
+[rospy.internal][INFO] 1970-01-01 13:26:43,781: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_updates...
+[rospy.internal][INFO] 1970-01-01 13:26:43,782: topic[/camera/stereo_module/parameter_updates] removing connection to http://ubuntu:44025/
+[rospy.core][INFO] 1970-01-01 13:26:43,805: signal_shutdown [atexit]
+[rospy.internal][INFO] 1970-01-01 13:26:43,809: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 1970-01-01 13:26:43,810: atexit

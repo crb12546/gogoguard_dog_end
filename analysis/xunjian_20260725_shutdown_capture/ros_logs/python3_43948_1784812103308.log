@@ -1,0 +1,64 @@
+[INFO] [1784812103.793318675] [waypoint_follower]: simple csv waypoint_follower started: sequential line-lock controller
+[INFO] [1784812103.798747835] [waypoint_follower]: route_file=/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/test/line_corner_route.csv, points=17, length=4.00m, loop_mode=once
+[INFO] [1784812103.799378862] [waypoint_follower]: single_controller: ordered CSV tangent plus continuous cross-track correction, vy=0, deadband=0.030m, lookahead=0.50m, max_correction=12.0deg, course_window=0.80s, course_min_distance=0.12m, minimum_moving_speed=0.35m/s
+[INFO] [1784812103.799954048] [waypoint_follower]: corner: angle=30.0deg, slowdown=0.90m, reach=0.20m; same controller remains active through corners
+[INFO] [1784812103.800500433] [waypoint_follower]: progress policy: advance every passed ordered CSV gate; nearest-route projection and lateral gate lock disabled
+[INFO] [1784812103.801047714] [waypoint_follower]: feedback policy: hard freshness uses local receive time; message stamp age is diagnostic only; normal<=0.60s, slow<=1.20s, hold>=2.00s, recovery_samples=5
+[INFO] [1784812103.801603251] [waypoint_follower]: deviation policy: emergency=1.50m/1.0s
+[WARN] [1784812106.952501871] [waypoint_follower]: waiting for fresh odometry before patrol: receive_gap=infs, stamp_age=60.002s, fresh=1/5
+[INFO] [1784812107.181589425] [waypoint_follower]: route start aligned: distance=0.000m, yaw_error=0.0deg, first_segment=0->1
+[INFO] [1784812107.209416556] [waypoint_follower]: mode=TRACK, reason=continuous_csv_tracking, feedback=NORMAL, odom_receive_age=0.027s, odom_stamp_age=60.001s, motion_scale=1.00, dir=1, segment=0->1, s=0.00/4.00, pose=(0.000,0.000,0.000), route_yaw=0.000, guide_yaw=0.000, line_error=0.000m, cross_velocity=0.000m/s, predicted_line_error=0.000m, correction_angle=0.0deg, target_heading=0.000, heading_feedback=body:0.000, course_yaw=nan, course_speed=0.000m/s, body_course_slip=0.0deg, course_route_error=infdeg, heading_error=0.0deg, remaining=0.250m, corner_remaining=-1.000m, next_turn=0.0deg, cmd=(0.030,0.000,0.000)
+[INFO] [1784812108.215201629] [waypoint_follower]: mode=TRACK, reason=continuous_csv_tracking, feedback=NORMAL, odom_receive_age=0.043s, odom_stamp_age=60.001s, motion_scale=1.00, dir=1, segment=0->1, s=0.00/4.00, pose=(0.000,0.000,0.000), route_yaw=0.000, guide_yaw=0.000, line_error=0.000m, cross_velocity=0.000m/s, predicted_line_error=0.000m, correction_angle=0.0deg, target_heading=0.000, heading_feedback=body:0.000, course_yaw=nan, course_speed=0.000m/s, body_course_slip=0.0deg, course_route_error=infdeg, heading_error=0.0deg, remaining=0.250m, corner_remaining=-1.000m, next_turn=0.0deg, cmd=(0.500,0.000,0.000)
+[INFO] [1784812109.259900164] [waypoint_follower]: mode=TRACK, reason=continuous_csv_tracking, feedback=NORMAL, odom_receive_age=0.015s, odom_stamp_age=60.002s, motion_scale=1.00, dir=1, segment=0->1, s=0.00/4.00, pose=(0.000,0.000,0.000), route_yaw=0.000, guide_yaw=0.000, line_error=0.000m, cross_velocity=0.000m/s, predicted_line_error=0.000m, correction_angle=0.0deg, target_heading=0.000, heading_feedback=body:0.000, course_yaw=nan, course_speed=0.000m/s, body_course_slip=0.0deg, course_route_error=infdeg, heading_error=0.0deg, remaining=0.250m, corner_remaining=-1.000m, next_turn=0.0deg, cmd=(0.500,0.000,0.000)
+[INFO] [1784812110.258706820] [waypoint_follower]: mode=TRACK, reason=continuous_csv_tracking, feedback=NORMAL, odom_receive_age=0.117s, odom_stamp_age=60.001s, motion_scale=1.00, dir=1, segment=0->1, s=0.00/4.00, pose=(0.000,0.000,0.000), route_yaw=0.000, guide_yaw=0.000, line_error=0.000m, cross_velocity=0.000m/s, predicted_line_error=0.000m, correction_angle=0.0deg, target_heading=0.000, heading_feedback=body:0.000, course_yaw=nan, course_speed=0.000m/s, body_course_slip=0.0deg, course_route_error=infdeg, heading_error=0.0deg, remaining=0.250m, corner_remaining=-1.000m, next_turn=0.0deg, cmd=(0.500,0.000,0.000)
+[WARN] [1784812110.758888509] [waypoint_follower]: feedback mode=DEGRADED, odom_receive_age=0.617s, odom_stamp_age=60.001s, motion_scale=0.99
+[INFO] [1784812111.309223044] [waypoint_follower]: mode=TRACK, reason=continuous_csv_tracking, feedback=DEGRADED, odom_receive_age=1.167s, odom_stamp_age=60.001s, motion_scale=0.53, dir=1, segment=0->1, s=0.00/4.00, pose=(0.000,0.000,0.000), route_yaw=0.000, guide_yaw=0.000, line_error=0.000m, cross_velocity=0.000m/s, predicted_line_error=0.000m, correction_angle=0.0deg, target_heading=0.000, heading_feedback=body:0.000, course_yaw=nan, course_speed=0.000m/s, body_course_slip=0.0deg, course_route_error=infdeg, heading_error=0.0deg, remaining=0.250m, corner_remaining=-1.000m, next_turn=0.0deg, cmd=(0.350,0.000,0.000)
+[WARN] [1784812111.358390002] [waypoint_follower]: feedback mode=DECELERATE, odom_receive_age=1.217s, odom_stamp_age=60.001s, motion_scale=0.50
+[ERROR] [1784812112.158305912] [waypoint_follower]: odometry stream stopped; smoothly hold and wait for automatic recovery: receive_age=2.017s, stamp_age=60.001s
+[WARN] [1784812112.159186067] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=2.017s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812113.208358799] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=3.067s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812114.258429194] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=4.117s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812115.258464414] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=5.117s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812116.308247766] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=6.167s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812117.308243310] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=7.167s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812118.358435832] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=8.217s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812119.408238138] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=9.267s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812120.408349630] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=10.267s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812121.458320490] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=11.317s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812122.508365980] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=12.367s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812123.508409831] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=13.367s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812124.558249528] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=14.417s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812125.558485710] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=15.417s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812126.608366407] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=16.467s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812127.608424829] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=17.467s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812128.608454005] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=18.467s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812129.658476666] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=19.517s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812130.658918693] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=20.517s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812131.708480994] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=21.567s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812132.709207130] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=22.567s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812133.758421746] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=23.617s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812134.808456710] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=24.667s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812135.808394639] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=25.667s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812136.808404444] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=26.667s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812137.858379575] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=27.717s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812138.908395478] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=28.767s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812139.958325269] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=29.817s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812140.958376655] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=30.817s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812141.958371337] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=31.817s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812142.958434953] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=32.817s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812144.008356083] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=33.867s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812145.058387619] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=34.917s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812146.058392841] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=35.917s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812147.108304091] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=36.967s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812148.108338183] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=37.967s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812149.108349173] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=38.967s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812150.158402580] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=40.017s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812151.158719920] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=41.017s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812152.208436906] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=42.067s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812153.208369312] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=43.067s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812154.258329159] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=44.117s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812155.308382517] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=45.167s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812156.308367028] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=46.167s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812157.308393367] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=47.167s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812158.358320808] [waypoint_follower]: patrol waiting for fresh odometry: receive_age=48.217s, stamp_age=60.001s, fresh=0/5; auto-resume enabled
+[WARN] [1784812159.358331024] [waypoint_follower]: patrol waiting

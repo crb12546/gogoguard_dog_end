@@ -1,0 +1,20 @@
+{
+  "deduplicated_samples": 57,
+  "finite_samples": 125,
+  "generated_at": "2026-07-20T16:15:32+0800",
+  "isolated_spikes_removed": 0,
+  "max_odom_step_m": 0.3,
+  "max_record_step_m": 0.8,
+  "max_route_gap_m": 0.19999999999999998,
+  "mean_route_gap_m": 0.17540042185677734,
+  "raw_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/xbf0720-1.raw.csv",
+  "raw_samples": 125,
+  "route_file": "/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf0720-1.csv",
+  "route_points": 3,
+  "simplified_vertices": 2,
+  "simplify_tolerance_m": 0.03,
+  "straight_spacing_m": 0.2,
+  "turn_angle_deg": 5.0,
+  "turn_confirm_samples": 2,
+  "turn_spacing_m": 0.1
+}

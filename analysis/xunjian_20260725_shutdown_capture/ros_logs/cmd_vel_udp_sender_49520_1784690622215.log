@@ -1,0 +1,2 @@
+[INFO] [1784690622.257987200] [cmd_vel_udp_sender]: UDP sender to 127.0.0.1:5005, max_vy=0.100, unitree_vy_sign=-1
+[INFO] [1784690626.766572310] [rclcpp]: signal_handler(signal_value=2)

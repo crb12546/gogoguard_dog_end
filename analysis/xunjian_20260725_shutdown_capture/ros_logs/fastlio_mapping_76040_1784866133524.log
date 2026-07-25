@@ -1,0 +1,3 @@
+[INFO] [1784866133.550472748] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1784866133.555929633] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[INFO] [1784866133.564198068] [laser_mapping]: Node init finished.

@@ -1,0 +1,20 @@
+[INFO] [1784613397.181626557] [waypoint_follower]: simple csv waypoint_follower started
+[INFO] [1784613397.186180641] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/room1.csv
+[INFO] [1784613397.186850233] [waypoint_follower]: route_transform_json: identity
+[INFO] [1784613397.187506256] [waypoint_follower]: route_frame_mode: False, yaw_old_from_current=0.0000
+[INFO] [1784613397.188131911] [waypoint_follower]: route points: 3
+[INFO] [1784613397.188761310] [waypoint_follower]: v_base: 0.25, max_vx: 0.25, use_route_speed: True
+[INFO] [1784613397.189380116] [waypoint_follower]: yaw_limits: max=0.3, non_corner=0.35
+[INFO] [1784613397.189992298] [waypoint_follower]: lateral_yaw_gain: 0.18, max_lateral_yaw_rate: 0.15, lateral_deadband: 0.03
+[INFO] [1784613397.195493808] [waypoint_follower]: lateral velocity correction: gain=0.40, max_vy=0.10m/s, deadband=0.03m, heading_limit=30.0deg
+[INFO] [1784613397.196117542] [waypoint_follower]: loop_mode: once
+[INFO] [1784613397.196720124] [waypoint_follower]: lookahead_distance: 0.8
+[INFO] [1784613397.197344370] [waypoint_follower]: dynamic_lookahead: enabled=True, straight=0.8, corner=0.25, corner_angle_deg=60.0, scan_distance=1.0, corner_turn_distance=0.55, corner_exit_distance=0.3, corner_wiggle_distance=1.6, corner_wiggle_min_opposite_angle_deg=30.0, corner_heading_blend=0.2, corner_lateral_scale=0.4
+[INFO] [1784613397.197945864] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1784613397.198568926] [waypoint_follower]: turn_crawl_vx: 0.06
+[INFO] [1784613397.199173716] [waypoint_follower]: odom_jump_limits: distance=0.8, z=0.5, dt=2.0
+[INFO] [1784613397.199775594] [waypoint_follower]: start_policy: route_start, start_max_distance: 0.5, start_max_yaw_error: 0.9
+[INFO] [1784613397.200379360] [waypoint_follower]: allow_global_relocalize: False, stuck_relocalize: False, recovery_distance: 1.0, recovery_heading_distance: 0.35, recovery_yaw_error: 0.75, recovery_vx: 0.2, max_route_deviation: 5.0
+[INFO] [1784613397.200975061] [waypoint_follower]: soft_unstick_yaw_rate: 0.2, soft_unstick_min_moved: 0.12, progress_s_epsilon: 0.08
+[INFO] [1784613397.201570634] [waypoint_follower]: projection: local route window enabled; speed-step clamp disabled; configured_speed_scale=1.2, configured_max_step=0.12, progress_forward_tolerance=0.45, progress_backtrack_tolerance=0.12
+[INFO] [1784613398.921607160] [waypoint_follower]: waypoint_follower stopped by Ctrl+C

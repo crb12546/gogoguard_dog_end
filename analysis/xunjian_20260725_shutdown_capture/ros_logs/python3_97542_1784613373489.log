@@ -1,0 +1,14 @@
+[INFO] [1784613373.903203465] [route_recorder]: route_recorder started
+[INFO] [1784613373.907729741] [route_recorder]: odom_topic: /codex_no_odom
+[INFO] [1784613373.909191137] [route_recorder]: route_file: /tmp/codex_route_cyclone_smoke.csv
+[INFO] [1784613373.909770774] [route_recorder]: raw_file: /tmp/raw/codex_route_cyclone_smoke.raw.csv
+[INFO] [1784613373.910390700] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784613373.910998114] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m, straighten=True, stable_yaw=4.0deg, min_straight=1.00m, max_lateral_fix=0.35m
+[INFO] [1784613373.911583863] [route_recorder]: quality gate: warmup=0.0s, stable_samples=5, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, hard_source_gap=3.00m (0=disabled), large_gap_streak=1.50m x 5, global_heading_gate=0.0deg
+[INFO] [1784613373.912165132] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, soft_interpolation_gap=0.80m, gap_yaw_change=15.0deg, track_continuity=25.0deg, body_yaw_mismatch=diagnostic_only
+[INFO] [1784613373.912736833] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784613375.705510505] [route_recorder]: route_recorder stopped
+[ERROR] [1784613375.707429422] [route_recorder]: RECORDING_FAILED: final CSV quality validation failed: route has 0 points; minimum is 5; route length 0.000m is below minimum 1.000m; odometry rejection ratio 100.0% exceeds 10.0%
+[ERROR] [1784613375.708123143] [route_recorder]: invalid route retained at: /tmp/invalid/codex_route_cyclone_smoke.invalid_20260721_135615.csv
+[INFO] [1784613375.710390649] [route_recorder]: quality report saved: /tmp/quality/codex_route_cyclone_smoke.quality.json
+[ERROR] [1784613375.712105943] [route_recorder]: RECORDING_FAILED: route has 0 points; minimum is 5; route length 0.000m is below minimum 1.000m; odometry rejection ratio 100.0% exceeds 10.0%

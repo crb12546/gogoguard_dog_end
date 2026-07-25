@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Z-1Pro Retest</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #101114; color: #eee; }
+  p { color: #c8c8c8; line-height: 1.5; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { background: #1d1f25; padding: 12px; border-radius: 8px; border: 1px solid #30333b; }
+  .card h2 { margin: 0 0 8px; font-size: 18px; }
+  img, video { width: 100%; height: auto; display: block; background: #000; border-radius: 4px; }
+  video { margin-top: 10px; }
+  a { color: #8ec5ff; }
+  code { color: #f1d88a; }
+</style>
+<h1>Z-1Pro Retest</h1>
+<p>这次测试先保存 <code>current_no_command</code>，也就是当前物理安装后、不发送任何云台姿态命令的画面。随后依次测试 front、pitch、yaw、接近后向，以及边录边转。</p>
+<p>规格表偏航范围为 <code>±140°</code>，所以后向近似仍使用 <code>±120°</code>。</p>
+<p>原始日志：<a href="status.txt">status.txt</a></p>
+<div class="grid">
+  <div class="card"><h2>current_no_command</h2><img src="current_no_command.jpg"><video src="current_no_command.mp4" controls></video></div>
+  <div class="card"><h2>front</h2><img src="front.jpg"><video src="front.mp4" controls></video></div>
+  <div class="card"><h2>pitch_down_10</h2><img src="pitch_down_10.jpg"><video src="pitch_down_10.mp4" controls></video></div>
+  <div class="card"><h2>pitch_up_10</h2><img src="pitch_up_10.jpg"><video src="pitch_up_10.mp4" controls></video></div>
+  <div class="card"><h2>yaw_right_30</h2><img src="yaw_right_30.jpg"><video src="yaw_right_30.mp4" controls></video></div>
+  <div class="card"><h2>yaw_left_30</h2><img src="yaw_left_30.jpg"><video src="yaw_left_30.mp4" controls></video></div>
+  <div class="card"><h2>rear_like_right_120</h2><img src="rear_like_right_120.jpg"><video src="rear_like_right_120.mp4" controls></video></div>
+  <div class="card"><h2>rear_like_left_120</h2><img src="rear_like_left_120.jpg"><video src="rear_like_left_120.mp4" controls></video></div>
+  <div class="card"><h2>front_restore</h2><img src="front_restore.jpg"><video src="front_restore.mp4" controls></video></div>
+</div>
+<div class="card" style="margin-top:18px">
+  <h2>motion_yaw_pitch_sequence</h2>
+  <p>录制过程中执行：front -> yaw +60 -> yaw -60 -> pitch -15 -> front。</p>
+  <video src="motion_yaw_pitch_sequence.mp4" controls></video>
+</div>

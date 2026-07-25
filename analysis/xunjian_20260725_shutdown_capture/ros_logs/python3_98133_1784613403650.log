@@ -1,0 +1,11 @@
+[INFO] [1784613403.827793890] [unitree_cmd_node]: unitree_cmd_node ACTIVE
+[INFO] [1784613403.832758708] [unitree_cmd_node]: /codex_no_motion_cmd -> /codex_no_sport_request
+[INFO] [1784613403.833388619] [unitree_cmd_node]: Move api_id=1008, StopMove api_id=1003
+[INFO] [1784613403.834013313] [unitree_cmd_node]: max_vx=0.25
+[INFO] [1784613403.834648920] [unitree_cmd_node]: max_vy=0.15
+[INFO] [1784613403.835261454] [unitree_cmd_node]: max_yaw_rate=0.45
+[INFO] [1784613403.835863876] [unitree_cmd_node]: publish_rate=20.0 Hz
+[INFO] [1784613403.836464953] [unitree_cmd_node]: cmd_timeout=0.5 s
+[WARN] [1784613403.844893192] [unitree_cmd_node]: StopMove because /patrol_cmd timeout
+[WARN] [1784613404.874178420] [unitree_cmd_node]: StopMove because /patrol_cmd timeout
+[INFO] [1784613405.671061242] [unitree_cmd_node]: Ctrl+C, publish StopMove

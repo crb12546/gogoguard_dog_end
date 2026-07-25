@@ -1,0 +1,49 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-25-00-28-48-998240-ubuntu-374085
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [livox_ros_driver2_node-1]: process started with pid [374141]
+[livox_ros_driver2_node-1] 1784910529.124611 [0] livox_ros_: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[livox_ros_driver2_node-1] [INFO] [1784910529.140379898] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.6
+[livox_ros_driver2_node-1] [INFO] [1784910529.140961587] [livox_lidar_publisher]: Data Source is raw lidar.
+[livox_ros_driver2_node-1] [INFO] [1784910529.141007477] [livox_lidar_publisher]: Config file : /home/unitree/go2_fastlio_ws/src/livox_ros_driver2/launch_ROS2/../config/MID360s_config.json
+[livox_ros_driver2_node-1] LdsLidar *GetInstance
+[livox_ros_driver2_node-1] config lidar type: 8
+[livox_ros_driver2_node-1] successfully parse base config, counts: 1
+[livox_ros_driver2_node-1] [INFO] [1784910529.145328403] [livox_lidar_publisher]: Init lds lidar success!
+[livox_ros_driver2_node-1] GetFreeIndex key:livox_lidar_2701240512.
+[livox_ros_driver2_node-1] LIVOX_POINTCLOUD_POLL_READY startup_delay_ms=0
+[livox_ros_driver2_node-1] LIVOX_PRESAMPLING_DROP lidar=0 state=0
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=199.347 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.642 queue_depth=0
+[livox_ros_driver2_node-1] set pcl data type, handle: 2701240512, data type: 1
+[livox_ros_driver2_node-1] set scan pattern, handle: 2701240512, scan pattern: 0
+[livox_ros_driver2_node-1] begin to change work mode to 'Normal', handle: 2701240512
+[livox_ros_driver2_node-1] successfully set data type, handle: 2701240512, set_bit: 2
+[livox_ros_driver2_node-1] successfully set pattern mode, handle: 2701240512, set_bit: 0
+[livox_ros_driver2_node-1] successfully set lidar attitude, ip: 192.168.1.161
+[livox_ros_driver2_node-1] successfully change work mode, handle: 2701240512
+[livox_ros_driver2_node-1] successfully enable Livox Lidar imu, ip: 192.168.1.161
+[livox_ros_driver2_node-1] [INFO] [1784910531.234499685] [livox_lidar_publisher]: livox/lidar publish use livox custom format
+[livox_ros_driver2_node-1] LIVOX_PRESAMPLING_READY lidar=0 discarded_total=20
+[livox_ros_driver2_node-1] Init queue, real query size:16.
+[livox_ros_driver2_node-1] Lidar[0] storage queue size: 10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.425 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.997 queue_depth=0
+[livox_ros_driver2_node-1] [INFO] [1784910532.145729659] [livox_lidar_publisher]: livox/imu publish use imu format
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=193.377 frame_age_ms_max=263.609 publish_path_ms_avg=139.637 publish_path_ms_max=214.659 queue_used_after_max=2 skipped=2 skipped_total=2 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.261 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.235 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=228.611 frame_age_ms_max=278.487 publish_path_ms_avg=167.162 publish_path_ms_max=206.859 queue_used_after_max=2 skipped=4 skipped_total=6 samples=6
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=199.585 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.628 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=192.609 frame_age_ms_max=280.684 publish_path_ms_avg=127.913 publish_path_ms_max=202.774 queue_used_after_max=2 skipped=3 skipped_total=9 samples=9
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.058 imu_hz=200.237 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.097 queue_depth=1
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=212.930 frame_age_ms_max=281.561 publish_path_ms_avg=129.353 publish_path_ms_max=217.197 queue_used_after_max=2 skipped=3 skipped_total=12 samples=8
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.070 imu_hz=199.572 span_ms=99.350 points=19872 lidar_imu_offset_ms=2.883 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.307 frame_age_ms_max=215.150 publish_path_ms_avg=110.619 publish_path_ms_max=182.750 queue_used_after_max=2 skipped=1 skipped_total=13 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.059 imu_hz=200.256 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.534 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=159.177 frame_age_ms_max=231.524 publish_path_ms_avg=133.511 publish_path_ms_max=213.696 queue_used_after_max=2 skipped=3 skipped_total=16 samples=8
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.068 imu_hz=199.522 span_ms=99.350 points=19872 lidar_imu_offset_ms=4.560 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=189.298 frame_age_ms_max=330.547 publish_path_ms_avg=132.899 publish_path_ms_max=235.906 queue_used_after_max=3 skipped=3 skipped_total=19 samples=8
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.067 imu_hz=200.434 span_ms=99.350 points=19872 lidar_imu_offset_ms=1.681 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=182.891 frame_age_ms_max=197.325 publish_path_ms_avg=102.455 publish_path_ms_max=102.506 queue_used_after_max=1 skipped=0 skipped_total=19 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.062 imu_hz=200.329 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.301 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=126.247 frame_age_ms_max=200.663 publish_path_ms_avg=102.529 publish_path_ms_max=102.744 queue_used_after_max=2 skipped=1 skipped_total=20 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.057 imu_hz=199.314 span_ms=99.350 points=19872 lidar_imu_offset_ms=3.467 queue_depth=0
+[livox_ros_driver2_node-1] LIVOX_PUBLISH_TIMING frame_age_ms_avg=148.363 frame_age_ms_max=162.529 publish_path_ms_avg=102.410 publish_path_ms_max=102.518 queue_used_after_max=1 skipped=0 skipped_total=20 samples=10
+[livox_ros_driver2_node-1] LIVOX_STREAM_HEALTH frame_hz=10.071 imu_hz=200.499 span_ms=99.350 points=19872 lidar_imu_offset_ms=0.748 queue_depth=0

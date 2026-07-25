@@ -1,0 +1,553 @@
+[INFO] [1782621292.585825268] [unitree_safe_cmd_node]: unitree_safe_cmd_node ACTIVE: obstacle -> Move(0,0,0), resume after 5 clear frames
+[WARN] [1782621292.589154999] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=0
+[WARN] [1782621293.137170885] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=2
+[WARN] [1782621293.637171464] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=5
+[WARN] [1782621294.187455833] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=8
+[WARN] [1782621294.737350633] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=10
+[WARN] [1782621295.237218124] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=14
+[WARN] [1782621295.787145309] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=17
+[WARN] [1782621296.337202477] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=19
+[WARN] [1782621296.837197424] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=20
+[WARN] [1782621297.337197748] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=22
+[WARN] [1782621297.837275831] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=25
+[WARN] [1782621298.337294458] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=29
+[WARN] [1782621298.838202174] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=33
+[WARN] [1782621299.386919021] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=36
+[WARN] [1782621299.892404693] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=40
+[WARN] [1782621300.443606087] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=45
+[WARN] [1782621300.987147537] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=49
+[WARN] [1782621301.487395029] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=51
+[WARN] [1782621302.037142405] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=54
+[INFO] [1782621302.588863319] [unitree_safe_cmd_node]: Move x=0.000, z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=55
+[INFO] [1782621303.137000870] [unitree_safe_cmd_node]: Move x=0.500, z=0.040, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=57
+[INFO] [1782621303.637028233] [unitree_safe_cmd_node]: Move x=0.500, z=0.039, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=58
+[INFO] [1782621304.137046252] [unitree_safe_cmd_node]: Move x=0.500, z=0.041, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=59
+[INFO] [1782621304.687005084] [unitree_safe_cmd_node]: Move x=0.500, z=0.038, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=61
+[INFO] [1782621305.236831309] [unitree_safe_cmd_node]: Move x=0.500, z=0.036, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=63
+[INFO] [1782621305.737047152] [unitree_safe_cmd_node]: Move x=0.500, z=0.039, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=64
+[INFO] [1782621306.287059072] [unitree_safe_cmd_node]: Move x=0.500, z=0.040, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=66
+[INFO] [1782621306.787658852] [unitree_safe_cmd_node]: Move x=0.500, z=0.045, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=68
+[INFO] [1782621307.288948264] [unitree_safe_cmd_node]: Move x=0.500, z=0.036, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=70
+[INFO] [1782621307.839081209] [unitree_safe_cmd_node]: Move x=0.500, z=0.040, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=73
+[INFO] [1782621308.387327304] [unitree_safe_cmd_node]: Move x=0.500, z=0.056, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=75
+[INFO] [1782621308.937080568] [unitree_safe_cmd_node]: Move x=0.500, z=-0.100, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=77
+[INFO] [1782621309.437179323] [unitree_safe_cmd_node]: Move x=0.500, z=-0.106, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=78
+[INFO] [1782621309.987356812] [unitree_safe_cmd_node]: Move x=0.500, z=-0.173, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=82
+[INFO] [1782621310.537218844] [unitree_safe_cmd_node]: Move x=0.500, z=-0.274, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=87
+[INFO] [1782621311.089496302] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=93
+[INFO] [1782621311.637008796] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=98
+[INFO] [1782621312.137045280] [unitree_safe_cmd_node]: Move x=0.500, z=-0.425, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=103
+[INFO] [1782621312.687122640] [unitree_safe_cmd_node]: Move x=0.500, z=-0.244, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=108
+[INFO] [1782621313.237109984] [unitree_safe_cmd_node]: Move x=0.500, z=-0.070, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=113
+[INFO] [1782621313.737244004] [unitree_safe_cmd_node]: Move x=0.500, z=0.109, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=118
+[INFO] [1782621314.287254228] [unitree_safe_cmd_node]: Move x=0.500, z=0.369, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=123
+[INFO] [1782621314.838414694] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=128
+[INFO] [1782621315.387070549] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=134
+[INFO] [1782621315.937298821] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=139
+[INFO] [1782621316.487101557] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=145
+[INFO] [1782621316.987063321] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=150
+[INFO] [1782621317.487100092] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=154
+[INFO] [1782621317.987716800] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=159
+[INFO] [1782621318.537285072] [unitree_safe_cmd_node]: Move x=0.500, z=0.402, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=164
+[INFO] [1782621319.087078880] [unitree_safe_cmd_node]: Move x=0.500, z=0.018, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=170
+[INFO] [1782621319.587584803] [unitree_safe_cmd_node]: Move x=0.500, z=-0.234, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=174
+[INFO] [1782621320.137090611] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=180
+[INFO] [1782621320.687032868] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=185
+[INFO] [1782621321.188088456] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=190
+[INFO] [1782621321.687199626] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=194
+[INFO] [1782621322.237060890] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=200
+[INFO] [1782621322.787245291] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=205
+[INFO] [1782621323.287326350] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=210
+[INFO] [1782621323.837294847] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=215
+[INFO] [1782621324.387086383] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=221
+[INFO] [1782621324.938777409] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=226
+[INFO] [1782621325.487057967] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=232
+[INFO] [1782621325.987090451] [unitree_safe_cmd_node]: Move x=0.500, z=-0.342, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=236
+[INFO] [1782621326.487747830] [unitree_safe_cmd_node]: Move x=0.500, z=-0.009, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=240
+[INFO] [1782621326.987917946] [unitree_safe_cmd_node]: Move x=0.500, z=0.194, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=245
+[INFO] [1782621327.488335709] [unitree_safe_cmd_node]: Move x=0.500, z=0.428, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=249
+[INFO] [1782621328.037049229] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=255
+[INFO] [1782621328.587128125] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=260
+[INFO] [1782621329.139803056] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=266
+[INFO] [1782621329.687243806] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=271
+[INFO] [1782621330.237308686] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=276
+[INFO] [1782621330.787230942] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=282
+[INFO] [1782621331.287388258] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=287
+[INFO] [1782621331.838958260] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=292
+[INFO] [1782621332.387010658] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=297
+[INFO] [1782621332.890033064] [unitree_safe_cmd_node]: Move x=0.500, z=0.130, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=302
+[INFO] [1782621333.437737046] [unitree_safe_cmd_node]: Move x=0.500, z=-0.112, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=307
+[INFO] [1782621333.987036806] [unitree_safe_cmd_node]: Move x=0.500, z=-0.327, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=311
+[INFO] [1782621334.487078377] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=315
+[INFO] [1782621334.987284365] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=319
+[INFO] [1782621335.537151101] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=324
+[INFO] [1782621336.037424257] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=329
+[INFO] [1782621336.591905877] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=335
+[INFO] [1782621337.138935203] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=340
+[INFO] [1782621337.690399540] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=345
+[INFO] [1782621338.237280610] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=350
+[INFO] [1782621338.787689042] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=355
+[INFO] [1782621339.337096834] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=360
+[INFO] [1782621339.887058835] [unitree_safe_cmd_node]: Move x=0.500, z=-0.320, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=365
+[INFO] [1782621340.388706167] [unitree_safe_cmd_node]: Move x=0.500, z=-0.185, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=370
+[INFO] [1782621340.937656743] [unitree_safe_cmd_node]: Move x=0.500, z=0.008, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=374
+[INFO] [1782621341.487088631] [unitree_safe_cmd_node]: Move x=0.500, z=0.180, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=379
+[INFO] [1782621342.037497031] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=384
+[INFO] [1782621342.587164471] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=389
+[INFO] [1782621343.138620649] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=395
+[INFO] [1782621343.687117208] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=400
+[INFO] [1782621344.187248219] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=405
+[INFO] [1782621344.737311532] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=410
+[INFO] [1782621345.287250588] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=416
+[INFO] [1782621345.837416524] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=421
+[INFO] [1782621346.387427613] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=426
+[INFO] [1782621346.936991053] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=432
+[INFO] [1782621347.437171856] [unitree_safe_cmd_node]: Move x=0.500, z=0.136, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=437
+[INFO] [1782621347.940895287] [unitree_safe_cmd_node]: Move x=0.500, z=-0.029, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=442
+[INFO] [1782621348.487475492] [unitree_safe_cmd_node]: Move x=0.500, z=-0.305, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=447
+[INFO] [1782621349.037341908] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=452
+[INFO] [1782621349.587672037] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=458
+[INFO] [1782621350.136991733] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=463
+[INFO] [1782621350.637066392] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=467
+[INFO] [1782621351.187080744] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=472
+[INFO] [1782621351.737112281] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=477
+[INFO] [1782621352.287051113] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=482
+[INFO] [1782621352.837043641] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=487
+[INFO] [1782621353.342249537] [unitree_safe_cmd_node]: Move x=0.500, z=-0.447, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=491
+[INFO] [1782621353.886898829] [unitree_safe_cmd_node]: Move x=0.500, z=-0.291, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=496
+[INFO] [1782621354.388321393] [unitree_safe_cmd_node]: Move x=0.500, z=0.018, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=501
+[INFO] [1782621354.937073376] [unitree_safe_cmd_node]: Move x=0.500, z=0.308, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=506
+[INFO] [1782621355.487119601] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=511
+[INFO] [1782621355.987128564] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=516
+[INFO] [1782621356.487183639] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=521
+[INFO] [1782621357.037090792] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=526
+[INFO] [1782621357.587090392] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=531
+[INFO] [1782621358.087436092] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=535
+[INFO] [1782621358.587275039] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=539
+[INFO] [1782621359.137024207] [unitree_safe_cmd_node]: Move x=0.500, z=0.423, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=544
+[INFO] [1782621359.637063058] [unitree_safe_cmd_node]: Move x=0.500, z=0.362, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=548
+[INFO] [1782621360.187084962] [unitree_safe_cmd_node]: Move x=0.500, z=0.206, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=553
+[INFO] [1782621360.687083782] [unitree_safe_cmd_node]: Move x=0.500, z=0.006, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=557
+[INFO] [1782621361.237039414] [unitree_safe_cmd_node]: Move x=0.500, z=-0.203, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=562
+[INFO] [1782621361.740112764] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=567
+[INFO] [1782621362.287200682] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=571
+[INFO] [1782621362.837081434] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=576
+[INFO] [1782621363.387428042] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=581
+[INFO] [1782621363.936656538] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=587
+[INFO] [1782621364.437189598] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=591
+[INFO] [1782621364.987065838] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=596
+[INFO] [1782621365.537035518] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=600
+[INFO] [1782621366.037568034] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=605
+[INFO] [1782621366.587015538] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=610
+[INFO] [1782621367.089875224] [unitree_safe_cmd_node]: Move x=0.500, z=-0.408, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=614
+[INFO] [1782621367.636850533] [unitree_safe_cmd_node]: Move x=0.500, z=-0.204, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=619
+[INFO] [1782621368.136988041] [unitree_safe_cmd_node]: Move x=0.500, z=-0.001, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=624
+[INFO] [1782621368.687137625] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=629
+[INFO] [1782621369.237692970] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=634
+[INFO] [1782621369.787243674] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=640
+[INFO] [1782621370.287837342] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=645
+[INFO] [1782621370.837017133] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=650
+[INFO] [1782621371.337399345] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=655
+[INFO] [1782621371.887261793] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=660
+[INFO] [1782621372.438322354] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=666
+[INFO] [1782621372.987085154] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=671
+[INFO] [1782621373.487422565] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=676
+[INFO] [1782621374.037263317] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=682
+[INFO] [1782621374.587120966] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=687
+[INFO] [1782621375.137887735] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=693
+[INFO] [1782621375.687242822] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=698
+[INFO] [1782621376.237601239] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=703
+[INFO] [1782621376.787311591] [unitree_safe_cmd_node]: Move x=0.500, z=0.442, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=708
+[INFO] [1782621377.337985272] [unitree_safe_cmd_node]: Move x=0.500, z=0.010, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=714
+[INFO] [1782621377.887085832] [unitree_safe_cmd_node]: Move x=0.500, z=-0.227, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=719
+[INFO] [1782621378.387108459] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=724
+[INFO] [1782621378.887549423] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=729
+[INFO] [1782621379.437051550] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=734
+[INFO] [1782621379.937070658] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=738
+[INFO] [1782621380.438569414] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=741
+[INFO] [1782621380.940993612] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=745
+[INFO] [1782621381.487172825] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=749
+[INFO] [1782621382.037481353] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=754
+[INFO] [1782621382.537726285] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=758
+[INFO] [1782621383.087517085] [unitree_safe_cmd_node]: Move x=0.500, z=-0.417, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=762
+[INFO] [1782621383.587177088] [unitree_safe_cmd_node]: Move x=0.500, z=-0.259, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=766
+[INFO] [1782621384.137040848] [unitree_safe_cmd_node]: Move x=0.500, z=-0.044, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=771
+[INFO] [1782621384.637338003] [unitree_safe_cmd_node]: Move x=0.500, z=0.162, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=775
+[INFO] [1782621385.187012675] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=780
+[INFO] [1782621385.687441063] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=784
+[INFO] [1782621386.237068055] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=1, nearest_x=0.89, clear_frames=789
+[INFO] [1782621386.737058234] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=71, nearest_x=0.62, clear_frames=794
+[INFO] [1782621387.237295838] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=136, nearest_x=0.41, clear_frames=799
+[INFO] [1782621387.787002574] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=2, roi_count=117, nearest_x=0.38, clear_frames=805
+[INFO] [1782621388.287059217] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=123, nearest_x=0.42, clear_frames=809
+[INFO] [1782621388.787162228] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=86, nearest_x=0.44, clear_frames=814
+[INFO] [1782621389.337114021] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=68, nearest_x=0.44, clear_frames=819
+[INFO] [1782621389.840002891] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=80, nearest_x=0.47, clear_frames=824
+[INFO] [1782621390.387579801] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=69, nearest_x=0.44, clear_frames=828
+[INFO] [1782621390.887099964] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=51, nearest_x=0.44, clear_frames=832
+[INFO] [1782621391.387176479] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=33, nearest_x=0.49, clear_frames=836
+[INFO] [1782621391.937038447] [unitree_safe_cmd_node]: Move x=0.500, z=0.287, stop_count=0, roi_count=22, nearest_x=0.65, clear_frames=840
+[INFO] [1782621392.487062335] [unitree_safe_cmd_node]: Move x=0.500, z=0.050, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=845
+[INFO] [1782621392.988378212] [unitree_safe_cmd_node]: Move x=0.500, z=-0.075, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=849
+[INFO] [1782621393.537032275] [unitree_safe_cmd_node]: Move x=0.500, z=-0.428, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=853
+[INFO] [1782621394.087099587] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=858
+[INFO] [1782621394.637086740] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=863
+[INFO] [1782621395.187086980] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=868
+[INFO] [1782621395.737037460] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=873
+[INFO] [1782621396.237093816] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=878
+[INFO] [1782621396.787039656] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=883
+[INFO] [1782621397.287088395] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=887
+[INFO] [1782621397.837219068] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=892
+[INFO] [1782621398.337381151] [unitree_safe_cmd_node]: Move x=0.500, z=-0.387, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=897
+[INFO] [1782621398.887436111] [unitree_safe_cmd_node]: Move x=0.500, z=-0.243, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=902
+[INFO] [1782621399.437042527] [unitree_safe_cmd_node]: Move x=0.500, z=-0.016, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=907
+[INFO] [1782621399.937041443] [unitree_safe_cmd_node]: Move x=0.500, z=0.133, stop_count=0, roi_count=6, nearest_x=0.88, clear_frames=911
+[INFO] [1782621400.487080851] [unitree_safe_cmd_node]: Move x=0.500, z=0.444, stop_count=0, roi_count=74, nearest_x=0.48, clear_frames=916
+[INFO] [1782621401.037057251] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=4, roi_count=61, nearest_x=0.35, clear_frames=921
+[WARN] [1782621401.276534683] [unitree_safe_cmd_node]: OBSTACLE DETECTED: stop_count=16, roi_count=38, nearest_x=0.35
+[WARN] [1782621401.587110068] [unitree_safe_cmd_node]: SAFE OVERRIDE obstacle: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.450, stop_count=2, roi_count=2, nearest_x=0.36, clear_frames=2
+[WARN] [1782621402.137138724] [unitree_safe_cmd_node]: SAFE OVERRIDE obstacle: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.450, stop_count=1, roi_count=26, nearest_x=0.40, clear_frames=1
+[INFO] [1782621402.504970480] [unitree_safe_cmd_node]: obstacle cleared after 5 clear frames, resume move
+[INFO] [1782621402.637281287] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=1, nearest_x=0.78, clear_frames=6
+[INFO] [1782621403.187079864] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=11
+[INFO] [1782621403.737296008] [unitree_safe_cmd_node]: Move x=0.500, z=-0.428, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=16
+[INFO] [1782621404.241160815] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=22
+[INFO] [1782621404.787198012] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=27
+[INFO] [1782621405.287336095] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=32
+[INFO] [1782621405.840326002] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=37
+[INFO] [1782621406.387103615] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=42
+[INFO] [1782621406.889092132] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=46
+[INFO] [1782621407.391480394] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=51
+[INFO] [1782621407.937017750] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=56
+[INFO] [1782621408.487620007] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=61
+[INFO] [1782621409.038438712] [unitree_safe_cmd_node]: Move x=0.500, z=-0.284, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=66
+[INFO] [1782621409.587140167] [unitree_safe_cmd_node]: Move x=0.500, z=-0.094, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=71
+[INFO] [1782621410.091531695] [unitree_safe_cmd_node]: Move x=0.500, z=0.106, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=76
+[INFO] [1782621410.637254875] [unitree_safe_cmd_node]: Move x=0.500, z=0.326, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=81
+[INFO] [1782621411.187043531] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=86
+[INFO] [1782621411.736870811] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=91
+[INFO] [1782621412.237236255] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=95
+[INFO] [1782621412.737022018] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=99
+[INFO] [1782621413.237074373] [unitree_safe_cmd_node]: Move x=0.500, z=0.302, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=103
+[INFO] [1782621413.737195753] [unitree_safe_cmd_node]: Move x=0.500, z=0.139, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=108
+[INFO] [1782621414.237252748] [unitree_safe_cmd_node]: Move x=0.500, z=-0.062, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=112
+[INFO] [1782621414.786972860] [unitree_safe_cmd_node]: Move x=0.500, z=-0.282, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=117
+[INFO] [1782621415.287044191] [unitree_safe_cmd_node]: Move x=0.500, z=-0.426, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=121
+[INFO] [1782621415.837013360] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=126
+[INFO] [1782621416.336993651] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=130
+[INFO] [1782621416.887044483] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=135
+[INFO] [1782621417.437194292] [unitree_safe_cmd_node]: Move x=0.500, z=-0.372, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=140
+[INFO] [1782621417.987082756] [unitree_safe_cmd_node]: Move x=0.500, z=-0.150, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=145
+[INFO] [1782621418.536990260] [unitree_safe_cmd_node]: Move x=0.500, z=-0.023, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=149
+[INFO] [1782621419.037066743] [unitree_safe_cmd_node]: Move x=0.500, z=0.157, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=154
+[INFO] [1782621419.587014376] [unitree_safe_cmd_node]: Move x=0.500, z=0.348, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=160
+[INFO] [1782621420.136998008] [unitree_safe_cmd_node]: Move x=0.500, z=0.437, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=165
+[INFO] [1782621420.637151419] [unitree_safe_cmd_node]: Move x=0.500, z=0.442, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=170
+[INFO] [1782621421.187584620] [unitree_safe_cmd_node]: Move x=0.500, z=0.374, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=176
+[INFO] [1782621421.737150876] [unitree_safe_cmd_node]: Move x=0.500, z=0.168, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=181
+[INFO] [1782621422.237873216] [unitree_safe_cmd_node]: Move x=0.500, z=0.029, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=185
+[INFO] [1782621422.787316112] [unitree_safe_cmd_node]: Move x=0.500, z=-0.136, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=190
+[INFO] [1782621423.337001376] [unitree_safe_cmd_node]: Move x=0.500, z=-0.297, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=195
+[INFO] [1782621423.837080323] [unitree_safe_cmd_node]: Move x=0.500, z=-0.424, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=200
+[INFO] [1782621424.338515912] [unitree_safe_cmd_node]: Move x=0.500, z=-0.421, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=205
+[INFO] [1782621424.887296375] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=210
+[INFO] [1782621425.387928859] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=215
+[INFO] [1782621425.937552747] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=220
+[INFO] [1782621426.437566478] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=224
+[INFO] [1782621426.987189758] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=230
+[INFO] [1782621427.487071105] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=234
+[INFO] [1782621428.037387762] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=239
+[INFO] [1782621428.587143330] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=244
+[INFO] [1782621429.137004434] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=250
+[INFO] [1782621429.637146037] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=254
+[INFO] [1782621430.137058777] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=258
+[INFO] [1782621430.687044809] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=263
+[INFO] [1782621431.237045145] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=267
+[INFO] [1782621431.787104618] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=272
+[INFO] [1782621432.288823182] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=277
+[INFO] [1782621432.836930045] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=281
+[INFO] [1782621433.337037472] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=286
+[INFO] [1782621433.839506214] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=290
+[INFO] [1782621434.387031860] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=295
+[INFO] [1782621434.887073719] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=298
+[INFO] [1782621435.387199963] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=302
+[INFO] [1782621435.888027231] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=307
+[INFO] [1782621436.443807348] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=312
+[INFO] [1782621436.987162942] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=317
+[INFO] [1782621437.487116546] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=322
+[INFO] [1782621437.990372392] [unitree_safe_cmd_node]: Move x=0.500, z=0.116, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=327
+[INFO] [1782621438.537029269] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=332
+[INFO] [1782621439.037272537] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=337
+[INFO] [1782621439.587280425] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=341
+[INFO] [1782621440.087348780] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=346
+[INFO] [1782621440.637036860] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=351
+[INFO] [1782621441.187193869] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=356
+[INFO] [1782621441.687403888] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=361
+[INFO] [1782621442.237075552] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=366
+[INFO] [1782621442.787173233] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=372
+[INFO] [1782621443.337010689] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=377
+[INFO] [1782621443.887026513] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=382
+[INFO] [1782621444.387304309] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=387
+[INFO] [1782621444.936981061] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=392
+[INFO] [1782621445.437050984] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=397
+[INFO] [1782621445.987891929] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=402
+[INFO] [1782621446.537067241] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=408
+[INFO] [1782621447.087120377] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=413
+[INFO] [1782621447.637132969] [unitree_safe_cmd_node]: Move x=0.500, z=-0.372, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=418
+[INFO] [1782621448.187067226] [unitree_safe_cmd_node]: Move x=0.500, z=-0.223, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=423
+[INFO] [1782621448.687167197] [unitree_safe_cmd_node]: Move x=0.500, z=-0.108, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=426
+[INFO] [1782621449.237056045] [unitree_safe_cmd_node]: Move x=0.500, z=0.120, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=432
+[INFO] [1782621449.787069790] [unitree_safe_cmd_node]: Move x=0.500, z=0.257, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=437
+[INFO] [1782621450.287063041] [unitree_safe_cmd_node]: Move x=0.500, z=0.371, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=441
+[INFO] [1782621450.787377444] [unitree_safe_cmd_node]: Move x=0.500, z=0.414, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=446
+[INFO] [1782621451.344203451] [unitree_safe_cmd_node]: Move x=0.500, z=0.407, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=451
+[INFO] [1782621451.886960549] [unitree_safe_cmd_node]: Move x=0.500, z=0.325, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=455
+[INFO] [1782621452.387137256] [unitree_safe_cmd_node]: Move x=0.500, z=0.170, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=460
+[INFO] [1782621452.937045592] [unitree_safe_cmd_node]: Move x=0.500, z=-0.006, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=465
+[INFO] [1782621453.437615548] [unitree_safe_cmd_node]: Move x=0.500, z=-0.208, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=470
+[INFO] [1782621453.987656877] [unitree_safe_cmd_node]: Move x=0.500, z=-0.367, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=475
+[INFO] [1782621454.486973903] [unitree_safe_cmd_node]: Move x=0.500, z=-0.424, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=480
+[INFO] [1782621455.037107552] [unitree_safe_cmd_node]: Move x=0.500, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=485
+[INFO] [1782621455.537245059] [unitree_safe_cmd_node]: Move x=0.500, z=-0.369, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=490
+[INFO] [1782621456.042368459] [unitree_safe_cmd_node]: Move x=0.500, z=-0.243, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=495
+[INFO] [1782621456.587185686] [unitree_safe_cmd_node]: Move x=0.500, z=-0.079, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=500
+[INFO] [1782621457.138174888] [unitree_safe_cmd_node]: Move x=0.500, z=0.082, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=506
+[INFO] [1782621457.687060855] [unitree_safe_cmd_node]: Move x=0.500, z=0.251, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=511
+[INFO] [1782621458.187035226] [unitree_safe_cmd_node]: Move x=0.500, z=0.368, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=516
+[INFO] [1782621458.736936298] [unitree_safe_cmd_node]: Move x=0.500, z=0.399, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=522
+[INFO] [1782621459.237220046] [unitree_safe_cmd_node]: Move x=0.500, z=0.355, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=526
+[INFO] [1782621459.787112030] [unitree_safe_cmd_node]: Move x=0.500, z=0.271, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=531
+[INFO] [1782621460.288783875] [unitree_safe_cmd_node]: Move x=0.500, z=0.153, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=536
+[INFO] [1782621460.837087186] [unitree_safe_cmd_node]: Move x=0.500, z=-0.051, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=541
+[INFO] [1782621461.387271266] [unitree_safe_cmd_node]: Move x=0.500, z=-0.180, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=546
+[INFO] [1782621461.937167955] [unitree_safe_cmd_node]: Move x=0.500, z=-0.301, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=552
+[INFO] [1782621462.487017283] [unitree_safe_cmd_node]: Move x=0.500, z=-0.313, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=557
+[INFO] [1782621463.037031347] [unitree_safe_cmd_node]: Move x=0.500, z=-0.333, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=562
+[INFO] [1782621463.537109238] [unitree_safe_cmd_node]: Move x=0.500, z=-0.268, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=567
+[INFO] [1782621464.088411560] [unitree_safe_cmd_node]: Move x=0.500, z=-0.137, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=572
+[INFO] [1782621464.636960183] [unitree_safe_cmd_node]: Move x=0.500, z=0.022, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=578
+[INFO] [1782621465.137021146] [unitree_safe_cmd_node]: Move x=0.500, z=0.130, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=582
+[INFO] [1782621465.687084587] [unitree_safe_cmd_node]: Move x=0.500, z=0.207, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=587
+[INFO] [1782621466.236985115] [unitree_safe_cmd_node]: Move x=0.500, z=0.310, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=592
+[INFO] [1782621466.740449249] [unitree_safe_cmd_node]: Move x=0.500, z=0.387, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=597
+[INFO] [1782621467.287046703] [unitree_safe_cmd_node]: Move x=0.500, z=0.309, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=601
+[INFO] [1782621467.787444594] [unitree_safe_cmd_node]: Move x=0.500, z=0.321, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=606
+[INFO] [1782621468.337520419] [unitree_safe_cmd_node]: Move x=0.500, z=0.206, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=611
+[INFO] [1782621468.887048530] [unitree_safe_cmd_node]: Move x=0.500, z=0.066, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=615
+[INFO] [1782621469.387064086] [unitree_safe_cmd_node]: Move x=0.500, z=0.287, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=620
+[INFO] [1782621469.887303193] [unitree_safe_cmd_node]: Move x=0.500, z=0.361, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=624
+[INFO] [1782621470.436992425] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=629
+[INFO] [1782621470.939439631] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=634
+[INFO] [1782621471.486866109] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=639
+[INFO] [1782621471.987048512] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=643
+[INFO] [1782621472.487105891] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=647
+[INFO] [1782621473.037232820] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=653
+[INFO] [1782621473.538286264] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=657
+[INFO] [1782621474.087043399] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=663
+[INFO] [1782621474.589205420] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=668
+[INFO] [1782621475.137166203] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=673
+[INFO] [1782621475.687646284] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=678
+[INFO] [1782621476.237451644] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=684
+[INFO] [1782621476.787234380] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=689
+[INFO] [1782621477.337116476] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=695
+[INFO] [1782621477.886903084] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=700
+[INFO] [1782621478.387048144] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=705
+[INFO] [1782621478.887250035] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=710
+[INFO] [1782621479.437028771] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=716
+[INFO] [1782621479.938152167] [unitree_safe_cmd_node]: Move x=0.500, z=0.437, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=721
+[INFO] [1782621480.486954487] [unitree_safe_cmd_node]: Move x=0.500, z=0.198, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=726
+[INFO] [1782621481.036967815] [unitree_safe_cmd_node]: Move x=0.500, z=-0.078, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=732
+[INFO] [1782621481.537321867] [unitree_safe_cmd_node]: Move x=0.500, z=-0.279, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=736
+[INFO] [1782621482.037299118] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=741
+[INFO] [1782621482.586935806] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=747
+[INFO] [1782621483.136629518] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=753
+[INFO] [1782621483.636609521] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=758
+[INFO] [1782621484.136799253] [unitree_safe_cmd_node]: Move x=0.500, z=-0.242, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=763
+[INFO] [1782621484.637199832] [unitree_safe_cmd_node]: Move x=0.500, z=-0.021, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=768
+[INFO] [1782621485.187385961] [unitree_safe_cmd_node]: Move x=0.500, z=0.184, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=773
+[INFO] [1782621485.687843788] [unitree_safe_cmd_node]: Move x=0.500, z=0.418, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=778
+[INFO] [1782621486.237337116] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=783
+[INFO] [1782621486.787044908] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=788
+[INFO] [1782621487.287085136] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=793
+[INFO] [1782621487.787626035] [unitree_safe_cmd_node]: Move x=0.500, z=0.368, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=797
+[INFO] [1782621488.337191971] [unitree_safe_cmd_node]: Move x=0.500, z=0.163, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=803
+[INFO] [1782621488.837044422] [unitree_safe_cmd_node]: Move x=0.500, z=-0.020, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=807
+[INFO] [1782621489.387017079] [unitree_safe_cmd_node]: Move x=0.500, z=-0.340, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=813
+[INFO] [1782621489.937198663] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=818
+[INFO] [1782621490.437220106] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=823
+[INFO] [1782621490.987821307] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=828
+[INFO] [1782621491.537067275] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=833
+[INFO] [1782621492.086715803] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=839
+[INFO] [1782621492.587098143] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=843
+[INFO] [1782621493.138200176] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=849
+[INFO] [1782621493.687988192] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=854
+[INFO] [1782621494.237064816] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=859
+[INFO] [1782621494.739842389] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=864
+[INFO] [1782621495.287087011] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=869
+[INFO] [1782621495.787369319] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=874
+[INFO] [1782621496.337115575] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=879
+[INFO] [1782621496.887021031] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=884
+[INFO] [1782621497.387103978] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=889
+[INFO] [1782621497.937099515] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=894
+[INFO] [1782621498.437394910] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=899
+[INFO] [1782621498.987004238] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=904
+[INFO] [1782621499.490821781] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=909
+[INFO] [1782621500.037003458] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=913
+[INFO] [1782621500.537186405] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=917
+[INFO] [1782621501.087031541] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=923
+[INFO] [1782621501.637016422] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=928
+[INFO] [1782621502.137025641] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=933
+[INFO] [1782621502.637163788] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=938
+[INFO] [1782621503.140939283] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=943
+[INFO] [1782621503.687119296] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=948
+[INFO] [1782621504.236892720] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=954
+[INFO] [1782621504.787223104] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=959
+[INFO] [1782621505.337079633] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=964
+[INFO] [1782621505.887358945] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=970
+[INFO] [1782621506.387046884] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=974
+[INFO] [1782621506.937144181] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=980
+[INFO] [1782621507.437159480] [unitree_safe_cmd_node]: Move x=0.500, z=0.308, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=985
+[INFO] [1782621507.987078472] [unitree_safe_cmd_node]: Move x=0.500, z=0.098, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=990
+[INFO] [1782621508.487543948] [unitree_safe_cmd_node]: Move x=0.500, z=-0.115, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=995
+[INFO] [1782621509.036881948] [unitree_safe_cmd_node]: Move x=0.500, z=-0.312, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1000
+[INFO] [1782621509.537055327] [unitree_safe_cmd_node]: Move x=0.500, z=-0.442, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1005
+[INFO] [1782621510.087006191] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1011
+[INFO] [1782621510.587680659] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1016
+[INFO] [1782621511.138009188] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1021
+[INFO] [1782621511.637370406] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1026
+[INFO] [1782621512.187634039] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1031
+[INFO] [1782621512.737258375] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1036
+[INFO] [1782621513.237038410] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1040
+[INFO] [1782621513.786811226] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1044
+[INFO] [1782621514.287039678] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1049
+[INFO] [1782621514.787085057] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1053
+[INFO] [1782621515.337165553] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1058
+[INFO] [1782621515.887763426] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1063
+[INFO] [1782621516.391691465] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1068
+[INFO] [1782621516.936940309] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1072
+[INFO] [1782621517.436974840] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1077
+[INFO] [1782621517.987674377] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1082
+[INFO] [1782621518.537016089] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1086
+[INFO] [1782621519.087080425] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1091
+[INFO] [1782621519.587765581] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1096
+[INFO] [1782621520.091535892] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1100
+[INFO] [1782621520.637387520] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1105
+[INFO] [1782621521.137233412] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1109
+[INFO] [1782621521.687109780] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1115
+[INFO] [1782621522.239768327] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1121
+[INFO] [1782621522.787062868] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1125
+[INFO] [1782621523.337380421] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1131
+[INFO] [1782621523.837794377] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1136
+[INFO] [1782621524.387105144] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1141
+[INFO] [1782621524.894662818] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1146
+[INFO] [1782621525.436793932] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1152
+[INFO] [1782621525.938529072] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1157
+[INFO] [1782621526.487335360] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1162
+[INFO] [1782621526.987493411] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1167
+[INFO] [1782621527.536988787] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1173
+[INFO] [1782621528.043648508] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1178
+[INFO] [1782621528.586987111] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1183
+[INFO] [1782621529.136980663] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1187
+[INFO] [1782621529.687061703] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1192
+[INFO] [1782621530.188763980] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1196
+[INFO] [1782621530.737066555] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1201
+[INFO] [1782621531.239130144] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1206
+[INFO] [1782621531.786712814] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1211
+[INFO] [1782621532.286799537] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1216
+[INFO] [1782621532.837271778] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1221
+[INFO] [1782621533.386916786] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1226
+[INFO] [1782621533.886997238] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1231
+[INFO] [1782621534.437550790] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1236
+[INFO] [1782621534.986680054] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1242
+[INFO] [1782621535.486909529] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1247
+[INFO] [1782621535.986873053] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1251
+[INFO] [1782621536.487248256] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1256
+[INFO] [1782621537.037644401] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1261
+[INFO] [1782621537.586905345] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1267
+[INFO] [1782621538.137030609] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1272
+[INFO] [1782621538.686985153] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1277
+[INFO] [1782621539.187038085] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1282
+[INFO] [1782621539.737112309] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1287
+[INFO] [1782621540.237814233] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1292
+[INFO] [1782621540.786634824] [unitree_safe_cmd_node]: Move x=0.000, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1298
+[INFO] [1782621541.286673227] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1302
+[INFO] [1782621541.786978383] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1306
+[INFO] [1782621542.341096739] [unitree_safe_cmd_node]: Move x=0.250, z=-0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1311
+[INFO] [1782621542.886666991] [unitree_safe_cmd_node]: Move x=0.500, z=-0.397, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1316
+[INFO] [1782621543.436784736] [unitree_safe_cmd_node]: Move x=0.500, z=-0.196, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1321
+[INFO] [1782621543.986993424] [unitree_safe_cmd_node]: Move x=0.500, z=0.006, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1326
+[INFO] [1782621544.487077972] [unitree_safe_cmd_node]: Move x=0.500, z=0.141, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1330
+[INFO] [1782621545.038126885] [unitree_safe_cmd_node]: Move x=0.500, z=0.353, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1336
+[INFO] [1782621545.587058996] [unitree_safe_cmd_node]: Move x=0.500, z=0.442, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1341
+[INFO] [1782621546.087155896] [unitree_safe_cmd_node]: Move x=0.500, z=0.444, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1346
+[INFO] [1782621546.636869992] [unitree_safe_cmd_node]: Move x=0.500, z=0.355, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1352
+[INFO] [1782621547.136963339] [unitree_safe_cmd_node]: Move x=0.500, z=0.290, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1357
+[INFO] [1782621547.687121563] [unitree_safe_cmd_node]: Move x=0.500, z=0.016, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1362
+[INFO] [1782621548.237165900] [unitree_safe_cmd_node]: Move x=0.500, z=-0.139, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1367
+[INFO] [1782621548.737254223] [unitree_safe_cmd_node]: Move x=0.500, z=-0.270, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1372
+[INFO] [1782621549.287229439] [unitree_safe_cmd_node]: Move x=0.500, z=-0.333, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1377
+[INFO] [1782621549.787618147] [unitree_safe_cmd_node]: Move x=0.500, z=-0.412, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1382
+[INFO] [1782621550.288191367] [unitree_safe_cmd_node]: Move x=0.500, z=-0.326, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1387
+[INFO] [1782621550.837183030] [unitree_safe_cmd_node]: Move x=0.500, z=-0.195, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1392
+[INFO] [1782621551.386948422] [unitree_safe_cmd_node]: Move x=0.500, z=-0.054, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1398
+[INFO] [1782621551.937241367] [unitree_safe_cmd_node]: Move x=0.500, z=0.147, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1403
+[INFO] [1782621552.487058567] [unitree_safe_cmd_node]: Move x=0.500, z=0.222, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1408
+[INFO] [1782621552.988430060] [unitree_safe_cmd_node]: Move x=0.500, z=0.382, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1413
+[INFO] [1782621553.488424079] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1417
+[INFO] [1782621554.037017342] [unitree_safe_cmd_node]: Move x=0.500, z=0.442, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1422
+[INFO] [1782621554.587088078] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1427
+[INFO] [1782621555.092494806] [unitree_safe_cmd_node]: Move x=0.250, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1432
+[INFO] [1782621555.637068034] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1436
+[INFO] [1782621556.187160850] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1441
+[INFO] [1782621556.737089059] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1446
+[INFO] [1782621557.237296838] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1450
+[INFO] [1782621557.787103318] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1454
+[INFO] [1782621558.337079142] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1460
+[INFO] [1782621558.838179979] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1465
+[INFO] [1782621559.339477743] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1469
+[INFO] [1782621559.887556830] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1475
+[INFO] [1782621560.387106465] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1479
+[INFO] [1782621560.887681732] [unitree_safe_cmd_node]: Move x=0.000, z=0.450, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1484
+[INFO] [1782621561.387167495] [unitree_safe_cmd_node]: Move x=0.000, z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1489
+[WARN] [1782621561.887460107] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1493
+[WARN] [1782621562.398899800] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1498
+[WARN] [1782621562.937368830] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1503
+[WARN] [1782621563.487212174] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1508
+[WARN] [1782621564.036814238] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1514
+[WARN] [1782621564.537215266] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1518
+[WARN] [1782621565.087216018] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1524
+[WARN] [1782621565.587220821] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1529
+[WARN] [1782621566.137508390] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1534
+[WARN] [1782621566.687124022] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1540
+[WARN] [1782621567.187809626] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1545
+[WARN] [1782621567.737156682] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1550
+[WARN] [1782621568.237536205] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1554
+[WARN] [1782621568.787684254] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1560
+[WARN] [1782621569.337224814] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1565
+[WARN] [1782621569.887173950] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1571
+[WARN] [1782621570.387669218] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1576
+[WARN] [1782621570.937470482] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1581
+[WARN] [1782621571.487271010] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1586
+[WARN] [1782621572.037215698] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1591
+[WARN] [1782621572.537199925] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1596
+[WARN] [1782621573.087177990] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1602
+[WARN] [1782621573.637219670] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1607
+[WARN] [1782621574.137384249] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1612
+[WARN] [1782621574.687494506] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1617
+[WARN] [1782621575.237350458] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1623
+[WARN] [1782621575.787242282] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1628
+[WARN] [1782621576.343179104] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1634
+[WARN] [1782621576.887174795] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1639
+[WARN] [1782621577.388027887] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1644
+[WARN] [1782621577.937195359] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1649
+[WARN] [1782621578.437391394] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1654
+[WARN] [1782621578.987016690] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1660
+[WARN] [1782621579.487212885] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1664
+[WARN] [1782621579.987254777] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1669
+[WARN] [1782621580.537191593] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1674
+[WARN] [1782621581.037277868] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1679
+[WARN] [1782621581.587204605] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1684
+[WARN] [1782621582.137187917] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1689
+[WARN] [1782621582.687193629] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1694
+[WARN] [1782621583.187246368] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, z=0.000, raw_x=0.000, raw_z=0.000, stop_count=0, roi_count=0, nearest_x=inf, clear_frames=1698
+[INFO] [1782621583.304017130] [unitree_safe_cmd_node]: Ctrl+C, publish Move(0,0,0)

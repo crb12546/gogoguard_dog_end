@@ -1,0 +1,22 @@
+1699347677.0213528 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-17-01-17-015854-ubuntu-4372
+1699347677.0218532 [INFO] [launch]: Default logging verbosity is set to INFO
+1699347677.1656306 [INFO] [dog_control_B1_one-1]: process started with pid [4409]
+1699347679.2248297 [INFO] [lio_sam_ros2_lidar_checkout-2]: process started with pid [4419]
+1699347679.2253664 [INFO] [lio_sam_ros2_dogOdomForMapping-3]: process started with pid [4421]
+1699347679.2255843 [INFO] [lio_sam_ros2_imuPreintegration-4]: process started with pid [4423]
+1699347679.2257578 [INFO] [lio_sam_ros2_imageProjection-5]: process started with pid [4425]
+1699347679.2259145 [INFO] [lio_sam_ros2_featureExtraction-6]: process started with pid [4427]
+1699347679.2260640 [INFO] [lio_sam_ros2_mapOptmization-7]: process started with pid [4429]
+1699347679.4995403 [INFO] [lio_sam_ros2_dogOdomForMapping-3]: process has finished cleanly [pid 4421]
+1699347679.5101295 [INFO] [dog_control_B1_one-1]: process has finished cleanly [pid 4409]
+1699347679.5723438 [INFO] [lio_sam_ros2_featureExtraction-6]: process has finished cleanly [pid 4427]
+1699347679.6669309 [INFO] [lio_sam_ros2_lidar_checkout-2]: process has finished cleanly [pid 4419]
+1699347680.3846705 [INFO] [lio_sam_ros2_imageProjection-5]: process has finished cleanly [pid 4425]
+1699347794.0325358 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1699347794.0379176 [INFO] [lio_sam_ros2_mapOptmization-7]: sending signal 'SIGINT' to process[lio_sam_ros2_mapOptmization-7]
+1699347794.0412488 [INFO] [lio_sam_ros2_imuPreintegration-4]: sending signal 'SIGINT' to process[lio_sam_ros2_imuPreintegration-4]
+1699347794.0464020 [ERROR] [lio_sam_ros2_imuPreintegration-4]: process has died [pid 4423, exit code -2, cmd '/unitree/module/graph_pid_ws/install/lio_sam_ros2/lib/lio_sam_ros2/lio_sam_ros2_imuPreintegration --ros-args --params-file /unitree/module/graph_pid_ws/install/lio_sam_ros2/share/lio_sam_ros2/config/params.yaml --params-file /tmp/launch_params_ke7dm1st'].
+1699347794.9431434 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1699347799.0431998 [ERROR] [lio_sam_ros2_mapOptmization-7]: process[lio_sam_ros2_mapOptmization-7] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1699347799.0447040 [INFO] [lio_sam_ros2_mapOptmization-7]: sending signal 'SIGTERM' to process[lio_sam_ros2_mapOptmization-7]
+1699347799.0535522 [ERROR] [lio_sam_ros2_mapOptmization-7]: process has died [pid 4429, exit code -15, cmd '/unitree/module/graph_pid_ws/install/lio_sam_ros2/lib/lio_sam_ros2/lio_sam_ros2_mapOptmization --ros-args --params-file /unitree/module/graph_pid_ws/install/lio_sam_ros2/share/lio_sam_ros2/config/params.yaml --params-file /tmp/launch_params_8b07hhj_ --params-file /tmp/launch_params_tppkgsm2'].

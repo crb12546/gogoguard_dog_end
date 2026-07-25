@@ -1,0 +1,23 @@
+[Unit]
+Description=go2-saas-video
+After=network.target
+Wants=network.target
+After=network-online.target time-sync.target
+Wants=network-online.target time-sync.target
+
+[Service]
+Type=simple
+User=unitree
+WorkingDirectory=/home/unitree/go2_fastlio_ws
+Environment=HOME=/home/unitree
+Environment=ROS_LOG_DIR=/tmp/ros_logs
+ExecStartPre=/bin/bash -lc '/home/unitree/go2_fastlio_ws/scripts/wait_valid_time.sh 0'
+ExecStart=/bin/bash -lc 'mkdir -p /tmp/ros_logs /home/unitree/go2_fastlio_ws/patrol_logs /home/unitree/go2_fastlio_ws/patrol_logs/run; source /home/unitree/go2_fastlio_ws/scripts/env_common.sh >/dev/null 2>&1 || true; test -f /home/unitree/.config/go2_saas.env && source /home/unitree/.config/go2_saas.env; touch /home/unitree/go2_fastlio_ws/patrol_logs/run/video.run; exec python3 -u /home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py video-loop --seconds 20 --upload --run-file /home/unitree/go2_fastlio_ws/patrol_logs/run/video.run'
+Restart=always
+RestartSec=5
+TimeoutStartSec=0
+StandardOutput=append:/home/unitree/go2_fastlio_ws/patrol_logs/service/go2-saas-video.log
+StandardError=append:/home/unitree/go2_fastlio_ws/patrol_logs/service/go2-saas-video.log
+
+[Install]
+WantedBy=multi-user.target

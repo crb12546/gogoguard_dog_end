@@ -1,0 +1,28 @@
+[INFO] [1782622315.841424031] [route_recorder]: route_recorder started
+[INFO] [1782622315.842280800] [route_recorder]: odom_topic: /Odometry
+[INFO] [1782622315.842918848] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/route_test_0520.csv
+[INFO] [1782622315.843540865] [route_recorder]: min_distance: 0.4
+[INFO] [1782622315.978478139] [route_recorder]: saved point 0: x=-10.663, y=9.370, yaw=-0.408
+[INFO] [1782622328.684353925] [route_recorder]: saved point 1: x=-10.295, y=9.211, yaw=-0.383
+[INFO] [1782622329.282521409] [route_recorder]: saved point 2: x=-9.891, y=9.061, yaw=-0.390
+[INFO] [1782622329.883914464] [route_recorder]: saved point 3: x=-9.504, y=8.927, yaw=-0.381
+[INFO] [1782622330.486841504] [route_recorder]: saved point 4: x=-9.063, y=8.773, yaw=-0.370
+[INFO] [1782622331.186341303] [route_recorder]: saved point 5: x=-8.638, y=8.641, yaw=-0.347
+[INFO] [1782622331.902724510] [route_recorder]: saved point 6: x=-8.214, y=8.483, yaw=-0.340
+[INFO] [1782622332.605619288] [route_recorder]: saved point 7: x=-7.778, y=8.346, yaw=-0.343
+[INFO] [1782622333.300322731] [route_recorder]: saved point 8: x=-7.366, y=8.228, yaw=-0.356
+[INFO] [1782622334.035059042] [route_recorder]: saved point 9: x=-6.981, y=8.088, yaw=-0.347
+[INFO] [1782622341.724750590] [route_recorder]: saved point 10: x=-6.575, y=7.985, yaw=-0.326
+[INFO] [1782622342.394107066] [route_recorder]: saved point 11: x=-6.195, y=7.855, yaw=-0.319
+[INFO] [1782622343.030719256] [route_recorder]: saved point 12: x=-5.745, y=7.713, yaw=-0.322
+[INFO] [1782622343.684775302] [route_recorder]: saved point 13: x=-5.343, y=7.607, yaw=-0.317
+[INFO] [1782622344.210267201] [route_recorder]: saved point 14: x=-4.952, y=7.480, yaw=-0.312
+[INFO] [1782622344.868188306] [route_recorder]: saved point 15: x=-4.549, y=7.364, yaw=-0.322
+[INFO] [1782622345.501123022] [route_recorder]: saved point 16: x=-4.092, y=7.244, yaw=-0.299
+[INFO] [1782622346.160079552] [route_recorder]: saved point 17: x=-3.632, y=7.122, yaw=-0.310
+[INFO] [1782622346.829764797] [route_recorder]: saved point 18: x=-3.210, y=7.016, yaw=-0.305
+[INFO] [1782622347.372622823] [route_recorder]: saved point 19: x=-2.814, y=6.894, yaw=-0.289
+[INFO] [1782622348.038651936] [route_recorder]: saved point 20: x=-2.386, y=6.797, yaw=-0.285
+[INFO] [1782622348.560601591] [route_recorder]: saved point 21: x=-1.962, y=6.689, yaw=-0.289
+[INFO] [1782622349.219776394] [route_recorder]: saved point 22: x=-1.572, y=6.566, yaw=-0.280
+[INFO] [1782622351.492237324] [route_recorder]: route_recorder stopped by Ctrl+C

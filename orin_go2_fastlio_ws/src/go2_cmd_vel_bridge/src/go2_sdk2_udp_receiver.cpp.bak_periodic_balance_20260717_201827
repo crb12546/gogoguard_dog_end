@@ -1,0 +1,100 @@
+#include <iostream>
+#include <cstring>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <algorithm>
+#include <chrono>
+#include <cmath>
+#include <cstdlib>
+
+#include <unitree/robot/channel/channel_factory.hpp>
+#include <unitree/robot/go2/sport/sport_client.hpp>
+
+using namespace unitree::robot;
+
+struct CmdPacket
+{
+  float vx;
+  float vy;
+  float vyaw;
+};
+
+int main(int argc, char **argv)
+{
+  const char *default_iface = std::getenv("GO2_SDK_IF");
+  std::string net_interface = (default_iface && *default_iface) ? default_iface : "eth1";
+  int port = 5005;
+
+  if (argc >= 2) net_interface = argv[1];
+  if (argc >= 3) port = std::stoi(argv[2]);
+
+  ChannelFactory::Instance()->Init(0, net_interface);
+
+  unitree::robot::go2::SportClient sport_client;
+  sport_client.SetTimeout(10.0f);
+  sport_client.Init();
+
+  std::cout << "SDK2 receiver started on interface: " << net_interface << std::endl;
+  std::cout << "UDP listen port: " << port << std::endl;
+
+  int ret = sport_client.StandUp();
+  std::cout << "StandUp ret=" << ret << std::endl;
+  sleep(2);
+  ret = sport_client.BalanceStand();
+  std::cout << "BalanceStand ret=" << ret << std::endl;
+  sleep(1);
+
+  int sock = socket(AF_INET, SOCK_DGRAM, 0);
+
+  sockaddr_in addr;
+  std::memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_addr.s_addr = INADDR_ANY;
+  addr.sin_port = htons(port);
+
+  bind(sock, (sockaddr*)&addr, sizeof(addr));
+
+  CmdPacket pkt;
+  auto last_rearm = std::chrono::steady_clock::now();
+  auto last_log = std::chrono::steady_clock::now();
+  int packets = 0;
+  int last_move_ret = 0;
+
+  while (true)
+  {
+    ssize_t n = recv(sock, &pkt, sizeof(pkt), 0);
+    if (n == sizeof(pkt))
+    {
+      float vx = std::max(-0.3f, std::min(0.3f, pkt.vx));
+      float vy = 0.0f;
+      float vyaw = std::max(-0.5f, std::min(0.5f, pkt.vyaw));
+      const bool active_cmd = std::fabs(vx) > 0.03f || std::fabs(vyaw) > 0.03f;
+      const auto now = std::chrono::steady_clock::now();
+
+      if (active_cmd && now - last_rearm > std::chrono::seconds(10))
+      {
+        ret = sport_client.BalanceStand();
+        std::cout << "periodic BalanceStand ret=" << ret << std::endl;
+        last_rearm = now;
+      }
+      if (!active_cmd)
+      {
+        last_rearm = now;
+      }
+
+      ret = sport_client.Move(vx, vy, vyaw);
+      ++packets;
+      if (ret != last_move_ret || ret != 0 || packets % 20 == 0 || now - last_log > std::chrono::seconds(2))
+      {
+        std::cout << "recv cmd vx=" << vx << " vyaw=" << vyaw << " move_ret=" << ret << std::endl;
+        last_move_ret = ret;
+        last_log = now;
+      }
+    }
+  }
+
+  ret = sport_client.StopMove();
+  std::cout << "StopMove ret=" << ret << std::endl;
+  close(sock);
+  return 0;
+}

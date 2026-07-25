@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Z-1Pro Rear Limit Test</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #101114; color: #eee; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { background: #1d1f25; padding: 12px; border-radius: 8px; border: 1px solid #30333b; }
+  img, video { width: 100%; height: auto; display: block; background: #000; border-radius: 4px; }
+  video { margin-top: 10px; }
+  a { color: #8ec5ff; }
+  code { color: #f1d88a; }
+</style>
+<h1>Z-1Pro Rear Limit Test</h1>
+<p>用户定义的后向是 front 的 180 度反方向；规格表标注偏航可控范围为 <code>±140°</code>，所以这里测试最大安全近似：<code>+140</code> 和 <code>-140</code>。</p>
+<p>注意：大角度切换时云台角速度较高，未来如果把后向设为默认，应使用预设/过渡，不要连续频繁来回打大角度。</p>
+<p>原始日志：<a href="status.txt">status.txt</a></p>
+<div class="grid">
+  <div class="card"><h2>rear_limit_right_140</h2><img src="rear_limit_right_140.jpg"><video src="rear_limit_right_140.mp4" controls></video></div>
+  <div class="card"><h2>rear_limit_left_140</h2><img src="rear_limit_left_140.jpg"><video src="rear_limit_left_140.mp4" controls></video></div>
+</div>

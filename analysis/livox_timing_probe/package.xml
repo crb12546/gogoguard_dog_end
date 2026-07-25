@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>livox_timing_probe</name>
+  <version>0.0.1</version>
+  <description>Read-only Livox ROS timing probe.</description>
+  <maintainer email="noreply@example.com">Codex diagnostic</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>livox_ros_driver2</depend>
+</package>

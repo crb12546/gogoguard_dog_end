@@ -1,0 +1,4 @@
+1699348291.3775911 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2023-11-07-17-11-31-370124-ubuntu-12954
+1699348291.3782346 [INFO] [launch]: Default logging verbosity is set to INFO
+1699348291.5940230 [INFO] [hesai_lidar_node-1]: process started with pid [12972]
+1699348381.1376958 [INFO] [hesai_lidar_node-1]: process has finished cleanly [pid 12972]

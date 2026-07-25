@@ -1,0 +1,6 @@
+[INFO] [1784780577.985330849] [waypoint_follower]: simple csv waypoint_follower started: sequential line-lock controller
+[INFO] [1784780577.986357916] [waypoint_follower]: route_file=src/go2_fastlio_patrol/routes/xiaoqu1.csv, points=315, length=142.45m, loop_mode=once
+[INFO] [1784780577.987199282] [waypoint_follower]: line_lock: gain=0.90, damping=0.35, deadband=0.030m, max_return=0.150m/s, rejoin=0.080/0.030m
+[INFO] [1784780577.987801538] [waypoint_follower]: corner: angle=30.0deg, slowdown=0.90m, reach=0.20m, turn_exit=7.0deg
+[INFO] [1784780577.988438419] [waypoint_follower]: progress policy: ordered CSV waypoint gates only; nearest-route projection disabled
+[INFO] [1784780580.816848959] [waypoint_follower]: waypoint_follower stopped by Ctrl+C

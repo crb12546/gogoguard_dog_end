@@ -1,0 +1,37 @@
+[INFO] [1784542977.650252892] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1784542977.672714304] [laser_mapping]: Node init finished.
+[WARN] [1784542977.792524381] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542977.910675859] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.044835140] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.200792806] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.355605891] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.600807616] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.700674060] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542978.886660708] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542979.024711600] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542979.173475138] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542979.293857193] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542979.431339681] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542979.626687367] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542980.183644703] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542980.620838632] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542981.170904422] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1784542981.412687081] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1784542981.557010500] [laser_mapping]: Initialize the map kdtree

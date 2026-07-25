@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+WS=${GO2_WS:-/home/unitree/go2_fastlio_ws}
+SERVICE_NAME=${GO2_CONNECTIVITY_SERVICE:-go2-connectivity-watchdog.service}
+MODE=${GO2_4G_MODE:-auto}
+ENABLE_USB_RESET=${GO2_4G_ENABLE_USB_RESET:-0}
+ENABLE_USB_POWER_CONTROL=${GO2_4G_ENABLE_USB_POWER_CONTROL:-0}
+ENABLE_USB_BUS_REBIND=${GO2_4G_ENABLE_USB_BUS_REBIND:-1}
+ENABLE_HOST_RESET=${GO2_4G_ENABLE_HOST_RESET:-0}
+USB_STABLE_SECONDS=${GO2_4G_USB_STABLE_SECONDS:-30}
+USB_ABSENT_REBIND_AFTER=${GO2_4G_USB_ABSENT_REBIND_AFTER:-60}
+USB_BUS_REBIND_MIN_INTERVAL=${GO2_4G_USB_BUS_REBIND_MIN_INTERVAL:-60}
+USB_BUS_REBIND_MAX_ATTEMPTS=${GO2_4G_USB_BUS_REBIND_MAX_ATTEMPTS:-3}
+USB_BUS_REBIND_BACKOFF=${GO2_4G_USB_BUS_REBIND_BACKOFF:-300}
+XHCI_DEAD_LOG_MIN_INTERVAL=${GO2_4G_XHCI_DEAD_LOG_MIN_INTERVAL:-60}
+ECM_IF=${GO2_4G_ECM_IF:-go2_4g}
+ECM_MAC=${GO2_4G_ECM_MAC:-28:e3:57:c3:ed:9a}
+ECM_GW=${GO2_4G_ECM_GW:-192.168.0.1}
+ECM_AT_CONFIG=${GO2_4G_ECM_AT_CONFIG:-1}
+NETDEV_STUCK_IF=${GO2_4G_NETDEV_STUCK_IF:-"go2_4g eth1"}
+PPP_PRE_DIAL_DELAY=${GO2_4G_PPP_PRE_DIAL_DELAY:-15}
+PPP_TTY_CANDIDATES=${GO2_4G_PPP_TTY_CANDIDATES:-"/dev/ttyUSB2 /dev/ttyUSB1 /dev/ttyUSB3 /dev/ttyUSB0"}
+PPP_AT_PROBE_TIMEOUT=${GO2_4G_PPP_AT_PROBE_TIMEOUT:-6}
+
+sudo_run() {
+  if [ -n "${SUDO_PASSWORD:-}" ]; then
+    printf '%s\n' "$SUDO_PASSWORD" | sudo -S -p '' "$@"
+  else
+    sudo "$@"
+  fi
+}
+
+tmp=$(mktemp)
+cat >"$tmp" <<EOF
+[Unit]
+Description=Go2 A7600C 4G connectivity watchdog
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+Environment=GO2_WS=${WS}
+Environment=GO2_4G_MODE=${MODE}
+Environment=GO2_4G_ENABLE_USB_RESET=${ENABLE_USB_RESET}
+Environment=GO2_4G_ENABLE_USB_POWER_CONTROL=${ENABLE_USB_POWER_CONTROL}
+Environment=GO2_4G_ENABLE_USB_BUS_REBIND=${ENABLE_USB_BUS_REBIND}
+Environment=GO2_4G_ENABLE_HOST_RESET=${ENABLE_HOST_RESET}
+Environment=GO2_4G_USB_STABLE_SECONDS=${USB_STABLE_SECONDS}
+Environment=GO2_4G_USB_ABSENT_REBIND_AFTER=${USB_ABSENT_REBIND_AFTER}
+Environment=GO2_4G_USB_BUS_REBIND_MIN_INTERVAL=${USB_BUS_REBIND_MIN_INTERVAL}
+Environment=GO2_4G_USB_BUS_REBIND_MAX_ATTEMPTS=${USB_BUS_REBIND_MAX_ATTEMPTS}
+Environment=GO2_4G_USB_BUS_REBIND_BACKOFF=${USB_BUS_REBIND_BACKOFF}
+Environment=GO2_4G_XHCI_DEAD_LOG_MIN_INTERVAL=${XHCI_DEAD_LOG_MIN_INTERVAL}
+Environment=GO2_4G_ECM_IF=${ECM_IF}
+Environment=GO2_4G_ECM_MAC=${ECM_MAC}
+Environment=GO2_4G_ECM_GW=${ECM_GW}
+Environment=GO2_4G_ECM_AT_CONFIG=${ECM_AT_CONFIG}
+Environment="GO2_4G_NETDEV_STUCK_IF=${NETDEV_STUCK_IF}"
+Environment=GO2_4G_PPP_PRE_DIAL_DELAY=${PPP_PRE_DIAL_DELAY}
+Environment="GO2_4G_PPP_TTY_CANDIDATES=${PPP_TTY_CANDIDATES}"
+Environment=GO2_4G_PPP_AT_PROBE_TIMEOUT=${PPP_AT_PROBE_TIMEOUT}
+Environment=GO2_4G_ENABLE_TIME_BOOTSTRAP=1
+ExecStart=${WS}/scripts/go2_connectivity_watchdog.sh
+Restart=always
+RestartSec=5
+StandardOutput=append:/tmp/go2_connectivity_watchdog.log
+StandardError=append:/tmp/go2_connectivity_watchdog.log
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo_run install -m 0644 "$tmp" "/etc/systemd/system/${SERVICE_NAME}"
+rm -f "$tmp"
+sudo_run systemctl daemon-reload
+sudo_run systemctl enable --now "${SERVICE_NAME}"
+sudo_run systemctl status --no-pager "${SERVICE_NAME}" || true

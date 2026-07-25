@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Z-1Pro Visual Test</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #101114; color: #eee; }
+  h1, h2 { margin: 0 0 14px; }
+  p { color: #c8c8c8; line-height: 1.5; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { background: #1d1f25; padding: 12px; border-radius: 8px; border: 1px solid #30333b; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  img, video { width: 100%; height: auto; display: block; background: #000; border-radius: 4px; }
+  video { margin-top: 10px; }
+  .wide { margin-top: 22px; }
+  a { color: #8ec5ff; }
+  code { color: #f1d88a; }
+</style>
+<h1>Z-1Pro Visual Test</h1>
+<p>测试内容：不同角度照片、不同角度短视频，以及一段边录边转的视频。接近后向测试使用 <code>yaw +/-120</code>，没有使用 180 度，因为规格表标注偏航可控范围为 +/-140 度。</p>
+<p>原始状态日志：<a href="status.txt">status.txt</a></p>
+<div class="grid">
+  <div class="card"><h3>front</h3><img src="front.jpg"><video src="front.mp4" controls></video></div>
+  <div class="card"><h3>pitch_down_10</h3><img src="pitch_down_10.jpg"><video src="pitch_down_10.mp4" controls></video></div>
+  <div class="card"><h3>pitch_up_10</h3><img src="pitch_up_10.jpg"><video src="pitch_up_10.mp4" controls></video></div>
+  <div class="card"><h3>yaw_right_30</h3><img src="yaw_right_30.jpg"><video src="yaw_right_30.mp4" controls></video></div>
+  <div class="card"><h3>yaw_left_30</h3><img src="yaw_left_30.jpg"><video src="yaw_left_30.mp4" controls></video></div>
+  <div class="card"><h3>rear_like_right_120</h3><img src="rear_like_right_120.jpg"><video src="rear_like_right_120.mp4" controls></video></div>
+  <div class="card"><h3>rear_like_left_120</h3><img src="rear_like_left_120.jpg"><video src="rear_like_left_120.mp4" controls></video></div>
+  <div class="card"><h3>front_restore</h3><img src="front_restore.jpg"><video src="front_restore.mp4" controls></video></div>
+</div>
+<div class="card wide">
+  <h2>Motion: yaw/pitch sequence while recording</h2>
+  <p>录制过程中依次执行：front -> yaw +60 -> yaw -60 -> pitch -15 -> front。</p>
+  <video src="motion_yaw_pitch_sequence.mp4" controls></video>
+</div>

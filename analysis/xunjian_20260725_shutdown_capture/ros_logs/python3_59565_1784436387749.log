@@ -1,0 +1,10 @@
+[INFO] [1784436388.344103328] [route_recorder]: route_recorder started
+[INFO] [1784436388.345838976] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784436388.346410816] [route_recorder]: route_file: /tmp/go2_route_recorder_signal_test.csv
+[INFO] [1784436388.346922912] [route_recorder]: min_distance: 0.4
+[INFO] [1784436388.347427872] [route_recorder]: quality gate: warmup=4.0s, stable_samples=5, max_odom_step=1.00m, max_record_step=1.50m, global_heading_gate=0.0deg
+[INFO] [1784436388.349773216] [route_recorder]: close sanitizer: enabled=True, turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784436391.955410048] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784436391.956132288] [route_recorder]: saved point 0: x=-0.007, y=-0.005, yaw=0.019
+[INFO] [1784436439.082948832] [route_recorder]: route_recorder stopped
+[ERROR] [1784436439.085604448] [route_recorder]: route sanitizer failed: [Errno 2] No such file or directory: '/tmp/go2_route_recorder_signal_test.csv'

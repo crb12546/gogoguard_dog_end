@@ -1,0 +1,24 @@
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-07-25-00-24-45-558278-ubuntu-369103
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [369158]
+[fastlio_mapping-1] 1784910285.759851 [0] fastlio_ma: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///tmp/go2_cyclonedds_eth0.xml line 4)
+[fastlio_mapping-1] [INFO] [1784910285.779293600] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/unitree/go2_fastlio_ws/src/FAST_LIO/ file opened
+[fastlio_mapping-1] [INFO] [1784910285.788627851] [laser_mapping]: Input QoS configured: lidar_depth=2/best_effort imu_depth=400/reliable
+[fastlio_mapping-1] [INFO] [1784910285.799943185] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784910286.051465436] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784910286.313340350] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784910286.451852698] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=193.604 age_ms_max=316.861 samples=8 lidar_buffer=0 imu_buffer=48
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=203.557 age_ms_max=361.077 samples=8
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=223.836 age_ms_max=354.195 samples=7 lidar_buffer=0 imu_buffer=62
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=163.308 age_ms_max=218.16 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=156.686 age_ms_max=187.413 samples=10 lidar_buffer=0 imu_buffer=55
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=180.411 age_ms_max=222.858 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=160.773 age_ms_max=213.644 samples=10 lidar_buffer=0 imu_buffer=48
+[fastlio_mapping-1] FAST_LIO_OUTPUT_TIMING age_ms_avg=172.197 age_ms_max=203.175 samples=10
+[fastlio_mapping-1] FAST_LIO_INPUT_TIMING age_ms_avg=169.995 age_ms_max=197.043 samples=8 lidar_buffer=0 imu_buffer=103

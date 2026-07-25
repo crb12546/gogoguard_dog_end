@@ -1,0 +1,15 @@
+[INFO] [1782477412.385571015] [route_recorder]: route_recorder started
+[INFO] [1782477412.387719689] [route_recorder]: odom_topic: /Odometry
+[INFO] [1782477412.389407774] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/route_test_0517.csv
+[INFO] [1782477412.391264471] [route_recorder]: min_distance: 0.4
+[INFO] [1782477412.426405274] [route_recorder]: saved point 0: x=0.013, y=0.021, yaw=-0.003
+[INFO] [1782477435.280821629] [route_recorder]: saved point 1: x=0.464, y=0.033, yaw=0.010
+[INFO] [1782477435.834101838] [route_recorder]: saved point 2: x=0.878, y=0.049, yaw=0.017
+[INFO] [1782477436.482002845] [route_recorder]: saved point 3: x=1.309, y=0.062, yaw=0.029
+[INFO] [1782477437.036473614] [route_recorder]: saved point 4: x=1.726, y=0.085, yaw=0.029
+[INFO] [1782477437.683807712] [route_recorder]: saved point 5: x=2.180, y=0.126, yaw=0.050
+[INFO] [1782477438.238684728] [route_recorder]: saved point 6: x=2.590, y=0.153, yaw=0.058
+[INFO] [1782477438.886935623] [route_recorder]: saved point 7: x=3.042, y=0.173, yaw=0.063
+[INFO] [1782477439.536394629] [route_recorder]: saved point 8: x=3.485, y=0.202, yaw=0.075
+[INFO] [1782477440.238503473] [route_recorder]: saved point 9: x=3.899, y=0.247, yaw=0.076
+[INFO] [1782477447.323898363] [route_recorder]: route_recorder stopped by Ctrl+C

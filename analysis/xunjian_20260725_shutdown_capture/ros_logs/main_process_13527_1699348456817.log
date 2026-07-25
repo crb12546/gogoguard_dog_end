@@ -1,0 +1,91 @@
+[INFO] [1699348460.400113480] [main_process]: 收到全局图的数据.
+[INFO] [1699348460.400396072] [main_process]: 地图计算已更新.
+[INFO] [1699348460.400546728] [main_process]: 初始位置在点上！ 点的名称为 0 
+[INFO] [1699348460.402989096] [main_process]: 初始化结束.
+[INFO] [1699348460.403098984] [main_process]: 地图保存成功.
+[INFO] [1699348478.107812424] [main_process]: 收到目标点数据.
+[INFO] [1699348478.107936904] [main_process]: 当前位置为 ——> position_x : -0.137291 , position_y : 0.005955 , position_z : -0.174728 , position_yaw : 0.000000
+[INFO] [1699348478.108018376] [main_process]: 位置在点上！ 点的名称为 0 
+[INFO] [1699348478.108629800] [main_process]: 地图已更新.
+[INFO] [1699348478.108673800] [main_process]: 开始点名称0 结束点名称0.
+[INFO] [1699348478.108836232] [main_process]: 计算路径成功.
+[INFO] [1699348478.108862696] [main_process]: 更新原始图.
+[INFO] [1699348478.116986728] [main_process]: 收到目标点数据.
+[INFO] [1699348478.117081384] [main_process]: 当前位置为 ——> position_x : -0.137291 , position_y : 0.005955 , position_z : -0.174728 , position_yaw : 0.000000
+[INFO] [1699348478.117155688] [main_process]: 位置在点上！ 点的名称为 0 
+[INFO] [1699348478.117765448] [main_process]: 地图已更新.
+[INFO] [1699348478.117826088] [main_process]: 开始点名称0 结束点名称1.
+[INFO] [1699348478.118033000] [main_process]: 计算路径成功.
+[INFO] [1699348478.118064136] [main_process]: 更新原始图.
+[INFO] [1699348483.915584168] [main_process]: globle_last_node_name in main :1 , globle_last_node_state in main 0
+[INFO] [1699348483.916426312] [main_process]: 收到目标点数据.
+[INFO] [1699348483.916481960] [main_process]: 当前位置为 ——> position_x : 1.258243 , position_y : -0.017536 , position_z : -0.203624 , position_yaw : 0.000000
+[INFO] [1699348483.916561448] [main_process]: 位置在点上！ 点的名称为 1 
+[INFO] [1699348483.917202888] [main_process]: 地图已更新.
+[INFO] [1699348483.917263080] [main_process]: 开始点名称1 结束点名称2.
+[INFO] [1699348483.917458696] [main_process]: 计算路径成功.
+[INFO] [1699348483.917492552] [main_process]: 更新原始图.
+[INFO] [1699348489.567405480] [main_process]: globle_last_node_name in main :2 , globle_last_node_state in main 0
+[INFO] [1699348489.568210088] [main_process]: 收到目标点数据.
+[INFO] [1699348489.568273224] [main_process]: 当前位置为 ——> position_x : 2.551291 , position_y : 0.008087 , position_z : -0.277245 , position_yaw : 0.000000
+[INFO] [1699348489.568360296] [main_process]: 位置在点上！ 点的名称为 2 
+[INFO] [1699348489.569134408] [main_process]: 地图已更新.
+[INFO] [1699348489.569251752] [main_process]: 开始点名称2 结束点名称0.
+[INFO] [1699348489.569477896] [main_process]: 计算路径成功.
+[INFO] [1699348489.569510632] [main_process]: 更新原始图.
+[INFO] [1699348513.963738056] [main_process]: globle_last_node_name in main :0 , globle_last_node_state in main 0
+[INFO] [1699348513.966424040] [main_process]: 收到目标点数据.
+[INFO] [1699348513.966521000] [main_process]: 当前位置为 ——> position_x : 0.005455 , position_y : -0.023625 , position_z : -0.187255 , position_yaw : 0.000000
+[INFO] [1699348513.966646120] [main_process]: 位置在点上！ 点的名称为 0 
+[INFO] [1699348513.967364648] [main_process]: 地图已更新.
+[INFO] [1699348513.967451208] [main_process]: 开始点名称0 结束点名称1.
+[INFO] [1699348513.967684584] [main_process]: 计算路径成功.
+[INFO] [1699348513.967722248] [main_process]: 更新原始图.
+[INFO] [1699348518.417021416] [main_process]: globle_last_node_name in main :1 , globle_last_node_state in main 0
+[INFO] [1699348518.417709640] [main_process]: 收到目标点数据.
+[INFO] [1699348518.417771400] [main_process]: 当前位置为 ——> position_x : 1.257589 , position_y : -0.005795 , position_z : -0.191747 , position_yaw : 0.000000
+[INFO] [1699348518.417877608] [main_process]: 位置在点上！ 点的名称为 1 
+[INFO] [1699348518.418594440] [main_process]: 地图已更新.
+[INFO] [1699348518.418690632] [main_process]: 开始点名称1 结束点名称2.
+[INFO] [1699348518.418889000] [main_process]: 计算路径成功.
+[INFO] [1699348518.418920232] [main_process]: 更新原始图.
+[INFO] [1699348544.318525224] [main_process]: globle_last_node_name in main :2 , globle_last_node_state in main 0
+[INFO] [1699348544.320001480] [main_process]: 收到目标点数据.
+[INFO] [1699348544.320089224] [main_process]: 当前位置为 ——> position_x : 2.552808 , position_y : -0.022907 , position_z : -0.242911 , position_yaw : 0.000000
+[INFO] [1699348544.320175528] [main_process]: 位置在点上！ 点的名称为 2 
+[INFO] [1699348544.320863784] [main_process]: 地图已更新.
+[INFO] [1699348544.321007720] [main_process]: 开始点名称2 结束点名称0.
+[INFO] [1699348544.321245640] [main_process]: 计算路径成功.
+[INFO] [1699348544.321285608] [main_process]: 更新原始图.
+[INFO] [1699348568.818445416] [main_process]: globle_last_node_name in main :0 , globle_last_node_state in main 0
+[INFO] [1699348568.819071528] [main_process]: 收到目标点数据.
+[INFO] [1699348568.819131048] [main_process]: 当前位置为 ——> position_x : -0.043030 , position_y : -0.024279 , position_z : -0.148942 , position_yaw : 0.000000
+[INFO] [1699348568.819218216] [main_process]: 位置在点上！ 点的名称为 0 
+[INFO] [1699348568.819853576] [main_process]: 地图已更新.
+[INFO] [1699348568.819938184] [main_process]: 开始点名称0 结束点名称1.
+[INFO] [1699348568.820145864] [main_process]: 计算路径成功.
+[INFO] [1699348568.820182120] [main_process]: 更新原始图.
+[INFO] [1699348574.114063976] [main_process]: globle_last_node_name in main :1 , globle_last_node_state in main 0
+[INFO] [1699348574.114491336] [main_process]: 收到目标点数据.
+[INFO] [1699348574.114540616] [main_process]: 当前位置为 ——> position_x : 1.252661 , position_y : -0.010099 , position_z : -0.203444 , position_yaw : 0.000000
+[INFO] [1699348574.114619752] [main_process]: 位置在点上！ 点的名称为 1 
+[INFO] [1699348574.115288072] [main_process]: 地图已更新.
+[INFO] [1699348574.115368104] [main_process]: 开始点名称1 结束点名称2.
+[INFO] [1699348574.115562344] [main_process]: 计算路径成功.
+[INFO] [1699348574.115593160] [main_process]: 更新原始图.
+[INFO] [1699348579.263259528] [main_process]: globle_last_node_name in main :2 , globle_last_node_state in main 0
+[INFO] [1699348579.263631336] [main_process]: 收到目标点数据.
+[INFO] [1699348579.263677576] [main_process]: 当前位置为 ——> position_x : 2.555710 , position_y : -0.007957 , position_z : -0.264035 , position_yaw : 0.000000
+[INFO] [1699348579.263755336] [main_process]: 位置在点上！ 点的名称为 2 
+[INFO] [1699348579.264373384] [main_process]: 地图已更新.
+[INFO] [1699348579.264422280] [main_process]: 开始点名称2 结束点名称0.
+[INFO] [1699348579.264675688] [main_process]: 计算路径成功.
+[INFO] [1699348579.264706280] [main_process]: 更新原始图.
+[INFO] [1699348592.943671016] [main_process]: 收到目标点数据.
+[INFO] [1699348592.943805160] [main_process]: 当前位置为 ——> position_x : 0.503510 , position_y : 0.021542 , position_z : -0.188538 , position_yaw : 0.000000
+[INFO] [1699348592.943893768] [main_process]: 当前位置在边上. 边的名词为 0 
+[INFO] [1699348592.944675528] [main_process]: 地图已更新.
+[INFO] [1699348592.944735944] [main_process]: 开始点名称9443 结束点名称0.
+[INFO] [1699348592.944951112] [main_process]: 计算路径成功.
+[INFO] [1699348592.944984648] [main_process]: 更新原始图.
+[INFO] [1699348603.914546248] [main_process]: globle_last_node_name in main :0 , globle_last_node_state in main 0

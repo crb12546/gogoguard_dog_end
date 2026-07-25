@@ -1,0 +1,43 @@
+# macOS and editor metadata
+.DS_Store
+**/.DS_Store
+.idea/
+*.swp
+*.swo
+*~
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ROS 2 / colcon and CMake generated output
+build/
+install/
+log/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Large raw runtime datasets. Keep route/config/metadata files in Git.
+*.pcd
+*.posegraph
+*.bag
+*.db3
+*.mcap
+
+# Bulk diagnostic and repeated full-workspace snapshots retained locally.
+/dog_code_logs_20260718_161123/
+/dog_xunjian_backup/
+
+# Diagnostic source mirrors duplicate the maintained source under
+# orin_go2_fastlio_ws/src and contain embedded Git metadata.
+/analysis/xunjian_20260725_shutdown_capture/remote_source/
+/analysis/xunjian_20260725_live_before_full_diagnostic/remote_before/

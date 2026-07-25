@@ -1,0 +1,72 @@
+[INFO] [1783250656.849338081] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [1783250656.861871703] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/rmt4.csv
+[INFO] [1783250656.865719458] [waypoint_follower]: route points: 5
+[INFO] [1783250656.872303965] [waypoint_follower]: loop_mode: once
+[INFO] [1783250656.873165067] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [1783250656.873818733] [waypoint_follower]: reach_distance: 0.4
+[INFO] [1783250656.888330444] [waypoint_follower]: init nearest_index=0, distance_to_start=0.005
+[INFO] [1783250656.904797329] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250657.903597585] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250658.903669696] [waypoint_follower]: nearest=0, target=2, dist=0.86, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[WARN] [1783250659.903425803] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250659.953618169] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250661.003562742] [waypoint_follower]: nearest=0, target=2, dist=0.86, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250662.003737833] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250662.903463745] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250663.053720177] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250664.055138714] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250665.103566336] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.06, vx=0.10, yaw_rate=-0.05, dir=1
+[WARN] [1783250665.903479854] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250666.103628890] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250667.153560541] [waypoint_follower]: nearest=0, target=2, dist=0.88, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250668.153567019] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250668.953351500] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250669.153554086] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.04, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250670.153612627] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250671.153989246] [waypoint_follower]: nearest=0, target=2, dist=0.88, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250671.953407177] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250672.203634753] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.06, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250673.253718881] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250674.257794959] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250674.954112971] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250675.303602725] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250676.353584601] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250677.366194495] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[WARN] [1783250678.003334403] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250678.403480445] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250679.403682212] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250680.403839737] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.04, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250681.003456240] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250681.453576403] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250682.453736996] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250683.509367324] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[WARN] [1783250684.003760151] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250684.559321117] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250685.603600937] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250686.653563037] [waypoint_follower]: nearest=0, target=2, dist=0.86, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250687.053433797] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250687.653883961] [waypoint_follower]: nearest=0, target=2, dist=0.88, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250688.703691451] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.04, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250689.703736328] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250690.053874837] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250690.753621605] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250691.753704051] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250692.753744689] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[WARN] [1783250693.103423824] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250693.803455659] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250694.805033877] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250695.853574509] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.04, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250696.153392075] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250696.853718352] [waypoint_follower]: nearest=0, target=2, dist=0.86, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250697.857746055] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250698.903565825] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250699.203407991] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250699.953546900] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250700.953742206] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250701.953879991] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250702.203581829] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250703.003727982] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[INFO] [1783250704.054112743] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.05, dir=1
+[INFO] [1783250705.103479258] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05, vx=0.10, yaw_rate=-0.04, dir=1
+[WARN] [1783250705.253394204] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [1783250706.103780766] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.05

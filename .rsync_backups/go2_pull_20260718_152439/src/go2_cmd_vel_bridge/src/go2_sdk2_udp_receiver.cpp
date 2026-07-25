@@ -1,0 +1,70 @@
+#include <iostream>
+#include <cstring>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <algorithm>
+
+#include <unitree/robot/channel/channel_factory.hpp>
+#include <unitree/robot/go2/sport/sport_client.hpp>
+
+using namespace unitree::robot;
+
+struct CmdPacket
+{
+  float vx;
+  float vy;
+  float vyaw;
+};
+
+int main(int argc, char **argv)
+{
+  std::string net_interface = "eth0";
+  int port = 5005;
+
+  if (argc >= 2) net_interface = argv[1];
+  if (argc >= 3) port = std::stoi(argv[2]);
+
+  ChannelFactory::Instance()->Init(0, net_interface);
+
+  unitree::robot::go2::SportClient sport_client;
+  sport_client.SetTimeout(10.0f);
+  sport_client.Init();
+
+  std::cout << "SDK2 receiver started on interface: " << net_interface << std::endl;
+  std::cout << "UDP listen port: " << port << std::endl;
+
+  sport_client.StandUp();
+  sleep(2);
+  sport_client.BalanceStand();
+  sleep(1);
+
+  int sock = socket(AF_INET, SOCK_DGRAM, 0);
+
+  sockaddr_in addr;
+  std::memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_addr.s_addr = INADDR_ANY;
+  addr.sin_port = htons(port);
+
+  bind(sock, (sockaddr*)&addr, sizeof(addr));
+
+  CmdPacket pkt;
+
+  while (true)
+  {
+    ssize_t n = recv(sock, &pkt, sizeof(pkt), 0);
+    if (n == sizeof(pkt))
+    {
+      float vx = std::max(-0.3f, std::min(0.3f, pkt.vx));
+      float vy = 0.0f;
+      float vyaw = std::max(-0.5f, std::min(0.5f, pkt.vyaw));
+
+      std::cout << "recv cmd vx=" << vx << " vyaw=" << vyaw << std::endl;
+      sport_client.Move(vx, vy, vyaw);
+    }
+  }
+
+  sport_client.StopMove();
+  close(sock);
+  return 0;
+}

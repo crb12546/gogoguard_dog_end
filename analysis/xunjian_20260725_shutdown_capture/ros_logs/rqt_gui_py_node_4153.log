@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2023-11-01 20:46:10,799: init_node, name[/rqt_gui_py_node_4153], pid[4153]
+[xmlrpc][INFO] 2023-11-01 20:46:10,800: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2023-11-01 20:46:10,800: Started XML-RPC server [http://ubuntu:38617/]
+[rospy.init][INFO] 2023-11-01 20:46:10,800: ROS Slave URI: [http://ubuntu:38617/]
+[rospy.impl.masterslave][INFO] 2023-11-01 20:46:10,801: _ready: http://ubuntu:38617/
+[rospy.registration][INFO] 2023-11-01 20:46:10,801: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2023-11-01 20:46:10,801: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2023-11-01 20:46:10,901: registered with master
+[rospy.rosout][INFO] 2023-11-01 20:46:10,902: initializing /rosout core topic
+[rospy.rosout][INFO] 2023-11-01 20:46:10,904: connected to core topic /rosout
+[rospy.simtime][INFO] 2023-11-01 20:46:10,905: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2023-11-01 20:46:11,102: topic[/camera/stereo_module/parameter_descriptions] adding connection to [http://ubuntu:39827/], count 0
+[rospy.internal][INFO] 2023-11-01 20:46:11,104: topic[/camera/stereo_module/parameter_updates] adding connection to [http://ubuntu:39827/], count 0
+[rospy.internal][INFO] 2023-11-01 20:46:11,118: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2023-11-01 20:46:16,009: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_descriptions...
+[rospy.internal][INFO] 2023-11-01 20:46:16,009: topic[/camera/stereo_module/parameter_descriptions] removing connection to http://ubuntu:39827/
+[rospy.internal][INFO] 2023-11-01 20:46:16,013: topic impl's ref count is zero, deleting topic /camera/stereo_module/parameter_updates...
+[rospy.internal][INFO] 2023-11-01 20:46:16,014: topic[/camera/stereo_module/parameter_updates] removing connection to http://ubuntu:39827/
+[rospy.core][INFO] 2023-11-01 20:46:16,036: signal_shutdown [atexit]
+[rospy.internal][INFO] 2023-11-01 20:46:16,041: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2023-11-01 20:46:16,042: atexit

@@ -1,0 +1,9 @@
+[INFO] [1784541740.758468355] [route_recorder]: route_recorder started
+[INFO] [1784541740.762751632] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784541740.765501866] [route_recorder]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/codex_quality_smoke_20260720.csv
+[INFO] [1784541740.767965181] [route_recorder]: raw_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/raw/codex_quality_smoke_20260720.raw.csv
+[INFO] [1784541740.770377001] [route_recorder]: adaptive sampling: straight=0.20m, turn=0.10m, enter=5.0deg/2 samples, exit=2.0deg over 0.25m
+[INFO] [1784541740.773142790] [route_recorder]: final route cleanup: xy_tolerance=0.030m, spike_lateral=0.060m, turn_zone=0.30m
+[INFO] [1784541740.775194368] [route_recorder]: quality gate: warmup=0.0s, stable_samples=5, base_step=0.30m, max_speed=4.00m/s, step_margin=0.10m, hard_speed=6.00m/s, failure_samples=3, max_record_step=0.80m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784541740.777766242] [route_recorder]: final quality validation: min_points=5, min_length=1.00m, max_rejection_ratio=10.0%, max_source_gap=0.80m
+[INFO] [1784541740.780182703] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg

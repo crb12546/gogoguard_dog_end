@@ -1,0 +1,9 @@
+[INFO] [1784808601.682772292] [codex_waypoint_dryrun]: simple csv waypoint_follower started: sequential line-lock controller
+[INFO] [1784808601.696048766] [codex_waypoint_dryrun]: route_file=/home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/xbf2.csv, points=1687, length=642.90m, loop_mode=once
+[INFO] [1784808601.698615702] [codex_waypoint_dryrun]: line_lock: measured-course feedback during rejoin, vy=0, corridor=0.030m, exit=0.020m, lookahead=0.50m, max_intercept=12.0deg, course_window=0.60s, course_min_distance=0.10m, rejoin=0.030/0.020m, settle=0.60s/7.0deg/0.05m/s
+[INFO] [1784808601.700703561] [codex_waypoint_dryrun]: corner: angle=30.0deg, slowdown=0.90m, reach=0.20m, turn_exit=15.0deg
+[INFO] [1784808601.702724667] [codex_waypoint_dryrun]: curve: cumulative ordered CSV heading, horizon=5.0m, enter/exit=12.0/4.0deg, lookahead=0.90m, speed=0.38m/s
+[INFO] [1784808601.704699661] [codex_waypoint_dryrun]: progress policy: ordered CSV waypoint gates only; nearest-route projection disabled
+[INFO] [1784808601.706641471] [codex_waypoint_dryrun]: feedback policy: normal<=0.60s, slow<=1.20s, hold>=2.00s, recovery_samples=5
+[INFO] [1784808601.708592465] [codex_waypoint_dryrun]: deviation policy: emergency=1.50m/1.0s
+[INFO] [1784808604.955016775] [codex_waypoint_dryrun]: waypoint_follower stopped by Ctrl+C

@@ -1,0 +1,4 @@
+# current_idx candidate_idx sc_distance yaw_shift_deg
+56 0 0.148076 0.000
+57 1 0.112106 6.000
+58 6 0.103551 348.000

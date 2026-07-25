@@ -1,0 +1,9 @@
+[INFO] [1784438485.855587296] [route_recorder]: route_recorder started
+[INFO] [1784438485.856857792] [route_recorder]: odom_topic: /Odometry
+[INFO] [1784438485.857437536] [route_recorder]: route_file: /tmp/go2_route_recorder_turn_safe_smoke.csv
+[INFO] [1784438485.858009952] [route_recorder]: min_distance: 0.4
+[INFO] [1784438485.860820160] [route_recorder]: quality gate: warmup=4.0s, stable_samples=5, max_odom_step=1.00m, max_record_step=0.00m (0=disabled), global_heading_gate=0.0deg
+[INFO] [1784438485.861428736] [route_recorder]: close sanitizer: enabled=False (disabled by default), turn=90.0deg, lateral=0.20m, rejoin_heading=30.0deg
+[INFO] [1784438489.512035968] [route_recorder]: quality gate ready; recording route points from the current pose
+[INFO] [1784438489.512880000] [route_recorder]: saved point 0: x=0.006, y=-0.022, yaw=0.028
+[INFO] [1784438492.263087264] [route_recorder]: route_recorder stopped

@@ -1,0 +1,7 @@
+1782471341.3906457 [INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2026-06-26-18-55-41-384311-ubuntu-4002
+1782471341.3911338 [INFO] [launch]: Default logging verbosity is set to INFO
+1782471341.5772986 [INFO] [livox_ros_driver2_node-1]: process started with pid [4004]
+1782471387.8633037 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1782471392.8723052 [ERROR] [livox_ros_driver2_node-1]: process[livox_ros_driver2_node-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1782471392.8731902 [INFO] [livox_ros_driver2_node-1]: sending signal 'SIGTERM' to process[livox_ros_driver2_node-1]
+1782471392.8766718 [ERROR] [livox_ros_driver2_node-1]: process has died [pid 4004, exit code -15, cmd '/home/unitree/go2_fastlio_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_zhnx9cf8 --params-file /tmp/launch_params_06uyi9gx --params-file /tmp/launch_params_wv3kvg1x --params-file /tmp/launch_params_mb22y7m2 --params-file /tmp/launch_params_0zo39_9v --params-file /tmp/launch_params_uy_087m6 --params-file /tmp/launch_params_l4l6p9y_ --params-file /tmp/launch_params_k8iw6efw --params-file /tmp/launch_params_xtzccu23'].

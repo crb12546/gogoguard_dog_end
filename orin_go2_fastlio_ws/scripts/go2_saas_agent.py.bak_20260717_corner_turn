@@ -1,0 +1,1859 @@
+#!/usr/bin/env python3
+"""Go2 SaaS adapter for GoGoGuard heartbeat, video upload, and commands.
+
+Designed for the Orin ROS2 Foxy environment. The script intentionally uses only
+Python standard-library modules so it can run on the robot without extra pip
+packages. Secrets are read from the process environment, normally sourced from
+`~/.config/go2_saas.env` on the Orin; do not store tokens in this repository.
+"""
+from __future__ import print_function
+
+import argparse
+import json
+import os
+import re
+import shlex
+import ssl
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import uuid
+from pathlib import Path
+
+
+WS = os.environ.get("GO2_WS", "/home/unitree/go2_fastlio_ws")
+ROUTES_DIR = Path(os.environ.get("GO2_ROUTES_DIR", str(Path(WS) / "src/go2_fastlio_patrol/routes")))
+PCD_DIR = Path(os.environ.get("GO2_PCD_DIR", str(Path(WS) / "maps/console")))
+VIDEO_DIR = Path(os.environ.get("GO2_VIDEO_DIR", str(Path(WS) / "patrol_logs/videos")))
+OUTBOX_DIR = Path(os.environ.get("GO2_OUTBOX_DIR", str(Path(WS) / "patrol_logs/outbox")))
+PATROL_RUNS_DIR = Path(os.environ.get("GO2_PATROL_RUNS_DIR", str(Path(WS) / "patrol_logs/runs")))
+DEFAULT_BACKEND_BASE = "https://39.96.37.187/api/v1"
+DEFAULT_ROBOT_ID = "go2-tju-01"
+DEFAULT_ASSET_ENDPOINT = "/robot/asset/upload"
+DEFAULT_VIDEO_ENDPOINT = "/robot/video/upload"
+DEFAULT_PLAN_ENDPOINT = "/devices/plan"
+OUTBOX_MAX_BACKOFF = int(os.environ.get("GO2_OUTBOX_MAX_BACKOFF", "300"))
+MIN_VALID_EPOCH = int(os.environ.get("GO2_MIN_VALID_EPOCH", "1704067200"))
+MIN_VALID_YEAR = int(os.environ.get("GO2_MIN_VALID_YEAR", "2024"))
+MEDIA_TIMESTAMP_RE = re.compile(r"(?:^|[_-])(?P<date>\d{8})[_-]\d{6}")
+
+GOTO_COMMANDS = set(["move", "walk", "go", "goto", "navigate"])
+START_PATROL_COMMANDS = set(["start_patrol", "patrol_start", "follow_route", "start_route", "auto_patrol", "auto_inspection"])
+STOP_PATROL_COMMANDS = set(["stop_patrol", "patrol_stop", "stop_route"])
+SAFE_COMMANDS = set(["ping", "noop", "status", "start_base", "stop_base", "camera_start_loop", "camera_stop_loop"])
+
+ROUTE_NAME_RE = re.compile(r"^[A-Za-z0-9_\-]{1,80}(\.csv)?$")
+
+
+def now_local_text():
+    return time.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def now_text():
+    return time.strftime("%Y-%m-%dT%H:%M:%S%z")
+
+
+def wall_time_is_valid(epoch=None):
+    return float(time.time() if epoch is None else epoch) >= MIN_VALID_EPOCH
+
+
+def wait_for_valid_wall_time(timeout=180, sleep_sec=2):
+    started = time.monotonic()
+    while not wall_time_is_valid():
+        elapsed = time.monotonic() - started
+        print("WAIT_VALID_TIME wall clock not synced yet: %s" % now_local_text(), flush=True)
+        if timeout > 0 and elapsed >= timeout:
+            print("WAIT_VALID_TIME_TIMEOUT elapsed=%.1fs" % elapsed, file=sys.stderr, flush=True)
+            return False
+        time.sleep(sleep_sec)
+    return True
+
+
+def loop_wall_time_ready(label, sleep_sec=5):
+    if wall_time_is_valid():
+        return True
+    print("%s_WAIT_VALID_TIME wall clock invalid: %s" % (label, now_local_text()), flush=True)
+    time.sleep(sleep_sec)
+    return False
+
+
+def invalid_media_time_reason(path, stat=None):
+    name = Path(path).name
+    match = MEDIA_TIMESTAMP_RE.search(name)
+    if match:
+        try:
+            year = int(match.group("date")[:4])
+            if year < MIN_VALID_YEAR:
+                return "filename_year_%s" % year
+        except ValueError:
+            pass
+    try:
+        stat = stat or Path(path).stat()
+        if stat.st_mtime < MIN_VALID_EPOCH:
+            return "mtime_%s" % int(stat.st_mtime)
+    except OSError as exc:
+        return "stat_error_%s" % exc
+    return ""
+
+
+def backend_base():
+    return os.environ.get("GO2_BACKEND_BASE", DEFAULT_BACKEND_BASE).rstrip("/")
+
+
+def build_url(path):
+    if not path.startswith("/"):
+        path = "/" + path
+    return backend_base() + path
+
+
+def robot_id_arg(value=None):
+    return value or os.environ.get("GO2_ROBOT_ID", DEFAULT_ROBOT_ID)
+
+
+def auth_headers():
+    token = os.environ.get("GO2_AUTH_TOKEN") or os.environ.get("GOGOGUARD_TOKEN")
+    if not token:
+        return {}
+    header = os.environ.get("GO2_AUTH_HEADER", "Authorization")
+    if header.lower() == "authorization" and not token.lower().startswith(("bearer ", "basic ")):
+        token = "Bearer " + token
+    return {header: token}
+
+
+def device_token_headers():
+    token = os.environ.get("GO2_DEVICE_TOKEN") or os.environ.get("GO2_PLAN_TOKEN")
+    return {"X-Device-Token": token} if token else {}
+
+
+def tls_context(url):
+    verify = os.environ.get("GO2_BACKEND_VERIFY_TLS", "0").lower() in ("1", "true", "yes")
+    if url.startswith("https://") and not verify:
+        return ssl._create_unverified_context()
+    return None
+
+
+def parse_json_text(text):
+    try:
+        return json.loads(text)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def outbox_dirs():
+    return {
+        "pending": OUTBOX_DIR / "pending",
+        "inflight": OUTBOX_DIR / "inflight",
+        "failed": OUTBOX_DIR / "failed",
+    }
+
+
+def ensure_outbox_dirs():
+    for path in outbox_dirs().values():
+        path.mkdir(parents=True, exist_ok=True)
+
+
+def safe_job_part(value, limit=80):
+    value = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(value or "job"))
+    value = value.strip("._-") or "job"
+    return value[:limit]
+
+
+def read_json_file(path):
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def outbox_has_dedupe(dedupe_key):
+    if not dedupe_key:
+        return False
+    ensure_outbox_dirs()
+    dirs = outbox_dirs()
+    for base in (dirs["pending"], dirs["inflight"]):
+        for path in base.glob("*.json"):
+            data = read_json_file(path)
+            if isinstance(data, dict) and data.get("dedupeKey") == dedupe_key:
+                return True
+    return False
+
+
+def enqueue_outbox_job(kind, endpoint, payload=None, file_path=None, fields=None, timeout=12, dedupe_key="", reason=""):
+    ensure_outbox_dirs()
+    dedupe_key = dedupe_key or "%s:%s:%s" % (kind, endpoint, uuid.uuid4().hex)
+    if outbox_has_dedupe(dedupe_key):
+        print("OUTBOX_DUPLICATE", dedupe_key)
+        return 0
+
+    job_id = "%s_%s_%s" % (int(time.time()), safe_job_part(kind), uuid.uuid4().hex[:10])
+    job = {
+        "schema": 1,
+        "id": job_id,
+        "kind": kind,
+        "endpoint": endpoint,
+        "payload": payload,
+        "file": str(file_path) if file_path else "",
+        "fields": fields or {},
+        "timeout": timeout,
+        "dedupeKey": dedupe_key,
+        "reason": reason,
+        "attempts": 0,
+        "createdAt": now_text(),
+        "createdAtEpoch": time.time(),
+        "nextAttemptEpoch": 0,
+    }
+    pending = outbox_dirs()["pending"]
+    tmp = pending / (job_id + ".tmp")
+    final = pending / (job_id + ".json")
+    tmp.write_text(json.dumps(job, ensure_ascii=False, sort_keys=True, indent=2), encoding="utf-8")
+    tmp.replace(final)
+    print("OUTBOX_ENQUEUED", kind, dedupe_key, "reason=%s" % reason)
+    return 0
+
+
+def requeue_outbox_job(path, job, error):
+    dirs = outbox_dirs()
+    attempts = int(job.get("attempts") or 0) + 1
+    delay = min(OUTBOX_MAX_BACKOFF, max(5, 5 * (2 ** min(attempts - 1, 6))))
+    job["attempts"] = attempts
+    job["lastError"] = str(error)[-500:]
+    job["lastAttemptAt"] = now_text()
+    job["nextAttemptEpoch"] = time.time() + delay
+    target = dirs["pending"] / Path(path).name
+    Path(path).write_text(json.dumps(job, ensure_ascii=False, sort_keys=True, indent=2), encoding="utf-8")
+    Path(path).replace(target)
+    print("OUTBOX_RETRY", job.get("id"), "attempts=%s" % attempts, "delay=%ss" % delay, "error=%s" % job["lastError"])
+
+
+def fail_outbox_job(path, job, error):
+    dirs = outbox_dirs()
+    job["failedAt"] = now_text()
+    job["lastError"] = str(error)[-500:]
+    target = dirs["failed"] / Path(path).name
+    Path(path).write_text(json.dumps(job, ensure_ascii=False, sort_keys=True, indent=2), encoding="utf-8")
+    Path(path).replace(target)
+    print("OUTBOX_FAILED", job.get("id"), error)
+
+
+def recover_stale_inflight(max_age=600):
+    ensure_outbox_dirs()
+    dirs = outbox_dirs()
+    now = time.time()
+    for path in dirs["inflight"].glob("*.json"):
+        try:
+            if now - path.stat().st_mtime >= max_age:
+                path.replace(dirs["pending"] / path.name)
+        except Exception as exc:  # noqa: BLE001
+            print("OUTBOX_RECOVER_ERROR", repr(exc), file=sys.stderr)
+
+
+def send_outbox_job(job):
+    kind = job.get("kind")
+    endpoint = job.get("endpoint")
+    timeout = float(job.get("timeout") or 12)
+    if kind == "json":
+        return post_json(endpoint, job.get("payload") or {}, dry_run=False, timeout=timeout)
+    if kind == "file":
+        file_path = Path(job.get("file") or "")
+        if not file_path.exists() or file_path.stat().st_size <= 0:
+            return 2
+        fields = job.get("fields") or {}
+        asset_kind = str(fields.get("kind") or fields.get("assetType") or "").lower()
+        if asset_kind in ("video", "image"):
+            reason = invalid_media_time_reason(file_path)
+            if reason:
+                print("OUTBOX_DROP_INVALID_MEDIA_TIME file=%s reason=%s" % (file_path, reason), file=sys.stderr)
+                return 2
+        return post_multipart(file_path, job.get("fields") or {}, endpoint, dry_run=False, timeout=timeout)
+    print("OUTBOX_UNKNOWN_KIND", kind, file=sys.stderr)
+    return 2
+
+
+def drain_outbox_once(max_jobs=20):
+    ensure_outbox_dirs()
+    recover_stale_inflight()
+    dirs = outbox_dirs()
+    now = time.time()
+    sent = 0
+    attempted = 0
+    for path in sorted(dirs["pending"].glob("*.json")):
+        if attempted >= max_jobs:
+            break
+        inflight = dirs["inflight"] / path.name
+        try:
+            path.replace(inflight)
+        except Exception:
+            continue
+        job = read_json_file(inflight)
+        if not isinstance(job, dict):
+            fail_outbox_job(inflight, {"id": inflight.stem}, "invalid json job")
+            continue
+        if float(job.get("nextAttemptEpoch") or 0) > now:
+            try:
+                inflight.replace(path)
+            except OSError as exc:
+                print("OUTBOX_REQUEUE_NOT_DUE_ERROR", repr(exc), file=sys.stderr)
+            continue
+        attempted += 1
+        rc = send_outbox_job(job)
+        if rc == 0:
+            print("OUTBOX_SENT", job.get("id"), job.get("kind"), job.get("dedupeKey"))
+            try:
+                inflight.unlink()
+            except OSError:
+                pass
+            sent += 1
+        elif rc == 2:
+            fail_outbox_job(inflight, job, "permanent send error")
+        else:
+            requeue_outbox_job(inflight, job, "send failed rc=%s" % rc)
+    print("OUTBOX_DRAIN attempted=%s sent=%s" % (attempted, sent))
+    return 0 if attempted == sent else 1
+
+
+def post_json_capture(path, payload, dry_run=False, timeout=12):
+    url = build_url(path)
+    body = json.dumps(payload, ensure_ascii=False, sort_keys=True, indent=2)
+    if dry_run:
+        print("DRY_RUN_POST", url)
+        print(body)
+        return 0, None, body, payload
+
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    headers.update(auth_headers())
+    request = urllib.request.Request(url, data=body.encode("utf-8"), headers=headers, method="POST")
+    try:
+        response = urllib.request.urlopen(request, timeout=timeout, context=tls_context(url))
+        text = response.read().decode("utf-8", errors="replace")
+        print("POST", url, "status=%s" % response.getcode())
+        print(text)
+        return (0 if 200 <= response.getcode() < 300 else 1), response.getcode(), text, parse_json_text(text)
+    except urllib.error.HTTPError as exc:
+        text = exc.read().decode("utf-8", errors="replace")
+        print("POST", url, "status=%s" % exc.code)
+        print(text)
+        return (0 if 200 <= exc.code < 300 else 1), exc.code, text, parse_json_text(text)
+    except Exception as exc:  # noqa: BLE001
+        print("POST_ERROR", url, repr(exc), file=sys.stderr)
+        return 1, None, repr(exc), None
+
+
+def post_json(path, payload, dry_run=False, timeout=12):
+    rc, _, _, _ = post_json_capture(path, payload, dry_run=dry_run, timeout=timeout)
+    return rc
+
+
+def get_json_capture(path, dry_run=False, timeout=12, include_auth=True, include_device_token=True):
+    url = build_url(path)
+    if dry_run:
+        print("DRY_RUN_GET", url)
+        return 0, None, "", None
+
+    headers = {"Accept": "application/json"}
+    if include_auth:
+        headers.update(auth_headers())
+    if include_device_token:
+        headers.update(device_token_headers())
+    request = urllib.request.Request(url, headers=headers, method="GET")
+    try:
+        response = urllib.request.urlopen(request, timeout=timeout, context=tls_context(url))
+        text = response.read().decode("utf-8", errors="replace")
+        print("GET", url, "status=%s" % response.getcode())
+        print(text)
+        return (0 if 200 <= response.getcode() < 300 else 1), response.getcode(), text, parse_json_text(text)
+    except urllib.error.HTTPError as exc:
+        text = exc.read().decode("utf-8", errors="replace")
+        print("GET", url, "status=%s" % exc.code)
+        print(text)
+        return (0 if 200 <= exc.code < 300 else 1), exc.code, text, parse_json_text(text)
+    except Exception as exc:  # noqa: BLE001
+        print("GET_ERROR", url, repr(exc), file=sys.stderr)
+        return 1, None, repr(exc), None
+
+
+def endpoint_for(kind):
+    env_key = {
+        "route": "GO2_ROUTE_UPLOAD_ENDPOINT",
+        "pcd": "GO2_PCD_UPLOAD_ENDPOINT",
+        "video": "GO2_VIDEO_UPLOAD_ENDPOINT",
+        "image": "GO2_VIDEO_UPLOAD_ENDPOINT",
+    }.get(kind, "GO2_ASSET_UPLOAD_ENDPOINT")
+    default = DEFAULT_VIDEO_ENDPOINT if kind in ("video", "image") else DEFAULT_ASSET_ENDPOINT
+    return os.environ.get(env_key) or os.environ.get("GO2_ASSET_UPLOAD_ENDPOINT") or default
+
+
+def guess_mime(path):
+    suffix = path.suffix.lower()
+    if suffix == ".csv":
+        return "text/csv"
+    if suffix == ".pcd":
+        return "application/octet-stream"
+    if suffix == ".mp4":
+        return "video/mp4"
+    if suffix in (".jpg", ".jpeg"):
+        return "image/jpeg"
+    return "application/octet-stream"
+
+
+def post_multipart(path, fields, endpoint, dry_run=False, timeout=180):
+    url = build_url(endpoint)
+    if dry_run:
+        print("DRY_RUN_UPLOAD", url)
+        print(json.dumps({"file": str(path), "fields": fields}, ensure_ascii=False, sort_keys=True, indent=2))
+        return 0
+
+    boundary = "----go2saas" + uuid.uuid4().hex
+    chunks = []
+    for key, value in fields.items():
+        chunks.append((
+            "--%s\r\n"
+            "Content-Disposition: form-data; name=\"%s\"\r\n\r\n%s\r\n"
+        ) % (boundary, key, value))
+    chunks.append((
+        "--%s\r\n"
+        "Content-Disposition: form-data; name=\"file\"; filename=\"%s\"\r\n"
+        "Content-Type: %s\r\n\r\n"
+    ) % (boundary, path.name, guess_mime(path)))
+
+    try:
+        body = b"".join(item.encode("utf-8") for item in chunks)
+        body += path.read_bytes()
+        body += ("\r\n--%s--\r\n" % boundary).encode("utf-8")
+        headers = {"Content-Type": "multipart/form-data; boundary=" + boundary, "Accept": "application/json"}
+        headers.update(auth_headers())
+        request = urllib.request.Request(url, data=body, headers=headers, method="POST")
+        response = urllib.request.urlopen(request, timeout=timeout, context=tls_context(url))
+        text = response.read().decode("utf-8", errors="replace")
+        print("HTTP status=%s" % response.getcode())
+        print(text)
+        return 0 if 200 <= response.getcode() < 300 else 1
+    except urllib.error.HTTPError as exc:
+        text = exc.read().decode("utf-8", errors="replace")
+        print("HTTP status=%s" % exc.code)
+        print(text)
+        return 0 if 200 <= exc.code < 300 else 1
+    except Exception as exc:  # noqa: BLE001
+        print("UPLOAD_ERROR", url, repr(exc), file=sys.stderr)
+        return 1
+
+
+def shell_out(cmd, timeout=3):
+    try:
+        run = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    except Exception as exc:  # noqa: BLE001
+        return "", str(exc), 255
+    return run.stdout.strip(), run.stderr.strip(), run.returncode
+
+
+def process_status():
+    out, _, _ = shell_out(["ps", "-eo", "comm=,args="], timeout=4)
+    checks = {
+        "livox": r"livox_ros_driver2_node|livox_ros_drive",
+        "fastlio": r"fastlio_mapping",
+        "recorder": r"route_recorder",
+        "safe": r"unitree_safe_cmd_node",
+        "follower": r"waypoint_follower",
+        "pcd": r"go2map_capture",
+        "camera_loop": r"z1pro_video_loop\.sh",
+    }
+    return {key: bool(re.search(pattern, out)) for key, pattern in checks.items()}
+
+
+def count_csv_points(path):
+    try:
+        with path.open("r") as handle:
+            return max(0, sum(1 for _ in handle) - 1)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def pcd_points(path):
+    try:
+        with path.open("r") as handle:
+            for line in handle:
+                if line.startswith("POINTS "):
+                    return int(line.split()[1])
+    except Exception:  # noqa: BLE001
+        return None
+    return None
+
+
+def describe_file(path, kind):
+    stat = path.stat()
+    item = {
+        "kind": kind,
+        "path": str(path),
+        "name": path.name,
+        "size": stat.st_size,
+        "mtime": int(stat.st_mtime),
+        "mtimeText": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(stat.st_mtime)),
+    }
+    if kind == "route":
+        item["points"] = count_csv_points(path)
+    elif kind == "pcd":
+        item["points"] = pcd_points(path)
+    return item
+
+
+def latest_paths(patterns, limit):
+    paths = []
+    for pattern in patterns:
+        paths.extend(pattern)
+    existing = [path for path in paths if path.is_file()]
+    existing.sort(key=lambda path: path.stat().st_mtime, reverse=True)
+    return existing[:limit]
+
+
+def asset_manifest(robot_id, limit=8):
+    routes = latest_paths([ROUTES_DIR.glob("*.csv"), ROUTES_DIR.glob("records/*/route.csv")], limit)
+    pcds = latest_paths([PCD_DIR.glob("*.pcd")], limit)
+    videos = valid_media_files(limit=limit * 4)[:limit]
+    return {
+        "robotId": robot_id,
+        "generatedAt": now_text(),
+        "routes": [describe_file(path, "route") for path in routes],
+        "pcds": [describe_file(path, "pcd") for path in pcds],
+        "media": [describe_file(path, "video" if path.suffix.lower() == ".mp4" else "image") for path in videos],
+    }
+
+
+def resolve_named_path(value, base_dir, suffix):
+    if not value:
+        return None
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    name = value if value.endswith(suffix) else value + suffix
+    return base_dir / name
+
+
+def resolve_route(value):
+    return resolve_named_path(value, ROUTES_DIR, ".csv")
+
+
+def resolve_pcd(value):
+    return resolve_named_path(value, PCD_DIR, ".pcd")
+
+
+def env_bool(name, default=False):
+    value = os.environ.get(name)
+    if value in (None, ""):
+        return default
+    return str(value).strip().lower() in ("1", "true", "yes", "on")
+
+
+def bool_param(params, keys, default=False):
+    for key in keys:
+        value = params.get(key)
+        if value in (None, ""):
+            continue
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in ("1", "true", "yes", "on")
+    return default
+
+
+def normalized_asset_key(value):
+    return re.sub(r"[^a-z0-9]+", "", str(value or "").lower())
+
+
+def route_map_candidates(route_path):
+    stem = Path(route_path).stem
+    stems = []
+
+    def add(value):
+        value = str(value or "").strip("._-")
+        if value and value not in stems:
+            stems.append(value)
+
+    add(stem)
+    lower = stem.lower()
+    for suffix in ("-lx", "_lx", "-route", "_route", "-csv", "_csv", "csv"):
+        if lower.endswith(suffix) and len(stem) > len(suffix):
+            add(stem[: -len(suffix)])
+    add(stem.replace("-lx", "").replace("_lx", ""))
+    return stems
+
+
+def resolve_route_map(route_path, params):
+    explicit = param_first(params, [
+        "pcd", "pcdFile", "pcd_file", "map", "mapFile", "map_file", "mapName", "map_name",
+    ])
+    if explicit:
+        path = Path(explicit)
+        if path.is_absolute():
+            candidate = path
+        else:
+            name = path.name if path.name.endswith(".pcd") else path.name + ".pcd"
+            candidate = PCD_DIR / name
+        if not candidate.is_file():
+            raise RuntimeError("explicit map pcd not found: %s" % candidate)
+        return candidate, "explicit"
+
+    for stem in route_map_candidates(route_path):
+        candidate = PCD_DIR / (stem + ".pcd")
+        if candidate.is_file():
+            return candidate, "stem:%s" % stem
+
+    route_key = normalized_asset_key(Path(route_path).stem)
+    matches = []
+    if route_key and PCD_DIR.is_dir():
+        for path in PCD_DIR.glob("*.pcd"):
+            key = normalized_asset_key(path.stem)
+            if not key:
+                continue
+            if key == route_key:
+                score = 0
+            elif key.startswith(route_key):
+                score = 1
+            elif route_key.startswith(key):
+                score = 2
+            else:
+                continue
+            try:
+                mtime = path.stat().st_mtime
+            except OSError:
+                mtime = 0
+            matches.append((score, abs(len(key) - len(route_key)), -mtime, path))
+    if matches:
+        matches.sort()
+        return matches[0][3], "fuzzy:%s" % matches[0][3].stem
+    return None, ""
+
+
+def route_relocalization_plan(route_path, params):
+    enabled = bool_param(
+        params,
+        ["relocalize", "useRelocalization", "use_relocalization", "mapRelocalize", "map_relocalize"],
+        env_bool("GO2_PATROL_RELOCALIZE", True),
+    )
+    required = bool_param(
+        params,
+        ["requireRelocalize", "require_relocalize", "requireRelocalization", "require_relocalization"],
+        env_bool("GO2_PATROL_REQUIRE_RELOCALIZE", False),
+    )
+    plan = {
+        "enabled": bool(enabled),
+        "required": bool(required),
+        "mapPath": "",
+        "mapSource": "",
+        "runtimeRoutePath": "",
+        "reason": "",
+    }
+    if not enabled:
+        plan["reason"] = "disabled"
+        return plan
+
+    map_path, source = resolve_route_map(route_path, params)
+    if map_path is None:
+        plan["enabled"] = False
+        plan["reason"] = "no matching pcd map"
+        if required:
+            raise RuntimeError("route relocalization required but no matching pcd map for: %s" % Path(route_path).name)
+        return plan
+
+    runtime_name = "%s_%d.csv" % (safe_job_part(Path(route_path).stem, limit=70), int(time.time()))
+    runtime_path = Path("/tmp/go2_route_runtime") / runtime_name
+    plan.update({
+        "enabled": True,
+        "mapPath": str(map_path),
+        "mapSource": source,
+        "runtimeRoutePath": str(runtime_path),
+        "reason": "map relocalization before patrol",
+    })
+    return plan
+
+
+def valid_media_files(limit=40):
+    paths = latest_paths([VIDEO_DIR.glob("z1pro*.mp4"), VIDEO_DIR.glob("z1pro*.jpg"), VIDEO_DIR.glob("z1pro*.jpeg")], limit)
+    valid = []
+    for path in paths:
+        try:
+            stat = path.stat()
+        except OSError:
+            continue
+        if stat.st_size <= 0:
+            continue
+        reason = invalid_media_time_reason(path, stat=stat)
+        if reason:
+            print("SKIP_MEDIA_INVALID_TIME file=%s reason=%s" % (path, reason), file=sys.stderr)
+            continue
+        valid.append(path)
+    return valid
+
+
+def resolve_media(value, cycle_index=0):
+    if not value or value == "latest":
+        files = valid_media_files(limit=40)
+        return files[0] if files else None
+    if value == "cycle":
+        files = valid_media_files(limit=40)
+        if not files:
+            return None
+        return files[cycle_index % len(files)]
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return VIDEO_DIR / value
+
+
+def yaw_from_quat(q):
+    import math
+
+    return math.atan2(2.0 * (q.w * q.z + q.x * q.y), 1.0 - 2.0 * (q.y * q.y + q.z * q.z))
+
+
+def collect_ros(timeout_sec=1.5):
+    data = {"ok": False, "errors": []}
+    try:
+        import rclpy
+        from nav_msgs.msg import Odometry
+        from rclpy.node import Node
+    except Exception as exc:  # noqa: BLE001
+        data["errors"].append("ros_import: " + repr(exc))
+        return data
+
+    try:
+        from unitree_go.msg import LowState, SportModeState
+    except Exception as exc:  # noqa: BLE001
+        LowState = None
+        SportModeState = None
+        data["errors"].append("unitree_go_import: " + repr(exc))
+
+    class Collector(Node):
+        def __init__(self):
+            super().__init__("go2_saas_agent")
+            self.odom = None
+            self.low = None
+            self.sport = None
+            self.create_subscription(Odometry, "/Odometry", self.on_odom, 5)
+            if LowState is not None:
+                self.create_subscription(LowState, "/lf/lowstate", self.on_low, 5)
+            if SportModeState is not None:
+                self.create_subscription(SportModeState, "/lf/sportmodestate", self.on_sport, 5)
+
+        def on_odom(self, msg):
+            self.odom = msg
+
+        def on_low(self, msg):
+            self.low = msg
+
+        def on_sport(self, msg):
+            self.sport = msg
+
+    try:
+        rclpy.init(args=None)
+        node = Collector()
+        deadline = time.time() + timeout_sec
+        while time.time() < deadline:
+            rclpy.spin_once(node, timeout_sec=0.1)
+            if node.odom is not None and (LowState is None or node.low is not None) and (SportModeState is None or node.sport is not None):
+                break
+        if node.odom is not None:
+            pose = node.odom.pose.pose
+            data["pose"] = {
+                "frame": "fast_lio_map",
+                "source": "/Odometry",
+                "x": round(float(pose.position.x), 3),
+                "y": round(float(pose.position.y), 3),
+                "z": round(float(pose.position.z), 3),
+                "yaw": round(float(yaw_from_quat(pose.orientation)), 3),
+            }
+        if node.low is not None:
+            low = node.low
+            temps = [int(item.temperature) for item in low.motor_state[:12]]
+            data["battery"] = {
+                "soc": int(low.bms_state.soc),
+                "powerV": round(float(low.power_v), 2),
+                "powerA": round(float(low.power_a), 2),
+                "motorMaxTemp": max(temps) if temps else None,
+                "bodyTemp": [int(low.temperature_ntc1), int(low.temperature_ntc2)],
+            }
+        if node.sport is not None:
+            sport = node.sport
+            data["sport"] = {
+                "errorCode": int(sport.error_code),
+                "mode": int(sport.mode),
+                "gait": int(sport.gait_type),
+                "vx": round(float(sport.velocity[0]), 3),
+                "vyaw": round(float(sport.yaw_speed), 3),
+            }
+        data["ok"] = bool(data.get("pose") or data.get("battery") or data.get("sport"))
+        node.destroy_node()
+        rclpy.shutdown()
+    except Exception as exc:  # noqa: BLE001
+        data["errors"].append("ros_collect: " + repr(exc))
+        try:
+            rclpy.shutdown()
+        except Exception:  # noqa: BLE001
+            pass
+    return data
+
+
+def current_pose(timeout_sec=0.8):
+    return collect_ros(timeout_sec).get("pose")
+
+
+def network_summary():
+    hostname, _, _ = shell_out(["hostname"], timeout=2)
+    addrs, _, _ = shell_out(["hostname", "-I"], timeout=2)
+    route, _, _ = shell_out(["sh", "-c", "ip route show default 2>/dev/null | head -1"], timeout=2)
+    return {"hostname": hostname, "addresses": addrs.split(), "defaultRoute": route}
+
+
+def infer_status(processes):
+    if processes.get("follower") or processes.get("safe"):
+        return "patrolling"
+    if processes.get("pcd"):
+        return "scan"
+    if processes.get("camera_loop"):
+        return "video_recording"
+    if processes.get("fastlio") or processes.get("livox"):
+        return "ready"
+    return "idle"
+
+
+def current_route_file():
+    out, _, _ = shell_out(["ps", "-eo", "args="], timeout=3)
+    match = re.search(r"route_file:=([^\s]+\.csv)", out)
+    return match.group(1) if match else ""
+
+
+def heartbeat_payload(args):
+    rid = robot_id_arg(args.robot_id)
+    ros = collect_ros(args.ros_timeout)
+    pose = ros.get("pose")
+    sport = ros.get("sport") or {}
+    processes = process_status()
+    route_file = current_route_file()
+    payload = {
+        "robotId": rid,
+        "time": now_local_text(),
+        "timestamp": int(time.time()),
+        "sentAt": now_text(),
+        "agent": "go2_saas_agent",
+        "status": infer_status(processes),
+        "pose": pose,
+        "position": pose,
+        "motion": {
+            "position": pose,
+            "yaw_rad": pose.get("yaw") if pose else None,
+            "velocity": {"vx": sport.get("vx"), "vyaw": sport.get("vyaw")},
+        },
+        "patrol": {
+            "running": bool(processes.get("follower") or processes.get("safe")),
+            "route_file": Path(route_file).name if route_file else "",
+        },
+        "battery": ros.get("battery"),
+        "diagnostics": {
+            "processes": processes,
+            "network": network_summary(),
+        },
+        "telemetry": {
+            "battery": ros.get("battery"),
+            "sport": ros.get("sport"),
+            "rosOk": ros.get("ok"),
+            "rosErrors": ros.get("errors", []),
+        },
+        "assets": asset_manifest(rid, limit=3),
+    }
+    command_response_path = Path(os.environ.get("GO2_COMMAND_RESPONSE_FILE", "/tmp/go2_command_response.json"))
+    if command_response_path.is_file():
+        try:
+            payload["commandResponse"] = json.loads(command_response_path.read_text())
+        except Exception as exc:  # noqa: BLE001
+            payload["commandResponseError"] = repr(exc)
+    return payload
+
+
+def upload_asset(path, kind, robot_id, dry_run=False, endpoint=None, timeout=180, patrol_id=""):
+    if path is None:
+        print("SKIP_%s missing path" % kind.upper())
+        return 0
+    if not path.is_file() or path.stat().st_size <= 0:
+        print("SKIP_%s unavailable_or_empty %s" % (kind.upper(), path))
+        return 1
+    if kind in ("video", "image"):
+        reason = invalid_media_time_reason(path)
+        if reason:
+            print("SKIP_%s invalid_media_time %s reason=%s" % (kind.upper(), path, reason), file=sys.stderr)
+            return 0
+    info = describe_file(path, kind)
+    recorded_at = info["mtimeText"]
+    pose = current_pose() if kind in ("video", "image") else None
+    meta = {
+        "kind": kind,
+        "source": "go2_saas_agent",
+        "path": str(path),
+        "mtime": info["mtime"],
+        "points": info.get("points"),
+        "recordedAt": recorded_at,
+    }
+    if pose:
+        meta["pose"] = pose
+        meta["position"] = pose
+    fields = {
+        "robotId": robot_id,
+        "fileName": path.name,
+        "fileSize": str(info["size"]),
+        "kind": kind,
+        "assetType": kind,
+        "time": recorded_at,
+        "meta": json.dumps(meta, ensure_ascii=False, sort_keys=True),
+    }
+    if pose:
+        fields.update({
+            "x": str(pose.get("x")),
+            "y": str(pose.get("y")),
+            "z": str(pose.get("z")),
+            "yaw": str(pose.get("yaw")),
+            "position": json.dumps(pose, ensure_ascii=False, sort_keys=True),
+            "pose": json.dumps(pose, ensure_ascii=False, sort_keys=True),
+        })
+    if patrol_id:
+        fields["patrolId"] = patrol_id
+    print("UPLOAD_ASSET kind=%s file=%s size=%s" % (kind, path, info["size"]))
+    target_endpoint = endpoint or endpoint_for(kind)
+    rc = post_multipart(path, fields, target_endpoint, dry_run=dry_run, timeout=timeout)
+    if rc != 0 and not dry_run:
+        dedupe = "file:%s:%s:%s:%s" % (target_endpoint, path, info["size"], info.get("mtime"))
+        return enqueue_outbox_job(
+            "file",
+            target_endpoint,
+            file_path=path,
+            fields=fields,
+            timeout=timeout,
+            dedupe_key=dedupe,
+            reason="upload failed rc=%s" % rc,
+        )
+    return rc
+
+
+def command_id(command, index=0):
+    for key in ("commandId", "id", "cmdId", "command_id"):
+        value = command.get(key)
+        if value:
+            return str(value)
+    return "generated-%d-%d" % (int(time.time()), index)
+
+
+def command_action(command):
+    for key in ("action", "type", "name", "command", "cmd"):
+        value = command.get(key)
+        if value:
+            return str(value).strip().lower().replace("-", "_")
+    return ""
+
+
+def command_params(command):
+    params = command.get("params") or command.get("payload") or command.get("data") or {}
+    return params if isinstance(params, dict) else {"value": params}
+
+
+def param_first(params, keys):
+    for key in keys:
+        value = params.get(key)
+        if value not in (None, ""):
+            return str(value).strip()
+    return ""
+
+
+def is_url(value):
+    return value.startswith("http://") or value.startswith("https://")
+
+
+def route_url_from_params(params):
+    value = param_first(params, ["routeUrl", "route_url", "downloadUrl", "download_url", "fileUrl", "file_url", "url"])
+    route_value = param_first(params, ["route", "routeFile", "route_file", "fileName", "file_name", "filename", "csv"])
+    if is_url(route_value):
+        return route_value
+    return value
+
+
+def route_name_from_params(params):
+    value = param_first(params, ["fileName", "file_name", "filename", "routeFile", "route_file", "route", "routeName", "route_name", "name", "csv"])
+    if not value:
+        value = route_url_from_params(params)
+    if is_url(value):
+        value = Path(urllib.parse.urlparse(value).path).name
+    else:
+        value = Path(value).name
+    if value and not value.endswith(".csv"):
+        value += ".csv"
+    if not value or not ROUTE_NAME_RE.match(value):
+        raise ValueError("invalid route file name: %s" % value)
+    return value
+
+
+def build_download_url(value):
+    if is_url(value):
+        parsed = urllib.parse.urlparse(value)
+        if parsed.hostname == "gogoguard.cn":
+            backend = urllib.parse.urlparse(backend_base())
+            if backend.scheme and backend.netloc:
+                return urllib.parse.urlunparse((
+                    backend.scheme,
+                    backend.netloc,
+                    parsed.path,
+                    parsed.params,
+                    parsed.query,
+                    parsed.fragment,
+                ))
+        return value
+    return build_url(value)
+
+
+def download_route_csv(route_url, route_path, timeout=45, attempts=3):
+    url = build_download_url(route_url)
+    headers = {"Accept": "text/csv,*/*"}
+    headers.update(auth_headers())
+    headers.update(device_token_headers())
+    request = urllib.request.Request(url, headers=headers, method="GET")
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            response = urllib.request.urlopen(request, timeout=timeout, context=tls_context(url))
+            data = response.read()
+            if response.getcode() < 200 or response.getcode() >= 300:
+                raise RuntimeError("route download status=%s" % response.getcode())
+            if not data.strip():
+                raise RuntimeError("route download returned empty file")
+            if data.lstrip().startswith(b"<"):
+                raise RuntimeError("route download returned non-csv content")
+            route_path.parent.mkdir(parents=True, exist_ok=True)
+            tmp_path = route_path.with_suffix(route_path.suffix + ".tmp")
+            tmp_path.write_bytes(data)
+            tmp_path.replace(route_path)
+            return {"downloaded": True, "bytes": len(data), "url": url, "downloadAttempts": attempt}
+        except Exception as exc:  # noqa: BLE001
+            last_error = exc
+            print("ROUTE_DOWNLOAD_RETRY", attempt, repr(exc), file=sys.stderr)
+            if attempt < attempts:
+                time.sleep(min(8, 2 * attempt))
+    raise RuntimeError("route download failed after %s attempts: %s" % (attempts, last_error))
+
+
+def validate_route_csv(route_path):
+    if not route_path.is_file() or route_path.stat().st_size <= 0:
+        raise RuntimeError("route csv missing or empty: %s" % route_path)
+    with route_path.open("rb") as handle:
+        lines = sum(1 for _ in handle)
+    if lines < 3:
+        raise RuntimeError("route csv too short: %s lines=%s" % (route_path, lines))
+    return lines
+
+
+def prepare_route_csv(params, dry_run=False):
+    route_name = route_name_from_params(params)
+    route_path = ROUTES_DIR / route_name
+    route_url = route_url_from_params(params)
+    info = {"routeName": route_name, "routePath": str(route_path), "downloaded": False}
+    if route_url:
+        info["routeUrl"] = route_url
+        if not dry_run:
+            info.update(download_route_csv(route_url, route_path))
+    elif not route_path.is_file():
+        raise RuntimeError("route csv not found locally and no routeUrl provided: %s" % route_name)
+    if not dry_run:
+        info["lines"] = validate_route_csv(route_path)
+    info["relocalization"] = route_relocalization_plan(route_path, params)
+    return route_path, info
+
+
+def bounded_float(value, default, low, high):
+    try:
+        number = float(value)
+    except Exception:  # noqa: BLE001
+        number = default
+    return max(low, min(high, number))
+
+
+def ros_env_prefix():
+    env = Path(WS) / "scripts/env_common.sh"
+    return "cd %s; source %s >/dev/null 2>&1 || true; " % (shlex.quote(WS), shlex.quote(str(env)))
+
+
+def detached_command(inner, log_path):
+    return "setsid nohup bash -c %s </dev/null >%s 2>&1 &" % (shlex.quote(ros_env_prefix() + inner), shlex.quote(log_path))
+
+
+def start_patrol_command(route_path, params, route_info=None):
+    speed = bounded_float(params.get("speed", params.get("v_base", 0.25)), 0.25, 0.05, 0.3)
+    start_max_distance = bounded_float(
+        params.get("startMaxDistance", params.get("start_max_distance", 0.8)),
+        0.8,
+        0.2,
+        3.0,
+    )
+    start_max_yaw_error = bounded_float(
+        params.get("startMaxYawError", params.get("start_max_yaw_error", 0.9)),
+        0.9,
+        0.2,
+        3.14,
+    )
+    max_route_deviation = bounded_float(
+        params.get("maxRouteDeviation", params.get("max_route_deviation", 5.0)),
+        5.0,
+        0.8,
+        8.0,
+    )
+    recovery_distance = bounded_float(
+        params.get("recoveryDistance", params.get("recovery_distance", 1.0)),
+        1.0,
+        0.3,
+        2.0,
+    )
+    recovery_heading_distance = bounded_float(
+        params.get("recoveryHeadingDistance", params.get("recovery_heading_distance", 0.35)),
+        0.35,
+        0.0,
+        2.0,
+    )
+    recovery_yaw_error = bounded_float(
+        params.get("recoveryYawError", params.get("recovery_yaw_error", 0.75)),
+        0.75,
+        0.0,
+        3.14,
+    )
+    recovery_vx = bounded_float(
+        params.get("recoveryVx", params.get("recovery_vx", 0.20)),
+        0.20,
+        0.03,
+        0.3,
+    )
+    max_yaw_rate = bounded_float(
+        params.get("maxYawRate", params.get("max_yaw_rate", 0.45)),
+        0.45,
+        0.2,
+        0.5,
+    )
+    lookahead_distance = bounded_float(
+        params.get("lookaheadDistance", params.get("lookahead_distance", 0.60)),
+        0.60,
+        0.25,
+        1.2,
+    )
+    turn_in_place_angle = bounded_float(
+        params.get("turnInPlaceAngle", params.get("turn_in_place_angle", 1.35)),
+        1.35,
+        0.6,
+        2.4,
+    )
+    slow_down_angle = bounded_float(
+        params.get("slowDownAngle", params.get("slow_down_angle", 0.75)),
+        0.75,
+        0.2,
+        1.5,
+    )
+    lateral_yaw_gain = bounded_float(
+        params.get("lateralYawGain", params.get("lateral_yaw_gain", params.get("lateralCorrectionGain", params.get("lateral_correction_gain", 0.18)))),
+        0.18,
+        0.0,
+        1.0,
+    )
+    max_lateral_yaw_rate = bounded_float(
+        params.get("maxLateralYawRate", params.get("max_lateral_yaw_rate", params.get("maxLateralCorrection", params.get("max_lateral_correction", 0.15)))),
+        0.15,
+        0.0,
+        0.45,
+    )
+    lateral_deadband = bounded_float(
+        params.get("lateralDeadband", params.get("lateral_deadband", 0.03)),
+        0.03,
+        0.0,
+        0.30,
+    )
+    use_route_speed = bool_param(params, ("useRouteSpeed", "use_route_speed"), True)
+    loop_mode = str(params.get("loop_mode", params.get("loopMode", "once")))
+    if loop_mode not in ("once", "pingpong"):
+        loop_mode = "once"
+
+    relocalization = route_relocalization_plan(route_path, params)
+    if route_info is not None:
+        route_info["relocalization"] = relocalization
+
+    effective_route_path = Path(relocalization["runtimeRoutePath"]) if relocalization.get("enabled") else Path(route_path)
+
+    route_arg = shlex.quote(str(effective_route_path))
+    source_route_arg = shlex.quote(str(route_path))
+    follower_route_arg = source_route_arg if relocalization.get("enabled") else route_arg
+    route_transform_json_arg = shlex.quote(str(effective_route_path) + ".relocalize.json") if relocalization.get("enabled") else "''"
+    speed_arg = shlex.quote("%.3f" % speed)
+    start_max_distance_arg = shlex.quote("%.3f" % start_max_distance)
+    start_max_yaw_error_arg = shlex.quote("%.3f" % start_max_yaw_error)
+    max_route_deviation_arg = shlex.quote("%.3f" % max_route_deviation)
+    recovery_distance_arg = shlex.quote("%.3f" % recovery_distance)
+    recovery_heading_distance_arg = shlex.quote("%.3f" % recovery_heading_distance)
+    recovery_yaw_error_arg = shlex.quote("%.3f" % recovery_yaw_error)
+    recovery_vx_arg = shlex.quote("%.3f" % recovery_vx)
+    max_yaw_rate_arg = shlex.quote("%.3f" % max_yaw_rate)
+    lookahead_distance_arg = shlex.quote("%.3f" % lookahead_distance)
+    turn_in_place_angle_arg = shlex.quote("%.3f" % turn_in_place_angle)
+    slow_down_angle_arg = shlex.quote("%.3f" % slow_down_angle)
+    lateral_yaw_gain_arg = shlex.quote("%.3f" % lateral_yaw_gain)
+    max_lateral_yaw_rate_arg = shlex.quote("%.3f" % max_lateral_yaw_rate)
+    lateral_deadband_arg = shlex.quote("%.3f" % lateral_deadband)
+    use_route_speed_arg = "true" if use_route_speed else "false"
+    loop_arg = shlex.quote(loop_mode)
+    sdk_if = str(params.get("sdkInterface", params.get("sdk_interface", params.get("sdkIface", params.get("sdk_if", os.environ.get("GO2_SDK_IF", "eth1")))))).strip() or "eth1"
+    if not re.match(r"^[A-Za-z0-9_.:-]+$", sdk_if):
+        raise RuntimeError("invalid SDK interface: %s" % sdk_if)
+    sdk_if_arg = shlex.quote(sdk_if)
+    ensure_base_script = shlex.quote(str(Path(WS) / "scripts/ensure_base_ready.sh"))
+    alignment_script = shlex.quote(str(Path(WS) / "scripts/check_route_start_alignment.py"))
+    agent_script = shlex.quote(str(Path(WS) / "scripts/go2_saas_agent.py"))
+    health_watchdog_script = shlex.quote(str(Path(WS) / "scripts/go2_base_health_watchdog.py"))
+    health_watchdog_log = shlex.quote(str(Path(WS) / "patrol_logs/service/go2-base-health-watchdog.log"))
+    route_log_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", route_path.stem).strip("._-") or "route"
+    route_log_name = route_log_name[:80]
+    patrol_run_dir = PATROL_RUNS_DIR / ("%s_%s" % (time.strftime("%Y%m%d_%H%M%S"), route_log_name))
+    patrol_run_dir_arg = shlex.quote(str(patrol_run_dir))
+    patrol_manifest_arg = shlex.quote(str(patrol_run_dir / "manifest.txt"))
+    sdk_receiver_log = str(patrol_run_dir / "go2_sdk2_udp_receiver.log")
+    cmd_vel_sender_log = str(patrol_run_dir / "cmd_vel_udp_sender.log")
+    safe_log = str(patrol_run_dir / "unitree_safe_cmd_node.log")
+    follower_log = str(patrol_run_dir / "waypoint_follower.log")
+    relocalize_cmd = ""
+    if relocalization.get("enabled"):
+        collect_seconds = bounded_float(
+            params.get("relocalizeCollectSeconds", params.get("relocalize_collect_seconds", os.environ.get("GO2_RELOCALIZE_COLLECT_SECONDS", 3.0))),
+            3.0,
+            1.0,
+            10.0,
+        )
+        xy_search_radius = bounded_float(
+            params.get("relocalizeSearchRadius", params.get("relocalize_search_radius", max_route_deviation)),
+            max_route_deviation,
+            0.5,
+            8.0,
+        )
+        xy_search_step = bounded_float(
+            params.get("relocalizeSearchStep", params.get("relocalize_search_step", os.environ.get("GO2_RELOCALIZE_SEARCH_STEP", 2.0))),
+            2.0,
+            0.5,
+            4.0,
+        )
+        yaw_step = bounded_float(
+            params.get("relocalizeYawStepDeg", params.get("relocalize_yaw_step_deg", os.environ.get("GO2_RELOCALIZE_YAW_STEP_DEG", 30.0))),
+            30.0,
+            5.0,
+            60.0,
+        )
+        fitness_threshold = bounded_float(
+            params.get("relocalizeFitnessThreshold", params.get("relocalize_fitness_threshold", os.environ.get("GO2_RELOCALIZE_FITNESS_THRESHOLD", 1.0))),
+            1.0,
+            0.05,
+            5.0,
+        )
+        relocalize_cmd = (
+            "mkdir -p %s; rm -f %s %s.relocalize.json; "
+            "ros2 run go2_map_manager route_relocalizer --ros-args "
+            "-p route_file:=%s -p map_file:=%s -p out_route_file:=%s "
+            "-p cloud_topic:=/cloud_registered -p odom_topic:=/Odometry "
+            "-p collect_seconds:=%s -p xy_search_radius:=%s -p xy_search_step:=%s "
+            "-p yaw_search_deg:=180.0 -p yaw_step_deg:=%s -p fitness_threshold:=%s "
+            "|| exit $?; "
+        ) % (
+            shlex.quote(str(effective_route_path.parent)),
+            route_arg,
+            route_arg,
+            source_route_arg,
+            shlex.quote(relocalization["mapPath"]),
+            route_arg,
+            shlex.quote("%.3f" % collect_seconds),
+            shlex.quote("%.3f" % xy_search_radius),
+            shlex.quote("%.3f" % xy_search_step),
+            shlex.quote("%.3f" % yaw_step),
+            shlex.quote("%.3f" % fitness_threshold),
+        )
+    sdk_receiver_cmd = "%s/build/go2_cmd_vel_bridge/go2_sdk2_udp_receiver %s 5005" % (shlex.quote(WS), sdk_if_arg)
+    cmd_vel_sender_cmd = (
+        "ros2 run go2_cmd_vel_bridge cmd_vel_udp_sender --ros-args "
+        "-p target_ip:=127.0.0.1 -p target_port:=5005 "
+        "-p max_vx:=%s -p max_vyaw:=%s"
+    ) % (speed_arg, max_yaw_rate_arg)
+    safe_cmd = (
+        "ros2 run go2_fastlio_patrol unitree_safe_cmd_node --ros-args "
+        "-p max_vx:=%s -p max_yaw_rate:=%s -p publish_rate:=20.0 "
+        "-p pointcloud_topic:=/cloud_registered_body -p sport_request_topic:=/api/sport/request "
+        "-p output_cmd_topic:=/cmd_vel "
+        "-p stop_distance:=0.40 -p resume_distance:=0.50 -p min_stop_points:=15 "
+        "-p roi_x_min:=0.35 -p roi_x_max:=0.90 -p roi_y_min:=-0.30 -p roi_y_max:=0.30 "
+        "-p roi_z_min:=0.30 -p roi_z_max:=0.90"
+    ) % (speed_arg, max_yaw_rate_arg)
+    follower_cmd = (
+        "ros2 run go2_fastlio_patrol waypoint_follower --ros-args "
+        "-p route_file:=%s -p route_transform_json:=%s -p v_base:=%s -p max_vx:=%s "
+        "-p k_yaw:=0.75 -p max_yaw_rate:=%s -p lateral_yaw_gain:=%s "
+        "-p max_lateral_yaw_rate:=%s -p lateral_deadband:=%s -p lookahead_distance:=%s "
+        "-p reach_distance:=0.4 -p goal_distance:=0.25 "
+        "-p loop_mode:=%s -p search_window:=6 -p turn_in_place_angle:=%s "
+        "-p slow_down_angle:=%s -p turn_crawl_vx:=0.060 -p stuck_time:=3.0 -p relocalize_distance:=1.5 "
+        "-p soft_unstick_yaw_rate:=0.20 -p soft_unstick_min_moved:=0.12 "
+        "-p progress_s_epsilon:=0.08 -p progress_backtrack_tolerance:=0.12 "
+        "-p progress_forward_tolerance:=0.45 -p projection_speed_scale:=1.20 "
+        "-p projection_step_margin:=0.010 -p projection_min_step:=0.015 -p projection_max_step:=0.120 "
+        "-p start_policy:=route_start -p start_max_distance:=%s -p start_max_yaw_error:=%s "
+        "-p allow_global_relocalize:=false -p stuck_relocalize:=false "
+        "-p stop_on_route_deviation:=true -p recovery_distance:=%s "
+        "-p recovery_heading_distance:=%s -p recovery_yaw_error:=%s -p recovery_vx:=%s "
+        "-p max_route_deviation:=%s -p use_route_speed:=%s "
+        "-p yaw_deadband:=0.06 -p max_vx_accel:=0.35 -p max_yaw_accel:=0.90 "
+        "-p yaw_wrap_hysteresis:=0.35 -p max_odom_jump_distance:=0.80 "
+        "-p max_odom_jump_z:=0.50 -p max_odom_jump_dt:=2.00"
+    ) % (
+        follower_route_arg,
+        route_transform_json_arg,
+        speed_arg,
+        speed_arg,
+        max_yaw_rate_arg,
+        lateral_yaw_gain_arg,
+        max_lateral_yaw_rate_arg,
+        lateral_deadband_arg,
+        lookahead_distance_arg,
+        loop_arg,
+        turn_in_place_angle_arg,
+        slow_down_angle_arg,
+        start_max_distance_arg,
+        start_max_yaw_error_arg,
+        recovery_distance_arg,
+        recovery_heading_distance_arg,
+        recovery_yaw_error_arg,
+        recovery_vx_arg,
+        max_route_deviation_arg,
+        use_route_speed_arg,
+    )
+    return ros_env_prefix() + (
+        "p=$(ps -eo pid=,comm=,args= | awk '$2 != \"bash\" && $2 != \"sh\" && $0 ~ /[w]aypoint_follower|[u]nitree_safe_cmd_node|[c]md_vel_udp_sender|[g]o2_sdk2_udp_receiver/ {print $1}' | grep -vx \"$$\" || true); "
+        "[ -n \"$p\" ] && { echo PATROL_ALREADY_RUNNING; echo \"$p\"; exit 4; }; "
+        "mkdir -p %s; "
+        "printf 'started_at=%s\\nroute=%s\\nspeed=%s\\nloop=%s\\nsdk_if=%s\\n' >%s; "
+        "ln -sfn %s /tmp/go2_saas_sdk_receiver.log; "
+        "ln -sfn %s /tmp/go2_saas_cmd_vel_sender.log; "
+        "ln -sfn %s /tmp/go2_saas_safe.log; "
+        "ln -sfn %s /tmp/go2_saas_follower.log; "
+        "echo PATROL_LOG_DIR=%s; "
+        "bash %s || exit $?; "
+        "if ! pgrep -f '[g]o2_base_health_watchdog.py' >/dev/null 2>&1; then "
+        "setsid nohup python3 -u %s </dev/null >>%s 2>&1 & echo BASE_HEALTH_WATCHDOG_STARTED; fi; "
+        "%s"
+        "python3 %s --route-file %s --max-distance %s --max-yaw-error %s || exit $?; "
+        "if ! pgrep -f '[g]o2_saas_agent.py video-loop' >/dev/null 2>&1; then "
+        "touch /tmp/go2_saas_video.run; "
+        "setsid nohup python3 -u %s video-loop --seconds 20 --upload --run-file /tmp/go2_saas_video.run "
+        "</dev/null >/tmp/go2_saas_video_loop.log 2>&1 & echo VIDEO_LOOP_STARTED; fi; "
+        "%s echo SDK_RECEIVER_STARTED iface=%s log=%s; sleep 4; "
+        "if grep -Eq 'StandUp ret=[1-9][0-9]*|BalanceStand ret=[1-9][0-9]*' %s; then "
+        "echo MOTION_SDK_NOT_READY: StandUp/BalanceStand returned nonzero. Check GO2_SDK_IF or robot sport mode. >&2; "
+        "pkill -TERM -f '[g]o2_sdk2_udp_receiver' 2>/dev/null || true; exit 42; fi; "
+        "if ! pgrep -f '[g]o2_sdk2_udp_receiver' >/dev/null 2>&1; then "
+        "echo MOTION_SDK_NOT_READY: SDK receiver exited before patrol start. >&2; exit 42; fi; "
+        "%s echo CMD_VEL_SENDER_STARTED log=%s; sleep 1; "
+        "%s echo SAFE_STARTED log=%s; sleep 1; %s echo FOLLOWER_STARTED log=%s; echo PATROL_STARTED route=%s speed=%s loop=%s log_dir=%s"
+    ) % (
+        patrol_run_dir_arg,
+        shlex.quote(now_text()),
+        shlex.quote(str(route_path)),
+        speed_arg,
+        loop_arg,
+        sdk_if_arg,
+        patrol_manifest_arg,
+        shlex.quote(sdk_receiver_log),
+        shlex.quote(cmd_vel_sender_log),
+        shlex.quote(safe_log),
+        shlex.quote(follower_log),
+        patrol_run_dir_arg,
+        ensure_base_script,
+        health_watchdog_script,
+        health_watchdog_log,
+        relocalize_cmd,
+        alignment_script,
+        route_arg,
+        start_max_distance_arg,
+        start_max_yaw_error_arg,
+        agent_script,
+        detached_command(sdk_receiver_cmd, sdk_receiver_log),
+        sdk_if_arg,
+        shlex.quote(sdk_receiver_log),
+        shlex.quote(sdk_receiver_log),
+        detached_command(cmd_vel_sender_cmd, cmd_vel_sender_log),
+        shlex.quote(cmd_vel_sender_log),
+        detached_command(safe_cmd, safe_log),
+        shlex.quote(safe_log),
+        detached_command(follower_cmd, follower_log),
+        shlex.quote(follower_log),
+        shlex.quote(route_path.name),
+        speed_arg,
+        loop_arg,
+        patrol_run_dir_arg,
+    )
+
+
+def stop_patrol_command():
+    return ros_env_prefix() + (
+        "p=$(ps -eo pid=,comm=,args= | awk '($2 == \"ros2\" && $0 ~ /[w]aypoint_follower|[u]nitree_safe_cmd_node|[u]nitree_cmd_node|[c]md_vel_udp_sender/) || $2 ~ /^waypoint_follow/ || $2 ~ /^unitree_safe_cm/ || $2 ~ /^unitree_cmd/ || $2 ~ /^cmd_vel_udp/ || $2 ~ /^go2_sdk2_udp/ {print $1}' | tr \"\\n\" \" \" || true); "
+        "[ -n \"$p\" ] && kill -TERM $p 2>/dev/null || true; sleep 1; "
+        "p2=$(ps -eo pid=,comm=,args= | awk '($2 == \"ros2\" && $0 ~ /[w]aypoint_follower|[u]nitree_safe_cmd_node|[u]nitree_cmd_node|[c]md_vel_udp_sender/) || $2 ~ /^waypoint_follow/ || $2 ~ /^unitree_safe_cm/ || $2 ~ /^unitree_cmd/ || $2 ~ /^cmd_vel_udp/ || $2 ~ /^go2_sdk2_udp/ {print $1}' | tr \"\\n\" \" \" || true); "
+        "[ -n \"$p2\" ] && kill -KILL $p2 2>/dev/null || true; "
+        "ros2 topic pub -1 /api/sport/request unitree_api/msg/Request \"{header: {identity: {id: 9999, api_id: 1003}, lease: {id: 0}, policy: {priority: 0, noreply: false}}, parameter: '{}', binary: []}\" >/dev/null 2>&1 || true; "
+        "sdk_if=${GO2_SDK_IF:-eth1}; %s/build/go2_cmd_vel_bridge/go2_sdk2_motion_probe --iface \"$sdk_if\" stop >/dev/null 2>&1 || true; "
+        "echo PATROL_STOPPED"
+    ) % shlex.quote(WS)
+
+
+def run_start_patrol(params, execute_safe=False):
+    try:
+        route_path, route_info = prepare_route_csv(params, dry_run=not execute_safe)
+    except Exception as exc:  # noqa: BLE001
+        return "rejected", str(exc), {"action": "start_patrol", "params": params}
+    if not execute_safe:
+        route_info["dryRun"] = True
+        return "success", "start_patrol dry-run accepted", {"action": "start_patrol", "params": params, "route": route_info}
+    try:
+        cmd = start_patrol_command(route_path, params, route_info=route_info)
+    except Exception as exc:  # noqa: BLE001
+        return "rejected", str(exc), {"action": "start_patrol", "params": params, "route": route_info}
+    out, err, rc = shell_out(["bash", "-lc", cmd], timeout=240)
+    status = "success" if rc == 0 else "failed"
+    if rc == 0:
+        message = out or err or "rc=%s" % rc
+    else:
+        message = "\n".join(part for part in (err, out) if part) or "rc=%s" % rc
+    return status, message, {"action": "start_patrol", "params": params, "route": route_info, "rc": rc, "out": out, "err": err}
+
+
+def run_stop_patrol(params, execute_safe=False):
+    if not execute_safe:
+        return "success", "stop_patrol dry-run accepted", {"action": "stop_patrol", "params": params, "dryRun": True}
+    out, err, rc = shell_out(["bash", "-lc", stop_patrol_command()], timeout=30)
+    status = "success" if rc == 0 else "failed"
+    return status, out or err or "rc=%s" % rc, {"action": "stop_patrol", "params": params, "rc": rc, "out": out, "err": err}
+
+
+def run_safe_command(action, params, execute_safe=False):
+    if action in ("ping", "noop", "status"):
+        return "success", "command accepted", {"action": action, "dryRun": not execute_safe}
+    if action in START_PATROL_COMMANDS:
+        return run_start_patrol(params, execute_safe=execute_safe)
+    if action in STOP_PATROL_COMMANDS:
+        return run_stop_patrol(params, execute_safe=execute_safe)
+    if action in GOTO_COMMANDS:
+        return "rejected", "goto/free navigation is not implemented in v1.5", {"action": action, "params": params}
+    if action not in SAFE_COMMANDS:
+        return "rejected", "unknown command action: %s" % action, {"action": action, "params": params}
+    if not execute_safe:
+        return "success", "safe command dry-run accepted: %s" % action, {"action": action, "params": params, "dryRun": True}
+
+    mapping = {
+        "start_base": "setsid nohup bash %s/scripts/base_bringup.sh </dev/null >/tmp/console_base.log 2>&1 & echo STARTED" % WS,
+        "stop_base": "bash %s/scripts/base_stop.sh >/dev/null 2>&1 || true; echo STOPPED" % WS,
+        "camera_start_loop": "test -x /tmp/z1pro_video_loop.sh && echo CAMERA_LOOP_ALREADY_CONFIGURED || echo CAMERA_LOOP_SCRIPT_MISSING",
+        "camera_stop_loop": "rm -f /tmp/z1pro_video_loop.run; pkill -TERM -f '[z]1pro_video_loop.sh' 2>/dev/null || true; echo CAMERA_LOOP_STOPPED",
+    }
+    cmd = mapping.get(action)
+    if not cmd:
+        return "rejected", "no local mapping for %s" % action, {"action": action, "params": params}
+    out, err, rc = shell_out(["bash", "-lc", cmd], timeout=20)
+    status = "success" if rc == 0 else "failed"
+    return status, out or err or "rc=%s" % rc, {"action": action, "params": params, "rc": rc, "out": out, "err": err}
+
+
+def post_command_result(args, cmd_id, status, message, detail=None):
+    action = detail.get("action") if isinstance(detail, dict) else None
+    payload = {
+        "robotId": robot_id_arg(args.robot_id),
+        "commandId": cmd_id,
+        "status": status,
+        "message": message,
+        "time": now_local_text(),
+        "reportedAt": now_text(),
+        "result": {
+            "command_id": cmd_id,
+            "ok": status in ("success", "running"),
+            "msg": message,
+            "action": action,
+            "status": status,
+        },
+    }
+    if detail is not None:
+        payload["detail"] = detail
+    rc = post_json(args.result_endpoint, payload, dry_run=args.dry_run_results, timeout=args.post_timeout)
+    if rc != 0 and not args.dry_run_results:
+        dedupe = "command-result:%s:%s:%s" % (args.result_endpoint, cmd_id, status)
+        return enqueue_outbox_job(
+            "json",
+            args.result_endpoint,
+            payload=payload,
+            timeout=args.post_timeout,
+            dedupe_key=dedupe,
+            reason="command result post failed rc=%s" % rc,
+        )
+    return rc
+
+
+def load_seen_commands(path):
+    if not path:
+        return set()
+    try:
+        data = json.loads(Path(path).read_text())
+        return set(str(item) for item in data)
+    except Exception:  # noqa: BLE001
+        return set()
+
+
+def save_seen_commands(path, seen):
+    if not path:
+        return
+    try:
+        Path(path).write_text(json.dumps(sorted(seen), ensure_ascii=False, indent=2))
+    except Exception as exc:  # noqa: BLE001
+        print("SEEN_SAVE_ERROR", repr(exc), file=sys.stderr)
+
+
+def handle_commands(args, commands, seen=None):
+    if not isinstance(commands, list):
+        return 0
+    seen = seen if seen is not None else set()
+    rc = 0
+    for index, command in enumerate(commands):
+        if not isinstance(command, dict):
+            rc |= post_command_result(args, "invalid-%d" % index, "rejected", "command is not an object", {"raw": command})
+            continue
+        cmd_id = command_id(command, index)
+        if cmd_id in seen:
+            print("COMMAND_SKIP_SEEN", cmd_id)
+            continue
+        action = command_action(command)
+        params = command_params(command)
+        status, message, detail = run_safe_command(action, params, execute_safe=args.execute_safe)
+        print("COMMAND", cmd_id, action or "<missing>", status, message)
+        rc |= post_command_result(args, cmd_id, status, message, detail)
+        if rc == 0:
+            seen.add(cmd_id)
+    return rc
+
+
+def cmd_heartbeat_once(args):
+    return post_json(args.endpoint, heartbeat_payload(args), dry_run=args.dry_run, timeout=args.post_timeout)
+
+
+def cmd_heartbeat_loop(args):
+    while True:
+        if not loop_wall_time_ready("HEARTBEAT_LOOP", sleep_sec=args.interval):
+            continue
+        rc = cmd_heartbeat_once(args)
+        if args.once_on_error and rc != 0:
+            return rc
+        time.sleep(args.interval)
+
+
+def cmd_asset_manifest(args):
+    payload = asset_manifest(robot_id_arg(args.robot_id), limit=args.limit)
+    if args.endpoint:
+        return post_json(args.endpoint, payload, dry_run=args.dry_run, timeout=args.post_timeout)
+    print(json.dumps(payload, ensure_ascii=False, sort_keys=True, indent=2))
+    return 0
+
+
+def cmd_plan_fetch(args):
+    rc, _, _, _ = get_json_capture(args.endpoint, dry_run=args.dry_run, timeout=args.post_timeout)
+    return rc
+
+
+def cmd_command_result(args):
+    payload = {
+        "robotId": robot_id_arg(args.robot_id),
+        "commandId": args.command_id,
+        "status": args.status,
+        "message": args.message,
+        "time": now_local_text(),
+        "reportedAt": now_text(),
+        "result": {
+            "command_id": args.command_id,
+            "ok": args.status in ("success", "running"),
+            "msg": args.message,
+            "action": "console-test",
+            "status": args.status,
+        },
+    }
+    if args.detail_json:
+        payload["detail"] = json.loads(args.detail_json)
+    rc = post_json(args.endpoint, payload, dry_run=args.dry_run, timeout=args.post_timeout)
+    if rc != 0 and not args.dry_run:
+        dedupe = "command-result:%s:%s:%s" % (args.endpoint, args.command_id, args.status)
+        return enqueue_outbox_job(
+            "json",
+            args.endpoint,
+            payload=payload,
+            timeout=args.post_timeout,
+            dedupe_key=dedupe,
+            reason="manual command result post failed rc=%s" % rc,
+        )
+    return rc
+
+
+def cmd_command_poll_once(args, seen=None):
+    rc, _, _, data = post_json_capture(args.heartbeat_endpoint, heartbeat_payload(args), dry_run=False, timeout=args.post_timeout)
+    if rc != 0:
+        return rc
+    commands = data.get("commands", []) if isinstance(data, dict) else []
+    print("COMMANDS_COUNT", len(commands) if isinstance(commands, list) else 0)
+    return handle_commands(args, commands, seen=seen)
+
+
+def cmd_command_loop(args):
+    cycle = 0
+    rc = 0
+    seen = load_seen_commands(args.seen_file)
+    while args.cycles <= 0 or cycle < args.cycles:
+        if args.run_file and not Path(args.run_file).exists():
+            print("COMMAND_LOOP_STOP_FILE_MISSING %s" % args.run_file, flush=True)
+            break
+        if not loop_wall_time_ready("COMMAND_LOOP", sleep_sec=args.interval):
+            continue
+        rc |= cmd_command_poll_once(args, seen=seen)
+        save_seen_commands(args.seen_file, seen)
+        drain_jobs = int(getattr(args, "drain_outbox_jobs", 0) or 0)
+        if drain_jobs > 0:
+            drain_outbox_once(max_jobs=drain_jobs)
+        cycle += 1
+        if args.cycles > 0 and cycle >= args.cycles:
+            break
+        time.sleep(args.interval)
+    return rc
+
+
+def cmd_video_segment(args):
+    if not wait_for_valid_wall_time(timeout=float(os.environ.get("GO2_TIME_WAIT_TIMEOUT", "180"))):
+        return 75
+    script = Path(WS) / "scripts/z1pro_upload_segment.sh"
+    if not script.exists():
+        print("missing script: %s" % script, file=sys.stderr)
+        return 1
+    env = os.environ.copy()
+    env["GO2_ROBOT_ID"] = robot_id_arg(args.robot_id)
+    env["GO2_BACKEND_BASE"] = backend_base()
+    env["Z1PRO_UPLOAD"] = "1" if args.upload else "0"
+    cmd = [str(script), str(args.seconds)]
+    timeout_sec = int(args.seconds) + int(os.environ.get("Z1PRO_SEGMENT_TIMEOUT_MARGIN", "60"))
+    try:
+        run = subprocess.run(cmd, env=env, timeout=timeout_sec)
+        return run.returncode
+    except subprocess.TimeoutExpired:
+        print("VIDEO_SEGMENT_TIMEOUT seconds=%s timeout=%s" % (args.seconds, timeout_sec), file=sys.stderr, flush=True)
+        subprocess.call(["pkill", "-TERM", "-f", "[g]st-launch-1.0.*rtsp://192.168.144.108"])
+        time.sleep(2)
+        subprocess.call(["pkill", "-KILL", "-f", "[g]st-launch-1.0.*rtsp://192.168.144.108"])
+        return 124
+
+
+def cmd_video_loop(args):
+    cycle = 0
+    final_rc = 0
+    while args.cycles <= 0 or cycle < args.cycles:
+        if args.run_file and not Path(args.run_file).exists():
+            print("VIDEO_LOOP_STOP_FILE_MISSING %s" % args.run_file, flush=True)
+            break
+        print("VIDEO_LOOP_CYCLE %d seconds=%s upload=%s" % (cycle + 1, args.seconds, args.upload), flush=True)
+        rc = cmd_video_segment(args)
+        if rc != 0:
+            final_rc |= rc
+            print("VIDEO_LOOP_SEGMENT_FAILED rc=%s" % rc, flush=True)
+            time.sleep(args.error_sleep)
+        else:
+            if args.max_jobs > 0:
+                drain_outbox_once(max_jobs=args.max_jobs)
+            time.sleep(args.interval)
+        cycle += 1
+    return final_rc
+
+
+def upload_patrol_assets(args, cycle_index=0):
+    rid = robot_id_arg(args.robot_id)
+    dry_run = not args.upload
+    rc = 0
+    if args.heartbeat:
+        rc |= post_json(args.heartbeat_endpoint, heartbeat_payload(args), dry_run=dry_run, timeout=args.post_timeout)
+    if args.route:
+        rc |= upload_asset(resolve_route(args.route), "route", rid, dry_run=dry_run, endpoint=args.route_endpoint, timeout=args.file_timeout, patrol_id=args.patrol_id)
+    if args.pcd:
+        rc |= upload_asset(resolve_pcd(args.pcd), "pcd", rid, dry_run=dry_run, endpoint=args.pcd_endpoint, timeout=args.file_timeout, patrol_id=args.patrol_id)
+    if args.video:
+        media = resolve_media(args.video, cycle_index=cycle_index)
+        kind = "image" if media and media.suffix.lower() in (".jpg", ".jpeg") else "video"
+        rc |= upload_asset(media, kind, rid, dry_run=dry_run, endpoint=args.video_endpoint, timeout=args.file_timeout, patrol_id=args.patrol_id)
+    return rc
+
+
+def cmd_upload_once(args):
+    return upload_patrol_assets(args, cycle_index=0)
+
+
+def cmd_patrol_loop(args):
+    cycle = 0
+    final_rc = 0
+    while args.cycles <= 0 or cycle < args.cycles:
+        if args.run_file and not Path(args.run_file).exists():
+            print("LOOP_STOP_FILE_MISSING %s" % args.run_file, flush=True)
+            break
+        if not loop_wall_time_ready("PATROL_LOOP", sleep_sec=args.interval):
+            continue
+        drain_outbox_once(max_jobs=5)
+        print("LOOP_CYCLE %d upload=%s route=%s pcd=%s video=%s" % (cycle + 1, bool(args.upload), args.route or "-", args.pcd or "-", args.video or "-"), flush=True)
+        final_rc |= upload_patrol_assets(args, cycle_index=cycle)
+        cycle += 1
+        if args.cycles > 0 and cycle >= args.cycles:
+            break
+        time.sleep(args.interval)
+    return final_rc
+
+
+def cmd_outbox_once(args):
+    return drain_outbox_once(max_jobs=args.max_jobs)
+
+
+def cmd_outbox_loop(args):
+    while True:
+        if args.run_file and not Path(args.run_file).exists():
+            print("OUTBOX_LOOP_STOP_FILE_MISSING %s" % args.run_file, flush=True)
+            break
+        if not loop_wall_time_ready("OUTBOX_LOOP", sleep_sec=args.interval):
+            continue
+        drain_outbox_once(max_jobs=args.max_jobs)
+        time.sleep(args.interval)
+    return 0
+
+
+def add_patrol_upload_args(parser):
+    parser.add_argument("--route", default="", help="route name such as xiaoqu1, or an absolute CSV path")
+    parser.add_argument("--pcd", default="", help="PCD name such as xiaoqu1, or an absolute PCD path")
+    parser.add_argument("--video", default="", help="latest, cycle, file name, or absolute media path")
+    parser.add_argument("--patrol-id", default="")
+    parser.add_argument("--upload", action="store_true", help="actually POST files; default is dry-run")
+    parser.add_argument("--heartbeat", action="store_true", default=True)
+    parser.add_argument("--no-heartbeat", dest="heartbeat", action="store_false")
+    parser.add_argument("--heartbeat-endpoint", default="/robot/heartbeat")
+    parser.add_argument("--route-endpoint", default=os.environ.get("GO2_ROUTE_UPLOAD_ENDPOINT", DEFAULT_ASSET_ENDPOINT))
+    parser.add_argument("--pcd-endpoint", default=os.environ.get("GO2_PCD_UPLOAD_ENDPOINT", DEFAULT_ASSET_ENDPOINT))
+    parser.add_argument("--video-endpoint", default=os.environ.get("GO2_VIDEO_UPLOAD_ENDPOINT", DEFAULT_VIDEO_ENDPOINT))
+    parser.add_argument("--ros-timeout", type=float, default=1.5)
+    parser.add_argument("--post-timeout", type=float, default=12.0)
+    parser.add_argument("--file-timeout", type=float, default=240.0)
+
+
+def add_command_poll_args(parser):
+    parser.add_argument("--heartbeat-endpoint", default="/robot/heartbeat")
+    parser.add_argument("--result-endpoint", default="/robot/command/result")
+    parser.add_argument("--ros-timeout", type=float, default=1.5)
+    parser.add_argument("--post-timeout", type=float, default=12.0)
+    parser.add_argument("--execute-safe", action="store_true")
+    parser.add_argument("--dry-run-results", action="store_true")
+    parser.add_argument("--seen-file", default="/tmp/go2_saas_seen_commands.json")
+
+
+def build_parser():
+    parser = argparse.ArgumentParser(description="Go2 SaaS adapter")
+    parser.add_argument("--robot-id", default=None)
+    sub = parser.add_subparsers(dest="cmd")
+    sub.required = True
+
+    heartbeat = sub.add_parser("heartbeat-once")
+    heartbeat.add_argument("--endpoint", default="/robot/heartbeat")
+    heartbeat.add_argument("--dry-run", action="store_true")
+    heartbeat.add_argument("--ros-timeout", type=float, default=1.5)
+    heartbeat.add_argument("--post-timeout", type=float, default=12.0)
+    heartbeat.set_defaults(func=cmd_heartbeat_once)
+
+    loop = sub.add_parser("heartbeat-loop")
+    loop.add_argument("--endpoint", default="/robot/heartbeat")
+    loop.add_argument("--dry-run", action="store_true")
+    loop.add_argument("--interval", type=float, default=5.0)
+    loop.add_argument("--ros-timeout", type=float, default=1.5)
+    loop.add_argument("--post-timeout", type=float, default=12.0)
+    loop.add_argument("--once-on-error", action="store_true")
+    loop.set_defaults(func=cmd_heartbeat_loop)
+
+    manifest = sub.add_parser("asset-manifest")
+    manifest.add_argument("--limit", type=int, default=8)
+    manifest.add_argument("--endpoint", default="")
+    manifest.add_argument("--dry-run", action="store_true")
+    manifest.add_argument("--post-timeout", type=float, default=20.0)
+    manifest.set_defaults(func=cmd_asset_manifest)
+
+    plan = sub.add_parser("plan-fetch")
+    plan.add_argument("--endpoint", default=DEFAULT_PLAN_ENDPOINT)
+    plan.add_argument("--dry-run", action="store_true")
+    plan.add_argument("--post-timeout", type=float, default=20.0)
+    plan.set_defaults(func=cmd_plan_fetch)
+
+    result = sub.add_parser("command-result")
+    result.add_argument("--endpoint", default="/robot/command/result")
+    result.add_argument("--command-id", required=True)
+    result.add_argument("--status", choices=("success", "failed", "running", "rejected"), required=True)
+    result.add_argument("--message", default="")
+    result.add_argument("--detail-json", default="")
+    result.add_argument("--dry-run", action="store_true")
+    result.add_argument("--post-timeout", type=float, default=12.0)
+    result.set_defaults(func=cmd_command_result)
+
+    command_once = sub.add_parser("command-poll-once")
+    add_command_poll_args(command_once)
+    command_once.set_defaults(func=cmd_command_poll_once)
+
+    command_loop = sub.add_parser("command-loop")
+    add_command_poll_args(command_loop)
+    command_loop.add_argument("--interval", type=float, default=5.0)
+    command_loop.add_argument("--cycles", type=int, default=0, help="0 means run forever")
+    command_loop.add_argument("--run-file", default="")
+    command_loop.add_argument("--drain-outbox-jobs", type=int, default=0)
+    command_loop.set_defaults(func=cmd_command_loop)
+
+    outbox_once = sub.add_parser("outbox-once")
+    outbox_once.add_argument("--max-jobs", type=int, default=20)
+    outbox_once.set_defaults(func=cmd_outbox_once)
+
+    outbox_loop = sub.add_parser("outbox-loop")
+    outbox_loop.add_argument("--interval", type=float, default=5.0)
+    outbox_loop.add_argument("--max-jobs", type=int, default=20)
+    outbox_loop.add_argument("--run-file", default="")
+    outbox_loop.set_defaults(func=cmd_outbox_loop)
+
+    video = sub.add_parser("video-segment")
+    video.add_argument("--seconds", type=int, default=20)
+    video.add_argument("--upload", action="store_true")
+    video.set_defaults(func=cmd_video_segment)
+
+    video_loop = sub.add_parser("video-loop")
+    video_loop.add_argument("--seconds", type=int, default=20)
+    video_loop.add_argument("--upload", action="store_true")
+    video_loop.add_argument("--interval", type=float, default=1.0)
+    video_loop.add_argument("--error-sleep", type=float, default=5.0)
+    video_loop.add_argument("--cycles", type=int, default=0, help="0 means run forever")
+    video_loop.add_argument("--run-file", default="")
+    video_loop.add_argument("--max-jobs", type=int, default=0)
+    video_loop.set_defaults(func=cmd_video_loop)
+
+    upload_once = sub.add_parser("upload-once")
+    add_patrol_upload_args(upload_once)
+    upload_once.set_defaults(func=cmd_upload_once)
+
+    patrol_loop = sub.add_parser("patrol-loop")
+    add_patrol_upload_args(patrol_loop)
+    patrol_loop.add_argument("--interval", type=float, default=20.0)
+    patrol_loop.add_argument("--cycles", type=int, default=0, help="0 means run forever")
+    patrol_loop.add_argument("--run-file", default="", help="optional sentinel file; loop exits when it disappears")
+    patrol_loop.set_defaults(func=cmd_patrol_loop)
+    return parser
+
+
+def main(argv=None):
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

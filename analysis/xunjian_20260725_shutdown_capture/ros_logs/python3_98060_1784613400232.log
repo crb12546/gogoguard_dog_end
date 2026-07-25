@@ -1,0 +1,7 @@
+[INFO] [1784613400.477620434] [unitree_safe_cmd_node]: unitree_safe_cmd_node ACTIVE: obstacle -> Move(0,0,0), resume after 5 clear frames; lateral swept ROI enabled
+[INFO] [1784613400.480402390] [unitree_safe_cmd_node]: output mode: Twist -> /codex_no_sport_twist
+[WARN] [1784613400.483446627] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0
+[WARN] [1784613400.989367957] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0
+[WARN] [1784613401.513964326] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0
+[WARN] [1784613402.013999811] [unitree_safe_cmd_node]: SAFE OVERRIDE cmd_timeout: Move x=0.000, y=0.000, z=0.000, raw_x=0.000, raw_y=0.000, raw_z=0.000, stop_count=0, roi_count=0, lateral_count=0, nearest_x=inf, clear_frames=0
+[INFO] [1784613402.196516421] [unitree_safe_cmd_node]: Ctrl+C, publish Move(0,0,0)

@@ -1,0 +1,37 @@
+[INFO] [0000923367.724975808] [waypoint_follower]: enhanced waypoint_follower started
+[INFO] [0000923367.726408224] [waypoint_follower]: route_file: /home/unitree/go2_fastlio_ws/src/go2_fastlio_patrol/routes/tju.csv
+[INFO] [0000923367.730101184] [waypoint_follower]: route points: 13
+[INFO] [0000923367.735588320] [waypoint_follower]: loop_mode: pingpong
+[INFO] [0000923367.739041952] [waypoint_follower]: lookahead_distance: 0.6
+[INFO] [0000923367.742792384] [waypoint_follower]: reach_distance: 0.4
+[INFO] [0000923367.750412768] [waypoint_follower]: init nearest_index=0, distance_to_start=0.035
+[INFO] [0000923367.787890784] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.06, vx=0.20, yaw_rate=-0.06, dir=1
+[INFO] [0000923368.837539424] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.06, vx=0.20, yaw_rate=-0.06, dir=1
+[INFO] [0000923369.887005888] [waypoint_follower]: nearest=0, target=2, dist=0.87, alpha=-0.06, vx=0.20, yaw_rate=-0.06, dir=1
+[WARN] [0000923370.786899808] [waypoint_follower]: stuck recovery: nearest_index 0 -> 0
+[INFO] [0000923370.889169280] [waypoint_follower]: nearest=0, target=2, dist=0.85, alpha=-0.04, vx=0.20, yaw_rate=-0.04, dir=1
+[INFO] [0000923371.938830944] [waypoint_follower]: nearest=0, target=2, dist=0.69, alpha=0.00, vx=0.20, yaw_rate=0.00, dir=1
+[INFO] [0000923372.986906976] [waypoint_follower]: nearest=1, target=3, dist=0.97, alpha=0.06, vx=0.20, yaw_rate=0.05, dir=1
+[INFO] [0000923373.986897600] [waypoint_follower]: nearest=1, target=3, dist=0.89, alpha=0.09, vx=0.20, yaw_rate=0.08, dir=1
+[INFO] [0000923374.989486048] [waypoint_follower]: nearest=1, target=3, dist=0.80, alpha=0.17, vx=0.20, yaw_rate=0.15, dir=1
+[WARN] [0000923375.336961184] [waypoint_follower]: stuck recovery: nearest_index 1 -> 1
+[INFO] [0000923376.036985216] [waypoint_follower]: nearest=2, target=4, dist=0.95, alpha=0.12, vx=0.20, yaw_rate=0.10, dir=1
+[INFO] [0000923377.037279712] [waypoint_follower]: nearest=2, target=4, dist=0.78, alpha=-0.03, vx=0.20, yaw_rate=-0.03, dir=1
+[INFO] [0000923378.086945376] [waypoint_follower]: nearest=2, target=4, dist=0.75, alpha=-0.11, vx=0.20, yaw_rate=-0.10, dir=1
+[WARN] [0000923378.686945376] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0000923379.087112992] [waypoint_follower]: nearest=2, target=4, dist=0.74, alpha=-0.08, vx=0.20, yaw_rate=-0.07, dir=1
+[INFO] [0000923380.087046208] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.03, vx=0.20, yaw_rate=-0.03, dir=1
+[INFO] [0000923381.137830432] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[WARN] [0000923381.736839232] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0000923382.140837024] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923383.187249344] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923384.237042720] [waypoint_follower]: nearest=2, target=4, dist=0.72, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[WARN] [0000923384.737004160] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0000923385.244436704] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.03, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923386.287094176] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923387.337052256] [waypoint_follower]: nearest=2, target=4, dist=0.72, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[WARN] [0000923387.787031264] [waypoint_follower]: stuck recovery: nearest_index 2 -> 2
+[INFO] [0000923388.386773216] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923389.387114336] [waypoint_follower]: nearest=2, target=4, dist=0.72, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[INFO] [0000923390.437043168] [waypoint_follower]: nearest=2, target=4, dist=0.73, alpha=-0.02, vx=0.20, yaw_rate=-0.02, dir=1
+[WARN] [0000923390.836944192] [waypoint_follower]: stuck re
