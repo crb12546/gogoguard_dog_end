@@ -1,0 +1,87 @@
+{
+  "schema": "go2.route_aligned_to_horizontal_pcd.v1",
+  "purpose": "Visualization/registration with the specific 2026-07-25 xbf horizontal PCD; do not use as the canonical route for a future FAST-LIO session.",
+  "canonical_horizontal_route": {
+    "path": "/Users/constantine/Project/Go2/analysis/xunjian_20260725_xbf9_patrol_17/route_horizontal.csv",
+    "sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2",
+    "desktop_copy": "/Users/constantine/Desktop/xbf9_horizontal_clean.csv",
+    "desktop_copy_sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2"
+  },
+  "pcd": {
+    "path": "/Users/constantine/Project/Go2/analysis/pcd_xbf_20260725/xbf.horizontal.downloaded.pcd",
+    "sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2"
+  },
+  "shared_localization_session": {
+    "boot_id": "2b7d2f29-d772-41dc-a8c8-aaba38af7863",
+    "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+    "pid": 15590,
+    "start_ticks": 44734
+  },
+  "runtime_route_anchor": {
+    "aligned_start": {
+      "v": 0.2,
+      "x": -0.005566048838080257,
+      "y": -0.06334542308023706,
+      "yaw": -0.006654585564090653
+    },
+    "anchor_x": -0.005566048838080257,
+    "anchor_y": -0.06334542308023706,
+    "anchor_yaw_deg": -0.38127966723107887,
+    "canonical_start": {
+      "v": 0.2,
+      "x": 0.0,
+      "y": 0.0,
+      "yaw": 0.263288033
+    },
+    "kind": "horizontal_route_anchored",
+    "monotonic_s": 6703.147710757,
+    "route_rotation_deg": -15.46657275443222,
+    "wall_time": 1784986239.8415804
+  },
+  "patrol_q_ground_from_map_xyzw": [
+    -0.032961649162686076,
+    0.29375775155225275,
+    0.0,
+    0.955311422043849
+  ],
+  "pcd_q_ground_from_map_xyzw": [
+    -0.03344741876363979,
+    0.29317301941622687,
+    0.0,
+    0.9554741497625262
+  ],
+  "pcd_from_patrol_rotation_matrix": [
+    [
+      0.9999992120787554,
+      -0.00032338823285195406,
+      -0.0012129558603715953
+    ],
+    [
+      0.00032450085644926613,
+      0.9999995267231885,
+      0.0009171982301133074
+    ],
+    [
+      0.001212658675192921,
+      -0.0009175911126488589,
+      0.9999988437420754
+    ]
+  ],
+  "patrol_to_pcd_frame_rotation_angle_deg": 0.0890844624116177,
+  "maximum_xy_adjustment_from_patrol_aligned_route_m": 0.14908885964680368,
+  "maximum_yaw_adjustment_deg": 0.01859379062628212,
+  "output": {
+    "path": "/Users/constantine/Desktop/xbf9_aligned_to_xbf_pcd_20260725.csv",
+    "sha256": "19d9a28eb407e04a29e41d6e619debd05d600f15b439335d379eb962cc85c9f1",
+    "rows": 1277,
+    "columns": [
+      "id",
+      "x",
+      "y",
+      "yaw",
+      "v"
+    ],
+    "z_policy": "This remains a 2D patrol CSV. For 3D visualization, its XY is in the PCD frame but a viewer must choose a display Z."
+  },
+  "transform_contract": "canonical route -> recorded patrol start anchor in patrol horizontal frame -> small same-session patrol-to-PCD gravity frame rotation"
+}

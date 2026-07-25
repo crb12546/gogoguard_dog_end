@@ -1,0 +1,210 @@
+{
+  "calibration": {
+    "document": {
+      "description": "Fixed MID-360-to-Go2 mount and gravity calibration used to derive a fresh gravity-level frame in each FAST-LIO session.",
+      "hardware_contract": {
+        "external_lidar": "Livox MID-360",
+        "mount": "fixed angled mount; recalibration is required if the lidar mounting pose changes",
+        "runtime_policy": "pair FAST-LIO orientation, external lidar IMU gravity, and Unitree body IMU gravity while stationary; reject disagreement; then freeze one rigid map-to-ground rotation"
+      },
+      "independent_runtime_validation": [
+        {
+          "accepted_samples": 15,
+          "lidar_body_source_disagreement_deg": 1.0021434246352874,
+          "map_up_spread_deg": 0.8281231102992541,
+          "run": "xunjian_20260725_horizontal_first_12"
+        },
+        {
+          "accepted_samples": 15,
+          "lidar_body_source_disagreement_deg": 0.5158191846141815,
+          "map_up_spread_deg": 0.7479037373541156,
+          "run": "xunjian_20260725_xbf9_patrol_13"
+        },
+        {
+          "accepted_samples": 15,
+          "lidar_body_source_disagreement_deg": 0.7027418133280571,
+          "map_up_spread_deg": 0.595225568780981,
+          "run": "xunjian_20260725_xbf9_patrol_14"
+        }
+      ],
+      "mount_and_gravity_calibration": {
+        "q_lidar_gravity_correction_xyzw": [
+          0.01929394126454905,
+          -0.008884712727401827,
+          0.012413009264798033,
+          0.9996973156467029
+        ],
+        "q_sensor_from_body_xyzw": [
+          0.02283990738329047,
+          -0.283910418462471,
+          0.004291148086900455,
+          0.9585691414641322
+        ]
+      },
+      "schema": "go2.horizontal_frame_calibration.v1",
+      "source_evidence": {
+        "horizontal_metadata_sha256": "f7c485e7ffffcc5d950478f08767910e69efe698795fd88998b8b86f7d0ad71b",
+        "maximum_sensor_pairing_gap_s": 0.04782271385192871,
+        "post_calibration_body_error_deg": 0.0,
+        "post_correction_lidar_error_deg": 0.0,
+        "quiet_calibration_samples": 88,
+        "recording": "xunjian_20260725_xbf9_recording",
+        "route_sha256": "7f4312a12935c451bc3347b1af4ca6507a88932a4acafb90aebdf1de6bc64c8b",
+        "telemetry_sha256": "38335d84f1250058dc3e97688d6e6704beaa28825c319b981e867b98e5d4eab2"
+      }
+    },
+    "path": "/tmp/go2_horizontal_frame_calibration.json",
+    "sha256": "2440665cbf52aad882fe82e3be519513f7d8b6635398a20e2807acdddd0c8596"
+  },
+  "capture": {
+    "frame_stride": 3,
+    "frames_dropped_before_level_lock": 15,
+    "frames_received": 6508,
+    "frames_sampled": 2164,
+    "invalid_cloud_frames": 0,
+    "point_stride": 2,
+    "voxel_m": 0.08
+  },
+  "capture_started_at_epoch": 1784988380.5235803,
+  "created_at_epoch": 1784989100.6294878,
+  "frame_contract": {
+    "output": "gravity-level session-local ground frame",
+    "raw": "FAST-LIO session-local map frame",
+    "transform": "p_ground = q_ground_from_map * p_fastlio_map",
+    "translation_applied": false,
+    "yaw_normalization_applied": false,
+    "z_percentile_shift_applied": false
+  },
+  "horizontal_stats": {
+    "centroid_xyz": [
+      167.9495852052944,
+      -142.23562729580965,
+      3.97927983258199
+    ],
+    "maximum_xyz": [
+      342.2899820429718,
+      60.085140585389716,
+      32.18290314931944
+    ],
+    "minimum_xyz": [
+      -38.21972940933522,
+      -357.37581687009583,
+      -4.187255365957273
+    ],
+    "point_count": 1085459
+  },
+  "level_frame": {
+    "map_up": [
+      -0.560238482920064,
+      -0.0639162880098798,
+      0.8258617017288448
+    ],
+    "minimum_samples": 15,
+    "q_ground_from_map": [
+      -0.03344741876363979,
+      0.29317301941622687,
+      0.0,
+      0.9554741497625262
+    ],
+    "ready": true,
+    "rejected_invalid_samples": 0,
+    "rejected_motion_samples": 0,
+    "rejected_source_samples": 0,
+    "sample_count": 15,
+    "source_disagreement_deg": 0.9126578888976431,
+    "spread_deg": 0.7577236006083776
+  },
+  "level_frame_locked_at_epoch": 1784988382.1094217,
+  "localization_session": {
+    "created_at": "2026-07-25T22:06:16+0800",
+    "current_anchor": {
+      "qw": -0.9999921914832048,
+      "qx": 0.0019276708079654368,
+      "qy": 0.0025833708310454046,
+      "qz": -0.0022863184049450925,
+      "snapshot_mtime_ns": 1784988376352039094,
+      "stamp": 1784988376.0470986,
+      "x": 0.01142535638680661,
+      "y": -0.05395348532074034,
+      "yaw": 0.00458263787907797,
+      "z": 0.020144395998516126
+    },
+    "localization_session": {
+      "boot_id": "2b7d2f29-d772-41dc-a8c8-aaba38af7863",
+      "executable": "/home/unitree/go2_fastlio_ws/build/fast_lio/fastlio_mapping",
+      "pid": 15590,
+      "start_ticks": 44734
+    },
+    "mode": "session_only",
+    "odom_snapshot": "/dev/shm/go2_fastlio_latest_odom.txt",
+    "schema": "go2.manual_anchor.v1",
+    "stability": {
+      "duration_seconds": 0.9454395540014957,
+      "max_local_gap_seconds": 0.11678933200164465,
+      "samples": 10,
+      "translation_span_m": 0.01723541745661445,
+      "yaw_span_rad": 0.003919487312278566
+    }
+  },
+  "outputs": {
+    "horizontal_pcd": "/home/unitree/go2_fastlio_ws/maps/console/xbf.pcd",
+    "horizontal_pcd_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2",
+    "raw_pcd": "/home/unitree/go2_fastlio_ws/maps/console/raw/xbf.pcd",
+    "raw_pcd_sha256": "c3ffbb49c50ab8c3bbb7f8d0ef32c79aeb41f7dd5981792e9bc8327ddfdc1a13"
+  },
+  "proof": {
+    "map_up_after_xyz": [
+      -4.163336342344337e-17,
+      -1.734723475976807e-18,
+      1.0
+    ],
+    "map_up_before_xyz": [
+      -0.560238482920064,
+      -0.0639162880098798,
+      0.8258617017288448
+    ],
+    "maximum_pair_distance_error_m": 1.1368683772161603e-13,
+    "residual_gravity_tilt_deg": 0.0,
+    "rotation_determinant": 1.0,
+    "rotation_matrix_ground_from_map": [
+      [
+        0.8280991613727453,
+        -0.01961176150123048,
+        0.560238482920064
+      ],
+      [
+        -0.01961176150123048,
+        0.9977625403560995,
+        0.0639162880098798
+      ],
+      [
+        -0.560238482920064,
+        -0.0639162880098798,
+        0.8258617017288448
+      ]
+    ],
+    "rotation_orthogonality_max_error": 4.8456195245746834e-17,
+    "sample_count": 512,
+    "tilt_removed_deg": 34.324047865096595
+  },
+  "raw_stats": {
+    "centroid_xyz": [
+      139.63905616438825,
+      -145.46550882493582,
+      88.2869823171553
+    ],
+    "maximum_xyz": [
+      283.236572265625,
+      58.79057312011719,
+      181.16049194335938
+    ],
+    "minimum_xyz": [
+      -45.02314758300781,
+      -363.0802307128906,
+      -5.989186763763428
+    ],
+    "point_count": 1085459
+  },
+  "schema": "go2.horizontal_pcd.v1",
+  "source_topic": "/cloud_registered"
+}

@@ -43,3 +43,6 @@ compile_commands.json
 # orin_go2_fastlio_ws/src and contain embedded Git metadata.
 /analysis/xunjian_20260725_shutdown_capture/remote_source/
 /analysis/xunjian_20260725_live_before_full_diagnostic/remote_before/
+
+# Keep generated media from this PCD audit local.
+/analysis/pcd_xbf_20260725/*.png
