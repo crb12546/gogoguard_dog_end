@@ -1,0 +1,6 @@
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# 仓库根目录默认忽略所有 PCD；本交付目录必须包含已审核地图。
+!localization_upgrade/maps/**/*.pcd

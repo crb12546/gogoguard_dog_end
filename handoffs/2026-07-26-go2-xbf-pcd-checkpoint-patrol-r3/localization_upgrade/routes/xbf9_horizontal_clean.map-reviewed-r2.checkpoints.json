@@ -1,0 +1,36 @@
+{
+  "schema": "go2.route_checkpoints/v1",
+  "source_pcd_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2",
+  "source_csv_sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2",
+  "route_csv_sha256": "6fafe8b87e50ad0ad1a3f3aac671373d62120df904e7ffd86dfcb09ba4b211a4",
+  "route_revision": 2,
+  "checkpoints": [
+    {
+      "waypoint_id": "373",
+      "waypoint_index": 373,
+      "checkpoint": {
+        "mode": "relocalize",
+        "stop_timeout_s": 75,
+        "required": true
+      }
+    },
+    {
+      "waypoint_id": "585",
+      "waypoint_index": 585,
+      "checkpoint": {
+        "mode": "relocalize",
+        "stop_timeout_s": 75,
+        "required": true
+      }
+    },
+    {
+      "waypoint_id": "787",
+      "waypoint_index": 787,
+      "checkpoint": {
+        "mode": "relocalize",
+        "stop_timeout_s": 60,
+        "required": true
+      }
+    }
+  ]
+}

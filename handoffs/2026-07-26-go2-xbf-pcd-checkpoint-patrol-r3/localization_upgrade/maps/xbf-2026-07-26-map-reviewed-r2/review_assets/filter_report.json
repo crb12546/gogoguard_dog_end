@@ -1,0 +1,642 @@
+{
+  "annotation_export": {
+    "annotation_count": 13,
+    "declared_map_filename": "xbf-2 2.pcd",
+    "declared_map_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2",
+    "exported_at_utc": "2026-07-26T07:38:08.357866Z",
+    "filename": "xbf-2-2.3526e4f11658.algorithm-reviewed-r2.annotations.json",
+    "frame_id": "map",
+    "linear_unit": "metre",
+    "revision": "xbf-algorithm-reviewed-r2",
+    "schema": "go2.map_review_annotations/v2",
+    "sha256": "099a5c3e2f15359c25e9ea2d5ded441414073108e4d7769af0cb3121c3eb27b5"
+  },
+  "cleaned_static_map": {
+    "filename": "cleaned_static_map.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "b1c59d4aa08d537be8425d0ed0ce529e323091a348987e005262f39e6f80b7f1"
+  },
+  "created_utc": "2026-07-26T07:38:46.813148Z",
+  "filtering": {
+    "exclude_mask_count": 0,
+    "filter_masks": [],
+    "removed_point_count": 0,
+    "retained_point_count": 1085459,
+    "review_findings": [],
+    "stable_excluded_overlap_point_count": 0,
+    "stable_include_hints": [
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "W02",
+        "note": "几何已核验为干净竖直墙面；需在现场确认它是永久建筑墙体，并与另一个非平行结构组合使用。",
+        "roi": {
+          "center_xy_m": {
+            "x": 76.8195,
+            "y": -14.744
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.88383658848544,
+            "y": 0.24
+          },
+          "yaw_rad": 1.5458100283783098,
+          "z_range_m": {
+            "max": 13.797,
+            "min": 0.833
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "W03",
+        "note": "几何已核验为近路线的连续低墙面，平面拟合干净；现场确认不是临时围挡后，可与路沿或非平行墙面组合。",
+        "roi": {
+          "center_xy_m": {
+            "x": 179.8705,
+            "y": -156.48250000000002
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.703177535374472,
+            "y": 0.2
+          },
+          "yaw_rad": -1.5629059066449476,
+          "z_range_m": {
+            "max": 2.989,
+            "min": 0.404
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "C01-A",
+        "note": "C01 建筑直角的第一面墙。与 C01-B 夹角约 89.3°，两面同时可见时可共同约束 x、y、yaw；现场仍需确认是永久建筑。",
+        "roi": {
+          "center_xy_m": {
+            "x": 180.852,
+            "y": -209.36950000000002
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 2.3319916380638985,
+            "y": 0.3
+          },
+          "yaw_rad": -1.5416325686032106,
+          "z_range_m": {
+            "max": 8.467,
+            "min": 0.844
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "C01-B",
+        "note": "C01 建筑直角的第二面墙。与 C01-A 的交点约为 (180.89,-210.42)，是本图中最强的组合几何候选。",
+        "roi": {
+          "center_xy_m": {
+            "x": 181.0455,
+            "y": -210.411
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 4.424662812011774,
+            "y": 0.34
+          },
+          "yaw_rad": 0.04069229524027015,
+          "z_range_m": {
+            "max": 9.472,
+            "min": 0.94
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-A",
+        "note": "全分辨率搜索中最强的连续路沿/台阶候选：约 91.8 m，64/64 个独立切片均有双侧支撑，原始点高差中位约 12.5 cm。现场确认材质和长期固定性后，只作为法向辅助约束。",
+        "roi": {
+          "center_xy_m": {
+            "x": 229.555,
+            "y": -208.035
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 91.55748467492977,
+            "y": 0.55
+          },
+          "yaw_rad": 0.12957068930909207,
+          "z_range_m": {
+            "max": 1.48,
+            "min": 0.7
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-B",
+        "note": "约 27.0 m 的连续低矮边缘，20/20 个切片有双侧支撑，原始点高差中位约 7.0 cm。可能是路沿，也可能是稳定铺装台阶，需现场确认。",
+        "roi": {
+          "center_xy_m": {
+            "x": 168.025,
+            "y": -113.305
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 27.666069471466315,
+            "y": 0.5
+          },
+          "yaw_rad": -0.929536232105891,
+          "z_range_m": {
+            "max": 0.22,
+            "min": -0.16
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K01-W",
+        "note": "原 K01 的西段实体边缘，约 13 m；原始点高差中位约 11.8 cm。它不是一个孤立点，应与 K01-E 作为同一条长边看待。",
+        "roi": {
+          "center_xy_m": {
+            "x": 96.1,
+            "y": -91.97
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 12.641012617666355,
+            "y": 0.5
+          },
+          "yaw_rad": 0.012657551834051694,
+          "z_range_m": {
+            "max": 0.55,
+            "min": 0.14
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K01-E",
+        "note": "原 K01 的东段实体边缘，约 13 m；原始点高差中位约 13.4 cm。与 K01-W 方向和高差一致，中间约 4.3 m 为证据缺口。",
+        "roi": {
+          "center_xy_m": {
+            "x": 113.28,
+            "y": -91.465
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 13.12841574600683,
+            "y": 0.5
+          },
+          "yaw_rad": 0.03580785856694131,
+          "z_range_m": {
+            "max": 0.5,
+            "min": -0.02
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-E",
+        "note": "约 14 m 的连续道路边缘，11/11 个切片有双侧支撑，原始点高差中位约 13.8 cm；现场确认不是排水沟盖板或临时堆边。",
+        "roi": {
+          "center_xy_m": {
+            "x": 299.99,
+            "y": -271.115
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 13.626037575172044,
+            "y": 0.5
+          },
+          "yaw_rad": -1.2789880631904915,
+          "z_range_m": {
+            "max": 0.18,
+            "min": -0.46
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "LAMP-H-STEM",
+        "note": "强人工路灯候选 H 的杆身：表观直径约 31.8 cm，z≈0.52–4.37 m。与 LAMP-H-HEAD 组成同一物体；现场确认后可与附近 K01 路沿组合，单杆不能独立校准 yaw。",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.4483,
+            "y": -92.4793
+          },
+          "radius_m": 0.22,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.5,
+            "min": 0.45
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "LAMP-H-HEAD",
+        "note": "强人工路灯候选 H 的顶部组件：约 0.55×0.55×0.19 m 的偏置扁平结构，中心约 (85.502,-91.870,5.700)。它与 LAMP-I-HEAD 的尺寸高度相似，强烈支持同款人造灯具，但仍需现场照片确认。",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.502,
+            "y": -91.87
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "yaw_rad": 0.0,
+          "z_range_m": {
+            "max": 5.85,
+            "min": 5.55
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "LAMP-I-STEM",
+        "note": "强人工路灯候选 I 的杆身：表观直径约 33.9 cm，z≈0.25–4.61 m。与 LAMP-I-HEAD 组成同一物体；现场确认后可与附近 K-B 路沿组合，单杆不能独立校准 yaw。",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.3824,
+            "y": -123.2144
+          },
+          "radius_m": 0.23,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.75,
+            "min": 0.18
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "LAMP-I-HEAD",
+        "note": "强人工路灯候选 I 的顶部组件：约 0.50×0.55×0.24 m 的偏置扁平结构，中心约 (171.995,-123.021,5.428)。它与 LAMP-H-HEAD 高度相似，仍需现场确认不是树枝或其他附属结构。",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.995,
+            "y": -123.021
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "yaw_rad": 0.0,
+          "z_range_m": {
+            "max": 5.62,
+            "min": 5.25
+          }
+        }
+      }
+    ],
+    "stable_layer_point_count": 6809,
+    "stable_roi_count": 13,
+    "stable_rois": [
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "W02",
+        "matched_retained_point_count": 1048,
+        "note": "几何已核验为干净竖直墙面；需在现场确认它是永久建筑墙体，并与另一个非平行结构组合使用。",
+        "roi": {
+          "center_xy_m": {
+            "x": 76.8195,
+            "y": -14.744
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.88383658848544,
+            "y": 0.24
+          },
+          "yaw_rad": 1.5458100283783098,
+          "z_range_m": {
+            "max": 13.797,
+            "min": 0.833
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "W03",
+        "matched_retained_point_count": 1009,
+        "note": "几何已核验为近路线的连续低墙面，平面拟合干净；现场确认不是临时围挡后，可与路沿或非平行墙面组合。",
+        "roi": {
+          "center_xy_m": {
+            "x": 179.8705,
+            "y": -156.48250000000002
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.703177535374472,
+            "y": 0.2
+          },
+          "yaw_rad": -1.5629059066449476,
+          "z_range_m": {
+            "max": 2.989,
+            "min": 0.404
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "C01-A",
+        "matched_retained_point_count": 579,
+        "note": "C01 建筑直角的第一面墙。与 C01-B 夹角约 89.3°，两面同时可见时可共同约束 x、y、yaw；现场仍需确认是永久建筑。",
+        "roi": {
+          "center_xy_m": {
+            "x": 180.852,
+            "y": -209.36950000000002
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 2.3319916380638985,
+            "y": 0.3
+          },
+          "yaw_rad": -1.5416325686032106,
+          "z_range_m": {
+            "max": 8.467,
+            "min": 0.844
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "C01-B",
+        "matched_retained_point_count": 637,
+        "note": "C01 建筑直角的第二面墙。与 C01-A 的交点约为 (180.89,-210.42)，是本图中最强的组合几何候选。",
+        "roi": {
+          "center_xy_m": {
+            "x": 181.0455,
+            "y": -210.411
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 4.424662812011774,
+            "y": 0.34
+          },
+          "yaw_rad": 0.04069229524027015,
+          "z_range_m": {
+            "max": 9.472,
+            "min": 0.94
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-A",
+        "matched_retained_point_count": 1892,
+        "note": "全分辨率搜索中最强的连续路沿/台阶候选：约 91.8 m，64/64 个独立切片均有双侧支撑，原始点高差中位约 12.5 cm。现场确认材质和长期固定性后，只作为法向辅助约束。",
+        "roi": {
+          "center_xy_m": {
+            "x": 229.555,
+            "y": -208.035
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 91.55748467492977,
+            "y": 0.55
+          },
+          "yaw_rad": 0.12957068930909207,
+          "z_range_m": {
+            "max": 1.48,
+            "min": 0.7
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-B",
+        "matched_retained_point_count": 476,
+        "note": "约 27.0 m 的连续低矮边缘，20/20 个切片有双侧支撑，原始点高差中位约 7.0 cm。可能是路沿，也可能是稳定铺装台阶，需现场确认。",
+        "roi": {
+          "center_xy_m": {
+            "x": 168.025,
+            "y": -113.305
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 27.666069471466315,
+            "y": 0.5
+          },
+          "yaw_rad": -0.929536232105891,
+          "z_range_m": {
+            "max": 0.22,
+            "min": -0.16
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K01-W",
+        "matched_retained_point_count": 303,
+        "note": "原 K01 的西段实体边缘，约 13 m；原始点高差中位约 11.8 cm。它不是一个孤立点，应与 K01-E 作为同一条长边看待。",
+        "roi": {
+          "center_xy_m": {
+            "x": 96.1,
+            "y": -91.97
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 12.641012617666355,
+            "y": 0.5
+          },
+          "yaw_rad": 0.012657551834051694,
+          "z_range_m": {
+            "max": 0.55,
+            "min": 0.14
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K01-E",
+        "matched_retained_point_count": 376,
+        "note": "原 K01 的东段实体边缘，约 13 m；原始点高差中位约 13.4 cm。与 K01-W 方向和高差一致，中间约 4.3 m 为证据缺口。",
+        "roi": {
+          "center_xy_m": {
+            "x": 113.28,
+            "y": -91.465
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 13.12841574600683,
+            "y": 0.5
+          },
+          "yaw_rad": 0.03580785856694131,
+          "z_range_m": {
+            "max": 0.5,
+            "min": -0.02
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "K-E",
+        "matched_retained_point_count": 280,
+        "note": "约 14 m 的连续道路边缘，11/11 个切片有双侧支撑，原始点高差中位约 13.8 cm；现场确认不是排水沟盖板或临时堆边。",
+        "roi": {
+          "center_xy_m": {
+            "x": 299.99,
+            "y": -271.115
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 13.626037575172044,
+            "y": 0.5
+          },
+          "yaw_rad": -1.2789880631904915,
+          "z_range_m": {
+            "max": 0.18,
+            "min": -0.46
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "LAMP-H-STEM",
+        "matched_retained_point_count": 100,
+        "note": "强人工路灯候选 H 的杆身：表观直径约 31.8 cm，z≈0.52–4.37 m。与 LAMP-H-HEAD 组成同一物体；现场确认后可与附近 K01 路沿组合，单杆不能独立校准 yaw。",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.4483,
+            "y": -92.4793
+          },
+          "radius_m": 0.22,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.5,
+            "min": 0.45
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "LAMP-H-HEAD",
+        "matched_retained_point_count": 42,
+        "note": "强人工路灯候选 H 的顶部组件：约 0.55×0.55×0.19 m 的偏置扁平结构，中心约 (85.502,-91.870,5.700)。它与 LAMP-I-HEAD 的尺寸高度相似，强烈支持同款人造灯具，但仍需现场照片确认。",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.502,
+            "y": -91.87
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "yaw_rad": 0.0,
+          "z_range_m": {
+            "max": 5.85,
+            "min": 5.55
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "LAMP-I-STEM",
+        "matched_retained_point_count": 113,
+        "note": "强人工路灯候选 I 的杆身：表观直径约 33.9 cm，z≈0.25–4.61 m。与 LAMP-I-HEAD 组成同一物体；现场确认后可与附近 K-B 路沿组合，单杆不能独立校准 yaw。",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.3824,
+            "y": -123.2144
+          },
+          "radius_m": 0.23,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.75,
+            "min": 0.18
+          }
+        }
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "LAMP-I-HEAD",
+        "matched_retained_point_count": 37,
+        "note": "强人工路灯候选 I 的顶部组件：约 0.50×0.55×0.24 m 的偏置扁平结构，中心约 (171.995,-123.021,5.428)。它与 LAMP-H-HEAD 高度相似，仍需现场确认不是树枝或其他附属结构。",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.995,
+            "y": -123.021
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "yaw_rad": 0.0,
+          "z_range_m": {
+            "max": 5.62,
+            "min": 5.25
+          }
+        }
+      }
+    ]
+  },
+  "output": {
+    "filename": "cleaned_static_map.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "b1c59d4aa08d537be8425d0ed0ce529e323091a348987e005262f39e6f80b7f1"
+  },
+  "policy": {
+    "exclude_precedes_stable": true,
+    "mask_categories": [
+      "dynamic_exclude",
+      "parking_exclude",
+      "vegetation_exclude"
+    ],
+    "per_mask_counts_may_overlap": true,
+    "source_map_overwrite": "forbidden",
+    "stable_include": "extracted_to_stable_layer_without_inverse_filter",
+    "supported_roi_geometry": [
+      "xy_circle_all_z",
+      "cylinder",
+      "oriented_box",
+      "polygon_prism"
+    ],
+    "unannotated_points": "retained"
+  },
+  "schema": "go2.map_annotation_filter_report/v2",
+  "source": {
+    "byte_size": 27319294,
+    "filename": "xbf-2 2.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2"
+  },
+  "stable_layer": {
+    "filename": "stable_layer.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 6809,
+    "sha256": "f591fb3610d7b5ee7d68778d303d01e5c9a44263c2d1b7f777405612b23d04f7"
+  }
+}
