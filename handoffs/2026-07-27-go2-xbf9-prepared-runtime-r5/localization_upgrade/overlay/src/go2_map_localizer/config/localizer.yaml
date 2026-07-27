@@ -1,0 +1,151 @@
+# Copyright 2026 Go2 Robotics Team
+# SPDX-License-Identifier: Apache-2.0
+go2_map_localizer:
+  ros__parameters:
+    # Supplied by launch argument in normal operation.
+    map_manifest_path: ""
+    verify_hashes_on_startup: true
+
+    cloud_topic: /cloud_registered_body
+    odom_topic: /Odometry
+    pose_topic: /localization/pose
+    # 兼容现有 waypoint_follower_go2_2 的 nav_msgs/Odometry 输入。
+    odometry_topic: /localization/odometry
+    status_topic: /localization/status
+    map_frame: map
+    odom_frame: odom
+    base_frame: base_link
+    # Fail closed. Set true only after verifying FAST-LIO LiDAR/IMU extrinsics,
+    # base_link convention, and time synchronization on the actual robot.
+    input_extrinsics_verified: false
+
+    services:
+      global_relocalize: /localization/global_relocalize
+      load_map: /localization/load_map
+      reset: /localization/reset
+      map_load_quarantine_sec: 2.0
+
+    sync:
+      max_slop_sec: 0.08
+      odom_buffer_sec: 3.0
+      maximum_odom_samples: 1000
+      maximum_future_offset_sec: 0.10
+      maximum_input_age_sec: 0.15
+
+    accumulation:
+      scan_count: 5
+      max_age_sec: 1.5
+      voxel_m: 0.15
+      minimum_descriptor_points: 800
+
+    sensor:
+      minimum_range_m: 1.0
+      maximum_range_m: 80.0
+      minimum_z_m: -2.5
+      maximum_z_m: 5.0
+
+    registration:
+      source_coarse_voxel_m: 0.8
+      source_fine_voxel_m: 0.35
+      target_coarse_voxel_m: 1.0
+      target_fine_voxel_m: 0.4
+      ndt_coarse_resolution_m: 2.0
+      ndt_fine_resolution_m: 0.8
+      ndt_step_size_m: 0.2
+      transformation_epsilon: 0.01
+      ndt_coarse_iterations: 35
+      ndt_fine_iterations: 25
+      gicp_iterations: 40
+      gicp_max_correspondence_m: 1.2
+      inlier_distance_m: 0.7
+      maximum_source_range_m: 30.0
+      minimum_source_points: 300
+      minimum_target_points: 1000
+
+    tracking:
+      period_sec: 0.5
+      local_map_radius_m: 35.0
+      maximum_tiles: 12
+      maximum_fitness: 0.40
+      minimum_inlier_ratio: 0.38
+      maximum_translation_correction_m: 0.5
+      maximum_rotation_correction_rad: 0.261799
+      smoothing_alpha: 0.35
+
+    global:
+      auto_relocalize: true
+      retry_period_sec: 2.0
+      descriptor_top_k: 50
+      registration_candidates: 4
+      maximum_registration_attempts: 36
+      translation_seed_fraction: 0.333333333333
+      maximum_descriptor_distance: 0.75
+      # Both occupied-cell intersection/union and total descriptor coverage
+      # must exceed this value; sparse single-sector matches fail closed.
+      minimum_descriptor_overlap_ratio: 0.05
+      maximum_fitness: 0.8
+      minimum_inlier_ratio: 0.30
+      minimum_hypothesis_confidence_margin: 0.10
+      minimum_hypothesis_relative_margin: 0.20
+      # Only near-identical convergence basins are deduplicated. Competing
+      # poses beyond 0.25 m or 5 degrees must enter the ambiguity margin.
+      hypothesis_separation_m: 0.25
+      hypothesis_separation_rad: 0.0872665
+      maximum_roll_pitch_rad: 0.45
+      local_map_radius_m: 40.0
+      maximum_tiles: 16
+
+    anchored:
+      xy_offsets_m: [0.0, -1.0, 1.0, -2.0, 2.0]
+      yaw_offsets_rad:
+        [0.0, -0.174532925, 0.174532925, -0.349065850, 0.349065850, -0.523598776, 0.523598776]
+      maximum_registration_attempts: 36
+      maximum_translation_correction_m: 3.0
+      maximum_rotation_correction_rad: 0.349065850
+      local_map_radius_m: 40.0
+      maximum_tiles: 16
+      confirmation_xy_offsets_m: [0.0, -0.25, 0.25]
+      confirmation_yaw_offsets_rad: [0.0, -0.034906585, 0.034906585]
+      confirmation_maximum_registration_attempts: 7
+      confirmation_search_radius_m: 0.40
+      confirmation_maximum_translation_correction_m: 0.50
+      confirmation_maximum_rotation_correction_rad: 0.087266463
+
+    # cleaned map computes the anchored pose. The operator-reviewed stable
+    # layer then independently verifies that fixed structures support it.
+    landmark_verification:
+      enabled: true
+      maximum_correspondence_m: 0.60
+      support_radius_m: 1.50
+      voxel_m: 0.25
+      minimum_matches: 40
+      minimum_unique_voxels: 16
+      minimum_support_match_ratio: 0.10
+      minimum_major_spread_m: 1.5
+
+    cache:
+      maximum_tiles: 20
+
+    quality:
+      degraded_rejections: 3
+      lost_rejections: 10
+      global_confirmation_accepts: 5
+      global_confirmation_span_sec: 2.0
+      # Startup-only repeatability gate. Every accepted global solution is
+      # compared with the first anchor. Passing does not prove absolute pose
+      # accuracy; it only proves that the repeated solutions agree.
+      startup_maximum_translation_deviation_m: 0.10
+      startup_maximum_yaw_deviation_rad: 0.00523598776
+      degraded_correction_age_sec: 3.0
+      lost_correction_age_sec: 10.0
+      safe_pose_age_sec: 0.15
+      safe_correction_age_sec: 2.5
+      safe_minimum_confidence: 0.55
+      safe_maximum_fitness_rmse_m: 0.40
+      safe_minimum_inlier_ratio: 0.35
+      safe_maximum_correction_m: 0.25
+      safe_maximum_correction_rad: 0.122173
+
+    publish:
+      pose_rate_hz: 20.0
+      status_rate_hz: 20.0

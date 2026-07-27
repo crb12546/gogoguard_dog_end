@@ -1,0 +1,52 @@
+# 默认关闭、默认隔离；安装或误启动不能接管现有 /patrol_cmd。
+checkpoint_localization_coordinator:
+  ros__parameters:
+    integration_enabled: false
+
+    route_file: ""
+    checkpoint_file: ""
+    expected_map_id: ""
+    expected_map_hash: ""
+    expected_source_csv_sha256: ""
+    expected_source_pcd_sha256: ""
+    route_frame: map
+
+    raw_odom_topic: /Odometry
+    aligned_odom_topic: /checkpoint_localization/aligned_odometry
+    follower_cmd_topic: /checkpoint_localization/follower_cmd
+    gated_cmd_topic: /checkpoint_localization/gated_cmd
+    localization_status_topic: /localization/status
+    localization_odometry_topic: /localization/odometry
+    route_status_topic: /checkpoint_localization/route_status
+
+    activation_service: /localization/set_active
+    reset_service: /localization/reset
+    global_relocalize_service: /localization/global_relocalize
+    operator_retry_service: /checkpoint_localization/retry_after_fault
+
+    control_rate_hz: 40.0
+    follower_cmd_timeout_sec: 0.30
+    raw_odom_timeout_sec: 0.50
+    running_input_grace_sec: 1.0
+    settle_before_reset_sec: 2.0
+    collect_after_reset_sec: 2.0
+    relocalize_retry_sec: 0.7
+    service_discovery_retry_sec: 0.5
+    localization_timeout_sec: 90.0
+    status_maximum_age_sec: 0.30
+    corrected_odom_maximum_age_sec: 0.25
+    alignment_sync_slop_sec: 0.08
+
+    checkpoint_default_radius_m: 0.50
+    checkpoint_default_search_radius_m: 15.0
+    checkpoint_search_window: 8
+    checkpoint_trigger_index_slop: 3
+    checkpoint_missed_index_margin: 5
+
+    startup_anchor_index: 0
+    startup_maximum_anchor_distance_m: 2.0
+    startup_maximum_anchor_yaw_error_rad: 0.610865238
+    checkpoint_maximum_anchor_distance_m: 1.0
+    checkpoint_maximum_anchor_yaw_error_rad: 0.349065850
+    maximum_transform_jump_m: 5.0
+    maximum_transform_jump_yaw_rad: 0.523598776

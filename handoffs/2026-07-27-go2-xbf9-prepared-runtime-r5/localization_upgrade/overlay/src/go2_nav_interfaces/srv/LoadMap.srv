@@ -1,0 +1,11 @@
+# Copyright 2026 Go2 Robotics Team
+# SPDX-License-Identifier: Apache-2.0
+# Runtime calls require ResetLocalization and the configured quarantine dwell.
+# Absolute path, package-relative path resolved by the caller, or file:// URI.
+string manifest_path
+bool verify_hashes
+---
+bool success
+string message
+string map_id
+uint32 tile_count

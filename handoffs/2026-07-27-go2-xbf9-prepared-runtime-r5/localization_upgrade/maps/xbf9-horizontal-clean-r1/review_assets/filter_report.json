@@ -1,0 +1,1710 @@
+{
+  "annotation_export": {
+    "annotation_count": 36,
+    "declared_map_filename": "xbf-2 2.pcd",
+    "declared_map_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2",
+    "exported_at_utc": "2026-07-27T08:45:30.215Z",
+    "filename": "xbf-2-2.3526e4f11658.annotations.json",
+    "frame_id": "map",
+    "linear_unit": "metre",
+    "revision": "review-20260727084530215Z",
+    "schema": "go2.map_review_annotations/v2",
+    "sha256": "8a5d1e0dca68ac9db1aa407cef625bfb51bbffbd1c60a06c6e319e29733bdc88"
+  },
+  "cleaned_static_map": {
+    "filename": "cleaned_static_map.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "b1c59d4aa08d537be8425d0ed0ce529e323091a348987e005262f39e6f80b7f1"
+  },
+  "created_utc": "2026-07-27T08:50:54.600289Z",
+  "filtering": {
+    "exclude_mask_count": 0,
+    "filter_masks": [],
+    "removed_point_count": 0,
+    "retained_point_count": 1085459,
+    "review_findings": [
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W11",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 12.7 m、宽 2.4 m，符合墙体几何；算法置信度 0.83。",
+        "object_type": "wall",
+        "point_count": 3848,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 104.3446920258661,
+            "y": -84.64578147786597
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 12.661185611826106,
+            "y": 1.5
+          },
+          "yaw_rad": 0.10441392987647123,
+          "z_range_m": {
+            "max": 17.416799545288086,
+            "min": 5.704700231552124
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P74",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 11.0 m、直径约 0.88 m，符合灯杆/旗杆几何；算法置信度 0.78。",
+        "object_type": "pole",
+        "point_count": 94,
+        "review_status": "candidate",
+        "roi": {
+          "center_xy_m": {
+            "x": 65.29161514119899,
+            "y": -96.58669800453998
+          },
+          "radius_m": 0.4390760553029114,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 12.296699523925781,
+            "min": 1.3026998043060303
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P20",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 6.3 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.86。",
+        "object_type": "pole",
+        "point_count": 412,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 71.09772415531492,
+            "y": 6.61169907653216
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 3.362299680709839,
+            "min": -2.9528000354766846
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P162",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 4.0 m、直径约 0.88 m，符合灯杆/旗杆几何；算法置信度 0.65。",
+        "object_type": "pole",
+        "point_count": 32,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 294.7175712585449,
+            "y": -217.58381271362305
+          },
+          "radius_m": 0.4420458634291283,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 10.702400207519531,
+            "min": 6.715200185775757
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P157",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 3.5 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.61。",
+        "object_type": "pole",
+        "point_count": 12,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 243.28668276468912,
+            "y": -206.2255655924479
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.732499837875366,
+            "min": 1.256500005722046
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-C01",
+        "legacy_candidate": false,
+        "note": "近地线性高差带长 4.4 m、高差 0.35 m，疑似路牙；算法置信度 0.68。",
+        "object_type": "curb",
+        "point_count": 162,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 59.61625231697707,
+            "y": -12.217101574554226
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 4.398335264607716,
+            "y": 0.7351797807591653
+          },
+          "yaw_rad": -0.8877887346545428,
+          "z_range_m": {
+            "max": -1.8062002658843994,
+            "min": -2.1608994007110596
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P203",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 4.9 m、直径约 0.79 m，符合灯杆/旗杆几何；算法置信度 0.70。",
+        "object_type": "pole",
+        "point_count": 38,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 317.4751969387657,
+            "y": -296.2272776553505
+          },
+          "radius_m": 0.39262054000572033,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 11.77299976348877,
+            "min": 6.889400243759155
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P81",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 12.9 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.78。",
+        "object_type": "pole",
+        "point_count": 62,
+        "review_status": "rejected",
+        "roi": {
+          "center_xy_m": {
+            "x": 62.74860339010915,
+            "y": -95.64475422520792
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 13.708100318908691,
+            "min": 0.75950026512146
+          }
+        },
+        "source": "seed_fit"
+      }
+    ],
+    "stable_excluded_overlap_point_count": 0,
+    "stable_include_hints": [
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W01",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 7.4 m、宽 1.4 m，符合墙体几何；算法置信度 0.81。",
+        "object_type": "wall",
+        "point_count": 3204,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": -3.5936374738183123,
+            "y": -0.7018582915773106
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 7.357714315275368,
+            "y": 1.4463479434447541
+          },
+          "yaw_rad": -1.568923450633168,
+          "z_range_m": {
+            "max": 8.691499471664429,
+            "min": 1.9031999111175537
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W04",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 15.5 m、宽 1.8 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 5796,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 76.85431582298251,
+            "y": -14.705846973168374
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 15.453555307997911,
+            "y": 1.5
+          },
+          "yaw_rad": -1.5694774365912985,
+          "z_range_m": {
+            "max": 14.98069953918457,
+            "min": -0.5011999607086182
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P59",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 2.8 m、直径约 1.02 m，符合灯杆/旗杆几何；算法置信度 0.59。",
+        "object_type": "pole",
+        "point_count": 96,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 58.91915225982666,
+            "y": -62.84148565928141
+          },
+          "radius_m": 0.5118172099134966,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 2.589799642562866,
+            "min": -0.25259995460510254
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P90",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 6.0 m、直径约 1.44 m，符合灯杆/旗杆几何；算法置信度 0.82。",
+        "object_type": "pole",
+        "point_count": 230,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.49101186005966,
+            "y": -92.27330242654551
+          },
+          "radius_m": 0.719019374675326,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 6.330599546432495,
+            "min": 0.32219958305358887
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P117",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 5.5 m、直径约 1.38 m，符合灯杆/旗杆几何；算法置信度 0.78。",
+        "object_type": "pole",
+        "point_count": 220,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.5407369440252,
+            "y": -123.10569610595704
+          },
+          "radius_m": 0.6901554886402317,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 5.518399953842163,
+            "min": 0.03509974479675293
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P143",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 3.2 m、直径约 1.04 m，符合灯杆/旗杆几何；算法置信度 0.62。",
+        "object_type": "pole",
+        "point_count": 116,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 168.9566018992457,
+            "y": -196.5175923314588
+          },
+          "radius_m": 0.5184175796484204,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.100299596786499,
+            "min": 0.8650996685028076
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P152",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 3.0 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.60。",
+        "object_type": "pole",
+        "point_count": 82,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 185.38695242346787,
+            "y": -227.62176997487137
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 8.057100057601929,
+            "min": 5.037099599838257
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W16",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 3.5 m、宽 1.0 m，符合墙体几何；算法置信度 0.52。",
+        "object_type": "wall",
+        "point_count": 118,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 290.89835882464683,
+            "y": -227.7424033416283
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.466049528170386,
+            "y": 0.9890767701038916
+          },
+          "yaw_rad": -1.330624434796942,
+          "z_range_m": {
+            "max": 2.411400556564331,
+            "min": 0.6159999370574951
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W09",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 5.6 m、宽 0.6 m，符合墙体几何；算法置信度 0.73。",
+        "object_type": "wall",
+        "point_count": 178,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 65.74035975521377,
+            "y": -80.7732581546403
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.569198533215952,
+            "y": 0.6440220087951345
+          },
+          "yaw_rad": 1.5535469985747958,
+          "z_range_m": {
+            "max": 2.032700300216675,
+            "min": 0.11739993095397949
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W19",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 33.0 m、宽 1.4 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 12322,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 306.8458051493721,
+            "y": -342.54979562764834
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 32.97248262793555,
+            "y": 1.429402826517278
+          },
+          "yaw_rad": 0.1864704997254536,
+          "z_range_m": {
+            "max": 15.490099906921387,
+            "min": -1.9936001300811768
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W20",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 26.3 m、宽 1.4 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 5798,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 279.52737167608484,
+            "y": -329.0246672056842
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 26.28104224566921,
+            "y": 1.3768452729668568
+          },
+          "yaw_rad": -1.3961066831024482,
+          "z_range_m": {
+            "max": 15.19540023803711,
+            "min": -2.4544003009796143
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P07",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 5.9 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 14,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 12.178100858415876,
+            "y": -1.6891446794782365
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 5.127500295639038,
+            "min": -0.7845003604888916
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W06",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 6.2 m、宽 1.1 m，符合墙体几何；算法置信度 0.61。",
+        "object_type": "wall",
+        "point_count": 274,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 35.44554946952865,
+            "y": -0.9959979930033696
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 6.162108763104997,
+            "y": 1.1358862755471686
+          },
+          "yaw_rad": 0.08392531789650903,
+          "z_range_m": {
+            "max": 0.20620036125183105,
+            "min": -1.7438995838165283
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W10",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 3.6 m、宽 0.6 m，符合墙体几何；算法置信度 0.62。",
+        "object_type": "wall",
+        "point_count": 114,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 80.84589439957847,
+            "y": -90.76609759959312
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.615399457711598,
+            "y": 0.6077756135160235
+          },
+          "yaw_rad": -0.002845289161195314,
+          "z_range_m": {
+            "max": 2.133000135421753,
+            "min": 0.29979968070983887
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W17",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 14.1 m、宽 0.7 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 1510,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 261.81501111935006,
+            "y": -258.9367095304119
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 14.055363571740605,
+            "y": 0.6777923340687511
+          },
+          "yaw_rad": -1.4080156117444957,
+          "z_range_m": {
+            "max": 4.761099576950073,
+            "min": -0.6858999729156494
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P09",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 5.1 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.87。",
+        "object_type": "pole",
+        "point_count": 740,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 57.10284276395231,
+            "y": -13.42614560513883
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 3.318699598312378,
+            "min": -1.8049004077911377
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W13",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 4.1 m、宽 0.7 m，符合墙体几何；算法置信度 0.62。",
+        "object_type": "wall",
+        "point_count": 140,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 92.9945670100688,
+            "y": -90.75409263801649
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 4.061149884781954,
+            "y": 0.671358491927245
+          },
+          "yaw_rad": -0.012610215608647984,
+          "z_range_m": {
+            "max": 2.029200315475464,
+            "min": 0.23099970817565918
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W08",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 6.1 m、宽 1.1 m，符合墙体几何；算法置信度 0.61。",
+        "object_type": "wall",
+        "point_count": 206,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 49.48730295163443,
+            "y": -1.1261229305194003
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 6.139027157813794,
+            "y": 1.1237181088897166
+          },
+          "yaw_rad": -0.05166585695905288,
+          "z_range_m": {
+            "max": -0.30589985847473145,
+            "min": -2.1997997760772705
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W03",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 14.5 m、宽 1.2 m，符合墙体几何；算法置信度 0.94。",
+        "object_type": "wall",
+        "point_count": 1332,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 1.7180996399172064,
+            "y": -26.965110680490874
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 14.545827354114042,
+            "y": 1.2400239138480982
+          },
+          "yaw_rad": -0.03300242363349187,
+          "z_range_m": {
+            "max": 13.049300193786621,
+            "min": 2.2794997692108154
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W07",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 5.6 m、宽 1.1 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 208,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 43.23327939303002,
+            "y": -0.9077178537476174
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.557786420744368,
+            "y": 1.1368441832800738
+          },
+          "yaw_rad": -0.05309302075393852,
+          "z_range_m": {
+            "max": -0.09369969367980957,
+            "min": -1.9917004108428955
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W14",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 3.4 m、宽 0.6 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 108,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 101.7723270686669,
+            "y": -90.7392976121901
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.420217460322157,
+            "y": 0.6390243189713056
+          },
+          "yaw_rad": 0.0023924052213670595,
+          "z_range_m": {
+            "max": 1.913400411605835,
+            "min": 0.1587998867034912
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W05",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 3.5 m、宽 0.7 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 112,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 24.767588627083292,
+            "y": -1.2276440259999544
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.460317647283128,
+            "y": 0.6623900495989159
+          },
+          "yaw_rad": -0.010564418331619101,
+          "z_range_m": {
+            "max": 0.6312997341156006,
+            "min": -1.2888004779815674
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P170",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 7.3 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 14,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 297.7577626364572,
+            "y": -228.34846932547433
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 13.298500061035156,
+            "min": 6.026400327682495
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P172",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 8.1 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 16,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 298.22133445739746,
+            "y": -232.23972511291504
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 13.458200454711914,
+            "min": 5.3673999309539795
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P58",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 13.5 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.79。",
+        "object_type": "pole",
+        "point_count": 100,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 68.01277030944824,
+            "y": -96.1946646118164
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 14.370400428771973,
+            "min": 0.8818995952606201
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P163",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 9.1 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 18,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 297.70704629686145,
+            "y": -225.26737467447916
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 18.27319884300232,
+            "min": 9.155599355697632
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P156",
+        "legacy_candidate": false,
+        "note": "紧凑竖直点簇高 3.5 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.62。",
+        "object_type": "pole",
+        "point_count": 18,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 243.32506794399686,
+            "y": -207.17457750108508
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.6767003536224365,
+            "min": 1.1446998119354248
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W02",
+        "legacy_candidate": false,
+        "note": "连续竖直点簇长 3.1 m、宽 0.6 m，符合墙体几何；算法置信度 0.72。",
+        "object_type": "wall",
+        "point_count": 226,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": -7.179644439802272,
+            "y": 1.5097149786542166
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.1350716703483674,
+            "y": 0.5572219128645074
+          },
+          "yaw_rad": 1.530275601958706,
+          "z_range_m": {
+            "max": 8.489499807357788,
+            "min": 3.961700201034546
+          }
+        },
+        "source": "seed_fit"
+      }
+    ],
+    "stable_layer_point_count": 34313,
+    "stable_roi_count": 28,
+    "stable_rois": [
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W01",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 3261,
+        "note": "连续竖直点簇长 7.4 m、宽 1.4 m，符合墙体几何；算法置信度 0.81。",
+        "object_type": "wall",
+        "point_count": 3204,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": -3.5936374738183123,
+            "y": -0.7018582915773106
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 7.357714315275368,
+            "y": 1.4463479434447541
+          },
+          "yaw_rad": -1.568923450633168,
+          "z_range_m": {
+            "max": 8.691499471664429,
+            "min": 1.9031999111175537
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W04",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 5943,
+        "note": "连续竖直点簇长 15.5 m、宽 1.8 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 5796,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 76.85431582298251,
+            "y": -14.705846973168374
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 15.453555307997911,
+            "y": 1.5
+          },
+          "yaw_rad": -1.5694774365912985,
+          "z_range_m": {
+            "max": 14.98069953918457,
+            "min": -0.5011999607086182
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P59",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 101,
+        "note": "紧凑竖直点簇高 2.8 m、直径约 1.02 m，符合灯杆/旗杆几何；算法置信度 0.59。",
+        "object_type": "pole",
+        "point_count": 96,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 58.91915225982666,
+            "y": -62.84148565928141
+          },
+          "radius_m": 0.5118172099134966,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 2.589799642562866,
+            "min": -0.25259995460510254
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P90",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 238,
+        "note": "紧凑竖直点簇高 6.0 m、直径约 1.44 m，符合灯杆/旗杆几何；算法置信度 0.82。",
+        "object_type": "pole",
+        "point_count": 230,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 85.49101186005966,
+            "y": -92.27330242654551
+          },
+          "radius_m": 0.719019374675326,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 6.330599546432495,
+            "min": 0.32219958305358887
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P117",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 222,
+        "note": "紧凑竖直点簇高 5.5 m、直径约 1.38 m，符合灯杆/旗杆几何；算法置信度 0.78。",
+        "object_type": "pole",
+        "point_count": 220,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 171.5407369440252,
+            "y": -123.10569610595704
+          },
+          "radius_m": 0.6901554886402317,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 5.518399953842163,
+            "min": 0.03509974479675293
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P143",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 108,
+        "note": "紧凑竖直点簇高 3.2 m、直径约 1.04 m，符合灯杆/旗杆几何；算法置信度 0.62。",
+        "object_type": "pole",
+        "point_count": 116,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 168.9566018992457,
+            "y": -196.5175923314588
+          },
+          "radius_m": 0.5184175796484204,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.100299596786499,
+            "min": 0.8650996685028076
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P152",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 105,
+        "note": "紧凑竖直点簇高 3.0 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.60。",
+        "object_type": "pole",
+        "point_count": 82,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 185.38695242346787,
+            "y": -227.62176997487137
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 8.057100057601929,
+            "min": 5.037099599838257
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W16",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 167,
+        "note": "连续竖直点簇长 3.5 m、宽 1.0 m，符合墙体几何；算法置信度 0.52。",
+        "object_type": "wall",
+        "point_count": 118,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 290.89835882464683,
+            "y": -227.7424033416283
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.466049528170386,
+            "y": 0.9890767701038916
+          },
+          "yaw_rad": -1.330624434796942,
+          "z_range_m": {
+            "max": 2.411400556564331,
+            "min": 0.6159999370574951
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W09",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 214,
+        "note": "连续竖直点簇长 5.6 m、宽 0.6 m，符合墙体几何；算法置信度 0.73。",
+        "object_type": "wall",
+        "point_count": 178,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 65.74035975521377,
+            "y": -80.7732581546403
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.569198533215952,
+            "y": 0.6440220087951345
+          },
+          "yaw_rad": 1.5535469985747958,
+          "z_range_m": {
+            "max": 2.032700300216675,
+            "min": 0.11739993095397949
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W19",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 12465,
+        "note": "连续竖直点簇长 33.0 m、宽 1.4 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 12322,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 306.8458051493721,
+            "y": -342.54979562764834
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 32.97248262793555,
+            "y": 1.429402826517278
+          },
+          "yaw_rad": 0.1864704997254536,
+          "z_range_m": {
+            "max": 15.490099906921387,
+            "min": -1.9936001300811768
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W20",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 5918,
+        "note": "连续竖直点簇长 26.3 m、宽 1.4 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 5798,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 279.52737167608484,
+            "y": -329.0246672056842
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 26.28104224566921,
+            "y": 1.3768452729668568
+          },
+          "yaw_rad": -1.3961066831024482,
+          "z_range_m": {
+            "max": 15.19540023803711,
+            "min": -2.4544003009796143
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P07",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 10,
+        "note": "紧凑竖直点簇高 5.9 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 14,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 12.178100858415876,
+            "y": -1.6891446794782365
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 5.127500295639038,
+            "min": -0.7845003604888916
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W06",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 401,
+        "note": "连续竖直点簇长 6.2 m、宽 1.1 m，符合墙体几何；算法置信度 0.61。",
+        "object_type": "wall",
+        "point_count": 274,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 35.44554946952865,
+            "y": -0.9959979930033696
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 6.162108763104997,
+            "y": 1.1358862755471686
+          },
+          "yaw_rad": 0.08392531789650903,
+          "z_range_m": {
+            "max": 0.20620036125183105,
+            "min": -1.7438995838165283
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W10",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 120,
+        "note": "连续竖直点簇长 3.6 m、宽 0.6 m，符合墙体几何；算法置信度 0.62。",
+        "object_type": "wall",
+        "point_count": 114,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 80.84589439957847,
+            "y": -90.76609759959312
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.615399457711598,
+            "y": 0.6077756135160235
+          },
+          "yaw_rad": -0.002845289161195314,
+          "z_range_m": {
+            "max": 2.133000135421753,
+            "min": 0.29979968070983887
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W17",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 1544,
+        "note": "连续竖直点簇长 14.1 m、宽 0.7 m，符合墙体几何；算法置信度 0.95。",
+        "object_type": "wall",
+        "point_count": 1510,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 261.81501111935006,
+            "y": -258.9367095304119
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 14.055363571740605,
+            "y": 0.6777923340687511
+          },
+          "yaw_rad": -1.4080156117444957,
+          "z_range_m": {
+            "max": 4.761099576950073,
+            "min": -0.6858999729156494
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P09",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 524,
+        "note": "紧凑竖直点簇高 5.1 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.87。",
+        "object_type": "pole",
+        "point_count": 740,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 57.10284276395231,
+            "y": -13.42614560513883
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 3.318699598312378,
+            "min": -1.8049004077911377
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W13",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 157,
+        "note": "连续竖直点簇长 4.1 m、宽 0.7 m，符合墙体几何；算法置信度 0.62。",
+        "object_type": "wall",
+        "point_count": 140,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 92.9945670100688,
+            "y": -90.75409263801649
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 4.061149884781954,
+            "y": 0.671358491927245
+          },
+          "yaw_rad": -0.012610215608647984,
+          "z_range_m": {
+            "max": 2.029200315475464,
+            "min": 0.23099970817565918
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W08",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 336,
+        "note": "连续竖直点簇长 6.1 m、宽 1.1 m，符合墙体几何；算法置信度 0.61。",
+        "object_type": "wall",
+        "point_count": 206,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 49.48730295163443,
+            "y": -1.1261229305194003
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 6.139027157813794,
+            "y": 1.1237181088897166
+          },
+          "yaw_rad": -0.05166585695905288,
+          "z_range_m": {
+            "max": -0.30589985847473145,
+            "min": -2.1997997760772705
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W03",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 1427,
+        "note": "连续竖直点簇长 14.5 m、宽 1.2 m，符合墙体几何；算法置信度 0.94。",
+        "object_type": "wall",
+        "point_count": 1332,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 1.7180996399172064,
+            "y": -26.965110680490874
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 14.545827354114042,
+            "y": 1.2400239138480982
+          },
+          "yaw_rad": -0.03300242363349187,
+          "z_range_m": {
+            "max": 13.049300193786621,
+            "min": 2.2794997692108154
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W07",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 336,
+        "note": "连续竖直点簇长 5.6 m、宽 1.1 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 208,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 43.23327939303002,
+            "y": -0.9077178537476174
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 5.557786420744368,
+            "y": 1.1368441832800738
+          },
+          "yaw_rad": -0.05309302075393852,
+          "z_range_m": {
+            "max": -0.09369969367980957,
+            "min": -1.9917004108428955
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W14",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 115,
+        "note": "连续竖直点簇长 3.4 m、宽 0.6 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 108,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 101.7723270686669,
+            "y": -90.7392976121901
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.420217460322157,
+            "y": 0.6390243189713056
+          },
+          "yaw_rad": 0.0023924052213670595,
+          "z_range_m": {
+            "max": 1.913400411605835,
+            "min": 0.1587998867034912
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W05",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 128,
+        "note": "连续竖直点簇长 3.5 m、宽 0.7 m，符合墙体几何；算法置信度 0.59。",
+        "object_type": "wall",
+        "point_count": 112,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 24.767588627083292,
+            "y": -1.2276440259999544
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.460317647283128,
+            "y": 0.6623900495989159
+          },
+          "yaw_rad": -0.010564418331619101,
+          "z_range_m": {
+            "max": 0.6312997341156006,
+            "min": -1.2888004779815674
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P170",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 10,
+        "note": "紧凑竖直点簇高 7.3 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 14,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 297.7577626364572,
+            "y": -228.34846932547433
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 13.298500061035156,
+            "min": 6.026400327682495
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P172",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 15,
+        "note": "紧凑竖直点簇高 8.1 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 16,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 298.22133445739746,
+            "y": -232.23972511291504
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 13.458200454711914,
+            "min": 5.3673999309539795
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P58",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 184,
+        "note": "紧凑竖直点簇高 13.5 m、直径约 1.50 m，符合灯杆/旗杆几何；算法置信度 0.79。",
+        "object_type": "pole",
+        "point_count": 100,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 68.01277030944824,
+            "y": -96.1946646118164
+          },
+          "radius_m": 0.75,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 14.370400428771973,
+            "min": 0.8818995952606201
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P163",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 9,
+        "note": "紧凑竖直点簇高 9.1 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.76。",
+        "object_type": "pole",
+        "point_count": 18,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 297.70704629686145,
+            "y": -225.26737467447916
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 18.27319884300232,
+            "min": 9.155599355697632
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "cylinder",
+        "id": "AUTO-P156",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 10,
+        "note": "紧凑竖直点簇高 3.5 m、直径约 0.50 m，符合灯杆/旗杆几何；算法置信度 0.62。",
+        "object_type": "pole",
+        "point_count": 18,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": 243.32506794399686,
+            "y": -207.17457750108508
+          },
+          "radius_m": 0.25,
+          "shape": "cylinder",
+          "z_range_m": {
+            "max": 4.6767003536224365,
+            "min": 1.1446998119354248
+          }
+        },
+        "source": "seed_fit"
+      },
+      {
+        "category": "stable_include",
+        "geometry_type": "oriented_box",
+        "id": "AUTO-W02",
+        "legacy_candidate": false,
+        "matched_retained_point_count": 245,
+        "note": "连续竖直点簇长 3.1 m、宽 0.6 m，符合墙体几何；算法置信度 0.72。",
+        "object_type": "wall",
+        "point_count": 226,
+        "review_status": "approved",
+        "roi": {
+          "center_xy_m": {
+            "x": -7.179644439802272,
+            "y": 1.5097149786542166
+          },
+          "shape": "oriented_box",
+          "size_xy_m": {
+            "x": 3.1350716703483674,
+            "y": 0.5572219128645074
+          },
+          "yaw_rad": 1.530275601958706,
+          "z_range_m": {
+            "max": 8.489499807357788,
+            "min": 3.961700201034546
+          }
+        },
+        "source": "seed_fit"
+      }
+    ]
+  },
+  "output": {
+    "filename": "cleaned_static_map.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "b1c59d4aa08d537be8425d0ed0ce529e323091a348987e005262f39e6f80b7f1"
+  },
+  "policy": {
+    "exclude_precedes_stable": true,
+    "mask_categories": [
+      "dynamic_exclude",
+      "parking_exclude",
+      "vegetation_exclude"
+    ],
+    "per_mask_counts_may_overlap": true,
+    "source_map_overwrite": "forbidden",
+    "stable_include": "extracted_to_stable_layer_without_inverse_filter",
+    "supported_roi_geometry": [
+      "xy_circle_all_z",
+      "cylinder",
+      "oriented_box",
+      "polygon_prism"
+    ],
+    "unannotated_points": "retained"
+  },
+  "schema": "go2.map_annotation_filter_report/v2",
+  "source": {
+    "byte_size": 27319294,
+    "filename": "xbf-2 2.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 1085459,
+    "sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2"
+  },
+  "stable_layer": {
+    "filename": "stable_layer.pcd",
+    "pcd_encoding": "ascii",
+    "point_count": 34313,
+    "sha256": "8bbf5149b4a8395a603202fa6ba4ec54c0996346b7f9c7c1bc22572c441c5fe4"
+  }
+}

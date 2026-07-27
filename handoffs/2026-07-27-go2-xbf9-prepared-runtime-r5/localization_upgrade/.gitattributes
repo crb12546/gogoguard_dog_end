@@ -1,0 +1,8 @@
+# These files are hash-bound runtime/provenance artifacts.  Do not normalize
+# their CRLF line endings or render them as textual diffs.
+routes/xbf9_horizontal_clean.aligned.csv binary
+task_provenance/source.csv binary
+task_provenance/*.zip binary
+
+# PCD assets can use ASCII encoding but are immutable compiled map artifacts.
+maps/**/*.pcd binary
