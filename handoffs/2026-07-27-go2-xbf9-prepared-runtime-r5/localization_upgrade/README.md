@@ -56,7 +56,7 @@ MID-360 / FAST-LIO
 
 ## 先读
 
-- 部署步骤：`交给部署人员-先看我-R5.md`
+- 部署步骤：`DEPLOYER_README.zh-CN.md`
 - 算法与现场验收：`DEPLOY_XBF_CHECKPOINT_PATROL.zh-CN.md`
 - 离线核验：`python3 scripts/verify_xbf_bundle_offline.py`
 
