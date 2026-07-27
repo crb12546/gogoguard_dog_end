@@ -1,0 +1,102 @@
+{
+  "alignment": {
+    "field_truth_note_zh": "平台已确认 PCD 与 CSV 的平面配准；真狗起点定位与短距离路线落地仍待现场复核。",
+    "field_truth_verified": false,
+    "method": "operator-planar-drag-rotate/v1",
+    "operator_confirmed": true,
+    "theta_rad": -0.27474701469097695,
+    "translation_m": [
+      0,
+      0
+    ],
+    "type": "SE2"
+  },
+  "checkpoint_file": "xbf9_horizontal_clean.checkpoints.json",
+  "checkpoint_sha256": "16bbfee670fd06ba7961b48ed827a251cdec556e5022c130af2010b7b33975c8",
+  "checkpoints": [
+    {
+      "evidence": [
+        "AUTO-P07"
+      ],
+      "route_s_m": 11.99319971140526,
+      "timeout_s": 60,
+      "waypoint_index": 26
+    },
+    {
+      "evidence": [
+        "AUTO-W04"
+      ],
+      "route_s_m": 75.1474303639206,
+      "timeout_s": 60,
+      "waypoint_index": 161
+    },
+    {
+      "evidence": [
+        "AUTO-P59"
+      ],
+      "route_s_m": 125.53657120108943,
+      "timeout_s": 60,
+      "waypoint_index": 274
+    },
+    {
+      "evidence": [
+        "AUTO-P90"
+      ],
+      "route_s_m": 169.51754401042632,
+      "timeout_s": 60,
+      "waypoint_index": 368
+    },
+    {
+      "evidence": [
+        "AUTO-P117"
+      ],
+      "route_s_m": 271.521554090799,
+      "timeout_s": 60,
+      "waypoint_index": 577
+    },
+    {
+      "evidence": [
+        "AUTO-P143"
+      ],
+      "route_s_m": 346.03787142151214,
+      "timeout_s": 60,
+      "waypoint_index": 737
+    },
+    {
+      "evidence": [
+        "AUTO-P156"
+      ],
+      "route_s_m": 428.640429928184,
+      "timeout_s": 60,
+      "waypoint_index": 907
+    },
+    {
+      "evidence": [
+        "AUTO-P163"
+      ],
+      "route_s_m": 491.9801556182614,
+      "timeout_s": 60,
+      "waypoint_index": 1040
+    }
+  ],
+  "frame_id": "map",
+  "map": {
+    "annotation_revision": "review-20260727084530215Z",
+    "manifest_sha256": "6afd004e04c182b0b5c2e18354692ff20c33175dda6a2387a23b331fd6bde5a0",
+    "map_id": "xbf9-horizontal-clean-r1"
+  },
+  "note_zh": "由平台已确认的 PCD+CSV SE(2)、对象级固定物和 checkpoint 自动生成；起点仍须在真实狗上完成定位并进入 RUNNING。",
+  "route_csv_sha256": "973c906c89a753f1eee6ab21052f92f9195015df3252a443498e14a6f4564f55",
+  "route_file": "xbf9_horizontal_clean.aligned.csv",
+  "route_id": "xbf9-horizontal-clean-r1-973c906c89a7",
+  "runtime": {
+    "calibration": "stationary anchored scan-to-cleaned-map registration",
+    "continuous_registration": false,
+    "normal_segment": "frozen map<-odom SE2 plus original waypoint_follower_go2_2"
+  },
+  "schema": "go2.deployment_route/v1",
+  "source": {
+    "csv_sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2",
+    "pcd_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "alignment": {
+    "confirmed": true,
+    "theta_rad": -0.27474701469097695,
+    "translation_m": [
+      0,
+      0
+    ],
+    "type": "SE2"
+  },
+  "checkpoints": [
+    {
+      "distance_to_landmark_m": 1.750100583013773,
+      "landmark_id": "AUTO-P07",
+      "progress_m": 11.99319971140526,
+      "waypoint_id": "26",
+      "waypoint_index": 26
+    },
+    {
+      "distance_to_landmark_m": 10.597244954662107,
+      "landmark_id": "AUTO-W04",
+      "progress_m": 75.1474303639206,
+      "waypoint_id": "161",
+      "waypoint_index": 161
+    },
+    {
+      "distance_to_landmark_m": 6.801485927161733,
+      "landmark_id": "AUTO-P59",
+      "progress_m": 125.53657120108943,
+      "waypoint_id": "274",
+      "waypoint_index": 274
+    },
+    {
+      "distance_to_landmark_m": 2.104640584620912,
+      "landmark_id": "AUTO-P90",
+      "progress_m": 169.51754401042632,
+      "waypoint_id": "368",
+      "waypoint_index": 368
+    },
+    {
+      "distance_to_landmark_m": 2.3079222667833963,
+      "landmark_id": "AUTO-P117",
+      "progress_m": 271.521554090799,
+      "waypoint_id": "577",
+      "waypoint_index": 577
+    },
+    {
+      "distance_to_landmark_m": 8.968899335992248,
+      "landmark_id": "AUTO-P143",
+      "progress_m": 346.03787142151214,
+      "waypoint_id": "737",
+      "waypoint_index": 737
+    },
+    {
+      "distance_to_landmark_m": 1.435928687717855,
+      "landmark_id": "AUTO-P156",
+      "progress_m": 428.640429928184,
+      "waypoint_id": "907",
+      "waypoint_index": 907
+    },
+    {
+      "distance_to_landmark_m": 4.9724717241927605,
+      "landmark_id": "AUTO-P163",
+      "progress_m": 491.9801556182614,
+      "waypoint_id": "1040",
+      "waypoint_index": 1040
+    }
+  ],
+  "landmarks": {
+    "approved_ids": [
+      "AUTO-P07",
+      "AUTO-P09",
+      "AUTO-P117",
+      "AUTO-P143",
+      "AUTO-P152",
+      "AUTO-P156",
+      "AUTO-P163",
+      "AUTO-P170",
+      "AUTO-P172",
+      "AUTO-P58",
+      "AUTO-P59",
+      "AUTO-P90",
+      "AUTO-W01",
+      "AUTO-W02",
+      "AUTO-W03",
+      "AUTO-W04",
+      "AUTO-W05",
+      "AUTO-W06",
+      "AUTO-W07",
+      "AUTO-W08",
+      "AUTO-W09",
+      "AUTO-W10",
+      "AUTO-W13",
+      "AUTO-W14",
+      "AUTO-W16",
+      "AUTO-W17",
+      "AUTO-W19",
+      "AUTO-W20"
+    ],
+    "candidate_ids": [
+      "AUTO-P74"
+    ],
+    "rejected_ids": [
+      "AUTO-C01",
+      "AUTO-P157",
+      "AUTO-P162",
+      "AUTO-P20",
+      "AUTO-P203",
+      "AUTO-P81",
+      "AUTO-W11"
+    ]
+  },
+  "schema": "go2.patrol_preparation/v1",
+  "source": {
+    "csv_file_name": "xbf9_horizontal_clean.csv",
+    "csv_sha256": "b4abadd38c30f5904f4cfe10eb529b8c1a4940ba023019847ea3959c48fd53a2",
+    "pcd_file_name": "xbf-2 2.pcd",
+    "pcd_sha256": "3526e4f116586d3594c0afa45efb3fb254e4eca1bf89fa21f18896a558ee5aa2"
+  },
+  "trim": {
+    "exported_point_count": 1277,
+    "source_end_index": 1276,
+    "source_point_count": 1277,
+    "source_start_index": 0
+  }
+}

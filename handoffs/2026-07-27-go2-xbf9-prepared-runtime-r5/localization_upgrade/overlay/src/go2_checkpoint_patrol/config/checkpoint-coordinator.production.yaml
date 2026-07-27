@@ -1,0 +1,64 @@
+# Copyright 2026 Go2 Robotics Team
+# SPDX-License-Identifier: Apache-2.0
+#
+# 生产话题接线。文件路径与地图身份是占位值；start_xbf_patrol.sh 会根据
+# 当前 bundle、manifest.sha256 和 checkpoint sidecar 全部动态覆盖。
+checkpoint_localization_coordinator:
+  ros__parameters:
+    integration_enabled: true
+
+    route_file: routes/xbf9_horizontal_clean.aligned.csv
+    checkpoint_file: routes/xbf9_horizontal_clean.checkpoints.json
+    expected_map_id: __RUNTIME_FROM_MANIFEST__
+    expected_map_hash: __RUNTIME_FROM_MANIFEST_SHA256__
+    expected_source_csv_sha256: __RUNTIME_FROM_CHECKPOINT_SIDECAR__
+    expected_source_pcd_sha256: __RUNTIME_FROM_CHECKPOINT_SIDECAR__
+    route_frame: map
+
+    raw_odom_topic: /Odometry
+    aligned_odom_topic: /checkpoint_localization/aligned_odometry
+    follower_cmd_topic: /checkpoint_localization/follower_cmd
+    # 使用本任务独占的内部话题；start_xbf_patrol.sh 启动原
+    # unitree_safe_cmd_node 订阅它。旧 follower 即使误发 /patrol_cmd，
+    # 也不能直接绕过 checkpoint 停车门。
+    gated_cmd_topic: /checkpoint_localization/gated_cmd
+    graph_guard_enabled: true
+    legacy_cmd_topic: /patrol_cmd
+    # 原 safe cmd 节点必须唯一发布 Twist；至少有 cmd_vel_udp_sender 订阅并发给狗。
+    # rosbag 等只读观察者也会订阅 /cmd_vel，额外订阅者不会形成双控制。
+    actuator_command_topic: /cmd_vel
+    localization_status_topic: /localization/status
+    localization_odometry_topic: /localization/odometry
+    route_status_topic: /checkpoint_localization/route_status
+
+    activation_service: /localization/set_active
+    reset_service: /localization/reset
+    global_relocalize_service: /localization/global_relocalize
+    operator_retry_service: /checkpoint_localization/retry_after_fault
+
+    control_rate_hz: 40.0
+    follower_cmd_timeout_sec: 0.30
+    raw_odom_timeout_sec: 0.50
+    running_input_grace_sec: 1.0
+    settle_before_reset_sec: 2.0
+    collect_after_reset_sec: 2.0
+    relocalize_retry_sec: 0.7
+    service_discovery_retry_sec: 0.5
+    localization_timeout_sec: 90.0
+    status_maximum_age_sec: 0.30
+    corrected_odom_maximum_age_sec: 0.25
+    alignment_sync_slop_sec: 0.08
+
+    checkpoint_default_radius_m: 0.60
+    checkpoint_default_search_radius_m: 12.0
+    checkpoint_search_window: 8
+    checkpoint_trigger_index_slop: 3
+    checkpoint_missed_index_margin: 5
+
+    startup_anchor_index: 0
+    startup_maximum_anchor_distance_m: 2.0
+    startup_maximum_anchor_yaw_error_rad: 0.610865238
+    checkpoint_maximum_anchor_distance_m: 1.0
+    checkpoint_maximum_anchor_yaw_error_rad: 0.349065850
+    maximum_transform_jump_m: 5.0
+    maximum_transform_jump_yaw_rad: 0.523598776
