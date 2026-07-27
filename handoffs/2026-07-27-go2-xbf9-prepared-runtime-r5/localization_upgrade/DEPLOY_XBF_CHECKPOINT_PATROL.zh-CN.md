@@ -80,6 +80,29 @@ R5 不包含“从校园任意位置自主规划到起点”。如果狗远离�
 | 只看进程存在就认为成功 | 必须收到 `RouteStatus.RUNNING` |
 | 一次 odometry 约 0.918 s 延迟 | 启动前记录 p50/p95/p99，不盲目放宽阈值 |
 
+更完整的证据边界见
+`YESTERDAY_ROOT_CAUSE_AND_R5_STATUS.zh-CN.md`。昨天没有观察到
+`RUNNING`，所以不能把最后一次提前清理误写成“点云算法已经失败”。
+
+## 临时 GoGuard 固定入口
+
+当前平台协议仍只给松散的 CSV URL，没有准备任务 ID。本版按用户要求采用临时
+固定策略：
+
+```text
+任何 start_patrol 别名
+  -> 不下载、不解析平台 CSV URL
+  -> 固定启动 xbf9-horizontal-clean-r1
+
+任何 stop_patrol 别名
+  -> 固定停止该任务并请求最终 StopMove
+```
+
+桥接层复用原 `go2_saas_agent.py` 的命令轮询、commandId 去重和结果回传，只
+替换 start/stop handler。它先向平台返回 `running`，不阻塞后续
+`stop_patrol`；真正的非零运动仍必须等待 coordinator 发布
+`RUNNING + localization_ready=true`。
+
 ## CPU 与实时性
 
 高算力配准只在起点和 8 个显式 checkpoint 停车时运行。原 CSV follower、
@@ -95,6 +118,7 @@ CSV 跟线”解耦，避免巡检过程持续抢占算力。
 - 对齐 CSV、SE(2)、28 个固定物、8 个 checkpoint 互相绑定；
 - 地图 146 个 tile、146 个描述符和 34,313 点稳定层哈希完整；
 - 修正后的启动、停止、进程组和数据导入代码通过离线检查；
+- GoGuard 任一 start 别名都会进入固定 handler，平台 CSV/URL 不会进入旧链；
 - 原 follower、safe cmd、UDP sender/receiver、motion probe 源码哈希未改变。
 
 尚未证明：

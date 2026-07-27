@@ -37,16 +37,43 @@ map_id: xbf9-horizontal-clean-r1
 route_points: 1277
 checkpoints: 26,161,274,368,577,737,907,1040
 approved_landmarks: 28
+gogoguard_start_patrol: fixed task xbf9-horizontal-clean-r1
+gogoguard_platform_route_url: ignored
 no ROS node was started and no motion command was published
 ```
 
 构建或核验失败时不要现场改源码，保存完整输出后回传。
 
-## 2. 运行前状态
+## 2. 把 GoGuard start/stop 接到本任务
+
+本步骤不覆盖 `/home/unitree/go2_fastlio_ws/scripts/go2_saas_agent.py`。它只给
+`go2-saas-command.service` 安装一个可删除的 systemd drop-in，原心跳、
+平台认证、命令去重和结果回传仍由原 agent 完成。
+
+```bash
+cd /home/unitree/localization_upgrade
+bash scripts/install_gogoguard_xbf9_r5_bridge.sh
+```
+
+脚本会先停止旧 command 服务和可能存在的旧巡检，再启用固定入口。成功必须
+显示：
+
+```text
+GoGoGuard 固定任务桥接已启用。
+下一条 start_patrol 将忽略 CSV/URL 并启动 /home/unitree/localization_upgrade。
+```
+
+若桥接切换中任一步失败，安装脚本会自动恢复安装前的 command service，
+不会把 GoGoGuard 命令入口留在停止状态。
+
+此后不要另开第二个 command-loop，也不要再暂停这个服务；它就是平台入口。
+video/outbox 服务不被替换。
+
+## 3. GoGuard 下发前的现场状态
 
 1. 按原方式启动 Livox 和 FAST-LIO。
 2. 确认 `/Odometry` 与 `/cloud_registered_body` 持续发布。
-3. 停止或暂停旧 SaaS 巡检 command-loop；video/outbox 可以继续。
+3. 把狗摆在本路线起点附近，朝向大致接近路线起始方向。
 4. 保持遥控器和急停可用，狗周围留出安全空间。
 5. 确认狗端真实 MID-360/IMU/base 外参与当前稳定版本一致。
 
@@ -64,15 +91,32 @@ bash scripts/preflight_xbf_patrol.sh
 哈希、topic、旧控制源、UDP 端口或真实狗源码不一致则会停止，这是防止两套程序
 同时控制狗，不是人工审批门。
 
-## 3. 第一次只做静止定位
+## 4. 直接从 GoGuard 启动
 
-```bash
-export GO2_XBF_CALIBRATION_ONLY=1
-bash scripts/start_xbf_patrol.sh
+在 GoGuard 下发任意 `start_patrol`。命令里的 `fileName`、`routeUrl`、CSV、
+PCD、速度和循环参数全部忽略，实际固定为：
+
+```text
+task: xbf9-horizontal-clean-r1
+route: routes/xbf9_horizontal_clean.aligned.csv
+speed: 0.20 m/s
+max yaw rate: 0.45 rad/s
+loop: once
 ```
 
-该模式速度和角速度都锁为零，但 SDK receiver 初始化会调用 `StandUp()` 和
-`BalanceStand()`，狗可能改变站姿。成功标准不是“进程还在”，而是：
+平台首先收到 `running`，表示固定任务监督进程已经启动；它不表示定位已经
+成功。随后狗端：
+
+```text
+预检和时间戳测量
+-> 启动 localizer / coordinator / 原运动链
+-> 静止收集点云并定位
+-> RouteStatus.RUNNING
+-> 才允许原 follower 的非零命令通过
+```
+
+SDK receiver 初始化会调用 `StandUp()` 和 `BalanceStand()`，狗可能改变站姿。
+真正允许行走的标准是：
 
 ```text
 /tmp/go2_xbf_patrol/logs/route_ready.json
@@ -83,7 +127,8 @@ bash scripts/start_xbf_patrol.sh
   localization_ready: true
 ```
 
-停止：
+需要停止时直接在 GoGuard 下发 `stop_patrol`。平台命令循环在定位过程中不会
+被阻塞，因此起点定位尚未完成时也能接收停止命令。现场终端备用停止命令：
 
 ```bash
 bash /home/unitree/localization_upgrade/scripts/stop_xbf_patrol.sh
@@ -99,25 +144,13 @@ ros2 topic echo --once /checkpoint_localization/route_status
 
 不要放宽配准门限或时间戳门限来“试着跑”。
 
-## 4. 5～10 m 低速短测
-
-静止定位通过后：
-
-```bash
-unset GO2_XBF_CALIBRATION_ONLY
-export GO2_XBF_PATROL_SPEED=0.10
-export GO2_XBF_MAX_YAW_RATE=0.30
-export GO2_XBF_LOOP_MODE=once
-bash scripts/start_xbf_patrol.sh
-```
-
-确认三件事：
+第一次只观察 5～10 m，确认三件事：
 
 1. 狗首先进入正确的 CSV 方向，而不是沿错误的平行道路走。
 2. 实际落点与可走路面一致。
 3. 停止脚本、遥控停止和异常清理都能让 UDP 5005 释放且没有残留 XBF 进程。
 
-短测通过后再恢复默认 `0.20 m/s`；不要第一次就做 600 m 全程。
+不要第一次就做 600 m 全程。
 
 ## 5. 第一个 checkpoint 验证
 
@@ -137,10 +170,10 @@ follower 命令被门控为零
 ## 6. 回退
 
 ```bash
-bash /home/unitree/localization_upgrade/scripts/stop_xbf_patrol.sh
+bash /home/unitree/localization_upgrade/scripts/remove_gogoguard_xbf9_r5_bridge.sh
 ```
 
-确认没有 XBF 进程、UDP 5005 已释放、最终 `StopMove` 已发送后，把
-`/home/unitree/localization_upgrade` 恢复为部署前状态，并恢复旧 SaaS
-command-loop。地图、release 和日志可以保留用于取证，不需要覆盖原 FAST-LIO
-工作区。
+该脚本先停止 XBF、请求最终 `StopMove`，再删除 systemd drop-in 并恢复原
+GoGuard command-loop。确认没有 XBF 进程且 UDP 5005 已释放后，才可以把
+`/home/unitree/localization_upgrade` 恢复为部署前状态。地图、release 和日志
+可以保留用于取证，不需要覆盖原 FAST-LIO 工作区。

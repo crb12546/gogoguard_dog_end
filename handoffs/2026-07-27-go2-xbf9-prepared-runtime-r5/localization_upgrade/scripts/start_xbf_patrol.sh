@@ -158,6 +158,12 @@ if [[ -f "${pid_file}" ]]; then
   rm -f -- "${pid_file}"
 fi
 
+# 上一次运行的 ready 文件不能被新的 GoGoGuard start_patrol 误认为本轮已经
+# 进入 RUNNING。只有在确认没有活动监督器或遗留进程组后才清除。
+rm -f -- \
+  "${log_dir}/route_ready.json" \
+  "${log_dir}/route_ready.log"
+
 python3 - \
   "${localizer_template}" \
   "${runtime_localizer_config}" \

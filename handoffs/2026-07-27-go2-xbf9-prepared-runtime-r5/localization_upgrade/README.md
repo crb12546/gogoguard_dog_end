@@ -5,6 +5,11 @@
 部署人员不需要再现场拼接 PCD、CSV、标记物或 checkpoint，也不要使用
 2026-07-26 的旧 R3 交付目录。
 
+本版另含临时 GoGuard 固定入口：平台只要下发任一
+`start_patrol` 别名，狗端就忽略命令中的 CSV 名称和下载链接，固定启动本目录
+的 `xbf9-horizontal-clean-r1`；`stop_patrol` 固定停止本任务。安装方法见
+`DEPLOYER_README.zh-CN.md`。
+
 ## 本目录已经绑定好的内容
 
 | 项目 | 值 |
@@ -34,6 +39,8 @@
 运行链为：
 
 ```text
+GoGuard start_patrol（忽略平台 routeUrl）
+  -> 固定任务桥接
 MID-360 / FAST-LIO
   -> PCD localizer
   -> aligned_odometry
@@ -53,11 +60,14 @@ MID-360 / FAST-LIO
 - 停止脚本按本次唯一 run-id 清理精确进程组并最终调用 SDK2 `StopMove`。
 - follower 接好后必须看到 coordinator 明确进入 `RUNNING`，否则不放行运动。
 - 启动前记录 `/Odometry` 和 `/cloud_registered_body` 时间戳分布。
+- GoGuard command-loop 不再执行下载到的任意 CSV；它只启动本任务。
+- GoGuard 启动处理立即返回 `running`，定位期间仍可接收 `stop_patrol`。
 
 ## 先读
 
 - 部署步骤：`DEPLOYER_README.zh-CN.md`
 - 算法与现场验收：`DEPLOY_XBF_CHECKPOINT_PATROL.zh-CN.md`
+- 昨日根因与本版覆盖：`YESTERDAY_ROOT_CAUSE_AND_R5_STATUS.zh-CN.md`
 - 离线核验：`python3 scripts/verify_xbf_bundle_offline.py`
 
 ## 真实边界

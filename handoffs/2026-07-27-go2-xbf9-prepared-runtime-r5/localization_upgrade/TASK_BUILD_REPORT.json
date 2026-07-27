@@ -50,10 +50,27 @@
     "candidate_landmark_count": 1,
     "rejected_landmark_count": 7
   },
+  "temporary_gogoguard_bridge": {
+    "mode": "hardcoded_xbf9_r5",
+    "task_id": "xbf9-horizontal-clean-r1",
+    "platform_route_url_ignored": true,
+    "platform_file_name_ignored": true,
+    "fixed_speed_mps": 0.2,
+    "fixed_max_yaw_rate_rad_s": 0.45,
+    "fixed_loop_mode": "once",
+    "start_result_before_localization": "running",
+    "motion_release_requires_route_status_running": true
+  },
   "verification": {
     "zip_integrity_verified": true,
     "cross_hash_binding_verified": true,
     "offline_import_verified": true,
+    "gogoguard_fixed_bridge_offline_verified": true,
+    "gogoguard_all_start_stop_aliases_verified": true,
+    "linux_process_group_lifecycle_verified": true,
+    "linux_pre_pidfile_stop_window_verified": true,
+    "arm64_ubuntu20_foxy_clean_build_verified": true,
+    "ros_colcon_test_summary": "39 tests, 0 errors, 0 failures, 0 skipped",
     "real_dog_running_verified": false,
     "full_600m_route_verified": false
   },

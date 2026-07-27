@@ -202,6 +202,19 @@ def main() -> int:
     group_guard = bundle_root / "scripts/xbf_group_guard.py"
     route_ready_waiter = bundle_root / "scripts/wait_route_ready.py"
     timestamp_probe = bundle_root / "scripts/measure_input_timestamps.py"
+    gogoguard_bridge = bundle_root / "scripts/gogoguard_xbf9_r5_agent.py"
+    gogoguard_runner = (
+        bundle_root / "scripts/run_gogoguard_xbf9_r5_command_loop.sh"
+    )
+    gogoguard_installer = (
+        bundle_root / "scripts/install_gogoguard_xbf9_r5_bridge.sh"
+    )
+    gogoguard_remover = (
+        bundle_root / "scripts/remove_gogoguard_xbf9_r5_bridge.sh"
+    )
+    gogoguard_dropin = (
+        bundle_root / "config/go2-saas-command-xbf9-r5.conf"
+    )
     platform_importer = bundle_root / "scripts/import_platform_preparation.py"
     platform_import_wrapper = (
         bundle_root / "scripts/import_platform_preparation.sh"
@@ -484,6 +497,13 @@ def main() -> int:
     group_guard_text = group_guard.read_text(encoding="utf-8")
     route_ready_text = route_ready_waiter.read_text(encoding="utf-8")
     timestamp_probe_text = timestamp_probe.read_text(encoding="utf-8")
+    gogoguard_bridge_text = gogoguard_bridge.read_text(encoding="utf-8")
+    gogoguard_runner_text = gogoguard_runner.read_text(encoding="utf-8")
+    gogoguard_installer_text = gogoguard_installer.read_text(
+        encoding="utf-8"
+    )
+    gogoguard_remover_text = gogoguard_remover.read_text(encoding="utf-8")
+    gogoguard_dropin_text = gogoguard_dropin.read_text(encoding="utf-8")
     platform_importer_text = platform_importer.read_text(encoding="utf-8")
     platform_import_wrapper_text = platform_import_wrapper.read_text(
         encoding="utf-8"
@@ -539,7 +559,16 @@ def main() -> int:
         "setsid " not in start_text,
         "start script must not reintroduce the asynchronous setsid PID race",
     )
-    for path in (session_exec, group_guard, route_ready_waiter, timestamp_probe):
+    for path in (
+        session_exec,
+        group_guard,
+        route_ready_waiter,
+        timestamp_probe,
+        gogoguard_bridge,
+        gogoguard_runner,
+        gogoguard_installer,
+        gogoguard_remover,
+    ):
         require(os.access(path, os.X_OK), f"runtime helper is not executable: {path}")
     for path in (platform_importer, platform_import_wrapper):
         require(
@@ -554,6 +583,65 @@ def main() -> int:
         require(token in route_ready_text, "route-ready probe missing " + token)
     for token in ("p95_age_sec", "non_increasing_count", "minimum_samples"):
         require(token in timestamp_probe_text, "timestamp probe missing " + token)
+    for token in (
+        'TASK_ID = "xbf9-horizontal-clean-r1"',
+        'FIXED_SPEED_MPS = "0.20"',
+        '"platformRouteIgnored": True',
+        "base_agent.run_start_patrol = fixed_start",
+        "base_agent.run_stop_patrol = fixed_stop",
+        '"GO2_XBF_PATROL_SPEED": FIXED_SPEED_MPS',
+        '"GO2_XBF_LOOP_MODE": FIXED_LOOP_MODE',
+        "localization is converging and motion remains gated until RUNNING",
+        "_stop_recorded_early_launch",
+        "--bridge-self-check",
+    ):
+        require(token in gogoguard_bridge_text, "GoGoGuard bridge missing " + token)
+    for forbidden in ("download_route_csv(", "route_url_from_params("):
+        require(
+            forbidden not in gogoguard_bridge_text,
+            "fixed GoGoGuard bridge must not consume a platform route: "
+            + forbidden,
+        )
+    for token in (
+        'bundle_root="/home/unitree/localization_upgrade"',
+        'GO2_SAAS_BASE_AGENT="${workspace}/scripts/go2_saas_agent.py"',
+        "gogoguard_xbf9_r5_agent.py",
+        "--execute-safe",
+    ):
+        require(token in gogoguard_runner_text, "GoGoGuard runner missing " + token)
+    for token in (
+        'dropin_path="${dropin_dir}/90-xbf9-r5.conf"',
+        'systemctl stop "${unit_name}"',
+        "go2_saas_agent.py patrol-stop",
+        'systemctl start "${unit_name}"',
+        "gogoguard_xbf9_r5_agent.py",
+        "--bridge-self-check",
+        "restore_command_service_on_error",
+        "automatic-rollback.txt",
+    ):
+        require(
+            token in gogoguard_installer_text,
+            "GoGoGuard installer missing " + token,
+        )
+    for token in (
+        'stop_xbf_patrol.sh"',
+        'rm -f -- "${dropin_path}"',
+        'systemctl start "${unit_name}"',
+    ):
+        require(
+            token in gogoguard_remover_text,
+            "GoGoGuard bridge remover missing " + token,
+        )
+    require(
+        "ExecStart=/bin/bash /home/unitree/localization_upgrade/scripts/"
+        "run_gogoguard_xbf9_r5_command_loop.sh"
+        in gogoguard_dropin_text,
+        "GoGoGuard systemd drop-in does not select the fixed R5 runner",
+    )
+    require(
+        '"${log_dir}/route_ready.json"' in start_text,
+        "start script does not invalidate stale route-ready evidence",
+    )
     for token in (
         'PREPARATION_SCHEMA = "go2.patrol_preparation/v1"',
         "publish_reviewed_map_bundle(",
@@ -643,6 +731,8 @@ def main() -> int:
         "known_good_sdk2_motion_probe_sha256:",
         EXPECTED_SDK2_MOTION_PROBE_SHA256,
     )
+    print("gogoguard_start_patrol: fixed task xbf9-horizontal-clean-r1")
+    print("gogoguard_platform_route_url: ignored")
     print("no ROS node was started and no motion command was published")
     return 0
 
