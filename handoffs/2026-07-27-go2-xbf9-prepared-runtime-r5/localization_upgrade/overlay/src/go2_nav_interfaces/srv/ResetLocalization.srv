@@ -1,7 +1,0 @@
-# Copyright 2026 Go2 Robotics Team
-# SPDX-License-Identifier: Apache-2.0
-# clear_map=true also unloads the manifest and descriptor index.
-bool clear_map
----
-bool success
-string message
