@@ -22,24 +22,47 @@
 
 ## 白话
 
-狗一开机,有五个程序自动跑起来,**一直跑到关机**。它们互相不知道对方存在,各干各的。
+狗一开机,有**四个**程序自动跑起来,**一直跑到关机**。它们互相不知道对方存在,各干各的。
 
-**巡检不在这五个里面。** 巡检是其中一个程序(命令循环)从云端收到一条"开始巡检"之后,
-**临时**拉起来的第六摊东西,跑完就拆掉。
+**巡检不在这四个里面。** 巡检是其中一个程序(命令循环)从云端收到一条"开始巡检"之后,
+**临时**拉起来的第五摊东西,跑完就拆掉。
 
 这一点很重要:**你在平台上点"开始巡检",不是启动了一个常驻服务,是触发了一次性任务。**
 
+**而且雷达和定位也不是开机自启的** —— 它们同样是收到巡检命令后才被拉起来的。
+狗开机后静止不动的时候,**雷达是不转的、FAST-LIO 是没在跑的**。
+
 ## 证据
 
-Linux 上管开机自启的机制叫 systemd,每个自启项是一个 `.service` 文件。仓库里有 5 个:
+Linux 上管开机自启的机制叫 systemd,每个自启项是一个 `.service` 文件。
+**狗上实际 enable 且 running 的团队服务有 4 个**(2026-08-01 真机核验):
 
 | 文件 | 开机拉起什么 | 干什么 |
 |---|---|---|
-| `systemd/go2-saas-command.service` | `go2_saas_agent.py command-loop` | **每 5 秒问云端一次:有活吗?** |
-| `systemd/go2-saas-video.service` | `video-loop` | 视频分段录制 |
-| `systemd/go2-saas-outbox.service` | `outbox-loop` | 网断了攒着的文件,通了补传 |
+| `systemd/go2-saas-command.service` | `go2_saas_agent.py command-loop --interval 5` | **每 5 秒问云端一次:有活吗?** |
+| `systemd/go2-saas-video.service` | `video-loop --seconds 20 --upload` | 视频分段录制 |
+| `systemd/go2-saas-outbox.service` | `outbox-loop --interval 10` | 网断了攒着的文件,通了补传 |
 | `systemd/go2-wired-ssh-rescue.service` | `go2_wired_ssh_rescue.sh` | 有线网口保底登录(4G 挂了还能连上狗) |
-| `deploy/systemd_user/go2-fastlio-base.service` | 底座 | 雷达 + 定位 |
+
+## ⚠️ 更正(2026-08-01 真机核验)
+
+本文早先版本写"五条常驻循环",把 `deploy/systemd_user/go2-fastlio-base.service`
+(雷达+定位底座)算作第五条。**这是错的。**
+
+真机核验:
+```
+systemctl --user status go2-fastlio-base  →  Unit could not be found
+~/.config/systemd/user/                    →  无 go2 单元
+```
+
+它**只是仓库里的一个文件,从来没安装到狗上、没有 enable**。
+
+**真相**:雷达 + FAST-LIO 底座是巡检启动链里由 `base_bringup.sh` 按需拉起的。
+开机 3 分钟时的进程表核实:**一个 FAST-LIO、一个雷达进程都没有**,只有上表 4 个。
+
+**这处错误说明了一件事**:仓库里存在一个 `.service` 文件,
+**不等于**它在狗上生效。判断自启必须看 `systemctl list-unit-files --state=enabled`,
+不能看仓库里有什么文件。
 
 ## 为什么是这个设计
 
