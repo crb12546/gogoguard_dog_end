@@ -292,12 +292,126 @@ oa_cpp_test.cpp      cpp_tools/go2_oa_cpp_test/build/ 只有 CMakeCache.txt,无�
 **结论**:两个都可以关(减少攻击面、少几个进程),
 但**不要指望关掉它们能解决性能问题** —— 它们本来就几乎不占资源。
 
-此前记录的"整机 P95 7.98 核、项目进程仅 2.87 核、**6.20 核去向不明**"这个问题,
-**和 Docker / GNOME 无关**,仍未解决。下一步用 `tools/diag/cpu_forensics.py` 查。
+---
+
+# 七、CPU 排查(2026-08-01 实测)
+
+## 做法
+
+用 `tools/diag/cpu_forensics.py`(187 行,纯读 `/proc`,零外部依赖 ——
+因为狗上**没装 sysstat**,`pidstat` 不存在;**没装 linux-tools**,`perf` 不存在)。
+
+分三档测,其中"底座"这一档是关键设计:
+**`base_bringup.sh` 只启动雷达驱动 + FAST-LIO 两个进程,不含任何运动调用**,
+所以可以在**狗完全不动**的前提下复现感知与 SLAM 的算力负载。
+
+启动前的安全预检(11 个运动关键词在 `base_bringup.sh` 中全部 0 命中):
+```
+Move  StandUp  BalanceStand  sport_client  motion_enabled  patrol_cmd
+cmd_vel  safe_cmd  udp_receiver  udp_sender  waypoint_follower
+```
+运行期间复核:`unitree_safe_cmd_node` / `cmd_vel_udp_sender` /
+`go2_sdk2_udp_receiver` / `waypoint_follower` 均为 **0 个进程**。狗全程未动。
+
+## 三档负载对照
+
+| 档位 | 整机忙 | 上下文切换/s |
+|---|---:|---:|
+| **空闲**(狗趴着,仅 4 条常驻) | **0.11 核** | 408 |
+| **底座**(雷达 + FAST-LIO,狗不动) | **1.45 核** | 25,000 |
+| **巡检**(此前遥测记录) | **7.98 核** | 3,607,648 |
+
+## 底座档的逐进程归因 —— 干净
+
+30 秒 `/proc/<pid>/stat` 差分:
+
+```
+整机忙                      1.45 核 / 8 核
+  livox_ros_driver2_node    1.128 核    ← 雷达驱动
+  fastlio_mapping           0.210 核    ← SLAM 算法本体
+  go2_saas_agent command    0.018 核
+可归因合计                  1.36 核
+不明去向                    0.10 核  (7%)
+```
+
+### ⚠️ 第一个发现:雷达驱动比 SLAM 算法贵 5.4 倍
+
+`livox_ros_driver2_node` **1.128 核** vs `fastlio_mapping` **0.210 核**。
+
+一个"把网络包解成点云再发布"的驱动,开销是 IESKF + ikd-Tree 整套算法的 5 倍以上。
+
+**这是稳态第一大 CPU 开销,而且它的配置在我们手里**
+(`livox_lidar_publisher.yaml` / `msg_MID360s_launch.py`:发布频率、点云格式、
+是否同时发 PointCloud2 和 CustomMsg、DDS 序列化路径)。
+**第 3 步重构应把它列为优化对象。**
+
+### 第二个发现:底座档归因干净 → 6.2 核不在底座
+
+不明去向仅 0.10 核(7%)。**说明"6.2 核不明"不可能来自雷达或 FAST-LIO。**
+它只可能来自巡检时额外启动的东西:运动链(安全层 + 两个 UDP 搬运 + 跟线器)
+与观测层(rosbag + telemetry + performance_monitor + trace 写盘)。
+
+## 上下文切换归因 —— 我在这里犯了两个测量错误
+
+### 错误一:只读主线程,得出"98% 归因不上"
+
+第一次测,读 `/proc/<pid>/status` 的 `voluntary_ctxt_switches` /
+`nonvoluntary_ctxt_switches`,结果:
+```
+整机 25,135 次/秒,可归因仅 474 次/秒 (2%)
+```
+
+**差点把这当成系统级谜团。** 实际原因:
+`/proc/<pid>/status` **只报主线程**,而 ROS2 节点是多线程的。
+
+改为遍历 `/proc/<pid>/task/<tid>/status` 汇总全部线程后:
+```
+整机 25,180 次/秒
+  fastlio_mapping          7,235 次/秒   (11 线程)
+  livox_ros_driver2_node   4,859 次/秒   (17 线程)
+  [rcu_preempt]              135 次/秒
+  _ros2_daemon                72 次/秒   (23 线程)
+  containerd                  44 次/秒   (14 线程)
+可归因 12,345 次/秒 (49%)
+```
+**归因从 2% 升到 50%。**
+
+> 顺带印证了 `09_measured_baseline.md` 的记录:FAST-LIO 最大线程数 11 —— 实测正是 11。
+
+### 错误二:剩下的 50% 也差点当成"不明"
+
+完整统计(所有进程、所有线程、无阈值):
+```
+整机切换率           25,001 次/秒
+存活进程可归因       12,399 次/秒 (50%)
+期间新建进程贡献          0 次/秒
+仍不明               12,602 次/秒 (50%)
+```
+
+这 50% 是**空闲任务(swapper,PID 0)的切换** —— 每个核进入/退出空闲都计入
+`/proc/stat` 的 `ctxt`,但 PID 0 没有 `/proc` 条目。
+8 个核 × 高频唤醒(雷达 10 Hz + DDS 线程)→ 这个量级属**正常内核开销,不是问题**。
+
+## ⚠️ 对"6.2 核不明"这个旧结论本身的存疑
+
+该数字来自此前对巡检遥测的分析("整机 P95 7.98 核、项目进程 2.87 核、
+6.20 核不明")。
+
+**今天的两个测量错误提示:那次分析很可能犯了同一类错** ——
+按固定进程名 pattern 匹配、且未汇总线程,导致项目进程的真实占用被低估。
+
+**结论:`6.2 核不明` 这个数不可信,需要在真跑巡检时用今天修正后的方法重新测量。**
+(汇总 `task/<tid>`、不用进程名 pattern 而用全量 `/proc` 差分)
+
+## 本档测量的边界
+
+- 只测了**底座**,没测运动链和观测层 —— 那两摊只在巡检时存在
+- 巡检档的数字是**引用此前遥测**,不是今天测的
+- 要闭合这个问题,必须跑一次真实巡检并全程采样(见第九节 C 项)
 
 ---
 
-# 七、本次核验中我自己犯的错
+# 八、本次核验中我自己犯的操作错误
 
 **用 `pgrep -fc "文件名"` 查进程,结果每个都返回 2 —— 全是假阳性。**
 原因:`pgrep -f` 匹配完整命令行,而我的 SSH 命令行里就含着这些文件名字符串,
@@ -310,11 +424,22 @@ oa_cpp_test.cpp      cpp_tools/go2_oa_cpp_test/build/ 只有 CMakeCache.txt,无�
 
 ---
 
-# 八、下一步
+# 九、下一步
 
 | | 事项 | 状态 |
 |---|---|---|
-| A | 用 `tools/diag/cpu_forensics.py` 查 6.2 核不明占用 | 待做(机器现已空闲) |
+| A | CPU 排查 | ✅ 本次完成(第七节)。结论:底座 1.45 核归因干净;雷达驱动是最大头;`6.2 核不明` 存疑需重测 |
 | B | 归档避障文件 + 更正文档 | ✅ 本次完成 |
-| C | 真机跑一次完整巡检验证删除后的版本 | **需用户在场、场地安全、有急停** |
+| C | 真机跑一次完整巡检 | **待做,需用户在场、场地安全、有急停**。一次跑完可同时闭合两件事:①验证删除后的版本能实跑 ②用修正后的方法重测 CPU |
 | D | 写 `SwitchGet` 探针,查清巡检时厂商避障是否生效 | 待做(第 2 步前置) |
+| E | 查 `livox_ros_driver2_node` 为何吃 1.128 核 | 新增。稳态第一大开销,配置在我们手里 |
+
+## 狗的收尾状态(本次核验结束时)
+
+```
+底座已用 base_stop.sh 停止:livox / fastlio / ros2 launch 均 0 个进程
+4 条常驻服务完好:command-loop / outbox-loop / video-loop / wired-ssh-rescue
+负载恢复 1.17,与核验开始时一致
+原目录 /home/unitree/go2_fastlio_ws 全程未改动
+测试目录 /home/unitree/go2_dog_clean_test 按用户要求保留(含编译产物,下次免重编)
+```
